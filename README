@@ -5,7 +5,7 @@
 Rails has had lots of contributors. This web application keeps an up to date 
 list of them and their contributions.
 
-That list is not easy to build. Rails used Subversion until March 2008, and 
+That list is not easy to build. Rails used Subversion until April 2008, and 
 commits in Subversion do not distinguish author from committer. To give due 
 credit to contributors some identifier was usually put in square brackets at the 
 end of the commit message, or in the Changelog.
