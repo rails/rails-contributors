@@ -20,10 +20,10 @@ identify these equivalences:
 
    http://groups.google.com/group/rubyonrails-core/browse_thread/thread/7554c8c5a25b4765
 
-Lots and lots of people provided mappings, it was really awesome. Still today I 
-get some new equivalence now an then. I wrote a script that took that mapping 
-into account and converged to 1300 people, published in a gist that has been 
-regularly maintained:
+Lots and lots of people provided mappings, it was really awesome. Still today I
+get some new equivalence now and then. I wrote a script that took that mapping
+into account and the figure converged to 1300 people. The list has been
+regularly maintained and published in this gist:
 
    http://gist.github.com/20721
 
