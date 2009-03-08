@@ -12,8 +12,7 @@ class InitialSchema < ActiveRecord::Migration
       t.timestamp :author_timestamp
       t.string    :committer
       t.timestamp :committer_timestamp
-      t.text      :subject
-      t.text      :description
+      t.text      :message
       t.boolean   :imported_from_svn
       t.text      :changelog
     end
