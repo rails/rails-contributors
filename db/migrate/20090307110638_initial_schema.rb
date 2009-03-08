@@ -9,9 +9,9 @@ class InitialSchema < ActiveRecord::Migration
     create_table :commits do |t|
       t.string    :object_id, :null => false
       t.string    :author
-      t.timestamp :author_timestamp
+      t.timestamp :authored_timestamp
       t.string    :committer
-      t.timestamp :committer_timestamp
+      t.timestamp :committed_timestamp
       t.text      :message
       t.boolean   :imported_from_svn
       t.text      :changelog
