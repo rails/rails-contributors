@@ -17,4 +17,16 @@ class Commit < ActiveRecord::Base
   def github_url
     "http://github.com/rails/rails/commit/#{hash}"
   end
+
+  def self.new_from_grit_commit(commit)
+    new(
+      :object_id           => commit.id,
+      :author              => commit.author.name,
+      :authored_timestamp  => commit.authored_date,
+      :committer           => commit.committer.name,
+      :committed_timestamp => commit.committed_date,
+      :message             => commit.message,
+      :imported_from_svn   => commit.message.include?('git-svn-id:')
+    )
+  end
 end
