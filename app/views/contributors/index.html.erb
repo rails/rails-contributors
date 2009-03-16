@@ -1,0 +1,13 @@
+<h1>Rails Contributors</h1>
+<table border="0">
+  <colgroup>
+    <col width="10%" align="right"/>
+    <col width="90%" align="left"/>
+  </colgroup>
+  <% for contributor in @contributors %>
+    <tr>
+      <td><%= contributor.ncommits %></td>
+      <td><%= contributor_contributions_path(contributor) %></td>
+    </tr>
+  <% end %>
+</table>

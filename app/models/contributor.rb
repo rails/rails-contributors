@@ -14,6 +14,7 @@ class Contributor < ActiveRecord::Base
     url_id
   end
 
+
 private
   def set_url_id
     self.url_id = name.parameterize

@@ -1,8 +1,9 @@
 class InitialSchema < ActiveRecord::Migration
   def self.up
     create_table :contributors do |t|
-      t.string :name
-      t.string :url_id, :null => false
+      t.string  :name
+      t.string  :url_id, :null => false
+      t.integer :contributions_count
     end
     add_index :contributors, :url_id, :unique => true
 

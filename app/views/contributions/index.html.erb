@@ -1,0 +1,13 @@
+<h1><%=h genitiveize(@contributor.name) %> Contributions</h1>
+<table border="0">
+  <colgroup>
+    <col width="20%" align="center"/>
+    <col width="80%" align="left"/>
+  </colgroup>
+  <% for commit in @contributor.commits %>
+    <tr>
+      <td><%= link_to_commit commit %></td>
+      <td><%=h commit.subject %></td>
+    </tr>
+  <% end %>
+</table>
