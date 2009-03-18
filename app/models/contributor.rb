@@ -1,5 +1,5 @@
 class Contributor < ActiveRecord::Base
-  has_many :contributions
+  has_many :contributions, :dependent => :destroy
   has_many :commits, :through => :contributions
 
   validates_presence_of   :url_id

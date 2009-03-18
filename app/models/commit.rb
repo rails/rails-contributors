@@ -1,5 +1,5 @@
 class Commit < ActiveRecord::Base
-  has_many :contributions
+  has_many :contributions, :dependent => :destroy
   has_many :contributors, :through => :contributions
 
   validates_presence_of   :object_id
@@ -28,5 +28,9 @@ class Commit < ActiveRecord::Base
       :message             => commit.message,
       :imported_from_svn   => commit.message.include?('git-svn-id:')
     )
+  end
+
+  def extract_contributors
+    
   end
 end

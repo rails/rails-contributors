@@ -24,7 +24,7 @@ class InitialSchema < ActiveRecord::Migration
       t.references :commit
     end
     add_index :contributions, :contributor_id
-    add_index :contributions, :commit_id
+    add_index :contributions, :commit_id    
   end
 
   def self.down
