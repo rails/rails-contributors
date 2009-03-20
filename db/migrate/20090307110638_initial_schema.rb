@@ -20,11 +20,11 @@ class InitialSchema < ActiveRecord::Migration
     add_index :commits, :object_id, :unique => true
 
     create_table :contributions do |t|
-      t.references :contributor
-      t.references :commit
+      t.references :contributor, :null => false
+      t.references :commit, :null => false
     end
     add_index :contributions, :contributor_id
-    add_index :contributions, :commit_id    
+    add_index :contributions, :commit_id
   end
 
   def self.down
