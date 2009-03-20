@@ -114,13 +114,7 @@ private
   end
 
   def assign_contributors_to_commits_with_none
-    commits_with_no_contributors = Commit.find_by_sql(<<-SQL)
-      SELECT COMMITS.* FROM COMMITS
-        WHERE COMMIT.ID NOT IN
-        (SELECT CONTRIBUTIONS.COMMIT_ID FROM CONTRIBUTIONS)
-    SQL
-
-    commits_with_no_contributors.each do |commit|
+    Commit.with_no_contributors.find_each do |commit|
       @contributor_names_per_commit[commit].each do |contributor_name|
         contributor = Contributor.find_or_create_by_name(contributor_name)
         contributor.commits << commit

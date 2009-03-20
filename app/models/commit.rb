@@ -2,6 +2,10 @@ class Commit < ActiveRecord::Base
   has_many :contributions, :dependent => :destroy
   has_many :contributors, :through => :contributions
 
+  named_scope :with_no_contributors,
+    :joins => 'LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id',
+    :conditions => 'contributions.commit_id IS NULL'
+
   validates_presence_of   :object_id
   validates_uniqueness_of :object_id  
   validates_inclusion_of  :imported_from_svn, :in => [true, false]
