@@ -113,6 +113,8 @@ private
     end
   end
 
+  # Iterates over all commits with no contributors and assigns to them the ones
+  # in the previously computed <tt>@contributor_names_per_commit</tt>.
   def assign_contributors_to_commits_with_none
     Commit.with_no_contributors.find_each do |commit|
       @contributor_names_per_commit[commit].each do |contributor_name|
