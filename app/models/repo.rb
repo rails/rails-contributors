@@ -32,14 +32,14 @@ private
 
   def update
     Commit.transaction do
-      update_commits
-      destroy_gone_contributors
+      import_new_commits_into_the_database
+      update_contributors
       assign_contributors_to_commits_with_none
     end
   end
 
   # Imports those commits in the Git repo that do not yet exist in the database.
-  def update_commits
+  def import_new_commits_into_the_database
     batch_size = 100
     offset = 0
     loop do
