@@ -5,8 +5,6 @@ class Contributor < ActiveRecord::Base
   validates_presence_of   :url_id
   validates_uniqueness_of :url_id
 
-  before_save :set_url_id
-
   # The contributors table may change if new name equivalences are added and IDs
   # in particular are expected to move. So, we just put the parameterized name
   # in URLs, which is unique anyway.
@@ -14,6 +12,10 @@ class Contributor < ActiveRecord::Base
     url_id
   end
 
+  def name=(name)
+    write_attribute(:name, name)
+    set_url_id
+  end
 
 private
   def set_url_id
