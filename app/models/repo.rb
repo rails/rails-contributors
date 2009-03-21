@@ -18,6 +18,7 @@ class Repo
       pull
       Commit.transaction do
         import_new_commits_into_the_database
+        compute_current_contributions
         update_contributors
         assign_contributors_to_commits_with_none
       end
@@ -72,11 +73,8 @@ private
   # we just clear them to ease this part, since diffing them by hand has some
   # cases to take into account and it is not worth the effort.
   def update_contributors
-    current_contributions = compute_current_contributions
-    current_names         = Set.new(current_contributions.keys)
-    previous_names        = Set.new(Contributors.all.map(&:name))
-
-    gone_names = previous_names - current_names
+    previous_contributor_names = Set.new(Contributors.all.map(&:name))
+    gone_names = previous_contributor_names - @current_contributor_names
     reassign_contributors_to = destroy_gone_contributors(gone_names)
     reassign_contributors_to.each {|commit| commit.contributions.clear}
   end
