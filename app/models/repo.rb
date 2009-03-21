@@ -71,7 +71,7 @@ private
   # Once the contributors are computed from the current commits, the ones in the
   # contributors table that are gone are destroyed. This happens when a new
   # equivalence is known for some contributor, when a "name" is added to the
-  # black list in +NamesManager.looks_like_an_author_name+, etc.
+  # black list in <tt>NamesManager.looks_like_an_author_name</tt>, etc.
   #
   # Contributions for the related commits will in general need to be updated,
   # we just clear them to ease this part, since diffing them by hand has some
