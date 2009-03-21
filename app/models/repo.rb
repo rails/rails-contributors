@@ -18,9 +18,10 @@ class Repo
       pull
       Commit.transaction do
         import_new_commits_into_the_database
-        compute_current_contributions
-        update_contributors
-        assign_contributors_to_commits_with_none
+
+        current_contributor_names, contributor_names_per_commit = compute_current_contributions
+        update_contributors(current_contributor_names)
+        assign_contributors(contributor_names_per_commit)
         # TODO: Expire main listing.
       end
     end
@@ -60,6 +61,7 @@ private
     if new_commit.save
       logger.info("imported commit #{new_commit.short_hash}")
     else
+      # This is a fatal error, log it and abort the transaction.
       logger.error("couldn't import commit #{commit.id}")
       logger.error(new_commit.errors.full_messages)
       raise ActiveRecord::Rollback
@@ -74,9 +76,9 @@ private
   # Contributions for the related commits will in general need to be updated,
   # we just clear them to ease this part, since diffing them by hand has some
   # cases to take into account and it is not worth the effort.
-  def update_contributors
+  def update_contributors(current_contributor_names)
     previous_contributor_names = Set.new(Contributor.connection.select_values("select name from contributors"))
-    gone_names = previous_contributor_names - @current_contributor_names
+    gone_names = previous_contributor_names - current_contributor_names
     reassign_contributors_to = destroy_gone_contributors(gone_names)
     reassign_contributors_to.each {|commit| commit.contributions.clear}
   end
@@ -84,9 +86,9 @@ private
   # Destroys all contributors in +gone_names+ and returns their commits.
   def destroy_gone_contributors(gone_names)
     gone_contributors = Contributor.all(:conditions => ["NAME IN (?)", gone_names])
-    reassign_contributors_to = gone_contributors.map(&:commits).flatten.uniq
+    commits_of_gone_contributors = gone_contributors.map(&:commits).flatten.uniq
     gone_contributors.each(&:destroy)
-    reassign_contributors_to
+    commits_of_gone_contributors
   end
 
   # Goes over all the commits in the database and builds a hash that maps
@@ -96,21 +98,22 @@ private
   # only takes into account the current commits and the current mapping for
   # names.
   def compute_current_contributions
-    @contributor_names_per_commit = Hash.new {|h, commit| h[commit] = Array.new}
-    @current_contributor_names    = Set.new
+    contributor_names_per_commit = Hash.new {|h, commit| h[commit] = []}
+    current_contributor_names    = Set.new
     Commit.find_each do |commit|
       commit.extract_contributor_names.each do |contributor_name|
-        @contributor_names_per_commit[commit] << contributor_name
-        @current_contributor_names << contributor_name
+        current_contributor_names            << contributor_name
+        contributor_names_per_commit[commit] << contributor_name
       end
     end
+    return current_contributor_names, contributor_names_per_commit
   end
 
   # Iterates over all commits with no contributors and assigns to them the ones
   # in the previously computed <tt>@contributor_names_per_commit</tt>.
-  def assign_contributors_to_commits_with_none
+  def assign_contributors(contributor_names_per_commit)
     Commit.with_no_contributors.find_each do |commit|
-      @contributor_names_per_commit[commit].each do |contributor_name|
+      contributor_names_per_commit[commit].each do |contributor_name|
         contributor = Contributor.find_or_create_by_name(contributor_name)
         contributor.commits << commit
       end
