@@ -22,12 +22,12 @@ private
   def clone_repo_if_needed
     return if File.exists?(File.join(PATH, '.git'))
     logger.debug("cloning #{URL}, this may take a while...")
-    system("git clone #{URL} repo")
+    system("git clone -q #{URL} repo")
     logger.debug("done")
   rescue Exception => e
     logger.error("fatal error while trying to clone the repo: #{e}")
     logger.error("aborting")
-    raise e
+    raise
   end
 
   def update
