@@ -34,22 +34,23 @@ private
   end
 
   # Imports those commits in the Git repo that do not yet exist in the database.
+  # To do that this method goes from HEAD downwards. New commits are imported
+  # into the database, and as soon as a known commit comes up we are done.
+  #
+  # Note that commits are inserted in reverse order (most recent has lower ID)
+  # and that order is not linear as new imports are performed, only relative to
+  # commits within a given import.
   def import_new_commits_into_the_database
     batch_size = 100
     offset = 0
     loop do
       commits = @repo.commits('master', batch_size, offset)
-      break if commits.empty?
+      return if commits.empty?
       commits.each do |commit|
-        if Commit.exists?(:object_id => commit.id)
-          # repo.commits returns commits in order, most recent first. Thus, if
-          # this commit exists already in the database we are done.
-          return
-        else
-          import_grit_commit(commit)
-        end
-        offset += 1
+        return if Commit.exists?(:object_id => commit.id)
+        import_grit_commit(commit)
       end
+      offset += commits.size
     end
   end
 
