@@ -27,7 +27,7 @@ class Repo
 private
 
   def pull
-    logger.info('pulling #{@repo.working_dir}')
+    logger.info("pulling #{@repo.working_dir}")
     @repo.git.pull({}, '-q')
   end
 
