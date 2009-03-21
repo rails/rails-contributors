@@ -21,6 +21,7 @@ class Repo
         compute_current_contributions
         update_contributors
         assign_contributors_to_commits_with_none
+        # TODO: Expire main listing.
       end
     end
   end
