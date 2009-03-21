@@ -2,40 +2,33 @@ require 'set'
 
 class Repo
   attr_reader :logger
-  
-  PATH = File.join(Rails.root, 'repo')
-  URL = 'git://github.com/rails/rails.git'
 
   # This is the entry point to update the database from a recent pull.
-  def self.update
-    new.update
+  def self.update(path)
+    new(path).update
+  end
+
+  def initialize(path)
+    @logger = Rails.logger
+    @repo   = Grit::Repo.new(path)
+  end
+
+  def update
+    ApplicationUtils.acquiring_sync_file('pulling') do
+      pull
+      Commit.transaction do
+        import_new_commits_into_the_database
+        update_contributors
+        assign_contributors_to_commits_with_none
+      end
+    end
   end
 
 private
 
-  def initialize
-    @logger = Rails.logger
-    clone_repo_if_needed
-    @repo = Grit::Repo.new(PATH)
-  end
-
-  def clone_repo_if_needed
-    return if File.exists?(File.join(PATH, '.git'))
-    logger.debug("cloning #{URL}, this may take a while...")
-    system("git clone -q #{URL} repo")
-    logger.debug("done")
-  rescue Exception => e
-    logger.error("fatal error while trying to clone the repo: #{e}")
-    logger.error("aborting")
-    raise
-  end
-
-  def update
-    Commit.transaction do
-      import_new_commits_into_the_database
-      update_contributors
-      assign_contributors_to_commits_with_none
-    end
+  def pull
+    logger.info('pulling #{@repo.working_dir}')
+    @repo.git.pull({}, '-q')
   end
 
   # Imports those commits in the Git repo that do not yet exist in the database.
