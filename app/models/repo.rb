@@ -73,7 +73,7 @@ private
   # we just clear them to ease this part, since diffing them by hand has some
   # cases to take into account and it is not worth the effort.
   def update_contributors
-    previous_contributor_names = Set.new(Contributors.connection.select_values("select name from contributors"))
+    previous_contributor_names = Set.new(Contributor.connection.select_values("select name from contributors"))
     gone_names = previous_contributor_names - @current_contributor_names
     reassign_contributors_to = destroy_gone_contributors(gone_names)
     reassign_contributors_to.each {|commit| commit.contributions.clear}
