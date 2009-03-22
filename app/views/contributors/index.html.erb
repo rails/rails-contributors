@@ -6,8 +6,8 @@
   </colgroup>
   <% for contributor in @contributors %>
     <tr>
-      <td><%= contributor.ncommits %></td>
-      <td><%= contributor_contributions_path(contributor) %></td>
+      <td><%= contributor.contributions_count %></td>
+      <td><%= link_to h(contributor.name), contributor_contributions_path(contributor) %></td>
     </tr>
   <% end %>
 </table>
