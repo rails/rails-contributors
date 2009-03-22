@@ -4,7 +4,7 @@ module ApplicationUtils
   # This is a simple file-based synchronization mechanism which is not atomic
   # but will do for our purposes.
   def self.acquiring_sync_file(basename)
-    sync_file = File.join(Dir.tmpdir, basename)
+    sync_file = File.join(tmpdir, basename)
     if File.exists?(sync_file)
       Rails.logger.info("couldn't acquire #{sync_file}")
     else

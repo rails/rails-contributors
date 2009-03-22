@@ -115,6 +115,7 @@ protected
     current_contributor_names    = Set.new
     Commit.find_each do |commit|
       commit.extract_contributor_names(self).each do |contributor_name|
+        logger.debug(contributor_name)
         current_contributor_names            << contributor_name
         contributor_names_per_commit[commit] << contributor_name
       end
