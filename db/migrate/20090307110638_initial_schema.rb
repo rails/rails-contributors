@@ -5,6 +5,7 @@ class InitialSchema < ActiveRecord::Migration
       t.string  :url_id, :null => false
       t.integer :contributions_count
     end
+    add_index :contributors, :name
     add_index :contributors, :url_id, :unique => true
 
     create_table :commits do |t|
