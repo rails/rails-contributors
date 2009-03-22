@@ -35,6 +35,10 @@ class Commit < ActiveRecord::Base
     "http://github.com/rails/rails/commit/#{hash}"
   end
 
+  def short_message
+    @short_message ||= message ? message.split("\n").first : nil
+  end
+
   # Returns the list of canonical contributor names of this commit.
   def extract_contributor_names(repo)
     names = imported_from_svn? ? extract_svn_contributor_names(repo) : [author]
