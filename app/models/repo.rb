@@ -115,9 +115,8 @@ protected
     current_contributor_names    = Set.new
     Commit.find_each do |commit|
       commit.extract_contributor_names(self).each do |contributor_name|
-        logger.debug(contributor_name)
-        current_contributor_names            << contributor_name
-        contributor_names_per_commit[commit] << contributor_name
+        current_contributor_names << contributor_name
+        contributor_names_per_commit[commit.object_id] << contributor_name
       end
     end
     return current_contributor_names, contributor_names_per_commit
@@ -127,7 +126,7 @@ protected
   # in the previously computed <tt>@contributor_names_per_commit</tt>.
   def assign_contributors(contributor_names_per_commit)
     Commit.with_no_contributors.find_each do |commit|
-      contributor_names_per_commit[commit].each do |contributor_name|
+      contributor_names_per_commit[commit.object_id].each do |contributor_name|
         contributor = Contributor.find_or_create_by_name(contributor_name)
         contributor.commits << commit
       end
