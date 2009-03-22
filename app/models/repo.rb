@@ -13,9 +13,18 @@ class Repo
     @repo   = Grit::Repo.new(path)
   end
 
+  def git_pull
+    git_exec('pull')
+  end
+
+  def git_show(object_id)
+    git_exec('show', object_id)
+  end
+
   def update
     ApplicationUtils.acquiring_sync_file('pulling') do
-      pull
+      start_at = Time.now
+      git_pull
       Commit.transaction do
         import_new_commits_into_the_database
 
@@ -24,14 +33,18 @@ class Repo
         assign_contributors(contributor_names_per_commit)
         # TODO: Expire main listing.
       end
+      end_at = Time.now
+      logger.info("update completed in %.1f seconds" % [end_at - start_at])
     end
   end
 
-private
+protected
 
-  def pull
-    logger.info("pulling #{@repo.working_dir}")
-    @repo.git.pull({}, '-q')
+  # Simple-minded git system caller, enough for what we need. Returns the output.
+  def git_exec(command, *args)
+    git_call = "git --git-dir='#{@repo.path}' #{command} #{args.join(' ')}"
+    logger.info(git_call)
+    %x{#{git_call}}
   end
 
   # Imports those commits in the Git repo that do not yet exist in the database.
@@ -101,7 +114,7 @@ private
     contributor_names_per_commit = Hash.new {|h, commit| h[commit] = []}
     current_contributor_names    = Set.new
     Commit.find_each do |commit|
-      commit.extract_contributor_names.each do |contributor_name|
+      commit.extract_contributor_names(self).each do |contributor_name|
         current_contributor_names            << contributor_name
         contributor_names_per_commit[commit] << contributor_name
       end
