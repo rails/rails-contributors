@@ -42,7 +42,7 @@ class Commit < ActiveRecord::Base
   # Returns the list of canonical contributor names of this commit.
   def extract_contributor_names(repo)
     names = imported_from_svn? ? extract_svn_contributor_names(repo) : [author]
-    names.map {|name| NamesManager.canonical_name_for(name)}
+    names.map {|name| NamesManager.canonical_name_for(name)}.uniq
   end
 
 protected
@@ -83,7 +83,7 @@ protected
     extract_changelog!(repo) unless changelog
     changelog.split("\n").map do |line|
       extract_svn_contributor_names_from_text(line)
-    end.flatten.uniq
+    end.flatten
   end
 
   LINE_ITERATOR = RUBY_VERSION < '1.9' ? 'each' : 'each_line'
