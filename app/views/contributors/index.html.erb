@@ -1,13 +1,9 @@
 <% @title = "Rails Contributors" %>
 <h1><%= @title %></h1>
-<table border="0">
-  <colgroup>
-    <col width="10%" align="right"/>
-    <col width="90%" align="left"/>
-  </colgroup>
+<table border="0" cellspacing="10">
   <% for contributor in @contributors %>
     <tr>
-      <td><%= contributor.contributions_count %></td>
+      <td  align="right"><%= contributor.contributions_count %></td>
       <td><%= link_to h(contributor.name), contributor_contributions_path(contributor) %></td>
     </tr>
   <% end %>
