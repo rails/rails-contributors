@@ -56,7 +56,7 @@ protected
       names = extract_svn_contributor_names_diffing(repo)
       names = names.select {|name| looks_like_an_author_name(name)}
     end
-    names = [committer] if names.empty?
+    names = [author] if names.empty?
     names
   end
   
