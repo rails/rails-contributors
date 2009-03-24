@@ -5,7 +5,7 @@
     <tr>
       <td><%= link_to_commit commit %></td>
       <td><%= commit.committed_timestamp.to_date %></td>
-      <td><%=h truncate(commit.short_message, 80) %></td>
+      <td><%=h truncate(commit.short_message, :length => 80) %></td>
     </tr>
   <% end %>
 </table>
