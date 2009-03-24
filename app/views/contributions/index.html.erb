@@ -1,9 +1,9 @@
 <% @title = "#{genitiveize(@contributor.name)} Contributions" %>
 <h1><%=h @title %></h1>
-<table border="0" cellspacing="10">
+<table border="0">
   <% for commit in @contributor.commits %>
     <tr>
-      <td><tt><%= link_to_commit commit %></tt></td>
+      <td><%= link_to_commit commit %></td>
       <td><%= commit.committed_timestamp.to_date %></td>
       <td><%=h truncate(commit.short_message, 80) %></td>
     </tr>
