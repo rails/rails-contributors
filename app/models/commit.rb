@@ -83,7 +83,7 @@ protected
     extract_changelog!(repo) unless changelog
     changelog.split("\n").map do |line|
       extract_svn_contributor_names_from_text(line)
-    end.flatten
+    end.flatten.uniq
   end
 
   LINE_ITERATOR = RUBY_VERSION < '1.9' ? 'each' : 'each_line'
