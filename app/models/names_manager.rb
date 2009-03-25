@@ -37,6 +37,7 @@ module NamesManager
     'David Heinemeier Hansson' => 'DHH',
     'Dee Zsombor'              => ['Dee.Zsombor', 'zsombor', email('Dee.Zsombor', 'gmail.com')],
     'Don Park'                 => email('don.park', 'gmail.com'),
+    'Dr Nic'                   => 'drnic',
     'Dreamer3'                 => email('dreamer3', 'gmail.com'),
     'Duncan Beevers'           => 'duncanbeevers',
     'Eloy Duran'               => 'alloy',
