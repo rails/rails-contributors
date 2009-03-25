@@ -105,6 +105,7 @@ module NamesManager
     'Philip Hallstrom'         => 'phallstrom',
     'Pratik Naik'              => %w(Pratik pratik lifofifo lifo),
     'Rick Bradley'             => email('rick', 'rickbradley.com'),
+    'Rich Collins'             => ['richcollins', email('richcollins', 'gmail.com')],
     'Rick Olson'               => ['rick', 'Rick', 'Rick Olsen', email('technoweenie', 'gmail.com')],
     'RSL'                      => ['rsl', 'Russell Norris'],
     'Rob Biedenharn'           => ['rabiedenharn', email('Rob', 'AgileConsultingLLC.com')],
