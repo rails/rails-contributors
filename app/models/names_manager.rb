@@ -77,6 +77,7 @@ module NamesManager
     'Justin French'            => 'justinfrench',
     'Kamal Fariz Mahyuddin'    => 'kamal',
     'Ken Barker'               => email('ken.barker', 'gmail.com'),
+    'Ken Kunz'                 => email('kennethkunz', 'gmail.com'),
     'Ken Miller'               => email('kenneth.miller', 'bitfield.net'),
     'Kevin Clark'              => ["Kevin Clark #{email('kevin.clark', 'gmail.com')}", email('kevin.clark', 'gmail.com'), email('kevin.clark', 'gmal.com')],
     'Lars Pind'                => [email('lars', 'pinds.com'), email('lars', 'pind.com'), 'Lars pind', 'lars pind'],
