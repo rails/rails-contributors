@@ -42,10 +42,20 @@ class Commit < ActiveRecord::Base
   # Returns the list of canonical contributor names of this commit.
   def extract_contributor_names(repo)
     names = imported_from_svn? ? extract_svn_contributor_names(repo) : [author]
-    names.map {|name| NamesManager.canonical_name_for(name)}.uniq
+    names = handle_special_cases(names)
+    names = canonicalize(names)
+    names.uniq
   end
 
 protected
+
+  def handle_special_cases(names)
+    names.map {|name| NamesManager.handle_special_cases(name, author)}.flatten.compact
+  end
+
+  def canonicalize(names)
+    names.map {|name| NamesManager.canonical_name_for(name)}
+  end
 
   # If the commit was imported from svn we look for contributors first in the
   # commit message. If none is found there we check the changelog entry, if any.
@@ -54,7 +64,6 @@ protected
     names = extract_svn_contributor_names_from_text(message)
     if names.empty?
       names = extract_svn_contributor_names_diffing(repo)
-      names = names.select {|name| looks_like_an_author_name(name)}
     end
     names = [author] if names.empty?
     names
@@ -83,7 +92,7 @@ protected
     extract_changelog!(repo) unless changelog
     changelog.split("\n").map do |line|
       extract_svn_contributor_names_from_text(line)
-    end.flatten.uniq
+    end.flatten
   end
 
   LINE_ITERATOR = RUBY_VERSION < '1.9' ? 'each' : 'each_line'
@@ -104,17 +113,5 @@ protected
       end
     end
     update_attribute(:changelog, changelog)
-  end
-
-  # Author name extraction in svn commits returns a few spurious strings we just
-  # filter out.
-  def looks_like_an_author_name(str)
-    str !~ /\A\d+\z/ && # Remove side effects of [5684]
-    str !~ /\A\s*\z/ &&
-    str != 'See rails ML' &&
-    str != '"RAILS_ENV"' &&
-    str != 'subject "Text::Format Licence Exception" on Oct 15' &&
-    str !~ /RubyConf/ && # example: RubyConf '05
-    str !~ /^Includes duplicates of changes/ # example: Includes duplicates of changes from 1.1.4 - 1.2.3
   end
 end

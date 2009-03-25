@@ -155,14 +155,50 @@ module NamesManager
 
   # In some cases author names are extracted from svn messages. We look there
   # for stuff between brackets, but that's not always an author name. There
-  # are some exceptions this method knows about.
-  def self.looks_like_an_author_name(str_within_brackets)
-    str_within_brackets !~ /\A\d+\z/ && # Remove side effects of [5684]
-    str_within_brackets !~ /\A\s*\z/ &&
-    str_within_brackets != 'See rails ML' &&
-    str_within_brackets != '"RAILS_ENV"' &&
-    str_within_brackets != 'subject "Text::Format Licence Exception" on Oct 15' &&
-    str_within_brackets !~ /RubyConf/ && # example: RubyConf '05
-    str_within_brackets !~ /^Includes duplicates of changes/ # example: Includes duplicates of changes from 1.1.4 - 1.2.3
+  # are some exceptions this method knows about. Also some known strings get
+  # special treatment here.
+  def self.handle_special_cases(name, fallback)
+    case name
+    when /\A\d+\z/
+      # Remove side effects of [5684]
+      fallback
+    when /\A\s*\z/
+      fallback
+    when 'See rails ML', '"RAILS_ENV"', 'subject "Text::Format Licence Exception" on Oct 15'
+      fallback
+    when /RubyConf/ # example: RubyConf '05
+      fallback
+    when /^Includes duplicates of changes/ # Includes duplicates of changes from 1.1.4 - 1.2.3
+      fallback
+    when 'update from Trac'
+      fallback
+    when 'Jim Remsik and Tim Pope'
+      ['Jim Remsik', 'Tim Pope']
+    when 'Jeremy Hopple and Kevin Clark'
+      ['Jeremy Hopple', 'Kevin Clark']
+    when 'me@jonnii.com rails@jeffcole.net Marcel Molina Jr.'
+      ['me@jonnii.com', 'rails@jeffcole.net', 'Marcel Molina Jr.']
+    when 'jeremy@planetargon.com Marcel Molina Jr.'
+      ['jeremy@planetargon.com', 'Marcel Molina Jr.']
+    when 'matt@mattmargolis.net Marcel Molina Jr.'
+      ['matt@mattmargolis.net', 'Marcel Molina Jr.']
+    when 'doppler@gmail.com phil.ross@gmail.com'
+      ['doppler@gmail.com', 'phil.ross@gmail.com']
+    when 'Suggested by Robby Russel'
+      'Robby Russel'
+    when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
+      'Adam Cigánek'
+    when /\A(Spotted|Suggested|Investigation|earlier work)\s+by\s+(.*)/i
+      # Spotted by Kevin Bullock
+      # Suggested by Carl Youngblood
+      # Investigation by Scott
+      # 'earlier work by Michael Neumann'
+      $2
+    when /\Avia\s+(.*)/i
+      # via Tim Bray
+      $1
+    else
+      name
+    end
   end
 end
