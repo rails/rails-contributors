@@ -1,4 +1,6 @@
 class ContributionsController < ApplicationController
+  caches_page :index
+
   before_filter :set_contributor
 
   def index
