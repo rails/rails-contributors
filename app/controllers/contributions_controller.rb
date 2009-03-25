@@ -1,10 +1,7 @@
 class ContributionsController < ApplicationController
   before_filter :set_contributor
 
-  # TODO
   def index
-    # Builds @contributor's page, one line per commit, hash prefix and subject,
-    # linked to github.
   end
 
 private
