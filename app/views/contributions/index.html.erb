@@ -1,6 +1,11 @@
 <% @title = "#{genitiveize(@contributor.name)} Contributions" %>
 <h1><%=h @title %></h1>
 <table border="0">
+  <tr>
+    <th>Hash</th>
+    <th>Date</th>
+    <th>Message</th>
+  </tr>
   <% for commit in @contributor.commits %>
     <tr>
       <td><%= link_to_commit commit %></td>
