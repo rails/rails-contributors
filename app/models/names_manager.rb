@@ -85,6 +85,7 @@ module NamesManager
     'Luke Redpath'             => email('contact', 'lukeredpath.co.uk'),
     'Manfred Stienstra'        => [email('m.stienstra', 'fngtps.com'), 'manfred'],
     'Marcel Molina Jr.'        => ['Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio'],
+    'Mark Imbriaco'            => email('mark.imbriaco', 'pobox.com'),
     'Mark Somerville'          => 'Spakman',
     'Matthew Rudy Jacobs'      => 'MatthewRudy',
     'Michael Klishin'          => ['antares', 'Michael S. Klishin'],
