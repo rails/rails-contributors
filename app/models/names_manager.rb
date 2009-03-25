@@ -104,6 +104,7 @@ module NamesManager
     'pburleson'                => email('pburleson', 'gmail.com'),
     'Philip Hallstrom'         => 'phallstrom',
     'Pratik Naik'              => %w(Pratik pratik lifofifo lifo),
+    'Rick Bradley'             => email('rick', 'rickbradley.com'),
     'Rick Olson'               => ['rick', 'Rick', 'Rick Olsen', email('technoweenie', 'gmail.com')],
     'RSL'                      => ['rsl', 'Russell Norris'],
     'Rob Biedenharn'           => ['rabiedenharn', email('Rob', 'AgileConsultingLLC.com')],
@@ -173,6 +174,8 @@ module NamesManager
       fallback
     when 'update from Trac'
       fallback
+    when 'Marcel Mollina Jr.'
+      'Marcel Molina Jr.'
     when 'nik.wakelin Koz'
       ['nik.wakelin', 'Koz']
     when 'Jim Remsik and Tim Pope'
@@ -193,11 +196,12 @@ module NamesManager
       'Robby Russel'
     when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
       'Adam Cigánek'
-    when /\A(Spotted|Suggested|Investigation|earlier work)\s+by\s+(.*)/i
+    when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
       # Spotted by Kevin Bullock
       # Suggested by Carl Youngblood
       # Investigation by Scott
       # 'earlier work by Michael Neumann'
+      # Aggregated by schoenm@earthlink.net
       $2
     when /\Avia\s+(.*)/i
       # via Tim Bray
