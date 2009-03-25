@@ -33,7 +33,7 @@ module NamesManager
     'Dan Manges'               => 'dcmanges',
     'Daniel Morrison'          => 'danielmorrison',
     'Daniel Von Fange'         => ['Suggested by Daniel Von Fange', 'Spotted by Daniel Von Fange'],
-    'Dave Thomas'              => [email('dave', 'pragprog.com'), 'After much pestering from Dave Thomas'],
+    'Dave Thomas'              => [email('dave', 'pragprog.com'), 'pragdave'],
     'David Heinemeier Hansson' => 'DHH',
     'Dee Zsombor'              => ['Dee.Zsombor', 'zsombor', email('Dee.Zsombor', 'gmail.com')],
     'Don Park'                 => email('don.park', 'gmail.com'),
@@ -173,6 +173,8 @@ module NamesManager
       fallback
     when 'update from Trac'
       fallback
+    when 'nik.wakelin Koz'
+      ['nik.wakelin', 'Koz']
     when 'Jim Remsik and Tim Pope'
       ['Jim Remsik', 'Tim Pope']
     when 'Jeremy Hopple and Kevin Clark'
@@ -185,6 +187,8 @@ module NamesManager
       ['matt@mattmargolis.net', 'Marcel Molina Jr.']
     when 'doppler@gmail.com phil.ross@gmail.com'
       ['doppler@gmail.com', 'phil.ross@gmail.com']
+    when 'After much pestering from Dave Thomas'
+      'Dave Thomas'
     when 'Suggested by Robby Russel'
       'Robby Russel'
     when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
