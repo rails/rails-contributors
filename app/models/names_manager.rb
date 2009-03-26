@@ -179,7 +179,7 @@ module NamesManager
       fallback
     when 'update from Trac'
       fallback
-    when 'Marcel Mollina Jr.'
+    when 'Marcel Mollina Jr.' # typo, there are two ls
       'Marcel Molina Jr.'
     when 'nik.wakelin Koz'
       ['nik.wakelin', 'Koz']
@@ -197,8 +197,6 @@ module NamesManager
       ['doppler@gmail.com', 'phil.ross@gmail.com']
     when 'After much pestering from Dave Thomas'
       'Dave Thomas'
-    when 'Suggested by Robby Russel'
-      'Robby Russel'
     when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
       'Adam Cigánek'
     when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
