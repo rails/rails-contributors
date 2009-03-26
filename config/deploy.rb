@@ -1,7 +1,7 @@
 role :staging, "hashref.com"
 
 def run_in_rc(command)
-	run "export PATH=/opt/ree/bin:/usr/local/bin:/usr/bin:/bin:/usr/games; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}"
+	run "export PATH=/opt/ree/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}"
 end
 
 namespace :rc do
