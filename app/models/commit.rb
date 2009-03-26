@@ -77,14 +77,10 @@ protected
   #
   # Of course this is not robust, but it is the best we can get.
   def extract_svn_contributor_names_from_text(text)
-    svn_authors = []
-    if text =~ /\[([^\]]+)\]\s*$/
-      # [Adam Milligan, Pratik]
-      # [Rick Olson/Nicholas Seckar]
-      # [Kevin Clark & Jeremy Hopple]
-      svn_authors = $1.split(%r{\s*[,/&]\s*})
-    end
-    svn_authors
+    # [Adam Milligan, Pratik]
+    # [Rick Olson/Nicholas Seckar]
+    # [Kevin Clark & Jeremy Hopple]
+    text =~ /\[([^\]]+)\]\s*$/ ? $1.split(%r{\s*[,/&]\s*}) : []
   end
 
   # Looks for contributor names in changelogs.
