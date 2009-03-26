@@ -24,7 +24,7 @@ class Repo
   def update
     ApplicationUtils.acquiring_sync_file('pulling') do
       start_at = Time.now
-      git_pull
+      #git_pull
       Commit.transaction do
         import_new_commits_into_the_database
 

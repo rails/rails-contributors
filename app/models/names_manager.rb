@@ -171,7 +171,7 @@ module NamesManager
       fallback
     when /\A\s*\z/
       fallback
-    when 'See rails ML', '"RAILS_ENV"', 'subject "Text::Format Licence Exception" on Oct 15'
+    when /^See rails ML/, '"RAILS_ENV"'
       fallback
     when /RubyConf/ # example: RubyConf '05
       fallback
@@ -199,16 +199,26 @@ module NamesManager
       'Dave Thomas'
     when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
       'Adam Cigánek'
+    when 'Aredridel/earlier work by Michael Neumann'
+      ['Aredridel', 'Michael Neumann']
     when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
       # Spotted by Kevin Bullock
       # Suggested by Carl Youngblood
       # Investigation by Scott
-      # 'earlier work by Michael Neumann'
+      # earlier work by Michael Neumann
       # Aggregated by schoenm@earthlink.net
       $2
     when /\Avia\s+(.*)/i
       # via Tim Bray
       $1
+    when %r{[,/&]} # There are lots of these, even with a combination of connectors.
+      # [Adam Milligan, Pratik]
+      # [Rick Olson/Nicholas Seckar]
+      # [Kevin Clark & Jeremy Hopple]
+      name.split(%r{[,/&]}).map(&:strip).reject do |part|
+        part == 'others' || # foamdino@gmail.com/others
+        part == '?'         # Sam Stephenson/?
+      end
     else
       name
     end
