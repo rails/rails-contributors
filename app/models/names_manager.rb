@@ -16,7 +16,6 @@ module NamesManager
     'Aliaksey Kandratsenka'    => 'Aleksey Kondratenko',
     'Andrew Kaspick'           => [email('akaspick', 'gmail.com'), 'akaspick'],
     'Anthony Eden'             => 'aeden',
-    'Austin Ziegler'           => 'Thanks to Austin Ziegler for Transaction::Simple',
     'Blaine'                   => ['blaine', email('blaine', 'odeo.com')],
     'Bob Silva'                => 'BobSilva',
     'Brad Greenlee'            => 'bgreenlee',
@@ -32,7 +31,6 @@ module NamesManager
     'Damian Janowski'          => 'djanowski',
     'Dan Manges'               => 'dcmanges',
     'Daniel Morrison'          => 'danielmorrison',
-    'Daniel Von Fange'         => ['Suggested by Daniel Von Fange', 'Spotted by Daniel Von Fange'],
     'Dave Thomas'              => [email('dave', 'pragprog.com'), 'pragdave'],
     'David Heinemeier Hansson' => 'DHH',
     'Dee Zsombor'              => ['Dee.Zsombor', 'zsombor', email('Dee.Zsombor', 'gmail.com')],
@@ -51,7 +49,7 @@ module NamesManager
     'Geoff Garside'            => 'ggarside',
     'Grant Hollingworth'       => email('grant', 'antiflux.org'),
     'Hampton Catlin'           => email('hcatlin', 'gmail.com'),
-    'Hongli Lai (Phusion)'     => ['Hongli Lai (Phusion', 'FooBarWidget', 'Hongli Lai'],
+    'Hongli Lai (Phusion)'     => ['FooBarWidget', 'Hongli Lai'],
     'Ian White'                => email('ian.w.white', 'gmail.com'),
     'Isaac Feliu'              => 'isaacfeliu',
     'Jack Danger Canty'        => %w(danger Danger),
@@ -140,7 +138,7 @@ module NamesManager
     'Xavier Shay'              => 'xaviershay',
     'Yehuda Katz'              => 'wycats',
     'Zach Dennis'              => 'zdennis',
-    # canonical name           => handlers, emails, typos, etc.
+    # canonical name           => handlers, emails, etc.
   }
 
   # Reverse SEEN_IN_LOG_ALSO_AS to be able to go from handler to canonical name.
@@ -183,6 +181,10 @@ module NamesManager
       fallback
     when 'Marcel Mollina Jr.' # typo, there are two ls
       'Marcel Molina Jr.'
+    when 'Thanks to Austin Ziegler for Transaction::Simple'
+      'Austin Ziegler'
+    when 'Hongli Lai (Phusion'
+      'Hongli Lai (Phusion)'
     when 'nik.wakelin Koz'
       ['nik.wakelin', 'Koz']
     when 'Jim Remsik and Tim Pope'

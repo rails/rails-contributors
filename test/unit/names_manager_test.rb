@@ -33,6 +33,8 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_equal 1, NamesManager.handle_special_cases('Includes duplicates of changes from 1.1.4 - 1.2.3', 1)
     assert_equal 1, NamesManager.handle_special_cases('update from Trac', 1)
     assert_equal 'Marcel Molina Jr.', NamesManager.handle_special_cases('Marcel Mollina Jr.', 1)
+    assert_equal 'Austin Ziegler', NamesManager.handle_special_cases('Thanks to Austin Ziegler for Transaction::Simple', 1)
+    assert_equal 'Hongli Lai (Phusion)', NamesManager.handle_special_cases('Hongli Lai (Phusion', 1)
     assert_equal ['nik.wakelin', 'Koz'], NamesManager.handle_special_cases('nik.wakelin Koz', 1)
     assert_equal ['Jim Remsik', 'Tim Pope'], NamesManager.handle_special_cases('Jim Remsik and Tim Pope', 1)
     assert_equal ['Jeremy Hopple', 'Kevin Clark'], NamesManager.handle_special_cases('Jeremy Hopple and Kevin Clark', 1)
