@@ -162,8 +162,10 @@ module NamesManager
 
   # In some cases author names are extracted from svn messages. We look there
   # for stuff between brackets, but that's not always an author name. There
-  # are some exceptions this method knows about. Also some known strings get
-  # special treatment here.
+  # are lots of exceptions this method knows about.
+  #
+  # Note that this method is responsible for extracting names as they appear
+  # in the original string. Canonicalization is done elsewhere.
   def self.handle_special_cases(name, fallback)
     case name
     when /\A\d+\z/
