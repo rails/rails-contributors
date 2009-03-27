@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class CommitTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
+  test "short hash" do
+    commit = Commit.new(:object_id => "c0f3dc9728d8810e710d52e05bc61395297be787")
+    assert_equal "c0f3dc9", commit.short_hash
+    assert_equal "c0f3dc9728", commit.short_hash(10)
+  end
+
   test "basic name extraction" do
     commit = Commit.new
     
