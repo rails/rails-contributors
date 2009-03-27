@@ -7,6 +7,11 @@ class CommitTest < ActiveSupport::TestCase
     assert_equal "c0f3dc9728", commit.short_hash(10)
   end
 
+  test "github url" do
+    commit = Commit.new(:object_id => "c0f3dc9728d8810e710d52e05bc61395297be787")
+    assert_equal "http://github.com/rails/rails/commit/c0f3dc9728d8810e710d52e05bc61395297be787", commit.github_url
+  end
+
   test "basic name extraction" do
     commit = Commit.new
     
