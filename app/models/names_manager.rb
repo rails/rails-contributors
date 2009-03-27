@@ -173,7 +173,7 @@ module NamesManager
       fallback
     when /\A\s*\z/
       fallback
-    when /^See rails ML/, '"RAILS_ENV"'
+    when /^See rails ML/, /RAILS_ENV/
       fallback
     when /RubyConf/ # example: RubyConf '05
       fallback
