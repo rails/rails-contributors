@@ -7,16 +7,22 @@ class Contributor < ActiveRecord::Base
 
   default_scope :order => 'name ASC'
 
-  def self.all_grouped_by_commit
+  def self.all_grouped_by_commit_since(date)
+    conditions = date ? ['commits.authored_timestamp > ?', date] : nil
     all(
       :select => 'contributors.*, COUNT(contributions.commit_id) as ncontributions',
       :joins  => <<-JOINS,
         INNER JOIN contributions ON contributors.id = contributions.contributor_id
         INNER JOIN commits       ON commits.id = contributions.commit_id
       JOINS
-      :group  => 'contributions.contributor_id',
-      :order  => 'ncontributions DESC'
+      :conditions => conditions,
+      :group      => 'contributions.contributor_id',
+      :order      => 'ncontributions DESC'
     )
+  end
+
+  def commits_since(date)
+    commits.since(date).all
   end
 
   # The contributors table may change if new name equivalences are added and IDs
@@ -32,6 +38,7 @@ class Contributor < ActiveRecord::Base
   end
 
 private
+
   def set_url_id
     self.url_id = name.parameterize
   end

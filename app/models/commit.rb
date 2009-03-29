@@ -4,6 +4,10 @@ class Commit < ActiveRecord::Base
 
   default_scope :order => 'authored_timestamp DESC'
 
+  named_scope :since, lambda { |date|
+    date ? { :conditions => ['commits.authored_timestamp > ?', date] } : {}
+  }
+
   named_scope :with_no_contributors,
     :joins => 'LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id',
     :conditions => 'contributions.commit_id IS NULL'
