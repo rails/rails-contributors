@@ -8,14 +8,14 @@ class Commit < ActiveRecord::Base
     :joins => 'LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id',
     :conditions => 'contributions.commit_id IS NULL'
 
-  validates_presence_of   :hash
-  validates_uniqueness_of :hash
+  validates_presence_of   :sha1
+  validates_uniqueness_of :sha1
   validates_inclusion_of  :imported_from_svn, :in => [true, false]
 
   # Constructor that initializes the object from a Grit commit.
   def self.new_from_grit_commit(commit)
     new(
-      :hash                => commit.id,
+      :sha1                => commit.id,
       :author              => commit.author.name,
       :authored_timestamp  => commit.authored_date,
       :committer           => commit.committer.name,
@@ -25,14 +25,14 @@ class Commit < ActiveRecord::Base
     )
   end
 
-  # Returns a shortened hash for this commit. Length is 7 by default.
-  def short_hash(length=7)
-    hash[0, length]
+  # Returns a shortened sha1 for this commit. Length is 7 by default.
+  def short_sha1(length=7)
+    sha1[0, length]
   end
 
   # Returns the URL of this commit in GitHub.
   def github_url
-    "http://github.com/rails/rails/commit/#{hash}"
+    "http://github.com/rails/rails/commit/#{sha1}"
   end
 
   def short_message
@@ -96,7 +96,7 @@ protected
   def extract_changelog!(repo)
     changelog = ''
     in_changelog = false
-    repo.git_show(hash).send(LINE_ITERATOR) do |line|
+    repo.git_show(sha1).send(LINE_ITERATOR) do |line|
       if line =~ /^diff --git/
         in_changelog = false
       elsif line =~ /^\+\+\+.*changelog$/i

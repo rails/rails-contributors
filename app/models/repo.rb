@@ -17,8 +17,8 @@ class Repo
     git_exec('pull')
   end
 
-  def git_show(hash)
-    git_exec('show', hash)
+  def git_show(sha1)
+    git_exec('show', sha1)
   end
 
   def update
@@ -61,7 +61,7 @@ protected
       commits = @repo.commits('master', batch_size, offset)
       return if commits.empty?
       commits.each do |commit|
-        return if Commit.exists?(:hash => commit.id)
+        return if Commit.exists?(:sha1 => commit.id)
         import_grit_commit(commit)
       end
       offset += commits.size
@@ -72,7 +72,7 @@ protected
   def import_grit_commit(commit)
     new_commit = Commit.new_from_grit_commit(commit)
     if new_commit.save
-      logger.info("imported commit #{new_commit.short_hash}")
+      logger.info("imported commit #{new_commit.short_sha1}")
     else
       # This is a fatal error, log it and abort the transaction.
       logger.error("couldn't import commit #{commit.id}")
@@ -116,7 +116,7 @@ protected
     Commit.find_each do |commit|
       commit.extract_contributor_names(self).each do |contributor_name|
         current_contributor_names << contributor_name
-        contributor_names_per_commit[commit.hash] << contributor_name
+        contributor_names_per_commit[commit.sha1] << contributor_name
       end
     end
     return current_contributor_names, contributor_names_per_commit
@@ -126,7 +126,7 @@ protected
   # in the previously computed <tt>@contributor_names_per_commit</tt>.
   def assign_contributors(contributor_names_per_commit)
     Commit.with_no_contributors.find_each do |commit|
-      contributor_names_per_commit[commit.hash].each do |contributor_name|
+      contributor_names_per_commit[commit.sha1].each do |contributor_name|
         contributor = Contributor.find_or_create_by_name(contributor_name)
         contributor.commits << commit
       end
