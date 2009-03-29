@@ -8,7 +8,7 @@ class InitialSchema < ActiveRecord::Migration
     add_index :contributors, :url_id, :unique => true
 
     create_table :commits do |t|
-      t.string    :object_id, :null => false
+      t.string    :hash, :null => false
       t.string    :author
       t.timestamp :authored_timestamp
       t.string    :committer
@@ -17,7 +17,7 @@ class InitialSchema < ActiveRecord::Migration
       t.boolean   :imported_from_svn
       t.text      :changelog
     end
-    add_index :commits, :object_id, :unique => true
+    add_index :commits, :hash, :unique => true
 
     create_table :contributions do |t|
       t.references :contributor, :null => false

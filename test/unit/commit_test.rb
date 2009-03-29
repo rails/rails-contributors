@@ -2,13 +2,13 @@ require 'test_helper'
 
 class CommitTest < ActiveSupport::TestCase
   test "short hash" do
-    commit = Commit.new(:object_id => "c0f3dc9728d8810e710d52e05bc61395297be787")
+    commit = Commit.new(:hash => "c0f3dc9728d8810e710d52e05bc61395297be787")
     assert_equal "c0f3dc9", commit.short_hash
     assert_equal "c0f3dc9728", commit.short_hash(10)
   end
 
   test "github url" do
-    commit = Commit.new(:object_id => "c0f3dc9728d8810e710d52e05bc61395297be787")
+    commit = Commit.new(:hash => "c0f3dc9728d8810e710d52e05bc61395297be787")
     assert_equal "http://github.com/rails/rails/commit/c0f3dc9728d8810e710d52e05bc61395297be787", commit.github_url
   end
 

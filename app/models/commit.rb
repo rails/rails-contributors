@@ -8,16 +8,14 @@ class Commit < ActiveRecord::Base
     :joins => 'LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id',
     :conditions => 'contributions.commit_id IS NULL'
 
-  validates_presence_of   :object_id
-  validates_uniqueness_of :object_id  
+  validates_presence_of   :hash
+  validates_uniqueness_of :hash
   validates_inclusion_of  :imported_from_svn, :in => [true, false]
-
-  alias_attribute :hash, :object_id
 
   # Constructor that initializes the object from a Grit commit.
   def self.new_from_grit_commit(commit)
     new(
-      :object_id           => commit.id,
+      :hash                => commit.id,
       :author              => commit.author.name,
       :authored_timestamp  => commit.authored_date,
       :committer           => commit.committer.name,
@@ -98,7 +96,7 @@ protected
   def extract_changelog!(repo)
     changelog = ''
     in_changelog = false
-    repo.git_show(object_id).send(LINE_ITERATOR) do |line|
+    repo.git_show(hash).send(LINE_ITERATOR) do |line|
       if line =~ /^diff --git/
         in_changelog = false
       elsif line =~ /^\+\+\+.*changelog$/i
