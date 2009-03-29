@@ -13,6 +13,10 @@ namespace :rc do
     run_in_rc %{script/runner 'Repo.update("/home/fxn/rails")'}
   end
 
+  task :delete_all_contributions, :roles => :staging do
+    run_in_rc %{script/runner 'Contribution.delete_all'}
+  end
+
   task :restart, :roles => :staging do
     run_in_rc "touch tmp/restart.txt"
   end

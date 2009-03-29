@@ -3,7 +3,6 @@ class InitialSchema < ActiveRecord::Migration
     create_table :contributors do |t|
       t.string  :name
       t.string  :url_id, :null => false
-      t.integer :contributions_count
     end
     add_index :contributors, :name
     add_index :contributors, :url_id, :unique => true

@@ -9,7 +9,7 @@
   <% @contributors.each_with_index do |contributor, i| %>
     <tr>
       <td align="right"><%= i + 1 %></td>
-      <td align="right"><%= contributor.contributions_count %></td>
+      <td align="right"><%= contributor.ncontributions %></td>
       <td><%= link_to h(contributor.name), contributor_contributions_path(contributor) %></td>
     </tr>
   <% end %>

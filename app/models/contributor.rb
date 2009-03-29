@@ -5,6 +5,20 @@ class Contributor < ActiveRecord::Base
   validates_presence_of   :url_id
   validates_uniqueness_of :url_id
 
+  default_scope :order => 'name ASC'
+
+  def self.all_grouped_by_commit
+    all(
+      :select => 'contributors.*, COUNT(contributions.commit_id) as ncontributions',
+      :joins  => <<-JOINS,
+        INNER JOIN contributions ON contributors.id = contributions.contributor_id
+        INNER JOIN commits       ON commits.id = contributions.commit_id
+      JOINS
+      :group  => 'contributions.contributor_id',
+      :order  => 'ncontributions DESC'
+    )
+  end
+
   # The contributors table may change if new name equivalences are added and IDs
   # in particular are expected to move. So, we just put the parameterized name
   # in URLs, which is unique anyway.
