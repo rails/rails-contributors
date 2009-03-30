@@ -1,6 +1,4 @@
 class CommitsController < ApplicationController
-  caches_page :index
-
   before_filter :set_contributor
   before_filter :set_since
 
