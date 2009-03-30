@@ -9,4 +9,16 @@ module ApplicationHelper
     result << 's' unless name.ends_with?('s')
     result
   end
+
+  def this_week
+    Time.today.beginning_of_week.to_date
+  end
+
+  def this_month
+    Time.today.beginning_of_month.to_date
+  end
+
+  def this_year
+    Time.today.beginning_of_year.to_date
+  end
 end

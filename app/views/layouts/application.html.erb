@@ -8,6 +8,13 @@
   <%= stylesheet_link_tag 'application.css'  %>
 </head>
 <body>
-  <%= yield %>
+  <div id="container">
+    <div id="sidebar">
+      <%= yield :sidebar %>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
