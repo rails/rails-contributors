@@ -173,13 +173,16 @@ module NamesManager
       fallback
     when /^See rails ML/, /RAILS_ENV/
       fallback
-    when /RubyConf/ # example: RubyConf '05
+    when /RubyConf/
+      # RubyConf '05
       fallback
-    when /^Includes duplicates of changes/ # Includes duplicates of changes from 1.1.4 - 1.2.3
+    when /^Includes duplicates of changes/
+      # Includes duplicates of changes from 1.1.4 - 1.2.3
       fallback
     when 'update from Trac'
       fallback
-    when 'Marcel Mollina Jr.' # typo, there are two ls
+    when 'Marcel Mollina Jr.'
+      # typo, there are two ls
       'Marcel Molina Jr.'
     when 'Thanks to Austin Ziegler for Transaction::Simple'
       'Austin Ziegler'

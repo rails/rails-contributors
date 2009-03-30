@@ -1,0 +1,25 @@
+<% content_for :sidebar do %>
+  <p>
+    <%= link_to 'Back', :back %>
+  </p>
+<% end %>
+
+<% @title = 'Names Mapping' %>
+<h1><%= @title %></h1>
+<table>
+  <tr>
+    <th align="left">Appears in listing as...</th>
+    <th align="left">Also seen in logs as...</th>
+  </tr>
+  <% for name in @names_mapping.keys.sort %>
+    <tr>
+      <td><%=h name %></td>
+      <td><%=h Array(@names_mapping[name]).map {|n| %{"#{n}"}}.to_sentence %>
+    </tr>
+  <% end %>
+</table>
+
+<h1>Typos and other special cases</h1>
+<pre>
+<%=h @special_cases %>
+</pre>
