@@ -1,0 +1,25 @@
+<% content_for :sidebar do %>
+  <p>
+    <%= link_to 'This week',  contributor_commits_path(@contributor, :since => this_week) %> |
+    <%= link_to 'This month', contributor_commits_path(@contributor, :since => this_month) %> |
+    <%= link_to 'This year',  contributor_commits_path(@contributor, :since => this_year) %> |
+    <%= link_to 'All Time',   contributor_commits_path(@contributor) %><br/>
+  </p>
+<% end %>
+
+<% @title = "#{genitiveize(@contributor.name)} Contributions" %>
+<h1><%=h @title %></h1>
+<table border="0">
+  <tr>
+    <th>Hash</th>
+    <th>Date</th>
+    <th>Message</th>
+  </tr>
+  <% for commit in @commits %>
+    <tr>
+      <td><%= link_to_commit commit %></td>
+      <td><%= commit.authored_timestamp.to_date %></td>
+      <td><%=h truncate(commit.short_message, :length => 80) %></td>
+    </tr>
+  <% end %>
+</table>
