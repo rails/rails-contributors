@@ -41,7 +41,7 @@
   <% for name in @names_mapping.keys.sort %>
     <tr>
       <td><%=h name %></td>
-      <td><%=h Array(@names_mapping[name]).map {|n| %{"#{n}"}}.to_sentence %>
+      <td><%=h Array(@names_mapping[name]).map {|n| %{"#{n}"}}.to_sentence.gsub("@", " ~ at ~ ") %>
     </tr>
   <% end %>
 </table>
