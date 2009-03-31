@@ -7,7 +7,8 @@
   </p>
 <% end %>
 
-<% @title = "#{genitiveize(@contributor.name)} Contributions" %>
+<% @title = add_since_to("#{genitiveize(@contributor.name)} Contributions") %>
+
 <h1><%=h @title %></h1>
 <table border="0">
   <tr>

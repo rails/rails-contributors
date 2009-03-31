@@ -5,10 +5,11 @@
     <%= link_to 'This year',  contributors_path(:since => this_year) %> |
     <%= link_to 'All Time',   contributors_path %><br/>
   </p>
-  <p><%= link_to 'See names mapping', names_mapping_path %></p>
+  <p><%= link_to 'See names mapping and special cases handling', names_mapping_path %></p>
 <% end %>
 
-<% @title = "Rails Contributors" %>
+<% @title = add_since_to("Rails Contributors") %>
+
 <h1><%= @title %></h1>
 <table border="0">
   <tr>

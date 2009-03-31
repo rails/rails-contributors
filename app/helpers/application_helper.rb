@@ -11,14 +11,31 @@ module ApplicationHelper
   end
 
   def this_week
-    Time.today.beginning_of_week.to_date
+    Date.today.beginning_of_week.to_s(:number)
   end
 
   def this_month
-    Time.today.beginning_of_month.to_date
+    Date.today.beginning_of_month.to_s(:number)
   end
 
   def this_year
-    Time.today.beginning_of_year.to_date
+    Date.today.beginning_of_year.to_s(:number)
+  end
+
+  def add_since_to(title)
+    today = Date.today
+    constraint = case @since
+    when today.beginning_of_week
+      "This week"
+    when today.beginning_of_month
+      "This month"
+    when today.beginning_of_year
+      "This year"
+    when NilClass
+      "All time"
+    else
+      "Since #{@since.to_s(:long_ordinal)}"
+    end
+    "#{title} (#{constraint})"
   end
 end
