@@ -4,6 +4,11 @@ module ApplicationHelper
     link_to commit.short_sha1, commit.github_url, :class => 'commit'
   end
 
+  def link_to_contributor(contributor)
+    params = @since ? {:since => @since.to_s(:number)} : {}
+    link_to h(contributor.name), contributor_commits_path(contributor, params)
+  end
+
   def genitiveize(name)
     result = name + "'"
     result << 's' unless name.ends_with?('s')

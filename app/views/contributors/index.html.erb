@@ -21,7 +21,7 @@
     <tr>
       <td align="right"><%= i + 1 %></td>
       <td align="right"><%= contributor.ncontributions %></td>
-      <td><%= link_to h(contributor.name), contributor_commits_path(contributor) %></td>
+      <td><%= link_to_contributor(contributor) %></td>
     </tr>
   <% end %>
 </table>
