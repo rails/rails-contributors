@@ -21,15 +21,16 @@ namespace :rc do
     run_in_rc "touch tmp/restart.txt"
   end
 
-  task :expire_cache, :roles => :staging do
-    run_in_rc "rm public/index.html"
-    run_in_rc "rm -rf public/contributors"
+  task :expire_caches, :roles => :staging do
+    run_in_rc "rm -f public/stylesheets/all.css"
+    run_in_rc "rm -f public/javascripts/all.css"
   end
+
 
   task :deploy do
     pull
     update_repo
     restart
-    expire_cache
+    expire_caches
   end
 end
