@@ -4,8 +4,42 @@
   </p>
 <% end %>
 
-<% @title = 'Names Mapping' %>
+<% @title = 'Names Mapping and Special Cases' %>
+
 <h1><%= @title %></h1>
+<p>
+  Rails uses Git nowadays, but used Subversion until April 2008. That's more
+  than three years in its history as an Open Source project.
+</p>
+<p>
+  Since Subversion does not distinguish authors from committers, credit was
+  given in informal ways. Convention was that the commit message puts the
+  contributor or contributors in square brackets at the end of the commit message,
+  as in:
+</p>
+<pre>
+  Improving railties test coverage. Closes #11496 [miloops]
+</pre>
+<p>
+  or somewhere in some <span class="filename">CHANGELOG</span> associated with the commit, as in:
+</p>
+<pre>
+   * Alias association #build to #new so it behaves predictably.  #8787 [lifofifo]
+</pre>
+<p>
+  You'll find there lots of ways to refer to the same person, names, email
+  addresses, IRC nicks, and all sort of handlers. This application normalizes
+  them using the mapping in <a href="#names-mapping">Names Mapping</a>.
+</p>
+<p>
+  Also, since this was done by hand there are typos, special cases, etc. These
+  are dealt with as you see in <a href="special-cases">Special Cases</a>.
+</p>
+<p>
+  If you find any missing bit here please just PM fxn somewhere.
+</p>
+
+<h2 id="names-mapping">Names Mappging</h2>
 <table>
   <tr>
     <th align="left">Appears in listing as...</th>
@@ -19,7 +53,7 @@
   <% end %>
 </table>
 
-<h1>Typos and other special cases</h1>
+<h2 id="special-cases">Special Cases</h2>
 <pre>
 <%=h @special_cases %>
 </pre>
