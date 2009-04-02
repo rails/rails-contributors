@@ -82,6 +82,7 @@ module NamesManager
     'Kevin Clark'              => ["Kevin Clark #{email('kevin.clark', 'gmail.com')}", email('kevin.clark', 'gmail.com'), email('kevin.clark', 'gmal.com')],
     'Lars Pind'                => [email('lars', 'pinds.com'), email('lars', 'pind.com'), 'Lars pind', 'lars pind'],
     'lmarlow'                  => email('lmarlow', 'yahoo.com'),
+    'Lawrence Pit'             => 'lawrence',
     'Luca Guidi'               => 'l.guidi',
     'Luke Redpath'             => email('contact', 'lukeredpath.co.uk'),
     'Manfred Stienstra'        => [email('m.stienstra', 'fngtps.com'), 'manfred'],
