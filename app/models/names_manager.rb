@@ -32,6 +32,7 @@ module NamesManager
     'Dan Manges'               => 'dcmanges',
     'Daniel Morrison'          => 'danielmorrison',
     'Dave Thomas'              => [email('dave', 'pragprog.com'), 'pragdave'],
+    'David Dollar'             => 'ddollar',
     'David Heinemeier Hansson' => 'DHH',
     'Dee Zsombor'              => ['Dee.Zsombor', 'zsombor', email('Dee.Zsombor', 'gmail.com')],
     'Don Park'                 => email('don.park', 'gmail.com'),
