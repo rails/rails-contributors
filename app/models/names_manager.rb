@@ -162,6 +162,12 @@ module NamesManager
     CANONICAL_NAME_FOR[name] || name
   end
 
+  def self.special_cases
+    code = File.read(__FILE__)
+    code =~ /(^  #[^\n]+\n)+  def self\.handle_special_cases.*?^  end/m
+    $&
+  end
+
   # In some cases author names are extracted from svn messages. We look there
   # for stuff between brackets, but that's not always an author name. There
   # are lots of exceptions this method knows about.
