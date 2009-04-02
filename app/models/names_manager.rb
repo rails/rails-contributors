@@ -15,6 +15,7 @@ module NamesManager
     'alancfrancis'             => email('alancfrancis', 'gmail.com'),
     'Aliaksey Kandratsenka'    => 'Aleksey Kondratenko',
     'Andrew Kaspick'           => [email('akaspick', 'gmail.com'), 'akaspick'],
+    'Andrew White'             => 'pixeltrix',
     'Anthony Eden'             => 'aeden',
     'Blaine'                   => ['blaine', email('blaine', 'odeo.com')],
     'Bob Silva'                => 'BobSilva',
