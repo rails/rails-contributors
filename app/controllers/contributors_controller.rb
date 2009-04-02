@@ -2,6 +2,6 @@ class ContributorsController < ApplicationController
   before_filter :set_since
 
   def index
-    @contributors = Contributor.all_grouped_by_commit_since(@since)
+    @contributors = Contributor.all_with_ncontributions_since(@since)
   end
 end

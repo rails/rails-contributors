@@ -7,7 +7,7 @@ class Contributor < ActiveRecord::Base
 
   default_scope :order => 'name ASC'
 
-  def self.all_grouped_by_commit_since(date)
+  def self.all_with_ncontributions_since(date)
     conditions = date ? ['commits.authored_timestamp > ?', date] : nil
     all(
       :select => 'contributors.*, COUNT(contributions.commit_id) as ncontributions',
