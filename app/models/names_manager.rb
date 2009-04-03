@@ -204,14 +204,14 @@ module NamesManager
       ['Jim Remsik', 'Tim Pope']
     when 'Jeremy Hopple and Kevin Clark'
       ['Jeremy Hopple', 'Kevin Clark']
-    when 'me@jonnii.com rails@jeffcole.net Marcel Molina Jr.'
-      ['me@jonnii.com', 'rails@jeffcole.net', 'Marcel Molina Jr.']
-    when 'jeremy@planetargon.com Marcel Molina Jr.'
-      ['jeremy@planetargon.com', 'Marcel Molina Jr.']
-    when 'matt@mattmargolis.net Marcel Molina Jr.'
-      ['matt@mattmargolis.net', 'Marcel Molina Jr.']
-    when 'doppler@gmail.com phil.ross@gmail.com'
-      ['doppler@gmail.com', 'phil.ross@gmail.com']
+    when "#{email('me', 'jonnii.com')} #{email('rails', 'jeffcole.net')} Marcel Molina Jr."
+      [email('me', 'jonnii.com'), email('rails', 'jeffcole.net'), 'Marcel Molina Jr.']
+    when "#{email('jeremy', 'planetargon.com')} Marcel Molina Jr."
+      [email('jeremy', 'planetargon.com'), 'Marcel Molina Jr.']
+    when "#{email('matt', 'mattmargolis.net')} Marcel Molina Jr."
+      [email('matt', 'mattmargolis.net'), 'Marcel Molina Jr.']
+    when "#{email('doppler', 'gmail.com')} #{email('phil.ross', 'gmail.com')}"
+      [email('doppler', 'gmail.com'), email('phil.ross', 'gmail.com')]
     when 'After much pestering from Dave Thomas'
       'Dave Thomas'
     when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
@@ -223,7 +223,7 @@ module NamesManager
       # Suggested by Carl Youngblood
       # Investigation by Scott
       # earlier work by Michael Neumann
-      # Aggregated by schoenm@earthlink.net
+      # Aggregated by schoenm ~ at ~ earthlink.net
       $2
     when /\Avia\s+(.*)/i
       # via Tim Bray
@@ -233,7 +233,7 @@ module NamesManager
       # [Rick Olson/Nicholas Seckar]
       # [Kevin Clark & Jeremy Hopple]
       name.split(%r{[,/&]}).map(&:strip).reject do |part|
-        part == 'others' || # foamdino@gmail.com/others
+        part == 'others' || # foamdino ~ at ~ gmail.com/others
         part == '?'         # Sam Stephenson/?
       end
     else
