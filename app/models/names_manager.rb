@@ -135,7 +135,7 @@ module NamesManager
     'Thijs van der Vossen'     => ['thijsv', email('thijs', 'vandervossen.net'), email('thijs', 'fngtps.com')],
     'Tim Pope'                 => ['tpope', 'Time Pope', email('rails', 'tpope.info'), 'pope'],
     'Tobias Lütke'             => ['Tobias Luetke', 'TobiasLuetke'],
-    'Tom Ward'                 => ['Tom ward', 'tomafro'],
+    'Tom Ward'                 => ['Tom ward', 'tomafro', email('tom', 'popdog.net')],
     'Victor Jalencas'          => email('victor-ronr-trac', 'carotena.net'),
     'Will Bryant'              => 'will.bryant',
     'Xavier Noria'             => 'fxn',
