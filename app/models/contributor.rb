@@ -7,6 +7,10 @@ class Contributor < ActiveRecord::Base
 
   default_scope :order => 'name ASC'
 
+  def self.all_with_ncontributions
+    all_with_ncontributions_since(nil)
+  end
+
   def self.all_with_ncontributions_since(date)
     conditions = date ? ['commits.authored_timestamp > ?', date] : nil
     all(

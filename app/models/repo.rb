@@ -24,14 +24,14 @@ class Repo
   def update
     ApplicationUtils.acquiring_sync_file('pulling') do
       start_at = Time.now
-      #git_pull
+      git_pull
       Commit.transaction do
         import_new_commits_into_the_database
 
         current_contributor_names, contributor_names_per_commit = compute_current_contributions
         update_contributors(current_contributor_names)
         assign_contributors(contributor_names_per_commit)
-        # TODO: Expire main listing.
+        update_ranks
       end
       end_at = Time.now
       logger.info("update completed in %.1f seconds" % [end_at - start_at])
@@ -123,13 +123,26 @@ protected
   end
 
   # Iterates over all commits with no contributors and assigns to them the ones
-  # in the previously computed <tt>@contributor_names_per_commit</tt>.
+  # in the previously computed <tt>contributor_names_per_commit</tt>.
   def assign_contributors(contributor_names_per_commit)
     Commit.with_no_contributors.find_each do |commit|
       contributor_names_per_commit[commit.sha1].each do |contributor_name|
         contributor = Contributor.find_or_create_by_name(contributor_name)
         contributor.commits << commit
       end
+    end
+  end
+  
+  # Once all tables have been update we compute the rank of each contributor.
+  def update_ranks
+    rank = 0
+    ncon = nil
+    Contributor.all_with_ncontributions.each do |contributor|
+      if contributor.ncontributions != ncon
+        rank += 1
+        ncon = contributor.ncontributions
+      end
+      contributor.update_attribute(:rank, rank) if contributor.rank != rank
     end
   end
 end

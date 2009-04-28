@@ -13,6 +13,7 @@
 <h1><%= @title %></h1>
 <table border="0">
   <tr>
+    <th></th>
     <th>Rank</th>
     <th>Commits</th>
     <th align="left">Name</th>
@@ -20,6 +21,7 @@
   <% @contributors.each_with_index do |contributor, i| %>
     <tr>
       <td align="right"><%= i + 1 %></td>
+      <td align="right"><%= contributor.rank %></td>
       <td align="right"><%= contributor.ncontributions %></td>
       <td><%= link_to_contributor(contributor) %></td>
     </tr>
