@@ -65,6 +65,10 @@ TOP HEADER LINKS
 	padding:10px 65px;
 }
 
+#topBar a.home {
+    color:white;
+}
+
 #topBar a {
   color:#EE3F3F;
 }
