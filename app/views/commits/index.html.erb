@@ -1,6 +1,9 @@
 <% @title = add_since_to("##{@contributor.rank} #{h(@contributor.name)}", @since) %>
 
-<h1><%= h @title %></h1>
+<h1 id="title">
+  <%= h @title %><br/>
+  <span class="listing-total">Showing <%= pluralize @commits.size, 'commit' %></span>
+</h1>
 
 <div id="table-wrap">
   <table>
