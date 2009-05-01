@@ -247,3 +247,7 @@ ADDED BY fxn
     font-style:italic;
     font-weight:normal;
 }
+
+.sha1 {
+    font-family:Consolas,Monaco,monospace;
+}

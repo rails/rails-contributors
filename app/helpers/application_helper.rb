@@ -1,7 +1,7 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   def link_to_commit(commit)
-    link_to commit.short_sha1, commit.github_url, :class => 'commit'
+    link_to %(<span class="sha1">#{commit.short_sha1}</span>), commit.github_url, :class => 'commit'
   end
 
   def link_to_contributor(contributor, since)
