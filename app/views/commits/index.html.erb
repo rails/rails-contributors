@@ -1,26 +1,26 @@
-<% content_for :sidebar do %>
-  <p>
-    <%= link_to 'This week',  contributor_commits_path(@contributor, :since => this_week) %> |
-    <%= link_to 'This month', contributor_commits_path(@contributor, :since => this_month) %> |
-    <%= link_to 'This year',  contributor_commits_path(@contributor, :since => this_year) %> |
-    <%= link_to 'All Time',   contributor_commits_path(@contributor) %><br/>
-  </p>
-<% end %>
+<% @title = add_since_to("##{@contributor.rank} #{h(@contributor.name)}", @since) %>
 
-<% @title = add_since_to("#{genitiveize(@contributor.name)} Contributions") %>
+<h1><%= h @title %></h1>
 
-<h1><%=h @title %></h1>
-<table border="0">
-  <tr>
-    <th>Hash</th>
-    <th>Date</th>
-    <th>Message</th>
-  </tr>
-  <% for commit in @commits %>
-    <tr>
-      <td><%= link_to_commit commit %></td>
-      <td><%= commit.authored_timestamp.to_date %></td>
-      <td><%=h truncate(commit.short_message, :length => 75) %></td>
+<div id="table-wrap">
+  <table>
+    <tr class="header">
+      <th>Hash</th>
+      <th>Date</th>
+      <th>Message</th>
     </tr>
-  <% end %>
-</table>
+    <%= render :partial => 'commit', :collection => @commits %>
+  </table>
+</div>
+
+<% content_for :sidebar do %>
+    <h4>
+      Commits from
+    </h4>
+    <ul id="navigation">
+      <%= sidebar_tab 'All Time',   contributor_commits_path(@contributor) %>
+      <%= sidebar_tab 'This week',  contributor_commits_path(@contributor, :since => this_week) %>
+      <%= sidebar_tab 'This month', contributor_commits_path(@contributor, :since => this_month) %>
+      <%= sidebar_tab 'This year',  contributor_commits_path(@contributor, :since => this_year) %>
+    </ul>
+<% end %>

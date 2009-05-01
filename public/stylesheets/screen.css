@@ -1,0 +1,249 @@
+body {
+	background-color: #eaeaea;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 87.5%;
+	line-height: 1.5em;
+	color: #333333;
+}
+
+/*
+---------------------------------
+HTML TAGS
+---------------------------------
+*/
+
+a {
+  color:#c52f24;
+}
+
+h1 {
+  font-size:24px;
+  color:#000000;
+  margin:10px 0;
+}
+
+p {
+  margin-bottom:1.5em;
+}
+
+tt {
+  font-family:monaco,"Bitstream Vera Sans Mono","Courier New",courier,monospace;
+}
+
+/*
+---------------------------------
+SPECIFIC TAGS
+---------------------------------
+*/
+
+h1#title {
+  float:left;
+}
+
+a.name-mapping {
+  color:#999999;
+  display:block;
+  float:right;
+  font-weight:bold;
+  margin-top:15px;
+}
+
+.clearfix {
+  clear:both;
+}
+
+/*
+---------------------------------
+TOP HEADER LINKS
+---------------------------------
+*/
+
+#topBar {
+	background-color:#000000;
+	border-bottom:2px solid #AF2A20;
+	color:#A9A7A7;
+	padding:10px 65px;
+}
+
+#topBar a {
+  color:#EE3F3F;
+}
+
+/*
+---------------------------------
+LAYOUT GENERALS
+---------------------------------
+*/
+
+#header {
+  background-color:#C52F24;
+  overflow:hidden;
+}
+
+#logo {
+  margin:30px 65px;
+}
+
+#header-shadow {
+  background:transparent url(../images/header-shadow.png) repeat-x scroll top center;
+}
+
+#container {
+  background:transparent url(../images/content-shadow.png) repeat-y scroll left center;
+  margin:auto auto auto 60px;
+  overflow:hidden;
+  position:relative;
+  width:850px;
+}
+
+#content {
+  background-color:#FFFFFF;
+  float:left;
+  margin-left:10px;
+  min-height:500px;
+  width:630px;
+}
+
+#content-in {
+  border-top:2px solid #EBEBEB;
+  padding:20px;
+}
+
+#bottom {
+  background: #eaeaea url(../images/bottom-bg.png) no-repeat top left;
+  clear:both;
+  height:20px;
+}
+
+/*
+---------------------------------
+SIDEBAR NAVIGATION
+---------------------------------
+*/
+
+#sidebar {
+  -moz-border-radius-bottomright:10px;
+  -moz-border-radius-topright:10px;
+  -webkit-border-top-right-radius:10px;
+  -webkit-border-bottom-right-radius:10px;
+  background:#C52F24 url(../images/nav-shadow-left.png) repeat-y scroll left center;
+  color:#FFFFFF;
+  float:left;
+  margin-top:20px;
+  width:160px;
+}
+
+#sidebar h4 {
+  display:block;
+  margin-bottom:10px;
+  margin-left:10px;
+  padding-top:20px;
+}
+
+#sidebar ul#navigation {
+  min-height:400px;
+}
+
+#sidebar ul#navigation li {
+  background:#e6e6e6 url(../images/nav-shadow-left.png) repeat-y scroll left;
+  border-bottom:3px solid #AF2A20;
+  display:block;
+  font-size: 16px;
+  height:30px;
+  margin-bottom:10px;
+  text-align: center;
+  width:140px;
+}
+
+#sidebar ul#navigation li.current {
+  background: #FFFFFF none;
+}
+
+#sidebar ul#navigation li a {
+  color:#999999;
+  display:block;
+  padding:5px 10px 5px 15px;
+  text-decoration: none;
+}
+
+#sidebar ul#navigation li a:hover {
+  color:#666666;
+}
+
+#sidebar ul#navigation li.current a {
+  color:#333333;
+  font-weight: bold;
+}
+
+/*
+---------------------------------
+TABLES GENERALS
+---------------------------------
+*/
+
+#table-wrap {
+  clear:both;
+  color:#555555;
+  font-size: 1em;
+}
+
+#table-wrap table {
+  margin-top:20px;
+  width:100%;
+}
+
+#table-wrap table tr.header {
+  background-color:#333333;
+  color:#EEEEEE;
+  font-size: 1.2em;
+}
+
+#table-wrap table tr.header th {
+  padding:8px;
+  text-align: left;
+}
+
+#table-wrap table tr.even {
+  background-color:#ffffff;
+}
+
+#table-wrap table tr.odd {
+  background-color:#FFF0F5;
+}
+
+#table-wrap table td {
+  padding:5px;
+}
+
+#table-wrap table td.highlight {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/*
+---------------------------------
+COMMITS LIST TABLE SPECIFICS
+---------------------------------
+*/
+
+#table-wrap table td.rank-data {
+  text-align: center;
+}
+
+#table-wrap table td.no-commits {
+  text-align: center;
+}
+
+
+/*
+---------------------------------
+ADDED BY fxn
+---------------------------------
+*/
+
+#title span.contributors-total {
+    color:#C52F24;
+    font-size:small;
+    font-style:italic;
+    font-weight:normal;
+}

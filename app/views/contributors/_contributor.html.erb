@@ -1,0 +1,5 @@
+<tr class="<%= cycle 'even', 'odd' %>">
+  <td class="rank-data">#<%= contributor.rank %></td>
+  <td class="highlight"><%= link_to_contributor(contributor, @since) %></td>
+  <td class="no-commits"><%= contributor.ncontributions %></td>
+</tr>

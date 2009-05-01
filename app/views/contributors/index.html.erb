@@ -1,29 +1,30 @@
-<% content_for :sidebar do %>
-  <p>
-    <%= link_to 'This week',  contributors_path(:since => this_week) %> |
-    <%= link_to 'This month', contributors_path(:since => this_month) %> |
-    <%= link_to 'This year',  contributors_path(:since => this_year) %> |
-    <%= link_to 'All Time',   contributors_path %><br/>
-  </p>
-  <p><%= link_to 'See names mapping and special cases handling', names_mapping_path %></p>
-<% end %>
+<% @title = add_since_to("Rails Contributors", @since) %>
 
-<% @title = add_since_to("Rails Contributors") %>
+<h1 id="title">
+  <%= @title %><br/>
+  <span class="contributors-total">Showing <%= @contributors.size %> people</span>
+</h1>
+<%= link_to "See names mapping &rarr;", names_mapping_path, :class => "name-mapping" %>
 
-<h1><%= @title %></h1>
-<table border="0">
-  <tr>
-    <th></th>
-    <th>Rank</th>
-    <th>Commits</th>
-    <th align="left">Name</th>
-  </tr>
-  <% @contributors.each_with_index do |contributor, i| %>
-    <tr>
-      <td align="right"><%= i + 1 %></td>
-      <td align="right"><%= contributor.rank %></td>
-      <td align="right"><%= contributor.ncontributions %></td>
-      <td><%= link_to_contributor(contributor) %></td>
+<div id="table-wrap">
+  <table>
+    <tr class="header">
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Commits</th>
     </tr>
-  <% end %>
-</table>
+    <%= render :partial => 'contributor', :collection => @contributors %>
+  </table>
+</div>
+
+<% content_for :sidebar do %>
+    <h4>
+      Commits from
+    </h4>
+    <ul id="navigation">
+      <%= sidebar_tab 'All Time',   contributors_path %>
+      <%= sidebar_tab 'This week',  contributors_path(:since => this_week) %>
+      <%= sidebar_tab 'This month', contributors_path(:since => this_month) %>
+      <%= sidebar_tab 'This year',  contributors_path(:since => this_year) %>
+    </ul>
+<% end %>
