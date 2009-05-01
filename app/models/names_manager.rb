@@ -57,7 +57,7 @@ module NamesManager
     'Jack Danger Canty'        => %w(danger Danger),
     'Jakob Skjerning'          => ['Jakob S', email('jakob', 'mentalized.net')],
     'Jarkko Laine'             => [email('jarkko', 'jlaine.net'), 'Jarkko', 'jarkko'],
-    'James Adam'               => ['lazyatom', email('james.adam', 'gmail.com')], 
+    'James Adam'               => ['lazyatom', email('james.adam', 'gmail.com')],
     'James Mead'               => 'floehopper',
     'Jan De Poorter'           => 'DefV',
     'Jeffrey Hardy'            => 'packagethief',
@@ -198,6 +198,8 @@ module NamesManager
       'Austin Ziegler'
     when 'Hongli Lai (Phusion'
       'Hongli Lai (Phusion)'
+    when 'Leon Bredt'
+      'Leon Breedt'  
     when 'nik.wakelin Koz'
       ['nik.wakelin', 'Koz']
     when 'Jim Remsik and Tim Pope'
