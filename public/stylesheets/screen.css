@@ -22,6 +22,12 @@ h1 {
   margin:10px 0;
 }
 
+h2 {
+  font-size:20px;
+  color:#000000;
+  margin:10px 0;
+}
+
 p {
   margin-bottom:1.5em;
 }
@@ -40,6 +46,13 @@ h1#title {
   float:left;
 }
 
+h1#title span.listing-total {
+    color:#C52F24;
+    font-size:small;
+    font-style:italic;
+    font-weight:normal;
+}
+
 a.name-mapping {
   color:#999999;
   display:block;
@@ -51,6 +64,11 @@ a.name-mapping {
 .clearfix {
   clear:both;
 }
+
+.sha1 {
+    font-family:Consolas,Monaco,monospace;
+}
+
 
 /*
 ---------------------------------
@@ -236,22 +254,4 @@ COMMITS LIST TABLE SPECIFICS
 
 #table-wrap table td.no-commits {
   text-align: center;
-}
-
-
-/*
----------------------------------
-ADDED BY fxn
----------------------------------
-*/
-
-#title span.listing-total {
-    color:#C52F24;
-    font-size:small;
-    font-style:italic;
-    font-weight:normal;
-}
-
-.sha1 {
-    font-family:Consolas,Monaco,monospace;
 }

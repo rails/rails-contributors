@@ -1,6 +1,11 @@
 <% @title = 'Names Mapping and Special Cases' %>
 
-<h1><%= @title %></h1>
+<h1>
+  <%= @title %>
+</h1>
+
+<div class="clearfix"></div>
+
 <p>
   Rails uses Git nowadays, but used Subversion until April 2008. That's more
   than three years in its history as an Open Source project.
@@ -10,15 +15,17 @@
   given in informal ways. Convention was the commit message put the
   contributor or contributors in square brackets at the end, as in:
 </p>
-<pre>
-  Improving railties test coverage. Closes #11496 [miloops]
-</pre>
 <p>
-  or somewhere in some <span class="filename">CHANGELOG</span> associated with the commit, as in:
+  <tt>Improving railties test coverage. Closes #11496 [miloops]</tt>
 </p>
-<pre>
-   * Alias association #build to #new so it behaves predictably.  #8787 [lifofifo]
-</pre>
+<p>
+  or somewhere in some <span class="filename">CHANGELOG</span> associated with
+  the commit, as in:
+</p>
+<p>
+  <tt>* Alias association #build to #new so it behaves predictably. #8787
+    [lifofifo]</tt>
+</p>
 <p>
   You'll find there lots of ways to refer to the same person, names, email
   addresses, IRC nicks, and all sort of handlers. This application normalizes
@@ -33,20 +40,24 @@
 </p>
 
 <h2 id="names-mapping">Names Mappging</h2>
-<table>
-  <tr>
-    <th align="left">Appears in listing as...</th>
-    <th align="left">Also seen in logs as...</th>
-  </tr>
-  <% for name in @names_mapping.keys.sort %>
-    <tr>
-      <td><%=h name %></td>
-      <td><%=h Array(@names_mapping[name]).map {|n| %{"#{n}"}}.to_sentence.gsub("@", " ~ at ~ ") %>
+<div id="table-wrap">
+  <table>
+    <col width="30%"/>
+    <col width="70%"/>
+    <tr class="header">
+      <th>Name</th>
+      <th>Also seen in logs as&hellip;</th>
     </tr>
-  <% end %>
-</table>
+    <% for name in @names_mapping.keys.sort %>
+        <tr class="<%= cycle 'even', 'odd' %>">
+          <td class="highlight"><%= h name %></td>
+          <td class="log"><%= h Array(@names_mapping[name]).map {|n| %{"#{n}"}}.to_sentence.gsub("@", " ~ at ~ ") %>
+        </tr>
+    <% end %>
+  </table>
+</div>
 
 <h2 id="special-cases">Special Cases</h2>
 <pre>
-<%=h @special_cases %>
+<%= h @special_cases %>
 </pre>
