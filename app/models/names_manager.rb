@@ -199,13 +199,15 @@ module NamesManager
     when 'Hongli Lai (Phusion'
       'Hongli Lai (Phusion)'
     when 'Leon Bredt'
-      'Leon Breedt'  
+      'Leon Breedt'
     when 'nik.wakelin Koz'
       ['nik.wakelin', 'Koz']
     when 'Jim Remsik and Tim Pope'
       ['Jim Remsik', 'Tim Pope']
     when 'Jeremy Hopple and Kevin Clark'
       ['Jeremy Hopple', 'Kevin Clark']
+    when 'Yehuda Katz and Carl Lerche'
+      ['Yehuda Katz', 'Carl Lerche']  
     when "#{email('me', 'jonnii.com')} #{email('rails', 'jeffcole.net')} Marcel Molina Jr."
       [email('me', 'jonnii.com'), email('rails', 'jeffcole.net'), 'Marcel Molina Jr.']
     when "#{email('jeremy', 'planetargon.com')} Marcel Molina Jr."
