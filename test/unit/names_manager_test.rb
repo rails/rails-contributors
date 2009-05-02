@@ -35,9 +35,11 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_equal 'Marcel Molina Jr.', NamesManager.handle_special_cases('Marcel Mollina Jr.', 1)
     assert_equal 'Austin Ziegler', NamesManager.handle_special_cases('Thanks to Austin Ziegler for Transaction::Simple', 1)
     assert_equal 'Hongli Lai (Phusion)', NamesManager.handle_special_cases('Hongli Lai (Phusion', 1)
+    assert_equal 'Leon Breedt', NamesManager.handle_special_cases('Leon Bredt', 1)
     assert_equal ['nik.wakelin', 'Koz'], NamesManager.handle_special_cases('nik.wakelin Koz', 1)
     assert_equal ['Jim Remsik', 'Tim Pope'], NamesManager.handle_special_cases('Jim Remsik and Tim Pope', 1)
     assert_equal ['Jeremy Hopple', 'Kevin Clark'], NamesManager.handle_special_cases('Jeremy Hopple and Kevin Clark', 1)
+    assert_equal ['Yehuda Katz', 'Carl Lerche'], NamesManager.handle_special_cases('Yehuda Katz and Carl Lerche', 1)
     assert_equal ['me@jonnii.com', 'rails@jeffcole.net', 'Marcel Molina Jr.'], NamesManager.handle_special_cases('me@jonnii.com rails@jeffcole.net Marcel Molina Jr.', 1)
     assert_equal ['jeremy@planetargon.com', 'Marcel Molina Jr.'], NamesManager.handle_special_cases('jeremy@planetargon.com Marcel Molina Jr.', 1)
     assert_equal ['matt@mattmargolis.net', 'Marcel Molina Jr.'], NamesManager.handle_special_cases('matt@mattmargolis.net Marcel Molina Jr.', 1)
@@ -61,5 +63,6 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_equal ['Xavier Noria', 'Jack Danger Canty', 'leethal'], NamesManager.handle_special_cases('Xavier Noria, Jack Danger Canty, leethal', 1)
     assert_equal ['Chad Fowler <chad@chadfowler.com>', 'Nicholas Seckar'], NamesManager.handle_special_cases('Chad Fowler <chad@chadfowler.com>, Nicholas Seckar', 1)
     assert_equal ['Julian Tarkhanov', 'Manfred Stienstra', 'Jan Behrens'], NamesManager.handle_special_cases('Julian Tarkhanov, Manfred Stienstra & Jan Behrens', 1)
+    assert_equal ['Yehuda Katz', 'Carl Lerche'], NamesManager.handle_special_cases('Yehuda Katz + Carl Lerche', 1)
   end
 end

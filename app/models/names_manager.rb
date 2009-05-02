@@ -168,6 +168,8 @@ module NamesManager
     $&
   end
 
+  CONNECTORS_REGEXP = %r{[,/&+]}
+
   # In some cases author names are extracted from svn messages. We look there
   # for stuff between brackets, but that's not always an author name. There
   # are lots of exceptions this method knows about.
@@ -207,7 +209,7 @@ module NamesManager
     when 'Jeremy Hopple and Kevin Clark'
       ['Jeremy Hopple', 'Kevin Clark']
     when 'Yehuda Katz and Carl Lerche'
-      ['Yehuda Katz', 'Carl Lerche']  
+      ['Yehuda Katz', 'Carl Lerche']
     when "#{email('me', 'jonnii.com')} #{email('rails', 'jeffcole.net')} Marcel Molina Jr."
       [email('me', 'jonnii.com'), email('rails', 'jeffcole.net'), 'Marcel Molina Jr.']
     when "#{email('jeremy', 'planetargon.com')} Marcel Molina Jr."
@@ -232,11 +234,12 @@ module NamesManager
     when /\Avia\s+(.*)/i
       # via Tim Bray
       $1
-    when %r{[,/&]} # There are lots of these, even with a combination of connectors.
+    when CONNECTORS_REGEXP # There are lots of these, even with a combination of connectors.
       # [Adam Milligan, Pratik]
       # [Rick Olson/Nicholas Seckar]
       # [Kevin Clark & Jeremy Hopple]
-      name.split(%r{[,/&]}).map(&:strip).reject do |part|
+      # Yehuda Katz + Carl Lerche
+      name.split(CONNECTORS_REGEXP).map(&:strip).reject do |part|
         part == 'others' || # foamdino ~ at ~ gmail.com/others
         part == '?'         # Sam Stephenson/?
       end
