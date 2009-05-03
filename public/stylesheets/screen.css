@@ -42,15 +42,15 @@ SYNTAX FORMAT
 ---------------------------------
 */
 
-pre,code { 
+pre,code {
   margin: 1.5em 0;
-  overflow: auto; 
-  white-space: pre;  
+  overflow: auto;
+  white-space: pre;
 }
 
-pre,code,tt { 
-  font: 1em 'andale mono', 'lucida console', monospace; 
-  line-height: 1.5; 
+pre,code,tt {
+  font: 1em 'andale mono', 'lucida console', monospace;
+  line-height: 1.5;
 }
 
 code {
@@ -62,7 +62,7 @@ code {
 }
 
 .ruby .keywords {
-  color : #EE3F3F;
+  color: #C52F24;
 }
 
 .ruby .ivar {
@@ -340,13 +340,13 @@ PAGINATION
   display: block;
   height: 0;
   clear: both;
-  visibility: hidden; 
+  visibility: hidden;
 }
 
 * html #pagination {
-  height: 1%; 
+  height: 1%;
 }
 
 *:first-child+html #pagination {
-  overflow: hidden; 
+  overflow: hidden;
 }
