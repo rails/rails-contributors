@@ -1,3 +1,7 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag 'code_highlighter.js', 'ruby.js', :cache => 'names_mapping' %>
+<% end %>
+
 <% @title = 'Names Mapping and Special Cases' %>
 
 <h1>
@@ -58,6 +62,8 @@
 </div>
 
 <h2 id="special-cases">Special Cases</h2>
-<pre>
+<div class="code">
+  <code class="ruby">
 <%= h @special_cases %>
-</pre>
+  </code>
+</div>

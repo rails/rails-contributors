@@ -5,8 +5,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title><%= @title %></title>
-    <%= stylesheet_link_tag 'reset.css', :charset => 'utf-8' %>
-    <%= stylesheet_link_tag 'screen.css', :media => 'screen', :charset => 'utf-8' %>
+    <%= stylesheet_link_tag 'reset.css', 'screen.css', :cache => true, :charset => 'utf-8' %>
+    <%= yield :javascripts %>
   </head>
   <body>
     <div id="topBar">
