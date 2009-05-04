@@ -1,4 +1,5 @@
 require 'set'
+require 'fileutils'
 
 class Repo
   attr_reader :logger
@@ -32,6 +33,7 @@ class Repo
         update_contributors(current_contributor_names)
         assign_contributors(contributor_names_per_commit)
         update_ranks
+        expire_caches
       end
       end_at = Time.now
       logger.info("update completed in %.1f seconds" % [end_at - start_at])
@@ -132,7 +134,7 @@ protected
       end
     end
   end
-  
+
   # Once all tables have been update we compute the rank of each contributor.
   def update_ranks
     rank = 0
@@ -143,6 +145,12 @@ protected
         ncon = contributor.ncontributions
       end
       contributor.update_attribute(:rank, rank) if contributor.rank != rank
+    end
+  end
+
+  def expire_caches
+    Dir.chdir(Rails.public_path) do
+      FileUtils.rm_rf(['index.html', 'contributors.html', 'contributors'])
     end
   end
 end
