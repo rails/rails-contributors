@@ -2,9 +2,6 @@ class CommitsController < ApplicationController
   before_filter :set_contributor
   before_filter :set_since
 
-  # Cache the home page.
-  caches_page :index, :if => Proc.new {|c| c.params[:since].blank?}
- 
   def index
     @commits = @contributor.commits_since(@since)
   end
