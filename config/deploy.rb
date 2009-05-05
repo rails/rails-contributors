@@ -23,9 +23,8 @@ namespace :rc do
 
   task :expire_caches, :roles => :staging do
     run_in_rc "rm -f public/stylesheets/all.css"
-    run_in_rc "rm -f public/javascripts/all.css"
+    run_in_rc "rm -f public/javascripts/all.js"
   end
-
 
   task :deploy do
     pull
