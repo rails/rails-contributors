@@ -29,7 +29,9 @@ private
     Lycos_Spider |
     Infoseek     |
     ia_archiver  |
-    scoutjet
+    scoutjet     |
+    nutch        |
+    dts agent
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
