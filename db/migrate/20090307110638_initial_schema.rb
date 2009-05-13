@@ -26,11 +26,19 @@ class InitialSchema < ActiveRecord::Migration
     end
     add_index :contributions, :contributor_id
     add_index :contributions, :commit_id
+
+    create_table :repo_updates do |t|
+      t.integer   :ncommits
+      t.timestamp :started_at
+      t.timestamp :pulled_at
+      t.timestamp :ended_at
+    end
   end
 
   def self.down
     drop_table :contributors
     drop_table :commits
     drop_table :contributions
+    drop_table :repo_updates
   end
 end

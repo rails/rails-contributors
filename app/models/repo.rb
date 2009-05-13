@@ -1,4 +1,5 @@
 require 'set'
+require 'fileutils'
 
 class Repo
   attr_reader :logger
@@ -23,18 +24,33 @@ class Repo
 
   def update
     ApplicationUtils.acquiring_sync_file('pulling') do
-      start_at = Time.now
-      git_pull
-      Commit.transaction do
-        import_new_commits_into_the_database
+      started_at = Time.now
+      ncommits = 0
 
+      git_pull
+      pulled_at = Time.now
+
+      Commit.transaction do
+        ncommits = import_new_commits_into_the_database
+        # Even if there are no new commits we need to go on because the mapping
+        # of names could have been modified before this update.
         current_contributor_names, contributor_names_per_commit = compute_current_contributions
         update_contributors(current_contributor_names)
         assign_contributors(contributor_names_per_commit)
         update_ranks
       end
-      end_at = Time.now
-      logger.info("update completed in %.1f seconds" % [end_at - start_at])
+
+      expire_caches
+
+      ended_at = Time.now
+
+      logger.info("update completed in %.1f seconds" % [ended_at - started_at])
+      RepoUpdate.create(
+        :ncommits   => ncommits,
+        :started_at => started_at,
+        :pulled_at  => pulled_at,
+        :ended_at   => ended_at
+      )
     end
   end
 
@@ -56,13 +72,15 @@ protected
   # commits within a given import.
   def import_new_commits_into_the_database
     batch_size = 100
-    offset = 0
+    ncommits   = 0
+    offset     = 0
     loop do
       commits = @repo.commits('master', batch_size, offset)
-      return if commits.empty?
+      return ncommits if commits.empty?
       commits.each do |commit|
-        return if Commit.exists?(:sha1 => commit.id)
+        return ncommits if Commit.exists?(:sha1 => commit.id)
         import_grit_commit(commit)
+        ncommits += 1
       end
       offset += commits.size
     end
@@ -132,7 +150,7 @@ protected
       end
     end
   end
-  
+
   # Once all tables have been update we compute the rank of each contributor.
   def update_ranks
     rank = 0
@@ -144,5 +162,9 @@ protected
       end
       contributor.update_attribute(:rank, rank) if contributor.rank != rank
     end
+  end
+
+  def expire_caches
+    FileUtils.rm_rf(File.join(Rails.root, 'tmp', 'cache', 'views'))
   end
 end
