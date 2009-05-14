@@ -31,7 +31,9 @@ private
     ia_archiver  |
     scoutjet     |
     nutch        |
-    dts agent
+    dts agent    |
+    twiceler     |
+    ask jeeves
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
