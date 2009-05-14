@@ -52,4 +52,8 @@ module ApplicationHelper
       </li>
     HTML
   end
+
+  def normalize_title(title)
+    title.starts_with?("Rails Contributors") ? title : "Rails Contributors - #{title}" 
+  end
 end
