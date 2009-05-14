@@ -58,9 +58,9 @@ protected
 
   # Simple-minded git system caller, enough for what we need. Returns the output.
   def git_exec(command, *args)
-    git_call = "git --git-dir='#{@repo.path}' #{command} #{args.join(' ')}"
-    logger.info(git_call)
-    %x{#{git_call}}
+    Dir.chdir(@repo.working_dir) do
+      system('git', *[command, *args])
+    end
   end
 
   # Imports those commits in the Git repo that do not yet exist in the database.
