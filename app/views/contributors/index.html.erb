@@ -22,9 +22,9 @@
       Commits from
     </h4>
     <ul id="navigation">
-      <%= sidebar_tab 'All time',   contributors_path %>
-      <%= sidebar_tab 'This week',  contributors_path(:since => this_week) %>
-      <%= sidebar_tab 'This month', contributors_path(:since => this_month) %>
-      <%= sidebar_tab 'This year',  contributors_path(:since => this_year) %>
+      <%= sidebar_tab 'All time',   nil,        contributors_path %>
+      <%= sidebar_tab 'This week',  this_week,  contributors_path(:since => this_week) %>
+      <%= sidebar_tab 'This month', this_month, contributors_path(:since => this_month) %>
+      <%= sidebar_tab 'This year',  this_year,  contributors_path(:since => this_year) %>
     </ul>
 <% end %>

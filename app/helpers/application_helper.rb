@@ -44,8 +44,8 @@ module ApplicationHelper
     "#{title} - #{constraint}"
   end
 
-  def sidebar_tab(name, options={}, html_options={})
-    style = current_page?(options) ? ' class="current"' : ''
+  def sidebar_tab(name, time_range, options={}, html_options={})
+    style = params[:since] == time_range ? ' class="current"' : ''
     return <<-HTML
       <li#{style}>
         #{link_to name, options, html_options}
@@ -54,6 +54,6 @@ module ApplicationHelper
   end
 
   def normalize_title(title)
-    title.starts_with?("Rails Contributors") ? title : "Rails Contributors - #{title}" 
+    title.starts_with?("Rails Contributors") ? title : "Rails Contributors - #{title}"
   end
 end
