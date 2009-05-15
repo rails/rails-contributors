@@ -15,7 +15,7 @@ class Repo
   end
 
   def git_pull
-    git_exec('pull')
+    git_exec('pull', '--quiet')
   end
 
   def git_show(sha1)
