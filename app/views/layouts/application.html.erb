@@ -10,24 +10,30 @@
   </head>
   <body>
     <div id="topBar">
-      <%= render :partial => 'layouts/top_bar_content' %>
+      <div class="wrapper">
+        <%= render :partial => 'layouts/top_bar_content' %>
+      </div>
     </div>
     <div id="header">
-      <div id="logo">
-        <%= link_to image_tag("logo.png"), root_path %>
+      <div class="wrapper">
+        <div id="logo">
+          <%= link_to image_tag("logo.png"), root_path %>
+        </div>
       </div>
     </div>
     <div id="header-shadow">
-      <div id="container">
-        <div id="content">
-          <div id="content-in">
-            <%= yield %>
+      <div class="wrapper">
+        <div id="container">
+          <div id="content">
+            <div id="content-in">
+              <%= yield %>
+            </div>
           </div>
+          <div id="sidebar">
+            <%= yield :sidebar %>
+          </div>
+          <div id="bottom"></div>
         </div>
-        <div id="sidebar">
-          <%= yield :sidebar %>
-        </div>
-        <div id="bottom"></div>
       </div>
     </div>
   </body>
