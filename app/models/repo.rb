@@ -25,22 +25,40 @@ class Repo
   def update
     ApplicationUtils.acquiring_sync_file('pulling') do
       started_at = Time.now
-      ncommits = 0
+      ncommits   = 0
+      gone_names = []
 
       git_pull
       pulled_at = Time.now
 
       Commit.transaction do
         ncommits = import_new_commits_into_the_database
+        logger.info("#{ncommits} new commits imported into the database")
+
         # Even if there are no new commits we need to go on because the mapping
         # of names could have been modified before this update.
         current_contributor_names, contributor_names_per_commit = compute_current_contributions
-        update_contributors(current_contributor_names)
-        assign_contributors(contributor_names_per_commit)
-        update_ranks
+        gone_names = update_contributors(current_contributor_names)
+
+        if gone_names.empty?
+          logger.info("no names are gone")
+        else
+          logger.info("these names are gone: #{gone_names.to_sentence}")
+        end
+
+        if database_needs_update?(ncommits, gone_names)
+          logger.info("updating database")
+          assign_contributors(contributor_names_per_commit)
+          update_ranks
+        end
       end
 
-      expire_caches
+      if cache_needs_expiration?(ncommits, gone_names)
+        logger.info("expiring cache")
+        expire_caches
+      else
+        logger.info("cache needs no expiration")
+      end
 
       ended_at = Time.now
 
@@ -110,8 +128,11 @@ protected
   def update_contributors(current_contributor_names)
     previous_contributor_names = Set.new(Contributor.connection.select_values("SELECT NAME FROM CONTRIBUTORS"))
     gone_names = previous_contributor_names - current_contributor_names
-    reassign_contributors_to = destroy_gone_contributors(gone_names)
-    reassign_contributors_to.each {|commit| commit.contributions.clear}
+    unless gone_names.empty?
+      reassign_contributors_to = destroy_gone_contributors(gone_names)
+      reassign_contributors_to.each {|commit| commit.contributions.clear}
+    end
+    gone_names
   end
 
   # Destroys all contributors in +gone_names+ and returns their commits.
@@ -166,5 +187,23 @@ protected
 
   def expire_caches
     FileUtils.rm_rf(File.join(Rails.root, 'tmp', 'cache', 'views'))
+  end
+
+  def database_needs_update?(ncommits, gone_names)
+    ncommits > 0 || !gone_names.empty?
+  end
+
+  def cache_needs_expiration?(ncommits, gone_names)
+    ncommits > 0 || !gone_names.empty? || we_are_switching_time_ranges
+  end
+
+  def we_are_switching_time_ranges
+    last_update_at = RepoUpdate.last.created_at rescue nil
+    if last_update_at
+      now = Time.now
+      last_update_at < now.beginning_of_week ||
+      last_update_at < now.beginning_of_month
+      # if we've switched years we've switched months
+    end
   end
 end
