@@ -1,21 +1,19 @@
 == Rails Contributors
 
-(THIS APPLICATION DOES NOT WORK YET, WORKING ON IT, STAY TUNNED.)
-
-Rails has had lots of contributors. This web application keeps an up to date 
+Rails has had lots of contributors. This web application keeps an up to date
 list of them and their contributions.
 
-That list is not easy to build. Rails used Subversion until April 2008, and 
-commits in Subversion do not distinguish author from committer. To give due 
-credit to contributors some identifier was usually put in square brackets at the 
+That list is not easy to build. Rails used Subversion until April 2008, and
+commits in Subversion do not distinguish author from committer. To give due
+credit to contributors some identifier was usually put in square brackets at the
 end of the commit message, or in the Changelog.
 
-That was a convention followed by hand. As a consequence over the time a given 
-contributor often appears under different names, handlers, emails, there are 
+That was a convention followed by hand. As a consequence over the time a given
+contributor often appears under different names, handlers, emails, there are
 typos, etc.
 
-I wanted to present a good enough figure for the number of Rails contributors in 
-my keynote at Conferencia Rails 2008 and started an effort in the core list to 
+I wanted to present a good enough figure for the number of Rails contributors in
+my keynote at Conferencia Rails 2008 and started an effort in the core list to
 identify these equivalences:
 
    http://groups.google.com/group/rubyonrails-core/browse_thread/thread/7554c8c5a25b4765
@@ -27,5 +25,4 @@ regularly maintained and published in this gist:
 
    http://gist.github.com/20721
 
-Now that script is going to be the starting point for a wepapp dedicated to all 
-people that have contributed to build Rails day after day.
+Even nowadays with Git some commits have more than one author.
