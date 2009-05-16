@@ -23,7 +23,7 @@ class Repo
   end
 
   def update
-    ApplicationUtils.acquiring_sync_file('pulling') do
+    ApplicationUtils.acquiring_sync_file('updating') do
       started_at = Time.now
       ncommits   = 0
       gone_names = []
