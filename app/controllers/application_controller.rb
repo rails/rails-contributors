@@ -33,7 +33,8 @@ private
     nutch        |
     dts agent    |
     twiceler     |
-    ask jeeves
+    ask jeeves   |
+    Webspider
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
