@@ -1,7 +1,33 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+david:
+  name: David Heinemeier Hansson
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+jeremy:
+  name: Jeremy Kemper
+
+josh:
+  name: Josh Peek
+
+rick:
+  name: Rick Olson
+
+jamis:
+  name: Jamis Buck
+
+michael:
+  name: Michael Koziarski
+
+pratik:
+  name: Pratik Naik
+
+nicholas:
+  name: Nicholas Seckar
+
+geoff:
+  name: Geoff Buesing
+
+marcel:
+  name: Marcel Molina Jr.
+
+yehuda:
+  name: Yehuda Katz
+
