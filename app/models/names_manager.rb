@@ -1,4 +1,12 @@
+require 'set'
+
 module NamesManager
+
+  # Returns a set with all (canonical) contributor names known by the application.
+  def self.all_names
+    Set.new(Contributor.connection.select_values("SELECT NAME FROM CONTRIBUTORS"))
+  end
+
   # Simple trick to be able to publish this file with readable addresses.
   def self.email(user, domain)
     user + '@' + domain

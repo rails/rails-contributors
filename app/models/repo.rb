@@ -126,7 +126,7 @@ protected
   # we just clear them to ease this part, since diffing them by hand has some
   # cases to take into account and it is not worth the effort.
   def update_contributors(current_contributor_names)
-    previous_contributor_names = Set.new(Contributor.connection.select_values("SELECT NAME FROM CONTRIBUTORS"))
+    previous_contributor_names = NamesManager.all_names
     gone_names = previous_contributor_names - current_contributor_names
     unless gone_names.empty?
       reassign_contributors_to = destroy_gone_contributors(gone_names)
