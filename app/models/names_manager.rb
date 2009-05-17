@@ -7,7 +7,8 @@ module NamesManager
     Set.new(Contributor.connection.select_values("SELECT NAME FROM CONTRIBUTORS"))
   end
 
-  # Determines whether the names mapping or special cases handling
+  # Determines whether names mapping or special cases handling have been updated
+  # since +ts+.
   def self.mapping_updated_since?(ts)
     File.mtime(__FILE__) > ts
   end
