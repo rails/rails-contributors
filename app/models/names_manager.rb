@@ -7,6 +7,11 @@ module NamesManager
     Set.new(Contributor.connection.select_values("SELECT NAME FROM CONTRIBUTORS"))
   end
 
+  # Determines whether the names mapping or special cases handling
+  def self.mapping_updated_since?(ts)
+    File.mtime(__FILE__) > ts
+  end
+
   # Simple trick to be able to publish this file with readable addresses.
   def self.email(user, domain)
     user + '@' + domain

@@ -22,42 +22,41 @@ class Repo
     git_exec('show', sha1)
   end
 
+  # TODO: This method is getting long.
   def update
     ApplicationUtils.acquiring_sync_file('updating') do
       started_at = Time.now
       ncommits   = 0
-      gone_names = []
 
       git_pull
       pulled_at = Time.now
 
-      Commit.transaction do
-        ncommits = import_new_commits_into_the_database
-        logger.info("#{ncommits} new commits imported into the database")
-
-        # Even if there are no new commits we need to go on because the mapping
-        # of names could have been modified before this update.
-        current_contributor_names, contributor_names_per_commit = compute_current_contributions
-        gone_names = update_contributors(current_contributor_names)
-
-        if gone_names.empty?
-          logger.info("no names are gone")
-        else
-          logger.info("these names are gone: #{gone_names.to_sentence}")
-        end
-
-        if database_needs_update?(ncommits, gone_names)
-          logger.info("updating database")
-          assign_contributors(contributor_names_per_commit)
-          update_ranks
-        end
+      if names_mapping_updated = names_mapping_updated?
+        logger.info("there's a new names mapping")
+      else
+        logger.info("same names mapping than in last repo update")
       end
 
-      if cache_needs_expiration?(ncommits, gone_names)
+      Commit.transaction do
+        ncommits = import_new_commits
+        logger.info("#{ncommits} new commits imported into the database")
+
+        break if ncommits.zero? && !names_mapping_updated
+
+        only_for_new_commits = !names_mapping_updated
+        contributor_names_per_commit = compute_contributor_names_per_commit(only_for_new_commits)
+        manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated
+
+        logger.info("updating database")
+        assign_contributors(contributor_names_per_commit)
+        update_ranks
+      end
+
+      if cache_needs_expiration?(ncommits, names_mapping_updated)
         logger.info("expiring cache")
         expire_caches
       else
-        logger.info("cache needs no expiration")
+        logger.info("current cache is valid")
       end
 
       ended_at = Time.now
@@ -74,6 +73,14 @@ class Repo
 
 protected
 
+  # Determines whether the names mapping has been updated. This is useful because
+  # if the names mapping is up to date we only need to assign contributors for
+  # new commits.
+  def names_mapping_updated?
+    lastru = RepoUpdate.last
+    lastru ? NamesManager.mapping_updated_since?(lastru.ended_at) : true
+  end
+
   # Simple-minded git system caller, enough for what we need. Returns the output.
   def git_exec(command, *args)
     Dir.chdir(@repo.working_dir) do
@@ -88,7 +95,7 @@ protected
   # Note that commits are inserted in reverse order (most recent has lower ID)
   # and that order is not linear as new imports are performed, only relative to
   # commits within a given import.
-  def import_new_commits_into_the_database
+  def import_new_commits
     batch_size = 100
     ncommits   = 0
     offset     = 0
@@ -125,14 +132,13 @@ protected
   # Contributions for the related commits will in general need to be updated,
   # we just clear them to ease this part, since diffing them by hand has some
   # cases to take into account and it is not worth the effort.
-  def update_contributors(current_contributor_names)
+  def manage_gone_contributors(current_contributor_names)
     previous_contributor_names = NamesManager.all_names
     gone_names = previous_contributor_names - current_contributor_names
     unless gone_names.empty?
       reassign_contributors_to = destroy_gone_contributors(gone_names)
       reassign_contributors_to.each {|commit| commit.contributions.clear}
     end
-    gone_names
   end
 
   # Destroys all contributors in +gone_names+ and returns their commits.
@@ -143,22 +149,20 @@ protected
     commits_of_gone_contributors
   end
 
-  # Goes over all the commits in the database and builds a hash that maps
-  # canonical names to the commits they are contributors of.
+  # Goes over all or new commits in the database and builds a hash that maps
+  # each sha1 to the array of the canonical names of their contributors.
   #
   # This computation ignores the current contributions table altogether, it
-  # only takes into account the current commits and the current mapping for
-  # names.
-  def compute_current_contributions
+  # only takes into account the the current mapping for names.
+  def compute_contributor_names_per_commit(only_for_new_commits)
     contributor_names_per_commit = Hash.new {|h, commit| h[commit] = []}
-    current_contributor_names    = Set.new
-    Commit.find_each do |commit|
+    target = only_for_new_commits ? Commit.with_no_contributors : Commit
+    target.find_each do |commit|
       commit.extract_contributor_names(self).each do |contributor_name|
-        current_contributor_names << contributor_name
         contributor_names_per_commit[commit.sha1] << contributor_name
       end
     end
-    return current_contributor_names, contributor_names_per_commit
+    contributor_names_per_commit
   end
 
   # Iterates over all commits with no contributors and assigns to them the ones
@@ -193,17 +197,16 @@ protected
     ncommits > 0 || !gone_names.empty?
   end
 
-  def cache_needs_expiration?(ncommits, gone_names)
-    ncommits > 0 || !gone_names.empty? || we_are_switching_time_ranges
+  def cache_needs_expiration?(ncommits, names_mapping_updated)
+    ncommits > 0 || names_mapping_updated || we_are_switching_time_ranges
   end
 
   def we_are_switching_time_ranges
-    last_update_at = RepoUpdate.last.created_at rescue nil
-    if last_update_at
-      now = Time.now
-      last_update_at < now.beginning_of_week ||
-      last_update_at < now.beginning_of_month
-      # if we've switched years we've switched months
-    end
+    now = Time.now
+    last_update_at = RepoUpdate.last.ended_at
+
+    last_update_at < now.beginning_of_week ||
+    last_update_at < now.beginning_of_month
+    # if we've switched years we've switched months
   end
 end
