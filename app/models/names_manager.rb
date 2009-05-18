@@ -39,6 +39,7 @@ module NamesManager
     'court3nay'                => ['courtenay', email('court3nay', 'gmail.com')],
     'Chris Kampmeier'          => 'kampers',
     'Chris McGrath'            => [email('c.r.mcgrath', 'gmail.com'), 'c.r.mcgrath', email('chris', 'octopod.info'), 'octopod'],
+    'Chris Mear'               => [email('chris', 'feedmechocolate.com'), 'chrismear'],   
     "Chris O'Sullivan"         => 'thechrisoshow',
     'Chris Roos'               => 'chrisroos',
     'Coda Hale'                => 'codahale',
