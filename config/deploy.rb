@@ -1,7 +1,7 @@
 role :staging, "hashref.com"
 
 def run_in_rc(command)
-	run "export PATH=/opt/ree/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}"
+  run "export PATH=/opt/ree/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}"
 end
 
 namespace :rc do
@@ -38,7 +38,6 @@ namespace :rc do
     run_in_rc "cp public/system/maintenance.html.deleteme public/system/maintenance.html"
   end
 
-  # Temporary tasks until we fully capistranize the deployment.
   task :maintenance_off, :roles => :staging do
     run_in_rc "rm public/system/maintenance.html"
   end
