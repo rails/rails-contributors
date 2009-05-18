@@ -66,13 +66,13 @@ protected
   # If that fails as well the contributor is the committer by definition.
   def extract_svn_contributor_names(repo)
     names = extract_svn_contributor_names_from_text(message)
-    if names.empty?
+    if names.empty? && !only_modifies_changelogs?(repo)
       names = extract_svn_contributor_names_diffing(repo)
     end
     names = [author] if names.empty?
     names
   end
-  
+
   # When Rails had a svn repo there was a convention for authors: the committer
   # put their name between brackets at the end of the commit or changelog message.
   # For example:
@@ -110,5 +110,17 @@ protected
       end
     end
     update_attribute(:changelog, changelog)
+  end
+
+  # Some commits only touch CHANGELOGs, for example
+  #
+  #   http://github.com/rails/rails/commit/f18356edb728522fcd3b6a00f11b29fd3bff0577
+  #
+  # We want to detect those ones because people appearing there are not authors
+  # of this commit.
+  def only_modifies_changelogs?(repo)
+    # To understand this chain just inspect a CommitStats object.
+    # repo.grit_repo.commit_stats(sha1, 1)[0][1].files.map(&:first).all? {|f| f.ends_with?('CHANGELOG')}
+    false # FIXME, the previous line throws a timeout at some point
   end
 end

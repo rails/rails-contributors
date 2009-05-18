@@ -2,7 +2,7 @@ require 'set'
 require 'fileutils'
 
 class Repo
-  attr_reader :logger
+  attr_reader :logger, :grit_repo
 
   # This is the entry point to update the database from a recent pull.
   def self.update(path)
@@ -10,8 +10,8 @@ class Repo
   end
 
   def initialize(path)
-    @logger = Rails.logger
-    @repo   = Grit::Repo.new(path)
+    @logger    = Rails.logger
+    @grit_repo = Grit::Repo.new(path)
   end
 
   def git_pull
@@ -83,8 +83,8 @@ protected
 
   # Simple-minded git system caller, enough for what we need. Returns the output.
   def git_exec(command, *args)
-    Dir.chdir(@repo.working_dir) do
-      system('git', *[command, *args])
+    Dir.chdir(@grit_repo.working_dir) do
+      %x{git #{command} #{args.join(' ')}}
     end
   end
 
@@ -100,7 +100,7 @@ protected
     ncommits   = 0
     offset     = 0
     loop do
-      commits = @repo.commits('master', batch_size, offset)
+      commits = @grit_repo.commits('master', batch_size, offset)
       return ncommits if commits.empty?
       commits.each do |commit|
         return ncommits if Commit.exists?(:sha1 => commit.id)
