@@ -104,6 +104,7 @@ module NamesManager
     'Marcel Molina Jr.'        => ['Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio'],
     'Mark Imbriaco'            => email('mark.imbriaco', 'pobox.com'),
     'Mark Somerville'          => 'Spakman',
+    'Martin Emde'              => [email('zraii', 'comcast.net'), email('martin.emde', 'gmail.com')],   
     'Matthew Rudy Jacobs'      => 'MatthewRudy',
     'Michael Klishin'          => ['antares', 'Michael S. Klishin'],
     'Michael Koziarski'        => %w(Koz nzkoz),
