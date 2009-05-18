@@ -33,4 +33,13 @@ namespace :rc do
     restart
     expire_caches
   end
+
+  task :maintenance_on, :roles => :app do
+    run_in_rc "cp public/system/maintenance.html.disabled public/system/maintenance.html"
+  end
+
+  # Temporary tasks until we fully capistranize the deployment.
+  task :maintenance_off, :roles => :app do
+    run_in_rc "rm public/system/maintenance.html"
+  end
 end
