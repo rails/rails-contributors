@@ -104,7 +104,7 @@ module NamesManager
     'Marcel Molina Jr.'        => ['Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio'],
     'Mark Imbriaco'            => email('mark.imbriaco', 'pobox.com'),
     'Mark Somerville'          => 'Spakman',
-    'Martin Emde'              => [email('zraii', 'comcast.net'), email('martin.emde', 'gmail.com')],   
+    'Martin Emde'              => [email('zraii', 'comcast.net'), email('martin.emde', 'gmail.com')],
     'Matthew Rudy Jacobs'      => 'MatthewRudy',
     'Michael Klishin'          => ['antares', 'Michael S. Klishin'],
     'Michael Koziarski'        => %w(Koz nzkoz),
@@ -190,7 +190,8 @@ module NamesManager
   # are lots of exceptions this method knows about.
   #
   # Note that this method is responsible for extracting names as they appear
-  # in the original string. Canonicalization is done elsewhere.
+  # in the original string, and correct typos if needed. Canonicalization is
+  # done elsewhere.
   def self.handle_special_cases(name, fallback)
     case name
     when /\A\d+\z/
@@ -225,6 +226,8 @@ module NamesManager
       ['Jeremy Hopple', 'Kevin Clark']
     when 'Yehuda Katz and Carl Lerche'
       ['Yehuda Katz', 'Carl Lerche']
+    when 'Ross Kaffenburger and Bryan Helmkamp'
+      ['Ross Kaffenberger', 'Bryan Helmkamp'] # Kaffenberger is correct
     when "#{email('me', 'jonnii.com')} #{email('rails', 'jeffcole.net')} Marcel Molina Jr."
       [email('me', 'jonnii.com'), email('rails', 'jeffcole.net'), 'Marcel Molina Jr.']
     when "#{email('jeremy', 'planetargon.com')} Marcel Molina Jr."
