@@ -66,7 +66,7 @@ protected
   # If that fails as well the contributor is the committer by definition.
   def extract_svn_contributor_names(repo)
     names = extract_svn_contributor_names_from_text(message)
-    if names.empty? && !only_modifies_changelogs?(repo)
+    if names.empty?
       names = extract_svn_contributor_names_diffing(repo)
     end
     names = [author] if names.empty?
@@ -86,21 +86,27 @@ protected
 
   # Looks for contributor names in changelogs.
   def extract_svn_contributor_names_diffing(repo)
-    extract_changelog!(repo) unless changelog
-    changelog.split("\n").map do |line|
+    cache_git_show!(repo) unless git_show
+    return [] if only_modifies_changelogs?
+    extract_changelog.split("\n").map do |line|
       extract_svn_contributor_names_from_text(line)
     end.flatten
   end
+
+  def cache_git_show!(repo)
+    update_attribute(:git_show, repo.git_show(sha1))
+  end
+
 
   LINE_ITERATOR = RUBY_VERSION < '1.9' ? 'each' : 'each_line'
 
   # Extracts any changelog entry for this commit. This is done by diffing with
   # git show, and is an expensive operation. So, we do this only for those
   # commits where this is needed, and cache the result in the database.
-  def extract_changelog!(repo)
+  def extract_changelog
     changelog = ''
     in_changelog = false
-    repo.git_show(sha1).send(LINE_ITERATOR) do |line|
+    git_show.send(LINE_ITERATOR) do |line|
       if line =~ /^diff --git/
         in_changelog = false
       elsif line =~ /^\+\+\+.*changelog$/i
@@ -109,18 +115,17 @@ protected
         changelog << line
       end
     end
-    update_attribute(:changelog, changelog)
+    changelog
   end
 
   # Some commits only touch CHANGELOGs, for example
   #
   #   http://github.com/rails/rails/commit/f18356edb728522fcd3b6a00f11b29fd3bff0577
   #
-  # We want to detect those ones because people appearing there are not authors
-  # of this commit.
-  def only_modifies_changelogs?(repo)
-    # To understand this chain just inspect a CommitStats object.
-    # repo.grit_repo.commit_stats(sha1, 1)[0][1].files.map(&:first).all? {|f| f.ends_with?('CHANGELOG')}
-    false # FIXME, the previous line throws a timeout at some point
+  def only_modifies_changelogs?
+    git_show.scan(/^diff --git(.*)$/) do |fname|
+      return false unless fname.first.strip.ends_with?('CHANGELOG')
+    end
+    true
   end
 end

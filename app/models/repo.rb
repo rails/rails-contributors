@@ -28,7 +28,7 @@ class Repo
       started_at = Time.now
       ncommits   = 0
 
-      git_pull
+      #git_pull
       pulled_at = Time.now
 
       if names_mapping_updated = names_mapping_updated?

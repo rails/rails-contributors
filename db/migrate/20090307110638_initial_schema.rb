@@ -16,7 +16,7 @@ class InitialSchema < ActiveRecord::Migration
       t.timestamp :committed_timestamp
       t.text      :message
       t.boolean   :imported_from_svn
-      t.text      :changelog
+      t.text      :git_show
     end
     add_index :commits, :sha1, :unique => true
 
