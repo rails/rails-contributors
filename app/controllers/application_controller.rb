@@ -34,7 +34,8 @@ private
     dts agent    |
     twiceler     |
     ask jeeves   |
-    Webspider
+    Webspider    |
+    Daumoa
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
