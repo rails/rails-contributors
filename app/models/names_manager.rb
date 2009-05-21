@@ -62,6 +62,7 @@ module NamesManager
           'Evan Weaver'              => 'evan',
           'François Beausoleil'      => ['FranÃ§ois Beausolei', 'Francois Beausoleil', email('fbeausoleil', 'ftml.net'), email('francois.beausoleil', 'gmail.com')],
           'Frederick Cheung'         => ['fcheung', 'Fred Cheung', 'frederick.cheung', email('frederick.cheung', 'gmail.com')],
+          'Gabe da Silveira'         => 'dasil003',
           'Geoff Buesing'            => ['gbuesing', 'Geoffrey Buesing'],
           'Geoff Garside'            => 'ggarside',
           'Grant Hollingworth'       => email('grant', 'antiflux.org'),
