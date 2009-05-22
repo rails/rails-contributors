@@ -56,6 +56,7 @@ module NamesManager
           'Dreamer3'                 => email('dreamer3', 'gmail.com'),
           'Duane Johnson'            => email('duane.johnson', 'gmail.com'),
           'Duncan Beevers'           => 'duncanbeevers',
+          'Elijah Miller'            => [email('elijah.miller', 'gmail.com'), 'jqr'],
           'Eloy Duran'               => 'alloy',
           'Emilio Tagua'             => 'miloops',
           'Ernesto Jimenez'          => 'ernesto.jimenez',
@@ -97,10 +98,12 @@ module NamesManager
           'Ken Kunz'                 => email('kennethkunz', 'gmail.com'),
           'Ken Miller'               => email('kenneth.miller', 'bitfield.net'),
           'Kevin Clark'              => ["Kevin Clark #{email('kevin.clark', 'gmail.com')}", email('kevin.clark', 'gmail.com'), email('kevin.clark', 'gmal.com')],
+          'Kristopher Chambers'      => [email('kristopher.chambers', 'gmail.com'), 'kris_chambers'],
           'Lars Pind'                => [email('lars', 'pinds.com'), email('lars', 'pind.com'), 'Lars pind', 'lars pind'],
           'lmarlow'                  => email('lmarlow', 'yahoo.com'),
           'Lawrence Pit'             => 'lawrence',
           'Luca Guidi'               => 'l.guidi',
+          'Luismi Cavallé'           => 'cavalle',
           'Luke Redpath'             => email('contact', 'lukeredpath.co.uk'),
           'Manfred Stienstra'        => [email('m.stienstra', 'fngtps.com'), 'manfred'],
           'Marcel Molina Jr.'        => ['Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio'],
@@ -198,75 +201,93 @@ module NamesManager
   # done elsewhere.
   def self.handle_special_cases(name, fallback)
     case name
-    when /\A\d+\z/
-      # Remove side effects of [5684]
-      fallback
-    when /\A\s*\z/
-      fallback
-    when /^See rails ML/, /RAILS_ENV/
-      fallback
-    when /RubyConf/
-      # RubyConf '05
-      fallback
-    when /^Includes duplicates of changes/
-      # Includes duplicates of changes from 1.1.4 - 1.2.3
-      fallback
-    when 'update from Trac'
-      fallback
-    when 'Marcel Mollina Jr.'
-      # typo, there are two ls
-      'Marcel Molina Jr.'
-    when 'Thanks to Austin Ziegler for Transaction::Simple'
-      'Austin Ziegler'
-    when 'Hongli Lai (Phusion'
-      'Hongli Lai (Phusion)'
-    when 'Leon Bredt'
-      'Leon Breedt'
-    when 'nik.wakelin Koz'
-      ['nik.wakelin', 'Koz']
-    when 'Jim Remsik and Tim Pope'
-      ['Jim Remsik', 'Tim Pope']
-    when 'Jeremy Hopple and Kevin Clark'
-      ['Jeremy Hopple', 'Kevin Clark']
-    when 'Yehuda Katz and Carl Lerche'
-      ['Yehuda Katz', 'Carl Lerche']
-    when 'Ross Kaffenburger and Bryan Helmkamp'
-      ['Ross Kaffenberger', 'Bryan Helmkamp'] # Kaffenberger is correct
-    when "#{email('me', 'jonnii.com')} #{email('rails', 'jeffcole.net')} Marcel Molina Jr."
-      [email('me', 'jonnii.com'), email('rails', 'jeffcole.net'), 'Marcel Molina Jr.']
-    when "#{email('jeremy', 'planetargon.com')} Marcel Molina Jr."
-      [email('jeremy', 'planetargon.com'), 'Marcel Molina Jr.']
-    when "#{email('matt', 'mattmargolis.net')} Marcel Molina Jr."
-      [email('matt', 'mattmargolis.net'), 'Marcel Molina Jr.']
-    when "#{email('doppler', 'gmail.com')} #{email('phil.ross', 'gmail.com')}"
-      [email('doppler', 'gmail.com'), email('phil.ross', 'gmail.com')]
-    when 'After much pestering from Dave Thomas'
-      'Dave Thomas'
-    when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
-      'Adam Cigánek'
-    when 'Aredridel/earlier work by Michael Neumann'
-      ['Aredridel', 'Michael Neumann']
-    when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
-      # Spotted by Kevin Bullock
-      # Suggested by Carl Youngblood
-      # Investigation by Scott
-      # earlier work by Michael Neumann
-      # Aggregated by schoenm ~ at ~ earthlink.net
-      $2
-    when /\Avia\s+(.*)/i
-      # via Tim Bray
-      $1
-    when CONNECTORS_REGEXP # There are lots of these, even with a combination of connectors.
-      # [Adam Milligan, Pratik]
-      # [Rick Olson/Nicholas Seckar]
-      # [Kevin Clark & Jeremy Hopple]
-      # Yehuda Katz + Carl Lerche
-      name.split(CONNECTORS_REGEXP).map(&:strip).reject do |part|
-        part == 'others' || # foamdino ~ at ~ gmail.com/others
-        part == '?'         # Sam Stephenson/?
-      end
-    else
-      name
+      when /\A#?\d+/
+        # Remove side effects of [5684]
+        # Ensure WhiteListSanitizer allows dl tag [#2393 state:resolved]
+        fallback
+      when /\A\s*\z/
+        fallback
+      when /^See rails ML/, /RAILS_ENV/
+        fallback
+      when /RubyConf/
+        # RubyConf '05
+        fallback
+      when /\AIncludes duplicates of changes/
+        # Includes duplicates of changes from 1.1.4 - 1.2.3
+        fallback
+      when 'update from Trac'
+        fallback
+      when /\A['":]/
+        # Instead of checking Rails.env.test? in Failsafe middleware, check env["rails.raise_exceptions"]
+        # ... This lets ajax pages still use format.js despite there being no params[:format]
+        fallback
+      when 'RC1'
+        # Prepare for Rails 2.2.0 [RC1]
+        fallback
+      when /\Astat(e|us):/
+        # Fixed problem causes by leftover backup templates ending in tilde [state:committed #969]
+        # Added ActionController::Translation module delegating to I18n #translate/#t and #localize/#l [status:committed #1008]
+        fallback
+      when /\A#https/
+        # Signed-off-by: Michael Koziarski <michael@koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
+        fallback
+      when 'Marcel Mollina Jr.'
+        # typo, there are two ls
+        'Marcel Molina Jr.'
+      when 'Thanks to Austin Ziegler for Transaction::Simple'
+        'Austin Ziegler'
+      when 'Hongli Lai (Phusion'
+        'Hongli Lai (Phusion)'
+      when 'Leon Bredt'
+        'Leon Breedt'
+      when 'nik.wakelin Koz'
+        ['nik.wakelin', 'Koz']
+      when 'Jim Remsik and Tim Pope'
+        ['Jim Remsik', 'Tim Pope']
+      when 'Jeremy Hopple and Kevin Clark'
+        ['Jeremy Hopple', 'Kevin Clark']
+      when 'Yehuda Katz and Carl Lerche'
+        ['Yehuda Katz', 'Carl Lerche']
+      when 'Ross Kaffenburger and Bryan Helmkamp'
+        ['Ross Kaffenberger', 'Bryan Helmkamp'] # Kaffenberger is correct
+      when "#{email('me', 'jonnii.com')} #{email('rails', 'jeffcole.net')} Marcel Molina Jr."
+        [email('me', 'jonnii.com'), email('rails', 'jeffcole.net'), 'Marcel Molina Jr.']
+      when "#{email('jeremy', 'planetargon.com')} Marcel Molina Jr."
+        [email('jeremy', 'planetargon.com'), 'Marcel Molina Jr.']
+      when "#{email('matt', 'mattmargolis.net')} Marcel Molina Jr."
+        [email('matt', 'mattmargolis.net'), 'Marcel Molina Jr.']
+      when "#{email('doppler', 'gmail.com')} #{email('phil.ross', 'gmail.com')}"
+        [email('doppler', 'gmail.com'), email('phil.ross', 'gmail.com')]
+      when 'After much pestering from Dave Thomas'
+        'Dave Thomas'
+      when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
+        'Adam Cigánek'
+      when 'Aredridel/earlier work by Michael Neumann'
+        ['Aredridel', 'Michael Neumann']
+      when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
+        # Spotted by Kevin Bullock
+        # Suggested by Carl Youngblood
+        # Investigation by Scott
+        # earlier work by Michael Neumann
+        # Aggregated by schoenm ~ at ~ earthlink.net
+        $2
+      when /\A(?:DHH\s*)?via\s+(.*)/i
+        # DHH via Jay Fields
+        # via Tim Bray
+        $1
+      when 'nbugajski/cavelle'
+        %w(nbugajski cavalle) # "cavelle" has a typo
+      when CONNECTORS_REGEXP # There are lots of these, even with a combination of connectors.
+        # [Adam Milligan, Pratik]
+        # [Rick Olson/Nicholas Seckar]
+        # [Kevin Clark & Jeremy Hopple]
+        # Yehuda Katz + Carl Lerche
+        name.split(CONNECTORS_REGEXP).map(&:strip).reject do |part|
+          part == 'others' || # foamdino ~ at ~ gmail.com/others
+          part == '?'         # Sam Stephenson/?
+        end
+      else
+        name
     end
   end
 end
