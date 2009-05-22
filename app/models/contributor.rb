@@ -21,7 +21,7 @@ class Contributor < ActiveRecord::Base
       JOINS
       :conditions => conditions,
       :group      => 'contributions.contributor_id',
-      :order      => 'ncontributions DESC'
+      :order      => 'ncontributions DESC, name COLLATE NOCASE'
     )
   end
 

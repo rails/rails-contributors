@@ -45,13 +45,25 @@ class Commit < ActiveRecord::Base
 
   # Returns the list of canonical contributor names of this commit.
   def extract_contributor_names(repo)
-    names = imported_from_svn? ? extract_svn_contributor_names(repo) : [author]
+    names = extract_candidates(repo)
     names = handle_special_cases(names)
     names = canonicalize(names)
     names.uniq
   end
 
 protected
+
+  # Both svn and git may have the name of the author in the message using the [...]
+  # convention. If none is found we check the changelog entry for svn commits.
+  # If that fails as well the contributor is the git author by definition.
+  def extract_candidates(repo)
+    names = extract_contributor_names_from_text(message)
+    if names.empty? && imported_from_svn?
+      names = extract_svn_contributor_names_diffing(repo)
+    end
+    names = [author] if names.empty?
+    names
+  end
 
   def handle_special_cases(names)
     names.map {|name| NamesManager.handle_special_cases(name, author)}.flatten.compact
@@ -61,18 +73,6 @@ protected
     names.map {|name| NamesManager.canonical_name_for(name)}
   end
 
-  # If the commit was imported from svn we look for contributors first in the
-  # commit message. If none is found there we check the changelog entry, if any.
-  # If that fails as well the contributor is the committer by definition.
-  def extract_svn_contributor_names(repo)
-    names = extract_svn_contributor_names_from_text(message)
-    if names.empty?
-      names = extract_svn_contributor_names_diffing(repo)
-    end
-    names = [author] if names.empty?
-    names
-  end
-
   # When Rails had a svn repo there was a convention for authors: the committer
   # put their name between brackets at the end of the commit or changelog message.
   # For example:
@@ -80,7 +80,7 @@ protected
   #   Fix case-sensitive validates_uniqueness_of. Closes #11366 [miloops]
   #
   # Of course this is not robust, but it is the best we can get.
-  def extract_svn_contributor_names_from_text(text)
+  def extract_contributor_names_from_text(text)
     text =~ /\[([^\]]+)\]\s*$/ ? [$1] : []
   end
 
@@ -89,7 +89,7 @@ protected
     cache_git_show!(repo) unless git_show
     return [] if only_modifies_changelogs?
     extract_changelog.split("\n").map do |line|
-      extract_svn_contributor_names_from_text(line)
+      extract_contributor_names_from_text(line)
     end.flatten
   end
 
