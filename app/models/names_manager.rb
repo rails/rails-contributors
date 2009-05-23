@@ -91,6 +91,7 @@ module NamesManager
     'Josh Peek'                => ['josh', 'Josh', 'Joshua Peek', 'joshpeek', email('josh', 'joshpeek.com')],
     'Josh Starcher'            => email('josh.starcher', 'gmail.com'),
     'Josh Susser'              => ['hasmanyjosh', email('josh', 'hasmanythrough.com')],
+    'Joshua Sierles'           => 'jsierles',   
     'Juanjo Bazan'             => 'juanjo.bazan',
     'Justin French'            => 'justinfrench',
     'Kamal Fariz Mahyuddin'    => 'kamal',
