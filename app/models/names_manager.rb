@@ -234,6 +234,9 @@ module NamesManager
       when 'Marcel Mollina Jr.'
         # typo, there are two ls
         'Marcel Molina Jr.'
+      when 'Tobias Luekte'
+        # typo
+        'Tobias Lütke'
       when 'Thanks to Austin Ziegler for Transaction::Simple'
         'Austin Ziegler'
       when 'Hongli Lai (Phusion'
