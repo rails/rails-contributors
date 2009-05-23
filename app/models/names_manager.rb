@@ -167,7 +167,7 @@ module NamesManager
     # canonical name           => handlers, emails, etc.
   }
 
-  # Reverse SEEN_IN_LOG_ALSO_AS to be able to go from handler to canonical name.
+  # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
   CANONICAL_NAME_FOR = {}
   SEEN_ALSO_AS.each do |name, also_as|
     [*also_as].each { |alt| CANONICAL_NAME_FOR[alt] = name }
