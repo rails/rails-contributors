@@ -23,6 +23,7 @@
     </h4>
     <ul id="navigation">
       <%= sidebar_tab 'All time',   params[:since].blank?,        contributors_path %>
+      <%= sidebar_tab 'Today',      params[:since] == today,      contributors_path(:since => today) %>
       <%= sidebar_tab 'This week',  params[:since] == this_week,  contributors_path(:since => this_week) %>
       <%= sidebar_tab 'This month', params[:since] == this_month, contributors_path(:since => this_month) %>
       <%= sidebar_tab 'This year',  params[:since] == this_year,  contributors_path(:since => this_year) %>

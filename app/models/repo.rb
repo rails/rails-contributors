@@ -198,15 +198,10 @@ protected
   end
 
   def cache_needs_expiration?(ncommits, names_mapping_updated)
-    ncommits > 0 || names_mapping_updated || we_are_switching_time_ranges
+    ncommits > 0 || names_mapping_updated || new_day?
   end
 
-  def we_are_switching_time_ranges
-    now = Time.now
-    last_update_at = RepoUpdate.last.ended_at
-
-    last_update_at < now.beginning_of_week ||
-    last_update_at < now.beginning_of_month
-    # if we've switched years we've switched months
+  def new_day?
+    RepoUpdate.last.ended_at < Time.now.beginning_of_day
   end
 end
