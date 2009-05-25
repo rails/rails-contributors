@@ -18,13 +18,13 @@
 </div>
 
 <% content_for :sidebar do %>
-    <h4>
-      Commits from
-    </h4>
-    <ul id="navigation">
-      <%= sidebar_tab 'All time', @window.blank?, contributor_commits_path(@contributor) %>
-      <% for key, name in TimeConstraints::ALL_EXCEPT_ALL_TIME %>
-        <%= sidebar_tab name, @window == key, contributor_commits_path(@contributor, :window => key) %>
-      <% end %>
-    </ul>
+  <h4>
+    Commits from
+  </h4>
+  <ul id="navigation">
+    <%= sidebar_tab 'All time', @window.blank?, contributor_commits_path(@contributor) %>
+    <% for key, name in TimeConstraints::ALL_EXCEPT_ALL_TIME %>
+      <%= sidebar_tab name, @window == key, contributor_commits_path(@contributor, :window => key) %>
+    <% end %>
+  </ul>
 <% end %>
