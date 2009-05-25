@@ -22,9 +22,9 @@
     Commits from
   </h4>
   <ul id="navigation">
-    <%= sidebar_tab 'All time', @window.blank?, contributor_commits_path(@contributor) %>
-    <% for key, name in TimeConstraints::ALL_EXCEPT_ALL_TIME %>
-      <%= sidebar_tab name, @window == key, contributor_commits_path(@contributor, :window => key) %>
+    <% for key, name in TimeConstraints.all %>
+      <% query = key ? {:window => key} : {} %>
+      <%= sidebar_tab name, @window == key, contributor_commits_path(@contributor, query) %>
     <% end %>
   </ul>
 <% end %>

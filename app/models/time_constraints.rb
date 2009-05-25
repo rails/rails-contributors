@@ -1,22 +1,25 @@
 module TimeConstraints
-  ALL_EXCEPT_ALL_TIME = [
-    ['today',      'Today'],
-    ['this-week',  'This week'],
-    ['this-month', 'This month'],
-    ['this-year',  'This year']]
+  ALL = ActiveSupport::OrderedHash.new
+  ALL[nil]          = 'All time'
+  ALL['today']      = 'Today'
+  ALL['this-week']  = 'This week'
+  ALL['this-month'] = 'This month'
+  ALL['this-year']  = 'This year'
 
-  ALL = [[nil, 'All time']] + ALL_EXCEPT_ALL_TIME
+  def self.all
+    ALL
+  end
 
   def self.label_for(key)
-    ALL.assoc(key)[1]
+    ALL[key]
   end
 
   def self.known_key?(key)
-    ALL.assoc(key)
+    ALL.has_key?(key)
   end
 
   # These date objects have to be computed per call, they can't be associated
-  # to the keys in the constants.
+  # to the keys.
   def self.since_for(key)
     case key
       when 'today'
