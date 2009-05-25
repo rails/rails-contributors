@@ -4,8 +4,8 @@ module ApplicationHelper
     link_to %(<span class="sha1">#{commit.short_sha1}</span>), commit.github_url, :class => 'commit'
   end
 
-  def link_to_contributor(contributor, since)
-    params = since ? {:since => since.to_s(:number)} : {}
+  def link_to_contributor(contributor, window)
+    params = window ? {:window => window} : {}
     link_to h(contributor.name), contributor_commits_path(contributor, params)
   end
 
@@ -15,39 +15,8 @@ module ApplicationHelper
     result
   end
 
-  def today
-    Date.today.to_s(:number)
-  end
-
-  def this_week
-    Date.today.beginning_of_week.to_s(:number)
-  end
-
-  def this_month
-    Date.today.beginning_of_month.to_s(:number)
-  end
-
-  def this_year
-    Date.today.beginning_of_year.to_s(:number)
-  end
-
-  def add_since_to(title, since)
-    today = Date.today
-    constraint = case since
-      when today
-        "Today"
-      when today.beginning_of_week
-        "This week"
-      when today.beginning_of_month
-        "This month"
-      when today.beginning_of_year
-        "This year"
-      when NilClass
-        "All time"
-      else
-        "Since #{since.to_s(:long_ordinal)}"
-    end
-    "#{title} - #{constraint}"
+  def add_window_to(title, window)
+    "#{title} - #{TimeConstraints.label_for(window)}"
   end
 
   def sidebar_tab(name, current, options={}, html_options={})

@@ -7,10 +7,9 @@ class ApplicationController < ActionController::Base
   before_filter :trace_user_agent
 
 private
-  def set_since
-    if params[:since].present?
-      @since = Date.parse(params[:since]) rescue nil
-    end
+  def set_time_constraints
+    @window = params[:window] if TimeConstraints.known_key?(params[:window])
+    @since  = TimeConstraints.since_for(@window)
   end
 
   BOTS_REGEXP = %r{

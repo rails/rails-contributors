@@ -1,8 +1,8 @@
 class CommitsController < ApplicationController
   before_filter :set_contributor
-  before_filter :set_since
+  before_filter :set_time_constraints
 
-  caches_action :index, :if => lambda { |c| !c.params[:since].present? } 
+  caches_action :index, :if => lambda { |c| !c.params[:window].present? }
 
   def index
     @commits = @contributor.commits_since(@since)
