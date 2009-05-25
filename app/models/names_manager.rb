@@ -81,6 +81,7 @@ module NamesManager
     'Jeremy Evans'             => [email('jeremyevans0', 'gmail.com'), 'jeremyevans'],
     'Jeremy Kemper'            => 'bitsweat',
     'Jeremy McAnally'          => ['jeremymcnally', 'jeremymcanally'],
+    'Johan Sørensen'           => 'Johan Sorensen',    
     'John Barnette'            => 'jbarnette',
     'Jonathan del Strother'    => ['Catfish', 'catfish'],
     'Jonathan Viney'           => email('jonathan', 'bluewire.net.nz'),
