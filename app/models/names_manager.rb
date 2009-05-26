@@ -161,6 +161,7 @@ module NamesManager
     'Steven Soroka'             => [email('ssoroka78', 'gmail.com'), 'ssoroka'],
     'Tarmo Tänav'               => ['tarmo', 'tarmo_t', 'Tarmo Täna'],
     'Thijs van der Vossen'      => ['thijsv', email('thijs', 'vandervossen.net'), email('thijs', 'fngtps.com')],
+    'Thomas Fuchs'              => email('thomas', 'fesch.at'),   
     'Tiago Macedo'              => 'tmacedo',
     'Tieg Zaharia'              => 'tzaharia',
     'Tim Pope'                  => ['tpope', 'Time Pope', email('rails', 'tpope.info'), 'pope'],
