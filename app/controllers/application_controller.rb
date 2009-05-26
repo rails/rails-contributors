@@ -8,8 +8,12 @@ class ApplicationController < ActionController::Base
 
 private
   def set_time_constraints
-    @window = params[:window] if TimeConstraints.known_key?(params[:window])
-    @since  = TimeConstraints.since_for(@window)
+    @window = if params[:window].present? && TimeConstraints.known_key?(params[:window])
+      params[:window]
+    else
+      'all-time'
+    end
+    @since = TimeConstraints.since_for(@window)
   end
 
   BOTS_REGEXP = %r{

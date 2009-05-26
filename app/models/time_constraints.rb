@@ -1,6 +1,6 @@
 module TimeConstraints
   ALL = ActiveSupport::OrderedHash.new
-  ALL[nil]          = 'All time'
+  ALL['all-time']   = 'All time'
   ALL['today']      = 'Today'
   ALL['this-week']  = 'This week'
   ALL['this-month'] = 'This month'
@@ -22,6 +22,8 @@ module TimeConstraints
   # to the keys.
   def self.since_for(key)
     case key
+      when 'all-time'
+        nil
       when 'today'
         Date.today
       when 'this-week'

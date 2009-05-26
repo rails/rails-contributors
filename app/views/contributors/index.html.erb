@@ -23,8 +23,7 @@
   </h4>
   <ul id="navigation">
     <% for key, name in TimeConstraints.all %>
-      <% query = key ? {:window => key} : {} %>
-      <%= sidebar_tab name, @window == key, contributors_path(query) %>
+      <%= sidebar_tab name, @window == key, contributors_path(:window => key) %>
     <% end %>
   </ul>
 <% end %>
