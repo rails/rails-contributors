@@ -116,6 +116,7 @@ module NamesManager
     'Mark Somerville'           => 'Spakman',
     'Martin Emde'               => [email('zraii', 'comcast.net'), email('martin.emde', 'gmail.com')],
     'Matthew Rudy Jacobs'       => 'MatthewRudy',
+    'Michael Galero'            => 'mikong',    
     'Michael Klishin'           => ['antares', 'Michael S. Klishin'],
     'Michael Koziarski'         => %w(Koz nzkoz),
     'Michael Schoen'            => ['Michael A. Schoen', email('schoenm', 'earthlink.net')],
