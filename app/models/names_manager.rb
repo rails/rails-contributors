@@ -78,6 +78,7 @@ module NamesManager
     'Jarkko Laine'              => [email('jarkko', 'jlaine.net'), 'Jarkko', 'jarkko'],
     'James Adam'                => ['lazyatom', email('james.adam', 'gmail.com')],
     'James Mead'                => 'floehopper',
+    'Jamie van Dyke'            => 'fearoffish',   
     'Jan De Poorter'            => 'DefV',
     'Jeffrey Hardy'             => 'packagethief',
     'Jeremy Evans'              => [email('jeremyevans0', 'gmail.com'), 'jeremyevans'],
