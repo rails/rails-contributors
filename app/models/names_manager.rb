@@ -155,13 +155,13 @@ module NamesManager
     'Shugo Maeda'               => ['shugo', email('shugo', 'ruby-lang.org')],
     'Simon Moore'               => 'saimonmoore',
     'Simon Stapleton'           => email('simon.stapleton', 'gmail.com'),
-    'Stefan Kaes'               => [email('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de'],
+    'Stefan Kaes'               => [email('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan'],
     'Steve Purcell'             => email('stephen_purcell', 'yahoo.com'),
     'Steven Bristol'            => 'stevenbristol',
     'Steven Soroka'             => [email('ssoroka78', 'gmail.com'), 'ssoroka'],
     'Tarmo Tänav'               => ['tarmo', 'tarmo_t', 'Tarmo Täna'],
     'Thijs van der Vossen'      => ['thijsv', email('thijs', 'vandervossen.net'), email('thijs', 'fngtps.com')],
-    'Thomas Fuchs'              => email('thomas', 'fesch.at'),   
+    'Thomas Fuchs'              => email('thomas', 'fesch.at'),
     'Tiago Macedo'              => 'tmacedo',
     'Tieg Zaharia'              => 'tzaharia',
     'Tim Pope'                  => ['tpope', 'Time Pope', email('rails', 'tpope.info'), 'pope'],
@@ -250,6 +250,9 @@ module NamesManager
       when 'Rich Olson'
         # typo
         'Rick Olson'
+      when 'skae', 'skaen'
+        # typo
+        'skaes'
       when 'Thanks to Austin Ziegler for Transaction::Simple'
         'Austin Ziegler'
       when 'Hongli Lai (Phusion'
