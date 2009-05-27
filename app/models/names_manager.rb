@@ -154,6 +154,7 @@ module NamesManager
     'Ryan Daigle'               => 'rwdaigle',
     'Ryan Tomayko'              => email('rtomayko', 'gmail.com'),
     'Sam Granieri'              => 'sjgman9',
+    'Scott Reilly'              => 'coffee2code',
     'Sebastian Delmont'         => email('sd', 'notso.net'),
     'Sebastian Kanthak'         => [email('sebastian.kanthak', 'muehlheim.de'), 'sebastian.kanthak', 'skanthak'],
     'Seth Rasmussen'            => 'loincloth',
