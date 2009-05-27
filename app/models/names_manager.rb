@@ -155,7 +155,7 @@ module NamesManager
     'Shugo Maeda'               => ['shugo', email('shugo', 'ruby-lang.org')],
     'Simon Moore'               => 'saimonmoore',
     'Simon Stapleton'           => email('simon.stapleton', 'gmail.com'),
-    'Stefan Kaes'               => [email('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan'],
+    'Stefan Kaes'               => [email('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan'],
     'Steve Purcell'             => email('stephen_purcell', 'yahoo.com'),
     'Steven Bristol'            => 'stevenbristol',
     'Steven Soroka'             => [email('ssoroka78', 'gmail.com'), 'ssoroka'],
