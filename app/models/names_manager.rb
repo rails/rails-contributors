@@ -239,7 +239,7 @@ module NamesManager
         fallback
       when 'update from Trac'
         fallback
-      when /\A['":]/
+      when /\A['":]/ # ' # this quote fixes JavaScript syntax highlighting
         # Instead of checking Rails.env.test? in Failsafe middleware, check env["rails.raise_exceptions"]
         # ... This lets ajax pages still use format.js despite there being no params[:format]
         fallback
