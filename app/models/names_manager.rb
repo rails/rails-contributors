@@ -112,7 +112,7 @@ module NamesManager
     'Lawrence Pit'              => 'lawrence',
     'Leon Breedt'               => 'Leon Bredt',
     'Luca Guidi'                => 'l.guidi',
-    'Luismi Cavallé'            => 'cavalle',
+    'Luismi Cavallé'            => ['cavalle', 'cavelle'],
     'Luke Redpath'              => e('contact', 'lukeredpath.co.uk'),
     'maiha'                     => ['anna', e('anna', 'wota.jp'), e('maiha', 'wota.jp')],
     'Manfred Stienstra'         => [e('m.stienstra', 'fngtps.com'), 'manfred'],
@@ -289,7 +289,7 @@ module NamesManager
         # via Tim Bray
         $1
       when 'nbugajski/cavelle'
-        %w(nbugajski cavelle) # "cavelle" has a typo
+        %w(nbugajski cavelle)
       when CONNECTORS_REGEXP # There are lots of these, even with a combination of connectors.
         # [Adam Milligan, Pratik]
         # [Rick Olson/Nicholas Seckar]
