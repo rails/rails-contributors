@@ -8,6 +8,6 @@ class ParameterizeTest < ActiveSupport::TestCase
 
   test "delegates normalization of accented letters and friends" do
     assert_equal 'barca', 'Barça'.parameterize
-    assert_equal 'campeon', 'CAMPEÓN'.parameterize
+    assert_equal 'campio', 'CAMPIÓ'.parameterize
   end
 end
