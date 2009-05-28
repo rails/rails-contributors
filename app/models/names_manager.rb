@@ -71,7 +71,7 @@ module NamesManager
     'Geoff Garside'             => 'ggarside',
     'Grant Hollingworth'        => email('grant', 'antiflux.org'),
     'Hampton Catlin'            => email('hcatlin', 'gmail.com'),
-    'Hongli Lai (Phusion)'      => ['FooBarWidget', 'Hongli Lai'],
+    'Hongli Lai (Phusion)'      => ['FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'],
     'Ian White'                 => email('ian.w.white', 'gmail.com'),
     'Isaac Feliu'               => 'isaacfeliu',
     'Jack Danger Canty'         => %w(danger Danger),
@@ -110,12 +110,13 @@ module NamesManager
     'Lars Pind'                 => [email('lars', 'pinds.com'), email('lars', 'pind.com'), 'Lars pind', 'lars pind'],
     'lmarlow'                   => email('lmarlow', 'yahoo.com'),
     'Lawrence Pit'              => 'lawrence',
+    'Leon Breedt'               => 'Leon Bredt',
     'Luca Guidi'                => 'l.guidi',
     'Luismi Cavallé'            => 'cavalle',
     'Luke Redpath'              => email('contact', 'lukeredpath.co.uk'),
     'maiha'                     => ['anna', email('anna', 'wota.jp'), email('maiha', 'wota.jp')],
     'Manfred Stienstra'         => [email('m.stienstra', 'fngtps.com'), 'manfred'],
-    'Marcel Molina Jr.'         => ['Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio'],
+    'Marcel Molina Jr.'         => ['Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'],
     'Mark Imbriaco'             => email('mark.imbriaco', 'pobox.com'),
     'Mark Somerville'           => 'Spakman',
     'Mark Van Holstyn'          => 'lotswholetime',
@@ -143,12 +144,13 @@ module NamesManager
     'Pratik Naik'               => %w(Pratik pratik lifofifo lifo),
     'Rick Bradley'              => email('rick', 'rickbradley.com'),
     'Rich Collins'              => ['richcollins', email('richcollins', 'gmail.com')],
-    'Rick Olson'                => ['rick', 'Rick', 'Rick Olsen', email('technoweenie', 'gmail.com')],
+    'Rick Olson'                => ['rick', 'Rick', 'Rick Olsen', email('technoweenie', 'gmail.com'), 'Rich Olson'],
     'RSL'                       => ['rsl', 'Russell Norris'],
     'Rob Biedenharn'            => ['rabiedenharn', email('Rob', 'AgileConsultingLLC.com')],
     'Rob Sanheim'               => ['rsanheim', email('rsanheim', 'gmail.com'), email('rob', 'thinkrelevance.com')],
     'Robby Russell'             => 'robbyrussell',
     'Roderick van Domburg'      => 'roderickvd',
+    'Ross Kaffenberger'         => 'Ross Kaffenburger',
     'Ruy Asan'                  => 'rubyruy',
     'Ryan Bates'                => 'ryanb',
     'Ryan Bigg'                 => 'Radar',
@@ -163,7 +165,7 @@ module NamesManager
     'Shugo Maeda'               => ['shugo', email('shugo', 'ruby-lang.org')],
     'Simon Moore'               => 'saimonmoore',
     'Simon Stapleton'           => email('simon.stapleton', 'gmail.com'),
-    'Stefan Kaes'               => [email('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan'],
+    'Stefan Kaes'               => [email('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'],
     'Steve Purcell'             => email('stephen_purcell', 'yahoo.com'),
     'Steven Bristol'            => 'stevenbristol',
     'Steven Soroka'             => [email('ssoroka78', 'gmail.com'), 'ssoroka'],
@@ -173,7 +175,7 @@ module NamesManager
     'Tiago Macedo'              => 'tmacedo',
     'Tieg Zaharia'              => 'tzaharia',
     'Tim Pope'                  => ['tpope', 'Time Pope', email('rails', 'tpope.info'), 'pope'],
-    'Tobias Lütke'              => ['Tobias Luetke', 'TobiasLuetke'],
+    'Tobias Lütke'              => ['Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte'],
     'Tom Brice'                 => ['tomtoday', email('tomtoday', 'gmail.com')],
     'Tom Ward'                  => ['Tom ward', 'tomafro', email('tom', 'popdog.net')],
     'Victor Jalencas'           => email('victor-ronr-trac', 'carotena.net'),
@@ -249,24 +251,8 @@ module NamesManager
       when /\A#https/
         # Signed-off-by: Michael Koziarski <michael@koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
         fallback
-      when 'Marcel Mollina Jr.'
-        # typo, there are two ls
-        'Marcel Molina Jr.'
-      when 'Tobias Luekte'
-        # typo
-        'Tobias Lütke'
-      when 'Rich Olson'
-        # typo
-        'Rick Olson'
-      when 'skae', 'skaen'
-        # typo
-        'skaes'
       when 'Thanks to Austin Ziegler for Transaction::Simple'
         'Austin Ziegler'
-      when 'Hongli Lai (Phusion'
-        'Hongli Lai (Phusion)'
-      when 'Leon Bredt'
-        'Leon Breedt'
       when 'nik.wakelin Koz'
         ['nik.wakelin', 'Koz']
       when 'Jim Remsik and Tim Pope'
@@ -276,7 +262,7 @@ module NamesManager
       when 'Yehuda Katz and Carl Lerche'
         ['Yehuda Katz', 'Carl Lerche']
       when 'Ross Kaffenburger and Bryan Helmkamp'
-        ['Ross Kaffenberger', 'Bryan Helmkamp'] # Kaffenberger is correct
+        ['Ross Kaffenburger', 'Bryan Helmkamp']
       when "#{email('me', 'jonnii.com')} #{email('rails', 'jeffcole.net')} Marcel Molina Jr."
         [email('me', 'jonnii.com'), email('rails', 'jeffcole.net'), 'Marcel Molina Jr.']
       when "#{email('jeremy', 'planetargon.com')} Marcel Molina Jr."
