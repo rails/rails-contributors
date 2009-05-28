@@ -18,179 +18,181 @@ module NamesManager
     user + '@' + domain
   end
 
+  # canonical name => handlers, emails, typos, etc.
+  SEEN_ALSO_AS = {}
+  def self.map(canonical_name, *also_as)
+    SEEN_ALSO_AS[canonical_name] = also_as
+  end
+
   # Some people appear in Rails logs under different names, there are nicks,
   # typos, email addresses, shortenings, etc. This is a hand-made list to map
   # them in order to be able to aggregate commits from the same real author.
   #
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
-  SEEN_ALSO_AS = {
-    # canonical name            => handlers, emails, typos, etc.
-    'alancfrancis'              => e('alancfrancis', 'gmail.com'),
-    'Aliaksey Kandratsenka'     => 'Aleksey Kondratenko',
-    'Andrew Kaspick'            => [e('akaspick', 'gmail.com'), 'akaspick'],
-    'Andrew White'              => 'pixeltrix',
-    'Anthony Eden'              => 'aeden',
-    'Ben Scofield'              => 'bscofield',
-    'Blaine'                    => ['blaine', e('blaine', 'odeo.com')],
-    'Bob Silva'                 => 'BobSilva',
-    'Brad Greenlee'             => 'bgreenlee',
-    'Brandon Keepers'           => ['brandon', e('brandon', 'opensoul.org')],
-    'Brian Donovan'             => 'eventualbuddha',
-    'Cheah Chu Yeow'            => ['Chu Yeow', 'chuyeow'],
-    'Chris Kampmeier'           => 'kampers',
-    'Chris McGrath'             => [e('c.r.mcgrath', 'gmail.com'), 'c.r.mcgrath', e('chris', 'octopod.info'), 'octopod'],
-    'Chris Mear'                => [e('chris', 'feedmechocolate.com'), 'chrismear'],
-    "Chris O'Sullivan"          => 'thechrisoshow',
-    'Chris Roos'                => 'chrisroos',
-    'Coda Hale'                 => 'codahale',
-    'Cody Fauser'               => e('codyfauser', 'gmail.com'),
-    'Courtenay Gasking'         => ['court3nay', 'courtenay', e('court3nay', 'gmail.com')],
-    'Damian Janowski'           => 'djanowski',
-    'Dan Manges'                => 'dcmanges',
-    'Daniel Morrison'           => 'danielmorrison',
-    'Daniel Rodríguez Troitiño' => 'drodriguez',
-    'Dave Thomas'               => [e('dave', 'pragprog.com'), 'pragdave'],
-    'David Calavera'            => ['calavera', 'david.calavera'],
-    'David Dollar'              => 'ddollar',
-    'David Heinemeier Hansson'  => 'DHH',
-    'Dee Zsombor'               => ['Dee.Zsombor', 'zsombor', e('Dee.Zsombor', 'gmail.com')],
-    'Don Park'                  => e('don.park', 'gmail.com'),
-    'Dr Nic'                    => 'drnic',
-    'Duane Johnson'             => e('duane.johnson', 'gmail.com'),
-    'Duncan Beevers'            => 'duncanbeevers',
-    'Elijah Miller'             => [e('elijah.miller', 'gmail.com'), 'jqr'],
-    'Eloy Duran'                => 'alloy',
-    'Emilio Tagua'              => 'miloops',
-    'Ernesto Jimenez'           => 'ernesto.jimenez',
-    'Evan Weaver'               => 'evan',
-    'François Beausoleil'       => ['FranÃ§ois Beausolei', 'Francois Beausoleil', e('fbeausoleil', 'ftml.net'), e('francois.beausoleil', 'gmail.com')],
-    'Frederick Cheung'          => ['fcheung', 'Fred Cheung', 'frederick.cheung', e('frederick.cheung', 'gmail.com')],
-    'Gabe da Silveira'          => 'dasil003',
-    'Geoff Buesing'             => ['gbuesing', 'Geoffrey Buesing'],
-    'Geoff Garside'             => 'ggarside',
-    'Grant Hollingworth'        => e('grant', 'antiflux.org'),
-    'Hampton Catlin'            => e('hcatlin', 'gmail.com'),
-    'Hongli Lai (Phusion)'      => ['FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'],
-    'Ian White'                 => e('ian.w.white', 'gmail.com'),
-    'Isaac Feliu'               => 'isaacfeliu',
-    'Jack Danger Canty'         => %w(danger Danger),
-    'Jakob Skjerning'           => ['Jakob S', e('jakob', 'mentalized.net')],
-    'Jarkko Laine'              => [e('jarkko', 'jlaine.net'), 'Jarkko', 'jarkko'],
-    'James Adam'                => ['lazyatom', e('james.adam', 'gmail.com')],
-    'James Mead'                => 'floehopper',
-    'Jamie van Dyke'            => 'fearoffish',
-    'Jan De Poorter'            => 'DefV',
-    'Jeffrey Hardy'             => 'packagethief',
-    'Jeremy Evans'              => [e('jeremyevans0', 'gmail.com'), 'jeremyevans'],
-    'Jeremy Kemper'             => 'bitsweat',
-    'Jeremy McAnally'           => ['jeremymcnally', 'jeremymcanally'],
-    'Johan Sørensen'            => ['Johan Sorensen', 'Johan Sörensen'],
-    'John Barnette'             => 'jbarnette',
-    'Jonathan del Strother'     => ['Catfish', 'catfish'],
-    'Jonathan Viney'            => e('jonathan', 'bluewire.net.nz'),
-    'Jonathan Weiss'            => 'jweiss',
-    'Jordi Bunster'             => 'jordi',
-    'José Valim'                => 'josevalim',
-    'Josh Goebel'               => ['Dreamer3', e('dreamer3', 'gmail.com')],
-    'Josh Knowles'              => e('joshknowles', 'gmail.com'),
-    'Josh Peek'                 => ['josh', 'Josh', 'Joshua Peek', 'joshpeek', e('josh', 'joshpeek.com')],
-    'Josh Starcher'             => e('josh.starcher', 'gmail.com'),
-    'Josh Susser'               => ['hasmanyjosh', e('josh', 'hasmanythrough.com')],
-    'Joshua Sierles'            => 'jsierles',
-    'Juanjo Bazan'              => 'juanjo.bazan',
-    'Justin French'             => 'justinfrench',
-    'Kamal Fariz Mahyuddin'     => 'kamal',
-    'Karel Miarka'              => 'kajism@yahoo.com',
-    'Ken Barker'                => e('ken.barker', 'gmail.com'),
-    'Ken Kunz'                  => e('kennethkunz', 'gmail.com'),
-    'Ken Miller'                => e('kenneth.miller', 'bitfield.net'),
-    'Kevin Clark'               => ["Kevin Clark #{e('kevin.clark', 'gmail.com')}", e('kevin.clark', 'gmail.com'), e('kevin.clark', 'gmal.com')],
-    'Kristopher Chambers'       => [e('kristopher.chambers', 'gmail.com'), 'kris_chambers'],
-    'Lars Pind'                 => [e('lars', 'pinds.com'), e('lars', 'pind.com'), 'Lars pind', 'lars pind'],
-    'lmarlow'                   => e('lmarlow', 'yahoo.com'),
-    'Lawrence Pit'              => 'lawrence',
-    'Leon Breedt'               => 'Leon Bredt',
-    'Luca Guidi'                => 'l.guidi',
-    'Luismi Cavallé'            => ['cavalle', 'cavelle'],
-    'Luke Redpath'              => e('contact', 'lukeredpath.co.uk'),
-    'maiha'                     => ['anna', e('anna', 'wota.jp'), e('maiha', 'wota.jp')],
-    'Manfred Stienstra'         => [e('m.stienstra', 'fngtps.com'), 'manfred'],
-    'Marcel Molina Jr.'         => ['Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'],
-    'Mark Imbriaco'             => e('mark.imbriaco', 'pobox.com'),
-    'Mark Somerville'           => 'Spakman',
-    'Mark Van Holstyn'          => 'lotswholetime',
-    'Martin Emde'               => [e('zraii', 'comcast.net'), e('martin.emde', 'gmail.com')],
-    'Matthew Rudy Jacobs'       => 'MatthewRudy',
-    'Michael Galero'            => 'mikong',
-    'Michael Klishin'           => ['antares', 'Michael S. Klishin'],
-    'Michael Koziarski'         => %w(Koz nzkoz),
-    'Michael Schoen'            => ['Michael A. Schoen', e('schoenm', 'earthlink.net')],
-    'Michael Schubert'          => [e('michael', 'schubert'), e('michael', 'schubert.cx')],
-    'Michael Schuerig'          => [e('michael', 'schuerig.de'), 'Michael Shuerig'],
-    'Mike Gunderloy'            => e('mike', 'clarkware.com'),
-    'Mike Naberezny'            => 'mnaberez',
-    'Mikel Lindsaar'            => ['mikel', 'raasdnil'],
-    'Mislav Marohnić'           => ['mislav', 'mislaw', e('mislav', 'nippur.irb.hr')],
-    'Murray Steele'             => 'h-lame',
-    'Nathan Weizenbaum'         => 'Nex3',
-    'Nick Sieger'               => ['nicksieger', e('nicksieger', 'gmail.com')],
-    'Nik Wakelin'               => 'nik.wakelin',
-    'Norbert Crombach'          => 'norbert',
-    'Obie Fernandez'            => 'ObieFernandez',
-    'Patrick Lenz'              => e('patrick', 'lenz.sh'),
-    'pburleson'                 => e('pburleson', 'gmail.com'),
-    'Philip Hallstrom'          => 'phallstrom',
-    'Pratik Naik'               => %w(Pratik pratik lifofifo lifo),
-    'Rick Bradley'              => e('rick', 'rickbradley.com'),
-    'Rich Collins'              => ['richcollins', e('richcollins', 'gmail.com')],
-    'Rick Olson'                => ['rick', 'Rick', 'Rick Olsen', e('technoweenie', 'gmail.com'), 'Rich Olson'],
-    'RSL'                       => ['rsl', 'Russell Norris'],
-    'Rob Biedenharn'            => ['rabiedenharn', e('Rob', 'AgileConsultingLLC.com')],
-    'Rob Sanheim'               => ['rsanheim', e('rsanheim', 'gmail.com'), e('rob', 'thinkrelevance.com')],
-    'Robby Russell'             => 'robbyrussell',
-    'Roderick van Domburg'      => 'roderickvd',
-    'Ross Kaffenberger'         => 'Ross Kaffenburger',
-    'Ruy Asan'                  => 'rubyruy',
-    'Ryan Bates'                => 'ryanb',
-    'Ryan Bigg'                 => 'Radar',
-    'Ryan Davis'                => 'zenspider',
-    'Ryan Daigle'               => 'rwdaigle',
-    'Ryan Tomayko'              => e('rtomayko', 'gmail.com'),
-    'Sam Granieri'              => 'sjgman9',
-    'Scott Reilly'              => 'coffee2code',
-    'Sebastian Delmont'         => e('sd', 'notso.net'),
-    'Sebastian Kanthak'         => [e('sebastian.kanthak', 'muehlheim.de'), 'sebastian.kanthak', 'skanthak'],
-    'Seth Rasmussen'            => 'loincloth',
-    'Shugo Maeda'               => ['shugo', e('shugo', 'ruby-lang.org')],
-    'Simon Moore'               => 'saimonmoore',
-    'Simon Stapleton'           => e('simon.stapleton', 'gmail.com'),
-    'Stefan Kaes'               => [e('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'],
-    'Steve Purcell'             => e('stephen_purcell', 'yahoo.com'),
-    'Steven Bristol'            => 'stevenbristol',
-    'Steven Soroka'             => [e('ssoroka78', 'gmail.com'), 'ssoroka'],
-    'Tarmo Tänav'               => ['tarmo', 'tarmo_t', 'Tarmo Täna'],
-    'Thijs van der Vossen'      => ['thijsv', e('thijs', 'vandervossen.net'), e('thijs', 'fngtps.com')],
-    'Thomas Fuchs'              => e('thomas', 'fesch.at'),
-    'Tiago Macedo'              => 'tmacedo',
-    'Tieg Zaharia'              => 'tzaharia',
-    'Tim Pope'                  => ['tpope', 'Time Pope', e('rails', 'tpope.info'), 'pope'],
-    'Tobias Lütke'              => ['Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte'],
-    'Tom Brice'                 => ['tomtoday', e('tomtoday', 'gmail.com')],
-    'Tom Ward'                  => ['Tom ward', 'tomafro', e('tom', 'popdog.net')],
-    'Victor Jalencas'           => e('victor-ronr-trac', 'carotena.net'),
-    'Will Bryant'               => 'will.bryant',
-    'Xavier Noria'              => 'fxn',
-    'Xavier Shay'               => 'xaviershay',
-    'Yehuda Katz'               => 'wycats',
-    'Zach Dennis'               => 'zdennis',
-    # canonical name            => handlers, emails, etc.
-  }
+  map 'alancfrancis',              e('alancfrancis', 'gmail.com')
+  map 'Aliaksey Kandratsenka',     'Aleksey Kondratenko'
+  map 'Andrew Kaspick',            e('akaspick', 'gmail.com'), 'akaspick'
+  map 'Andrew White',              'pixeltrix'
+  map 'Anthony Eden',              'aeden'
+  map 'Ben Scofield',              'bscofield'
+  map 'Blaine',                    'blaine', e('blaine', 'odeo.com')
+  map 'Bob Silva',                 'BobSilva'
+  map 'Brad Greenlee',             'bgreenlee'
+  map 'Brandon Keepers',           'brandon', e('brandon', 'opensoul.org')
+  map 'Brian Donovan',             'eventualbuddha'
+  map 'Cheah Chu Yeow',            'Chu Yeow', 'chuyeow'
+  map 'Chris Kampmeier',           'kampers'
+  map 'Chris McGrath',             e('c.r.mcgrath', 'gmail.com'), 'c.r.mcgrath', e('chris', 'octopod.info'), 'octopod'
+  map 'Chris Mear',                e('chris', 'feedmechocolate.com'), 'chrismear'
+  map "Chris O'Sullivan",          'thechrisoshow'
+  map 'Chris Roos',                'chrisroos'
+  map 'Coda Hale',                 'codahale'
+  map 'Cody Fauser',               e('codyfauser', 'gmail.com')
+  map 'Courtenay Gasking',         'court3nay', 'courtenay', e('court3nay', 'gmail.com')
+  map 'Damian Janowski',           'djanowski'
+  map 'Dan Manges',                'dcmanges'
+  map 'Daniel Morrison',           'danielmorrison'
+  map 'Daniel Rodríguez Troitiño', 'drodriguez'
+  map 'Dave Thomas',               e('dave', 'pragprog.com'), 'pragdave'
+  map 'David Calavera',            'calavera', 'david.calavera'
+  map 'David Dollar',              'ddollar'
+  map 'David Heinemeier Hansson',  'DHH'
+  map 'Dee Zsombor',               'Dee.Zsombor', 'zsombor', e('Dee.Zsombor', 'gmail.com')
+  map 'Don Park',                  e('don.park', 'gmail.com')
+  map 'Dr Nic',                    'drnic'
+  map 'Duane Johnson',             e('duane.johnson', 'gmail.com')
+  map 'Duncan Beevers',            'duncanbeevers'
+  map 'Elijah Miller',             e('elijah.miller', 'gmail.com'), 'jqr'
+  map 'Eloy Duran',                'alloy'
+  map 'Emilio Tagua',              'miloops'
+  map 'Ernesto Jimenez',           'ernesto.jimenez'
+  map 'Evan Weaver',               'evan'
+  map 'François Beausoleil',       'FranÃ§ois Beausolei', 'Francois Beausoleil', e('fbeausoleil', 'ftml.net'), e('francois.beausoleil', 'gmail.com')
+  map 'Frederick Cheung',          'fcheung', 'Fred Cheung', 'frederick.cheung', e('frederick.cheung', 'gmail.com')
+  map 'Gabe da Silveira',          'dasil003'
+  map 'Geoff Buesing',             'gbuesing', 'Geoffrey Buesing'
+  map 'Geoff Garside',             'ggarside'
+  map 'Grant Hollingworth',        e('grant', 'antiflux.org')
+  map 'Hampton Catlin',            e('hcatlin', 'gmail.com')
+  map 'Hongli Lai (Phusion)',      'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
+  map 'Ian White',                 e('ian.w.white', 'gmail.com')
+  map 'Isaac Feliu',               'isaacfeliu'
+  map 'Jack Danger Canty',         'danger', 'Danger'
+  map 'Jakob Skjerning',           'Jakob S', e('jakob', 'mentalized.net')
+  map 'Jarkko Laine',              e('jarkko', 'jlaine.net'), 'Jarkko', 'jarkko'
+  map 'James Adam',                'lazyatom', e('james.adam', 'gmail.com')
+  map 'James Mead',                'floehopper'
+  map 'Jamie van Dyke',            'fearoffish'
+  map 'Jan De Poorter',             'DefV'
+  map 'Jeffrey Hardy',              'packagethief'
+  map 'Jeremy Evans',               e('jeremyevans0', 'gmail.com'), 'jeremyevans'
+  map 'Jeremy Kemper',              'bitsweat'
+  map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
+  map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
+  map 'John Barnette',              'jbarnette'
+  map 'Jonathan del Strother',      'Catfish', 'catfish'
+  map 'Jonathan Viney',             e('jonathan', 'bluewire.net.nz')
+  map 'Jonathan Weiss',             'jweiss'
+  map 'Jordi Bunster',              'jordi'
+  map 'José Valim',                 'josevalim'
+  map 'Josh Goebel',                'Dreamer3', e('dreamer3', 'gmail.com')
+  map 'Josh Knowles',               e('joshknowles', 'gmail.com')
+  map 'Josh Peek',                  'josh', 'Josh', 'Joshua Peek', 'joshpeek', e('josh', 'joshpeek.com')
+  map 'Josh Starcher',              e('josh.starcher', 'gmail.com')
+  map 'Josh Susser',                'hasmanyjosh', e('josh', 'hasmanythrough.com')
+  map 'Joshua Sierles',             'jsierles'
+  map 'Juanjo Bazan',               'juanjo.bazan'
+  map 'Justin French',              'justinfrench'
+  map 'Kamal Fariz Mahyuddin',      'kamal'
+  map 'Karel Miarka',               'kajism@yahoo.com'
+  map 'Ken Barker',                 e('ken.barker', 'gmail.com')
+  map 'Ken Kunz',                   e('kennethkunz', 'gmail.com')
+  map 'Ken Miller',                 e('kenneth.miller', 'bitfield.net')
+  map 'Kevin Clark',                "Kevin Clark #{e('kevin.clark', 'gmail.com')}", e('kevin.clark', 'gmail.com'), e('kevin.clark', 'gmal.com')
+  map 'Kristopher Chambers',        e('kristopher.chambers', 'gmail.com'), 'kris_chambers'
+  map 'Lars Pind',                  e('lars', 'pinds.com'), e('lars', 'pind.com'), 'Lars pind', 'lars pind'
+  map 'lmarlow',                    e('lmarlow', 'yahoo.com')
+  map 'Lawrence Pit',               'lawrence'
+  map 'Leon Breedt',                'Leon Bredt'
+  map 'Luca Guidi',                 'l.guidi'
+  map 'Luismi Cavallé',             'cavalle', 'cavelle'
+  map 'Luke Redpath',               e('contact', 'lukeredpath.co.uk')
+  map 'maiha',                      'anna', e('anna', 'wota.jp'), e('maiha', 'wota.jp')
+  map 'Manfred Stienstra',          e('m.stienstra', 'fngtps.com'), 'manfred'
+  map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
+  map 'Mark Imbriaco',              e('mark.imbriaco', 'pobox.com')
+  map 'Mark Somerville',            'Spakman'
+  map 'Mark Van Holstyn',           'lotswholetime'
+  map 'Martin Emde',                e('zraii', 'comcast.net'), e('martin.emde', 'gmail.com')
+  map 'Matthew Rudy Jacobs',        'MatthewRudy'
+  map 'Michael Galero',             'mikong'
+  map 'Michael Klishin',            'antares', 'Michael S. Klishin'
+  map 'Michael Koziarski',          'Koz', 'nzkoz'
+  map 'Michael Schoen',             'Michael A. Schoen', e('schoenm', 'earthlink.net')
+  map 'Michael Schubert',           e('michael', 'schubert'), e('michael', 'schubert.cx')
+  map 'Michael Schuerig',           e('michael', 'schuerig.de'), 'Michael Shuerig'
+  map 'Mike Gunderloy',             e('mike', 'clarkware.com')
+  map 'Mike Naberezny',             'mnaberez'
+  map 'Mikel Lindsaar',             'mikel', 'raasdnil'
+  map 'Mislav Marohnić',            'mislav', 'mislaw', e('mislav', 'nippur.irb.hr')
+  map 'Murray Steele',              'h-lame'
+  map 'Nathan Weizenbaum',          'Nex3'
+  map 'Nick Sieger',                'nicksieger', e('nicksieger', 'gmail.com')
+  map 'Nik Wakelin',                'nik.wakelin'
+  map 'Norbert Crombach',           'norbert'
+  map 'Obie Fernandez',             'ObieFernandez'
+  map 'Patrick Lenz',               e('patrick', 'lenz.sh')
+  map 'pburleson',                  e('pburleson', 'gmail.com')
+  map 'Philip Hallstrom',           'phallstrom'
+  map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
+  map 'Rick Bradley',               e('rick', 'rickbradley.com')
+  map 'Rich Collins',               'richcollins', e('richcollins', 'gmail.com')
+  map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', e('technoweenie', 'gmail.com'), 'Rich Olson'
+  map 'RSL',                        'rsl', 'Russell Norris'
+  map 'Rob Biedenharn',             'rabiedenharn', e('Rob', 'AgileConsultingLLC.com')
+  map 'Rob Sanheim',                'rsanheim', e('rsanheim', 'gmail.com'), e('rob', 'thinkrelevance.com')
+  map 'Robby Russell',              'robbyrussell'
+  map 'Roderick van Domburg',       'roderickvd'
+  map 'Ross Kaffenberger',          'Ross Kaffenburger'
+  map 'Ruy Asan',                   'rubyruy'
+  map 'Ryan Bates',                 'ryanb'
+  map 'Ryan Bigg',                  'Radar'
+  map 'Ryan Davis',                 'zenspider'
+  map 'Ryan Daigle',                'rwdaigle'
+  map 'Ryan Tomayko',               e('rtomayko', 'gmail.com')
+  map 'Sam Granieri',               'sjgman9'
+  map 'Scott Reilly',               'coffee2code'
+  map 'Sebastian Delmont',          e('sd', 'notso.net')
+  map 'Sebastian Kanthak',          e('sebastian.kanthak', 'muehlheim.de'), 'sebastian.kanthak', 'skanthak'
+  map 'Seth Rasmussen',             'loincloth'
+  map 'Shugo Maeda',                'shugo', e('shugo', 'ruby-lang.org')
+  map 'Simon Moore',                'saimonmoore'
+  map 'Simon Stapleton',            e('simon.stapleton', 'gmail.com')
+  map 'Stefan Kaes',                e('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'
+  map 'Steve Purcell',              e('stephen_purcell', 'yahoo.com')
+  map 'Steven Bristol',             'stevenbristol'
+  map 'Steven Soroka',              e('ssoroka78', 'gmail.com'), 'ssoroka'
+  map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
+  map 'Thijs van der Vossen',       'thijsv', e('thijs', 'vandervossen.net'), e('thijs', 'fngtps.com')
+  map 'Thomas Fuchs',               e('thomas', 'fesch.at')
+  map 'Tiago Macedo',               'tmacedo'
+  map 'Tieg Zaharia',               'tzaharia'
+  map 'Tim Pope',                   'tpope', 'Time Pope', e('rails', 'tpope.info'), 'pope'
+  map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte'
+  map 'Tom Brice',                  'tomtoday', e('tomtoday', 'gmail.com')
+  map 'Tom Ward',                   'Tom ward', 'tomafro', e('tom', 'popdog.net')
+  map 'Victor Jalencas',            e('victor-ronr-trac', 'carotena.net')
+  map 'Will Bryant',                'will.bryant'
+  map 'Xavier Noria',               'fxn'
+  map 'Xavier Shay',                'xaviershay'
+  map 'Yehuda Katz',                'wycats'
+  map 'Zach Dennis',                'zdennis'
 
   # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
   CANONICAL_NAME_FOR = {}
-  SEEN_ALSO_AS.each do |name, also_as|
-    [*also_as].each { |alt| CANONICAL_NAME_FOR[alt] = name }
+  SEEN_ALSO_AS.each do |canonical_name, also_as|
+    also_as.each { |alt| CANONICAL_NAME_FOR[alt] = canonical_name }
   end
 
   # Returns the canonical name for +name+.

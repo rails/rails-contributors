@@ -59,7 +59,7 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_equal 'schoenm@earthlink.net', NamesManager.handle_special_cases('Aggregated by schoenm@earthlink.net', 1)
     assert_equal 'Jay Fields', NamesManager.handle_special_cases('DHH via Jay Fields', 1)
     assert_equal 'Tim Bray', NamesManager.handle_special_cases('via Tim Bray', 1)
-    assert_equal ['nbugajski', 'cavalle'], NamesManager.handle_special_cases('nbugajski/cavelle', 1)
+    assert_equal ['nbugajski', 'cavelle'], NamesManager.handle_special_cases('nbugajski/cavelle', 1)
     assert_equal ['Adam Milligan', 'Pratik'], NamesManager.handle_special_cases('Adam Milligan, Pratik', 1)
     assert_equal ['Rick Olson', 'Nicholas Seckar'], NamesManager.handle_special_cases('Rick Olson/Nicholas Seckar', 1)
     assert_equal ['Kevin Clark', 'Jeremy Hopple'], NamesManager.handle_special_cases('Kevin Clark & Jeremy Hopple', 1)
