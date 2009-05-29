@@ -5,8 +5,8 @@ module ApplicationHelper
   end
 
   def link_to_contributor(contributor, window)
-    params = window ? {:window => window} : {}
-    link_to h(contributor.name), contributor_commits_path(contributor, params)
+    query = window == 'all-time'? {} : {:window => window}
+    link_to h(contributor.name), contributor_commits_path(contributor, query)
   end
 
   def genitiveize(name)

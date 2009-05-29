@@ -23,7 +23,9 @@
   </h4>
   <ul id="navigation">
     <% for key, name in TimeConstraints.all %>
-      <%= sidebar_tab name, @window == key, contributors_path(:window => key) %>
+      <%# I prefer home pages with no query string. %>
+      <% query = key == 'all-time' ? {} : {:window => key} %>
+      <%= sidebar_tab name, @window == key, contributors_path(query) %>
     <% end %>
   </ul>
 <% end %>
