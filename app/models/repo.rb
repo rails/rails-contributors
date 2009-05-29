@@ -103,7 +103,8 @@ protected
       commits = @grit_repo.commits('master', batch_size, offset)
       return ncommits if commits.empty?
       commits.each do |commit|
-        return ncommits if Commit.exists?(:sha1 => commit.id)
+        # We cannot halt the loop because a merge commit can import past commits.
+        next if Commit.exists?(:sha1 => commit.id)
         import_grit_commit(commit)
         ncommits += 1
       end
