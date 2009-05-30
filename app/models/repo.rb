@@ -144,7 +144,7 @@ protected
 
   # Destroys all contributors in +gone_names+ and returns their commits.
   def destroy_gone_contributors(gone_names)
-    gone_contributors = Contributor.all(:conditions => ["NAME IN (?)", gone_names])
+    gone_contributors = Contributor.all(:conditions => ["name IN (?)", gone_names])
     commits_of_gone_contributors = gone_contributors.map(&:commits).flatten.uniq
     gone_contributors.each(&:destroy)
     commits_of_gone_contributors
