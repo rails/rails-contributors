@@ -34,9 +34,9 @@ private
     ia_archiver  |
     scoutjet     |
     nutch        |
-    dts agent    |
+    dts\ agent   |
     twiceler     |
-    ask jeeves   |
+    ask\ jeeves  |
     Webspider    |
     Daumoa
   }xi
