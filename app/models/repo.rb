@@ -96,15 +96,23 @@ protected
   # and that order is not linear as new imports are performed, only relative to
   # commits within a given import.
   def import_new_commits
-    batch_size = 100
-    ncommits   = 0
-    offset     = 0
+    batch_size    = 100
+    ncommits      = 0
+    offset        = 0
+    last_svn_sha1 = Commit.first(:conditions => {:imported_from_svn => true}, :order => 'committed_timestamp DESC').sha1 rescue nil
     loop do
       commits = @grit_repo.commits('master', batch_size, offset)
       return ncommits if commits.empty?
       commits.each do |commit|
-        # We cannot halt the loop because a merge commit can import past commits.
-        next if Commit.exists?(:sha1 => commit.id)
+        if Commit.exists?(:sha1 => commit.id)
+          if commit.id == last_svn_sha1
+            # No missing commits are going to come up from svn days.
+            return ncommits
+          else
+            # A merge commit can import commits older than existing ones, so just go on.
+            next
+          end
+        end
         import_grit_commit(commit)
         ncommits += 1
       end
