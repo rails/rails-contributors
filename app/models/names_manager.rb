@@ -4,7 +4,7 @@ module NamesManager
 
   # Returns a set with all (canonical) contributor names known by the application.
   def self.all_names
-    Set.new(Contributor.connection.select_values("SELECT NAME FROM CONTRIBUTORS"))
+    Set.new(Contributor.connection.select_values("SELECT name FROM contributors"))
   end
 
   # Determines whether names mapping or special cases handling have been updated
