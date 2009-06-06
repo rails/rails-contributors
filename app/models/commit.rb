@@ -9,6 +9,7 @@ class Commit < ActiveRecord::Base
   }
 
   named_scope :with_no_contributors,
+    :select => 'commits.*', # otherwise we get read-only records      
     :joins => 'LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id',
     :conditions => 'contributions.commit_id IS NULL'
 
