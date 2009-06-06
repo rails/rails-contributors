@@ -38,7 +38,8 @@ private
     twiceler     |
     ask\ jeeves  |
     Webspider    |
-    Daumoa
+    Daumoa       |
+    MEGAUPLOAD
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
