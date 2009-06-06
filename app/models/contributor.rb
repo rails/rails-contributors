@@ -12,7 +12,7 @@ class Contributor < ActiveRecord::Base
   end
 
   def self.all_with_ncontributions_since(date)
-    conditions = date ? ['commits.authored_timestamp > ?', date] : nil
+    conditions = date ? ['commits.committed_timestamp > ?', date] : nil
     all(
       :select => 'contributors.*, COUNT(contributions.commit_id) as ncontributions',
       :joins  => <<-JOINS,

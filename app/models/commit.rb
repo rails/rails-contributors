@@ -2,14 +2,14 @@ class Commit < ActiveRecord::Base
   has_many :contributions, :dependent => :destroy
   has_many :contributors, :through => :contributions
 
-  default_scope :order => 'authored_timestamp DESC'
+  default_scope :order => 'committed_timestamp DESC'
 
   named_scope :since, lambda { |date|
-    date ? { :conditions => ['commits.authored_timestamp > ?', date] } : {}
+    date ? { :conditions => ['commits.committed_timestamp > ?', date] } : {}
   }
 
   named_scope :with_no_contributors,
-    :select => 'commits.*', # otherwise we get read-only records      
+    :select => 'commits.*', # otherwise we get read-only records
     :joins => 'LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id',
     :conditions => 'contributions.commit_id IS NULL'
 

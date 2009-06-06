@@ -1,5 +1,5 @@
 <tr class="<%= cycle 'even', 'odd' %>">
   <td class="commit-sha1"><%= link_to_commit commit %></td>
-  <td class="commit-date"><%= commit.authored_timestamp.to_date %></td>
+  <td class="commit-date"><%= commit.committed_timestamp.to_date %></td>
   <td class="commit-message"><%= h truncate(commit.short_message, :length => 59) %></td>
 </tr>
