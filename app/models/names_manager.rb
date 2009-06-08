@@ -84,9 +84,9 @@ module NamesManager
   map 'James Adam',                'lazyatom', e('james.adam', 'gmail.com')
   map 'James Mead',                'floehopper'
   map 'Jamie van Dyke',            'fearoffish'
-  map 'Jan De Poorter',             'DefV'
-  map 'Jason Frey'                  'Jason Frey (Fryguy)'
-  map 'Jeffrey Hardy',              'packagethief'
+  map 'Jan De Poorter',            'DefV'
+  map 'Jason Frey',                'Jason Frey (Fryguy)'
+  map 'Jeffrey Hardy',             'packagethief'
   map 'Jeremy Evans',               e('jeremyevans0', 'gmail.com'), 'jeremyevans'
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
