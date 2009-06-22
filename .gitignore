@@ -4,4 +4,4 @@ db/schema.rb
 .idea
 config/newrelic.yml
 config/initializers/hoptoad.rb
-
+config/database.yml
