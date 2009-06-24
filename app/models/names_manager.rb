@@ -216,13 +216,16 @@ module NamesManager
 
   CONNECTORS_REGEXP = %r{[,/&+]}
 
-  # In some cases author names are extracted from svn messages. We look there
-  # for stuff between brackets, but that's not always an author name. There
-  # are lots of exceptions this method knows about.
+  # In some cases author names are extracted from messages. But candidates are
+  # not always real author names. There are lots of exceptions this method
+  # knows about. This happens both with git and svn.
+  #
+  # If no exception about +name+ applies this method returns +name+ back.
+  # On the other hand, returns +fallback+ if it determines that +name+ is
+  # not an author name for sure, as in "update from Trac" for example.
   #
   # Note that this method is responsible for extracting names as they appear
-  # in the original string, and correct typos if needed. Canonicalization is
-  # done elsewhere.
+  # in the original string. Canonicalization is done elsewhere.
   def self.handle_special_cases(name, fallback)
     case name
       when /\A#?\d+/
