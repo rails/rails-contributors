@@ -30,6 +30,7 @@ module NamesManager
   #
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
+  map 'Adam Cigánek',              '=?utf-8?q?Adam=20Cig=C3=A1nek?='
   map 'alancfrancis',              e('alancfrancis', 'gmail.com')
   map 'Aliaksey Kandratsenka',     'Aleksey Kondratenko'
   map 'Andrew Kaspick',            e('akaspick', 'gmail.com'), 'akaspick'
@@ -136,7 +137,7 @@ module NamesManager
   map 'Mike Gunderloy',             e('mike', 'clarkware.com')
   map 'Mike Naberezny',             'mnaberez'
   map 'Mikel Lindsaar',             'mikel', 'raasdnil'
-  map 'Mislav Marohnić',            'mislav', 'mislaw', e('mislav', 'nippur.irb.hr')
+  map 'Mislav Marohnić',            'mislav', 'mislaw', e('mislav', 'nippur.irb.hr'), '=?utf-8?q?Mislav=20Marohni=C4=87?='
   map 'Murray Steele',              'h-lame'
   map 'Nathan Weizenbaum',          'Nex3'
   map 'Nick Sieger',                'nicksieger', e('nicksieger', 'gmail.com')
@@ -276,8 +277,6 @@ module NamesManager
         [e('doppler', 'gmail.com'), e('phil.ross', 'gmail.com')]
       when 'After much pestering from Dave Thomas'
         'Dave Thomas'
-      when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
-        'Adam Cigánek'
       when 'Aredridel/earlier work by Michael Neumann'
         ['Aredridel', 'Michael Neumann']
       when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
