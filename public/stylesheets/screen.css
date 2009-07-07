@@ -327,6 +327,11 @@ COMMITS LIST TABLE SPECIFICS
 #table-wrap table td.no-commits {
   text-align: center;
 }
+
+td.commit-sha1, td.commit-date {
+    white-space: nowrap;
+}
+
 /*
 ---------------------------------
 PAGINATION
