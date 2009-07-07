@@ -1,11 +1,11 @@
 <%
-   @title       = add_window_to(%(##{@contributor.rank} <span property="v:name">#{h(@contributor.name)}</span>), @window)
+   @title       = add_window_to(%(##{@contributor.rank} <span class="fn">#{h(@contributor.name)}</span>), @window)
    @description = "Listing of patches contributed by #{@contributor.name} to Ruby on Rails"
    @keywords    = @contributor.name
 %>
 
 <!-- see http://google.com/support/webmasters/bin/answer.py?hl=en&answer=99170 -->
-<div xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Person">
+<div class="vcard">
   <h1 id="title">
     <%= @title %><br/>
     <span class="listing-total">Showing <%= pluralize @commits.size, 'commit' %></span>
