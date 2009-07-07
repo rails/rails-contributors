@@ -47,7 +47,6 @@ class Commit < ActiveRecord::Base
   # Returns the list of canonical contributor names of this commit.
   def extract_contributor_names(repo)
     names = extract_candidates(repo)
-    names = handle_special_cases(names)
     names = canonicalize(names)
     names.uniq
   end
@@ -59,15 +58,25 @@ protected
   # If that fails as well the contributor is the git author by definition.
   def extract_candidates(repo)
     names = extract_contributor_names_from_text(message)
-    if names.empty? && imported_from_svn?
-      names = extract_svn_contributor_names_diffing(repo)
+    if names.empty?
+      names = extract_svn_contributor_names_diffing(repo) if imported_from_svn?
+      if names.empty?
+        sanitized = sanitize([author])
+        names = handle_special_cases(sanitized)
+        if names.empty?
+          names = sanitized
+        end
+      end
     end
-    names = [author] if names.empty?
     names
   end
 
+  def sanitize(names)
+    names.map {|name| NamesManager.sanitize(name)}
+  end
+
   def handle_special_cases(names)
-    names.map {|name| NamesManager.handle_special_cases(name, author)}.flatten.compact
+    names.map {|name| NamesManager.handle_special_cases(name)}.flatten.compact
   end
 
   def canonicalize(names)
@@ -82,22 +91,25 @@ protected
   #
   # Of course this is not robust, but it is the best we can get.
   def extract_contributor_names_from_text(text)
-    text =~ /\[([^\]]+)\]\s*$/ ? [$1] : []
+    names = text =~ /\[([^\]]+)\]\s*$/ ? [$1] : []
+    names = sanitize(names)
+    handle_special_cases(names)
   end
 
   # Looks for contributor names in changelogs.
   def extract_svn_contributor_names_diffing(repo)
     cache_git_show!(repo) unless git_show
     return [] if only_modifies_changelogs?
-    extract_changelog.split("\n").map do |line|
+    names = extract_changelog.split("\n").map do |line|
       extract_contributor_names_from_text(line)
-    end.flatten
+    end.flatten  
+    names = sanitize(names)
+    handle_special_cases(names)
   end
 
   def cache_git_show!(repo)
     update_attribute(:git_show, repo.git_show(sha1))
   end
-
 
   LINE_ITERATOR = RUBY_VERSION < '1.9' ? 'each' : 'each_line'
 

@@ -30,7 +30,6 @@ module NamesManager
   #
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
-  map 'Adam Cigánek',              '=?utf-8?q?Adam=20Cig=C3=A1nek?='
   map 'alancfrancis',              e('alancfrancis', 'gmail.com')
   map 'Aliaksey Kandratsenka',     'Aleksey Kondratenko'
   map 'Andrew Kaspick',            e('akaspick', 'gmail.com'), 'akaspick'
@@ -137,7 +136,7 @@ module NamesManager
   map 'Mike Gunderloy',             e('mike', 'clarkware.com')
   map 'Mike Naberezny',             'mnaberez'
   map 'Mikel Lindsaar',             'mikel', 'raasdnil'
-  map 'Mislav Marohnić',            'mislav', 'mislaw', e('mislav', 'nippur.irb.hr'), '=?utf-8?q?Mislav=20Marohni=C4=87?='
+  map 'Mislav Marohnić',            'mislav', 'mislaw', e('mislav', 'nippur.irb.hr')
   map 'Murray Steele',              'h-lame'
   map 'Nathan Weizenbaum',          'Nex3'
   map 'Nick Sieger',                'nicksieger', e('nicksieger', 'gmail.com')
@@ -208,56 +207,64 @@ module NamesManager
     CANONICAL_NAME_FOR[name] || name
   end
 
+  # Returns the source code of the +handle_special_cases+ method.
   def self.special_cases
     code = File.read(__FILE__)
     code =~ /(^  #[^\n]+\n)+  def self\.handle_special_cases.*?^  end/m
     $&
   end
 
+  # Removes email addresses (anything between <...>), and strips whitespace.
+  def self.sanitize(name)
+    name.sub(/<[^>]+>/, '').strip
+  end
+
   CONNECTORS_REGEXP = %r{[,/&+]}
 
-  # In some cases author names are extracted from messages. But candidates are
-  # not always real author names. There are lots of exceptions this method
-  # knows about. This happens both with git and svn.
+  # Inspects raw candidates in search for rare cases.
   #
-  # If no exception about +name+ applies this method returns +name+ back.
-  # On the other hand, returns +fallback+ if it determines that +name+ is
-  # not an author name for sure, as in "update from Trac" for example.
+  # Returns +nil+ if +name+ si known *not* to correspond to an author, the
+  # author name(s) if special handling applies, and return just +name+ back
+  # otherwise.
   #
   # Note that this method is responsible for extracting names as they appear
   # in the original string. Canonicalization is done elsewhere.
-  def self.handle_special_cases(name, fallback)
+  def self.handle_special_cases(name)
     case name
       when /\A#?\d+/
         # Remove side effects of [5684]
         # Ensure WhiteListSanitizer allows dl tag [#2393 state:resolved]
-        fallback
+        nil
       when /\A\s*\z/
-        fallback
+        nil
       when /^See rails ML/, /RAILS_ENV/
-        fallback
+        nil
       when /RubyConf/
         # RubyConf '05
-        fallback
+        nil
       when /\AIncludes duplicates of changes/
         # Includes duplicates of changes from 1.1.4 - 1.2.3
-        fallback
+        nil
       when 'update from Trac'
-        fallback
+        nil
       when /\A['":]/ # ' # this quote fixes JavaScript syntax highlighting
         # Instead of checking Rails.env.test? in Failsafe middleware, check env["rails.raise_exceptions"]
         # ... This lets ajax pages still use format.js despite there being no params[:format]
-        fallback
+        nil
       when 'RC1'
         # Prepare for Rails 2.2.0 [RC1]
-        fallback
+        nil
       when /\Astat(e|us):/
         # Fixed problem causes by leftover backup templates ending in tilde [state:committed #969]
         # Added ActionController::Translation module delegating to I18n #translate/#t and #localize/#l [status:committed #1008]
-        fallback
+        nil
       when /\A#https/
         # Signed-off-by: Michael Koziarski <michael@koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
-        fallback
+        nil
+      when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
+        'Adam Cigánek'
+      when '=?utf-8?q?Mislav=20Marohni=C4=87?='
+        'Mislav Marohnić'
       when 'Thanks to Austin Ziegler for Transaction::Simple'
         'Austin Ziegler'
       when 'nik.wakelin Koz'
@@ -293,8 +300,6 @@ module NamesManager
         # DHH via Jay Fields
         # via Tim Bray
         $1
-      when 'nbugajski/cavelle'
-        %w(nbugajski cavelle)
       when CONNECTORS_REGEXP # There are lots of these, even with a combination of connectors.
         # [Adam Milligan, Pratik]
         # [Rick Olson/Nicholas Seckar]
@@ -305,6 +310,7 @@ module NamesManager
           part == '?'         # Sam Stephenson/?
         end
       else
+        # just return the candidate back
         name
     end
   end
