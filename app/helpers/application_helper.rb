@@ -29,6 +29,7 @@ module ApplicationHelper
   end
 
   def normalize_title(title)
-    title.starts_with?("Rails Contributors") ? title : "Rails Contributors - #{title}"
+    title = title.starts_with?("Rails Contributors") ? title : "Rails Contributors - #{title}"
+    strip_tags(title)
   end
 end
