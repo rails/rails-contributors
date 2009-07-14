@@ -86,6 +86,7 @@ module NamesManager
   map 'Jamie van Dyke',            'fearoffish'
   map 'Jan De Poorter',            'DefV'
   map 'Jason Frey',                'Jason Frey (Fryguy)'
+  map 'Javier Ramírez',            'jramirez'
   map 'Jeffrey Hardy',             'packagethief'
   map 'Jeremy Evans',               e('jeremyevans0', 'gmail.com'), 'jeremyevans'
   map 'Jeremy Kemper',              'bitsweat'
