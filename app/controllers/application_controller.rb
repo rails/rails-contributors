@@ -17,30 +17,32 @@ private
   end
 
   BOTS_REGEXP = %r{
-    Baidu        |
-    Gigabot      |
-    Google       |
-    libwww-perl  |
-    lwp-trivial  |
-    msnbot       |
-    SiteUptime   |
-    Slurp        |
-    WordPress    |
-    ZIBB         |
-    ZyBorg       |
-    Yahoo        |
-    Lycos_Spider |
-    Infoseek     |
-    ia_archiver  |
-    scoutjet     |
-    nutch        |
-    dts\ agent   |
-    twiceler     |
-    ask\ jeeves  |
-    Webspider    |
-    Daumoa       |
-    MEGAUPLOAD   |
-    yacybot
+    Baidu         |
+    Gigabot       |
+    Google        |
+    libwww-perl   |
+    lwp-trivial   |
+    msnbot        |
+    SiteUptime    |
+    Slurp         |
+    WordPress     |
+    ZIBB          |
+    ZyBorg        |
+    Yahoo         |
+    Lycos_Spider  |
+    Infoseek      |
+    ia_archiver   |
+    scoutjet      |
+    nutch         |
+    dts\ agent    |
+    twiceler      |
+    ask\ jeeves   |
+    Webspider     |
+    Daumoa        |
+    MEGAUPLOAD    |
+    yacybot       |
+    GingerCrawler |
+    Yandex
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
