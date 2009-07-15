@@ -42,7 +42,8 @@ private
     MEGAUPLOAD    |
     yacybot       |
     GingerCrawler |
-    Yandex
+    Yandex        |
+    Gaisbot
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
