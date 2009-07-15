@@ -164,6 +164,7 @@ module NamesManager
   map 'Ryan Daigle',                'rwdaigle'
   map 'Ryan Tomayko',               e('rtomayko', 'gmail.com')
   map 'Sam Granieri',               'sjgman9'
+  map 'Sandra Metz',                'sandra.metz@duke.edu'
   map 'Scott Reilly',               'coffee2code'
   map 'Sebastian Delmont',          e('sd', 'notso.net')
   map 'Sebastian Kanthak',          e('sebastian.kanthak', 'muehlheim.de'), 'sebastian.kanthak', 'skanthak'
@@ -262,6 +263,8 @@ module NamesManager
       when /\A#https/
         # Signed-off-by: Michael Koziarski <michael@koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
         nil
+      when 'schoenm@earthlink.net\s+sandra.metz@duke.edu'
+        
       when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
         'Adam Cigánek'
       when '=?utf-8?q?Mislav=20Marohni=C4=87?='
