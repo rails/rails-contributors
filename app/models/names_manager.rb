@@ -51,6 +51,7 @@ module NamesManager
   map 'Cody Fauser',               e('codyfauser', 'gmail.com')
   map 'Courtenay Gasking',         'court3nay', 'courtenay', e('court3nay', 'gmail.com')
   map 'Damian Janowski',           'djanowski'
+  map 'Dan Kubb',                  'dkubb'
   map 'Dan Manges',                'dcmanges'
   map 'Daniel Morrison',           'danielmorrison'
   map 'Daniel Rodríguez Troitiño', 'drodriguez'
