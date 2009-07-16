@@ -1,10 +1,22 @@
 role :staging, "hashref.com"
 
+def execute_in_rc(method, command)
+  send(method, "export PATH=/opt/ruby-enterprise/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}")
+end
+
 def run_in_rc(command)
-  run "export PATH=/opt/ruby-enterprise/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}"
+  execute_in_rc(:run, command)
+end
+
+def stream_in_rc(command)
+  execute_in_rc(:stream, command)  
 end
 
 namespace :rc do
+  task :tail, :roles => :staging do
+    stream_in_rc "tail -f log/production.log"
+  end
+
   task :pull, :roles => :staging do
     run_in_rc "git pull"
   end
