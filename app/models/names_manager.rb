@@ -117,6 +117,7 @@ module NamesManager
   map 'Ken Miller',                 e('kenneth.miller', 'bitfield.net')
   map 'Kevin Clark',                "Kevin Clark #{e('kevin.clark', 'gmail.com')}", e('kevin.clark', 'gmail.com'), e('kevin.clark', 'gmal.com')
   map 'Kevin Jackson',              e('foamdino', 'gmail.com')
+  map 'Kornelius Kalnbach',         e('murphy', 'cYcnus.de')
   map 'Kristopher Chambers',        e('kristopher.chambers', 'gmail.com'), 'kris_chambers'
   map 'Lars Pind',                  e('lars', 'pinds.com'), e('lars', 'pind.com'), 'Lars pind', 'lars pind'
   map 'lmarlow',                    e('lmarlow', 'yahoo.com')
