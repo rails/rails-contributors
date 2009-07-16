@@ -56,6 +56,7 @@ module NamesManager
   map 'Daniel Morrison',           'danielmorrison'
   map 'Daniel Rodríguez Troitiño', 'drodriguez'
   map 'Dave Thomas',               e('dave', 'pragprog.com'), 'pragdave'
+  map 'David A. Black',            'dblack'
   map 'David Calavera',            'calavera', 'david.calavera'
   map 'David Dollar',              'ddollar'
   map 'David Heinemeier Hansson',  'DHH'
