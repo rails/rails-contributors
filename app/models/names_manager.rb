@@ -111,7 +111,7 @@ module NamesManager
   map 'Juanjo Bazan',               'juanjo.bazan'
   map 'Justin French',              'justinfrench'
   map 'Kamal Fariz Mahyuddin',      'kamal'
-  map 'Karel Miarka',               'kajism@yahoo.com'
+  map 'Karel Miarka',               e('kajism', 'yahoo.com')
   map 'Ken Barker',                 e('ken.barker', 'gmail.com')
   map 'Ken Kunz',                   e('kennethkunz', 'gmail.com')
   map 'Ken Miller',                 e('kenneth.miller', 'bitfield.net')
