@@ -187,7 +187,7 @@ protected
     end
   end
 
-  # Once all tables have been update we compute the rank of each contributor.
+  # Once all tables have been updated we compute the rank of each contributor.
   def update_ranks
     rank = 0
     ncon = nil
