@@ -55,6 +55,7 @@ module NamesManager
   map 'Dan Manges',                'dcmanges'
   map 'Daniel Morrison',           'danielmorrison'
   map 'Daniel Rodríguez Troitiño', 'drodriguez'
+  map 'Dave Lee',                  e('dave', 'cherryville.org')
   map 'Dave Thomas',               e('dave', 'pragprog.com'), 'pragdave'
   map 'David A. Black',            'dblack'
   map 'David Calavera',            'calavera', 'david.calavera'
@@ -124,6 +125,7 @@ module NamesManager
   map 'Luke Redpath',               e('contact', 'lukeredpath.co.uk')
   map 'maiha',                      'anna', e('anna', 'wota.jp'), e('maiha', 'wota.jp')
   map 'Manfred Stienstra',          e('m.stienstra', 'fngtps.com'), 'manfred'
+  map 'Marc Love',                  'marclove'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
   map 'Mark Imbriaco',              e('mark.imbriaco', 'pobox.com')
   map 'Mark Somerville',            'Spakman'
