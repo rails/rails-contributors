@@ -137,6 +137,7 @@ module NamesManager
   map 'Michael Schubert',           e('michael', 'schubert'), e('michael', 'schubert.cx')
   map 'Michael Schuerig',           e('michael', 'schuerig.de'), 'Michael Shuerig'
   map 'Mike Gunderloy',             e('mike', 'clarkware.com')
+  map 'Mike Laster',                e('mlaster', 'metavillage.com')
   map 'Mike Naberezny',             'mnaberez'
   map 'Mikel Lindsaar',             'mikel', 'raasdnil'
   map 'Mislav Marohnić',            'mislav', 'mislaw', e('mislav', 'nippur.irb.hr')
