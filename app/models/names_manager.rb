@@ -94,6 +94,7 @@ module NamesManager
   map 'Jeremy Evans',               e('jeremyevans0', 'gmail.com'), 'jeremyevans'
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
+  map 'Jeremy Voorhis',             e('jeremy', 'planetargon.com')
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
   map 'John Barnette',              'jbarnette'
   map 'Jonathan del Strother',      'Catfish', 'catfish'
