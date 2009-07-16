@@ -172,6 +172,7 @@ module NamesManager
   map 'Ryan Daigle',                'rwdaigle'
   map 'Ryan Tomayko',               e('rtomayko', 'gmail.com')
   map 'Sam Granieri',               'sjgman9'
+  map 'Sam Stephenson',             'Sam'
   map 'Sandra Metz',                'sandra.metz@duke.edu'
   map 'Scott Reilly',               'coffee2code'
   map 'Sebastian Delmont',          e('sd', 'notso.net')
