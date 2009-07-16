@@ -78,7 +78,9 @@ protected
   # new commits.
   def names_mapping_updated?
     lastru = RepoUpdate.last
-    lastru ? NamesManager.mapping_updated_since?(lastru.ended_at) : true
+    # Use started_at in case a revised names manager is deployed while an update
+    # is running.
+    lastru ? NamesManager.mapping_updated_since?(lastru.started_at) : true
   end
 
   # Simple-minded git system caller, enough for what we need. Returns the output.
