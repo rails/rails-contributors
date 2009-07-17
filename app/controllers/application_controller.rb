@@ -43,7 +43,8 @@ private
     yacybot       |
     GingerCrawler |
     Yandex        |
-    Gaisbot
+    Gaisbot       |
+    TweetmemeBot
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
