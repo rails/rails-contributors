@@ -138,6 +138,7 @@ module NamesManager
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
   map 'Martin Emde',                e('zraii', 'comcast.net'), e('martin.emde', 'gmail.com')
+  map 'Mathieu Arnold',             e('mat', 'absolight.fr')
   map 'Matt Aimonetti',             'matt'
   map 'Matt Margolis',              e('matt', 'mattmargolis.net')
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
