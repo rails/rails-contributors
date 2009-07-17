@@ -39,6 +39,7 @@ module NamesManager
   map 'Anthony Eden',              'aeden'
   map 'Ben Sandofsky',             'sandofsky'
   map 'Ben Scofield',              'bscofield'
+  map 'Benjamin Curtis',           e('rails', 'bencurtis.com')
   map 'Blaine',                    'blaine', e('blaine', 'odeo.com')
   map 'Brad Ediger',               e('brad.ediger', 'madriska.com'), e('brad', 'madriska.com'), 'bradediger'
   map 'Brad Ellis',                e('bellis', 'deepthought.org')
