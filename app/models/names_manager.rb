@@ -72,6 +72,7 @@ module NamesManager
   map 'David Heinemeier Hansson',  'DHH'
   map 'David Morton',              e('mortonda', 'dgrmm.net')
   map 'Dee Zsombor',               'Dee.Zsombor', 'zsombor', e('Dee.Zsombor', 'gmail.com')
+  map 'DeLynn Berry',              'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', e('delynn', 'gmail.com')
   map 'Don Park',                  e('don.park', 'gmail.com')
   map 'Dr Nic',                    'drnic'
   map 'Duane Johnson',             e('duane.johnson', 'gmail.com')
