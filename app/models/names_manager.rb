@@ -38,7 +38,7 @@ module NamesManager
   map 'Anthony Eden',              'aeden'
   map 'Ben Scofield',              'bscofield'
   map 'Blaine',                    'blaine', e('blaine', 'odeo.com')
-  map 'Brad Ediger',               e('brad.ediger', 'madriska.com'), e('brad', 'madriska.com')
+  map 'Brad Ediger',               e('brad.ediger', 'madriska.com'), e('brad', 'madriska.com'), 'bradediger'
   map 'Brad Ellis',                e('bellis', 'deepthought.org')
   map 'Bob Silva',                 'BobSilva'
   map 'Brad Greenlee',             'bgreenlee'
