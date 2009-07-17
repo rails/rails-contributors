@@ -48,6 +48,7 @@ module NamesManager
   map 'Brad Greenlee',             'bgreenlee'
   map 'Brandon Keepers',           'brandon', e('brandon', 'opensoul.org')
   map 'Brian Donovan',             'eventualbuddha'
+  map 'Caio Chassot',              'caio'
   map 'Caleb Tennis',              e('caleb', 'aei-tech.com')
   map 'Cheah Chu Yeow',            'Chu Yeow', 'chuyeow'
   map 'Chris Kampmeier',           'kampers'
@@ -227,6 +228,7 @@ module NamesManager
   map 'Yehuda Katz',                'wycats'
   map 'Yurii Rashkovskii',          e('yrashk', 'gmail.com'), e('yrashk', 'fp.org.ua')
   map 'Zach Dennis',                'zdennis'
+  map 'Zack Chandler',              'zackchandler'
 
   # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
   CANONICAL_NAME_FOR = {}
