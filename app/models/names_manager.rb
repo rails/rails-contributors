@@ -124,6 +124,7 @@ module NamesManager
   map 'Justin French',              'justinfrench'
   map 'Kamal Fariz Mahyuddin',      'kamal'
   map 'Karel Miarka',               e('kajism', 'yahoo.com')
+  map 'Kazuhiko',                   e('kazuhiko', 'fdiary.net')
   map 'Ken Barker',                 e('ken.barker', 'gmail.com')
   map 'Ken Kunz',                   e('kennethkunz', 'gmail.com')
   map 'Ken Miller',                 e('kenneth.miller', 'bitfield.net')
