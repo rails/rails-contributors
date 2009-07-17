@@ -128,8 +128,8 @@ module NamesManager
   map 'Kornelius Kalnbach',         e('murphy', 'cYcnus.de')
   map 'Kristopher Chambers',        e('kristopher.chambers', 'gmail.com'), 'kris_chambers'
   map 'Lars Pind',                  e('lars', 'pinds.com'), e('lars', 'pind.com'), 'Lars pind', 'lars pind'
-  map 'lmarlow',                    e('lmarlow', 'yahoo.com')
   map 'Lawrence Pit',               'lawrence'
+  map 'Lee Marlow',                 'lmarlow', e('lmarlow', 'yahoo.com')
   map 'Leon Breedt',                'Leon Bredt'
   map 'Luca Guidi',                 'l.guidi'
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
