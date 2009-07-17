@@ -121,6 +121,7 @@ module NamesManager
   map 'Josh Susser',                'hasmanyjosh', e('josh', 'hasmanythrough.com')
   map 'Joshua Sierles',             'jsierles'
   map 'Juanjo Bazan',               'juanjo.bazan'
+  map 'Julian Tarkhanov',           e('me', 'julik.nl')
   map 'Justin French',              'justinfrench'
   map 'Kamal Fariz Mahyuddin',      'kamal'
   map 'Karel Miarka',               e('kajism', 'yahoo.com')
