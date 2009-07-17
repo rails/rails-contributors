@@ -136,6 +136,7 @@ module NamesManager
   map 'Lawrence Pit',               'lawrence'
   map 'Lee Marlow',                 'lmarlow', e('lmarlow', 'yahoo.com')
   map 'Leon Breedt',                'Leon Bredt'
+  map 'Lon Baker',                  e('lon', 'speedymac.com')
   map 'Luca Guidi',                 'l.guidi'
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
   map 'Luke Redpath',               e('contact', 'lukeredpath.co.uk')
