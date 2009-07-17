@@ -107,6 +107,7 @@ module NamesManager
   map 'Jeremy Voorhis',             e('jeremy', 'planetargon.com')
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
   map 'John Barnette',              'jbarnette'
+  map 'Jon Bright',                 e('jon', 'siliconcircus.com')
   map 'Jon Wood',                   e('jon', 'instance-design.co.uk')
   map 'Jonathan del Strother',      'Catfish', 'catfish'
   map 'Jonathan Viney',             e('jonathan', 'bluewire.net.nz')
