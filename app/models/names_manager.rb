@@ -221,7 +221,7 @@ module NamesManager
   map 'Tiago Macedo',               'tmacedo'
   map 'Tieg Zaharia',               'tzaharia'
   map 'Tim Pope',                   'tpope', 'Time Pope', e('rails', 'tpope.info'), 'pope'
-  map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte'
+  map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte', 'xal'
   map 'Tom Brice',                  'tomtoday', e('tomtoday', 'gmail.com')
   map 'Tom Fakes',                  e('tom', 'craz8.com')
   map 'Tom Ward',                   'Tom ward', 'tomafro', e('tom', 'popdog.net')
