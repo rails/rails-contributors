@@ -37,6 +37,7 @@ module NamesManager
   map 'Andrew Kaspick',            e('akaspick', 'gmail.com'), 'akaspick', e('andrew', 'redlinesoftware.com')
   map 'Andrew White',              'pixeltrix'
   map 'Anthony Eden',              'aeden'
+  map 'Ben Sandofsky',             'sandofsky'
   map 'Ben Scofield',              'bscofield'
   map 'Blaine',                    'blaine', e('blaine', 'odeo.com')
   map 'Brad Ediger',               e('brad.ediger', 'madriska.com'), e('brad', 'madriska.com'), 'bradediger'
