@@ -30,6 +30,7 @@ module NamesManager
   #
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
+  map 'Adam Kramer',               e('adam', 'the-kramers.net')
   map 'alancfrancis',              e('alancfrancis', 'gmail.com')
   map 'Aliaksey Kandratsenka',     'Aleksey Kondratenko'
   map 'Andrew Kaspick',            e('akaspick', 'gmail.com'), 'akaspick'
