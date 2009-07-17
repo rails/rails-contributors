@@ -74,6 +74,7 @@ module NamesManager
   map 'Duane Johnson',             e('duane.johnson', 'gmail.com')
   map 'Duncan Beevers',            'duncanbeevers'
   map 'Elijah Miller',             e('elijah.miller', 'gmail.com'), 'jqr'
+  map 'Elliot Smith',              e('elliot', 'townx.org')
   map 'Eloy Duran',                'alloy'
   map 'Emilio Tagua',              'miloops'
   map 'Ernesto Jimenez',           'ernesto.jimenez'
