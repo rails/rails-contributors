@@ -78,6 +78,7 @@ module NamesManager
   map 'Geoff Buesing',             'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Garside',             'ggarside'
   map 'Grant Hollingworth',        e('grant', 'antiflux.org')
+  map 'Guy Naor',                  e('guy.naor', 'famundo.com')
   map 'Hampton Catlin',            e('hcatlin', 'gmail.com')
   map 'Henrik Nyh',                'Henrik N', e('henrik', 'nyh.se'), 'henrik'
   map 'Hongli Lai (Phusion)',      'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
