@@ -126,7 +126,7 @@ module NamesManager
   map 'Josh Susser',                'hasmanyjosh', e('josh', 'hasmanythrough.com')
   map 'Joshua Sierles',             'jsierles'
   map 'Juanjo Bazan',               'juanjo.bazan'
-  map 'Julian Tarkhanov',           e('me', 'julik.nl')
+  map 'Julian Tarkhanov',           e('me', 'julik.nl'), 'julik'
   map 'Justin French',              'justinfrench'
   map 'Kamal Fariz Mahyuddin',      'kamal'
   map 'Karel Miarka',               e('kajism', 'yahoo.com')
@@ -225,6 +225,7 @@ module NamesManager
   map 'Tom Brice',                  'tomtoday', e('tomtoday', 'gmail.com')
   map 'Tom Fakes',                  e('tom', 'craz8.com')
   map 'Tom Ward',                   'Tom ward', 'tomafro', e('tom', 'popdog.net')
+  map 'Trevor Squire',              'protocool'
   map 'Victor Jalencas',            e('victor-ronr-trac', 'carotena.net')
   map 'Will Bryant',                'will.bryant'
   map 'Xavier Noria',               'fxn'
