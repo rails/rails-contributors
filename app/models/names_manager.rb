@@ -33,6 +33,7 @@ module NamesManager
   map 'Adam Kramer',               e('adam', 'the-kramers.net')
   map 'alancfrancis',              e('alancfrancis', 'gmail.com')
   map 'Alexander Dymo',            'adymo'
+  map 'Alexey Zatsepin',           'alexey'
   map 'Aliaksey Kandratsenka',     'Aleksey Kondratenko'
   map 'Andrew Kaspick',            e('akaspick', 'gmail.com'), 'akaspick', e('andrew', 'redlinesoftware.com')
   map 'Andrew White',              'pixeltrix'
