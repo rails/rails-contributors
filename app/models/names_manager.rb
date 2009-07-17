@@ -196,6 +196,7 @@ module NamesManager
   map 'Ryan Bigg',                  'Radar'
   map 'Ryan Davis',                 'zenspider'
   map 'Ryan Daigle',                'rwdaigle'
+  map 'Ryan McGeary',               'rmm5t'
   map 'Ryan Tomayko',               e('rtomayko', 'gmail.com')
   map 'Sam Granieri',               'sjgman9'
   map 'Sam Stephenson',             'Sam', 'sam'
