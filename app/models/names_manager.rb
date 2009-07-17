@@ -194,6 +194,7 @@ module NamesManager
   map 'Tim Pope',                   'tpope', 'Time Pope', e('rails', 'tpope.info'), 'pope'
   map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte'
   map 'Tom Brice',                  'tomtoday', e('tomtoday', 'gmail.com')
+  map 'Tom Fakes',                  e('tom', 'craz8.com')
   map 'Tom Ward',                   'Tom ward', 'tomafro', e('tom', 'popdog.net')
   map 'Victor Jalencas',            e('victor-ronr-trac', 'carotena.net')
   map 'Will Bryant',                'will.bryant'
