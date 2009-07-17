@@ -155,6 +155,7 @@ module NamesManager
   map 'Matt Palmer',                'mpalmer', e('mpalmer', 'hezmatt.org')
   map 'Matt Margolis',              e('matt', 'mattmargolis.net')
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
+  map 'Matthew Walker',             e('matthew', 'walker.wattle.id.au')
   map 'Michael Galero',             'mikong'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
   map 'Michael Koziarski',          'Koz', 'nzkoz'
