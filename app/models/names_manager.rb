@@ -46,6 +46,7 @@ module NamesManager
   map 'Brad Greenlee',             'bgreenlee'
   map 'Brandon Keepers',           'brandon', e('brandon', 'opensoul.org')
   map 'Brian Donovan',             'eventualbuddha'
+  map 'Caleb Tennis',              e('caleb', 'aei-tech.com')
   map 'Cheah Chu Yeow',            'Chu Yeow', 'chuyeow'
   map 'Chris Kampmeier',           'kampers'
   map 'Chris McGrath',             e('c.r.mcgrath', 'gmail.com'), 'c.r.mcgrath', e('chris', 'octopod.info'), 'octopod'
