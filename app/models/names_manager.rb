@@ -137,6 +137,7 @@ module NamesManager
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
   map 'Luke Redpath',               e('contact', 'lukeredpath.co.uk')
   map 'maiha',                      'anna', e('anna', 'wota.jp'), e('maiha', 'wota.jp')
+  map 'Maik Schmidt',               e('contact', 'maik-schmidt.de')
   map 'Manfred Stienstra',          e('m.stienstra', 'fngtps.com'), 'manfred'
   map 'Marc Love',                  'marclove'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
