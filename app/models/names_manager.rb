@@ -177,6 +177,7 @@ module NamesManager
   map 'Obie Fernandez',             'ObieFernandez'
   map 'Patrick Lenz',               e('patrick', 'lenz.sh')
   map 'pburleson',                  e('pburleson', 'gmail.com')
+  map 'Per Wigren',                 e('tuxie', 'dekadance.se'), 'Tuxie'
   map 'Philip Hallstrom',           'phallstrom'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Rick Bradley',               e('rick', 'rickbradley.com')
