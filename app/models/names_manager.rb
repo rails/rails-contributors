@@ -100,6 +100,7 @@ module NamesManager
   map 'Jeremy Voorhis',             e('jeremy', 'planetargon.com')
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
   map 'John Barnette',              'jbarnette'
+  map 'Jon Wood',                   e('jon', 'instance-design.co.uk')
   map 'Jonathan del Strother',      'Catfish', 'catfish'
   map 'Jonathan Viney',             e('jonathan', 'bluewire.net.nz')
   map 'Jonathan Weiss',             'jweiss'
@@ -137,6 +138,7 @@ module NamesManager
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
   map 'Martin Emde',                e('zraii', 'comcast.net'), e('martin.emde', 'gmail.com')
+  map 'Matt Margolis',              e('matt', 'mattmargolis.net')
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Michael Galero',             'mikong'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
