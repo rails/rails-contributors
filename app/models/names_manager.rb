@@ -191,6 +191,7 @@ module NamesManager
   map 'Robby Russell',              'robbyrussell'
   map 'Roderick van Domburg',       'roderickvd'
   map 'Ross Kaffenberger',          'Ross Kaffenburger'
+  map 'Russell Norris',             'RSL'
   map 'Ruy Asan',                   'rubyruy'
   map 'Ryan Bates',                 'ryanb'
   map 'Ryan Bigg',                  'Radar'
