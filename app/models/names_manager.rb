@@ -143,6 +143,7 @@ module NamesManager
   map 'Martin Emde',                e('zraii', 'comcast.net'), e('martin.emde', 'gmail.com')
   map 'Mathieu Arnold',             e('mat', 'absolight.fr')
   map 'Matt Aimonetti',             'matt'
+  map 'Matt Palmer',                'mpalmer', e('mpalmer', 'hezmatt.org')
   map 'Matt Margolis',              e('matt', 'mattmargolis.net')
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Michael Galero',             'mikong'
