@@ -62,6 +62,7 @@ module NamesManager
   map 'David Calavera',            'calavera', 'david.calavera'
   map 'David Dollar',              'ddollar'
   map 'David Heinemeier Hansson',  'DHH'
+  map 'David Morton',              e('mortonda', 'dgrmm.net')
   map 'Dee Zsombor',               'Dee.Zsombor', 'zsombor', e('Dee.Zsombor', 'gmail.com')
   map 'Don Park',                  e('don.park', 'gmail.com')
   map 'Dr Nic',                    'drnic'
