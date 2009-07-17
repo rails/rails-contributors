@@ -207,6 +207,7 @@ module NamesManager
   map 'Xavier Noria',               'fxn'
   map 'Xavier Shay',                'xaviershay'
   map 'Yehuda Katz',                'wycats'
+  map 'Yurii Rashkovskii',          e('yrashk', 'gmail.com'), e('yrashk', 'fp.org.ua')
   map 'Zach Dennis',                'zdennis'
 
   # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
