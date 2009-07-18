@@ -175,6 +175,7 @@ module NamesManager
   map 'Mislav Marohnić',            'mislav', 'mislaw', e('mislav', 'nippur.irb.hr')
   map 'Murray Steele',              'h-lame'
   map 'Nathan Weizenbaum',          'Nex3'
+  map 'Nicholas Seckar',            'Ulysses'
   map 'Nick Sieger',                'nicksieger', e('nicksieger', 'gmail.com'), 'Nick'
   map 'Nik Wakelin',                'nik.wakelin'
   map 'Norbert Crombach',           'norbert'
