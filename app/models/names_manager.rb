@@ -13,11 +13,6 @@ module NamesManager
     File.mtime(__FILE__) > ts
   end
 
-  # Simple trick to be able to publish this file with readable addresses.
-  def self.e(user, domain)
-    user + '@' + domain
-  end
-
   # canonical name => handlers, emails, typos, etc.
   SEEN_ALSO_AS = {}
   def self.map(canonical_name, *also_as)
@@ -30,169 +25,169 @@ module NamesManager
   #
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
-  map 'Adam Kramer',               e('adam', 'the-kramers.net')
+  map 'Adam Kramer',               "adam\100the-kramers.net"
   map 'Akira Matsuda',             '松田 明'
-  map 'alancfrancis',              e('alancfrancis', 'gmail.com')
+  map 'alancfrancis',              "alancfrancis\100gmail.com"
   map 'Alexander Dymo',            'adymo'
   map 'Alexey Zatsepin',           'alexey'
   map 'Aliaksey Kandratsenka',     'Aleksey Kondratenko'
-  map 'Andrew Kaspick',            e('akaspick', 'gmail.com'), 'akaspick', e('andrew', 'redlinesoftware.com')
+  map 'Andrew Kaspick',            "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
   map 'Andrew White',              'pixeltrix'
   map 'Anthony Eden',              'aeden'
   map 'Ben Sandofsky',             'sandofsky'
   map 'Ben Scofield',              'bscofield'
-  map 'Benjamin Curtis',           e('rails', 'bencurtis.com')
-  map 'Blaine Cook',               'Blaine', 'blaine', e('blaine', 'odeo.com')
-  map 'Brad Ediger',               e('brad.ediger', 'madriska.com'), e('brad', 'madriska.com'), 'bradediger'
-  map 'Brad Ellis',                e('bellis', 'deepthought.org')
+  map 'Benjamin Curtis',           "rails\100bencurtis.com"
+  map 'Blaine Cook',               'Blaine', 'blaine', "blaine\100odeo.com"
+  map 'Brad Ediger',               "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
+  map 'Brad Ellis',                "bellis\100deepthought.org"
   map 'Bob Silva',                 'BobSilva'
   map 'Brad Greenlee',             'bgreenlee'
-  map 'Brandon Keepers',           'brandon', e('brandon', 'opensoul.org')
+  map 'Brandon Keepers',           'brandon', "brandon\100opensoul.org"
   map 'Brian Donovan',             'eventualbuddha'
   map 'Caio Chassot',              'caio'
-  map 'Caleb Tennis',              e('caleb', 'aei-tech.com')
+  map 'Caleb Tennis',              "caleb\100aei-tech.com"
   map 'Cheah Chu Yeow',            'Chu Yeow', 'chuyeow'
   map 'Chris Kampmeier',           'kampers'
-  map 'Chris McGrath',             e('c.r.mcgrath', 'gmail.com'), 'c.r.mcgrath', e('chris', 'octopod.info'), 'octopod'
-  map 'Chris Mear',                e('chris', 'feedmechocolate.com'), 'chrismear'
+  map 'Chris McGrath',             "c.r.mcgrath\100gmail.com", 'c.r.mcgrath', "chris\100octopod.info", 'octopod'
+  map 'Chris Mear',                "chris\100feedmechocolate.com", 'chrismear'
   map "Chris O'Sullivan",          'thechrisoshow'
   map 'Chris Roos',                'chrisroos'
   map 'Coda Hale',                 'codahale'
-  map 'Cody Fauser',               e('codyfauser', 'gmail.com')
-  map 'Courtenay Gasking',         'court3nay', 'courtenay', e('court3nay', 'gmail.com')
+  map 'Cody Fauser',               "codyfauser\100gmail.com"
+  map 'Courtenay Gasking',         'court3nay', 'courtenay', "court3nay\100gmail.com"
   map 'Craig Davey',               'eigentone'
   map 'Damian Janowski',           'djanowski'
   map 'Dan Kubb',                  'dkubb'
   map 'Dan Manges',                'dcmanges'
   map 'Daniel Morrison',           'danielmorrison'
   map 'Daniel Rodríguez Troitiño', 'drodriguez'
-  map 'Dave Lee',                  e('dave', 'cherryville.org')
-  map 'Dave Thomas',               e('dave', 'pragprog.com'), 'pragdave'
+  map 'Dave Lee',                  "dave\100cherryville.org"
+  map 'Dave Thomas',               "dave\100pragprog.com", 'pragdave'
   map 'David A. Black',            'dblack'
   map 'David Calavera',            'calavera', 'david.calavera'
   map 'David Dollar',              'ddollar'
   map 'David Heinemeier Hansson',  'DHH'
-  map 'David Morton',              e('mortonda', 'dgrmm.net')
-  map 'Dee Zsombor',               'Dee.Zsombor', 'zsombor', e('Dee.Zsombor', 'gmail.com')
-  map 'DeLynn Berry',              'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', e('delynn', 'gmail.com')
-  map 'Don Park',                  e('don.park', 'gmail.com')
+  map 'David Morton',              "mortonda\100dgrmm.net"
+  map 'Dee Zsombor',               'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
+  map 'DeLynn Berry',              'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
+  map 'Don Park',                  "don.park\100gmail.com"
   map 'Dr Nic',                    'drnic'
-  map 'Duane Johnson',             e('duane.johnson', 'gmail.com')
+  map 'Duane Johnson',             "duane.johnson\100gmail.com"
   map 'Duncan Beevers',            'duncanbeevers'
-  map 'Elijah Miller',             e('elijah.miller', 'gmail.com'), 'jqr'
-  map 'Elliot Smith',              e('elliot', 'townx.org')
+  map 'Elijah Miller',             "elijah.miller\100gmail.com", 'jqr'
+  map 'Elliot Smith',              "elliot\100townx.org"
   map 'Eloy Duran',                'alloy'
   map 'Emilio Tagua',              'miloops'
   map 'Ernesto Jimenez',           'ernesto.jimenez'
   map 'Evan Weaver',               'evan'
-  map 'François Beausoleil',       'FranÃ§ois Beausolei', 'Francois Beausoleil', e('fbeausoleil', 'ftml.net'), e('francois.beausoleil', 'gmail.com')
-  map 'Frederick Cheung',          'fcheung', 'Fred Cheung', 'frederick.cheung', e('frederick.cheung', 'gmail.com')
+  map 'François Beausoleil',       'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
+  map 'Frederick Cheung',          'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
   map 'Gabe da Silveira',          'dasil003'
   map 'Geoff Buesing',             'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Garside',             'ggarside'
-  map 'Grant Hollingworth',        e('grant', 'antiflux.org')
-  map 'Guy Naor',                  e('guy.naor', 'famundo.com')
-  map 'Hampton Catlin',            e('hcatlin', 'gmail.com')
-  map 'Henrik Nyh',                'Henrik N', e('henrik', 'nyh.se'), 'henrik'
+  map 'Grant Hollingworth',        "grant\100antiflux.org"
+  map 'Guy Naor',                  "guy.naor\100famundo.com"
+  map 'Hampton Catlin',            "hcatlin\100gmail.com"
+  map 'Henrik Nyh',                'Henrik N', "henrik\100nyh.se", 'henrik'
   map 'Hongli Lai (Phusion)',      'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
-  map 'Ian White',                 e('ian.w.white', 'gmail.com')
+  map 'Ian White',                 "ian.w.white\100gmail.com"
   map 'Isaac Feliu',               'isaacfeliu'
   map 'Jack Danger Canty',         'danger', 'Danger'
-  map 'Jakob Skjerning',           'Jakob S', e('jakob', 'mentalized.net')
-  map 'Jarkko Laine',              e('jarkko', 'jlaine.net'), 'Jarkko', 'jarkko'
-  map 'James Adam',                'lazyatom', e('james.adam', 'gmail.com')
+  map 'Jakob Skjerning',           'Jakob S', "jakob\100mentalized.net"
+  map 'Jarkko Laine',              "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
+  map 'James Adam',                'lazyatom', "james.adam\100gmail.com"
   map 'James Mead',                'floehopper'
   map 'Jamie van Dyke',            'fearoffish'
   map 'Jan De Poorter',            'DefV'
   map 'Jason Frey',                'Jason Frey (Fryguy)'
   map 'Javier Ramírez',            'jramirez'
   map 'Jeffrey Hardy',             'packagethief'
-  map 'Jeremy Evans',               e('jeremyevans0', 'gmail.com'), 'jeremyevans'
+  map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans'
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
-  map 'Jeremy Voorhis',             e('jeremy', 'planetargon.com')
+  map 'Jeremy Voorhis',             "jeremy\100planetargon.com"
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
   map 'John Barnette',              'jbarnette'
-  map 'Jon Bright',                 e('jon', 'siliconcircus.com')
-  map 'Jon Wood',                   e('jon', 'instance-design.co.uk')
+  map 'Jon Bright',                 "jon\100siliconcircus.com"
+  map 'Jon Wood',                   "jon\100instance-design.co.uk"
   map 'Jonathan del Strother',      'Catfish', 'catfish'
-  map 'Jonathan Viney',             e('jonathan', 'bluewire.net.nz')
+  map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"
   map 'Jonathan Weiss',             'jweiss'
   map 'Jordi Bunster',              'jordi'
   map 'José Valim',                 'josevalim'
-  map 'Josh Goebel',                'Dreamer3', e('dreamer3', 'gmail.com')
-  map 'Josh Knowles',               e('joshknowles', 'gmail.com')
-  map 'Josh Peek',                  'josh', 'Josh', 'Joshua Peek', 'joshpeek', e('josh', 'joshpeek.com')
-  map 'Josh Starcher',              e('josh.starcher', 'gmail.com')
-  map 'Josh Susser',                'hasmanyjosh', e('josh', 'hasmanythrough.com')
+  map 'Josh Goebel',                'Dreamer3', "dreamer3\100gmail.com"
+  map 'Josh Knowles',               "joshknowles\100gmail.com"
+  map 'Josh Peek',                  'josh', 'Josh', 'Joshua Peek', 'joshpeek', "josh\100joshpeek.com"
+  map 'Josh Starcher',              "josh.starcher\100gmail.com"
+  map 'Josh Susser',                'hasmanyjosh', "josh\100hasmanythrough.com"
   map 'Joshua Sierles',             'jsierles'
   map 'Juanjo Bazan',               'juanjo.bazan'
-  map 'Julian Tarkhanov',           e('me', 'julik.nl'), 'julik'
+  map 'Julian Tarkhanov',           "me\100julik.nl", 'julik'
   map 'Justin French',              'justinfrench'
   map 'Kamal Fariz Mahyuddin',      'kamal'
-  map 'Karel Miarka',               e('kajism', 'yahoo.com')
-  map 'Kazuhiko',                   e('kazuhiko', 'fdiary.net')
-  map 'Keith Morrison',             e('keithm', 'infused.org')
-  map 'Ken Barker',                 e('ken.barker', 'gmail.com')
-  map 'Ken Kunz',                   e('kennethkunz', 'gmail.com')
-  map 'Ken Miller',                 e('kenneth.miller', 'bitfield.net')
-  map 'Kevin Clark',                "Kevin Clark #{e('kevin.clark', 'gmail.com')}", e('kevin.clark', 'gmail.com'), e('kevin.clark', 'gmal.com')
-  map 'Kevin Jackson',              e('foamdino', 'gmail.com')
+  map 'Karel Miarka',               "kajism\100yahoo.com"
+  map 'Kazuhiko',                   "kazuhiko\100fdiary.net"
+  map 'Keith Morrison',             "keithm\100infused.org"
+  map 'Ken Barker',                 "ken.barker\100gmail.com"
+  map 'Ken Kunz',                   "kennethkunz\100gmail.com"
+  map 'Ken Miller',                 "kenneth.miller\100bitfield.net"
+  map 'Kevin Clark',                "Kevin Clark kevin.clark\100gmail.com", "kevin.clark\100gmail.com", "kevin.clark\100gmal.com"
+  map 'Kevin Jackson',              "foamdino\100gmail.com"
   map 'Kyosuke Morohashi',          'moro'
-  map 'Kornelius Kalnbach',         e('murphy', 'cYcnus.de')
-  map 'Kristopher Chambers',        e('kristopher.chambers', 'gmail.com'), 'kris_chambers'
-  map 'Lars Pind',                  e('lars', 'pinds.com'), e('lars', 'pind.com'), 'Lars pind', 'lars pind'
+  map 'Kornelius Kalnbach',         "murphy\100cYcnus.de"
+  map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
+  map 'Lars Pind',                  "lars\100pinds.com", "lars\100pind.com", 'Lars pind', 'lars pind'
   map 'Lawrence Pit',               'lawrence'
-  map 'Lee Marlow',                 'lmarlow', e('lmarlow', 'yahoo.com')
+  map 'Lee Marlow',                 'lmarlow', "lmarlow\100yahoo.com"
   map 'Leon Breedt',                'Leon Bredt'
-  map 'Lon Baker',                  e('lon', 'speedymac.com')
+  map 'Lon Baker',                  "lon\100speedymac.com"
   map 'Luca Guidi',                 'l.guidi'
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
-  map 'Luke Redpath',               e('contact', 'lukeredpath.co.uk')
-  map 'maiha',                      'anna', e('anna', 'wota.jp'), e('maiha', 'wota.jp')
-  map 'Maik Schmidt',               e('contact', 'maik-schmidt.de')
-  map 'Manfred Stienstra',          e('m.stienstra', 'fngtps.com'), 'manfred'
+  map 'Luke Redpath',               "contact\100lukeredpath.co.uk"
+  map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
+  map 'Maik Schmidt',               "contact\100maik-schmidt.de"
+  map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
   map 'Marc Love',                  'marclove'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
-  map 'Mark Imbriaco',              e('mark.imbriaco', 'pobox.com')
+  map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
-  map 'Martin Emde',                e('zraii', 'comcast.net'), e('martin.emde', 'gmail.com')
-  map 'Mathieu Arnold',             e('mat', 'absolight.fr')
+  map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
+  map 'Mathieu Arnold',             "mat\100absolight.fr"
   map 'Matt Aimonetti',             'matt'
-  map 'Matt Palmer',                'mpalmer', e('mpalmer', 'hezmatt.org')
-  map 'Matt Margolis',              e('matt', 'mattmargolis.net')
+  map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
+  map 'Matt Margolis',              "matt\100mattmargolis.net"
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
-  map 'Matthew Walker',             e('matthew', 'walker.wattle.id.au')
+  map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
   map 'Michael Galero',             'mikong'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
   map 'Michael Koziarski',          'Koz', 'nzkoz'
-  map 'Michael Schoen',             'Michael A. Schoen', e('schoenm', 'earthlink.net')
-  map 'Michael Schubert',           e('michael', 'schubert'), e('michael', 'schubert.cx')
-  map 'Michael Schuerig',           e('michael', 'schuerig.de'), 'Michael Shuerig'
-  map 'Mike Gunderloy',             e('mike', 'clarkware.com')
-  map 'Mike Laster',                e('mlaster', 'metavillage.com')
+  map 'Michael Schoen',             'Michael A. Schoen', "schoenm\100earthlink.net"
+  map 'Michael Schubert',           "michael\100schubert", "michael\100schubert.cx"
+  map 'Michael Schuerig',           "michael\100schuerig.de", 'Michael Shuerig'
+  map 'Mike Gunderloy',             "mike\100clarkware.com"
+  map 'Mike Laster',                "mlaster\100metavillage.com"
   map 'Mike Naberezny',             'mnaberez'
   map 'Mikel Lindsaar',             'mikel', 'raasdnil'
-  map 'Mislav Marohnić',            'mislav', 'mislaw', e('mislav', 'nippur.irb.hr')
+  map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr"
   map 'Murray Steele',              'h-lame'
   map 'Nathan Weizenbaum',          'Nex3'
   map 'Nicholas Seckar',            'Ulysses'
-  map 'Nick Sieger',                'nicksieger', e('nicksieger', 'gmail.com'), 'Nick'
+  map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
   map 'Nik Wakelin',                'nik.wakelin'
   map 'Norbert Crombach',           'norbert'
   map 'Obie Fernandez',             'ObieFernandez'
-  map 'Patrick Lenz',               e('patrick', 'lenz.sh')
-  map 'pburleson',                  e('pburleson', 'gmail.com')
-  map 'Per Wigren',                 e('tuxie', 'dekadance.se'), 'Tuxie'
+  map 'Patrick Lenz',               "patrick\100lenz.sh"
+  map 'pburleson',                  "pburleson\100gmail.com"
+  map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
   map 'Philip Hallstrom',           'phallstrom'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
-  map 'Rick Bradley',               e('rick', 'rickbradley.com')
-  map 'Rich Collins',               'richcollins', e('richcollins', 'gmail.com')
-  map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', e('technoweenie', 'gmail.com'), 'Rich Olson'
+  map 'Rick Bradley',               "rick\100rickbradley.com"
+  map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
+  map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
   map 'RSL',                        'rsl', 'Russell Norris'
-  map 'Rob Biedenharn',             'rabiedenharn', e('Rob', 'AgileConsultingLLC.com')
-  map 'Rob Sanheim',                'rsanheim', e('rsanheim', 'gmail.com'), e('rob', 'thinkrelevance.com')
+  map 'Rob Biedenharn',             'rabiedenharn', "Rob\100AgileConsultingLLC.com"
+  map 'Rob Sanheim',                'rsanheim', "rsanheim\100gmail.com", "rob\100thinkrelevance.com"
   map 'Robby Russell',              'robbyrussell'
   map 'Roderick van Domburg',       'roderickvd'
   map 'Ross Kaffenberger',          'Ross Kaffenburger'
@@ -203,38 +198,38 @@ module NamesManager
   map 'Ryan Davis',                 'zenspider'
   map 'Ryan Daigle',                'rwdaigle'
   map 'Ryan McGeary',               'rmm5t'
-  map 'Ryan Tomayko',               e('rtomayko', 'gmail.com')
+  map 'Ryan Tomayko',               "rtomayko\100gmail.com"
   map 'Sam Granieri',               'sjgman9'
   map 'Sam Stephenson',             'Sam', 'sam'
-  map 'Sandra Metz',                e('sandra.metz', 'duke.edu')
+  map 'Sandra Metz',                "sandra.metz\100duke.edu"
   map 'Scott Reilly',               'coffee2code'
-  map 'Sebastian Delmont',          e('sd', 'notso.net')
-  map 'Sebastian Kanthak',          e('sebastian.kanthak', 'muehlheim.de'), 'sebastian.kanthak', 'skanthak'
+  map 'Sebastian Delmont',          "sd\100notso.net"
+  map 'Sebastian Kanthak',          "sebastian.kanthak\100muehlheim.de", 'sebastian.kanthak', 'skanthak'
   map 'Seth Rasmussen',             'loincloth'
-  map 'Shugo Maeda',                'shugo', e('shugo', 'ruby-lang.org')
+  map 'Shugo Maeda',                'shugo', "shugo\100ruby-lang.org"
   map 'Simon Moore',                'saimonmoore'
-  map 'Simon Stapleton',            e('simon.stapleton', 'gmail.com')
-  map 'Stefan Kaes',                e('skaes', 'web.de'), 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'
-  map 'Steve Purcell',              e('stephen_purcell', 'yahoo.com')
+  map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
+  map 'Stefan Kaes',                "skaes\100web.de", 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'
+  map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
   map 'Steven Bristol',             'stevenbristol'
-  map 'Steven Soroka',              e('ssoroka78', 'gmail.com'), 'ssoroka'
+  map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
-  map 'Thijs van der Vossen',       'thijsv', e('thijs', 'vandervossen.net'), e('thijs', 'fngtps.com')
-  map 'Thomas Fuchs',               e('thomas', 'fesch.at')
+  map 'Thijs van der Vossen',       'thijsv', "thijs\100vandervossen.net", "thijs\100fngtps.com"
+  map 'Thomas Fuchs',               "thomas\100fesch.at"
   map 'Tiago Macedo',               'tmacedo'
   map 'Tieg Zaharia',               'tzaharia'
-  map 'Tim Pope',                   'tpope', 'Time Pope', e('rails', 'tpope.info'), 'pope'
+  map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
   map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte', 'xal'
-  map 'Tom Brice',                  'tomtoday', e('tomtoday', 'gmail.com')
-  map 'Tom Fakes',                  e('tom', 'craz8.com')
-  map 'Tom Ward',                   'Tom ward', 'tomafro', e('tom', 'popdog.net')
+  map 'Tom Brice',                  'tomtoday', "tomtoday\100gmail.com"
+  map 'Tom Fakes',                  "tom\100craz8.com"
+  map 'Tom Ward',                   'Tom ward', 'tomafro', "tom\100popdog.net"
   map 'Trevor Squire',              'protocool'
-  map 'Victor Jalencas',            e('victor-ronr-trac', 'carotena.net')
+  map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
   map 'Will Bryant',                'will.bryant'
   map 'Xavier Noria',               'fxn'
   map 'Xavier Shay',                'xaviershay'
   map 'Yehuda Katz',                'wycats'
-  map 'Yurii Rashkovskii',          e('yrashk', 'gmail.com'), e('yrashk', 'fp.org.ua')
+  map 'Yurii Rashkovskii',          "yrashk\100gmail.com", "yrashk\100fp.org.ua"
   map 'Zach Dennis',                'zdennis'
   map 'Zack Chandler',              'zackchandler'
 
@@ -309,7 +304,7 @@ module NamesManager
       when /\A#https/
         # Signed-off-by: Michael Koziarski <michael@koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
         nil
-      when "#{e('schoenm', 'earthlink.net')} #{e('sandra.metz', 'duke.edu')}"
+      when "schoenm\100earthlink.net sandra.metz\100duke.edu"
         name.split
       when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
         'Adam Cigánek'
@@ -327,14 +322,14 @@ module NamesManager
         ['Yehuda Katz', 'Carl Lerche']
       when 'Ross Kaffenburger and Bryan Helmkamp'
         ['Ross Kaffenburger', 'Bryan Helmkamp']
-      when "#{e('me', 'jonnii.com')} #{e('rails', 'jeffcole.net')} Marcel Molina Jr."
-        [e('me', 'jonnii.com'), e('rails', 'jeffcole.net'), 'Marcel Molina Jr.']
-      when "#{e('jeremy', 'planetargon.com')} Marcel Molina Jr."
-        [e('jeremy', 'planetargon.com'), 'Marcel Molina Jr.']
-      when "#{e('matt', 'mattmargolis.net')} Marcel Molina Jr."
-        [e('matt', 'mattmargolis.net'), 'Marcel Molina Jr.']
-      when "#{e('doppler', 'gmail.com')} #{e('phil.ross', 'gmail.com')}"
-        [e('doppler', 'gmail.com'), e('phil.ross', 'gmail.com')]
+      when "me\100jonnii.com rails\100jeffcole.net Marcel Molina Jr."
+        ["me\100jonnii.com", "rails\100jeffcole.net", 'Marcel Molina Jr.']
+      when "jeremy\100planetargon.com Marcel Molina Jr."
+        ["jeremy\100planetargon.com", 'Marcel Molina Jr.']
+      when "matt\100mattmargolis.net Marcel Molina Jr."
+        ["matt\100mattmargolis.net", 'Marcel Molina Jr.']
+      when "doppler\100gmail.com phil.ross\100gmail.com"
+        ["doppler\100gmail.com", "phil.ross\100gmail.com"]
       when 'After much pestering from Dave Thomas'
         'Dave Thomas'
       when 'Aredridel/earlier work by Michael Neumann'
