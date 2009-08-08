@@ -231,6 +231,7 @@ module NamesManager
   map 'Xavier Shay',                'xaviershay'
   map 'Yehuda Katz',                'wycats'
   map 'Yurii Rashkovskii',          "yrashk\100gmail.com", "yrashk\100fp.org.ua"
+  map 'Zac Williams',               'jzw'
   map 'Zach Dennis',                'zdennis'
   map 'Zack Chandler',              'zackchandler'
 
