@@ -226,6 +226,7 @@ module NamesManager
   map 'Tom Ward',                   'Tom ward', 'tomafro', "tom\100popdog.net"
   map 'Trevor Squire',              'protocool'
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
+  map 'Wesley Moxam',               'wmoxam'
   map 'Will Bryant',                'will.bryant'
   map 'Xavier Noria',               'fxn'
   map 'Xavier Shay',                'xaviershay'
