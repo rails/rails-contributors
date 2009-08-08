@@ -185,6 +185,7 @@ module NamesManager
   map 'Rick Bradley',               "rick\100rickbradley.com"
   map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
   map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
+  map 'Rizwan Reza',                'rizwanreza'
   map 'RSL',                        'rsl', 'Russell Norris'
   map 'Rob Biedenharn',             'rabiedenharn', "Rob\100AgileConsultingLLC.com"
   map 'Rob Sanheim',                'rsanheim', "rsanheim\100gmail.com", "rob\100thinkrelevance.com"
