@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BugmashControllerTest < ActionController::TestCase
+class BugmashesControllerTest < ActionController::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true
