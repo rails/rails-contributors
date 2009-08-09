@@ -206,6 +206,7 @@ module NamesManager
   map 'Sandra Metz',                "sandra.metz\100duke.edu"
   map 'Scott Reilly',               'coffee2code'
   map 'Sebastian Delmont',          "sd\100notso.net"
+  map 'Sebastian Graessl',          'bastilian'
   map 'Sebastian Kanthak',          "sebastian.kanthak\100muehlheim.de", 'sebastian.kanthak', 'skanthak'
   map 'Seth Rasmussen',             'loincloth'
   map 'Shugo Maeda',                'shugo', "shugo\100ruby-lang.org"
