@@ -175,6 +175,7 @@ module NamesManager
   map 'Nicholas Seckar',            'Ulysses'
   map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
   map 'Nik Wakelin',                'nik.wakelin'
+  map 'Nikolay Petrachkov',         'jastix'
   map 'Norbert Crombach',           'norbert'
   map 'Obie Fernandez',             'ObieFernandez'
   map 'Patrick Lenz',               "patrick\100lenz.sh"
