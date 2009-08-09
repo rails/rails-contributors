@@ -9,16 +9,16 @@ class BugmashesController < ApplicationController
   end
   
 private
-  def first_commit_within_bugmash(contributor, bstart)
+  def first_commit_within_bugmash(contributor)
     first_commit = contributor.commits.first(:order => 'committed_timestamp ASC')
-    first_commit.committed_timestamp >= bstart
+    first_commit.committed_timestamp >= BSTART
   end
 
   def newcomers
     returning([]) do |newcomers|
       Commit.all(:conditions => ['committed_timestamp >= ? AND committed_timestamp < ?', BSTART, BEND]).each do |commit|
         commit.contributors.each do |contributor|
-          if first_commit_within_bugmash(contributor, bstart)
+          if first_commit_within_bugmash(contributor)
             newcomers << contributor
           end
         end
