@@ -17,14 +17,14 @@ private
   end
 
   def newcomers
-    returning([]) do |newcomers|
-      Commit.all(:conditions => ['committed_timestamp >= ? AND committed_timestamp < ?', BSTART, BEND]).each do |commit|
-        commit.contributors.each do |contributor|
-          if first_commit_within_bugmash(contributor)
-            newcomers << contributor
-          end
+    newcomers = []
+    Commit.all(:conditions => ['committed_timestamp >= ? AND committed_timestamp < ?', BSTART, BEND]).each do |commit|
+      commit.contributors.each do |contributor|
+        if first_commit_within_bugmash(contributor)
+          newcomers << contributor
         end
       end
     end
+    newcomers.uniq
   end
 end
