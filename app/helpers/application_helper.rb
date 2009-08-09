@@ -4,7 +4,7 @@ module ApplicationHelper
     link_to %(<span class="sha1">#{commit.short_sha1}</span>), commit.github_url, :class => 'commit'
   end
 
-  def link_to_contributor(contributor, window)
+  def link_to_contributor(contributor, window='all-time')
     query = window == 'all-time'? {} : {:window => window}
     link_to h(contributor.name), contributor_commits_path(contributor, query)
   end
