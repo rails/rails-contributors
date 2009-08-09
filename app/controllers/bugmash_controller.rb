@@ -2,7 +2,7 @@ class BugmashController < ApplicationController
   BSTART = Date.new(2009, 8, 8).to_time
   BEND   = Date.new(2009, 8, 10).to_time
   
-  def index
+  def show
     @newcomers = newcomers
     @start     = BSTART
     @end       = BEND
