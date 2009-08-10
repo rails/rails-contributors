@@ -69,6 +69,7 @@ module NamesManager
   map 'Courtenay Gasking',         'court3nay', 'courtenay', "court3nay\100gmail.com"
   map 'Craig Davey',               'eigentone'
   map 'Damian Janowski',           'djanowski'
+  map 'Dan Cheail',                'codeape'
   map 'Dan Croak',                 'dancroak'
   map 'Dan Kubb',                  'dkubb'
   map 'Dan Manges',                'dcmanges'
