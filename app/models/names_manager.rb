@@ -144,6 +144,7 @@ module NamesManager
   map 'Kamal Fariz Mahyuddin',      'kamal'
   map 'Karel Miarka',               "kajism\100yahoo.com"
   map 'Kazuhiko',                   "kazuhiko\100fdiary.net"
+  map 'Kazuhiro Yoshdia',           "moriq\100moriq.com"
   map 'Keith Morrison',             "keithm\100infused.org"
   map 'Ken Barker',                 "ken.barker\100gmail.com"
   map 'Ken Kunz',                   "kennethkunz\100gmail.com"
