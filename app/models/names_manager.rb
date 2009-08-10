@@ -35,6 +35,7 @@ module NamesManager
   map 'Andrew White',              'pixeltrix'
   map 'Anthony Eden',              'aeden'
   map 'Anup Narkhede',             'railsbob'
+  map 'Arthur Zapparoli',          'arthurgeek'
   map 'Ben Sandofsky',             'sandofsky'
   map 'Ben Scofield',              'bscofield'
   map 'Benjamin Curtis',           "rails\100bencurtis.com"
