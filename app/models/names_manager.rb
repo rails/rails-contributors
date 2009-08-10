@@ -19,6 +19,16 @@ module NamesManager
     SEEN_ALSO_AS[canonical_name] = also_as
   end
 
+  def self.authors_of_special_cased_commits(commit)
+    case commit.sha1
+    # This was a commit backported from 2.3 that missed Dana in the way.  
+    when '1382f4de1f9b0e443e7884bd4da53c20f0754568'
+      ['David Burger', 'Dana Jones']
+    else
+      nil
+    end
+  end
+
   # Some people appear in Rails logs under different names, there are nicks,
   # typos, email addresses, shortenings, etc. This is a hand-made list to map
   # them in order to be able to aggregate commits from the same real author.

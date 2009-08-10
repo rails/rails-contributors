@@ -57,18 +57,25 @@ protected
   # convention. If none is found we check the changelog entry for svn commits.
   # If that fails as well the contributor is the git author by definition.
   def extract_candidates(repo)
-    names = extract_contributor_names_from_text(message)
-    if names.empty?
-      names = extract_svn_contributor_names_diffing(repo) if imported_from_svn?
+    names = authors_of_special_cased_commits
+    if names.nil?
+      names = extract_contributor_names_from_text(message)
       if names.empty?
-        sanitized = sanitize([author])
-        names = handle_special_cases(sanitized)
+        names = extract_svn_contributor_names_diffing(repo) if imported_from_svn?
         if names.empty?
-          names = sanitized
+          sanitized = sanitize([author])
+          names = handle_special_cases(sanitized)
+          if names.empty?
+            names = sanitized
+          end
         end
       end
     end
     names
+  end
+
+  def authors_of_special_cased_commits
+    NamesManager.authors_of_special_cased_commits(self)
   end
 
   def sanitize(names)
