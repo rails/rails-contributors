@@ -119,6 +119,7 @@ module NamesManager
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
   map 'Jeremy Voorhis',             "jeremy\100planetargon.com"
+  map 'Jim Hughes',                 'jeem'
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
   map 'John Barnette',              'jbarnette'
   map 'Jon Bright',                 "jon\100siliconcircus.com"
