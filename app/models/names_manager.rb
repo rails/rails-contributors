@@ -125,6 +125,7 @@ module NamesManager
   map 'Josh Susser',                'hasmanyjosh', "josh\100hasmanythrough.com"
   map 'Joshua Sierles',             'jsierles'
   map 'Juanjo Bazan',               'juanjo.bazan'
+  map 'Julian Doherty',             'madlep'
   map 'Julian Tarkhanov',           "me\100julik.nl", 'julik'
   map 'Justin French',              'justinfrench'
   map 'Kamal Fariz Mahyuddin',      'kamal'
