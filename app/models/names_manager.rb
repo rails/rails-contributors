@@ -24,6 +24,10 @@ module NamesManager
     # This was a commit backported from 2.3 that missed Dana in the way.  
     when '1382f4de1f9b0e443e7884bd4da53c20f0754568'
       ['David Burger', 'Dana Jones']
+    # The following patch comes from this ticket https://rails.lighthouseapp.com/projects/8994/tickets/2856
+    # but Yehuda told me credit for that commit was screwed up.
+    when '882dd4e6054470ee56c46ab1432861952c81b633'
+      ['David Calavera']
     else
       nil
     end
