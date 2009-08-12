@@ -72,6 +72,7 @@ module NamesManager
   map 'Cody Fauser',               "codyfauser\100gmail.com"
   map 'Courtenay Gasking',         'court3nay', 'courtenay', "court3nay\100gmail.com"
   map 'Craig Davey',               'eigentone'
+  map 'Cristi Balan',              'Cristi BALAN'
   map 'Damian Janowski',           'djanowski'
   map 'Dan Cheail',                'codeape'
   map 'Dan Croak',                 'dancroak'
