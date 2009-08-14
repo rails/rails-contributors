@@ -18,7 +18,7 @@ class Commit < ActiveRecord::Base
   validates_inclusion_of  :imported_from_svn, :in => [true, false]
 
   # Constructor that initializes the object from a Grit commit.
-  def self.new_from_grit_commit(commit)
+  def self.new_from_grit_commit(commit, branch)
     new(
       :sha1                => commit.id,
       :author              => commit.author.name,
@@ -26,7 +26,8 @@ class Commit < ActiveRecord::Base
       :committer           => commit.committer.name,
       :committed_timestamp => commit.committed_date,
       :message             => commit.message,
-      :imported_from_svn   => commit.message.include?('git-svn-id:')
+      :imported_from_svn   => commit.message.include?('git-svn-id:'),
+      :branch              => branch
     )
   end
 

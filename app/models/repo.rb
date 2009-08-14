@@ -5,8 +5,8 @@ class Repo
   attr_reader :logger, :grit_repo
 
   # This is the entry point to update the database from a recent pull.
-  def self.update(path)
-    new(path).update
+  def self.update(path, *branches)
+    new(path).update(branches)
   end
 
   def initialize(path)
@@ -14,8 +14,8 @@ class Repo
     @grit_repo = Grit::Repo.new(path)
   end
 
-  def git_pull
-    git_exec('pull', '--quiet')
+  def git_fetch
+    git_exec('fetch', 'origin', '--quiet')
   end
 
   def git_show(sha1)
@@ -23,12 +23,12 @@ class Repo
   end
 
   # TODO: This method is getting long.
-  def update
+  def update(branches)
     ApplicationUtils.acquiring_sync_file('updating') do
       started_at = Time.now
       ncommits   = 0
 
-      git_pull
+      git_fetch
       pulled_at = Time.now
 
       if names_mapping_updated = names_mapping_updated?
@@ -38,7 +38,7 @@ class Repo
       end
 
       Commit.transaction do
-        ncommits = import_new_commits
+        ncommits = import_new_commits(branches)
         logger.info("#{ncommits} new commits imported into the database")
 
         break if ncommits.zero? && !names_mapping_updated
@@ -97,13 +97,23 @@ protected
   # Note that commits are inserted in reverse order (most recent has lower ID)
   # and that order is not linear as new imports are performed, only relative to
   # commits within a given import.
-  def import_new_commits
-    batch_size    = 100
-    ncommits      = 0
-    offset        = 0
+  def import_new_commits(branches)
+    ncommits = 0
     last_svn_sha1 = Commit.first(:conditions => {:imported_from_svn => true}, :order => 'committed_timestamp DESC').sha1 rescue nil
+    branches.each do |branch|
+      ncommits += import_new_commits_in_branch(branch, last_svn_sha1)
+    end  
+    ncommits    
+  end
+
+  def import_new_commits_in_branch(branch, last_svn_sha1)
+    batch_size = 100
+    ncommits   = 0
+    offset     = 0
+
+    logger.info("importing new commits from branch #{branch}")
     loop do
-      commits = @grit_repo.commits('master', batch_size, offset)
+      commits = @grit_repo.commits(branch, batch_size, offset)
       return ncommits if commits.empty?
       commits.each do |commit|
         if Commit.exists?(:sha1 => commit.id)
@@ -115,7 +125,7 @@ protected
             next
           end
         end
-        import_grit_commit(commit)
+        import_grit_commit(commit, branch)
         ncommits += 1
       end
       offset += commits.size
@@ -123,8 +133,8 @@ protected
   end
 
   # Creates a new commit from data in the given Grit commit object.
-  def import_grit_commit(commit)
-    new_commit = Commit.new_from_grit_commit(commit)
+  def import_grit_commit(commit, branch)
+    new_commit = Commit.new_from_grit_commit(commit, branch)
     if new_commit.save
       logger.info("imported commit #{new_commit.short_sha1}")
     else
