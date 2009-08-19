@@ -241,6 +241,7 @@ module NamesManager
   map 'Steven Bristol',             'stevenbristol'
   map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
+  map 'Taryn East',                 'taryn'
   map 'Thijs van der Vossen',       'thijsv', "thijs\100vandervossen.net", "thijs\100fngtps.com"
   map 'Thomas Fuchs',               "thomas\100fesch.at"
   map 'Tiago Macedo',               'tmacedo'
