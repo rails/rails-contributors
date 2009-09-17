@@ -121,6 +121,7 @@ module NamesManager
   map 'Jan De Poorter',            'DefV'
   map 'Jason Frey',                'Jason Frey (Fryguy)'
   map 'Javier Ramírez',            'jramirez'
+  map 'Jay Pignata',               'Developer' # see 179b451
   map 'Jeffrey Hardy',             'packagethief'
   map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans'
   map 'Jeremy Kemper',              'bitsweat'
