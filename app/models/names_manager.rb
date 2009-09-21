@@ -160,7 +160,7 @@ module NamesManager
   map 'Kyosuke Morohashi',          'moro'
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de"
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
-  map 'Lakshan Perera',             'laktek'
+  map 'Lakshan Perera',             'laktek', 'lakshan'
   map 'Lars Pind',                  "lars\100pinds.com", "lars\100pind.com", 'Lars pind', 'lars pind'
   map 'Lawrence Pit',               'lawrence'
   map 'Lee Marlow',                 'lmarlow', "lmarlow\100yahoo.com"
