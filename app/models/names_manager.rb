@@ -191,6 +191,7 @@ module NamesManager
   map 'Michael Schubert',           "michael\100schubert", "michael\100schubert.cx"
   map 'Michael Schuerig',           "michael\100schuerig.de", 'Michael Shuerig'
   map 'Mike Clark',                 "mike\100clarkware.com"
+  map 'Mike Gunderloy',             'Michael Gunderloy'
   map 'Mike Laster',                "mlaster\100metavillage.com"
   map 'Mike Naberezny',             'mnaberez'
   map 'Mikel Lindsaar',             'mikel', 'raasdnil'
