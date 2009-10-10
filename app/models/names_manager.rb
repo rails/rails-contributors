@@ -40,6 +40,7 @@ module NamesManager
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
   map 'Adam Kramer',               "adam\100the-kramers.net"
+  map 'Adam Milligan',             'pivotal'
   map 'Akira Matsuda',             '松田 明'
   map 'alancfrancis',              "alancfrancis\100gmail.com"
   map 'Alexander Dymo',            'adymo'
