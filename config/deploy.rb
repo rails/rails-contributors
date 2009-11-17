@@ -36,7 +36,12 @@ namespace :rc do
   task :expire_caches, :roles => :staging do
     run_in_rc "rm -f public/stylesheets/all.css"
     run_in_rc "rm -f public/javascripts/all.js"
-    run_in_rc "rm -rf tmp/cache/views"
+    
+    # Inspired by John Leach's
+    # http://blog.brightbox.co.uk/posts/expiring-an-entire-page-cache-tree-atomically
+    suffix = Time.now.to_i
+    run_in_rc "mv tmp/cache/views tmp/cache/views_#{suffix}"
+    run_in_rc "rm -rf tmp/cache/views_#{suffix}"
   end
 
   task :deploy do
