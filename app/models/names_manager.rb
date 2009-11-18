@@ -252,6 +252,7 @@ module NamesManager
   map 'Thomas Fuchs',               "thomas\100fesch.at"
   map 'Tiago Macedo',               'tmacedo'
   map 'Tieg Zaharia',               'tzaharia'
+  map 'Tyler Kiley',                "tyler\100kianta.com"
   map 'Tim Fletcher',               "twoggle\100gmail.com"
   map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
   map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte', 'xal'
