@@ -49,6 +49,7 @@ module NamesManager
   map 'Aliaksey Kandratsenka',     'Aleksey Kondratenko'
   map 'Andrew Kaspick',            "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
   map 'Andrew White',              'pixeltrix'
+  map 'Andy Lien',                 "andylien\100gmail.com"
   map 'Anthony Eden',              'aeden'
   map 'Anup Narkhede',             'railsbob'
   map 'Arthur Zapparoli',          'arthurgeek'
