@@ -252,7 +252,6 @@ module NamesManager
   map 'Thomas Fuchs',               "thomas\100fesch.at"
   map 'Tiago Macedo',               'tmacedo'
   map 'Tieg Zaharia',               'tzaharia'
-  map 'Tyler Kiley',                "tyler\100kianta.com"
   map 'Tim Fletcher',               "twoggle\100gmail.com"
   map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
   map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte', 'xal'
@@ -262,6 +261,8 @@ module NamesManager
   map 'Tom Mornini',                "tmornini\100infomania.com"
   map 'Tom Ward',                   'Tom ward', 'tomafro', "tom\100popdog.net"
   map 'Trevor Squire',              'protocool'
+  map 'Tyler Kiley',                "tyler\100kianta.com"
+  map 'Tyler Kovacs',               "tyler.kovacs\100gmail.com"
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
   map 'Wesley Moxam',               'wmoxam'
   map 'Will Bryant',                'will.bryant'
