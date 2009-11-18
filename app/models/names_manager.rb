@@ -66,6 +66,7 @@ module NamesManager
   map 'Bruce Williams',            "wbruce\100gmail.com"
   map 'Caio Chassot',              'caio'
   map 'Caleb Tennis',              "caleb\100aei-tech.com"
+  map 'Charles M. Gerungan',       "charles.gerungan\100gmail.com"
   map 'Cheah Chu Yeow',            'Chu Yeow', 'chuyeow'
   map 'Chris Kampmeier',           'kampers'
   map 'Chris McGrath',             "c.r.mcgrath\100gmail.com", 'c.r.mcgrath', "chris\100octopod.info", 'octopod'
