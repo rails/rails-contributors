@@ -68,6 +68,7 @@ module NamesManager
   map 'Caleb Tennis',              "caleb\100aei-tech.com"
   map 'Charles M. Gerungan',       "charles.gerungan\100gmail.com"
   map 'Cheah Chu Yeow',            'Chu Yeow', 'chuyeow'
+  map 'Choon Keat',                "choonkeat\100gmail.com", 'choonkeat'
   map 'Chris Kampmeier',           'kampers'
   map 'Chris McGrath',             "c.r.mcgrath\100gmail.com", 'c.r.mcgrath', "chris\100octopod.info", 'octopod'
   map 'Chris Mear',                "chris\100feedmechocolate.com", 'chrismear'
