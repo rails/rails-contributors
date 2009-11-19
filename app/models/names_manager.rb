@@ -62,7 +62,7 @@ module NamesManager
   map 'Bob Silva',                 'BobSilva'
   map 'Brad Greenlee',             'bgreenlee'
   map 'Brandon Keepers',           'brandon', "brandon\100opensoul.org"
-  map 'Brian Donovan',             'eventualbuddha'
+  map 'Brian Donovan',             'eventualbuddha', "devslashnull\100gmail.com"
   map 'Bruce Williams',            "wbruce\100gmail.com"
   map 'Caio Chassot',              'caio'
   map 'Caleb Tennis',              "caleb\100aei-tech.com"
