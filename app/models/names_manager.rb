@@ -222,6 +222,7 @@ module NamesManager
   map 'Nikolay Petrachkov',         'jastix'
   map 'Norbert Crombach',           'norbert'
   map 'Obie Fernandez',             'ObieFernandez'
+  map 'Pat Maddox',                 "pergesu\100gmail.com"
   map 'Patrick Lenz',               "patrick\100lenz.sh"
   map 'Paul Butcher',               "paul\100paulbutcher.com"
   map 'pburleson',                  "pburleson\100gmail.com"
