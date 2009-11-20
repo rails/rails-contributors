@@ -39,105 +39,105 @@ module NamesManager
   #
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
-  map 'Adam Kramer',               "adam\100the-kramers.net"
-  map 'Adam Milligan',             'pivotal'
-  map 'Akira Matsuda',             '松田 明'
-  map 'alancfrancis',              "alancfrancis\100gmail.com"
-  map 'Alexander Dymo',            'adymo'
-  map 'Alexander Staubo',          "alex\100purefiction.net"
-  map 'Alexey Zatsepin',           'alexey'
-  map 'Aliaksey Kandratsenka',     'Aleksey Kondratenko'
-  map 'Andrew Kaspick',            "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
-  map 'Andrew White',              'pixeltrix'
-  map 'Andy Lien',                 "andylien\100gmail.com"
-  map 'Anthony Eden',              'aeden'
-  map 'Anup Narkhede',             'railsbob'
-  map 'Arthur Zapparoli',          'arthurgeek'
-  map 'Bas van Klinkenberg',       "flash\100vanklinkenbergsoftware.nl"
-  map 'Ben Sandofsky',             'sandofsky'
-  map 'Ben Scofield',              'bscofield'
-  map 'Benjamin Curtis',           "rails\100bencurtis.com"
-  map 'Blaine Cook',               'Blaine', 'blaine', "blaine\100odeo.com"
-  map 'Blair Zajac',               "blair\100orcaware.com"
-  map 'Brad Ediger',               "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
-  map 'Brad Ellis',                "bellis\100deepthought.org"
-  map 'Bob Silva',                 'BobSilva'
-  map 'Brad Greenlee',             'bgreenlee'
-  map 'Brandon Keepers',           'brandon', "brandon\100opensoul.org"
-  map 'Brian Donovan',             'eventualbuddha', "devslashnull\100gmail.com"
-  map 'Bruce Williams',            "wbruce\100gmail.com"
-  map 'Caio Chassot',              'caio'
-  map 'Caleb Tennis',              "caleb\100aei-tech.com"
-  map 'Charles M. Gerungan',       "charles.gerungan\100gmail.com"
-  map 'Cheah Chu Yeow',            'Chu Yeow', 'chuyeow'
-  map 'Choon Keat',                "choonkeat\100gmail.com", 'choonkeat'
-  map 'Chris Kampmeier',           'kampers'
-  map 'Chris McGrath',             "c.r.mcgrath\100gmail.com", 'c.r.mcgrath', "chris\100octopod.info", 'octopod'
-  map 'Chris Mear',                "chris\100feedmechocolate.com", 'chrismear'
-  map "Chris O'Sullivan",          'thechrisoshow'
-  map 'Chris Roos',                'chrisroos'
-  map 'Coda Hale',                 'codahale'
-  map 'Cody Fauser',               "codyfauser\100gmail.com"
-  map 'Courtenay Gasking',         'court3nay', 'courtenay', "court3nay\100gmail.com"
-  map 'Craig Davey',               'eigentone', "eigentone\100gmail.com"
-  map 'Cristi Balan',              'Cristi BALAN'
-  map 'Damian Janowski',           'djanowski'
-  map 'Dan Cheail',                'codeape'
-  map 'Dan Croak',                 'dancroak'
-  map 'Dan Kubb',                  'dkubb'
-  map 'Dan Manges',                'dcmanges'
-  map 'Dan Peterson',              "dpiddy\100gmail.com"
-  map 'Daniel Morrison',           'danielmorrison'
-  map 'Daniel Rodríguez Troitiño', 'drodriguez'
-  map 'Dave Lee',                  "dave\100cherryville.org"
-  map 'Dave Thomas',               "dave\100pragprog.com", 'pragdave'
-  map 'David A. Black',            'dblack'
-  map 'David Calavera',            'calavera', 'david.calavera'
-  map 'David Dollar',              'ddollar'
-  map 'David Heinemeier Hansson',  'DHH'
-  map 'David Morton',              "mortonda\100dgrmm.net"
-  map 'David Rose',                "doppler\100gmail.com"
-  map 'Dee Zsombor',               'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
-  map 'DeLynn Berry',              'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
-  map 'Don Park',                  "don.park\100gmail.com"
-  map 'Dr Nic',                    'drnic'
-  map 'Duane Johnson',             "duane.johnson\100gmail.com"
-  map 'Duncan Beevers',            'duncanbeevers'
-  map 'Duncan Robertson',          "duncan\100whomwah.com"
-  map 'Elan Feingold',             "elan\100bluemandrill.com"
-  map 'Elijah Miller',             "elijah.miller\100gmail.com", 'jqr'
-  map 'Elliot Smith',              "elliot\100townx.org"
-  map 'Eloy Duran',                'alloy'
-  map 'Emilio Tagua',              'miloops'
-  map 'Ernesto Jimenez',           'ernesto.jimenez'
-  map 'Esad Hajdarevic',           "esad\100esse.at"
-  map 'Evan Weaver',               'evan'
-  map 'François Beausoleil',       'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
-  map 'Frederick Cheung',          'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
-  map 'Gabe da Silveira',          'dasil003'
-  map 'Geoff Buesing',             'gbuesing', 'Geoffrey Buesing'
-  map 'Geoff Garside',             'ggarside'
-  map 'Grant Hollingworth',        "grant\100antiflux.org"
-  map 'Guy Naor',                  "guy.naor\100famundo.com"
-  map 'Hampton Catlin',            "hcatlin\100gmail.com"
-  map 'Henrik Nyh',                'Henrik N', "henrik\100nyh.se", 'henrik'
-  map 'Hongli Lai (Phusion)',      'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
-  map 'Ian White',                 "ian.w.white\100gmail.com"
-  map 'Isaac Feliu',               'isaacfeliu'
-  map 'Jack Danger Canty',         'danger', 'Danger'
-  map 'Jakob Skjerning',           'Jakob S', "jakob\100mentalized.net"
-  map 'Jarkko Laine',              "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
-  map 'James Adam',                'lazyatom', "james.adam\100gmail.com"
-  map 'James Mead',                'floehopper'
-  map 'Jamie Macey',               "jamie\100bravenet.com"
-  map 'Jamie van Dyke',            'fearoffish'
-  map 'Jan De Poorter',            'DefV'
-  map 'Jason Frey',                'Jason Frey (Fryguy)'
-  map 'Javier Ramírez',            'jramirez'
-  map 'Jay Pignata',               'Developer' # see 179b451
-  map 'Jeff Berg',                 "jeff\100ministrycentered.com"
-  map 'Jeffrey Hardy',             'packagethief'
-  map 'Jeremy Durham',             "jeremydurham\100gmail.com"
+  map 'Adam Kramer',                "adam\100the-kramers.net"
+  map 'Adam Milligan',              'pivotal'
+  map 'Akira Matsuda',              '松田 明'
+  map 'alancfrancis',               "alancfrancis\100gmail.com"
+  map 'Alexander Dymo',             'adymo'
+  map 'Alexander Staubo',           "alex\100purefiction.net"
+  map 'Alexey Zatsepin',            'alexey'
+  map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
+  map 'Andrew Kaspick',             "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
+  map 'Andrew White',               'pixeltrix'
+  map 'Andy Lien',                  "andylien\100gmail.com"
+  map 'Anthony Eden',               'aeden'
+  map 'Anup Narkhede',              'railsbob'
+  map 'Arthur Zapparoli',           'arthurgeek'
+  map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
+  map 'Ben Sandofsky',              'sandofsky'
+  map 'Ben Scofield',               'bscofield'
+  map 'Benjamin Curtis',            "rails\100bencurtis.com"
+  map 'Blaine Cook',                'Blaine', 'blaine', "blaine\100odeo.com"
+  map 'Blair Zajac',                "blair\100orcaware.com"
+  map 'Brad Ediger',                "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
+  map 'Brad Ellis',                 "bellis\100deepthought.org"
+  map 'Bob Silva',                  'BobSilva'
+  map 'Brad Greenlee',              'bgreenlee'
+  map 'Brandon Keepers',            'brandon', "brandon\100opensoul.org"
+  map 'Brian Donovan',              'eventualbuddha', "devslashnull\100gmail.com"
+  map 'Bruce Williams',             "wbruce\100gmail.com"
+  map 'Caio Chassot',               'caio'
+  map 'Caleb Tennis',               "caleb\100aei-tech.com"
+  map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
+  map 'Cheah Chu Yeow',             'Chu Yeow', 'chuyeow'
+  map 'Choon Keat',                 "choonkeat\100gmail.com", 'choonkeat'
+  map 'Chris Kampmeier',            'kampers'
+  map 'Chris McGrath',              "c.r.mcgrath\100gmail.com", 'c.r.mcgrath', "chris\100octopod.info", 'octopod'
+  map 'Chris Mear',                 "chris\100feedmechocolate.com", 'chrismear'
+  map "Chris O'Sullivan",           'thechrisoshow'
+  map 'Chris Roos',                 'chrisroos'
+  map 'Coda Hale',                  'codahale'
+  map 'Cody Fauser',                "codyfauser\100gmail.com"
+  map 'Courtenay Gasking',          'court3nay', 'courtenay', "court3nay\100gmail.com"
+  map 'Craig Davey',                'eigentone', "eigentone\100gmail.com"
+  map 'Cristi Balan',               'Cristi BALAN'
+  map 'Damian Janowski',            'djanowski'
+  map 'Dan Cheail',                 'codeape'
+  map 'Dan Croak',                  'dancroak'
+  map 'Dan Kubb',                   'dkubb'
+  map 'Dan Manges',                 'dcmanges'
+  map 'Dan Peterson',               "dpiddy\100gmail.com"
+  map 'Daniel Morrison',            'danielmorrison'
+  map 'Daniel Rodríguez Troitiño',  'drodriguez'
+  map 'Dave Lee',                   "dave\100cherryville.org"
+  map 'Dave Thomas',                "dave\100pragprog.com", 'pragdave'
+  map 'David A. Black',             'dblack'
+  map 'David Calavera',             'calavera', 'david.calavera'
+  map 'David Dollar',               'ddollar'
+  map 'David Heinemeier Hansson',   'DHH'
+  map 'David Morton',               "mortonda\100dgrmm.net"
+  map 'David Rose',                 "doppler\100gmail.com"
+  map 'Dee Zsombor',                'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
+  map 'DeLynn Berry',               'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
+  map 'Don Park',                   "don.park\100gmail.com"
+  map 'Dr Nic',                     'drnic'
+  map 'Duane Johnson',              "duane.johnson\100gmail.com"
+  map 'Duncan Beevers',             'duncanbeevers'
+  map 'Duncan Robertson',           "duncan\100whomwah.com"
+  map 'Elan Feingold',              "elan\100bluemandrill.com"
+  map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
+  map 'Elliot Smith',               "elliot\100townx.org"
+  map 'Eloy Duran',                 'alloy'
+  map 'Emilio Tagua',               'miloops'
+  map 'Ernesto Jimenez',            'ernesto.jimenez'
+  map 'Esad Hajdarevic',            "esad\100esse.at"
+  map 'Evan Weaver',                'evan'
+  map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
+  map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
+  map 'Gabe da Silveira',           'dasil003'
+  map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
+  map 'Geoff Garside',              'ggarside'
+  map 'Grant Hollingworth',         "grant\100antiflux.org"
+  map 'Guy Naor',                   "guy.naor\100famundo.com"
+  map 'Hampton Catlin',             "hcatlin\100gmail.com"
+  map 'Henrik Nyh',                 'Henrik N', "henrik\100nyh.se", 'henrik'
+  map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
+  map 'Ian White',                  "ian.w.white\100gmail.com"
+  map 'Isaac Feliu',                'isaacfeliu'
+  map 'Jack Danger Canty',          'danger', 'Danger'
+  map 'Jakob Skjerning',            'Jakob S', "jakob\100mentalized.net"
+  map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
+  map 'James Adam',                 'lazyatom', "james.adam\100gmail.com"
+  map 'James Mead',                 'floehopper'
+  map 'Jamie Macey',                "jamie\100bravenet.com"
+  map 'Jamie van Dyke',             'fearoffish'
+  map 'Jan De Poorter',             'DefV'
+  map 'Jason Frey',                 'Jason Frey (Fryguy)'
+  map 'Javier Ramírez',             'jramirez'
+  map 'Jay Pignata',                'Developer' # see 179b451
+  map 'Jeff Berg',                  "jeff\100ministrycentered.com"
+  map 'Jeffrey Hardy',              'packagethief'
+  map 'Jeremy Durham',              "jeremydurham\100gmail.com"
   map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans', "jeremye\100bsa.ca.gov", "code\100jeremyevans.net"
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
