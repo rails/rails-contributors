@@ -223,6 +223,7 @@ module NamesManager
   map 'Norbert Crombach',           'norbert'
   map 'Obie Fernandez',             'ObieFernandez'
   map 'Patrick Lenz',               "patrick\100lenz.sh"
+  map 'Paul Butcher',               "paul\100paulbutcher.com"
   map 'pburleson',                  "pburleson\100gmail.com"
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
   map 'Philip Hallstrom',           'phallstrom'
