@@ -250,6 +250,7 @@ module NamesManager
   map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
   map 'Steven Bristol',             'stevenbristol'
   map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
+  map 'Surendra Singhi',            "ssinghi\100kreeti.com"
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
   map 'Taryn East',                 'taryn'
   map 'Thijs van der Vossen',       'thijsv', "thijs\100vandervossen.net", "thijs\100fngtps.com"
