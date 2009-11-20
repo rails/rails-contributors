@@ -57,6 +57,7 @@ module NamesManager
   map 'Ben Scofield',              'bscofield'
   map 'Benjamin Curtis',           "rails\100bencurtis.com"
   map 'Blaine Cook',               'Blaine', 'blaine', "blaine\100odeo.com"
+  map 'Blair Zajac',               "blair\100orcaware.com"
   map 'Brad Ediger',               "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
   map 'Brad Ellis',                "bellis\100deepthought.org"
   map 'Bob Silva',                 'BobSilva'
