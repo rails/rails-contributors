@@ -227,6 +227,7 @@ module NamesManager
   map 'Paul Butcher',               "paul\100paulbutcher.com"
   map 'pburleson',                  "pburleson\100gmail.com"
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
+  map 'Peter Michaux',              "petermichaux\100gmail.com"
   map 'Philip Hallstrom',           'phallstrom'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Rick Bradley',               "rick\100rickbradley.com"
