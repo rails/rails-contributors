@@ -66,7 +66,7 @@ module NamesManager
   map 'Brandon Keepers',            'brandon', "brandon\100opensoul.org"
   map 'Brian Donovan',              'eventualbuddha', "devslashnull\100gmail.com"
   map 'Bruce Williams',             "wbruce\100gmail.com"
-  map 'Caio Chassot',               'caio'
+  map 'Caio Chassot',               'caio', "k\100v2studio.com"
   map 'Caleb Tennis',               "caleb\100aei-tech.com"
   map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
   map 'Cheah Chu Yeow',             'Chu Yeow', 'chuyeow'
