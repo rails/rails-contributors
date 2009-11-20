@@ -135,6 +135,7 @@ module NamesManager
   map 'Jason Frey',                'Jason Frey (Fryguy)'
   map 'Javier Ramírez',            'jramirez'
   map 'Jay Pignata',               'Developer' # see 179b451
+  map 'Jeff Berg',                 "jeff\100ministrycentered.com"
   map 'Jeffrey Hardy',             'packagethief'
   map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans'
   map 'Jeremy Kemper',              'bitsweat'
