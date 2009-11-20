@@ -145,6 +145,7 @@ module NamesManager
   map 'Jeremy Voorhis',             "jeremy\100planetargon.com"
   map 'Jerrett Taylor',             "jerrett\100bravenet.com"
   map 'Jim Hughes',                 'jeem'
+  map 'Joe Goldwasser',             "joe\100mjg2.com"
   map 'Joerg Diekmann',             "joergd\100pobox.com"
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
   map 'John Barnette',              'jbarnette'
