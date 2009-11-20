@@ -109,6 +109,7 @@ module NamesManager
   map 'Eloy Duran',                'alloy'
   map 'Emilio Tagua',              'miloops'
   map 'Ernesto Jimenez',           'ernesto.jimenez'
+  map 'Esad Hajdarevic',           "esad\100esse.at"
   map 'Evan Weaver',               'evan'
   map 'François Beausoleil',       'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frederick Cheung',          'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
