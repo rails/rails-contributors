@@ -142,6 +142,7 @@ module NamesManager
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
   map 'Jeremy Voorhis',             "jeremy\100planetargon.com"
+  map 'Jerrett Taylor',             "jerrett\100bravenet.com"
   map 'Jim Hughes',                 'jeem'
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
   map 'John Barnette',              'jbarnette'
