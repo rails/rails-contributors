@@ -397,6 +397,9 @@ module NamesManager
         'Dave Thomas'
       when 'Aredridel/earlier work by Michael Neumann'
         ['Aredridel', 'Michael Neumann']
+      when "BertG, nick+rails\100ag.arizona.edu"
+        # the plus sign is considered to be a connector
+        ['BertG', "nick+rails\100ag.arizona.edu"]
       when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
         # Spotted by Kevin Bullock
         # Suggested by Carl Youngblood
