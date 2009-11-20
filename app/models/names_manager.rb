@@ -102,6 +102,7 @@ module NamesManager
   map 'Dr Nic',                    'drnic'
   map 'Duane Johnson',             "duane.johnson\100gmail.com"
   map 'Duncan Beevers',            'duncanbeevers'
+  map 'Duncan Robertson',          "duncan\100whomwah.com"
   map 'Elan Feingold',             "elan\100bluemandrill.com"
   map 'Elijah Miller',             "elijah.miller\100gmail.com", 'jqr'
   map 'Elliot Smith',              "elliot\100townx.org"
