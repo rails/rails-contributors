@@ -85,6 +85,7 @@ module NamesManager
   map 'Dan Croak',                 'dancroak'
   map 'Dan Kubb',                  'dkubb'
   map 'Dan Manges',                'dcmanges'
+  map 'Dan Peterson',              "dpiddy\100gmail.com"
   map 'Daniel Morrison',           'danielmorrison'
   map 'Daniel Rodríguez Troitiño', 'drodriguez'
   map 'Dave Lee',                  "dave\100cherryville.org"
