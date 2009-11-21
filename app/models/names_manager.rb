@@ -84,6 +84,7 @@ module NamesManager
   map 'Assaf Arkin',                "assaf.arkin\100gmail.com"
   map 'August Zajonc',              "augustz\100augustz.com"
   map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
+  map 'Ben Bangert',                "ben\100groovie.org"
   map 'Ben Sandofsky',              'sandofsky'
   map 'Ben Scofield',               'bscofield'
   map 'Ben Sinclair',               "ben\100bensinclair.com"
