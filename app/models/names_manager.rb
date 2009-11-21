@@ -62,6 +62,7 @@ module NamesManager
   map 'Akira Matsuda',              '松田 明'
   map 'alancfrancis',               "alancfrancis\100gmail.com"
   map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com"
+  map 'Alexander Borovsky',         "alex.borovsky\100gmail.com"
   map 'Alexander Dymo',             'adymo'
   map 'Alexander Staubo',           "alex\100purefiction.net"
   map 'Alexey Zatsepin',            'alexey'
