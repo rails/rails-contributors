@@ -115,6 +115,7 @@ module NamesManager
   map 'Chris Mear',                 "chris\100feedmechocolate.com", 'chrismear'
   map "Chris O'Sullivan",           'thechrisoshow'
   map 'Chris Roos',                 'chrisroos'
+  map 'Chris Wanstrath',            "chris\100ozmm.org"
   map 'Coda Hale',                  'codahale'
   map 'Cody Fauser',                "codyfauser\100gmail.com"
   map 'Courtenay Gasking',          'court3nay', 'courtenay', "court3nay\100gmail.com"
