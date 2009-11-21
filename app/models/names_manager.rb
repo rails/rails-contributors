@@ -86,6 +86,7 @@ module NamesManager
   map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
   map 'Ben Sandofsky',              'sandofsky'
   map 'Ben Scofield',               'bscofield'
+  map 'Ben Sinclair',               "ben\100bensinclair.com"
   map 'Benjamin Curtis',            "rails\100bencurtis.com"
   map 'Blaine Cook',                'Blaine', 'blaine', "blaine\100odeo.com"
   map 'Blair Zajac',                "blair\100orcaware.com"
