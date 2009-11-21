@@ -137,6 +137,7 @@ module NamesManager
   map 'Jay Pignata',                'Developer' # see 179b451
   map 'Jean-Philippe Bougie',       "jp.bougie\100gmail.com"
   map 'Jeff Berg',                  "jeff\100ministrycentered.com"
+  map 'Jeff Cole',                  "rails\100jeffcole.net"
   map 'Jeffrey Hardy',              'packagethief'
   map 'Jeremy Durham',              "jeremydurham\100gmail.com"
   map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans', "jeremye\100bsa.ca.gov", "code\100jeremyevans.net"
