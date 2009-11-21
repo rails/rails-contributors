@@ -399,7 +399,7 @@ module NamesManager
         ['Aredridel', 'Michael Neumann']
       when /nick\+rails\100ag\.arizona\.edu/
         # the plus sign is taken to be a connector below, catch this known address
-        name.split(/\s*,\s*/)
+        name.split(/\s*,\s*/).map(&:strip)
       when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
         # Spotted by Kevin Bullock
         # Suggested by Carl Youngblood
