@@ -16,6 +16,7 @@ module NamesManager
     edward.frederick\100revolution.com
     ehalvorsen+rails\100runbox.com
     eli.gordon\100gmail.com
+    eugenol\100gmail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
