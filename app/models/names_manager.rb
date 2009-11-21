@@ -217,6 +217,7 @@ module NamesManager
   map 'Matt Aimonetti',             'matt'
   map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
   map 'Matt Margolis',              "matt\100mattmargolis.net"
+  map 'Matt Mower',                 "self\100mattmower.com"
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
   map 'Michael Galero',             'mikong'
