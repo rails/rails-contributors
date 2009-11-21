@@ -214,6 +214,7 @@ module NamesManager
   map 'Mark Van Holstyn',           'lotswholetime'
   map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
   map 'Mathieu Arnold',             "mat\100absolight.fr"
+  map 'Mathieu Jobin',              "somekool\100gmail.com"
   map 'Matt Aimonetti',             'matt'
   map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
   map 'Matt Margolis',              "matt\100mattmargolis.net"
