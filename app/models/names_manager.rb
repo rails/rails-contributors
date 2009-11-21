@@ -64,7 +64,7 @@ module NamesManager
   map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com"
   map 'Alexander Borovsky',         "alex.borovsky\100gmail.com"
   map 'Alexander Dymo',             'adymo'
-  map 'Alexander Staubo',           "alex\100purefiction.net"
+  map 'Alexander Staubo',           "alex\100purefiction.net", "alex\100byzantine.no"
   map 'Alexey Zatsepin',            'alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
   map 'Andrew Kaspick',             "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
