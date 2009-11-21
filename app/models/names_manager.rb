@@ -233,6 +233,7 @@ module NamesManager
   map 'Peter Michaux',              "petermichaux\100gmail.com"
   map 'Philip Hallstrom',           'phallstrom'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
+  map 'Raphael Bauduin',            "raphinou\100yahoo.com"
   map 'Rick Bradley',               "rick\100rickbradley.com"
   map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
   map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
