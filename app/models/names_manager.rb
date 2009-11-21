@@ -8,6 +8,7 @@ module NamesManager
     imbcmdth\100hotmail.com
     jhahn\100niveon.com
     nick+rails\100ag.arizona.edu
+    takiuchi\100drecom.co.jp
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
