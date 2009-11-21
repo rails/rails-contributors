@@ -397,8 +397,11 @@ module NamesManager
         'Dave Thomas'
       when 'Aredridel/earlier work by Michael Neumann'
         ['Aredridel', 'Michael Neumann']
-      when /nick\+rails\100ag\.arizona\.edu/
-        # the plus sign is taken to be a connector below, catch this known address
+      when /\b\w+\+\w+@/
+        # The plus sign is taken to be a connector below, this catches some known
+        # addresses that use a plus sign in the username, see unit tests for examples.
+        # We know there's no case where the plus sign acts as well as a connector in
+        # the same string.
         name.split(/\s*,\s*/).map(&:strip)
       when /\A(Spotted|Suggested|Investigation|earlier work|Aggregated)\s+by\s+(.*)/i
         # Spotted by Kevin Bullock
