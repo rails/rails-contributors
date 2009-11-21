@@ -150,6 +150,7 @@ module NamesManager
   map 'Dee Zsombor',                'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
   map 'Deirdre Saoirse',            "deirdre\100deirdre.net"
   map 'DeLynn Berry',               'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
+  map 'Derrick Spell',              "derrickspell\100cdmplus.com"
   map 'Don Park',                   "don.park\100gmail.com"
   map 'Dr Nic',                     'drnic'
   map 'Duane Johnson',              "duane.johnson\100gmail.com"
