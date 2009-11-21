@@ -136,13 +136,13 @@ module NamesManager
   map 'Daniel Rodríguez Troitiño',  'drodriguez'
   map 'Daniel Sheppard',            "daniels\100pronto.com.au"
   map 'Daniel Wanja',               "daniel\100nouvelles-solutions.com"
+  map 'Dave Dribin',                "dave-ml\100dribin.org"
   map 'Dave Lee',                   "dave\100cherryville.org"
   map 'Dave Thomas',                "dave\100pragprog.com", 'pragdave'
   map 'David A. Black',             'dblack'
   map 'David Calavera',             'calavera', 'david.calavera'
   map 'David Dollar',               'ddollar'
   map 'David Felstead',             "david.felstead\100gmail.com"
-  map 'Dave Dribin',                "dave-ml\100dribin.org"
   map 'David Heinemeier Hansson',   'DHH'
   map 'David Morton',               "mortonda\100dgrmm.net"
   map 'David Rose',                 "doppler\100gmail.com"
