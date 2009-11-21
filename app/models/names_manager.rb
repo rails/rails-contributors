@@ -175,6 +175,7 @@ module NamesManager
   map 'Emilio Tagua',               'miloops'
   map 'Eric Daspet',                "eric.daspet\100survol.net"
   map 'Eric Hodel',                 "drbrain\100segment7.net"
+  map 'Erik Abele',                 "erik\100codefaktor.de"
   map 'Ernesto Jimenez',            'ernesto.jimenez'
   map 'Esad Hajdarevic',            "esad\100esse.at"
   map 'Evan Weaver',                'evan'
