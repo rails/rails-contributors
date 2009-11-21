@@ -139,7 +139,7 @@ module NamesManager
   map 'Dave Dribin',                "dave-ml\100dribin.org"
   map 'Dave Lee',                   "dave\100cherryville.org"
   map 'Dave Thomas',                "dave\100pragprog.com", 'pragdave'
-  map 'David A. Black',             'dblack'
+  map 'David A. Black',             'dblack', "dblack\100wobblini.net"
   map 'David Calavera',             'calavera', 'david.calavera'
   map 'David Dollar',               'ddollar'
   map 'David Felstead',             "david.felstead\100gmail.com"
