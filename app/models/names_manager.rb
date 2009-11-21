@@ -163,6 +163,7 @@ module NamesManager
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Garside',              'ggarside'
   map 'Grant Hollingworth',         "grant\100antiflux.org"
+  map 'Grzegorz Daniluk',           "daniluk\100yahoo.com"
   map 'Guy Naor',                   "guy.naor\100famundo.com"
   map 'Hampton Catlin',             "hcatlin\100gmail.com"
   map 'Henrik Nyh',                 'Henrik N', "henrik\100nyh.se", 'henrik'
