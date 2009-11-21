@@ -141,6 +141,7 @@ module NamesManager
   map 'David A. Black',             'dblack'
   map 'David Calavera',             'calavera', 'david.calavera'
   map 'David Dollar',               'ddollar'
+  map 'David Felstead',             "david.felstead\100gmail.com"
   map 'Dave Dribin',                "dave-ml\100dribin.org"
   map 'David Heinemeier Hansson',   'DHH'
   map 'David Morton',               "mortonda\100dgrmm.net"
