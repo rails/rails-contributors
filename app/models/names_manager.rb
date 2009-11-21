@@ -10,7 +10,6 @@ module NamesManager
     nick+rails\100ag.arizona.edu
     alec+rails\100veryclever.net
     alex.r.moon\100gmail.com
-    altano\100bigfoot.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
@@ -18,6 +17,7 @@ module NamesManager
     rails\100cogentdude.com
     rubyonrails\100atyp.de
     takiuchi\100drecom.co.jp
+    altano\100bigfoot.com
   )
 
   # Returns a set with all (canonical) contributor names known by the application.
