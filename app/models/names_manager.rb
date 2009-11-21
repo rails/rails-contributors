@@ -73,7 +73,7 @@ module NamesManager
   map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com"
   map 'Alex Wolfe',                 "alexkwolfe\100gmail.com"
   map 'Alexander Borovsky',         "alex.borovsky\100gmail.com"
-  map 'Alexander Dymo',             'adymo'
+  map 'Alexander Dymo',             'adymo', "dymo\100mk.ukrtelecom.ua"
   map 'Alexander Staubo',           "alex\100purefiction.net", "alex\100byzantine.no"
   map 'Alexey Zatsepin',            'alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
