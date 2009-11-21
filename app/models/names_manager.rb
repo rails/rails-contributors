@@ -245,6 +245,7 @@ module NamesManager
   map 'Rob Sanheim',                'rsanheim', "rsanheim\100gmail.com", "rob\100thinkrelevance.com"
   map 'Robby Russell',              'robbyrussell'
   map 'Roderick van Domburg',       'roderickvd'
+  map 'Rodney Ramdas',              "rramdas\100gmail.com"
   map 'Ross Kaffenberger',          'Ross Kaffenburger'
   map 'Russell Norris',             'RSL'
   map 'Ruy Asan',                   'rubyruy'
