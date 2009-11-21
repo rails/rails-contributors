@@ -210,6 +210,7 @@ module NamesManager
   map 'Jonathan del Strother',      'Catfish', 'catfish'
   map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"
   map 'Jonathan Weiss',             'jweiss'
+  map 'John Sheets',                "dev\100metacasa.net"
   map 'Jordi Bunster',              'jordi'
   map 'José Valim',                 'josevalim'
   map 'Josh Goebel',                'Dreamer3', "dreamer3\100gmail.com"
