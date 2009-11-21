@@ -61,7 +61,7 @@ module NamesManager
   map 'Blair Zajac',                "blair\100orcaware.com"
   map 'Brad Ediger',                "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
   map 'Brad Ellis',                 "bellis\100deepthought.org"
-  map 'Bob Silva',                  'BobSilva'
+  map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
   map 'Brad Greenlee',              'bgreenlee'
   map 'Brandon Keepers',            'brandon', "brandon\100opensoul.org"
   map 'Brian Donovan',              'eventualbuddha', "devslashnull\100gmail.com"
