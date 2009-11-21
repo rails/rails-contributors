@@ -218,6 +218,7 @@ module NamesManager
   map 'Murray Steele',              'h-lame'
   map 'Nathan Weizenbaum',          'Nex3'
   map 'Nicholas Seckar',            'Ulysses'
+  map 'Nick Kallen',                'nkallen'
   map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
   map 'Nik Wakelin',                'nik.wakelin'
   map 'Nikolay Petrachkov',         'jastix'
