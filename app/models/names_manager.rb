@@ -9,6 +9,7 @@ module NamesManager
     jhahn\100niveon.com
     nick+rails\100ag.arizona.edu
     alec+rails\100veryclever.net
+    alex.r.moon\100gmail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
