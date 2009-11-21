@@ -132,6 +132,7 @@ module NamesManager
   map 'Daniel Hobe',                "daniel\100nightrunner.com"
   map 'Daniel Morrison',            'danielmorrison'
   map 'Daniel Rodríguez Troitiño',  'drodriguez'
+  map 'Daniel Sheppard',            "daniels\100pronto.com.au"
   map 'Daniel Wanja',               "daniel\100nouvelles-solutions.com"
   map 'Dave Lee',                   "dave\100cherryville.org"
   map 'Dave Thomas',                "dave\100pragprog.com", 'pragdave'
