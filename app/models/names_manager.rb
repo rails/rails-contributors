@@ -281,6 +281,7 @@ module NamesManager
   map 'Sebastian Kanthak',          "sebastian.kanthak\100muehlheim.de", 'sebastian.kanthak', 'skanthak'
   map 'Seth Rasmussen',             'loincloth'
   map 'Shugo Maeda',                'shugo', "shugo\100ruby-lang.org"
+  map 'Simon Harris',               "simon\100redhillconsulting.com.au"
   map 'Simon Moore',                'saimonmoore'
   map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
   map 'Stefan Kaes',                "skaes\100web.de", 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'
