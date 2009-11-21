@@ -242,6 +242,7 @@ module NamesManager
   map 'Justin French',              'justinfrench'
   map 'Kamal Fariz Mahyuddin',      'kamal'
   map 'Karel Miarka',               "kajism\100yahoo.com"
+  map 'Kaspar Schiess',             "eule\100space.ch"
   map 'Kazuhiko',                   "kazuhiko\100fdiary.net"
   map 'Kazuhiro Yoshdia',           "moriq\100moriq.com"
   map 'Keith Morrison',             "keithm\100infused.org"
