@@ -13,6 +13,7 @@ module NamesManager
     david.a.williams\100gmail.com
     dweitzman\100gmail.com
     dwlt\100dwlt.net
+    edward.frederick\100revolution.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
