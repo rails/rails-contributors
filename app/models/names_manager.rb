@@ -1,6 +1,20 @@
 require 'set'
 
 module NamesManager
+  # I've sent an email to these email addresses, and there's no response
+  # so far.
+  WAITING_FOR = %W(
+    agkr\100pobox.com
+    imbcmdth\100hotmail.com
+    jhahn\100niveon.com
+    nick+rails\100ag.arizona.edu
+  )
+
+  # I've sent an email to these addresses, and got some sort of error back.
+  UNREACHABLE_ADDRESSES = %W(
+    rails\100cogentdude.com
+    rubyonrails\100atyp.de
+  )
 
   # Returns a set with all (canonical) contributor names known by the application.
   def self.all_names
