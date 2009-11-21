@@ -155,6 +155,7 @@ module NamesManager
   map 'Don Park',                   "don.park\100gmail.com"
   map 'Dr Nic',                     'drnic'
   map 'Duane Johnson',              "duane.johnson\100gmail.com"
+  map 'Duff OMelia',                "dj\100omelia.org"
   map 'Duncan Beevers',             'duncanbeevers'
   map 'Duncan Robertson',           "duncan\100whomwah.com"
   map 'Elan Feingold',              "elan\100bluemandrill.com"
