@@ -249,6 +249,7 @@ module NamesManager
   map 'pburleson',                  "pburleson\100gmail.com"
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
   map 'Peter Michaux',              "petermichaux\100gmail.com"
+  map 'Phil Hagelberg',             "technomancy\100gmail.com"
   map 'Philip Hallstrom',           'phallstrom'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
