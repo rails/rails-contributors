@@ -91,6 +91,7 @@ module NamesManager
   map 'Benjamin Curtis',            "rails\100bencurtis.com"
   map 'Blaine Cook',                'Blaine', 'blaine', "blaine\100odeo.com"
   map 'Blair Zajac',                "blair\100orcaware.com"
+  map 'Blake Watters',              "blake\100near-time.com"
   map 'Brad Ediger',                "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
   map 'Brad Ellis',                 "bellis\100deepthought.org"
   map 'Brian Gernhardt',            "benji\100silverinsanity.com"
