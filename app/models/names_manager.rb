@@ -61,6 +61,7 @@ module NamesManager
   map 'Adelle Hartley',             "adelle\100bullet.net.au"
   map 'Akira Matsuda',              '松田 明'
   map 'alancfrancis',               "alancfrancis\100gmail.com"
+  map 'Alex Pooley',                "alex\100msgpad.com"
   map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com"
   map 'Alexander Borovsky',         "alex.borovsky\100gmail.com"
   map 'Alexander Dymo',             'adymo'
