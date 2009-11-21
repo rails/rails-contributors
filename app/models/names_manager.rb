@@ -182,6 +182,7 @@ module NamesManager
   map 'Esad Hajdarevic',            "esad\100esse.at"
   map 'Evan Henshaw-Plath',         "evan\100protest.net"
   map 'Evan Weaver',                'evan'
+  map 'Evgeny Zislis',              "evgeny.zislis\100gmail.com"
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
   map 'Gabe da Silveira',           'dasil003'
