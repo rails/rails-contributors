@@ -79,6 +79,7 @@ module NamesManager
   map 'Anthony Eden',               'aeden'
   map 'Anup Narkhede',              'railsbob'
   map 'Arthur Zapparoli',           'arthurgeek'
+  map 'Ask Bjørn Hansen',           "ask\100develooper.com"
   map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
   map 'Ben Sandofsky',              'sandofsky'
   map 'Ben Scofield',               'bscofield'
