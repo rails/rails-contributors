@@ -180,6 +180,7 @@ module NamesManager
   map 'Erik Terpstra',              "erik\100ruby-lang.nl"
   map 'Ernesto Jimenez',            'ernesto.jimenez'
   map 'Esad Hajdarevic',            "esad\100esse.at"
+  map 'Evan Henshaw-Plath',         "evan\100protest.net"
   map 'Evan Weaver',                'evan'
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
