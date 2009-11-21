@@ -230,6 +230,7 @@ module NamesManager
   map 'Matt Mower',                 "self\100mattmower.com"
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
+  map 'Micah Alles',                "alles\100atomicobject.com"
   map 'Michael Galero',             'mikong'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
   map 'Michael Koziarski',          'Koz', 'nzkoz'
