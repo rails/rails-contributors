@@ -229,6 +229,7 @@ module NamesManager
   map 'Michael Schoen',             'Michael A. Schoen', "schoenm\100earthlink.net"
   map 'Michael Schubert',           "michael\100schubert", "michael\100schubert.cx"
   map 'Michael Schuerig',           "michael\100schuerig.de", 'Michael Shuerig'
+  map 'Michal Šafránek',            "wejn\100box.cz"
   map 'Mike Clark',                 "mike\100clarkware.com"
   map 'Mike Gunderloy',             'Michael Gunderloy'
   map 'Mike Laster',                "mlaster\100metavillage.com"
@@ -317,6 +318,7 @@ module NamesManager
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
   map 'Wesley Moxam',               'wmoxam'
   map 'Will Bryant',                'will.bryant'
+  map 'Wilson Bilkovich',           "wilsonb\100gmail.com"
   map 'Xavier Noria',               'fxn'
   map 'Xavier Shay',                'xaviershay'
   map 'Yehuda Katz',                'wycats'
