@@ -19,6 +19,7 @@ module NamesManager
     takiuchi\100drecom.co.jp
     altano\100bigfoot.com
     asnem\100student.ethz.ch
+    damn_pepe\100gmail.com
   )
 
   # Returns a set with all (canonical) contributor names known by the application.
