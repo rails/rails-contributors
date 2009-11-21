@@ -71,6 +71,7 @@ module NamesManager
   map 'Alexander Staubo',           "alex\100purefiction.net", "alex\100byzantine.no"
   map 'Alexey Zatsepin',            'alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
+  map 'Andrew A. Smith',            "andy\100tinnedfruit.org"
   map 'Andrew Kaspick',             "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
   map 'Andrew Peters',              "andrew.john.peters\100gmail.com"
   map 'Andrew White',               'pixeltrix'
