@@ -148,6 +148,7 @@ module NamesManager
   map 'David Rose',                 "doppler\100gmail.com"
   map 'David Rupp',                 "david\100ruppconsulting.com"
   map 'Dee Zsombor',                'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
+  map 'Deirdre Saoirse',            "deirdre\100deirdre.net"
   map 'DeLynn Berry',               'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
   map 'Don Park',                   "don.park\100gmail.com"
   map 'Dr Nic',                     'drnic'
