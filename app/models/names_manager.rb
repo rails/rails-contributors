@@ -165,6 +165,7 @@ module NamesManager
   map 'Elliot Smith',               "elliot\100townx.org"
   map 'Eloy Duran',                 'alloy'
   map 'Emilio Tagua',               'miloops'
+  map 'Eric Hodel',                 "drbrain\100segment7.net"
   map 'Ernesto Jimenez',            'ernesto.jimenez'
   map 'Esad Hajdarevic',            "esad\100esse.at"
   map 'Evan Weaver',                'evan'
