@@ -163,6 +163,7 @@ module NamesManager
   map 'Duff OMelia',                "dj\100omelia.org"
   map 'Duncan Beevers',             'duncanbeevers'
   map 'Duncan Robertson',           "duncan\100whomwah.com"
+  map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
   map 'Elan Feingold',              "elan\100bluemandrill.com"
   map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
   map 'Elliot Smith',               "elliot\100townx.org"
