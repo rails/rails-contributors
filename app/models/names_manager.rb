@@ -18,6 +18,7 @@ module NamesManager
     rubyonrails\100atyp.de
     takiuchi\100drecom.co.jp
     altano\100bigfoot.com
+    asnem\100student.ethz.ch
   )
 
   # Returns a set with all (canonical) contributor names known by the application.
