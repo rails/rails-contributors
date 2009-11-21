@@ -168,6 +168,7 @@ module NamesManager
   map 'John Barnette',              'jbarnette'
   map 'Jon Bright',                 "jon\100siliconcircus.com"
   map 'Jon Wood',                   "jon\100instance-design.co.uk"
+  map 'Jonathan Leighton',          "turnip\100turnipspatch.com"
   map 'Jonathan del Strother',      'Catfish', 'catfish'
   map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"
   map 'Jonathan Weiss',             'jweiss'
