@@ -57,6 +57,7 @@ module NamesManager
   map 'Adam Kramer',                "adam\100the-kramers.net"
   map 'Adam Majer',                 "adamm\100galacticasoftware.com"
   map 'Adam Milligan',              'pivotal'
+  map 'Adelle Hartley',             "adelle\100bullet.net.au"
   map 'Akira Matsuda',              '松田 明'
   map 'alancfrancis',               "alancfrancis\100gmail.com"
   map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com"
