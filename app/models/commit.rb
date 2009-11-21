@@ -110,7 +110,7 @@ protected
     return [] if only_modifies_changelogs?
     names = extract_changelog.split("\n").map do |line|
       extract_contributor_names_from_text(line)
-    end.flatten  
+    end.flatten
     names = sanitize(names)
     handle_special_cases(names)
   end
