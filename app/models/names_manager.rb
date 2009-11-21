@@ -143,7 +143,7 @@ module NamesManager
   map 'David A. Black',             'dblack', "dblack\100wobblini.net"
   map 'David Calavera',             'calavera', 'david.calavera'
   map 'David Dollar',               'ddollar'
-  map 'David Felstead',             "david.felstead\100gmail.com"
+  map 'David Felstead',             "david.felstead\100gmail.com", "dfelstead\100site5.com"
   map 'David Heinemeier Hansson',   'DHH'
   map 'David Morton',               "mortonda\100dgrmm.net"
   map 'David Rose',                 "doppler\100gmail.com"
