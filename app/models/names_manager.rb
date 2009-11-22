@@ -255,6 +255,7 @@ module NamesManager
   map 'Jon Bright',                 "jon\100siliconcircus.com"
   map 'Jon Evans',                  "jon.evans\100pobox.com"
   map 'Jon Moses',                  "jon\100burningbush.us"
+  map 'Jon Olson',                  "jsolson\100damogran.org"
   map 'Jon Wood',                   "jon\100instance-design.co.uk", "jon\100blankpad.net"
   map 'Jonathan Leighton',          "turnip\100turnipspatch.com"
   map 'Jonathan del Strother',      'Catfish', 'catfish'
