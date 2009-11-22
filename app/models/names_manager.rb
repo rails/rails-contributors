@@ -268,9 +268,9 @@ module NamesManager
   map 'Ken Miller',                 "kenneth.miller\100bitfield.net"
   map 'Kevin Clark',                "Kevin Clark kevin.clark\100gmail.com", "kevin.clark\100gmail.com", "kevin.clark\100gmal.com"
   map 'Kevin Jackson',              "foamdino\100gmail.com"
-  map 'Kyosuke Morohashi',          'moro'
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de"
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
+  map 'Kyosuke Morohashi',          'moro'
   map 'Lakshan Perera',             'laktek', 'lakshan'
   map 'Lars Pind',                  "lars\100pinds.com", "lars\100pind.com", 'Lars pind', 'lars pind'
   map 'Lawrence Pit',               'lawrence'
