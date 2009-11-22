@@ -67,6 +67,9 @@ module NamesManager
     # but Yehuda told me credit for that commit was screwed up.
     when '882dd4e6054470ee56c46ab1432861952c81b633'
       ['David Calavera']
+    when 'f9a02b12d15bdbd3c2ed18b16b31b712a77027bc'
+      # The attribution is done with parens in a way we do not extract.  
+      ['Juan Lupión']
     else
       nil
     end
