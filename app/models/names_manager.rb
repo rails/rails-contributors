@@ -21,7 +21,6 @@ module NamesManager
     fabien\100odilat.com
     fhanshaw\100vesaria.com
     gaetanot\100comcast.net
-    gensym\100mac.com
     gnuman1\100gmail.com
     hanson\100surgery.wisc.edu
     info\100loobmedia.com
@@ -156,6 +155,7 @@ module NamesManager
   map 'Dave Lee',                   "dave\100cherryville.org"
   map 'Dave Thomas',                "dave\100pragprog.com", 'pragdave'
   map 'David A. Black',             'dblack', "dblack\100wobblini.net"
+  map 'David Altenburg',            "gensym\100mac.com"
   map 'David Calavera',             'calavera', 'david.calavera'
   map 'David Dollar',               'ddollar'
   map 'David Easley',               "easleydp\100gmail.com"
