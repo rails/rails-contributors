@@ -203,6 +203,7 @@ module NamesManager
   map 'Grzegorz Daniluk',           "daniluk\100yahoo.com"
   map 'Guy Naor',                   "guy.naor\100famundo.com"
   map 'Hampton Catlin',             "hcatlin\100gmail.com"
+  map 'Hendrik Mans',               "hendrik\100mans.de"
   map 'Henrik Nyh',                 'Henrik N', "henrik\100nyh.se", 'henrik'
   map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
   map 'Ian White',                  "ian.w.white\100gmail.com"
