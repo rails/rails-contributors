@@ -26,6 +26,7 @@ module NamesManager
     james\100slashetc.com
     jan\100ulbrich-boerwang.de
     jonrailsdev\100shumi.org
+    junk\100miriamtech.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
