@@ -437,6 +437,7 @@ module NamesManager
   map 'Tom Fakes',                  "tom\100craz8.com"
   map 'Tom Moertel',                "tom\100moertel.com"
   map 'Tom Mornini',                "tmornini\100infomania.com"
+  map 'Tom Preston-Werner',         'mojombo'
   map 'Tom Ward',                   'Tom ward', 'tomafro', "tom\100popdog.net"
   map 'Trevor Squire',              'protocool'
   map 'Tyler Kiley',                "tyler\100kianta.com"
