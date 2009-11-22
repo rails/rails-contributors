@@ -291,6 +291,7 @@ module NamesManager
   map 'Kaspar Schiess',             "eule\100space.ch"
   map 'Kazuhiko',                   "kazuhiko\100fdiary.net"
   map 'Kazuhiro Yoshdia',           "moriq\100moriq.com"
+  map 'Keegan Quinn',               "keegan\100thebasement.org"
   map 'Keith Morrison',             "keithm\100infused.org"
   map 'Ken Barker',                 "ken.barker\100gmail.com"
   map 'Ken Kunz',                   "kennethkunz\100gmail.com"
