@@ -215,8 +215,10 @@ module NamesManager
   map 'Jakob Skjerning',            'Jakob S', "jakob\100mentalized.net"
   map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
   map 'James Adam',                 'lazyatom', "james.adam\100gmail.com"
+  map 'James Edward Gray II',       "james\100grayproductions.net"
   map 'James Mead',                 'floehopper'
   map 'Jamie Macey',                "jamie\100bravenet.com"
+  map 'Jamie Orchard-Hays',         "jamie\100dang.com"
   map 'Jamie van Dyke',             'fearoffish'
   map 'Jan De Poorter',             'DefV'
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
