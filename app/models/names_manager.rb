@@ -23,6 +23,7 @@ module NamesManager
     gnuman1\100gmail.com
     hanson\100surgery.wisc.edu
     info\100loobmedia.com
+    james\100slashetc.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
