@@ -13,7 +13,6 @@ module NamesManager
     david.a.williams\100gmail.com
     dwlt\100dwlt.net
     edward.frederick\100revolution.com
-    ehalvorsen+rails\100runbox.com
     eli.gordon\100gmail.com
     eugenol\100gmail.com
     fabien\100odilat.com
