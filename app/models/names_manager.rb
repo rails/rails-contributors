@@ -210,6 +210,7 @@ module NamesManager
   map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
   map 'Ian White',                  "ian.w.white\100gmail.com"
   map 'Isaac Feliu',                'isaacfeliu'
+  map 'Isaac Reuben',               "isaac\100reuben.com"
   map 'Jack Danger Canty',          'danger', 'Danger'
   map 'Jakob Skjerning',            'Jakob S', "jakob\100mentalized.net"
   map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
