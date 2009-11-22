@@ -226,6 +226,7 @@ module NamesManager
   map 'Jan Prill',                  "JanPrill\100blauton.de"
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
   map 'Javier Ramírez',             'jramirez'
+  map 'Jay Levitt',                 "jay\100jay.fm"
   map 'Jay Pignata',                'Developer' # see 179b451
   map 'Jean-Philippe Bougie',       "jp.bougie\100gmail.com"
   map 'Jeff Berg',                  "jeff\100ministrycentered.com"
