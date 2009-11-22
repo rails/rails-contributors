@@ -27,6 +27,7 @@ module NamesManager
     jan\100ulbrich-boerwang.de
     jonrailsdev\100shumi.org
     junk\100miriamtech.com
+    justin\100textdrive.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
