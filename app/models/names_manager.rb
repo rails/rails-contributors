@@ -250,13 +250,13 @@ module NamesManager
   map 'Joerg Diekmann',             "joergd\100pobox.com"
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen', "johan\100johansorensen.com"
   map 'John Barnette',              'jbarnette'
+  map 'John Sheets',                "dev\100metacasa.net"
   map 'Jon Bright',                 "jon\100siliconcircus.com"
   map 'Jon Wood',                   "jon\100instance-design.co.uk"
   map 'Jonathan Leighton',          "turnip\100turnipspatch.com"
   map 'Jonathan del Strother',      'Catfish', 'catfish'
   map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"
   map 'Jonathan Weiss',             'jweiss'
-  map 'John Sheets',                "dev\100metacasa.net"
   map 'Jordan McKible',             "jmckible\100gmail.com"
   map 'Jordi Bunster',              'jordi'
   map 'José Valim',                 'josevalim'
