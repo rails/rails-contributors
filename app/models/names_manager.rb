@@ -313,6 +313,7 @@ module NamesManager
   map 'Laurel Fan',                 "laurel\100gorgorg.org"
   map 'Lawrence Pit',               'lawrence'
   map 'Lee Marlow',                 'lmarlow', "lmarlow\100yahoo.com"
+  map "Lee O'Mara",                 "lee\100omara.ca"
   map 'Leon Breedt',                'Leon Bredt'
   map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
   map 'Lon Baker',                  "lon\100speedymac.com"
