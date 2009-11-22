@@ -24,6 +24,7 @@ module NamesManager
     gensym\100mac.com
     gnuman1\100gmail.com
     hakuja\100hakuja.net
+    hanson\100surgery.wisc.edu
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
