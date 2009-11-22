@@ -273,6 +273,7 @@ module NamesManager
   map 'Lawrence Pit',               'lawrence'
   map 'Lee Marlow',                 'lmarlow', "lmarlow\100yahoo.com"
   map 'Leon Breedt',                'Leon Bredt'
+  map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
   map 'Lon Baker',                  "lon\100speedymac.com"
   map 'Luca Guidi',                 'l.guidi'
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
