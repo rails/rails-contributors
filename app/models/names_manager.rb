@@ -235,6 +235,7 @@ module NamesManager
   map 'Jan De Poorter',             'DefV'
   map 'Jan Prill',                  "JanPrill\100blauton.de"
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
+  map 'Jason Stewart',              'jstewart'
   map 'Jason Stirk',                "jstirk\100oobleyboo.com"
   map 'Javier Ramírez',             'jramirez'
   map 'Jay Levitt',                 "jay\100jay.fm"
