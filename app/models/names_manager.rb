@@ -20,6 +20,7 @@ module NamesManager
     f.svehla\100gmail.com
     fabien\100odilat.com
     fhanshaw\100vesaria.com
+    gaetanot\100comcast.net
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
