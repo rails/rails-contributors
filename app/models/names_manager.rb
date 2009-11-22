@@ -279,6 +279,7 @@ module NamesManager
   map 'Julian Doherty',             'madlep'
   map 'Julian Tarkhanov',           "me\100julik.nl", 'julik'
   map 'Justin French',              'justinfrench'
+  map 'Justin Mecham',              "justin\100aspect.net"
   map 'Kamal Fariz Mahyuddin',      'kamal'
   map 'Karel Miarka',               "kajism\100yahoo.com"
   map 'Kaspar Schiess',             "eule\100space.ch"
