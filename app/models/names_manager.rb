@@ -245,6 +245,7 @@ module NamesManager
   map 'Jerrett Taylor',             "jerrett\100bravenet.com"
   map 'Jesse Merriman',             "jessemerriman\100warpmail.net"
   map 'Jim Hughes',                 'jeem'
+  map 'Jim Winstead',               "jimw\100mysql.com"
   map 'Joe Goldwasser',             "joe\100mjg2.com"
   map 'Joerg Diekmann',             "joergd\100pobox.com"
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen'
