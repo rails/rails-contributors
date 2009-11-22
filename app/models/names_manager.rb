@@ -298,6 +298,7 @@ module NamesManager
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
   map 'Kyosuke Morohashi',          'moro'
   map 'Lakshan Perera',             'laktek', 'lakshan'
+  map 'Lars Kanis',                 "kanis\100comcard.de"
   map 'Lars Pind',                  "lars\100pinds.com", "lars\100pind.com", 'Lars pind', 'lars pind'
   map 'Lawrence Pit',               'lawrence'
   map 'Lee Marlow',                 'lmarlow', "lmarlow\100yahoo.com"
