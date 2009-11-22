@@ -223,6 +223,7 @@ module NamesManager
   map 'Jamie Orchard-Hays',         "jamie\100dang.com"
   map 'Jamie van Dyke',             'fearoffish'
   map 'Jan De Poorter',             'DefV'
+  map 'Jan Prill',                  "JanPrill\100blauton.de"
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
   map 'Javier Ramírez',             'jramirez'
   map 'Jay Pignata',                'Developer' # see 179b451
