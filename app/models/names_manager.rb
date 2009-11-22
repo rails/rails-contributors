@@ -24,6 +24,7 @@ module NamesManager
     hanson\100surgery.wisc.edu
     info\100loobmedia.com
     james\100slashetc.com
+    jan\100ulbrich-boerwang.de
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
