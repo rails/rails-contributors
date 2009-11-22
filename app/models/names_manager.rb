@@ -234,6 +234,7 @@ module NamesManager
   map 'Jeff Cohen',                 "cohen.jeff\100gmail.com"
   map 'Jeff Cole',                  "rails\100jeffcole.net"
   map 'Jeffrey Hardy',              'packagethief'
+  map 'Jeffrey Moss',               "jeff\100opendbms.com"
   map 'Jens-Christian Fischer',     "jcfischer\100gmail.com"
   map 'Jeremy Durham',              "jeremydurham\100gmail.com"
   map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans', "jeremye\100bsa.ca.gov", "code\100jeremyevans.net"
