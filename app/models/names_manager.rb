@@ -318,6 +318,7 @@ module NamesManager
   map 'Leon Breedt',                'Leon Bredt'
   map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
   map 'Lon Baker',                  "lon\100speedymac.com"
+  map 'Louis St-Amour',             "LouisStAmour\100gmail.com"
   map 'Luca Guidi',                 'l.guidi'
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
   map 'Luke Redpath',               "contact\100lukeredpath.co.uk"
