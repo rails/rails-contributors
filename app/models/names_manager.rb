@@ -27,6 +27,7 @@ module NamesManager
     junk\100miriamtech.com
     justin\100textdrive.com
     lagroue\100free.fr
+    leroen\100gmail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
