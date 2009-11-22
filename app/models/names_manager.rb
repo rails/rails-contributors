@@ -11,7 +11,6 @@ module NamesManager
     alec+rails\100veryclever.net
     alex.r.moon\100gmail.com
     david.a.williams\100gmail.com
-    dweitzman\100gmail.com
     dwlt\100dwlt.net
     edward.frederick\100revolution.com
     ehalvorsen+rails\100runbox.com
@@ -164,6 +163,7 @@ module NamesManager
   map 'David Morton',               "mortonda\100dgrmm.net"
   map 'David Rose',                 "doppler\100gmail.com"
   map 'David Rupp',                 "david\100ruppconsulting.com"
+  map 'David Weitzman',             "dweitzman\100gmail.com"
   map 'Dee Zsombor',                'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
   map 'Deirdre Saoirse',            "deirdre\100deirdre.net"
   map 'DeLynn Berry',               'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
