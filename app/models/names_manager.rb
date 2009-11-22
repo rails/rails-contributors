@@ -189,6 +189,7 @@ module NamesManager
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
   map 'Gabe da Silveira',           'dasil003'
+  map 'Gaspard Bucher',             "g.bucher\100teti.ch"
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Garside',              'ggarside'
   map 'Grant Hollingworth',         "grant\100antiflux.org"
