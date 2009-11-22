@@ -23,6 +23,7 @@ module NamesManager
     gaetanot\100comcast.net
     gensym\100mac.com
     gnuman1\100gmail.com
+    hakuja\100hakuja.net
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
