@@ -54,6 +54,7 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_equal 'Dave Thomas', NamesManager.handle_special_cases('After much pestering from Dave Thomas')
     assert_equal 'Mislav Marohnić', NamesManager.handle_special_cases('=?utf-8?q?Mislav=20Marohni=C4=87?=')
     assert_equal ['Aredridel', 'Michael Neumann'], NamesManager.handle_special_cases('Aredridel/earlier work by Michael Neumann')
+    assert_equal ["jon\100blankpad.net"], NamesManager.handle_special_cases("jon\100blankpad.net)")
     assert_equal ['BertG', "nick+rails\100ag.arizona.edu"], NamesManager.handle_special_cases("BertG, nick+rails\100ag.arizona.edu")
     assert_equal ["nick+rails@ag.arizona.edu", "Ryan Davis", "Jeremy Kemper"], NamesManager.handle_special_cases("nick+rails\100ag.arizona.edu, Ryan Davis, Jeremy Kemper")
     assert_equal ["ehalvorsen+rails\100runbox.com"], NamesManager.handle_special_cases("ehalvorsen+rails\100runbox.com")
