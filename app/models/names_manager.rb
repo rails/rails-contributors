@@ -257,6 +257,7 @@ module NamesManager
   map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"
   map 'Jonathan Weiss',             'jweiss'
   map 'John Sheets',                "dev\100metacasa.net"
+  map 'Jordan McKible',             "jmckible\100gmail.com"
   map 'Jordi Bunster',              'jordi'
   map 'José Valim',                 'josevalim'
   map 'Joseph A. Martin',           "jmartin\100desertflood.com"
