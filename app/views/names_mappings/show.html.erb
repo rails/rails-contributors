@@ -67,7 +67,8 @@
     <% for name in @names_mapping.keys.sort %>
         <tr class="<%= cycle 'even', 'odd' %>">
           <td class="highlight"><%= h name %></td>
-          <td class="log"><%= h Array(@names_mapping[name]).map {|n| %{"#{n}"}}.to_sentence.gsub("@", "©") %>
+          <%# we render U+FE6B instead of the at sign %>
+          <td class="log"><%= h Array(@names_mapping[name]).map {|n| %{"#{n}"}}.to_sentence.gsub("@", "﹫") %>
         </tr>
     <% end %>
   </table>
