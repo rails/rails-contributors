@@ -252,6 +252,7 @@ module NamesManager
   map 'John Barnette',              'jbarnette'
   map 'John Sheets',                "dev\100metacasa.net"
   map 'Jon Bright',                 "jon\100siliconcircus.com"
+  map 'Jon Evans',                  "jon.evans\100pobox.com"
   map 'Jon Moses',                  "jon\100burningbush.us"
   map 'Jon Wood',                   "jon\100instance-design.co.uk", "jon\100blankpad.net"
   map 'Jonathan Leighton',          "turnip\100turnipspatch.com"
