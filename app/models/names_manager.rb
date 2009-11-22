@@ -22,6 +22,7 @@ module NamesManager
     fhanshaw\100vesaria.com
     gaetanot\100comcast.net
     gensym\100mac.com
+    gnuman1\100gmail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
