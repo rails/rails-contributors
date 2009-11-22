@@ -300,6 +300,7 @@ module NamesManager
   map 'Kevin Jackson',              "foamdino\100gmail.com"
   map 'Kevin Watt',                 "kevin\100writesoon.com"
   map 'Kevin Williams',             "kevwil\100gmail.com"
+  map 'Kim Shrier',                 "kim\100tinker.com"
   map 'Koichi Tsutsumi',            "hakuja\100hakuja.net"
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de"
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
