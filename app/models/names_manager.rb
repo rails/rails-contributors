@@ -217,6 +217,7 @@ module NamesManager
   map 'Hampton Catlin',             "hcatlin\100gmail.com"
   map 'Hendrik Mans',               "hendrik\100mans.de"
   map 'Henrik Nyh',                 'Henrik N', "henrik\100nyh.se", 'henrik'
+  map 'Herryanto Siatono',          'jugend'
   map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
   map 'Ian White',                  "ian.w.white\100gmail.com"
   map 'Isaac Feliu',                'isaacfeliu'
