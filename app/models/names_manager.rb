@@ -191,6 +191,7 @@ module NamesManager
   map 'Eric Hodel',                 "drbrain\100segment7.net"
   map 'Erik Abele',                 "erik\100codefaktor.de"
   map 'Erik Terpstra',              "erik\100ruby-lang.nl"
+  map 'Erlend Halvorsen',           "ehalvorsen+rails\100runbox.com"
   map 'Ernesto Jimenez',            'ernesto.jimenez'
   map 'Esad Hajdarevic',            "esad\100esse.at"
   map 'Evan Henshaw-Plath',         "evan\100protest.net"
