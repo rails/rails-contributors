@@ -18,6 +18,7 @@ module NamesManager
     eli.gordon\100gmail.com
     eugenol\100gmail.com
     f.svehla\100gmail.com
+    fabien\100odilat.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
