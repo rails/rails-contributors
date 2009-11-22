@@ -45,7 +45,8 @@ private
     Yandex        |
     Gaisbot       |
     TweetmemeBot  |
-    HttpClient
+    HttpClient    |
+    DotBot
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
