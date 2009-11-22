@@ -298,6 +298,7 @@ module NamesManager
   map 'Ken Miller',                 "kenneth.miller\100bitfield.net"
   map 'Kevin Clark',                "Kevin Clark kevin.clark\100gmail.com", "kevin.clark\100gmail.com", "kevin.clark\100gmal.com"
   map 'Kevin Jackson',              "foamdino\100gmail.com"
+  map 'Kevin Watt',                 "kevin\100writesoon.com"
   map 'Koichi Tsutsumi',            "hakuja\100hakuja.net"
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de"
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
