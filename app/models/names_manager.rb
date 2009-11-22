@@ -259,6 +259,7 @@ module NamesManager
   map 'Jonathan del Strother',      'Catfish', 'catfish'
   map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"
   map 'Jonathan Weiss',             'jweiss'
+  map 'Jonathan Younger',           "jonathan\100daikini.com"
   map 'Jordan McKible',             "jmckible\100gmail.com"
   map 'Jordi Bunster',              'jordi'
   map 'José Valim',                 'josevalim'
