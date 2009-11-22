@@ -16,7 +16,6 @@ module NamesManager
     ehalvorsen+rails\100runbox.com
     eli.gordon\100gmail.com
     eugenol\100gmail.com
-    f.svehla\100gmail.com
     fabien\100odilat.com
     fhanshaw\100vesaria.com
     gaetanot\100comcast.net
@@ -197,6 +196,7 @@ module NamesManager
   map 'Evan Henshaw-Plath',         "evan\100protest.net"
   map 'Evan Weaver',                'evan'
   map 'Evgeny Zislis',              "evgeny.zislis\100gmail.com"
+  map 'Ferdinand Svehla',           "f.svehla\100gmail.com", 'f.svehla'
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
   map 'Gabe da Silveira',           'dasil003'
