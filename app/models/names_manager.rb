@@ -38,6 +38,7 @@ module NamesManager
     asnem\100student.ethz.ch
     damn_pepe\100gmail.com
     dev.rubyonrails\100maxdunn.com
+    kdole\100tamu.edu
   )
 
   # Returns a set with all (canonical) contributor names known by the application.
