@@ -228,6 +228,7 @@ module NamesManager
   map 'James Adam',                 'lazyatom', "james.adam\100gmail.com"
   map 'James Edward Gray II',       "james\100grayproductions.net"
   map 'James Mead',                 'floehopper'
+  map 'James Strachan',             "jstrachan"
   map 'Jamie Macey',                "jamie\100bravenet.com"
   map 'Jamie Orchard-Hays',         "jamie\100dang.com"
   map 'Jamie van Dyke',             'fearoffish'
