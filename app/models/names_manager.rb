@@ -251,7 +251,7 @@ module NamesManager
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy Hopple',              "jeremy\100jthopple.com"
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
-  map 'Jeremy Voorhis',             "jeremy\100planetargon.com"
+  map 'Jeremy Voorhis',             "jeremy\100planetargon.com", 'jvoorhis'
   map 'Jerrett Taylor',             "jerrett\100bravenet.com"
   map 'Jesse Merriman',             "jessemerriman\100warpmail.net"
   map 'Jim Hughes',                 'jeem'
