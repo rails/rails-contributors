@@ -248,7 +248,7 @@ module NamesManager
   map 'Jim Winstead',               "jimw\100mysql.com"
   map 'Joe Goldwasser',             "joe\100mjg2.com"
   map 'Joerg Diekmann',             "joergd\100pobox.com"
-  map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen', "johan\100johansorensen.com"
+  map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen', "johan\100johansorensen.com", "johan\100textdrive.com"
   map 'John Barnette',              'jbarnette'
   map 'John Sheets',                "dev\100metacasa.net"
   map 'Jon Bright',                 "jon\100siliconcircus.com"
