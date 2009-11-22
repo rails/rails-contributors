@@ -258,6 +258,7 @@ module NamesManager
   map 'John Sheets',                "dev\100metacasa.net"
   map 'Jordi Bunster',              'jordi'
   map 'José Valim',                 'josevalim'
+  map 'Joseph Hosteny',             "jhosteny\100mac.com"
   map 'Josh Goebel',                'Dreamer3', "dreamer3\100gmail.com"
   map 'Josh Knowles',               "joshknowles\100gmail.com"
   map 'Josh Peek',                  'josh', 'Josh', 'Joshua Peek', 'joshpeek', "josh\100joshpeek.com"
