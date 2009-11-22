@@ -525,6 +525,9 @@ module NamesManager
         'Dave Thomas'
       when 'Aredridel/earlier work by Michael Neumann'
         ['Aredridel', 'Michael Neumann']
+      when "jon\100blankpad.net)"
+        # see 35d3ede
+        ["jon\100blankpad.net"]
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
