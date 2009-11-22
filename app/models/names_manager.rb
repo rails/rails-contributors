@@ -21,6 +21,7 @@ module NamesManager
     fabien\100odilat.com
     fhanshaw\100vesaria.com
     gaetanot\100comcast.net
+    gensym\100mac.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
