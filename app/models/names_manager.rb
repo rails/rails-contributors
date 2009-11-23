@@ -367,6 +367,7 @@ module NamesManager
   map 'Michael Schuerig',           "michael\100schuerig.de", 'Michael Shuerig'
   map 'Michal Šafránek',            "wejn\100box.cz"
   map 'Michiaki Baba',              "babie7a0\100ybb.ne.jp"
+  map 'Mike Boone',                 'boone'
   map 'Mike Clark',                 "mike\100clarkware.com"
   map 'Mike Gunderloy',             'Michael Gunderloy'
   map 'Mike Laster',                "mlaster\100metavillage.com"
