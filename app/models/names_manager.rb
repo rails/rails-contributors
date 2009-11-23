@@ -123,6 +123,7 @@ module NamesManager
   map 'Ben Sinclair',               "ben\100bensinclair.com"
   map 'Benjamin Curtis',            "rails\100bencurtis.com"
   map 'Bermi Ferrer',               'bermi'
+  map 'Bert Goethals',              'BertG'
   map 'Blaine Cook',                'Blaine', 'blaine', "blaine\100odeo.com"
   map 'Blair Zajac',                "blair\100orcaware.com"
   map 'Blake Watters',              "blake\100near-time.com"
