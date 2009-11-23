@@ -380,6 +380,7 @@ module NamesManager
   map 'Nicholas Seckar',            'Ulysses'
   map 'Nick Kallen',                'nkallen'
   map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
+  map 'Nicolas Cavigneaux',         'Bounga'
   map 'Nik Wakelin',                'nik.wakelin'
   map 'Nikolay Petrachkov',         'jastix'
   map 'Norbert Crombach',           'norbert'
