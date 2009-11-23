@@ -86,6 +86,7 @@ module NamesManager
   map 'Adam Kramer',                "adam\100the-kramers.net"
   map 'Adam Majer',                 "adamm\100galacticasoftware.com"
   map 'Adam Milligan',              'pivotal'
+  map 'Adam Wiggins',               'adamwiggins'
   map 'Adelle Hartley',             "adelle\100bullet.net.au"
   map 'Akira Ikeda',                "ikeda\100dream.big.or.jp"
   map 'Akira Matsuda',              '松田 明'
