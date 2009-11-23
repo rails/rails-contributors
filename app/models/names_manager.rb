@@ -423,6 +423,7 @@ module NamesManager
   map 'Sam Granieri',               'sjgman9'
   map 'Sam Stephenson',             'Sam', 'sam'
   map 'Sandra Metz',                "sandra.metz\100duke.edu"
+  map 'Scott Bronson',              'bronson'
   map 'Scott Reilly',               'coffee2code'
   map 'Sebastian Delmont',          "sd\100notso.net"
   map 'Sebastian Graessl',          'bastilian'
