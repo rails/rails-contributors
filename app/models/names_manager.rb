@@ -363,6 +363,7 @@ module NamesManager
   map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
   map 'Matt Margolis',              "matt\100mattmargolis.net"
   map 'Matt Mower',                 "self\100mattmower.com"
+  map 'Matthew Painter',            "mail\100matthewpainter.co.uk"
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
   map 'Micah Alles',                "alles\100atomicobject.com"
