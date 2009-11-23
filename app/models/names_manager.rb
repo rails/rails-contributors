@@ -242,6 +242,7 @@ module NamesManager
   map 'Jan De Poorter',             'DefV'
   map 'Jan Prill',                  "JanPrill\100blauton.de"
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
+  map 'Jason Ketterman',            'anshkakashi'
   map 'Jason L Perry',              'ambethia'
   map 'Jason Stewart',              'jstewart'
   map 'Jason Stirk',                "jstirk\100oobleyboo.com"
