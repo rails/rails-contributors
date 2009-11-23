@@ -134,6 +134,7 @@ module NamesManager
   map 'Brendan Baldwin',            'brendan'
   map 'Brian Egge',                 "brianegge\100yahoo.com"
   map 'Brian Gernhardt',            "benji\100silverinsanity.com"
+  map 'Bryan Helmkamp',             'brynary'
   map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
   map 'Brad Greenlee',              'bgreenlee'
   map 'Brandon Keepers',            'brandon', "brandon\100opensoul.org"
