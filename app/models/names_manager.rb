@@ -114,7 +114,7 @@ module NamesManager
   map 'Ariejan de Vroom',           'ariejan'
   map 'Arthur Zapparoli',           'arthurgeek'
   map 'Ask Bjørn Hansen',           "ask\100develooper.com"
-  map 'Assaf Arkin',                "assaf.arkin\100gmail.com"
+  map 'Assaf Arkin',                "assaf.arkin\100gmail.com", 'Assaf'
   map 'August Zajonc',              "augustz\100augustz.com"
   map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
   map 'Ben Bangert',                "ben\100groovie.org"
