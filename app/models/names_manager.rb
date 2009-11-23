@@ -108,6 +108,7 @@ module NamesManager
   map 'Andrew Peters',              "andrew.john.peters\100gmail.com"
   map 'Andrew White',               'pixeltrix'
   map 'Andy Lien',                  "andylien\100gmail.com"
+  map 'Ant Ramm',                   'antramm'
   map 'Anthony Eden',               'aeden'
   map 'Anup Narkhede',              'railsbob'
   map 'Arthur Zapparoli',           'arthurgeek'
