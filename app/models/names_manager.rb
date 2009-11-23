@@ -28,7 +28,6 @@ module NamesManager
     machomagna\100gmail.com
     me\100jonnii.com
     medlar\100medlar.it
-    mike\100michaeldewey.org
     minimudboy\100gmail.com
     mklame\100atxeu.com
   )
@@ -380,6 +379,7 @@ module NamesManager
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
   map 'Micah Alles',                "alles\100atomicobject.com"
   map 'Michael Daines',             "me\100mdaines.com"
+  map 'Michael Dewey',              "mike\100michaeldewey.org"
   map 'Michael Galero',             'mikong'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
   map 'Michael Koziarski',          'Koz', 'nzkoz'
