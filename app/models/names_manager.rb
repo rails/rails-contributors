@@ -24,7 +24,6 @@ module NamesManager
     jonrailsdev\100shumi.org
     junk\100miriamtech.com
     justin\100textdrive.com
-    lagroue\100free.fr
     leroen\100gmail.com
   )
 
@@ -38,6 +37,10 @@ module NamesManager
     damn_pepe\100gmail.com
     dev.rubyonrails\100maxdunn.com
     kdole\100tamu.edu
+  )
+
+  ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
+    lagroue\100free.fr
   )
 
   # Returns a set with all (canonical) contributor names known by the application.
