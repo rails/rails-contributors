@@ -370,9 +370,10 @@ module NamesManager
   map 'Mathieu Jobin',              "somekool\100gmail.com"
   map 'Mats Persson',               "mats\100imediatec.co.uk"
   map 'Matt Aimonetti',             'matt'
-  map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
   map 'Matt Margolis',              "matt\100mattmargolis.net"
   map 'Matt Mower',                 "self\100mattmower.com"
+  map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
+  map 'Matt Parrish',               "mparrish\100pearware.org"
   map 'Matthew Painter',            "mail\100matthewpainter.co.uk"
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
