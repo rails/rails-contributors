@@ -19,7 +19,6 @@ module NamesManager
     fhanshaw\100vesaria.com
     gaetanot\100comcast.net
     gnuman1\100gmail.com
-    hanson\100surgery.wisc.edu
     info\100loobmedia.com
     james\100slashetc.com
     jan\100ulbrich-boerwang.de
@@ -455,6 +454,7 @@ module NamesManager
   map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
   map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte', 'xal'
   map 'Todd Gehman',                "todd\100robotcoop.com"
+  map 'Todd Hanson',                "hanson\100surgery.wisc.edu"
   map 'Tom Brice',                  'tomtoday', "tomtoday\100gmail.com"
   map 'Tom Fakes',                  "tom\100craz8.com"
   map 'Tom Moertel',                "tom\100moertel.com"
