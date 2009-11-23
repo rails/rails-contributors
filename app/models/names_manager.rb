@@ -111,6 +111,7 @@ module NamesManager
   map 'Ant Ramm',                   'antramm'
   map 'Anthony Eden',               'aeden'
   map 'Anup Narkhede',              'railsbob'
+  map 'Ariejan de Vroom',           'ariejan'
   map 'Arthur Zapparoli',           'arthurgeek'
   map 'Ask Bjørn Hansen',           "ask\100develooper.com"
   map 'Assaf Arkin',                "assaf.arkin\100gmail.com"
