@@ -390,6 +390,7 @@ module NamesManager
   map 'Mike Clark',                 "mike\100clarkware.com"
   map 'Mike Gunderloy',             'Michael Gunderloy'
   map 'Mike Laster',                "mlaster\100metavillage.com"
+  map 'Mike Mangino',               "mmangino\100elevatedrails.com"
   map 'Mike Naberezny',             'mnaberez'
   map 'Mikel Lindsaar',             'mikel', 'raasdnil'
   map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr"
