@@ -357,6 +357,7 @@ module NamesManager
   map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
+  map 'Markus Roberts',             "MarkusQ\100reality.com"
   map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
   map 'Mathieu Arnold',             "mat\100absolight.fr"
   map 'Mathieu Jobin',              "somekool\100gmail.com"
