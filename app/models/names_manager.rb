@@ -403,6 +403,7 @@ module NamesManager
   map 'Ryan Bigg',                  'Radar'
   map 'Ryan Davis',                 'zenspider'
   map 'Ryan Daigle',                'rwdaigle'
+  map 'Ryan Duryea',                'aguynamedryan'
   map 'Ryan McGeary',               'rmm5t'
   map 'Ryan Tomayko',               "rtomayko\100gmail.com"
   map 'Sam Granieri',               'sjgman9'
