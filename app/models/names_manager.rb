@@ -347,6 +347,7 @@ module NamesManager
   map 'Lon Baker',                  "lon\100speedymac.com"
   map 'Louis St-Amour',             "LouisStAmour\100gmail.com"
   map 'Luca Guidi',                 'l.guidi'
+  map 'Lugovoi Nikolai',            "meadow.nnick\100gmail.com"
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
   map 'Luke Redpath',               "contact\100lukeredpath.co.uk"
   map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
