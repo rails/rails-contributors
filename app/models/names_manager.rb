@@ -92,6 +92,7 @@ module NamesManager
   map 'Akira Ikeda',                "ikeda\100dream.big.or.jp"
   map 'Akira Matsuda',              '松田 明'
   map 'alancfrancis',               "alancfrancis\100gmail.com"
+  map 'Alex Chaffee',               'alexch'
   map 'Alex Pooley',                "alex\100msgpad.com"
   map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com"
   map 'Alex Wolfe',                 "alexkwolfe\100gmail.com"
