@@ -140,6 +140,7 @@ module NamesManager
   map 'Brian Donovan',              'eventualbuddha', "devslashnull\100gmail.com"
   map 'Brian Morearty',             'BMorearty'
   map 'Bruce Williams',             "wbruce\100gmail.com"
+  map 'Bruno Miranda',              'brupm'
   map 'Caio Chassot',               'caio', "k\100v2studio.com"
   map 'Caleb Tennis',               "caleb\100aei-tech.com"
   map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
