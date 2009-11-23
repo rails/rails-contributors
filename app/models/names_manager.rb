@@ -131,6 +131,7 @@ module NamesManager
   map 'Brad Ediger',                "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
   map 'Brad Ellis',                 "bellis\100deepthought.org"
   map 'Brandt Kurowski',            "brandt\100kurowski.net"
+  map 'Brendan Baldwin',            'brendan'
   map 'Brian Egge',                 "brianegge\100yahoo.com"
   map 'Brian Gernhardt',            "benji\100silverinsanity.com"
   map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
