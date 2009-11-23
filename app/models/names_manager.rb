@@ -342,6 +342,7 @@ module NamesManager
   map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
   map 'Marc Love',                  'marclove'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
+  map 'Mariusz Pękala',             'Arsen7'
   map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
