@@ -27,6 +27,7 @@ module NamesManager
     leroen\100gmail.com
     machomagna\100gmail.com
     me\100jonnii.com
+    medlar\100medlar.it
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
