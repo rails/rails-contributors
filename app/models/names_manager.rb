@@ -362,6 +362,7 @@ module NamesManager
   map 'Marcin Szczepański',         "marcin\100junkheap.net"
   map 'Mariusz Pękala',             'Arsen7'
   map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
+  map 'Mark James',                 "mrj\100bigpond.net.au"
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
   map 'Markus Roberts',             "MarkusQ\100reality.com"
