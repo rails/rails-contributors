@@ -249,6 +249,7 @@ module NamesManager
   map 'Jamie Macey',                "jamie\100bravenet.com"
   map 'Jamie Orchard-Hays',         "jamie\100dang.com"
   map 'Jamie van Dyke',             'fearoffish'
+  map 'Jamie Macey',                "maceywj\100telus.net"
   map 'Jan De Poorter',             'DefV'
   map 'Jan Prill',                  "JanPrill\100blauton.de"
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
