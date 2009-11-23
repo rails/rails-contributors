@@ -372,6 +372,7 @@ module NamesManager
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
   map 'Micah Alles',                "alles\100atomicobject.com"
+  map 'Michael Daines',             "me\100mdaines.com"
   map 'Michael Galero',             'mikong'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
   map 'Michael Koziarski',          'Koz', 'nzkoz'
