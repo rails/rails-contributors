@@ -26,6 +26,7 @@ module NamesManager
     justin\100textdrive.com
     leroen\100gmail.com
     machomagna\100gmail.com
+    me\100jonnii.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
