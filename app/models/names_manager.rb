@@ -27,7 +27,6 @@ module NamesManager
     leroen\100gmail.com
     machomagna\100gmail.com
     me\100jonnii.com
-    medlar\100medlar.it
     minimudboy\100gmail.com
     mklame\100atxeu.com
   )
@@ -231,6 +230,7 @@ module NamesManager
   map 'Gaspard Bucher',             "g.bucher\100teti.ch"
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Garside',              'ggarside'
+  map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
   map 'Grant Hollingworth',         "grant\100antiflux.org"
   map 'Greg Lappen',                "greg\100lapcominc.com"
   map 'Grzegorz Daniluk',           "daniluk\100yahoo.com"
