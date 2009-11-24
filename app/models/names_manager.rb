@@ -27,7 +27,6 @@ module NamesManager
     machomagna\100gmail.com
     me\100jonnii.com
     minimudboy\100gmail.com
-    nbpwie102@sneakemail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
@@ -41,6 +40,7 @@ module NamesManager
     dev.rubyonrails\100maxdunn.com
     kdole\100tamu.edu
     mklame\100atxeu.com
+    nbpwie102@sneakemail.com
   )
 
   ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
