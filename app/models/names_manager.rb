@@ -423,6 +423,7 @@ module NamesManager
   map 'Oleg Frolov',                "oleg.frolov@gmail.com"
   map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
   map 'Pat Maddox',                 "pergesu\100gmail.com"
+  map 'Patrick Hurley',             "phurley\100gmail.com"
   map 'Patrick Joyce',              "patrick.t.joyce"
   map 'Patrick Lenz',               "patrick\100lenz.sh"
   map 'Paul Butcher',               "paul\100paulbutcher.com"
