@@ -417,6 +417,7 @@ module NamesManager
   map 'Obie Fernandez',             'ObieFernandez'
   map 'okkez',                      "okkez000\100gmail.com"
   map 'Oleg Frolov',                "oleg.frolov@gmail.com"
+  map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
   map 'Pat Maddox',                 "pergesu\100gmail.com"
   map 'Patrick Lenz',               "patrick\100lenz.sh"
   map 'Paul Butcher',               "paul\100paulbutcher.com"
