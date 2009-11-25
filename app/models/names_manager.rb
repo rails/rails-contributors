@@ -423,6 +423,7 @@ module NamesManager
   map 'Patrick Joyce',              "patrick.t.joyce"
   map 'Patrick Lenz',               "patrick\100lenz.sh"
   map 'Paul Butcher',               "paul\100paulbutcher.com"
+  map 'Paul Smith',                 "paul\100cnt.org"
   map 'pburleson',                  "pburleson\100gmail.com"
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
   map 'Peter Michaux',              "petermichaux\100gmail.com"
