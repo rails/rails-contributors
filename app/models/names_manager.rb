@@ -23,7 +23,6 @@ module NamesManager
     jonrailsdev\100shumi.org
     junk\100miriamtech.com
     justin\100textdrive.com
-    leroen\100gmail.com
     machomagna\100gmail.com
     me\100jonnii.com
     minimudboy\100gmail.com
@@ -333,6 +332,7 @@ module NamesManager
   map 'Kevin Watt',                 "kevin\100writesoon.com"
   map 'Kevin Williams',             "kevwil\100gmail.com"
   map 'Kim Shrier',                 "kim\100tinker.com"
+  map 'Kjetil Lerøen',              "leroen\100gmail.com"
   map 'Koichi Tsutsumi',            "hakuja\100hakuja.net"
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de", "murpyh\100rubychan.de"
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
