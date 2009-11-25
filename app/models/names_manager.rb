@@ -364,6 +364,7 @@ module NamesManager
   map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
   map 'Maik Schmidt',               "contact\100maik-schmidt.de"
   map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
+  map 'Manuel Holtgrewe',           "purestorm@ggnore.net"
   map 'Marc Love',                  'marclove'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
   map 'Marcin Szczepański',         "marcin\100junkheap.net"
