@@ -409,6 +409,7 @@ module NamesManager
   map 'Nik Wakelin',                'nik.wakelin'
   map 'Nikolay Petrachkov',         'jastix'
   map 'Nils Jonsson',               "nils\100alumni.rice.edu"
+  map 'Nobuhiro Imai',              "nov\100yo.rim.or.jp"
   map 'Norbert Crombach',           'norbert'
   map 'Norman Elton',               "normelton\100gmail.com"
   map 'Obie Fernandez',             'ObieFernandez'
