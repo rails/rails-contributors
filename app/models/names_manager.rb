@@ -438,6 +438,7 @@ module NamesManager
   map 'Phillip J. Birmingham',      "phillip\100pjbsoftware.com"
   map 'Piers Cawley',               "pdcawley\100bofh.org.uk"
   map 'Piotr Banasik',              "piotr\100t-p-l.com"
+  map 'PJ Hyett',                   "pjhyett\100gmail.com"
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
   map 'Rein Henrichs',              "ReinH"
