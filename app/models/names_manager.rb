@@ -404,6 +404,7 @@ module NamesManager
   map 'Nick Kallen',                'nkallen'
   map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
   map 'Nicolas Cavigneaux',         'Bounga'
+  map 'Nicolas Pouillard',          "nicolas.pouillard\100gmail.com"
   map 'Nik Wakelin',                'nik.wakelin'
   map 'Nikolay Petrachkov',         'jastix'
   map 'Norbert Crombach',           'norbert'
