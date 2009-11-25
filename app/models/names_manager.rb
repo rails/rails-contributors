@@ -570,7 +570,7 @@ module NamesManager
       when /\A#https/
         # Signed-off-by: Michael Koziarski <michael@koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
         nil
-      when 'carlhuda'
+      when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when "schoenm\100earthlink.net sandra.metz\100duke.edu"
         name.split
