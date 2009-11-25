@@ -216,6 +216,7 @@ module NamesManager
   map 'Eric Daspet',                "eric.daspet\100survol.net"
   map 'Eric Hodel',                 "drbrain\100segment7.net"
   map 'Erik Abele',                 "erik\100codefaktor.de"
+  map 'Erik Ordway',                "ordwaye\100evergreen.edu"
   map 'Erik Terpstra',              "erik\100ruby-lang.nl"
   map 'Erlend Halvorsen',           "ehalvorsen+rails\100runbox.com"
   map 'Ernesto Jimenez',            'ernesto.jimenez'
