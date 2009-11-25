@@ -26,8 +26,6 @@ module NamesManager
     machomagna\100gmail.com
     me\100jonnii.com
     minimudboy\100gmail.com
-    nkriege\100hotmail.com
-    pfc.pille@gmx.net
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
@@ -43,6 +41,8 @@ module NamesManager
     mklame\100atxeu.com
     nbpwie102@sneakemail.com
     nwoods\100mail.com
+    nkriege\100hotmail.com
+    pfc.pille@gmx.net
   )
 
   ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
