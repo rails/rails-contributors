@@ -422,6 +422,7 @@ module NamesManager
   map 'Obie Fernandez',             'ObieFernandez'
   map 'okkez',                      "okkez000\100gmail.com"
   map 'Oleg Frolov',                "oleg.frolov@gmail.com"
+  map 'Oleg Pudeyev',               "pudeyo\100rpi.com"
   map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
   map 'Pascal Terjan',              "pterjan\100mandriva.com"
   map 'Pat Maddox',                 "pergesu\100gmail.com"
