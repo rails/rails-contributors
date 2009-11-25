@@ -407,6 +407,7 @@ module NamesManager
   map 'Nicolas Pouillard',          "nicolas.pouillard\100gmail.com"
   map 'Nik Wakelin',                'nik.wakelin'
   map 'Nikolay Petrachkov',         'jastix'
+  map 'Nils Jonsson',               "nils\100alumni.rice.edu"
   map 'Norbert Crombach',           'norbert'
   map 'Obie Fernandez',             'ObieFernandez'
   map 'Pat Maddox',                 "pergesu\100gmail.com"
