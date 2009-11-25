@@ -409,7 +409,7 @@ module NamesManager
   map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
   map 'Nicolas Cavigneaux',         'Bounga'
   map 'Nicolas Pouillard',          "nicolas.pouillard\100gmail.com"
-  map 'Nik Wakelin',                'nik.wakelin'
+  map 'Nik Wakelin',                'nik.wakelin', 'nik.kakelin'
   map 'Nikolay Petrachkov',         'jastix'
   map 'Nils Jonsson',               "nils\100alumni.rice.edu"
   map 'Nobuhiro Imai',              "nov\100yo.rim.or.jp"
