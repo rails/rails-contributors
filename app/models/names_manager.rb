@@ -27,6 +27,7 @@ module NamesManager
     me\100jonnii.com
     minimudboy\100gmail.com
     nkriege\100hotmail.com
+    pfc.pille@gmx.net
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
