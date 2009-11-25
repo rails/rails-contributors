@@ -429,6 +429,7 @@ module NamesManager
   map 'Peter Michaux',              "petermichaux\100gmail.com"
   map 'Phil Hagelberg',             "technomancy\100gmail.com"
   map 'Philip Hallstrom',           'phallstrom'
+  map 'Piers Cawley',               "pdcawley\100bofh.org.uk"
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
   map 'Rein Henrichs',              "ReinH"
