@@ -41,6 +41,7 @@ module NamesManager
     kdole\100tamu.edu
     mklame\100atxeu.com
     nbpwie102@sneakemail.com
+    nwoods\100mail.com
   )
 
   ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
