@@ -26,6 +26,7 @@ module NamesManager
     machomagna\100gmail.com
     me\100jonnii.com
     minimudboy\100gmail.com
+    nkriege\100hotmail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
@@ -409,6 +410,7 @@ module NamesManager
   map 'Nikolay Petrachkov',         'jastix'
   map 'Nils Jonsson',               "nils\100alumni.rice.edu"
   map 'Norbert Crombach',           'norbert'
+  map 'Norman Elton',               "normelton\100gmail.com"
   map 'Obie Fernandez',             'ObieFernandez'
   map 'Pat Maddox',                 "pergesu\100gmail.com"
   map 'Patrick Lenz',               "patrick\100lenz.sh"
