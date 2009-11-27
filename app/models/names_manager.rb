@@ -27,7 +27,6 @@ module NamesManager
     me\100jonnii.com
     minimudboy\100gmail.com
     rails.20.clarry\100spamgourmet.com
-    rails\10033lc0.net
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
@@ -46,6 +45,7 @@ module NamesManager
     nkriege\100hotmail.com
     pfc.pille@gmx.net
     raidel\100onemail.at
+    rails\10033lc0.net
   )
 
   ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
