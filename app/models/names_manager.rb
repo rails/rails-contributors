@@ -45,7 +45,6 @@ module NamesManager
     nwoods\100mail.com
     nkriege\100hotmail.com
     pfc.pille@gmx.net
-    rails\10033lc0.net
     rails\100electricvisions.com
   )
 
@@ -213,6 +212,7 @@ module NamesManager
   map 'Duncan Robertson',           "duncan\100whomwah.com"
   map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
   map 'Edward Betts',               "edward\100debian.org"
+  map 'Eelco Lempsink',             "rails\10033lc0.net"
   map 'Elan Feingold',              "elan\100bluemandrill.com"
   map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
   map 'Elliot Smith',               "elliot\100townx.org"
