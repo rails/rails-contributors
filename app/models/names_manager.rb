@@ -45,7 +45,6 @@ module NamesManager
     nwoods\100mail.com
     nkriege\100hotmail.com
     pfc.pille@gmx.net
-    raidel\100onemail.at
     rails\10033lc0.net
     rails\100electricvisions.com
   )
@@ -399,6 +398,7 @@ module NamesManager
   map 'Michael Galero',             'mikong'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
   map 'Michael Koziarski',          'Koz', 'nzkoz'
+  map 'Michael Raidel',             "raidel\100onemail.at"
   map 'Michael Schoen',             'Michael A. Schoen', "schoenm\100earthlink.net"
   map 'Michael Schubert',           "michael\100schubert", "michael\100schubert.cx"
   map 'Michael Schuerig',           "michael\100schuerig.de", 'Michael Shuerig'
