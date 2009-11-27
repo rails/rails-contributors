@@ -47,6 +47,7 @@ module NamesManager
     pfc.pille@gmx.net
     raidel\100onemail.at
     rails\10033lc0.net
+    rails\100electricvisions.com
   )
 
   ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
