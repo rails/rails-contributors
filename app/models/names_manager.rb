@@ -26,7 +26,6 @@ module NamesManager
     machomagna\100gmail.com
     me\100jonnii.com
     minimudboy\100gmail.com
-    raidel@onemail.at
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
