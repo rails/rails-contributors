@@ -33,6 +33,7 @@ module NamesManager
     seattle\100rootimage.msu.edu
     thomas\100columbus.rr.com
     vinbarnes\100gmail.com
+    yanowitz-rubyonrails\100quantumfoam.org
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
