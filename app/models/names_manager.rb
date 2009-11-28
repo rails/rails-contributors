@@ -337,6 +337,7 @@ module NamesManager
   map 'Joe Goldwasser',             "joe\100mjg2.com"
   map 'Joerg Diekmann',             "joergd\100pobox.com"
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen', "johan\100johansorensen.com", "johan\100textdrive.com"
+  map 'Johannes Barre',             'iGEL'
   map 'John Barnette',              'jbarnette'
   map 'John Nunemaker',             "nunemaker\100gmail.com"
   map 'John Sheets',                "dev\100metacasa.net", "jsheets"
