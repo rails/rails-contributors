@@ -442,6 +442,7 @@ module NamesManager
   map 'Michael Schoen',             'Michael A. Schoen', "schoenm\100earthlink.net"
   map 'Michael Schubert',           "michael\100schubert", "michael\100schubert.cx"
   map 'Michael Schuerig',           "michael\100schuerig.de", 'Michael Shuerig'
+  map 'Michael Sheakoski',          'GMFlash'
   map 'Michal Šafránek',            "wejn\100box.cz"
   map 'Michiaki Baba',              "babie7a0\100ybb.ne.jp"
   map 'Mike Boone',                 'boone'
