@@ -165,6 +165,7 @@ module NamesManager
   map 'Bruno Miranda',              'brupm'
   map 'Caio Chassot',               'caio', "k\100v2studio.com"
   map 'Caleb Tennis',               "caleb\100aei-tech.com"
+  map 'Cesar Ho',                   'codafoo'
   map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
   map 'Cheah Chu Yeow',             'Chu Yeow', 'chuyeow'
   map 'Choon Keat',                 "choonkeat\100gmail.com", 'choonkeat'
