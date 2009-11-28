@@ -331,7 +331,7 @@ module NamesManager
   map 'John Sheets',                "dev\100metacasa.net", "jsheets"
   map 'John Wilger',                'jwilger'
   map 'Jon Bright',                 "jon\100siliconcircus.com"
-  map 'Jon Evans',                  "jon.evans\100pobox.com"
+  map 'Jon Evans',                  "jon.evans\100pobox.com", 'evansj'
   map 'Jon Moses',                  "jon\100burningbush.us"
   map 'Jon Olson',                  "jsolson\100damogran.org"
   map 'John Oxton',                 "rails\100electricvisions.com"
