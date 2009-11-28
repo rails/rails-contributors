@@ -535,6 +535,7 @@ module NamesManager
   map 'Tim Fletcher',               "twoggle\100gmail.com"
   map 'Tim Lucas',                  "t.lucas\100toolmantim.com"
   map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
+  map 'Tim Trautmann',              "timct\100mac.com"
   map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte', 'xal'
   map 'Todd Gehman',                "todd\100robotcoop.com", 'todd'
   map 'Todd Hanson',                "hanson\100surgery.wisc.edu"
