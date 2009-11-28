@@ -447,6 +447,7 @@ module NamesManager
   map 'Phil Hagelberg',             "technomancy\100gmail.com"
   map 'Philip Hallstrom',           'phallstrom'
   map 'Philip Ross',                "phil.ross\100gmail.com"
+  map 'Philippe April',             "ror\100philippeapril.com"
   map 'Phillip J. Birmingham',      "phillip\100pjbsoftware.com"
   map 'Piers Cawley',               "pdcawley\100bofh.org.uk"
   map 'Piotr Banasik',              "piotr\100t-p-l.com", 'piotr'
@@ -462,8 +463,10 @@ module NamesManager
   map 'Rob Anderton',               'Rob'
   map 'Rob Biedenharn',             'rabiedenharn', "Rob\100AgileConsultingLLC.com"
   map 'Rob Halff',                  "info\100rhalff.com"
+  map 'Rob Rasmussen',              "rob.rasmussen\100gmail.com"
   map 'Rob Sanheim',                'rsanheim', "rsanheim\100gmail.com", "rob\100thinkrelevance.com"
   map 'Robby Russell',              'robbyrussell'
+  map 'Robin H. Johnson',           "robbat2\100gentoo.org"
   map 'Roderick van Domburg',       'roderickvd'
   map 'Rodney Ramdas',              "rramdas\100gmail.com"
   map 'Ron DiFrango',               "rdifrango\100captechventures.com"
