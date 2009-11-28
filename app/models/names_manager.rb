@@ -178,6 +178,7 @@ module NamesManager
   map 'Chris Roos',                 'chrisroos', "chris\100seagul.co.uk"
   map 'Chris Wanstrath',            "chris\100ozmm.org"
   map 'Chriztian Steinmeier',       "chriztian.steinmeier\100gmail.com"
+  map 'Clifford Heath',             'cjheath'
   map 'Coda Hale',                  'codahale'
   map 'Cody Fauser',                "codyfauser\100gmail.com"
   map 'Courtenay Gasking',          'court3nay', 'courtenay', "court3nay\100gmail.com"
