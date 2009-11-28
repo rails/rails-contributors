@@ -208,6 +208,7 @@ module NamesManager
   map 'David A. Black',             'dblack', "dblack\100wobblini.net"
   map 'David Altenburg',            "gensym\100mac.com"
   map 'David Calavera',             'calavera', 'david.calavera'
+  map 'David Chelimsky',            'dchelimsky'
   map 'David Dollar',               'ddollar'
   map 'David Easley',               "easleydp\100gmail.com"
   map 'David Felstead',             "david.felstead\100gmail.com", "dfelstead\100site5.com"
@@ -223,6 +224,7 @@ module NamesManager
   map 'Deirdre Saoirse',            "deirdre\100deirdre.net"
   map 'DeLynn Berry',               'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
   map 'Derrick Spell',              "derrickspell\100cdmplus.com"
+  map 'Dirkjan Bussink',            'dbussink'
   map 'Dominic Sisneros',           "dom\100sisna.com"
   map 'Don Park',                   "don.park\100gmail.com"
   map 'Donald Piret',               "donald.piret\100synergetek.be"
