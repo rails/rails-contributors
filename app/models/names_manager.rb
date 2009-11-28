@@ -34,6 +34,7 @@ module NamesManager
     thomas\100columbus.rr.com
     vinbarnes\100gmail.com
     yanowitz-rubyonrails\100quantumfoam.org
+    zaitzow\100gmail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
