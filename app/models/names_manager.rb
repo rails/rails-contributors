@@ -31,7 +31,6 @@ module NamesManager
     s.brink\100web.de
     schultzr\100gmail.com
     seattle\100rootimage.msu.edu
-    thomas\100columbus.rr.com
     yanowitz-rubyonrails\100quantumfoam.org
     zaitzow\100gmail.com
   )
@@ -546,6 +545,7 @@ module NamesManager
   map 'Todd Hanson',                "hanson\100surgery.wisc.edu"
   map 'Tom Brice',                  'tomtoday', "tomtoday\100gmail.com"
   map 'Tom Fakes',                  "tom\100craz8.com"
+  map 'Tom Lieber',                 "thomas\100columbus.rr.com"
   map 'Tom Moertel',                "tom\100moertel.com"
   map 'Tom Mornini',                "tmornini\100infomania.com"
   map 'Tom Preston-Werner',         'mojombo'
