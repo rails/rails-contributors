@@ -307,6 +307,7 @@ module NamesManager
   map 'Jamie Orchard-Hays',         "jamie\100dang.com"
   map 'Jamie van Dyke',             'fearoffish'
   map 'Jamie Macey',                "maceywj\100telus.net"
+  map 'Jamis Buck',                 'Jamis'
   map 'Jan De Poorter',             'DefV'
   map 'Jan Krutisch',               'halfbyte'
   map 'Jan Prill',                  "JanPrill\100blauton.de"
