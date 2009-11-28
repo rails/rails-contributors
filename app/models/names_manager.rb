@@ -156,6 +156,7 @@ module NamesManager
   map 'Brian Gernhardt',            "benji\100silverinsanity.com"
   map 'Brian Mattern',              "rephorm\100rephorm.com"
   map 'Bryan Helmkamp',             'brynary'
+  map 'Bryan Kang',                 'deepblue'
   map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
   map 'Brad Greenlee',              'bgreenlee'
   map 'Brandon Keepers',            'brandon', "brandon\100opensoul.org"
@@ -180,7 +181,7 @@ module NamesManager
   map 'Chris Mear',                 "chris\100feedmechocolate.com", 'chrismear'
   map "Chris O'Sullivan",           'thechrisoshow'
   map 'Chris Roos',                 'chrisroos', "chris\100seagul.co.uk"
-  map 'Chris Wanstrath',            "chris\100ozmm.org"
+  map 'Chris Wanstrath',            "chris\100ozmm.org", 'defunkt'
   map 'Chriztian Steinmeier',       "chriztian.steinmeier\100gmail.com"
   map 'Clifford Heath',             'cjheath'
   map 'Clifford T. Matthews',       'ctm'
@@ -234,6 +235,7 @@ module NamesManager
   map 'Duff OMelia',                "dj\100omelia.org"
   map 'Duncan Beevers',             'duncanbeevers'
   map 'Duncan Robertson',           "duncan\100whomwah.com"
+  map 'Eddie Cianci',               'defeated'
   map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
   map 'Edward Betts',               "edward\100debian.org"
   map 'Eelco Lempsink',             "rails\10033lc0.net"
