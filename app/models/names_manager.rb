@@ -560,6 +560,7 @@ module NamesManager
   map 'Xavier Shay',                'xaviershay'
   map 'Yehuda Katz',                'wycats'
   map 'Yoji Shidara',               "darashi\100gmail.com"
+  map 'Yonatan Feldman',            "yon\100milliped.com"
   map 'Yurii Rashkovskii',          "yrashk\100gmail.com", "yrashk\100fp.org.ua"
   map 'Zac Williams',               'jzw'
   map 'Zach Dennis',                'zdennis'
