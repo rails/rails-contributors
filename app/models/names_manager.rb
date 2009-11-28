@@ -478,6 +478,7 @@ module NamesManager
   map 'Ryan Bigg',                  'Radar'
   map 'Ryan Davis',                 'zenspider'
   map 'Ryan Daigle',                'rwdaigle'
+  map 'Ryan Davis',                 "ryand-ruby\100zenspider.com"
   map 'Ryan Duryea',                'aguynamedryan'
   map 'Ryan McGeary',               'rmm5t'
   map 'Ryan Raaum',                 "ryan.raaum\100gmail.com"
