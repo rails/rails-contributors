@@ -270,6 +270,7 @@ module NamesManager
   map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
   map 'Gaspard Bucher',             "g.bucher\100teti.ch"
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
+  map 'Geoff Coffey',               'gwcoffey'
   map 'Geoff Garside',              'ggarside'
   map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
   map 'Glen Gibb',                  'grg'
