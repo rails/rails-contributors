@@ -120,6 +120,7 @@ module NamesManager
   map 'Alexander Staubo',           "alex\100purefiction.net", "alex\100byzantine.no"
   map 'Alexey Zatsepin',            'alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
+  map 'Andreas Isaksson',           'isak'
   map 'Andrew A. Smith',            "andy\100tinnedfruit.org"
   map 'Andrew Chase',               'acechase'  
   map 'Andrew Kaspick',             "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
