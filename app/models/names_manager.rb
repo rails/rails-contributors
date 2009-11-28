@@ -170,6 +170,7 @@ module NamesManager
   map 'Choon Keat',                 "choonkeat\100gmail.com", 'choonkeat'
   map 'Chris Brinker',              "chris\100chrisbrinker.com"
   map 'Chris Carter',               "cdcarter\100gmail.com"
+  map 'Chris Hapgood',              'cch1'
   map 'Chris Kampmeier',            'kampers'
   map 'Chris McGrath',              "c.r.mcgrath\100gmail.com", 'c.r.mcgrath', "chris\100octopod.info", 'octopod'
   map 'Chris Mear',                 "chris\100feedmechocolate.com", 'chrismear'
@@ -189,6 +190,7 @@ module NamesManager
   map 'Dan Manges',                 'dcmanges'
   map 'Dan Peterson',               "dpiddy\100gmail.com"
   map 'Dan Sketcher',               "dansketcher\100gmail.com"
+  map 'Dane Jensen',                'careo'
   map 'Daniel Hobe',                "daniel\100nightrunner.com"
   map 'Daniel Morrison',            'danielmorrison'
   map 'Daniel Rodríguez Troitiño',  'drodriguez'
