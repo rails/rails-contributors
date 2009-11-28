@@ -225,6 +225,7 @@ module NamesManager
   map 'Dee Zsombor',                'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
   map 'Deirdre Saoirse',            "deirdre\100deirdre.net"
   map 'DeLynn Berry',               'Delynn', 'DeLynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
+  map 'Derek DeVries',              'devrieda'
   map 'Derrick Spell',              "derrickspell\100cdmplus.com"
   map 'Dirkjan Bussink',            'dbussink'
   map 'Dominic Sisneros',           "dom\100sisna.com"
@@ -405,6 +406,7 @@ module NamesManager
   map 'Mariusz Pękala',             'Arsen7'
   map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
   map 'Mark James',                 "mrj\100bigpond.net.au"
+  map 'Mark Lane',                  'DrMark'
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
   map 'Markus Roberts',             "MarkusQ\100reality.com"
