@@ -285,6 +285,7 @@ module NamesManager
   map 'Hendy Irawan',               'ceefour'
   map 'Henrik Nyh',                 'Henrik N', "henrik\100nyh.se", 'henrik'
   map 'Herryanto Siatono',          'jugend'
+  map 'Hiroshi Saito',              'hiroshi'
   map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
   map 'Ian White',                  "ian.w.white\100gmail.com"
   map 'Isaac Feliu',                'isaacfeliu'
