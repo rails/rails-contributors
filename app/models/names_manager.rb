@@ -224,7 +224,7 @@ module NamesManager
   map 'David Weitzman',             "dweitzman\100gmail.com"
   map 'Dee Zsombor',                'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
   map 'Deirdre Saoirse',            "deirdre\100deirdre.net"
-  map 'DeLynn Berry',               'Delynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
+  map 'DeLynn Berry',               'Delynn', 'DeLynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
   map 'Derrick Spell',              "derrickspell\100cdmplus.com"
   map 'Dirkjan Bussink',            'dbussink'
   map 'Dominic Sisneros',           "dom\100sisna.com"
