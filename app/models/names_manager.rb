@@ -516,6 +516,7 @@ module NamesManager
   map 'Stephen Haberman',           "stephenh\100chase3000.com"
   map 'Stephen Sykes',              'sdsykes'
   map 'Stephen Touset',             "stephen\100touset.org"
+  map 'Stephen Veit',               "sveit\100tradeharbor.com"
   map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
   map 'Steven Bristol',             'stevenbristol'
   map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
