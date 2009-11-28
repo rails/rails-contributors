@@ -358,6 +358,7 @@ module NamesManager
   map 'Kevin Barnes',               "vinbarnes\100gmail.com"
   map 'Kevin Clark',                "Kevin Clark kevin.clark\100gmail.com", "kevin.clark\100gmail.com", "kevin.clark\100gmal.com"
   map 'Kevin Jackson',              "foamdino\100gmail.com"
+  map 'Kevin Smith',                'codebrulee'
   map 'Kevin Watt',                 "kevin\100writesoon.com"
   map 'Kevin Williams',             "kevwil\100gmail.com"
   map 'Kim Shrier',                 "kim\100tinker.com"
