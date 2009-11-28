@@ -499,6 +499,7 @@ module NamesManager
   map 'Sebastian Delmont',          "sd\100notso.net"
   map 'Sebastian Graessl',          'bastilian'
   map 'Sebastian Kanthak',          "sebastian.kanthak\100muehlheim.de", 'sebastian.kanthak', 'skanthak'
+  map 'Sébastien Goetz',            "sebastien\100goetzilla.info"
   map 'Serge Balyuk',               'bgipsy'
   map 'Seth Rasmussen',             'loincloth'
   map 'Shu-yu Guo',                 "arc\100uchicago.edu"
