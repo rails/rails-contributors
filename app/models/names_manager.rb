@@ -460,6 +460,7 @@ module NamesManager
   map 'Peter Michaux',              "petermichaux\100gmail.com"
   map 'Phil Bogle',                 "philbogle\100gmail.com"
   map 'Phil Hagelberg',             "technomancy\100gmail.com"
+  map 'Phil Orwig',                 'cluon'
   map 'Philip Hallstrom',           'phallstrom'
   map 'Philip Ross',                "phil.ross\100gmail.com"
   map 'Philippe April',             "ror\100philippeapril.com"
