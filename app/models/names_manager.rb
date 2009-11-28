@@ -160,6 +160,7 @@ module NamesManager
   map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
   map 'Brad Greenlee',              'bgreenlee'
   map 'Brandon Keepers',            'brandon', "brandon\100opensoul.org"
+  map 'Brent Miller',               'Foliosus'
   map 'Brian Donovan',              'eventualbuddha', "devslashnull\100gmail.com"
   map 'Brian Morearty',             'BMorearty'
   map 'Bruce Williams',             "wbruce\100gmail.com"
