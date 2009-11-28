@@ -145,6 +145,7 @@ module NamesManager
   map 'Brendan Baldwin',            'brendan'
   map 'Brian Egge',                 "brianegge\100yahoo.com"
   map 'Brian Gernhardt',            "benji\100silverinsanity.com"
+  map 'Brian Mattern',              "rephorm\100rephorm.com"
   map 'Bryan Helmkamp',             'brynary'
   map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
   map 'Brad Greenlee',              'bgreenlee'
@@ -465,6 +466,7 @@ module NamesManager
   map 'Robby Russell',              'robbyrussell'
   map 'Roderick van Domburg',       'roderickvd'
   map 'Rodney Ramdas',              "rramdas\100gmail.com"
+  map 'Ron DiFrango',               "rdifrango\100captechventures.com"
   map 'Ross Kaffenberger',          'Ross Kaffenburger'
   map 'Ruben Nine',                 "ruben.nine\100gmail.com"
   map 'Russell Norris',             'RSL'
