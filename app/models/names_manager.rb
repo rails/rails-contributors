@@ -513,6 +513,7 @@ module NamesManager
   map 'Simon Moore',                'saimonmoore'
   map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
   map 'Stefan Kaes',                "skaes\100web.de", 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'
+  map 'Stephen Haberman',           "stephenh\100chase3000.com"
   map 'Stephen Sykes',              'sdsykes'
   map 'Stephen Touset',             "stephen\100touset.org"
   map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
