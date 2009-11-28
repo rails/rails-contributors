@@ -32,7 +32,6 @@ module NamesManager
     schultzr\100gmail.com
     seattle\100rootimage.msu.edu
     thomas\100columbus.rr.com
-    vinbarnes\100gmail.com
     yanowitz-rubyonrails\100quantumfoam.org
     zaitzow\100gmail.com
   )
@@ -352,6 +351,7 @@ module NamesManager
   map 'Ken Barker',                 "ken.barker\100gmail.com"
   map 'Ken Kunz',                   "kennethkunz\100gmail.com"
   map 'Ken Miller',                 "kenneth.miller\100bitfield.net"
+  map 'Kevin Barnes',               "vinbarnes\100gmail.com"
   map 'Kevin Clark',                "Kevin Clark kevin.clark\100gmail.com", "kevin.clark\100gmail.com", "kevin.clark\100gmal.com"
   map 'Kevin Jackson',              "foamdino\100gmail.com"
   map 'Kevin Watt',                 "kevin\100writesoon.com"
