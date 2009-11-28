@@ -209,6 +209,7 @@ module NamesManager
   map 'David Altenburg',            "gensym\100mac.com"
   map 'David Calavera',             'calavera', 'david.calavera'
   map 'David Chelimsky',            'dchelimsky'
+  map 'David Demaree',              'ddemaree'
   map 'David Dollar',               'ddollar'
   map 'David Easley',               "easleydp\100gmail.com"
   map 'David Felstead',             "david.felstead\100gmail.com", "dfelstead\100site5.com"
