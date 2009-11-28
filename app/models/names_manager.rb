@@ -494,6 +494,7 @@ module NamesManager
   map 'Scott Mace',                 "rscottmace\100gmail.com"
   map 'Scott Raymond',              "sco\100scottraymond.net"
   map 'Scott Reilly',               'coffee2code'
+  map 'Sean T Allen',               "sean\100ardismg.com"
   map 'Sebastian Delmont',          "sd\100notso.net"
   map 'Sebastian Graessl',          'bastilian'
   map 'Sebastian Kanthak',          "sebastian.kanthak\100muehlheim.de", 'sebastian.kanthak', 'skanthak'
