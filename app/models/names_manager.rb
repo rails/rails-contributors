@@ -522,6 +522,7 @@ module NamesManager
   map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
   map 'Stian Grytøyr',              "stian\100grytoyr.net"
   map 'Surendra Singhi',            "ssinghi\100kreeti.com"
+  map 'Sven Klemm',                 "sven\100c3d2.de"
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
   map 'Taryn East',                 'taryn'
   map 'Thijs van der Vossen',       'thijsv', "thijs\100vandervossen.net", "thijs\100fngtps.com"
