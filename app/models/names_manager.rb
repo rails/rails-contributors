@@ -258,6 +258,7 @@ module NamesManager
   map 'Evan Weaver',                'evan'
   map 'Evgeny Zislis',              "evgeny.zislis\100gmail.com"
   map 'Fabien Mannessier',          "fabien\100odilat.com"
+  map 'Farley Knight',              'farleyknight'
   map 'Ferdinand Svehla',           "f.svehla\100gmail.com", 'f.svehla'
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
