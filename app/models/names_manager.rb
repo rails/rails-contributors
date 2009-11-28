@@ -485,6 +485,7 @@ module NamesManager
   map 'Ryan Raaum',                 "ryan.raaum\100gmail.com"
   map 'Ryan Tomayko',               "rtomayko\100gmail.com"
   map 'Sam Granieri',               'sjgman9'
+  map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
   map 'Sam Stephenson',             'Sam', 'sam'
   map 'Sandra Metz',                "sandra.metz\100duke.edu"
   map 'Scott Bronson',              'bronson'
