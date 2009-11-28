@@ -44,7 +44,8 @@ module NamesManager
     nbpwie102@sneakemail.com
     nwoods\100mail.com
     nkriege\100hotmail.com
-    pfc.pille@gmx.net
+    pfc.pille\100gmx.net
+    rcolli2\100tampabay.rr.com
   )
 
   ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
