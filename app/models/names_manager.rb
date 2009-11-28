@@ -217,7 +217,7 @@ module NamesManager
   map 'Don Park',                   "don.park\100gmail.com"
   map 'Donald Piret',               "donald.piret\100synergetek.be"
   map 'Dr Nic',                     'drnic'
-  map 'Duane Johnson',              "duane.johnson\100gmail.com"
+  map 'Duane Johnson',              "duane.johnson\100gmail.com", 'canadaduane'
   map 'Duff OMelia',                "dj\100omelia.org"
   map 'Duncan Beevers',             'duncanbeevers'
   map 'Duncan Robertson',           "duncan\100whomwah.com"
