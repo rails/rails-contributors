@@ -31,6 +31,7 @@ module NamesManager
     s.brink\100web.de
     schultzr\100gmail.com
     seattle\100rootimage.msu.edu
+    solo\100gatelys.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
