@@ -272,6 +272,7 @@ module NamesManager
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Garside',              'ggarside'
   map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
+  map 'Glen Gibb',                  'grg'
   map 'Glenn Vanderburg',           'glv'
   map 'Grant Hollingworth',         "grant\100antiflux.org"
   map 'Greg Lappen',                "greg\100lapcominc.com"
