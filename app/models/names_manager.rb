@@ -287,6 +287,7 @@ module NamesManager
   map 'Herryanto Siatono',          'jugend'
   map 'Hiroshi Saito',              'hiroshi'
   map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
+  map 'Indrek Juhkam',              'innu'
   map 'Ian White',                  "ian.w.white\100gmail.com"
   map 'Isaac Feliu',                'isaacfeliu'
   map 'Isaac Reuben',               "isaac\100reuben.com"
