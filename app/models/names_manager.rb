@@ -303,6 +303,7 @@ module NamesManager
   map 'Jamie van Dyke',             'fearoffish'
   map 'Jamie Macey',                "maceywj\100telus.net"
   map 'Jan De Poorter',             'DefV'
+  map 'Jan Krutisch',               'halfbyte'
   map 'Jan Prill',                  "JanPrill\100blauton.de"
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
   map 'Jason Ketterman',            'anshkakashi'
