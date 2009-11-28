@@ -265,6 +265,7 @@ module NamesManager
   map 'Ferdinand Svehla',           "f.svehla\100gmail.com", 'f.svehla'
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
+  map 'Frederico Macedo',           'frederico'
   map 'Gabe da Silveira',           'dasil003'
   map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
   map 'Gaspard Bucher',             "g.bucher\100teti.ch"
@@ -421,6 +422,7 @@ module NamesManager
   map 'Mathieu Jobin',              "somekool\100gmail.com"
   map 'Mats Persson',               "mats\100imediatec.co.uk"
   map 'Matt Aimonetti',             'matt'
+  map 'Matt Freels',                'freels'
   map 'Matt Margolis',              "matt\100mattmargolis.net"
   map 'Matt Mower',                 "self\100mattmower.com"
   map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
