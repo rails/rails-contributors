@@ -130,6 +130,7 @@ module NamesManager
   map 'Anup Narkhede',              'railsbob'
   map 'Ariejan de Vroom',           'ariejan'
   map 'Arthur Zapparoli',           'arthurgeek'
+  map 'Ashley Moran',               "work\100ashleymoran.me.uk"
   map 'Ask Bjørn Hansen',           "ask\100develooper.com"
   map 'Assaf Arkin',                "assaf.arkin\100gmail.com", 'Assaf'
   map 'August Zajonc',              "augustz\100augustz.com"
