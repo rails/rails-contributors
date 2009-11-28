@@ -31,7 +31,6 @@ module NamesManager
     s.brink\100web.de
     schultzr\100gmail.com
     seattle\100rootimage.msu.edu
-    solo\100gatelys.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
@@ -50,6 +49,7 @@ module NamesManager
     nkriege\100hotmail.com
     pfc.pille\100gmx.net
     rcolli2\100tampabay.rr.com
+    solo\100gatelys.com
   )
 
   ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
