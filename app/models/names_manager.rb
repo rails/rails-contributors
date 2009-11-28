@@ -34,7 +34,6 @@ module NamesManager
     thomas\100columbus.rr.com
     vinbarnes\100gmail.com
     yanowitz-rubyonrails\100quantumfoam.org
-    zachary\100panandscan.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
@@ -55,6 +54,7 @@ module NamesManager
     rcolli2\100tampabay.rr.com
     solo\100gatelys.com
     starr\100starrnhorne.com
+    zachary\100panandscan.com
   )
 
   ADDRESSES_WHOSE_CONTRIBUTOR_PREFER_TO_REMAIN_UNRESOLVED = %W(
