@@ -480,6 +480,7 @@ module NamesManager
   map 'Ryan Daigle',                'rwdaigle'
   map 'Ryan Duryea',                'aguynamedryan'
   map 'Ryan McGeary',               'rmm5t'
+  map 'Ryan Raaum',                 "ryan.raaum\100gmail.com"
   map 'Ryan Tomayko',               "rtomayko\100gmail.com"
   map 'Sam Granieri',               'sjgman9'
   map 'Sam Stephenson',             'Sam', 'sam'
