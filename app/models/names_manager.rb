@@ -252,7 +252,8 @@ module NamesManager
   map 'Erik Terpstra',              "erik\100ruby-lang.nl"
   map 'Erlend Halvorsen',           "ehalvorsen+rails\100runbox.com"
   map 'Ernesto Jimenez',            'ernesto.jimenez'
-  map 'Esad Hajdarevic',            "esad\100esse.at"
+  map 'Esad Hajdarevic',            "esad\100esse.at", 'esad'
+  map 'Evan DiBiase',               'edibiase'
   map 'Evan Henshaw-Plath',         "evan\100protest.net"
   map 'Evan Weaver',                'evan'
   map 'Evgeny Zislis',              "evgeny.zislis\100gmail.com"
