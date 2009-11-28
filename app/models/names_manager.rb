@@ -194,6 +194,7 @@ module NamesManager
   map 'David Felstead',             "david.felstead\100gmail.com", "dfelstead\100site5.com"
   map 'David Heinemeier Hansson',   'DHH'
   map 'David Morton',               "mortonda\100dgrmm.net"
+  map 'David Roetzel',              "rails\100roetzel.de"
   map 'David Rose',                 "doppler\100gmail.com"
   map 'David Rupp',                 "david\100ruppconsulting.com"
   map 'David Weitzman',             "dweitzman\100gmail.com"
