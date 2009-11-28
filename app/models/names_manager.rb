@@ -165,9 +165,11 @@ module NamesManager
   map 'Bruno Miranda',              'brupm'
   map 'Caio Chassot',               'caio', "k\100v2studio.com"
   map 'Caleb Tennis',               "caleb\100aei-tech.com"
+  map 'Calvin Yu',                  'cyu'
   map 'Cesar Ho',                   'codafoo'
   map 'Chad Pytel',                 'cpytel'
   map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
+  map 'Chas Grundy',                'chas'
   map 'Cheah Chu Yeow',             'Chu Yeow', 'chuyeow'
   map 'Choon Keat',                 "choonkeat\100gmail.com", 'choonkeat'
   map 'Chris Brinker',              "chris\100chrisbrinker.com"
@@ -181,6 +183,7 @@ module NamesManager
   map 'Chris Wanstrath',            "chris\100ozmm.org"
   map 'Chriztian Steinmeier',       "chriztian.steinmeier\100gmail.com"
   map 'Clifford Heath',             'cjheath'
+  map 'Clifford T. Matthews',       'ctm'
   map 'Coda Hale',                  'codahale'
   map 'Cody Fauser',                "codyfauser\100gmail.com"
   map 'Courtenay Gasking',          'court3nay', 'courtenay', "court3nay\100gmail.com"
