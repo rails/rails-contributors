@@ -564,6 +564,7 @@ module NamesManager
   map 'Yurii Rashkovskii',          "yrashk\100gmail.com", "yrashk\100fp.org.ua"
   map 'Zac Williams',               'jzw'
   map 'Zach Dennis',                'zdennis'
+  map 'Zachary Holt',               "z\100wzph.com"
   map 'Zack Chandler',              'zackchandler'
 
   # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
