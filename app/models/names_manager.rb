@@ -553,6 +553,7 @@ module NamesManager
   map 'Wesley Moxam',               'wmoxam'
   map 'Will Bryant',                'will.bryant'
   map 'Wilson Bilkovich',           "wilsonb\100gmail.com"
+  map 'Wolfgang Klinger',           "wolfgang\100stufenlos.net"
   map 'Xavier Noria',               'fxn'
   map 'Xavier Shay',                'xaviershay'
   map 'Yehuda Katz',                'wycats'
