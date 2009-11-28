@@ -32,6 +32,7 @@ module NamesManager
     schultzr\100gmail.com
     seattle\100rootimage.msu.edu
     thomas\100columbus.rr.com
+    vinbarnes\100gmail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
