@@ -30,6 +30,7 @@ module NamesManager
     rails-bug\100owl.me.uk
     s.brink\100web.de
     schultzr\100gmail.com
+    seattle\100rootimage.msu.edu
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
