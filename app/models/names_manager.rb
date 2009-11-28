@@ -258,6 +258,7 @@ module NamesManager
   map 'Guy Naor',                   "guy.naor\100famundo.com"
   map 'Hampton Catlin',             "hcatlin\100gmail.com"
   map 'Hendrik Mans',               "hendrik\100mans.de"
+  map 'Hendy Irawan',               'ceefour'
   map 'Henrik Nyh',                 'Henrik N', "henrik\100nyh.se", 'henrik'
   map 'Herryanto Siatono',          'jugend'
   map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
