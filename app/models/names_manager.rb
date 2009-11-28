@@ -29,6 +29,7 @@ module NamesManager
     rails.20.clarry\100spamgourmet.com
     rails-bug\100owl.me.uk
     s.brink\100web.de
+    schultzr\100gmail.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
