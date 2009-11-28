@@ -31,6 +31,7 @@ module NamesManager
     s.brink\100web.de
     schultzr\100gmail.com
     seattle\100rootimage.msu.edu
+    starr\100starrnhorne.com
   )
 
   # I've sent an email to these addresses, and got some sort of error back.
@@ -44,7 +45,7 @@ module NamesManager
     dev.rubyonrails\100maxdunn.com
     kdole\100tamu.edu
     mklame\100atxeu.com
-    nbpwie102@sneakemail.com
+    nbpwie102\100sneakemail.com
     nwoods\100mail.com
     nkriege\100hotmail.com
     pfc.pille\100gmx.net
@@ -375,7 +376,7 @@ module NamesManager
   map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
   map 'Maik Schmidt',               "contact\100maik-schmidt.de"
   map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
-  map 'Manuel Holtgrewe',           "purestorm@ggnore.net"
+  map 'Manuel Holtgrewe',           "purestorm\100ggnore.net"
   map 'Marc Love',                  'marclove'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
   map 'Marcin Szczepański',         "marcin\100junkheap.net"
@@ -435,7 +436,7 @@ module NamesManager
   map 'Norman Elton',               "normelton\100gmail.com"
   map 'Obie Fernandez',             'ObieFernandez'
   map 'okkez',                      "okkez000\100gmail.com"
-  map 'Oleg Frolov',                "oleg.frolov@gmail.com"
+  map 'Oleg Frolov',                "oleg.frolov\100gmail.com"
   map 'Oleg Pudeyev',               "pudeyo\100rpi.com"
   map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
   map 'Pascal Terjan',              "pterjan\100mandriva.com"
@@ -621,7 +622,7 @@ module NamesManager
         # Added ActionController::Translation module delegating to I18n #translate/#t and #localize/#l [status:committed #1008]
         nil
       when /\A#https/
-        # Signed-off-by: Michael Koziarski <michael@koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
+        # Signed-off-by: Michael Koziarski <michael\100koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
         nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
