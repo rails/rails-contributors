@@ -504,6 +504,7 @@ module NamesManager
   map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr"
   map 'Murray Steele',              'h-lame'
   map 'Nathan Weizenbaum',          'Nex3'
+  map 'Neil Wilson',                'NeilW'
   map 'Nicholas Lee',               "emptysands\100gmail.com"
   map 'Nicholas Seckar',            'Ulysses'
   map 'Nick Kallen',                'nkallen'
