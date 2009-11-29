@@ -66,7 +66,6 @@ module NamesManager
     # I sent an internal message to these people asking for confirmation or full names.
     WAITING_FOR = %w(
       amishyn
-      Andreas
       blackanger
       dacat
       dan
@@ -96,7 +95,8 @@ module NamesManager
       'adam',
       'alex',
       'Caleb', # but wrote to Caleb Tennis, waiting for
-      'jamesh'
+      'jamesh',
+      'Andreas'
     ]
   end
 
@@ -600,6 +600,7 @@ module NamesManager
   map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
   map 'Olly Headey',                'lylo'
   map 'Otto Hilska',                'mutru'
+  map 'Pascal Belloncle',           'psq'
   map 'Pascal Terjan',              "pterjan\100mandriva.com"
   map 'Pat Maddox',                 "pergesu\100gmail.com"
   map 'Patrick Burleson',           'pburleson', "pburleson\100gmail.com"
@@ -744,6 +745,7 @@ module NamesManager
   map 'Will Harris',                'wharris'
   map 'Wilson Bilkovich',           "wilsonb\100gmail.com"
   map 'Wolfgang Klinger',           "wolfgang\100stufenlos.net"
+  map 'Xavier Defrang',             'xavier'
   map 'Xavier Noria',               'fxn'
   map 'Xavier Shay',                'xaviershay'
   map 'Yehuda Katz',                'wycats'
