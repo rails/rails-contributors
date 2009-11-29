@@ -370,6 +370,7 @@ module NamesManager
   map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"
   map 'Jonathan Weiss',             'jweiss'
   map 'Jonathan Younger',           "jonathan\100daikini.com"
+  map 'Joost Hietbrink',            'joost'
   map 'Jordan McKible',             "jmckible\100gmail.com"
   map 'Jordi Bunster',              'jordi'
   map 'Jørgen Orehøj Erichsen',     'joerichsen'
