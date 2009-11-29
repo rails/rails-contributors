@@ -621,6 +621,7 @@ module NamesManager
   map 'Sébastien Goetz',            "sebastien\100goetzilla.info"
   map 'Serge Balyuk',               'bgipsy'
   map 'Sergey Kojin',               "sergeykojin\100gmail.com"
+  map 'Seth Ladd',                  'sethladd'
   map 'Seth Rasmussen',             'loincloth'
   map 'Shu-yu Guo',                 "arc\100uchicago.edu"
   map 'Shugo Maeda',                'shugo', "shugo\100ruby-lang.org"
