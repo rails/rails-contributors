@@ -346,6 +346,7 @@ module NamesManager
   map 'John Barnette',              'jbarnette'
   map 'John Nunemaker',             "nunemaker\100gmail.com"
   map 'John Sheets',                "dev\100metacasa.net", "jsheets"
+  map 'John Wells',                 'jbwiv'
   map 'John Wilger',                'jwilger'
   map 'Jon Bright',                 "jon\100siliconcircus.com"
   map 'Jon Evans',                  "jon.evans\100pobox.com", 'evansj'
