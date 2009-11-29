@@ -353,6 +353,7 @@ module NamesManager
   map 'Jesse Merriman',             "jessemerriman\100warpmail.net"
   map 'Jim Helm',                   "perlguy\100gmail.com"
   map 'Jim Hughes',                 'jeem'
+  map 'Jim Meyer',                  'purp'
   map 'Jim Winstead',               "jimw\100mysql.com"
   map 'Joe Ferris',                 'jferris'
   map 'Joe Goldwasser',             "joe\100mjg2.com"
