@@ -436,6 +436,7 @@ module NamesManager
   map 'Luca Guidi',                 'l.guidi'
   map 'Lugovoi Nikolai',            "meadow.nnick\100gmail.com"
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
+  map 'Luke Ludwig',                'lukeludwig'
   map 'Luke Redpath',               "contact\100lukeredpath.co.uk"
   map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
   map 'Maik Schmidt',               "contact\100maik-schmidt.de"
