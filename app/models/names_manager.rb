@@ -370,6 +370,7 @@ module NamesManager
   map 'Jonathan Younger',           "jonathan\100daikini.com"
   map 'Jordan McKible',             "jmckible\100gmail.com"
   map 'Jordi Bunster',              'jordi'
+  map 'Jørgen Orehøj Erichsen',     'joerichsen'
   map 'José Valim',                 'josevalim'
   map 'Joseph A. Martin',           "jmartin\100desertflood.com"
   map 'Joseph Hosteny',             "jhosteny\100mac.com"
