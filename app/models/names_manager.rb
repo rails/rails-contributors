@@ -298,6 +298,7 @@ module NamesManager
   map 'Jakob Skjerning',            'Jakob S', "jakob\100mentalized.net"
   map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
   map 'James Adam',                 'lazyatom', "james.adam\100gmail.com"
+  map 'James Conroy-Finn',          'jcf'
   map 'James Cox',                  'imajes'
   map 'James Edward Gray II',       "james\100grayproductions.net"
   map 'James Mead',                 'floehopper'
