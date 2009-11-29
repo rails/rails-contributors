@@ -72,7 +72,6 @@ module NamesManager
       dan
       David
       ian
-      jamesh
       jerome
       jonathan
       Kane
@@ -84,7 +83,8 @@ module NamesManager
     
     COMMITS_ARE_NOT_THEIRS = [
       'Caleb', # but wrote to Caleb Tennis, waiting for
-      'adam'
+      'adam',
+      'jamesh'
     ]
   end
 
