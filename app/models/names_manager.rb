@@ -314,6 +314,7 @@ module NamesManager
   map 'Jan De Poorter',             'DefV'
   map 'Jan Krutisch',               'halfbyte'
   map 'Jan Prill',                  "JanPrill\100blauton.de"
+  map 'Jan Schwenzien',             'jeanmartin'
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
   map 'Jason Ketterman',            'anshkakashi'
   map 'Jason L Perry',              'ambethia'
