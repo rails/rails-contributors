@@ -465,6 +465,7 @@ module NamesManager
   map 'Matt Aimonetti',             'matt'
   map 'Matt Bauer',                 'mattbauer'
   map 'Matt Freels',                'freels'
+  map 'Matt Lyon',                  'mattly'
   map 'Matt Margolis',              "matt\100mattmargolis.net"
   map 'Matt Mower',                 "self\100mattmower.com"
   map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
