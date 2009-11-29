@@ -79,11 +79,23 @@ module NamesManager
       krishna
       mat
       Paul
+      robby
+      Scott
+      seth
+      shane
+      steve
+      sur
+      tom
+      trans
+      trevor
+      wilson
+      xavier
     )
     
-    COMMITS_ARE_NOT_THEIRS = [
-      'Caleb', # but wrote to Caleb Tennis, waiting for
+    NOT_THEM = [
       'adam',
+      'alex',
+      'Caleb', # but wrote to Caleb Tennis, waiting for
       'jamesh'
     ]
   end
