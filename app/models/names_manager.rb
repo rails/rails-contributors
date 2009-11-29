@@ -350,6 +350,7 @@ module NamesManager
   map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans', "jeremye\100bsa.ca.gov", "code\100jeremyevans.net"
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy Hopple',              "jeremy\100jthopple.com"
+  map 'Jeremy Lightsmith',          'stellsmi'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
   map 'Jeremy Voorhis',             "jeremy\100planetargon.com", 'jvoorhis'
   map 'Jerrett Taylor',             "jerrett\100bravenet.com"
