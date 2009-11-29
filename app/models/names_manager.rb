@@ -438,6 +438,7 @@ module NamesManager
   map 'Lee Jensen',                 'outerim'
   map 'Lee Marlow',                 'lmarlow', "lmarlow\100yahoo.com"
   map "Lee O'Mara",                 "lee\100omara.ca"
+  map 'Lennon Day-Reynolds',        'rcoder'
   map 'Leon Breedt',                'Leon Bredt'
   map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
   map 'Lon Baker',                  "lon\100speedymac.com"
