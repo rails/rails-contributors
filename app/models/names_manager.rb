@@ -532,6 +532,7 @@ module NamesManager
   map 'Nicholas Lee',               "emptysands\100gmail.com"
   map 'Nicholas Seckar',            'Ulysses'
   map 'Nick Kallen',                'nkallen'
+  map 'Nick Plante',                'zapnap'
   map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
   map 'Nicolas Cavigneaux',         'Bounga'
   map 'Nicolas Pouillard',          "nicolas.pouillard\100gmail.com"
