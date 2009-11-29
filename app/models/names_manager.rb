@@ -401,8 +401,7 @@ module NamesManager
   map 'Karel Miarka',               "kajism\100yahoo.com"
   map 'Karel Minařík',              'karmi'
   map 'Kaspar Schiess',             "eule\100space.ch"
-  map 'Kazuhiko',                   "kazuhiko\100fdiary.net"
-  map 'Kazuhiro Yoshdia',           "moriq\100moriq.com"
+  map 'Kazuhiro Yoshdia',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
   map 'Keegan Quinn',               "keegan\100thebasement.org"
   map 'Keith Morrison',             "keithm\100infused.org"
   map 'Ken Barker',                 "ken.barker\100gmail.com"
