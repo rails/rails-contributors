@@ -522,6 +522,7 @@ module NamesManager
   map 'Oleg Pudeyev',               "pudeyo\100rpi.com"
   map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
   map 'Olly Headey',                'lylo'
+  map 'Otto Hilska',                'mutru'
   map 'Pascal Terjan',              "pterjan\100mandriva.com"
   map 'Pat Maddox',                 "pergesu\100gmail.com"
   map 'Patrick Hurley',             "phurley\100gmail.com"
