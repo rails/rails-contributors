@@ -222,6 +222,7 @@ module NamesManager
   map 'David Chelimsky',            'dchelimsky'
   map 'David Demaree',              'ddemaree'
   map 'David Dollar',               'ddollar'
+  map 'David E. Wheeler',           'Theory'
   map 'David Easley',               "easleydp\100gmail.com"
   map 'David Felstead',             "david.felstead\100gmail.com", "dfelstead\100site5.com"
   map 'David Heinemeier Hansson',   'DHH'
