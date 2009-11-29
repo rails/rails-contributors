@@ -103,6 +103,7 @@ module NamesManager
   map 'Aaron Namba',                'anamba'
   map 'Aaron Pfeifer',              'obrie'
   map 'Abhay Kumar',                'abhay'
+  map 'Adam Johnson',               'adamj'
   map 'Adam Kramer',                "adam\100the-kramers.net"
   map 'Adam Majer',                 "adamm\100galacticasoftware.com"
   map 'Adam Milligan',              'pivotal'
