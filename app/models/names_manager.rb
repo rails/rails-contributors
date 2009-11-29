@@ -463,6 +463,7 @@ module NamesManager
   map 'Mathieu Jobin',              "somekool\100gmail.com"
   map 'Mats Persson',               "mats\100imediatec.co.uk"
   map 'Matt Aimonetti',             'matt'
+  map 'Matt Bauer',                 'mattbauer'
   map 'Matt Freels',                'freels'
   map 'Matt Margolis',              "matt\100mattmargolis.net"
   map 'Matt Mower',                 "self\100mattmower.com"
