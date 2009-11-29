@@ -568,6 +568,7 @@ module NamesManager
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
   map 'Rein Henrichs',              "ReinH"
   map "Remco van 't Veer",          'remvee'
+  map 'Remy Sharp',                 'remy'
   map 'Rick Bradley',               "rick\100rickbradley.com"
   map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
   map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
