@@ -429,6 +429,7 @@ module NamesManager
   map 'Leon Breedt',                'Leon Bredt'
   map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
   map 'Lon Baker',                  "lon\100speedymac.com"
+  map 'Lori Holden',                'lholden'
   map 'Louis St-Amour',             "LouisStAmour\100gmail.com"
   map 'Luca Guidi',                 'l.guidi'
   map 'Lugovoi Nikolai',            "meadow.nnick\100gmail.com"
@@ -624,6 +625,7 @@ module NamesManager
   map 'Yehuda Katz',                'wycats'
   map 'Yoji Shidara',               "darashi\100gmail.com"
   map 'Yonatan Feldman',            "yon\100milliped.com"
+  map 'Yuri Leikind',               'leikind'
   map 'Yurii Rashkovskii',          "yrashk\100gmail.com", "yrashk\100fp.org.ua"
   map 'Zac Williams',               'jzw'
   map 'Zach Dennis',                'zdennis'
