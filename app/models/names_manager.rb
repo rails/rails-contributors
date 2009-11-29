@@ -393,6 +393,7 @@ module NamesManager
   map 'Kamal Fariz Mahyuddin',      'kamal'
   map 'Kamil Kukura',               'kamk'
   map 'Karel Miarka',               "kajism\100yahoo.com"
+  map 'Karel Minařík',              'karmi'
   map 'Kaspar Schiess',             "eule\100space.ch"
   map 'Kazuhiko',                   "kazuhiko\100fdiary.net"
   map 'Kazuhiro Yoshdia',           "moriq\100moriq.com"
