@@ -234,6 +234,7 @@ module NamesManager
   map 'DeLynn Berry',               'Delynn', 'DeLynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
   map 'Derek DeVries',              'devrieda'
   map 'Derrick Spell',              "derrickspell\100cdmplus.com"
+  map 'Dick Davies',                'rasputnik'
   map 'Dieter Komendera',           'kommen'
   map 'Dirkjan Bussink',            'dbussink'
   map 'Dominic Sisneros',           "dom\100sisna.com"
