@@ -597,6 +597,7 @@ module NamesManager
   map 'Ryan Daigle',                'rwdaigle'
   map 'Ryan Davis',                 "ryand-ruby\100zenspider.com"
   map 'Ryan Duryea',                'aguynamedryan'
+  map 'Ryan Heath',                 'rpheath'
   map 'Ryan McGeary',               'rmm5t'
   map 'Ryan Raaum',                 "ryan.raaum\100gmail.com"
   map 'Ryan Tomayko',               "rtomayko\100gmail.com"
