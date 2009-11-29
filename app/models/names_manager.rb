@@ -535,6 +535,7 @@ module NamesManager
   map 'Otto Hilska',                'mutru'
   map 'Pascal Terjan',              "pterjan\100mandriva.com"
   map 'Pat Maddox',                 "pergesu\100gmail.com"
+  map 'Patrick Burleson',           'pburleson'
   map 'Patrick Hurley',             "phurley\100gmail.com"
   map 'Patrick Joyce',              "patrick.t.joyce"
   map 'Patrick Lenz',               "patrick\100lenz.sh"
