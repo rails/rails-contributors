@@ -684,6 +684,7 @@ module NamesManager
   map 'Tyler Kovacs',               "tyler.kovacs\100gmail.com"
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
   map 'Vitaly Kushner',             'vitaly'
+  map 'Vlad Romascanu',             'vladr'
   map 'Wesley Moxam',               'wmoxam'
   map 'Will Bryant',                'will.bryant'
   map 'Wilson Bilkovich',           "wilsonb\100gmail.com"
