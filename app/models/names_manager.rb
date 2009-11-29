@@ -254,6 +254,7 @@ module NamesManager
   map 'Duff OMelia',                "dj\100omelia.org"
   map 'Duncan Beevers',             'duncanbeevers'
   map 'Duncan Robertson',           "duncan\100whomwah.com"
+  map 'Eaden McKee',                'eadz'
   map 'Eddie Cianci',               'defeated'
   map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
   map 'Edward Betts',               "edward\100debian.org"
