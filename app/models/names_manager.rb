@@ -177,6 +177,7 @@ module NamesManager
   map 'Chad Humphries',             'spicycode'
   map 'Chad Ingram',                'matrix9180'
   map 'Chad Pytel',                 'cpytel'
+  map 'Chad Woolley',               'thewoolleyman'
   map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
   map 'Chas Grundy',                'chas'
   map 'Cheah Chu Yeow',             'Chu Yeow', 'chuyeow'
