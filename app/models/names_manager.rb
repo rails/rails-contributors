@@ -289,6 +289,7 @@ module NamesManager
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Coffey',               'gwcoffey'
   map 'Geoff Garside',              'ggarside'
+  map 'Geoffrey Grosenbach',        'topfunky'
   map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
   map 'Glen Gibb',                  'grg'
   map 'Glenn Vanderburg',           'glv'
