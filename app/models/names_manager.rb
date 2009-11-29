@@ -625,6 +625,7 @@ module NamesManager
   map 'Seth Rasmussen',             'loincloth'
   map 'Shu-yu Guo',                 "arc\100uchicago.edu"
   map 'Shugo Maeda',                'shugo', "shugo\100ruby-lang.org"
+  map 'Si Jobling',                 'Si'
   map 'Simon Arnaud',               "maznawak\100nerim.net"
   map 'Simon Harris',               "simon\100redhillconsulting.com.au"
   map 'Simon Moore',                'saimonmoore'
