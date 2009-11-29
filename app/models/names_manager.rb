@@ -690,6 +690,7 @@ module NamesManager
   map 'Wes Gamble',                 'weyus'
   map 'Wesley Moxam',               'wmoxam'
   map 'Will Bryant',                'will.bryant'
+  map 'Will Harris',                'wharris'
   map 'Wilson Bilkovich',           "wilsonb\100gmail.com"
   map 'Wolfgang Klinger',           "wolfgang\100stufenlos.net"
   map 'Xavier Noria',               'fxn'
