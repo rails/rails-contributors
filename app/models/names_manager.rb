@@ -415,6 +415,7 @@ module NamesManager
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de", "murpyh\100rubychan.de"
   map 'Kouhei Sutou',               'kou'
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
+  map 'Kubo Takehiro',              'kubo'
   map 'Kyosuke Morohashi',          'moro'
   map 'Lakshan Perera',             'laktek', 'lakshan'
   map 'Larry Williams',             "larrywilliams1\100gmail.com"
