@@ -574,7 +574,7 @@ module NamesManager
   map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
   map 'Rizwan Reza',                'rizwanreza'
   map 'Robert Evans',               'revans'
-  map 'RSL',                        'rsl', 'Russell Norris'
+  map 'Russell Norris',             'rsl', 'RSL'
   map 'Rob Anderton',               'Rob'
   map 'Rob Biedenharn',             'rabiedenharn', "Rob\100AgileConsultingLLC.com"
   map 'Rob Halff',                  "info\100rhalff.com"
