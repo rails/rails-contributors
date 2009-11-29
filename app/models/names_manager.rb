@@ -687,6 +687,7 @@ module NamesManager
   map 'Vitaly Kushner',             'vitaly'
   map 'Vlad Romascanu',             'vladr'
   map 'Wang Chun',                  'wangchun'
+  map 'Wes Gamble',                 'weyus'
   map 'Wesley Moxam',               'wmoxam'
   map 'Will Bryant',                'will.bryant'
   map 'Wilson Bilkovich',           "wilsonb\100gmail.com"
