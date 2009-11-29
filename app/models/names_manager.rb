@@ -101,6 +101,7 @@ module NamesManager
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
   map 'Aaron Namba',                'anamba'
+  map 'Aaron Pfeifer',              'obrie'
   map 'Abhay Kumar',                'abhay'
   map 'Adam Kramer',                "adam\100the-kramers.net"
   map 'Adam Majer',                 "adamm\100galacticasoftware.com"
