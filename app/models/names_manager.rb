@@ -543,6 +543,7 @@ module NamesManager
   map 'Paul Butcher',               "paul\100paulbutcher.com"
   map 'Paul Smith',                 "paul\100cnt.org"
   map 'pburleson',                  "pburleson\100gmail.com"
+  map 'Pelle Braendgaard',          'pelle'
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
   map 'Perry Smith',                'pedz'
   map 'Pete Yandell',               'notahat'
