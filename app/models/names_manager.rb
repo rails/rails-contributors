@@ -560,7 +560,7 @@ module NamesManager
   map 'Peter Michaux',              "petermichaux\100gmail.com"
   map 'Peter Williams',             'pezra'
   map 'Phil Bogle',                 "philbogle\100gmail.com"
-  map 'Phil Hagelberg',             "technomancy\100gmail.com"
+  map 'Phil Hagelberg',             "technomancy\100gmail.com", 'technomancy'
   map 'Phil Orwig',                 'cluon'
   map 'Philip Hallstrom',           'phallstrom'
   map 'Philip Ross',                "phil.ross\100gmail.com"
