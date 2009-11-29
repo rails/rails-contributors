@@ -509,6 +509,7 @@ module NamesManager
   map 'Oleg Frolov',                "oleg.frolov\100gmail.com"
   map 'Oleg Pudeyev',               "pudeyo\100rpi.com"
   map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
+  map 'Olly Headey',                'lylo'
   map 'Pascal Terjan',              "pterjan\100mandriva.com"
   map 'Pat Maddox',                 "pergesu\100gmail.com"
   map 'Patrick Hurley',             "phurley\100gmail.com"
