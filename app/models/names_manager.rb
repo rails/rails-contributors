@@ -594,7 +594,7 @@ module NamesManager
   map 'Ruy Asan',                   'rubyruy'
   map 'Ryan Bates',                 'ryanb'
   map 'Ryan Bigg',                  'Radar'
-  map 'Ryan Davis',                 'zenspider'
+  map 'Ryan Davis',                 'zenspider', 'ryepup'
   map 'Ryan Daigle',                'rwdaigle'
   map 'Ryan Davis',                 "ryand-ruby\100zenspider.com"
   map 'Ryan Duryea',                'aguynamedryan'
