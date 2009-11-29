@@ -456,6 +456,7 @@ module NamesManager
   map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
   map 'Mark James',                 "mrj\100bigpond.net.au"
   map 'Mark Lane',                  'DrMark'
+  map 'Mark R. James',              'mrj'
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
   map 'Markus Roberts',             "MarkusQ\100reality.com"
