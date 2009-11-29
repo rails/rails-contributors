@@ -114,7 +114,7 @@ module NamesManager
   map 'alancfrancis',               "alancfrancis\100gmail.com"
   map 'Alex Chaffee',               'alexch'
   map 'Alex Pooley',                "alex\100msgpad.com"
-  map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com"
+  map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com", 'Squeegy'
   map 'Alex Wolfe',                 "alexkwolfe\100gmail.com"
   map 'Alexander Borovsky',         "alex.borovsky\100gmail.com"
   map 'Alexander Dymo',             'adymo', "dymo\100mk.ukrtelecom.ua"
