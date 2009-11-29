@@ -343,6 +343,7 @@ module NamesManager
   map 'Jim Helm',                   "perlguy\100gmail.com"
   map 'Jim Hughes',                 'jeem'
   map 'Jim Winstead',               "jimw\100mysql.com"
+  map 'Joe Ferris',                 'jferris'
   map 'Joe Goldwasser',             "joe\100mjg2.com"
   map 'Joerg Diekmann',             "joergd\100pobox.com"
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen', "johan\100johansorensen.com", "johan\100textdrive.com"
