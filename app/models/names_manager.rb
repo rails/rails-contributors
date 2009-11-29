@@ -659,6 +659,7 @@ module NamesManager
   map 'Thijs van der Vossen',       'thijsv', "thijs\100vandervossen.net", "thijs\100fngtps.com"
   map 'Thomas Enebo',               "tom.enebo\100gmail.com"
   map 'Thomas Fuchs',               "thomas\100fesch.at", 'madrobby'
+  map 'Thomas Watson Steen',        'watson'
   map 'Tiago Macedo',               'tmacedo'
   map 'Tieg Zaharia',               'tzaharia'
   map 'Tietew',                     "tietew\100tietew.net"
