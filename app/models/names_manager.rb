@@ -224,6 +224,7 @@ module NamesManager
   map 'David Heinemeier Hansson',   'DHH'
   map 'David Morton',               "mortonda\100dgrmm.net"
   map 'David N. Welton',            'davidw'
+  map 'David Raynes',               'rayners'
   map 'David Rice',                 'davidjrice'
   map 'David Roetzel',              "rails\100roetzel.de"
   map 'David Rose',                 "doppler\100gmail.com"
