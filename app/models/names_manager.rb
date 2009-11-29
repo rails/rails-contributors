@@ -587,6 +587,7 @@ module NamesManager
   map 'Sam Stephenson',             'Sam', 'sam'
   map 'Sandra Metz',                "sandra.metz\100duke.edu"
   map 'Scott Bronson',              'bronson'
+  map 'Scott Fleckenstein',         'nullstyle'
   map 'Scott Laird',                "scott\100sigkill.org"
   map 'Scott Mace',                 "rscottmace\100gmail.com"
   map 'Scott Raymond',              "sco\100scottraymond.net"
