@@ -369,6 +369,7 @@ module NamesManager
   map 'Josh Peek',                  'josh', 'Josh', 'Joshua Peek', 'joshpeek', "josh\100joshpeek.com"
   map 'Josh Starcher',              "josh.starcher\100gmail.com"
   map 'Josh Susser',                'hasmanyjosh', "josh\100hasmanythrough.com"
+  map 'Joshua Wehner',              'jaw6'
   map 'Joshua Sierles',             'jsierles'
   map 'Juanjo Bazan',               'juanjo.bazan'
   map 'Julian Doherty',             'madlep'
