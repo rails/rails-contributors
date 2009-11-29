@@ -216,6 +216,7 @@ module NamesManager
   map 'Daniel Wanja',               "daniel\100nouvelles-solutions.com"
   map 'Dave Dribin',                "dave-ml\100dribin.org"
   map 'Dave Lee',                   "dave\100cherryville.org"
+  map 'Dave Murphy',                'Wintermute'
   map 'Dave Naffis',                'naffis'
   map 'Dave Thomas',                "dave\100pragprog.com", 'pragdave'
   map 'David A. Black',             'dblack', "dblack\100wobblini.net"
