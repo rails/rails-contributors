@@ -351,6 +351,7 @@ module NamesManager
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen', "johan\100johansorensen.com", "johan\100textdrive.com"
   map 'Johannes Barre',             'iGEL'
   map 'John Barnette',              'jbarnette'
+  map 'John Mettraux',              'jmettraux'
   map 'John Nunemaker',             "nunemaker\100gmail.com"
   map 'John Sheets',                "dev\100metacasa.net", "jsheets"
   map 'John Wells',                 'jbwiv'
