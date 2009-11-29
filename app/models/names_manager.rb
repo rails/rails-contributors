@@ -610,6 +610,7 @@ module NamesManager
   map 'Scott Fleckenstein',         'nullstyle'
   map 'Scott Laird',                "scott\100sigkill.org"
   map 'Scott Mace',                 "rscottmace\100gmail.com"
+  map 'Scott Meade',                'smeade'
   map 'Scott Raymond',              "sco\100scottraymond.net"
   map 'Scott Reilly',               'coffee2code'
   map 'Scott Schram',               'ScottSchram'
