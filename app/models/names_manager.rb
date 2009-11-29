@@ -391,6 +391,7 @@ module NamesManager
   map 'Justin French',              'justinfrench'
   map 'Justin Mecham',              "justin\100aspect.net"
   map 'Kamal Fariz Mahyuddin',      'kamal'
+  map 'Kamil Kukura',               'kamk'
   map 'Karel Miarka',               "kajism\100yahoo.com"
   map 'Kaspar Schiess',             "eule\100space.ch"
   map 'Kazuhiko',                   "kazuhiko\100fdiary.net"
