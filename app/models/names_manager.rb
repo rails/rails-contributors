@@ -277,6 +277,7 @@ module NamesManager
   map 'Farzad Farid',               'farzy'
   map 'Fedot Praslov',              'fedot'
   map 'Ferdinand Svehla',           "f.svehla\100gmail.com", 'f.svehla'
+  map 'Florian Munz',               'theflow'
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
   map 'Frederico Macedo',           'frederico'
