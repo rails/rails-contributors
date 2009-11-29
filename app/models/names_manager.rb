@@ -444,6 +444,7 @@ module NamesManager
   map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
   map 'Manuel Holtgrewe',           "purestorm\100ggnore.net"
   map 'Marc Love',                  'marclove'
+  map 'Marc-André Cournoyer',       'macournoyer'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
   map 'Marcin Szczepański',         "marcin\100junkheap.net"
   map 'Mariusz Pękala',             'Arsen7'
