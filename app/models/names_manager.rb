@@ -515,6 +515,7 @@ module NamesManager
   map 'Nicolás Sanguinetti',        'foca'
   map 'Nik Wakelin',                'nik.wakelin', 'nik.kakelin'
   map 'Nikolay Petrachkov',         'jastix'
+  map 'Nils-Helge Garli Hegvik',    'nilsga'
   map 'Nils Jonsson',               "nils\100alumni.rice.edu"
   map 'Nobuhiro Imai',              "nov\100yo.rim.or.jp"
   map 'Norbert Crombach',           'norbert'
