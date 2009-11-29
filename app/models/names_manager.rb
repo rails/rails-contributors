@@ -172,6 +172,7 @@ module NamesManager
   map 'Caleb Tennis',               "caleb\100aei-tech.com"
   map 'Calvin Yu',                  'cyu'
   map 'Cesar Ho',                   'codafoo'
+  map 'Chad Humphries',             'spicycode'
   map 'Chad Ingram',                'matrix9180'
   map 'Chad Pytel',                 'cpytel'
   map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
