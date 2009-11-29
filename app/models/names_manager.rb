@@ -500,6 +500,7 @@ module NamesManager
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Vincent',            'neshmi'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
+  map 'Melih Arda Yalçiner',        'Wizard'
   map 'Micah Alles',                "alles\100atomicobject.com"
   map 'Michael Daines',             "me\100mdaines.com"
   map 'Michael Dewey',              "mike\100michaeldewey.org"
