@@ -472,6 +472,7 @@ module NamesManager
   map 'Matt Palmer',                'mpalmer', "mpalmer\100hezmatt.org"
   map 'Matt Parrish',               "mparrish\100pearware.org"
   map 'Matt Pelletier',             "pelletierm\100eastmedia.net"
+  map 'Matthew Deiters',            'mdeiters'
   map 'Matthew Painter',            "mail\100matthewpainter.co.uk"
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
