@@ -111,6 +111,7 @@ module NamesManager
   map 'Adelle Hartley',             "adelle\100bullet.net.au"
   map 'Akira Ikeda',                "ikeda\100dream.big.or.jp"
   map 'Akira Matsuda',              '松田 明'
+  map 'Akira Tagoh',                'tagoh'
   map 'alancfrancis',               "alancfrancis\100gmail.com"
   map 'Alex Chaffee',               'alexch'
   map 'Alex Pooley',                "alex\100msgpad.com"
