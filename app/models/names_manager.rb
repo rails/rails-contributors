@@ -613,6 +613,7 @@ module NamesManager
   map 'Scott Raymond',              "sco\100scottraymond.net"
   map 'Scott Reilly',               'coffee2code'
   map 'Scott Schram',               'ScottSchram'
+  map 'Sean Geoghegan',             'seangeo'
   map 'Sean T Allen',               "sean\100ardismg.com"
   map 'Sebastian Delmont',          "sd\100notso.net"
   map 'Sebastian Graessl',          'bastilian'
