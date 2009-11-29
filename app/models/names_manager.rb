@@ -401,7 +401,7 @@ module NamesManager
   map 'José Valim',                 'josevalim'
   map 'Joseph A. Martin',           "jmartin\100desertflood.com"
   map 'Joseph Hosteny',             "jhosteny\100mac.com"
-  map 'Josh Goebel',                'Dreamer3', "dreamer3\100gmail.com"
+  map 'Josh Goebel',                'Dreamer3', "dreamer3\100gmail.com", 'yyyc514'
   map 'Josh Knowles',               "joshknowles\100gmail.com"
   map 'Josh Peek',                  'josh', 'Josh', 'Joshua Peek', 'joshpeek', "josh\100joshpeek.com"
   map 'Josh Starcher',              "josh.starcher\100gmail.com"
