@@ -279,6 +279,7 @@ module NamesManager
   map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
   map 'Glen Gibb',                  'grg'
   map 'Glenn Vanderburg',           'glv'
+  map 'Graeme Mathieson',           'mathie'
   map 'Grant Hollingworth',         "grant\100antiflux.org"
   map 'Greg Lappen',                "greg\100lapcominc.com"
   map 'Grzegorz Daniluk',           "daniluk\100yahoo.com"
