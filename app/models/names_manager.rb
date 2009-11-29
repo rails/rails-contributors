@@ -518,6 +518,7 @@ module NamesManager
   map 'Nils-Helge Garli Hegvik',    'nilsga'
   map 'Nils Jonsson',               "nils\100alumni.rice.edu"
   map 'Nobuhiro Imai',              "nov\100yo.rim.or.jp"
+  map 'Norbauer Inc',               'norbauer'
   map 'Norbert Crombach',           'norbert'
   map 'Norman Elton',               "normelton\100gmail.com"
   map 'Obie Fernandez',             'ObieFernandez'
@@ -536,6 +537,7 @@ module NamesManager
   map 'Paul Smith',                 "paul\100cnt.org"
   map 'pburleson',                  "pburleson\100gmail.com"
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
+  map 'Pete Yandell',               'notahat'
   map 'Peter Michaux',              "petermichaux\100gmail.com"
   map 'Phil Bogle',                 "philbogle\100gmail.com"
   map 'Phil Hagelberg',             "technomancy\100gmail.com"
