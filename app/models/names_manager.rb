@@ -248,6 +248,7 @@ module NamesManager
   map 'Elan Feingold',              "elan\100bluemandrill.com"
   map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
   map 'Elliot Smith',               "elliot\100townx.org"
+  map 'Elliot Winkler',             'mcmire'
   map 'Eloy Duran',                 'alloy'
   map 'Emilio Tagua',               'miloops'
   map 'Eric Daspet',                "eric.daspet\100survol.net"
