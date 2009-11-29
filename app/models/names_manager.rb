@@ -677,6 +677,7 @@ module NamesManager
   map 'Tom Mornini',                "tmornini\100infomania.com"
   map 'Tom Preston-Werner',         'mojombo'
   map 'Tom Ward',                   'Tom ward', 'tomafro', "tom\100popdog.net"
+  map 'Trek Glowacki',              'trek'
   map 'Trent Ogren',                'misfo'
   map 'Trevor Squire',              'protocool'
   map 'Tyler Kiley',                "tyler\100kianta.com"
