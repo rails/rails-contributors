@@ -413,6 +413,7 @@ module NamesManager
   map 'Kjetil Lerøen',              "leroen\100gmail.com"
   map 'Koichi Tsutsumi',            "hakuja\100hakuja.net"
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de", "murpyh\100rubychan.de"
+  map 'Kouhei Sutou',               'kou'
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
   map 'Kyosuke Morohashi',          'moro'
   map 'Lakshan Perera',             'laktek', 'lakshan'
