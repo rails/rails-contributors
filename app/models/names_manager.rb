@@ -518,6 +518,7 @@ module NamesManager
   map 'Nils-Helge Garli Hegvik',    'nilsga'
   map 'Nils Jonsson',               "nils\100alumni.rice.edu"
   map 'Nobuhiro Imai',              "nov\100yo.rim.or.jp"
+  map 'Nobukazu Matake',            'nov'
   map 'Norbauer Inc',               'norbauer'
   map 'Norbert Crombach',           'norbert'
   map 'Norman Elton',               "normelton\100gmail.com"
