@@ -571,6 +571,7 @@ module NamesManager
   map 'Remy Sharp',                 'remy'
   map 'Rick Bradley',               "rick\100rickbradley.com"
   map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
+  map 'Rick DeNatale',              'RubyRedRick'
   map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
   map 'Rizwan Reza',                'rizwanreza'
   map 'Robert Evans',               'revans'
