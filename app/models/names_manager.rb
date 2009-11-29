@@ -446,6 +446,7 @@ module NamesManager
   map 'Marc Love',                  'marclove'
   map 'Marc-André Cournoyer',       'macournoyer'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
+  map 'Marcello Nuccio',            'marcenuc'
   map 'Marcin Szczepański',         "marcin\100junkheap.net"
   map 'Mariusz Pękala',             'Arsen7'
   map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
