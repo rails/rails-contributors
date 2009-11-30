@@ -65,7 +65,6 @@ module NamesManager
     # I sent an internal message to these people asking for confirmation or full names.
     WAITING_FOR = %w(
       blackanger
-      dacat
       dan
       ian
       jerome
@@ -321,6 +320,7 @@ module NamesManager
   map 'Farley Knight',              'farleyknight'
   map 'Farzad Farid',               'farzy'
   map 'Fedot Praslov',              'fedot'
+  map 'Felix Dominguez',            'dacat'
   map 'Ferdinand Svehla',           "f.svehla\100gmail.com", 'f.svehla'
   map 'Florian Munz',               'theflow'
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
