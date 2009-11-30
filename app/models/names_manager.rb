@@ -6,9 +6,6 @@ module NamesManager
     # so far.
     WAITING_FOR = %W(
       agkr\100pobox.com
-      imbcmdth\100hotmail.com
-      jhahn\100niveon.com
-      nick+rails\100ag.arizona.edu
       alec+rails\100veryclever.net
       alex.r.moon\100gmail.com
       david.a.williams\100gmail.com
@@ -19,14 +16,17 @@ module NamesManager
       fhanshaw\100vesaria.com
       gaetanot\100comcast.net
       gnuman1\100gmail.com
+      imbcmdth\100hotmail.com
       info\100loobmedia.com
       jan\100ulbrich-boerwang.de
+      jhahn\100niveon.com
       jonrailsdev\100shumi.org
       junk\100miriamtech.com
       justin\100textdrive.com
       machomagna\100gmail.com
       me\100jonnii.com
       minimudboy\100gmail.com
+      nick+rails\100ag.arizona.edu
       rails.20.clarry\100spamgourmet.com
       rails-bug\100owl.me.uk
       s.brink\100web.de
@@ -37,22 +37,23 @@ module NamesManager
 
     # I've sent an email to these addresses, and got some sort of error back.
     UNREACHABLE = %W(
-      rails\100cogentdude.com
-      rubyonrails\100atyp.de
-      takiuchi\100drecom.co.jp
       altano\100bigfoot.com
       asnem\100student.ethz.ch
       damn_pepe\100gmail.com
       dev.rubyonrails\100maxdunn.com
       kdole\100tamu.edu
+      kevin-temp\100writesoon.com
       mklame\100atxeu.com
       nbpwie102\100sneakemail.com
-      nwoods\100mail.com
       nkriege\100hotmail.com
+      nwoods\100mail.com
       pfc.pille\100gmx.net
+      rails\100cogentdude.com
       rcolli2\100tampabay.rr.com
+      rubyonrails\100atyp.de
       solo\100gatelys.com
       starr\100starrnhorne.com
+      takiuchi\100drecom.co.jp
       zachary\100panandscan.com
     )
 
