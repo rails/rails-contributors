@@ -33,7 +33,6 @@ module NamesManager
       schultzr\100gmail.com
       seattle\100rootimage.msu.edu
       yanowitz-rubyonrails\100quantumfoam.org
-      zaitzow\100gmail.com
     )
 
     # I've sent an email to these addresses, and got some sort of error back.
@@ -181,6 +180,7 @@ module NamesManager
   map 'Ashley Moran',               "work\100ashleymoran.me.uk"
   map 'Ask Bjørn Hansen',           "ask\100develooper.com"
   map 'Assaf Arkin',                "assaf.arkin\100gmail.com", 'Assaf'
+  map 'August Zaitzow Flatby',      "zaitzow\100gmail.com"
   map 'August Zajonc',              "augustz\100augustz.com"
   map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
   map 'Ben Bangert',                "ben\100groovie.org"
