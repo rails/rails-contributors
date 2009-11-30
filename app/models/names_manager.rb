@@ -70,7 +70,11 @@ module NamesManager
       jerome
       Kent
       krishna
+      mark
+      okkez
+      pager
       Paul
+      Pelle
       robby
       Scott
       shane
@@ -650,7 +654,7 @@ module NamesManager
   map 'Ron DiFrango',               "rdifrango\100captechventures.com"
   map 'Ross Kaffenberger',          'Ross Kaffenburger'
   map 'Ruben Nine',                 "ruben.nine\100gmail.com"
-  map 'Russell Norris',             'RSL'
+  map 'Russell Norris',             'RSL', 'rsl'
   map 'Ruy Asan',                   'rubyruy'
   map 'Ryan Bates',                 'ryanb'
   map 'Ryan Bigg',                  'Radar'
@@ -675,6 +679,7 @@ module NamesManager
   map 'Scott Reilly',               'coffee2code'
   map 'Scott Schram',               'ScottSchram'
   map 'Sean Geoghegan',             'seangeo'
+  map 'Sean Hussey',                'seanhussey'
   map 'Sean T Allen',               "sean\100ardismg.com"
   map 'Sebastian Delmont',          "sd\100notso.net"
   map 'Sebastian Graessl',          'bastilian'
