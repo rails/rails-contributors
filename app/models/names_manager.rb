@@ -80,7 +80,6 @@ module NamesManager
       seth
       shane
       steve
-      sur
       tom
       trans
       trevor
@@ -703,6 +702,7 @@ module NamesManager
   map 'Steven Bristol',             'stevenbristol'
   map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
   map 'Stian Grytøyr',              "stian\100grytoyr.net"
+  map 'Sur Max',                    'sur'
   map 'Surendra Singhi',            "ssinghi\100kreeti.com"
   map 'Sven Klemm',                 "sven\100c3d2.de"
   map 'Tal Rotbart',                'redbeard'
