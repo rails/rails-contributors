@@ -75,7 +75,6 @@ module NamesManager
       Paul
       robby
       Scott
-      seth
       shane
       steve
       tom
@@ -92,7 +91,8 @@ module NamesManager
       'jamesh',
       'jonathan',
       'Kane',
-      'mat'
+      'mat',
+      'seth'
     ]
   end
 
