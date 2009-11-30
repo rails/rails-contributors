@@ -71,7 +71,6 @@ module NamesManager
       krishna
       mark
       okkez
-      pager
       Paul
       robby
       Scott
@@ -287,6 +286,7 @@ module NamesManager
   map 'Dick Davies',                'rasputnik'
   map 'Dieter Komendera',           'kommen'
   map 'Dirkjan Bussink',            'dbussink'
+  map 'Dmitriy Timokhin',           'pager'
   map 'Dominic Sisneros',           "dom\100sisna.com"
   map 'Don Park',                   "don.park\100gmail.com"
   map 'Donald Piret',               "donald.piret\100synergetek.be"
