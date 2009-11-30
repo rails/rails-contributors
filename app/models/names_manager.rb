@@ -68,7 +68,6 @@ module NamesManager
       dan
       ian
       jerome
-      Kent
       krishna
       mark
       okkez
@@ -93,6 +92,7 @@ module NamesManager
       'jamesh',
       'jonathan',
       'Kane',
+      'Kent',
       'mat',
       'seth'
     ]
