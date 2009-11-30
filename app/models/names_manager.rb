@@ -70,7 +70,6 @@ module NamesManager
       David
       ian
       jerome
-      jonathan
       Kane
       Kent
       krishna
@@ -92,6 +91,7 @@ module NamesManager
       'Andreas',
       'Caleb', # but wrote to Caleb Tennis, waiting for
       'jamesh',
+      'jonathan',
       'mat'
     ]
   end
