@@ -64,7 +64,6 @@ module NamesManager
   module GithubUsernames
     # I sent an internal message to these people asking for confirmation or full names.
     WAITING_FOR = %w(
-      amishyn
       blackanger
       dacat
       dan
@@ -154,6 +153,7 @@ module NamesManager
   map 'Akira Tagoh',                'tagoh'
   map 'alancfrancis',               "alancfrancis\100gmail.com"
   map 'Alex Chaffee',               'alexch'
+  map 'Alex Mishyn',                'amishyn'
   map 'Alex Pooley',                "alex\100msgpad.com"
   map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com", 'Squeegy'
   map 'Alex Wolfe',                 "alexkwolfe\100gmail.com"
