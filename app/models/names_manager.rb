@@ -74,7 +74,6 @@ module NamesManager
       Kane
       Kent
       krishna
-      mat
       Paul
       robby
       Scott
@@ -92,9 +91,10 @@ module NamesManager
     NOT_THEM = [
       'adam',
       'alex',
+      'Andreas',
       'Caleb', # but wrote to Caleb Tennis, waiting for
       'jamesh',
-      'Andreas'
+      'mat'
     ]
   end
 
