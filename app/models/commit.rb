@@ -97,9 +97,13 @@ protected
   #
   #   Fix case-sensitive validates_uniqueness_of. Closes #11366 [miloops]
   #
+  # Sometimes there's a "Closes #tiquet" after it, as in:
+  #
+  #   Correct documentation for dom_id [jbarnette] Closes #10775
+  #
   # Of course this is not robust, but it is the best we can get.
   def extract_contributor_names_from_text(text)
-    names = text =~ /\[([^\]]+)\]\s*$/ ? [$1] : []
+    names = text =~ /\[([^\]]+)\](?:\s+Closes\s+#\d+)?\s*$/ ? [$1] : []
     names = sanitize(names)
     handle_special_cases(names)
   end
