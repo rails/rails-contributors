@@ -74,7 +74,6 @@ module NamesManager
       okkez
       pager
       Paul
-      Pelle
       robby
       Scott
       shane
@@ -612,7 +611,7 @@ module NamesManager
   map 'Patrick Lenz',               "patrick\100lenz.sh"
   map 'Paul Butcher',               "paul\100paulbutcher.com"
   map 'Paul Smith',                 "paul\100cnt.org"
-  map 'Pelle Braendgaard',          'pelle'
+  map 'Pelle Braendgaard',          'pelle', 'Pelle'
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
   map 'Perry Smith',                'pedz'
   map 'Pete Yandell',               'notahat'
