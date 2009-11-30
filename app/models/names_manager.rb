@@ -404,6 +404,7 @@ module NamesManager
   map 'Jeremy Lightsmith',          'stellsmi'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
   map 'Jeremy Voorhis',             "jeremy\100planetargon.com", 'jvoorhis'
+  map 'Jérôme Lipowicz',            'jerome'
   map 'Jerrett Taylor',             "jerrett\100bravenet.com"
   map 'Jesse Merriman',             "jessemerriman\100warpmail.net"
   map 'Jim Helm',                   "perlguy\100gmail.com"
