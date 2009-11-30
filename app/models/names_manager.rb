@@ -67,7 +67,6 @@ module NamesManager
       blackanger
       dacat
       dan
-      David
       ian
       jerome
       Kent
@@ -88,6 +87,7 @@ module NamesManager
       'alex',
       'Andreas',
       'Caleb', # but wrote to Caleb Tennis, waiting for
+      'David',
       'jamesh',
       'jonathan',
       'Kane',
