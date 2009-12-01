@@ -19,6 +19,7 @@ class CommitTest < ActiveSupport::TestCase
     assert_equal [], commit.extract_contributor_names_from_text("nothing here to extract")
     assert_equal ['miloops'], commit.extract_contributor_names_from_text("Fix case-sensitive validates_uniqueness_of. Closes #11366 [miloops]")
     assert_equal ['Adam Milligan', 'Pratik'], commit.extract_contributor_names_from_text('Ensure methods called on association proxies respect access control. [#1083 state:resolved] [Adam Milligan, Pratik]')
+    assert_equal ['jbarnette'], commit.extract_contributor_names_from_text('Correct documentation for dom_id [jbarnette] Closes #10775')
     assert_equal ['Kevin Clark', 'Jeremy Hopple'], commit.extract_contributor_names_from_text(<<MESSAGE)
     * Fix pagination problems when using include
     * Introduce Unit Tests for pagination
