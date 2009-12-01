@@ -74,7 +74,6 @@ module NamesManager
       okkez
       Paul
       robby
-      Scott
       shane
       steve
       tom
@@ -94,6 +93,7 @@ module NamesManager
       'Kane',
       'Kent',
       'mat',
+      'Scott',
       'seth'
     ]
   end
