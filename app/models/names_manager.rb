@@ -126,6 +126,9 @@ module NamesManager
     when 'f9a02b12d15bdbd3c2ed18b16b31b712a77027bc'
       # The attribution is done with parens in a way we do not extract.  
       ['Juan Lupión']
+    when '4b4aa8f6e08ba2aa2ddce56f1d5b631a78eeef6c'
+      # parens again
+      ['Jesper Hvirring Henriksen']
     else
       nil
     end
