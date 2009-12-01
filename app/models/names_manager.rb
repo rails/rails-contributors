@@ -25,7 +25,6 @@ module NamesManager
       justin\100textdrive.com
       machomagna\100gmail.com
       me\100jonnii.com
-      minimudboy\100gmail.com
       nick+rails\100ag.arizona.edu
       rails.20.clarry\100spamgourmet.com
       rails-bug\100owl.me.uk
@@ -500,6 +499,7 @@ module NamesManager
   map 'Lennon Day-Reynolds',        'rcoder'
   map 'Leon Breedt',                'Leon Bredt'
   map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
+  map 'Lewis Jubb',                 "minimudboy\100gmail.com"
   map 'Lon Baker',                  "lon\100speedymac.com"
   map 'Loren Johnson',              'lorenjohnson'
   map 'Lori Holden',                'lholden'
