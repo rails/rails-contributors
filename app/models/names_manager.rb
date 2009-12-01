@@ -1,6 +1,11 @@
 require 'set'
 
 module NamesManager
+  PEOPLE_WHO_PREFER_THEIR_HANDLER_TO_BE_LISTED = %w(
+    okkez
+    maiha
+  )
+  
   module EmailAddresses
     # I've sent an email to these email addresses, and there's no response
     # so far.
@@ -70,7 +75,6 @@ module NamesManager
       jerome
       krishna
       mark
-      okkez
       Paul
       robby
       shane
