@@ -149,7 +149,6 @@ module NamesManager
   map 'Adam Johnson',               'adamj'
   map 'Adam Kramer',                "adam\100the-kramers.net"
   map 'Adam Majer',                 "adamm\100galacticasoftware.com"
-  map 'Adam Milligan',              'pivotal'
   map 'Adam Wiggins',               'adamwiggins'
   map 'Adam Williams',              'aiwilliams'
   map 'Adelle Hartley',             "adelle\100bullet.net.au"
@@ -632,6 +631,7 @@ module NamesManager
   map 'Phillip J. Birmingham',      "phillip\100pjbsoftware.com"
   map 'Piers Cawley',               "pdcawley\100bofh.org.uk"
   map 'Piotr Banasik',              "piotr\100t-p-l.com", 'piotr'
+  map 'Pivotal Labs',               'pivotal'
   map 'PJ Hyett',                   "pjhyett\100gmail.com"
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
