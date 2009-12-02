@@ -46,7 +46,8 @@ private
     Gaisbot       |
     TweetmemeBot  |
     HttpClient    |
-    DotBot
+    DotBot        |
+    80legs
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
