@@ -133,13 +133,13 @@ module NamesManager
       # parens again
       ['Jesper Hvirring Henriksen']
     when '945d999aadc9df41487e675fa0a863396cb54e31'
-      # author is "pivotal", but Adam Milligan told me Chris is the author (via github)
+      # Author is "pivotal", but Adam Milligan told me Chris is the author (via github).
       ['Chris Heisterkamp']
     when 'eb457ceee13779ade67e1bdebd2919d476148277'
-      # author is "pivotal", but Adam Milligan told me Joseph is the author (via github)
+      # Author is "pivotal", but Adam Milligan told me Joseph is the author (via github).
       ['Joseph Palermo']
     when '6f2c4991efbbc5f567a6df36ca78de4f3ca24ee2', '9dbde4f5cbd0617ee6cce3e41d41335f9c9ce3fd'
-      # author is "pivotal", but Adam Milligan told me he himself is the author (via github)
+      # Author is "pivotal", but Adam Milligan told me he himself is the author (via github).
       ['Adam Milligan']
     else
       nil
