@@ -725,7 +725,7 @@ module NamesManager
   map 'Sven Klemm',                 "sven\100c3d2.de"
   map 'Tal Rotbart',                'redbeard'
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
-  map 'Taryn East',                 'taryn'
+  map 'Taryn East',                 'taryn', 'taryneast', "rubygirl\100taryneast.org"
   map 'Thijs van der Vossen',       'thijsv', "thijs\100vandervossen.net", "thijs\100fngtps.com"
   map 'Thomas Enebo',               "tom.enebo\100gmail.com"
   map 'Thomas Fuchs',               "thomas\100fesch.at", 'madrobby'
