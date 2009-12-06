@@ -73,7 +73,6 @@ module NamesManager
       dan
       ian
       jerome
-      krishna
       mark
       Paul
       robby
@@ -495,6 +494,7 @@ module NamesManager
   map 'Koichi Tsutsumi',            "hakuja\100hakuja.net"
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de", "murpyh\100rubychan.de"
   map 'Kouhei Sutou',               'kou'
+  map 'Krishna Kotecha',            'krishna'
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
   map 'Kubo Takehiro',              'kubo'
   map 'Kyosuke Morohashi',          'moro'
