@@ -79,7 +79,6 @@ module NamesManager
       shane
       steve
       tom
-      trevor
       xavier
     )
     
@@ -95,7 +94,8 @@ module NamesManager
       'Kent',
       'mat',
       'Scott',
-      'seth'
+      'seth',
+      'trevor'
     ]
   end
 
