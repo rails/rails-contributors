@@ -402,7 +402,7 @@ module NamesManager
   map 'Jason Stirk',                "jstirk\100oobleyboo.com"
   map 'Javier Ramírez',             'jramirez'
   map 'Jay Levitt',                 "jay\100jay.fm"
-  map 'Jay Pignata',                'Developer' # see 179b451
+  map 'John Pignata',               'Developer', 'Jay Pignata' # see 179b451
   map 'Jean Helou',                 "jean.helou\100gmail.com"
   map 'Jean-Philippe Bougie',       "jp.bougie\100gmail.com"
   map 'Jeff Berg',                  "jeff\100ministrycentered.com"
