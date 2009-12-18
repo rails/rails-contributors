@@ -3,14 +3,14 @@ require 'fileutils'
 module ApplicationUtils
   def self.acquiring_lock_file(basename)
     abs_name = File.join(tmpdir, basename)
-    sync_file = File.open(abs_name, File::CREAT | File::EXCL | File::WRONLY)
+    lock_file = File.open(abs_name, File::CREAT | File::EXCL | File::WRONLY)
     Rails.logger.info("acquired lock file #{basename}")
-    sync_file.write("#{$$}\n")
+    lock_file.write("#{$$}\n")
     begin
       yield
     ensure
       Rails.logger.info("releasing lock file #{basename}")
-      sync_file.close
+      lock_file.close
       FileUtils.rm_f(abs_name)
     end
   rescue Errno::EEXIST
