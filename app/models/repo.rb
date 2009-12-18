@@ -24,7 +24,7 @@ class Repo
 
   # TODO: This method is getting long.
   def update(branches)
-    ApplicationUtils.acquiring_sync_file('updating') do
+    ApplicationUtils.acquiring_lock_file('updating') do
       started_at = Time.now
       ncommits   = 0
 

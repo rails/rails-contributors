@@ -1,22 +1,20 @@
 require 'fileutils'
 
 module ApplicationUtils
-  # This is a simple file-based synchronization mechanism which is not atomic
-  # but will do for our purposes.
-  def self.acquiring_sync_file(basename)
-    sync_file = File.join(tmpdir, basename)
-    if File.exists?(sync_file)
-      Rails.logger.info("couldn't acquire #{sync_file}")
-    else
-      Rails.logger.info("acquiring #{sync_file}")
-      FileUtils.touch(sync_file)
-      begin
-        yield
-      ensure
-        Rails.logger.info("releasing #{sync_file}")
-        FileUtils.rm_f(sync_file)
-      end
+  def self.acquiring_lock_file(basename)
+    abs_name = File.join(tmpdir, basename)
+    sync_file = File.open(abs_name, File::CREAT | File::EXCL | File::WRONLY)
+    Rails.logger.info("acquired lock file #{basename}")
+    sync_file.write("#{$$}\n")
+    begin
+      yield
+    ensure
+      Rails.logger.info("releasing lock file #{basename}")
+      sync_file.close
+      FileUtils.rm_f(abs_name)
     end
+  rescue Errno::EEXIST
+    Rails.logger.info("couldn't acquire lock file #{basename}")
   end
 
   # Returns the name of the tmp directory under <tt>Rails.root</tt>. It creates
