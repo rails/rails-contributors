@@ -100,10 +100,11 @@ protected
   # Sometimes there's a "Closes #tiquet" after it, as in:
   #
   #   Correct documentation for dom_id [jbarnette] Closes #10775
+  #   Models with no attributes should just have empty hash fixtures [Sam] (Closes #3563)
   #
   # Of course this is not robust, but it is the best we can get.
   def extract_contributor_names_from_text(text)
-    names = text =~ /\[([^\]]+)\](?:\s+Closes\s+#\d+)?\s*$/ ? [$1] : []
+    names = text =~ /\[([^\]]+)\](?:\s+\(?Closes\s+#\d+\)?)?\s*$/ ? [$1] : []
     names = sanitize(names)
     handle_special_cases(names)
   end
