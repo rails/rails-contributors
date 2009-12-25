@@ -39,6 +39,12 @@ MESSAGE
     commit.message = "Merge remote branch 'origin/master'"
     assert commit.merge?
     
+    commit.message = 'Merge docrails'
+    assert commit.merge?
+    
+    commit.message = 'Merge with docrails'
+    assert commit.merge?
+    
     commit.message = "Stop supporting blank arguments to AR#relation query methods"
     assert !commit.merge?
   end

@@ -54,7 +54,8 @@ class Commit < ActiveRecord::Base
   
   # Merge commits are not taken into account as contributions.
   def merge?
-    message =~ /\AMerge\s+(?:remote\s+)?branch/
+    message =~ /\AMerge\s+(?:remote\s+)?branch/ ||
+    message =~ /\AMerge\s+(?:with\s+)?docrails/
   end
 
 protected
