@@ -51,6 +51,11 @@ class Commit < ActiveRecord::Base
     names = canonicalize(names)
     names.uniq
   end
+  
+  # Merge commits are not taken into account as contributions.
+  def merge?
+    message =~ /\AMerge\s+(?:remote\s+)?branch/
+  end
 
 protected
 

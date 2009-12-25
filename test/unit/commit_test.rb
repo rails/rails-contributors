@@ -29,4 +29,17 @@ class CommitTest < ActiveSupport::TestCase
     [Kevin Clark & Jeremy Hopple]
 MESSAGE
   end
+  
+  test "merge commit detection" do
+    commit = Commit.new
+    
+    commit.message = "Merge branch 'master' of git://github.com/rails/rails"
+    assert commit.merge?
+    
+    commit.message = "Merge remote branch 'origin/master'"
+    assert commit.merge?
+    
+    commit.message = "Stop supporting blank arguments to AR#relation query methods"
+    assert !commit.merge?
+  end
 end
