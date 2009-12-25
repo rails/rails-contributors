@@ -849,6 +849,9 @@ module NamesManager
       when /\A#https/
         # Signed-off-by: Michael Koziarski <michael\100koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
         nil
+      when '\\x00-\\x1f'
+        #  Fix ActiveSupport::JSON encoding of control characters [\x00-\x1f]
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when "schoenm\100earthlink.net sandra.metz\100duke.edu"
