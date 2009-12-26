@@ -179,7 +179,7 @@ protected
     contributor_names_per_commit = Hash.new {|h, commit| h[commit] = []}
     target = only_for_new_commits ? Commit.with_no_contributors : Commit
     target.find_each do |commit|
-      next if commit.merge? # do not count merge commits as contributions
+      next if commit.shouldnt_count_as_a_contribution
       commit.extract_contributor_names(self).each do |contributor_name|
         contributor_names_per_commit[commit.sha1] << contributor_name
       end

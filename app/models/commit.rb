@@ -52,10 +52,25 @@ class Commit < ActiveRecord::Base
     names.uniq
   end
   
-  # Merge commits are not taken into account as contributions.
+  # Merge commits are not really new patches, we filter them out.
+  #
+  # On the other hand the application monitors active branches, but the same
+  # patch applied several times should count as a single contribution.
+  def shouldnt_count_as_a_contribution
+    merge? || backported_from_master?
+  end
+
   def merge?
     message =~ /\AMerge\s+(?:remote\s+)?branch/ ||
     message =~ /\AMerge\s+(?:with\s+)?docrails/
+  end
+
+  # Checks whether this commit does not belong to origin/master and has a
+  # matching commit there. Note that in practice when a patch is applied
+  # in Rails 3 and Rails 2.x they show up together, it is unlikely that we
+  # pull a backported patch from 2.x that it is not already in master.
+  def backported_from_master?
+    branch != 'origin/master' && self.class.exists?(:branch => 'origin/master', :message => message, :author => author, :committer => committer)
   end
 
 protected
