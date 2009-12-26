@@ -174,12 +174,11 @@ protected
   # each sha1 to the array of the canonical names of their contributors.
   #
   # This computation ignores the current contributions table altogether, it
-  # only takes into account the the current mapping for names.
+  # only takes into account the current mapping rules for name resolution.
   def compute_contributor_names_per_commit(only_for_new_commits)
     contributor_names_per_commit = Hash.new {|h, commit| h[commit] = []}
     target = only_for_new_commits ? Commit.with_no_contributors : Commit
     target.find_each do |commit|
-      next if commit.shouldnt_count_as_a_contribution
       commit.extract_contributor_names(self).each do |contributor_name|
         contributor_names_per_commit[commit.sha1] << contributor_name
       end
@@ -191,6 +190,7 @@ protected
   # in the previously computed <tt>contributor_names_per_commit</tt>.
   def assign_contributors(contributor_names_per_commit)
     Commit.with_no_contributors.find_each do |commit|
+      next if commit.shouldnt_count_as_a_contribution
       contributor_names_per_commit[commit.sha1].each do |contributor_name|
         contributor = Contributor.find_or_create_by_name(contributor_name)
         contributor.commits << commit
