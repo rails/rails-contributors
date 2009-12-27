@@ -176,7 +176,7 @@ protected
   # This computation ignores the current contributions table altogether, it
   # only takes into account the current mapping rules for name resolution.
   def compute_contributor_names_per_commit(only_for_new_commits)
-    contributor_names_per_commit = Hash.new {|h, commit| h[commit] = []}
+    contributor_names_per_commit = Hash.new {|h, sha1| h[sha1] = []}
     target = only_for_new_commits ? Commit.with_no_contributors : Commit
     target.find_each do |commit|
       commit.extract_contributor_names(self).each do |contributor_name|
@@ -189,11 +189,20 @@ protected
   # Iterates over all commits with no contributors and assigns to them the ones
   # in the previously computed <tt>contributor_names_per_commit</tt>.
   def assign_contributors(contributor_names_per_commit)
+    # Cache contributors to speed up processing wiped databases. They are about
+    # 1400 so we can afford this hash.
+    contributors = Hash.new {|h, name| h[name] = Contributor.find_or_create_by_name(name)}
+
     Commit.with_no_contributors.find_each do |commit|
-      next if commit.shouldnt_count_as_a_contribution
-      contributor_names_per_commit[commit.sha1].each do |contributor_name|
-        contributor = Contributor.find_or_create_by_name(contributor_name)
-        contributor.commits << commit
+      # It turns out the constraints in the named scope are inherited
+      # in this block via find_each. We introduce an exclusive scope to be
+      # sure the exists? test down the shouldnt_count_as_a_contribution? call
+      # runs in isolation.
+      Commit.send(:with_exclusive_scope) do
+        next if commit.shouldnt_count_as_a_contribution?
+        contributor_names_per_commit[commit.sha1].each do |contributor_name|
+          contributors[contributor_name].commits << commit
+        end
       end
     end
   end

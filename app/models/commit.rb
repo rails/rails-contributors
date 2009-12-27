@@ -56,7 +56,7 @@ class Commit < ActiveRecord::Base
   #
   # On the other hand the application monitors active branches, but the same
   # patch applied several times should count as a single contribution.
-  def shouldnt_count_as_a_contribution
+  def shouldnt_count_as_a_contribution?
     merge? || backported_from_master?
   end
 
