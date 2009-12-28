@@ -48,7 +48,8 @@ private
     HttpClient    |
     DotBot        |
     80legs        |
-    MLBot
+    MLBot         |
+    wasitup
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP

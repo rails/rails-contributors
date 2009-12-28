@@ -61,8 +61,9 @@ class Commit < ActiveRecord::Base
   end
 
   def merge?
-    message =~ /\AMerge\s+(?:remote\s+)?branch/ ||
-    message =~ /\AMerge\s+(?:with\s+)?docrails/
+    message =~ /\AMerge\s+(?:remote\s+)?branch\b/ ||
+    message =~ /\AMerge\s+(?:with\s+)?docrails\b/ ||
+    message =~ /\AMerge\s+commit\b/
   end
 
   # Checks whether this commit does not belong to origin/master and has a
