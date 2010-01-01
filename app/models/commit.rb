@@ -52,12 +52,24 @@ class Commit < ActiveRecord::Base
     names.uniq
   end
   
-  # Merge commits are not really new patches, we filter them out.
+  # Merge commits are not really new patches, we filter them out
+  # unless they are whitelisted.
   #
   # On the other hand the application monitors active branches, but the same
   # patch applied several times should count as a single contribution.
   def shouldnt_count_as_a_contribution?
-    merge? || backported_from_master?
+    if not whitelisted?
+      merge? || backported_from_master?
+    end
+  end
+
+  WHITELIST = [
+    # These two are merges from Mikel's work on mail in Rails 3.
+    'b27a3e8da39484d8a02d3b9c1e4dc3cb60ddcce7', 
+    '71ffa760701d2240ece5f17b75df316611ecb3d0',
+  ].to_set
+  def whitelisted?
+    WHITELIST.member?(sha1)
   end
 
   def merge?

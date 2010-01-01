@@ -140,6 +140,9 @@ module NamesManager
     when '6f2c4991efbbc5f567a6df36ca78de4f3ca24ee2', '9dbde4f5cbd0617ee6cce3e41d41335f9c9ce3fd'
       # Author is "pivotal", but Adam Milligan told me he himself is the author (via github).
       ['Adam Milligan']
+    when 'b27a3e8da39484d8a02d3b9c1e4dc3cb60ddcce7', '71ffa760701d2240ece5f17b75df316611ecb3d0'
+      # These are the merges of Mikel's work on mail in Rails 3.
+      ['Mikel Lindsaar']
     else
       nil
     end
