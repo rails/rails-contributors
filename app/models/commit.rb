@@ -64,9 +64,6 @@ class Commit < ActiveRecord::Base
   end
 
   WHITELIST = [
-    # These two are merges from Mikel's work on mail in Rails 3.
-    'b27a3e8da39484d8a02d3b9c1e4dc3cb60ddcce7', 
-    '71ffa760701d2240ece5f17b75df316611ecb3d0',
   ].to_set
   def whitelisted?
     WHITELIST.member?(sha1)
