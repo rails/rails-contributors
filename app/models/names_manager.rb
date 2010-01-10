@@ -386,6 +386,7 @@ module NamesManager
   map 'James Mead',                 'floehopper'
   map 'James Megquier',             "james\100slashetc.com"
   map 'James Strachan',             "jstrachan"
+  map 'Jamie Hill',                 'jamie'
   map 'Jamie Macey',                "jamie\100bravenet.com", "maceywj\100telus.net"
   map 'Jamie Orchard-Hays',         "jamie\100dang.com"
   map 'Jamie van Dyke',             'fearoffish'
