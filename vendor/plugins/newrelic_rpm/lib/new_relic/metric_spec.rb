@@ -4,9 +4,9 @@ class NewRelic::MetricSpec
   attr_accessor   :name
   attr_accessor   :scope
   
-  def initialize (name, scope = '')
-    self.name = name
-    self.scope = scope
+  def initialize (metric_name, metric_scope = '')
+    self.name = metric_name
+    self.scope = metric_scope
   end
   
   def eql? (o)
@@ -18,6 +18,15 @@ class NewRelic::MetricSpec
     h = name.hash
     h += scope.hash unless scope.nil?
     h
+  end
+  
+  def to_s
+    "#{name}:#{scope}"
+  end
+  
+  def to_json(*a)
+    {'name' => name, 
+    'scope' => scope}.to_json(*a)
   end
   
   def <=>(o)

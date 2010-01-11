@@ -28,38 +28,66 @@
 module NewRelic::Agent::Instrumentation
   module ControllerInstrumentation
     
-    @@newrelic_apdex_t = NewRelic::Agent.instance.apdex_t
-    @@newrelic_apdex_overall = NewRelic::Agent.instance.stats_engine.get_stats_no_scope("Apdex")
     def self.included(clazz)
       clazz.extend(ClassMethods)
+    end
+    
+    # This module is for importing stubs when the agent is disabled
+    module ClassMethodsShim
+      def newrelic_ignore(*args); end
+      def newrelic_ignore_apdex(*args); end
+    end
+    
+    module Shim
+      def self.included(clazz)
+        clazz.extend(ClassMethodsShim)
+      end
+      def newrelic_notice_error(*args); end
+      def new_relic_trace_controller_action(*args); yield; end
+      def newrelic_metric_path; end
+      def perform_action_with_newrelic_trace(*args); yield; end
     end
     
     module ClassMethods
       # Have NewRelic ignore actions in this controller.  Specify the actions as hash options
       # using :except and :only.  If no actions are specified, all actions are ignored.
       def newrelic_ignore(specifiers={})
+        newrelic_ignore_aspect('do_not_trace', specifiers)
+      end
+      # Have NewRelic omit apdex measurements on the given actions.  Typically used for 
+      # actions that are not user facing or that skew your overall apdex measurement.
+      # Accepts :except and :only options, as with #newrelic_ignore.
+      def newrelic_ignore_apdex(specifiers={})
+        newrelic_ignore_aspect('ignore_apdex', specifiers)
+      end
+      
+      def newrelic_ignore_aspect(property, specifiers={}) # :nodoc:
         if specifiers.empty?
-          self.newrelic_ignore_attr = true
+          self.newrelic_write_attr property, true
         elsif ! (Hash === specifiers)
-          logger.error "newrelic_ignore takes an optional hash with :only and :except lists of actions (illegal argument type '#{specifiers.class}')"
+          logger.error "newrelic_#{property} takes an optional hash with :only and :except lists of actions (illegal argument type '#{specifiers.class}')"
         else
-          self.newrelic_ignore_attr = specifiers
+          self.newrelic_write_attr property, specifiers
         end
       end
-      # Should be implemented in the controller class via the inheritable attribute mechanism.
-      def newrelic_ignore_attr=(value); end
-      def newrelic_ignore_attr; end
+      
+      # Should be monkey patched into the controller class implemented with the inheritable attribute mechanism.
+      def newrelic_write_attr(attr_name, value) # :nodoc:
+        instance_variable_set "@#{attr_name}", value
+      end
+      def newrelic_read_attr(attr_name) # :nodoc:
+        instance_variable_get "@#{attr_name}", value
+      end
     end
     
     # Must be implemented in the controller class:
     # Determine the path that is used in the metric name for
     # the called controller action.  Of the form controller_path/action_name
     # 
-    def newrelic_metric_path(action_name_override = nil)
+    def newrelic_metric_path(action_name_override = nil) # :nodoc:
       raise "Not implemented!"
     end
     
-    @@newrelic_apdex_t = NewRelic::Agent.instance.apdex_t
     # Perform the current action with NewRelic tracing.  Used in a method
     # chain via aliasing.  Call directly if you want to instrument a specifc
     # block as if it were an action.  Pass the block along with the path.
@@ -69,51 +97,38 @@ module NewRelic::Agent::Instrumentation
       agent = NewRelic::Agent.instance
       stats_engine = agent.stats_engine
       
-      ignore_actions = self.class.newrelic_ignore_attr
       # Skip instrumentation based on the value of 'do_not_trace' and if 
       # we aren't calling directly with a block.
-      should_skip = !block_given? && case ignore_actions
-        when nil; false
-        when Hash
-        only_actions = Array(ignore_actions[:only])
-        except_actions = Array(ignore_actions[:except])
-        only_actions.include?(action_name.to_sym) || (except_actions.any? && !except_actions.include?(action_name.to_sym))
-      else
-        true
-      end
-      if should_skip
-        begin
-          return perform_action_without_newrelic_trace(*args)
-        ensure
-          # Tell the dispatcher instrumentation that we ignored this action and it shouldn't
-          # be counted for the overall HTTP operations measurement.  The if.. appears here
-          # because we might be ignoring the top level action instrumenting but instrumenting
-          # a direct invocation that already happened, so we need to make sure if this var
-          # has already been set to false we don't reset it.
-          Thread.current[:controller_ignored] = true if Thread.current[:controller_ignored].nil?
-        end
+      if !block_given? && is_filtered?(self.class.newrelic_read_attr('do_not_trace'))
+        # Tell the dispatcher instrumentation that we ignored this action and it shouldn't
+        # be counted for the overall HTTP operations measurement.
+        Thread.current[:controller_ignored] = true
+        
+        return perform_action_without_newrelic_trace(*args)
       end
       
-      Thread.current[:controller_ignored] = false
+      # reset this in case we came through a code path where the top level controller is ignored
+      Thread.current[:controller_ignored] = nil
       
       start = Time.now.to_f
       agent.ensure_worker_thread_started
       
       # generate metrics for all all controllers (no scope)
       self.class.trace_method_execution_no_scope "Controller" do 
-        # generate metrics for this specific action
         # assuming the first argument, if present, is the action name
         path = newrelic_metric_path(args.size > 0 ? args[0] : nil)
-        stats_engine.transaction_name ||= "Controller/#{path}" if stats_engine
+        controller_metric = "Controller/#{path}"
         
-        self.class.trace_method_execution_with_scope "Controller/#{path}", true, true do 
-          # send request and parameter info to the transaction sampler
+        self.class.trace_method_execution_with_scope controller_metric, true, true do 
+          stats_engine.transaction_name = controller_metric
           
           local_params = (respond_to? :filter_parameters) ? filter_parameters(params) : params
           
           agent.transaction_sampler.notice_transaction(path, request, local_params)
           
           t = Process.times.utime + Process.times.stime
+          
+          failed = false
           
           begin
             # run the action
@@ -122,30 +137,57 @@ module NewRelic::Agent::Instrumentation
             else
               perform_action_without_newrelic_trace(*args)
             end
+          rescue Exception => e
+            failed = true
+            raise e
           ensure
             cpu_burn = (Process.times.utime + Process.times.stime) - t
+            stats_engine.get_stats_no_scope("ControllerCPU/#{path}").record_data_point(cpu_burn)
             agent.transaction_sampler.notice_transaction_cpu_time(cpu_burn)
             
-            duration = Time.now.to_f - start
             # do the apdex bucketing
-            if duration <= @@newrelic_apdex_t
-              @@newrelic_apdex_overall.record_apdex_s cpu_burn    # satisfied
-              stats_engine.get_stats_no_scope("Apdex/#{path}").record_apdex_s cpu_burn
-            elsif duration <= (4 * @@newrelic_apdex_t)
-              @@newrelic_apdex_overall.record_apdex_t cpu_burn    # tolerating
-              stats_engine.get_stats_no_scope("Apdex/#{path}").record_apdex_t cpu_burn
-            else
-              @@newrelic_apdex_overall.record_apdex_f cpu_burn    # frustrated
-              stats_engine.get_stats_no_scope("Apdex/#{path}").record_apdex_f cpu_burn
+            #
+            unless is_filtered?(self.class.newrelic_read_attr('ignore_apdex'))
+              duration = Time.now.to_f - start
+              controller_stat = stats_engine.get_custom_stats("Apdex/#{path}", NewRelic::ApdexStats)
+              case
+                when failed
+                apdex_overall_stat.record_apdex_f    # frustrated
+                controller_stat.record_apdex_f
+                when duration <= NewRelic::Control.instance['apdex_t']
+                apdex_overall_stat.record_apdex_s    # satisfied
+                controller_stat.record_apdex_s
+                when duration <= 4 * NewRelic::Control.instance['apdex_t']
+                apdex_overall_stat.record_apdex_t    # tolerating
+                controller_stat.record_apdex_t
+              else
+                apdex_overall_stat.record_apdex_f    # frustrated
+                controller_stat.record_apdex_f
+              end
             end
-            
           end
         end
       end
-      
     ensure
       # clear out the name of the traced transaction under all circumstances
       stats_engine.transaction_name = nil
+    end
+    
+    private
+    def apdex_overall_stat
+      NewRelic::Agent.instance.stats_engine.get_custom_stats("Apdex", NewRelic::ApdexStats)  
+    end
+    
+    def is_filtered?(ignore_actions)
+      case ignore_actions
+        when nil; false
+        when Hash
+        only_actions = Array(ignore_actions[:only])
+        except_actions = Array(ignore_actions[:except])
+        only_actions.include?(action_name.to_sym) || (except_actions.any? && !except_actions.include?(action_name.to_sym))
+      else
+        true
+      end
     end
   end 
 end  

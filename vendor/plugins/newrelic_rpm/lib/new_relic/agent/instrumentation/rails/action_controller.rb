@@ -1,6 +1,30 @@
 
-if defined? ActionController 
+if defined? ActionController
+  
+  case Rails::VERSION::STRING
 
+    when /^(1\.|2\.0)/  # Rails 1.* - 2.0
+    ActionController::Base.class_eval do
+      add_method_tracer :render, 'View/#{newrelic_metric_path}/Rendering'
+    end  
+
+    when /^2\.1\./  # Rails 2.1
+    ActionView::PartialTemplate.class_eval do
+      add_method_tracer :render, 'View/#{path_without_extension}.#{@view.template_format}.#{extension}/Partial'
+    end
+    ActionView::Template.class_eval do
+      add_method_tracer :render, 'View/#{path_without_extension}.#{@view.template_format}.#{extension}/Rendering'
+    end
+
+    when /^2\./   # Rails 2.2-2.*
+    ActionView::RenderablePartial.module_eval do
+      add_method_tracer :render_partial, 'View/#{path}/Partial'
+    end
+    ActionView::Template.class_eval do
+      add_method_tracer :render, 'View/#{path}/Rendering'
+    end
+  end
+  
   ActionController::Base.class_eval do
     include NewRelic::Agent::Instrumentation::ControllerInstrumentation
     
@@ -10,15 +34,14 @@ if defined? ActionController
     alias_method :perform_action, :perform_action_with_newrelic_trace
     private :perform_action
     
-    add_method_tracer :render, 'View/#{newrelic_metric_path}/Rendering'
+    def self.newrelic_write_attr(attr_name, value) # :nodoc:
+      write_inheritable_attribute(attr_name, value)
+    end
     
-    def self.newrelic_ignore_attr=(value)
-      write_inheritable_attribute('do_not_trace', value)
+    def self.newrelic_read_attr(attr_name) # :nodoc:
+      read_inheritable_attribute(attr_name)
     end
-    def self.newrelic_ignore_attr
-      read_inheritable_attribute('do_not_trace')
-    end
-
+    
     # determine the path that is used in the metric name for
     # the called controller action
     def newrelic_metric_path(action_name_override = nil)

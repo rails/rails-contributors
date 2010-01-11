@@ -11,10 +11,14 @@ class NewRelic::NoticedError
     self.exception_class = exception.class.name
     
     if exception.respond_to?('original_exception')
-      self.message = exception.original_exception.message
+      self.message = exception.original_exception.message.to_s
     else
-      self.message = exception.message
+      self.message = exception.message.to_s
     end
+    
+    # clamp long messages to 4k so that we don't send a lot of
+    # overhead across the wire
+    self.message = self.message[0..4096] if self.message.length > 4096
 
     self.timestamp = Time.now
   end
