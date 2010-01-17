@@ -680,6 +680,7 @@ module NamesManager
   map 'Ryan McGeary',               'rmm5t'
   map 'Ryan Raaum',                 "ryan.raaum\100gmail.com"
   map 'Ryan Tomayko',               "rtomayko\100gmail.com"
+  map 'Sam Elliott',                'Samuel Elliott'
   map 'Sam Granieri',               'sjgman9'
   map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
   map 'Sam Stephenson',             'Sam', 'sam'
@@ -890,6 +891,8 @@ module NamesManager
         ["jon\100blankpad.net"]
       when 'Nick Quaranto and Josh Nichols'
         ['Nick Quaranto', 'Josh Nichols']
+      when 'Sam Elliott and Santiago Pastorino'
+        ['Sam Elliott', 'Santiago Pastorino']
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
