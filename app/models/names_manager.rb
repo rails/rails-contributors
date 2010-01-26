@@ -77,7 +77,6 @@ module NamesManager
       Paul
       robby
       shane
-      steve
       tom
       xavier
     )
@@ -95,6 +94,7 @@ module NamesManager
       'mat',
       'Scott',
       'seth',
+      'steve',
       'trevor'
     ]
   end
@@ -893,6 +893,8 @@ module NamesManager
         ['Nick Quaranto', 'Josh Nichols']
       when 'Sam Elliott and Santiago Pastorino'
         ['Sam Elliott', 'Santiago Pastorino']
+      when 'José Valim and Mikel Lindsaar'
+        ['José Valim', 'Mikel Lindsaar']
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
