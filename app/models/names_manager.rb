@@ -70,7 +70,6 @@ module NamesManager
     # I sent an internal message to these people asking for confirmation or full names.
     WAITING_FOR = %w(
       blackanger
-      dan
       ian
       jerome
       mark
@@ -86,6 +85,7 @@ module NamesManager
       'alex',
       'Andreas',
       'Caleb', # but wrote to Caleb Tennis, waiting for
+      'dan',
       'David',
       'jamesh',
       'jonathan',
