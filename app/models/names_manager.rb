@@ -545,6 +545,7 @@ module NamesManager
   map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
   map 'Masashi Shimbo',             "shimbo\100is.naist.jp"
   map 'Marshall Roch',              'mroch'
+  map 'Martin Gamsjaeger',          'snusnu'
   map 'Mathieu Arnold',             "mat\100absolight.fr"
   map 'Mathieu Jobin',              "somekool\100gmail.com"
   map 'Mats Persson',               "mats\100imediatec.co.uk"
