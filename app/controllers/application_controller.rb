@@ -49,7 +49,8 @@ private
     DotBot        |
     80legs        |
     MLBot         |
-    wasitup
+    wasitup       |
+    ichiro
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
