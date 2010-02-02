@@ -140,6 +140,8 @@ module NamesManager
     when '6f2c4991efbbc5f567a6df36ca78de4f3ca24ee2', '9dbde4f5cbd0617ee6cce3e41d41335f9c9ce3fd'
       # Author is "pivotal", but Adam Milligan told me he himself is the author (via github).
       ['Adam Milligan']
+    when 'ddf2b4add33d5e54c5f5e7adacadbb50d3fa7b52'
+      ['Xavier Noria']
     else
       nil
     end
