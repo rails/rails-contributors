@@ -894,6 +894,8 @@ module NamesManager
         ['Nick Quaranto', 'Josh Nichols']
       when 'Sam Elliott and Santiago Pastorino'
         ['Sam Elliott', 'Santiago Pastorino']
+      when 'Santiago Pastorino and José Ignacio Costa'
+        ['Santiago Pastorino', 'José Ignacio Costa']
       when 'José Valim and Mikel Lindsaar'
         ['José Valim', 'Mikel Lindsaar']
       when /\b\w+\+\w+@/
