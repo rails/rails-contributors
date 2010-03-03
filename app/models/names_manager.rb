@@ -184,6 +184,7 @@ module NamesManager
   map 'Andrew Grim',                'stopdropandrew'
   map 'Andrew Kaspick',             "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
   map 'Andrew Peters',              "andrew.john.peters\100gmail.com"
+  map 'Andrew Shcheglov',           'windock'
   map 'Andrew White',               'pixeltrix'
   map 'Andy Lien',                  "andylien\100gmail.com"
   map 'Ant Ramm',                   'antramm'
