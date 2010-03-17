@@ -385,6 +385,7 @@ module NamesManager
   map 'James Conroy-Finn',          'jcf'
   map 'James Cox',                  'imajes'
   map 'James Edward Gray II',       "james\100grayproductions.net", 'JEG2'
+  map 'James Golick',               'jamesgolick'
   map 'James Healy',                'yob'
   map 'James Lindley',              'jlindley'
   map 'James Mead',                 'floehopper'
