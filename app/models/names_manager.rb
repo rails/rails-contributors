@@ -903,6 +903,8 @@ module NamesManager
         ['Sam Elliott', 'Santiago Pastorino']
       when 'Santiago Pastorino and José Ignacio Costa'
         ['Santiago Pastorino', 'José Ignacio Costa']
+      when 'Santiago Pastorino and Sebastian Martinez'
+        ['Santiago Pastorino', 'Sebastian Martinez']
       when 'José Valim and Mikel Lindsaar'
         ['José Valim', 'Mikel Lindsaar']
       when /\b\w+\+\w+@/
