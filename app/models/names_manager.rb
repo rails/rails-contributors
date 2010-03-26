@@ -242,7 +242,7 @@ module NamesManager
   map 'Chris Anderson',             'jchris'
   map 'Chris Brinker',              "chris\100chrisbrinker.com"
   map 'Chris Carter',               "cdcarter\100gmail.com"
-  map 'Chris Finne',                'chrisfinne'
+  map 'Chris Finne',                'chrisfinne', 'chris finne'
   map 'Chris Hapgood',              'cch1'
   map 'Chris Kampmeier',            'kampers'
   map 'Chris McGrath',              "c.r.mcgrath\100gmail.com", 'c.r.mcgrath', "chris\100octopod.info", 'octopod'
