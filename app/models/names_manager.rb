@@ -142,6 +142,8 @@ module NamesManager
       ['Adam Milligan']
     when 'ddf2b4add33d5e54c5f5e7adacadbb50d3fa7b52'
       ['Xavier Noria']
+    when '3b1c69d2dd2b24a29e4443d7dc481589320a3f3e'
+      ['Kieran Pilkington']
     else
       nil
     end
