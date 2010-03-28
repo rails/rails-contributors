@@ -437,6 +437,7 @@ module NamesManager
   map 'Jim Winstead',               "jimw\100mysql.com"
   map 'Joe Ferris',                 'jferris'
   map 'Joe Goldwasser',             "joe\100mjg2.com"
+  map 'Joel Watson',                'watsonian'
   map 'Joerg Diekmann',             "joergd\100pobox.com"
   map 'Johan Sørensen',             'Johan Sorensen', 'Johan Sörensen', "johan\100johansorensen.com", "johan\100textdrive.com"
   map 'Johannes Barre',             'iGEL'
