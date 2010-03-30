@@ -365,6 +365,7 @@ module NamesManager
   map 'Grzegorz Daniluk',           "daniluk\100yahoo.com"
   map 'Guillaume Carbonneau',       'guillaume'
   map 'Guy Naor',                   "guy.naor\100famundo.com"
+  map 'Hal Brodigan',               'postmodern'
   map 'Hampton Catlin',             "hcatlin\100gmail.com"
   map 'Hendrik Mans',               "hendrik\100mans.de"
   map 'Hendy Irawan',               'ceefour'
