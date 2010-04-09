@@ -325,6 +325,7 @@ module NamesManager
   map 'Elliot Smith',               "elliot\100townx.org"
   map 'Elliot Winkler',             'mcmire'
   map 'Eloy Duran',                 'alloy'
+  map 'Emili Parreño',              'eparreno'
   map 'Emilio Tagua',               'miloops'
   map 'Eric Daspet',                "eric.daspet\100survol.net"
   map 'Eric Hodel',                 "drbrain\100segment7.net"
