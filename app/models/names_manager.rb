@@ -551,6 +551,7 @@ module NamesManager
   map 'Mark R. James',              'mrj'
   map 'Mark Somerville',            'Spakman'
   map 'Mark Van Holstyn',           'lotswholetime'
+  map 'Mark W. Foster',             'mfoster'
   map 'Markus Roberts',             "MarkusQ\100reality.com"
   map 'Marten Veldthuis',           'Marten'
   map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
