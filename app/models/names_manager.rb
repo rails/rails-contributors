@@ -727,6 +727,7 @@ module NamesManager
   map 'Simon Moore',                'saimonmoore'
   map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
   map 'Stefan Kaes',                "skaes\100web.de", 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'
+  map 'St. Louis Ruby Users Group', "stlruby\100googlegroups.com"
   map 'Stephen Haberman',           "stephenh\100chase3000.com"
   map 'Stephen St. Martin',         'Steve St. Martin'
   map 'Stephen Sykes',              'sdsykes'
