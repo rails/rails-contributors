@@ -678,6 +678,7 @@ module NamesManager
   map 'Robin H. Johnson',           "robbat2\100gentoo.org"
   map 'Roderick van Domburg',       'roderickvd'
   map 'Rodney Ramdas',              "rramdas\100gmail.com"
+  map 'Rodrigo Navarro',            'reu'
   map 'Roman Dittert',              'RomD'
   map 'Roman Le Négrate',           'Roman2K'
   map 'Ron DiFrango',               "rdifrango\100captechventures.com"
