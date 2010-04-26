@@ -144,6 +144,8 @@ module NamesManager
       ['Xavier Noria']
     when '3b1c69d2dd2b24a29e4443d7dc481589320a3f3e'
       ['Kieran Pilkington']
+    when 'e813ad2a42549e308a69fd9473f1b9ed531a0d7e'
+      ['Andrew Grimm'] # Author reads unknown <agrimm@.(none)>, see #3999
     else
       nil
     end
