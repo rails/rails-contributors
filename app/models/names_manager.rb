@@ -595,6 +595,7 @@ module NamesManager
   map 'Michael Sheakoski',          'GMFlash'
   map 'Michal Šafránek',            "wejn\100box.cz"
   map 'Michiaki Baba',              "babie7a0\100ybb.ne.jp"
+  map 'Mica Eked',                  'mica eked'
   map 'Mike Boone',                 'boone'
   map 'Mike Clark',                 "mike\100clarkware.com"
   map 'Mike Gunderloy',             'Michael Gunderloy'
