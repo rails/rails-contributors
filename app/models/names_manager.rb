@@ -528,6 +528,7 @@ module NamesManager
   map 'Leon Breedt',                'Leon Bredt'
   map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
   map 'Lewis Jubb',                 "minimudboy\100gmail.com"
+  map 'Logy Laps',                  'logylaps'
   map 'Lon Baker',                  "lon\100speedymac.com"
   map 'Loren Johnson',              'lorenjohnson'
   map 'Lori Holden',                'lholden'
