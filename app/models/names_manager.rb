@@ -310,6 +310,7 @@ module NamesManager
   map 'Dick Davies',                'rasputnik'
   map 'Dieter Komendera',           'kommen'
   map 'Dirkjan Bussink',            'dbussink'
+  map 'Dmitry Lipovoi',             'pleax'
   map 'Dmitriy Timokhin',           'pager'
   map 'Dominic Sisneros',           "dom\100sisna.com"
   map 'Don Park',                   "don.park\100gmail.com"
