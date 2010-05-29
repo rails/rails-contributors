@@ -186,7 +186,7 @@ module NamesManager
   map 'Andreas Isaksson',           'isak'
   map 'Andrew A. Smith',            "andy\100tinnedfruit.org"
   map 'Andrew Bennett',             'PotatoSalad'
-  map 'Andrew Chase',               'acechase'
+  map 'Andrew Chase',               'acechase', 'Andrew'
   map 'Andrew Grim',                'stopdropandrew'
   map 'Andrew Kaspick',             "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
   map 'Andrew Peters',              "andrew.john.peters\100gmail.com"
