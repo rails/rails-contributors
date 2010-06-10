@@ -880,6 +880,9 @@ module NamesManager
       when '\\x00-\\x1f'
         #  Fix ActiveSupport::JSON encoding of control characters [\x00-\x1f]
         nil
+      when 'Closes #3765'
+        # Add shallow routes to the new router [Closes #3765]
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when "schoenm\100earthlink.net sandra.metz\100duke.edu"
