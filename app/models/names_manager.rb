@@ -881,7 +881,7 @@ module NamesManager
       when '\\x00-\\x1f'
         #  Fix ActiveSupport::JSON encoding of control characters [\x00-\x1f]
         nil
-      when /\ACloses #\d\z/
+      when /\ACloses #\d+\z/
         # Add shallow routes to the new router [Closes #3765]
         nil
       when 'Carlhuda'
