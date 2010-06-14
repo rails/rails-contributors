@@ -1,7 +1,7 @@
 role :staging, "hashref.com"
 
 def execute_in_rc(method, command)
-  send(method, "export PATH=/opt/ruby-enterprise/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}")
+  send(method, "export PATH=/opt/ruby-enterprise-1.8.7-2010.02/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}")
 end
 
 def run_in_rc(command)
