@@ -682,6 +682,7 @@ module NamesManager
   map 'Rob Rasmussen',              "rob.rasmussen\100gmail.com"
   map 'Rob Sanheim',                'rsanheim', "rsanheim\100gmail.com", "rob\100thinkrelevance.com"
   map 'Robby Russell',              'robbyrussell'
+  map 'Robert Speicher',            'rspeicher'
   map 'Robin Fisher',               'robinjfisher'
   map 'Robin H. Johnson',           "robbat2\100gentoo.org"
   map 'Roderick van Domburg',       'roderickvd'
