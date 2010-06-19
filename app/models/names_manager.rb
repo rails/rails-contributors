@@ -583,7 +583,7 @@ module NamesManager
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Vincent',            'neshmi'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
-  map 'Maxime RETY',                'Maxime Réty'
+  map 'Maxime Réty',                'Maxime RETY'
   map 'Melih Arda Yalçiner',        'Wizard'
   map 'Micah Alles',                "alles\100atomicobject.com"
   map 'Michael Daines',             "me\100mdaines.com"
