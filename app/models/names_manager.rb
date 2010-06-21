@@ -497,6 +497,7 @@ module NamesManager
   map 'Kaspar Schiess',             "eule\100space.ch"
   map 'Kazuhiro Yoshdia',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
   map 'Keegan Quinn',               "keegan\100thebasement.org"
+  map 'Keith Gautreaux',            'kaygee', 'kgautreaux'
   map 'Keith Morrison',             "keithm\100infused.org"
   map 'Ken Barker',                 "ken.barker\100gmail.com"
   map 'Ken Kunz',                   "kennethkunz\100gmail.com"
