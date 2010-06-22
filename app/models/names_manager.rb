@@ -667,6 +667,7 @@ module NamesManager
   map 'Pivotal Labs',               'pivotal'
   map 'PJ Hyett',                   "pjhyett\100gmail.com"
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
+  map 'Rainer Blessing',            'RainerBlessing'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
   map 'Rein Henrichs',              "ReinH"
   map "Remco van 't Veer",          'remvee'
