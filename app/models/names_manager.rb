@@ -515,6 +515,7 @@ module NamesManager
   map 'Kouhei Sutou',               'kou'
   map 'Krishna Kotecha',            'krishna'
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
+  map 'Krzysztof Knapik',           'knapo'
   map 'Kubo Takehiro',              'kubo'
   map 'Kyosuke Morohashi',          'moro'
   map 'Lakshan Perera',             'laktek', 'lakshan'
