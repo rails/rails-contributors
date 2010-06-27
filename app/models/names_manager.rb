@@ -241,6 +241,7 @@ module NamesManager
   map 'Chad Ingram',                'matrix9180'
   map 'Chad Pytel',                 'cpytel'
   map 'Chad Woolley',               'thewoolleyman'
+  map 'Chaitanya Vellanki',         'chaitanyav'
   map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
   map 'Chas Grundy',                'chas'
   map 'Cheah Chu Yeow',             'Chu Yeow', 'chuyeow'
@@ -935,6 +936,8 @@ module NamesManager
         ['José Valim', 'Mikel Lindsaar']
       when 'Santiago Pastorino and Carl Lerche'
         ['Santiago Pastorino', 'Carl Lerche']
+      when 'Neeraj Singh and Santiago Pastorino'
+        ['Neeraj Singh', 'Santiago Pastorino']
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
