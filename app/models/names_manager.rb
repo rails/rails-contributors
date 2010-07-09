@@ -530,6 +530,7 @@ module NamesManager
   map 'Lee Marlow',                 'lmarlow', "lmarlow\100yahoo.com"
   map "Lee O'Mara",                 "lee\100omara.ca"
   map 'Lennon Day-Reynolds',        'rcoder'
+  map 'Leo Lou',                    'l4u'
   map 'Leon Breedt',                'Leon Bredt'
   map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
   map 'Lewis Jubb',                 "minimudboy\100gmail.com"
