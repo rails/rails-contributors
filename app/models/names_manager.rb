@@ -159,6 +159,7 @@ module NamesManager
   #
   # This mapping does not use regexps on purpose, it is more robust to put the
   # exact string equivalences. The manager has to be very strict about this.
+  map 'Aaron Eisenberger',          'Aaron'
   map 'Aaron Namba',                'anamba'
   map 'Aaron Pfeifer',              'obrie'
   map 'Abhay Kumar',                'abhay'
