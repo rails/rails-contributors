@@ -99,17 +99,17 @@ protected
   # commits within a given import.
   def import_new_commits(branches)
     ncommits = 0
-    last_svn_sha1 = Commit.first(:conditions => {:imported_from_svn => true}, :order => 'committed_timestamp DESC').sha1 rescue nil
     branches.each do |branch|
-      ncommits += import_new_commits_in_branch(branch, last_svn_sha1)
+      ncommits += import_new_commits_in_branch(branch)
     end  
     ncommits    
   end
 
-  def import_new_commits_in_branch(branch, last_svn_sha1)
-    batch_size = 100
+  def import_new_commits_in_branch(branch)
+    batch_size = 50
     ncommits   = 0
     offset     = 0
+    six_months = 6.months.ago
 
     logger.info("importing new commits from branch #{branch}")
     loop do
@@ -117,11 +117,12 @@ protected
       return ncommits if commits.empty?
       commits.each do |commit|
         if Commit.exists?(:sha1 => commit.id)
-          if commit.id == last_svn_sha1
-            # No missing commits are going to come up from svn days.
+          if commit.authored_date < six_months
+            # We need to stop at some point, so let's assume that no merge is
+            # gonna come with commits older than 6 months.
             return ncommits
           else
-            # A merge commit can import commits older than existing ones, so just go on.
+            # A merge can import commits older than existing ones, so just go on.
             next
           end
         end
