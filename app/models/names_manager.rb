@@ -573,6 +573,7 @@ module NamesManager
   map 'Mathieu Arnold',             "mat\100absolight.fr"
   map 'Mathieu Jobin',              "somekool\100gmail.com"
   map 'Mats Persson',               "mats\100imediatec.co.uk"
+  map 'Matt B.',                    'Matt Boehlig'
   map 'Matt Aimonetti',             'matt'
   map 'Matt Bauer',                 'mattbauer'
   map 'Matt Freels',                'freels'
