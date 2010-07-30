@@ -653,6 +653,7 @@ module NamesManager
   map 'Patrick Joyce',              "patrick.t.joyce"
   map 'Patrick Lenz',               "patrick\100lenz.sh"
   map 'Paul Butcher',               "paul\100paulbutcher.com"
+  map 'Paul Carey',                 'paulccarey'
   map 'Paul Smith',                 "paul\100cnt.org"
   map 'Pelle Braendgaard',          'pelle', 'Pelle'
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
