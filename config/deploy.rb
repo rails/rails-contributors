@@ -1,7 +1,8 @@
-role :staging, "hashref.com"
+set :user, 'rails'
+role :production, "hashref.com"
 
 def execute_in_rc(method, command)
-  send(method, "export PATH=/opt/ruby-enterprise-1.8.7-2010.02/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/fxn/rails-contributors; #{command}")
+  send(method, "export PATH=/opt/ruby-enterprise-1.8.7-2010.02/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/rails/rails-contributors; #{command}")
 end
 
 def run_in_rc(command)
@@ -13,27 +14,23 @@ def stream_in_rc(command)
 end
 
 namespace :rc do
-  task :tail, :roles => :staging do
+  task :tail, :roles => :production do
     stream_in_rc "tail -f log/production.log"
   end
 
-  task :pull, :roles => :staging do
+  task :pull, :roles => :production do
     run_in_rc "git pull"
   end
 
-  task :update_repo, :roles => :staging do
-    run_in_rc %{script/runner 'Repo.update("/home/fxn/rails")'}
-  end
-
-  task :delete_all_contributions, :roles => :staging do
+  task :delete_all_contributions, :roles => :production do
     run_in_rc %{script/runner 'Contribution.delete_all'}
   end
 
-  task :restart, :roles => :staging do
+  task :restart, :roles => :production do
     run_in_rc "touch tmp/restart.txt"
   end
 
-  task :expire_caches, :roles => :staging do
+  task :expire_caches, :roles => :production do
     run_in_rc "rm -f public/stylesheets/all.css"
     run_in_rc "rm -f public/javascripts/all.js"
     
@@ -51,11 +48,11 @@ namespace :rc do
     expire_caches
   end
 
-  task :maintenance_on, :roles => :staging do
+  task :maintenance_on, :roles => :production do
     run_in_rc "cp public/system/maintenance.html.deleteme public/system/maintenance.html"
   end
 
-  task :maintenance_off, :roles => :staging do
+  task :maintenance_off, :roles => :production do
     run_in_rc "rm public/system/maintenance.html"
   end
 end
