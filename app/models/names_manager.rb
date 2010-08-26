@@ -402,6 +402,7 @@ module NamesManager
   map 'James Lindley',              'jlindley'
   map 'James Mead',                 'floehopper'
   map 'James Megquier',             "james\100slashetc.com"
+  map 'James Miller',               'bensie'
   map 'James Strachan',             "jstrachan"
   map 'Jamie Hill',                 'jamie'
   map 'Jamie Macey',                "jamie\100bravenet.com", "maceywj\100telus.net"
