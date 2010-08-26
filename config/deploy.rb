@@ -2,7 +2,7 @@ set :user, 'rails'
 role :production, "hashref.com"
 
 def execute_in_rc(method, command)
-  send(method, "export PATH=/opt/ruby-enterprise-1.8.7-2010.02/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/rails/rails-contributors; #{command}")
+  send(method, "export PATH=/opt/ruby-enterprise/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/rails/rails-contributors; #{command}")
 end
 
 def run_in_rc(command)
@@ -20,6 +20,10 @@ namespace :rc do
 
   task :pull, :roles => :production do
     run_in_rc "git pull"
+  end
+
+  task :update_repo, :roles => :production do
+    run_in_rc %{script/runner 'Repo.update("/home/rails/master", "origin/master", "origin/2-3-stable", "origin/3-0-stable")'}
   end
 
   task :delete_all_contributions, :roles => :production do
