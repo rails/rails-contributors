@@ -148,6 +148,11 @@ module NamesManager
       ['Andrew Grimm'] # see #3999
     when '2414fdb244cc0ba97620dd3f50e269d2e26c7392'
       ['Jens Kolind'] # see #1859
+    when '1851af84c1c7244dc416be9c93a4700b70e801e3'
+      # The commit message has a line ending with "user[password]", and the current heuristics
+      # interpret "password" is the contributor. Changing the heuristic is brittle so by now
+      # it is handled by hand so that at least the credit goes to Santiago.
+      ['Santiago Pastorino']
     else
       nil
     end
