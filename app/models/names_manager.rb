@@ -153,6 +153,10 @@ module NamesManager
       # interpret "password" is the contributor. Changing the heuristic is brittle so by now
       # it is handled by hand so that at least the credit goes to Santiago.
       ['Santiago Pastorino']
+    when '83ecd03e7d3472c16decbf1b9939da53347b36a3'
+      # Similar issue, some lines in the commit message end with "[x86_64-darwin10.4.0]"
+      # or similar.
+      ['Stevie Graham']
     else
       nil
     end
