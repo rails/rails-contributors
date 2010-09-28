@@ -802,6 +802,7 @@ module NamesManager
   map 'Trek Glowacki',              'trek'
   map 'Trent Ogren',                'misfo'
   map 'Trevor Squire',              'protocool'
+  map 'Troels Petersen',            'tnp'
   map 'Tyler Kiley',                "tyler\100kianta.com"
   map 'Tyler Kovacs',               "tyler.kovacs\100gmail.com"
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
