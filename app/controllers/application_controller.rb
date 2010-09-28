@@ -19,6 +19,7 @@ private
   BOTS_REGEXP = %r{
     Baidu         |
     Gigabot       |
+    Openbot       |
     Google        |
     libwww-perl   |
     lwp-trivial   |
@@ -34,12 +35,14 @@ private
     ia_archiver   |
     scoutjet      |
     nutch         |
+    nuhk          |
     dts\ agent    |
     twiceler      |
     ask\ jeeves   |
     Webspider     |
     Daumoa        |
     MEGAUPLOAD    |
+    Yammybot      |
     yacybot       |
     GingerCrawler |
     Yandex        |
