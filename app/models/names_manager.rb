@@ -89,7 +89,6 @@ module NamesManager
       'David',
       'jamesh',
       'jonathan',
-      'Kane',
       'Kent',
       'mat',
       'Scott',
@@ -194,7 +193,7 @@ module NamesManager
   map 'Alexey Zatsepin',            'alexey', 'Alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
   map 'Andreas Isaksson',           'isak'
-  map 'Andreas Wurm',               'Kanetontli', 'Kane'
+  map 'Andreas Wurm',               'Kanetontli', 'Kane', 'kane'
   map 'Andrew A. Smith',            "andy\100tinnedfruit.org"
   map 'Andrew Bennett',             'PotatoSalad'
   map 'Andrew Chase',               'acechase', 'Andrew'
