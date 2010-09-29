@@ -194,7 +194,7 @@ module NamesManager
   map 'Alexey Zatsepin',            'alexey', 'Alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
   map 'Andreas Isaksson',           'isak'
-  map 'Andreas Wurm',               'Kanetontli'
+  map 'Andreas Wurm',               'Kanetontli', 'Kane'
   map 'Andrew A. Smith',            "andy\100tinnedfruit.org"
   map 'Andrew Bennett',             'PotatoSalad'
   map 'Andrew Chase',               'acechase', 'Andrew'
