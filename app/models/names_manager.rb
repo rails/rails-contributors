@@ -958,6 +958,8 @@ module NamesManager
         ['Neeraj Singh', 'Santiago Pastorino']
       when 'Jeroen van Dijk and Josh Kalderimis'
         ['Jeroen van Dijk', 'Josh Kalderimis']
+      when 'Nathan Zook and Ryan Bigg'
+        ['Nathan Zook', 'Ryan Bigg']
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
