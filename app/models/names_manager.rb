@@ -776,6 +776,7 @@ module NamesManager
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
   map 'Taryn East',                 'taryn', 'taryneast', "rubygirl\100taryneast.org"
   map 'Tekin Suleyman',             'Tekin'
+  map 'Teng Siong Ong',             'siong1987'
   map 'Thijs van der Vossen',       'thijsv', "thijs\100vandervossen.net", "thijs\100fngtps.com"
   map 'Thomas Enebo',               "tom.enebo\100gmail.com"
   map 'Thomas Fuchs',               "thomas\100fesch.at", 'madrobby'
