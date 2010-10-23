@@ -791,6 +791,7 @@ module NamesManager
   map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
   map 'Tim Trautmann',              "timct\100mac.com"
   map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte', 'xal'
+  map 'Toby Cabot',                 'toby cabot'
   map 'Todd Gehman',                "todd\100robotcoop.com", 'todd'
   map 'Todd Hanson',                "hanson\100surgery.wisc.edu"
   map 'Tom Brice',                  'tomtoday', "tomtoday\100gmail.com"
