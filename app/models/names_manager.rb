@@ -413,6 +413,7 @@ module NamesManager
   map 'James Megquier',             "james\100slashetc.com"
   map 'James Miller',               'bensie'
   map 'James Strachan',             "jstrachan"
+  map 'James Tucker',               'raggi'
   map 'Jamie Hill',                 'jamie'
   map 'Jamie Macey',                "jamie\100bravenet.com", "maceywj\100telus.net"
   map 'Jamie Orchard-Hays',         "jamie\100dang.com"
