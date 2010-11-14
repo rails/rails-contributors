@@ -833,6 +833,7 @@ module NamesManager
   map 'Zach Dennis',                'zdennis'
   map 'Zachary Holt',               "z\100wzph.com"
   map 'Zack Chandler',              'zackchandler'
+  map 'Zheng Jia',                  'zhengjia'
 
   # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
   CANONICAL_NAME_FOR = {}
