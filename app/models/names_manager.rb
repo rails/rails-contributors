@@ -277,6 +277,7 @@ module NamesManager
   map 'Craig Davey',                'eigentone', "eigentone\100gmail.com"
   map 'Cristi Balan',               'Cristi BALAN'
   map 'Damian Janowski',            'djanowski'
+  map 'Damien Mathieu',             'dmathieu'
   map 'Dan Cheail',                 'codeape'
   map 'Dan Croak',                  'dancroak'
   map 'Dan Kubb',                   'dkubb'
