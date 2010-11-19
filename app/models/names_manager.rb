@@ -916,6 +916,9 @@ module NamesManager
       when 'and'
         # see https://github.com/rails/rails/commit/d891ad4e92c4f4d854ba321c42000026b5c75187
         nil
+      when 'options'
+        # see https://github.com/rails/rails/commit/bf176e9c7a1aa46b021384b91f4f9ec9a1132c0f
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when "schoenm\100earthlink.net sandra.metz\100duke.edu"
