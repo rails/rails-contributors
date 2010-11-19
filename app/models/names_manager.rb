@@ -913,6 +913,9 @@ module NamesManager
       when /\ACloses #\d+\z/
         # Add shallow routes to the new router [Closes #3765]
         nil
+      when 'and'
+        # see https://github.com/rails/rails/commit/d891ad4e92c4f4d854ba321c42000026b5c75187
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when "schoenm\100earthlink.net sandra.metz\100duke.edu"
