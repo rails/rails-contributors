@@ -665,6 +665,7 @@ module NamesManager
   map 'Patrick Hurley',             "phurley\100gmail.com"
   map 'Patrick Joyce',              "patrick.t.joyce"
   map 'Patrick Lenz',               "patrick\100lenz.sh"
+  map 'Pau',                        'nosolopau'
   map 'Paul Butcher',               "paul\100paulbutcher.com"
   map 'Paul Carey',                 'paulccarey'
   map 'Paul Smith',                 "paul\100cnt.org"
@@ -761,6 +762,7 @@ module NamesManager
   map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
   map 'Stefan Kaes',                "skaes\100web.de", 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'
   map 'St. Louis Ruby Users Group', "stlruby\100googlegroups.com"
+  map 'Stephen Blackstone',         'sblackstone'
   map 'Stephen Haberman',           "stephenh\100chase3000.com"
   map 'Stephen St. Martin',         'Steve St. Martin'
   map 'Stephen Sykes',              'sdsykes'
