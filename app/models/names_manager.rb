@@ -770,6 +770,7 @@ module NamesManager
   map 'Stephen Veiss',              'sveiss'
   map 'Stephen Veit',               "sveit\100tradeharbor.com"
   map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
+  map 'Steve Richert',              'laserlemon'
   map 'Steven Bristol',             'stevenbristol'
   map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
   map 'Stian Grytøyr',              "stian\100grytoyr.net"
