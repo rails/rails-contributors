@@ -106,10 +106,10 @@ protected
   end
 
   def import_new_commits_in_branch(branch)
-    batch_size = 50
-    ncommits   = 0
-    offset     = 0
-    one_year   = 1.year.ago
+    batch_size   = 50
+    ncommits     = 0
+    offset       = 0
+    three_months = 3.months.ago
 
     logger.info("importing new commits from branch #{branch}")
     loop do
@@ -117,9 +117,9 @@ protected
       return ncommits if commits.empty?
       commits.each do |commit|
         if Commit.exists?(:sha1 => commit.id)
-          if commit.authored_date < one_year
+          if commit.committed_date < three_months
             # We need to stop at some point, so let's assume that no merge is
-            # gonna come with commits older than one year.
+            # older than 3 months.
             return ncommits
           else
             # A merge can import commits older than existing ones, so just go on.
