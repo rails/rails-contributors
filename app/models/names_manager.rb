@@ -605,6 +605,7 @@ module NamesManager
   map 'Maxime Réty',                'Maxime RETY'
   map 'Melih Arda Yalçiner',        'Wizard'
   map 'Micah Alles',                "alles\100atomicobject.com"
+  map 'Michael Cetrulo',            'Samus_'
   map 'Michael Daines',             "me\100mdaines.com"
   map 'Michael Dewey',              "mike\100michaeldewey.org"
   map 'Michael Galero',             'mikong'
