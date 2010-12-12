@@ -815,6 +815,7 @@ module NamesManager
   map 'Tyler Kiley',                "tyler\100kianta.com"
   map 'Tyler Kovacs',               "tyler.kovacs\100gmail.com"
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
+  map 'Vijay Dev',                  'vijay', 'vijaydev'
   map 'Vitaly Kushner',             'vitaly'
   map 'Vlad Romascanu',             'vladr'
   map 'Wang Chun',                  'wangchun'
