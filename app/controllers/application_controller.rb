@@ -54,7 +54,8 @@ private
     MLBot         |
     wasitup       |
     ichiro        |
-    discobot
+    discobot      |
+    bingbot
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
