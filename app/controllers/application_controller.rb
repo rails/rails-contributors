@@ -53,7 +53,8 @@ private
     80legs        |
     MLBot         |
     wasitup       |
-    ichiro
+    ichiro        |
+    discobot
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
