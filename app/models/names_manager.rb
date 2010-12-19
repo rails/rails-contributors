@@ -690,6 +690,7 @@ module NamesManager
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Rainer Blessing',            'RainerBlessing'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
+  map 'Ravil Bayramgalin',          'brainopia'
   map 'Rein Henrichs',              "ReinH"
   map "Remco van 't Veer",          'remvee'
   map 'Rémy Coutable',              'rymai', 'remy', "rymai\100rymai.com", "remy.coutable\100gmail.com"
