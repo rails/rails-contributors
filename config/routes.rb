@@ -1,6 +1,6 @@
-ActionController::Routing::Routes.draw do |map|
-  map.resources :contributors, :has_many => :commits
-  map.resource :names_mapping
-  map.resource :bugmash
-  map.root :controller => 'contributors'
+RailsContributors::Application.routes.draw do
+  resources :contributors, :has_many => :commits
+  resource :names_mapping
+  resource :bugmash
+  root :to => 'contributors#index'
 end

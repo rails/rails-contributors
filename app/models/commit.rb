@@ -4,11 +4,11 @@ class Commit < ActiveRecord::Base
 
   default_scope :order => 'committed_timestamp DESC'
 
-  named_scope :since, lambda { |date|
+  scope :since, lambda { |date|
     date ? { :conditions => ['commits.committed_timestamp > ?', date] } : {}
   }
 
-  named_scope :with_no_contributors,
+  scope :with_no_contributors,
     :select => 'commits.*', # otherwise we get read-only records
     :joins => 'LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id',
     :conditions => 'contributions.commit_id IS NULL'
@@ -38,7 +38,7 @@ class Commit < ActiveRecord::Base
 
   # Returns the URL of this commit in GitHub.
   def github_url
-    "http://github.com/rails/rails/commit/#{sha1}"
+    "https://github.com/rails/rails/commit/#{sha1}"
   end
 
   def short_message
@@ -175,7 +175,7 @@ protected
 
   # Some commits only touch CHANGELOGs, for example
   #
-  #   http://github.com/rails/rails/commit/f18356edb728522fcd3b6a00f11b29fd3bff0577
+  #   https://github.com/rails/rails/commit/f18356edb728522fcd3b6a00f11b29fd3bff0577
   #
   def only_modifies_changelogs?
     git_show.scan(/^diff --git(.*)$/) do |fname|

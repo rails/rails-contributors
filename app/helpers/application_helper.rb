@@ -21,11 +21,7 @@ module ApplicationHelper
 
   def sidebar_tab(name, current, options={}, html_options={})
     style = current ? ' class="current"' : ''
-    return <<-HTML
-      <li#{style}>
-        #{link_to name, options, html_options}
-      </li>
-    HTML
+    "<li#{style}> #{link_to name, options, html_options} </li>".html_safe
   end
 
   def normalize_title(title)
