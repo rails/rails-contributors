@@ -890,7 +890,7 @@ module NamesManager
         nil
       when /\A\s*\z/
         nil
-      when /^See rails ML/, /Rails.env/
+      when /^See rails ML/, /RAILS_ENV/
         nil
       when /RubyConf/
         # RubyConf '05

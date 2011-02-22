@@ -3,8 +3,8 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="<%=h @description %>" />
-    <meta name="keywords" content="<%=h Array(@keywords).concat(['Ruby on Rails', 'core', 'contributors']).join(',') %>" />
+    <meta name="description" content="<%= @description %>" />
+    <meta name="keywords" content="<%= Array.wrap(@keywords).concat(['Ruby on Rails', 'core', 'contributors']).join(',') %>" />
     <meta name="author" content="Xavier Noria" />
     <meta name="designer" content="José Espinal" />
 
@@ -15,7 +15,7 @@
   <body>
     <div id="topBar">
       <div class="wrapper">
-        <%= render :partial => 'layouts/top_bar_content' %>
+        <%= render 'layouts/top_bar_content' %>
       </div>
     </div>
     <div id="header">

@@ -1,4 +1,9 @@
 require 'test_helper'
+require 'commit'
+
+class Commit
+  public :extract_candidates, :extract_contributor_names_from_text
+end
 
 class CommitTest < ActiveSupport::TestCase
   test "short sha1" do
@@ -9,7 +14,7 @@ class CommitTest < ActiveSupport::TestCase
 
   test "github url" do
     commit = Commit.new(:sha1 => "c0f3dc9728d8810e710d52e05bc61395297be787")
-    assert_equal "http://github.com/rails/rails/commit/c0f3dc9728d8810e710d52e05bc61395297be787", commit.github_url
+    assert_equal "https://github.com/rails/rails/commit/c0f3dc9728d8810e710d52e05bc61395297be787", commit.github_url
   end
 
   test "basic name extraction" do
@@ -29,25 +34,25 @@ class CommitTest < ActiveSupport::TestCase
     [Kevin Clark & Jeremy Hopple]
 MESSAGE
   end
-  
+
   test "merge commit detection" do
     commit = Commit.new
-    
+
     commit.message = "Merge branch 'master' of git://github.com/rails/rails"
     assert commit.merge?
-    
+
     commit.message = "Merge remote branch 'origin/master'"
     assert commit.merge?
-    
+
     commit.message = 'Merge docrails'
     assert commit.merge?
-    
+
     commit.message = 'Merge with docrails'
     assert commit.merge?
-    
+
     commit.message = "Merge commit 'rails/master'"
     assert commit.merge?
-    
+
     commit.message = "Stop supporting blank arguments to AR#relation query methods"
     assert !commit.merge?
   end

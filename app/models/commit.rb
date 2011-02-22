@@ -2,16 +2,15 @@ class Commit < ActiveRecord::Base
   has_many :contributions, :dependent => :destroy
   has_many :contributors, :through => :contributions
 
-  default_scope :order => 'committed_timestamp DESC'
-
   scope :since, lambda { |date|
-    date ? { :conditions => ['commits.committed_timestamp > ?', date] } : {}
+    conditions = date ?  ['commits.committed_timestamp > ?', date] : nil
+    where(conditions)
   }
 
   scope :with_no_contributors,
-    :select => 'commits.*', # otherwise we get read-only records
-    :joins => 'LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id',
-    :conditions => 'contributions.commit_id IS NULL'
+    select('commits.*'). # otherwise we get read-only records
+    joins('LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id').
+    where('contributions.commit_id' => nil)
 
   validates_presence_of   :sha1
   validates_uniqueness_of :sha1
@@ -51,22 +50,14 @@ class Commit < ActiveRecord::Base
     names = canonicalize(names)
     names.uniq
   end
-  
+
   # Merge commits are not really new patches, we filter them out
   # unless they are whitelisted.
   #
   # On the other hand the application monitors active branches, but the same
   # patch applied several times should count as a single contribution.
   def shouldnt_count_as_a_contribution?
-    if not whitelisted?
-      merge? || backported_from_master?
-    end
-  end
-
-  WHITELIST = [
-  ].to_set
-  def whitelisted?
-    WHITELIST.member?(sha1)
+    merge? || backported_from_master?
   end
 
   def merge?

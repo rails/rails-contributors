@@ -7,7 +7,7 @@
   <%= @title %><br/>
   <span class="listing-total">Showing <%= pluralize @contributors.size, 'person' %></span>
 </h1>
-<%= link_to "See names mapping &rarr;".html_safe, names_mapping_path, :class => "name-mapping" %>
+<%= link_to "See names mapping →", names_mapping_path, :class => 'name-mapping' %>
 
 <div id="table-wrap">
   <table>
@@ -20,15 +20,4 @@
   </table>
 </div>
 
-<% content_for :sidebar do %>
-  <h4>
-    Commits from
-  </h4>
-  <ul id="navigation">
-    <% for key, name in TimeConstraints.all %>
-      <%# I prefer home pages with no query string. %>
-      <% query = key == 'all-time' ? {} : {:window => key} %>
-      <%= sidebar_tab name, @window == key, contributors_path(query) %>
-    <% end %>
-  </ul>
-<% end %>
+<%= render 'shared/window_sidebar' %>

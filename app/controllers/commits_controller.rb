@@ -7,7 +7,7 @@ class CommitsController < ApplicationController
   }
 
   def index
-    @commits = @contributor.commits_since(@since)
+    @commits = @contributor.commits.since(@since).order('committed_timestamp DESC')
   end
 
 private

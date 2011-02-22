@@ -10,7 +10,7 @@ def run_in_rc(command)
 end
 
 def stream_in_rc(command)
-  execute_in_rc(:stream, command)  
+  execute_in_rc(:stream, command)
 end
 
 namespace :rc do
@@ -20,6 +20,10 @@ namespace :rc do
 
   task :pull, :roles => :production do
     run_in_rc "git pull"
+  end
+
+  task :bundle, :roles => :production do
+    run_in_rc 'bundle install --path ~/.bundle'
   end
 
   task :update_repo, :roles => :production do
@@ -37,7 +41,7 @@ namespace :rc do
   task :expire_caches, :roles => :production do
     run_in_rc "rm -f public/stylesheets/all.css"
     run_in_rc "rm -f public/javascripts/all.js"
-    
+
     # Inspired by John Leach's
     # http://blog.brightbox.co.uk/posts/expiring-an-entire-page-cache-tree-atomically
     suffix = Time.now.to_i
@@ -47,6 +51,7 @@ namespace :rc do
 
   task :deploy do
     pull
+    bundle
     update_repo
     restart
     expire_caches

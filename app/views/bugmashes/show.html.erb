@@ -1,8 +1,0 @@
-<p>
-  <b>Superlative Total</b>: <%= @newcomers.size %>.
-</p>
-<p>
-<% for n in @newcomers.sort_by {|n| n.name} %>
-<%= link_to_contributor(n) %><br/>
-<% end %>
-</p>

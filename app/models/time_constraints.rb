@@ -25,13 +25,13 @@ module TimeConstraints
       when 'all-time'
         nil
       when 'today'
-        Date.today
+        Date.current
       when 'this-week'
-        Date.today.beginning_of_week
+        Date.current.beginning_of_week
       when 'this-month'
-        Date.today.beginning_of_month
+        Date.current.beginning_of_month
       when 'this-year'
-        Date.today.beginning_of_year
+        Date.current.beginning_of_year
       else
         nil
     end
