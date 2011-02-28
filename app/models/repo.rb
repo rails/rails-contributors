@@ -1,5 +1,6 @@
 require 'set'
 require 'fileutils'
+require 'application_utils'
 
 class Repo
   attr_reader :logger, :grit_repo
