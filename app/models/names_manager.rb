@@ -973,6 +973,8 @@ module NamesManager
         ['José Valim', 'Mikel Lindsaar']
       when 'Santiago Pastorino and Carl Lerche'
         ['Santiago Pastorino', 'Carl Lerche']
+      when 'Santiago Pastorino and Emilio Tagua'
+        ['Santiago Pastorino', 'Emilio Tagua']
       when 'Neeraj Singh and Santiago Pastorino'
         ['Neeraj Singh', 'Santiago Pastorino']
       when 'Jeroen van Dijk and Josh Kalderimis'
