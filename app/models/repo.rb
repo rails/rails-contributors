@@ -224,8 +224,21 @@ protected
     end
   end
 
+  # Expires the cache under tmp/cache.
+  #
+  # We do that in two steps: first we move tmp/cache into a new directory,
+  # and then we remove that one. It is done that way because if we rm -rf
+  # tmp/cache directly and at the same time requests come and create new
+  # cache files a black hole can be created and handling that is beyond
+  # the legendary robustness of this website.
+  #
+  # On the other hand, moving is atomic. Atomic is good.
   def expire_caches
-    FileUtils.rm_rf(File.join(Rails.root, 'tmp', 'cache', 'views'))
+    expired_cache = "expired_cache.#{Time.now.to_f}"
+    Dir.chdir("#{Rails.root}/tmp") do
+      FileUtils.mv('cache', expired_cache, :force => true)
+      FileUtils.rm_rf(expired_cache)
+    end
   end
 
   def database_needs_update?(ncommits, gone_names)
