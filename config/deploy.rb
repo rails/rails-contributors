@@ -44,9 +44,9 @@ namespace :rc do
 
     # Inspired by John Leach's
     # http://blog.brightbox.co.uk/posts/expiring-an-entire-page-cache-tree-atomically
-    suffix = Time.now.to_i
-    run_in_rc "mv tmp/cache/views tmp/cache/views_#{suffix}"
-    run_in_rc "rm -rf tmp/cache/views_#{suffix}"
+    expired_cache = "tmp/expired_cache.#{Time.now.to_f}"
+    run_in_rc "mv tmp/cache #{expired_cache}"
+    run_in_rc "rm -rf #{expired_cache}"
   end
 
   task :deploy do
