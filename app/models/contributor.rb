@@ -2,8 +2,7 @@ class Contributor < ActiveRecord::Base
   has_many :contributions, :dependent => :destroy
   has_many :commits, :through => :contributions
 
-  validates_presence_of   :url_id
-  validates_uniqueness_of :url_id
+  validates :url_id, :presence => true, :uniqueness => true
 
   def self.all_with_ncontributions
     all_with_ncontributions_since(nil)

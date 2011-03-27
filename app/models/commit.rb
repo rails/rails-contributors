@@ -12,9 +12,8 @@ class Commit < ActiveRecord::Base
     joins('LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id').
     where('contributions.commit_id' => nil)
 
-  validates_presence_of   :sha1
-  validates_uniqueness_of :sha1
-  validates_inclusion_of  :imported_from_svn, :in => [true, false]
+  validates :sha1, :presence => true, :uniqueness => true
+  validates :imported_from_svn, :inclusion => {:in => [true, false]}
 
   # Constructor that initializes the object from a Grit commit.
   def self.new_from_grit_commit(commit, branch)
