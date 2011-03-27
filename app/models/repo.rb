@@ -106,6 +106,9 @@ protected
     ncommits
   end
 
+  # FIXME: This import is done this way for historical reasons but is
+  # innefficient. We should figure out the last sha1 per branch, and
+  # just directly pick up what's new with rev-list.
   def import_new_commits_in_branch(branch)
     batch_size   = 50
     ncommits     = 0
