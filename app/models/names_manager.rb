@@ -156,6 +156,10 @@ module NamesManager
       # Similar issue, some lines in the commit message end with "[x86_64-darwin10.4.0]"
       # or similar.
       ['Stevie Graham']
+    when 'a4041c5392457448cfdfef2e1b24007cfa46948b'
+      # Vishnu forked using a different email address, and credit goes in the git commit
+      # to Vishnu K. Sharma because of that, but the commit is his.
+      ['Vishnu Atrai']
     else
       nil
     end
