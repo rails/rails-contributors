@@ -163,6 +163,9 @@ module NamesManager
     when 'ec44763f03b49e8c6e3bff71772ba32863a01306'
       # @The_Empty asked for this fix on Twitter.
       ['Mohammad Typaldos']
+    when '99dd117d6292b66a60567fd950c7ca2bda7e01f3'
+      # same here
+      ['Mohammad Typaldos']
     else
       nil
     end
