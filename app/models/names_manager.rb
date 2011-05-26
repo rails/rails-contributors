@@ -160,6 +160,9 @@ module NamesManager
       # Vishnu forked using a different email address, and credit goes in the git commit
       # to Vishnu K. Sharma because of that, but the commit is his.
       ['Vishnu Atrai']
+    when 'ec44763f03b49e8c6e3bff71772ba32863a01306'
+      # @The_Empty asked for this fix on Twitter.
+      ['Mohammad Typaldos']
     else
       nil
     end
