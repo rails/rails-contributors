@@ -27,7 +27,7 @@ namespace :rc do
   end
 
   task :update_repo, :roles => :production do
-    run_in_rc %{bundle exec rails runner 'Repo.update("/home/rails/master", "origin/master", "origin/2-3-stable", "origin/3-0-stable")'}
+    run_in_rc %{bundle exec rails runner 'Repo.update("/home/rails/master", "origin/master", "origin/2-3-stable", "origin/3-0-stable", "origin/3-1-stable")'}
   end
 
   task :delete_all_contributions, :roles => :production do
