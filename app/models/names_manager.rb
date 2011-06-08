@@ -520,7 +520,7 @@ module NamesManager
   map 'Karel Miarka',               "kajism\100yahoo.com"
   map 'Karel Minařík',              'karmi'
   map 'Kaspar Schiess',             "eule\100space.ch"
-  map 'Kazuhiro Yoshdia',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
+  map 'Kazuhiro Yoshida',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
   map 'Keegan Quinn',               "keegan\100thebasement.org"
   map 'Keith Gautreaux',            'kaygee', 'kgautreaux'
   map 'Keith Morrison',             "keithm\100infused.org"
