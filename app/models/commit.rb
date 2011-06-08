@@ -70,7 +70,7 @@ class Commit < ActiveRecord::Base
   # in Rails 3 and Rails 2.x they show up together, it is unlikely that we
   # pull a backported patch from 2.x that it is not already in master.
   def backported_from_master?
-    branch != 'origin/master' && self.class.exists?(:branch => 'origin/master', :message => message, :author => author, :committer => committer)
+    branch != 'origin/master' && self.class.exists?(:branch => 'origin/master', :message => message, :author => author)
   end
 
 protected
