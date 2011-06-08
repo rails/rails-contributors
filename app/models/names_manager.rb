@@ -57,7 +57,6 @@ module NamesManager
       rubyonrails\100atyp.de
       solo\100gatelys.com
       starr\100starrnhorne.com
-      takiuchi\100drecom.co.jp
       zachary\100panandscan.com
     )
 
@@ -380,6 +379,7 @@ module NamesManager
   map 'Gabe da Silveira',           'dasil003'
   map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
   map 'Gaspard Bucher',             "g.bucher\100teti.ch"
+  map 'Genki Takiuchi',             "takiuchi\100drecom.co.jp"
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Coffey',               'gwcoffey'
   map 'Geoff Garside',              'ggarside'
