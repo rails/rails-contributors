@@ -259,6 +259,7 @@ module NamesManager
   map 'Caio Chassot',               'caio', "k\100v2studio.com"
   map 'Caleb Tennis',               "caleb\100aei-tech.com"
   map 'Calvin Yu',                  'cyu'
+  map 'Carl Tashian',               'tashian'
   map 'Cesar Ho',                   'codafoo'
   map 'Chad Humphries',             'spicycode'
   map 'Chad Ingram',                'matrix9180'
@@ -335,6 +336,7 @@ module NamesManager
   map 'Dick Davies',                'rasputnik'
   map 'Dieter Komendera',           'kommen'
   map 'Dirkjan Bussink',            'dbussink'
+  map 'Dmitrii Samoilov',           'german'
   map 'Dmitry Lipovoi',             'pleax'
   map 'Dmitriy Timokhin',           'pager'
   map 'Dominic Sisneros',           "dom\100sisna.com"
@@ -345,7 +347,7 @@ module NamesManager
   map 'Duff OMelia',                "dj\100omelia.org"
   map 'Duncan Beevers',             'duncanbeevers'
   map 'Duncan Robertson',           "duncan\100whomwah.com"
-  map 'Eaden McKee',                'eadz'
+  map 'Eaden McKee',                'eadz', 'Eadz'
   map 'Eddie Cianci',               'defeated'
   map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
   map 'Edward Betts',               "edward\100debian.org"
@@ -378,6 +380,7 @@ module NamesManager
   map 'Ferdinand Svehla',           "f.svehla\100gmail.com", 'f.svehla'
   map 'Florian Munz',               'theflow'
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
+  map 'Frank Müller',               'suchasurge'
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
   map 'Frederico Macedo',           'frederico'
   map 'Gabe da Silveira',           'dasil003'
@@ -387,6 +390,7 @@ module NamesManager
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Coffey',               'gwcoffey'
   map 'Geoff Garside',              'ggarside'
+  map 'Geoff Jacobsen',             'jacott'
   map 'Geoffrey Grosenbach',        'topfunky'
   map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
   map 'Glen Gibb',                  'grg'
@@ -443,6 +447,7 @@ module NamesManager
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
   map 'Jason Ketterman',            'anshkakashi'
   map 'Jason L Perry',              'ambethia'
+  map 'Jason Roth',                 'Jason'
   map 'Jason Stewart',              'jstewart'
   map 'Jason Stirk',                "jstirk\100oobleyboo.com"
   map 'Javier Ramírez',             'jramirez'
@@ -625,6 +630,7 @@ module NamesManager
   map 'Michael Daines',             "me\100mdaines.com"
   map 'Michael Dewey',              "mike\100michaeldewey.org"
   map 'Michael Galero',             'mikong'
+  map 'Michael Hutchinson',         'mhutchin'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
   map 'Michael Koziarski',          'Koz', 'nzkoz'
   map 'Michael Raidel',             "raidel\100onemail.at"
@@ -795,7 +801,7 @@ module NamesManager
   map 'Stephen Veit',               "sveit\100tradeharbor.com"
   map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
   map 'Steve Richert',              'laserlemon'
-  map 'Steven Bristol',             'stevenbristol'
+  map 'Steven Bristol',             'stevenbristol', 'steve'
   map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
   map 'Stian Grytøyr',              "stian\100grytoyr.net"
   map 'Sudara Williams',            'Sudara'
@@ -844,6 +850,7 @@ module NamesManager
   map 'Vlad Romascanu',             'vladr'
   map 'Wang Chun',                  'wangchun'
   map 'Wes Gamble',                 'weyus'
+  map 'Wesley Beary',               'geemus'
   map 'Wesley Moxam',               'wmoxam'
   map 'Will Bryant',                'will.bryant', 'Will'
   map 'Will Harris',                'wharris'
@@ -939,8 +946,11 @@ module NamesManager
       when '\\x00-\\x1f'
         #  Fix ActiveSupport::JSON encoding of control characters [\x00-\x1f]
         nil
-      when /\ACloses #\d+\z/
+      when /\ACloses #\d+\z/i
         # Add shallow routes to the new router [Closes #3765]
+        nil
+      when /\AFixes #\d+\z/i
+        # see https://github.com/rails/rails/commit/7db2ef47a1966113dd5d52c2f620b8496acabf56
         nil
       when 'and'
         # see https://github.com/rails/rails/commit/d891ad4e92c4f4d854ba321c42000026b5c75187
@@ -956,6 +966,8 @@ module NamesManager
         nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
+      when 'tomhuda'
+        ['Yehuda Katz', 'Tom Dale']
       when "schoenm\100earthlink.net sandra.metz\100duke.edu"
         name.split
       when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
