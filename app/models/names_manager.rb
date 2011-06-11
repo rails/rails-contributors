@@ -180,6 +180,7 @@ module NamesManager
   map 'Aaron Eisenberger',          'Aaron'
   map 'Aaron Namba',                'anamba'
   map 'Aaron Pfeifer',              'obrie'
+  map 'Aaron Todd',                 'ozzyaaron'
   map 'Abhay Kumar',                'abhay'
   map 'Adam Johnson',               'adamj'
   map 'Adam Kramer',                "adam\100the-kramers.net"
@@ -223,6 +224,7 @@ module NamesManager
   map 'Assaf Arkin',                "assaf.arkin\100gmail.com", 'Assaf'
   map 'August Zaitzow Flatby',      "zaitzow\100gmail.com"
   map 'August Zajonc',              "augustz\100augustz.com"
+  map 'Ayose Cazorla',              'Ayose'
   map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
   map 'Ben Bangert',                "ben\100groovie.org"
   map 'Ben Sandofsky',              'sandofsky'
@@ -251,6 +253,7 @@ module NamesManager
   map 'Brent Miller',               'Foliosus'
   map 'Brian Donovan',              'eventualbuddha', "devslashnull\100gmail.com"
   map 'Brian Morearty',             'BMorearty'
+  map 'Brian Pearce',               'brianp'
   map 'Bruce Williams',             "wbruce\100gmail.com"
   map 'Bruno Miranda',              'brupm'
   map 'Caio Chassot',               'caio', "k\100v2studio.com"
@@ -379,6 +382,7 @@ module NamesManager
   map 'Frederico Macedo',           'frederico'
   map 'Gabe da Silveira',           'dasil003'
   map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
+  map 'Ganesh Kumar',               'ganesh'
   map 'Gaspard Bucher',             "g.bucher\100teti.ch"
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Coffey',               'gwcoffey'
@@ -595,6 +599,7 @@ module NamesManager
   map 'Martin Gamsjaeger',          'snusnu'
   map 'Mathieu Arnold',             "mat\100absolight.fr"
   map 'Mathieu Jobin',              "somekool\100gmail.com"
+  map 'Mathieu Ravaux',             'mathieuravaux'
   map 'Mats Persson',               "mats\100imediatec.co.uk"
   map 'Matt Boehlig',               'Matt B.'
   map 'Matt Aimonetti',             'matt'
@@ -649,6 +654,7 @@ module NamesManager
   map 'Nick Kallen',                'nkallen'
   map 'Nick Plante',                'zapnap'
   map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
+  map 'Nicolas Blanco',             'slainer68'
   map 'Nicolas Cavigneaux',         'Bounga'
   map 'Nicolas Pouillard',          "nicolas.pouillard\100gmail.com"
   map 'Nicolás Sanguinetti',        'foca'
@@ -695,8 +701,10 @@ module NamesManager
   map 'Phillip J. Birmingham',      "phillip\100pjbsoftware.com"
   map 'Piers Cawley',               "pdcawley\100bofh.org.uk"
   map 'Piotr Banasik',              "piotr\100t-p-l.com", 'piotr'
+  map 'Pirogov Evgenij',            'gmile'
   map 'Pivotal Labs',               'pivotal'
   map 'PJ Hyett',                   "pjhyett\100gmail.com"
+  map 'Prakash Murthy',             'prakashmurthy'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Rainer Blessing',            'RainerBlessing'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
@@ -704,6 +712,7 @@ module NamesManager
   map 'Rein Henrichs',              "ReinH"
   map "Remco van 't Veer",          'remvee'
   map 'Rémy Coutable',              'rymai', 'remy', "rymai\100rymai.com", "remy.coutable\100gmail.com"
+  map 'Richard Schneeman',          'Schneems'
   map 'Rick Bradley',               "rick\100rickbradley.com"
   map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
   map 'Rick DeNatale',              'RubyRedRick'
@@ -815,6 +824,7 @@ module NamesManager
   map 'Todd Hanson',                "hanson\100surgery.wisc.edu"
   map 'Tom Brice',                  'tomtoday', "tomtoday\100gmail.com"
   map 'Tom Fakes',                  "tom\100craz8.com"
+  map 'Tom Hoefer',                 'thoefer'
   map 'Tom Lieber',                 "thomas\100columbus.rr.com"
   map 'Tom Moertel',                "tom\100moertel.com"
   map 'Tom Mornini',                "tmornini\100infomania.com"
@@ -936,6 +946,12 @@ module NamesManager
       when 'options'
         # see https://github.com/rails/rails/commit/bf176e9c7a1aa46b021384b91f4f9ec9a1132c0f
         nil
+      when 'API DOCS'
+        # see https://github.com/rails/rails/commit/9726ed8caf245c8702a781c9656f2b143a85f0f5
+        nil
+      when 'ed3796434af6069ced6a641293cf88eef3b284da'
+        # see https://github.com/rails/rails/commit/509aa663601defc7c821c253d010605951e9d986
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when "schoenm\100earthlink.net sandra.metz\100duke.edu"
@@ -993,6 +1009,8 @@ module NamesManager
         ['Nathan Zook', 'Ryan Bigg']
       when 'Ryan Bigg and Xavier Noria'
         ['Ryan Bigg', 'Xavier Noria']
+      when 'Oriol Gual and Josep M. Bach'
+        ['Oriol Gual', 'Josep M. Bach']
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
