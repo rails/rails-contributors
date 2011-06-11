@@ -590,6 +590,7 @@ module NamesManager
   map 'Marcello Nuccio',            'marcenuc'
   map 'Marcin Szczepański',         "marcin\100junkheap.net"
   map 'Mariusz Pękala',             'Arsen7'
+  map 'Marjan Hratson',             'gmarik'
   map 'Mark A. Richman',            'mrichman'
   map 'Mark H. Wilkinson',          'mhw'
   map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
