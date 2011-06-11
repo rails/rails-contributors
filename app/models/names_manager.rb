@@ -4,6 +4,7 @@ module NamesManager
   PEOPLE_WHO_PREFER_THEIR_HANDLER_TO_BE_LISTED = %w(
     okkez
     maiha
+    burningTyger
   )
 
   module EmailAddresses
@@ -409,8 +410,9 @@ module NamesManager
   map 'Herryanto Siatono',          'jugend'
   map 'Hiroshi Saito',              'hiroshi'
   map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
-  map 'Indrek Juhkam',              'innu'
   map 'Ian White',                  "ian.w.white\100gmail.com"
+  map 'Ibrahim Abdullah',           'simply-phi'
+  map 'Indrek Juhkam',              'innu'
   map 'Isaac Feliu',                'isaacfeliu'
   map 'Isaac Reuben',               "isaac\100reuben.com"
   map 'Iván Vega',                  'ivanvr'
