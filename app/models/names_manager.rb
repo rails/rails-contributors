@@ -607,6 +607,7 @@ module NamesManager
   map 'Masashi Shimbo',             "shimbo\100is.naist.jp"
   map 'Marshall Roch',              'mroch'
   map 'Martin Gamsjaeger',          'snusnu'
+  map 'Mason Hale',                 'flowdelic'
   map 'Mathieu Arnold',             "mat\100absolight.fr"
   map 'Mathieu Jobin',              "somekool\100gmail.com"
   map 'Mathieu Ravaux',             'mathieuravaux'
