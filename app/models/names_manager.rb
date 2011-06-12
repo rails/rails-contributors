@@ -413,6 +413,7 @@ module NamesManager
   map 'Ian White',                  "ian.w.white\100gmail.com"
   map 'Ibrahim Abdullah',           'simply-phi'
   map 'Indrek Juhkam',              'innu'
+  map 'Irfan Adilovic',             'Irfy'
   map 'Isaac Feliu',                'isaacfeliu'
   map 'Isaac Reuben',               "isaac\100reuben.com"
   map 'Iván Vega',                  'ivanvr'
