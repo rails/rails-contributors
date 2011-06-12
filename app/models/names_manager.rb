@@ -417,6 +417,7 @@ module NamesManager
   map 'Isaac Feliu',                'isaacfeliu'
   map 'Isaac Reuben',               "isaac\100reuben.com"
   map 'Iván Vega',                  'ivanvr'
+  map 'J Kittiyachavalit',          'jkit'
   map 'Jack Christensen',           "jackc\100hylesanderson.com"
   map 'Jack Danger Canty',          'danger', 'Danger'
   map 'Jacob Atzen',                'jacobat'
