@@ -421,6 +421,7 @@ module NamesManager
   map 'Jack Danger Canty',          'danger', 'Danger'
   map 'Jacob Atzen',                'jacobat'
   map 'Jacob Fugal',                'lukfugl'
+  map 'Jake Janovetz',              'janovetz'
   map 'Jakob Skjerning',            'Jakob S', "jakob\100mentalized.net"
   map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
   map 'James Adam',                 'lazyatom', "james.adam\100gmail.com"
