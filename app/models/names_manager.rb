@@ -766,6 +766,7 @@ module NamesManager
   map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
   map 'Sam Stephenson',             'Sam', 'sam'
   map 'Sandra Metz',                "sandra.metz\100duke.edu"
+  map 'Sasha Gerrand',              'sgerrand'
   map 'Scott Bronson',              'bronson'
   map 'Scott Fleckenstein',         'nullstyle'
   map 'Scott Laird',                "scott\100sigkill.org"
