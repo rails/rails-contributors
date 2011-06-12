@@ -58,7 +58,6 @@ module NamesManager
       rubyonrails\100atyp.de
       solo\100gatelys.com
       starr\100starrnhorne.com
-      takiuchi\100drecom.co.jp
       zachary\100panandscan.com
     )
 
@@ -388,6 +387,7 @@ module NamesManager
   map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
   map 'Ganesh Kumar',               'ganesh'
   map 'Gaspard Bucher',             "g.bucher\100teti.ch"
+  map 'Genki Takiuchi',             "takiuchi\100drecom.co.jp"
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Coffey',               'gwcoffey'
   map 'Geoff Garside',              'ggarside'
@@ -532,7 +532,7 @@ module NamesManager
   map 'Karel Miarka',               "kajism\100yahoo.com"
   map 'Karel Minařík',              'karmi'
   map 'Kaspar Schiess',             "eule\100space.ch"
-  map 'Kazuhiro Yoshdia',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
+  map 'Kazuhiro Yoshida',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
   map 'Keegan Quinn',               "keegan\100thebasement.org"
   map 'Keith Gautreaux',            'kaygee', 'kgautreaux'
   map 'Keith Morrison',             "keithm\100infused.org"
