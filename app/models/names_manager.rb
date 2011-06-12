@@ -538,6 +538,7 @@ module NamesManager
   map 'Keith Morrison',             "keithm\100infused.org"
   map 'Ken Barker',                 "ken.barker\100gmail.com"
   map 'Ken Kunz',                   "kennethkunz\100gmail.com"
+  map 'Ken Gerrard',                'backspace'
   map 'Ken Miller',                 "kenneth.miller\100bitfield.net"
   map 'Kevin Barnes',               "vinbarnes\100gmail.com"
   map 'Kevin Clark',                "Kevin Clark kevin.clark\100gmail.com", "kevin.clark\100gmail.com", "kevin.clark\100gmal.com"
