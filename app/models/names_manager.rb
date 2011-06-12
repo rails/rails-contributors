@@ -447,6 +447,7 @@ module NamesManager
   map 'Jan Prill',                  "JanPrill\100blauton.de"
   map 'Jan Schwenzien',             'jeanmartin'
   map 'Jan Xie',                    'Jan'
+  map 'Jared Haworth',              'jardeon'
   map 'Jason Garber',               'jgarber'
   map 'Jason Frey',                 'Jason Frey (Fryguy)'
   map 'Jason Ketterman',            'anshkakashi'
