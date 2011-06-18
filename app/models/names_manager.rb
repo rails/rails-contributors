@@ -974,6 +974,12 @@ module NamesManager
       when 'ed3796434af6069ced6a641293cf88eef3b284da'
         # see https://github.com/rails/rails/commit/509aa663601defc7c821c253d010605951e9d986
         nil
+      when 'hat-tip to anathematic'
+        # see https://github.com/rails/rails/commit/b67dc00eae310f61e02f1cae27ec78eb8c1c599b
+        nil
+      when 'props to Zarathu in #rubyonrails'
+        # see https://github.com/rails/rails/commit/09b7e351316cb87a815678241fc90af549327cf3
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when 'tomhuda'
@@ -1035,6 +1041,8 @@ module NamesManager
         ['Ryan Bigg', 'Xavier Noria']
       when 'Oriol Gual and Josep M. Bach'
         ['Oriol Gual', 'Josep M. Bach']
+      when 'Sam Elliott and Ryan Bigg'
+        ['Sam Elliott', 'Ryan Bigg']
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
