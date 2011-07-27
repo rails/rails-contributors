@@ -787,7 +787,6 @@ module NamesManager
   map 'Sebastian Delmont',          "sd\100notso.net"
   map 'Sebastian Graessl',          'bastilian'
   map 'Sebastian Kanthak',          "sebastian.kanthak\100muehlheim.de", 'sebastian.kanthak', 'skanthak'
-  map 'Sébastien Goetz',            "sebastien\100goetzilla.info"
   map 'Serge Balyuk',               'bgipsy'
   map 'Sergey Kojin',               "sergeykojin\100gmail.com"
   map 'Seth Ladd',                  'sethladd'
