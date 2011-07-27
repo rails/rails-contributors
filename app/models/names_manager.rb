@@ -981,6 +981,9 @@ module NamesManager
       when 'props to Zarathu in #rubyonrails'
         # see https://github.com/rails/rails/commit/09b7e351316cb87a815678241fc90af549327cf3
         nil
+      when 'thanks Pratik!'
+        # see https://github.com/rails/rails/commit/a6467802ff2be35c6665635f1cdfdcea07aeaa12
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when 'tomhuda'
