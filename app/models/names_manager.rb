@@ -359,6 +359,7 @@ module NamesManager
   map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
   map 'Elliot Smith',               "elliot\100townx.org"
   map 'Elliot Winkler',             'mcmire'
+  map 'Elliot Yates',               'ejy'
   map 'Eloy Duran',                 'alloy'
   map 'Emili Parreño',              'eparreno'
   map 'Emilio Tagua',               'miloops'
