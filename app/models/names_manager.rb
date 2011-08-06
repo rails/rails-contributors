@@ -220,6 +220,7 @@ module NamesManager
   map 'Anthony Eden',               'aeden'
   map 'Anup Narkhede',              'railsbob'
   map 'Ariejan de Vroom',           'ariejan'
+  map 'Artem Kramarenko',           'artemk'
   map 'Arthur Zapparoli',           'arthurgeek'
   map 'Ashley Moran',               "work\100ashleymoran.me.uk"
   map 'Ask Bjørn Hansen',           "ask\100develooper.com"
