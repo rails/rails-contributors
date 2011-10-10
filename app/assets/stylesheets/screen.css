@@ -46,15 +46,15 @@ SYNTAX FORMAT
 ---------------------------------
 */
 
-pre,code { 
+pre,code {
   margin: 1.5em 0;
-  overflow: auto; 
-  white-space: pre;  
+  overflow: auto;
+  white-space: pre;
 }
 
-pre,code,tt { 
-  font: 1em 'andale mono', 'lucida console', monospace; 
-  line-height: 1.5; 
+pre,code,tt {
+  font: 1em 'andale mono', 'lucida console', monospace;
+  line-height: 1.5;
 }
 
 code {
@@ -153,14 +153,14 @@ LAYOUT GENERALS
 */
 
 #header {
-  background:#C52F24 url(../images/header_tile.gif) repeat-x scroll 0 0;
+  background:#C52F24 url(header_tile.gif) repeat-x scroll 0 0;
   color:#FFFFFF;
   overflow:hidden;
   padding:1em 0;
 }
 
 #header-shadow {
-  background:transparent url(../images/header-shadow.png) repeat-x scroll top center;
+  background:transparent url(header-shadow.png) repeat-x scroll top center;
 }
 
 #header-shadow .wrapper {
@@ -168,7 +168,7 @@ LAYOUT GENERALS
 }
 
 #container {
-  background:transparent url(../images/content-shadow.png) repeat-y scroll left center;
+  background:transparent url(content-shadow.png) repeat-y scroll left center;
   overflow:hidden;
   position:relative;
   width:850px;
@@ -188,7 +188,7 @@ LAYOUT GENERALS
 }
 
 #bottom {
-  background: #eaeaea url(../images/bottom-bg.png) no-repeat top left;
+  background: #eaeaea url(bottom-bg.png) no-repeat top left;
   clear:both;
   height:20px;
 }
@@ -209,7 +209,7 @@ SIDEBAR NAVIGATION
   -moz-border-radius-topright:10px;
   -webkit-border-top-right-radius:10px;
   -webkit-border-bottom-right-radius:10px;
-  background:#C52F24 url(../images/nav-shadow-left.png) repeat-y scroll left center;
+  background:#C52F24 url(nav-shadow-left.png) repeat-y scroll left center;
   color:#FFFFFF;
   float:left;
   margin-top:20px;
@@ -232,7 +232,7 @@ SIDEBAR NAVIGATION
 }
 
 #sidebar li {
-  background:#E6E6E6 url(../images/nav-shadow-left.png) repeat-y scroll left;
+  background:#E6E6E6 url(nav-shadow-left.png) repeat-y scroll left;
   border-bottom:3px solid #AF2A20;
   display:block;
   font-size: 16px;
@@ -254,7 +254,7 @@ SIDEBAR NAVIGATION
 }
 
 #sidebar li.current a {
-  background:#FFF ;  
+  background:#FFF ;
   color:#333;
   font-weight:bold;
 }
@@ -376,13 +376,13 @@ PAGINATION
   display: block;
   height: 0;
   clear: both;
-  visibility: hidden; 
+  visibility: hidden;
 }
 
 * html #pagination {
-  height: 1%; 
+  height: 1%;
 }
 
 *:first-child+html #pagination {
-  overflow: hidden; 
+  overflow: hidden;
 }
