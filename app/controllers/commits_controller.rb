@@ -1,4 +1,6 @@
 class CommitsController < ApplicationController
+  respond_to :html, :json
+
   before_filter :set_contributor
   before_filter :set_time_constraints
 
@@ -8,6 +10,7 @@ class CommitsController < ApplicationController
 
   def index
     @commits = @contributor.commits.since(@since).order('committed_timestamp DESC')
+    respond_with(@commits)
   end
 
 private
