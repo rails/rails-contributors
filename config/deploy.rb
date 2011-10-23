@@ -30,6 +30,10 @@ namespace :rc do
     run_in_rc %{bundle exec rails runner 'Repo.update("/home/rails/master", "origin/master", "origin/2-3-stable", "origin/3-0-stable", "origin/3-1-stable")'}
   end
 
+  task :precompile_assets, :roles => :production do
+    run_in_rc %{bundle exec rake assets:precompile}
+  end
+
   task :delete_all_contributions, :roles => :production do
     run_in_rc %{bundle exec rails runner 'Contribution.delete_all'}
   end
@@ -39,9 +43,6 @@ namespace :rc do
   end
 
   task :expire_caches, :roles => :production do
-    run_in_rc "rm -f public/stylesheets/all.css"
-    run_in_rc "rm -f public/javascripts/all.js"
-
     # Inspired by John Leach's
     # http://blog.brightbox.co.uk/posts/expiring-an-entire-page-cache-tree-atomically
     expired_cache = "tmp/expired_cache.#{Time.now.to_f}"
@@ -52,6 +53,7 @@ namespace :rc do
   task :deploy do
     pull
     bundle
+    precompile_assets
     update_repo
     restart
     expire_caches
