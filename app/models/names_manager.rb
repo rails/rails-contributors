@@ -729,6 +729,7 @@ module NamesManager
   map 'PJ Hyett',                   "pjhyett\100gmail.com"
   map 'Prakash Murthy',             'prakashmurthy'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
+  map 'Rahul P. Chaudhari',         'RAHUL CHAUDHARI', 'Rahul P. Chaudhari'
   map 'Rainer Blessing',            'RainerBlessing'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
   map 'Ravil Bayramgalin',          'brainopia'
