@@ -922,7 +922,7 @@ module NamesManager
 
   # Inspects raw candidates in search for rare cases.
   #
-  # Returns +nil+ if +name+ si known *not* to correspond to an author, the
+  # Returns +nil+ if +name+ is known *not* to correspond to an author, the
   # author name(s) if special handling applies, and return just +name+ back
   # otherwise.
   #
