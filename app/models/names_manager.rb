@@ -194,6 +194,7 @@ module NamesManager
   map 'Akira Matsuda',              '松田 明'
   map 'Akira Tagoh',                'tagoh'
   map 'alancfrancis',               "alancfrancis\100gmail.com"
+  map 'Albert Lash',                'docunext'
   map 'Alex Chaffee',               'alexch'
   map 'Alex Mishyn',                'amishyn'
   map 'Alex Pooley',                "alex\100msgpad.com"
@@ -205,6 +206,7 @@ module NamesManager
   map 'Alexander Uvarov',           'wildchild'
   map 'Alexey Zatsepin',            'alexey', 'Alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
+  map 'Anand Muthukrishnan',        'Anand'
   map 'Andreas Isaksson',           'isak'
   map 'Andreas Wurm',               'Kanetontli', 'Kane', 'kane'
   map 'Andrew A. Smith',            "andy\100tinnedfruit.org"
@@ -228,11 +230,13 @@ module NamesManager
   map 'August Zaitzow Flatby',      "zaitzow\100gmail.com"
   map 'August Zajonc',              "augustz\100augustz.com"
   map 'Ayose Cazorla',              'Ayose'
+  map 'Bagwan Pankaj',              'bagwanpankaj'
   map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
   map 'Ben Bangert',                "ben\100groovie.org"
   map 'Ben Sandofsky',              'sandofsky'
   map 'Ben Scofield',               'bscofield'
   map 'Ben Sinclair',               "ben\100bensinclair.com"
+  map 'Benedikt Deicke',            'benedikt'
   map 'Benjamin Curtis',            "rails\100bencurtis.com"
   map 'Bermi Ferrer',               'bermi'
   map 'Bert Goethals',              'BertG'
@@ -464,12 +468,13 @@ module NamesManager
   map 'Jason Stirk',                "jstirk\100oobleyboo.com"
   map 'Javier Ramírez',             'jramirez'
   map 'Jay Levitt',                 "jay\100jay.fm"
-  map 'John Pignata',               'Developer', 'Jay Pignata' # see 179b451
+  map 'Jean Baptiste Barth',        'jbbarth'
   map 'Jean Helou',                 "jean.helou\100gmail.com", 'jean.helou'
   map 'Jean-Philippe Bougie',       "jp.bougie\100gmail.com"
   map 'Jeff Berg',                  "jeff\100ministrycentered.com"
   map 'Jeff Cohen',                 "cohen.jeff\100gmail.com"
   map 'Jeff Cole',                  "rails\100jeffcole.net"
+  map 'Jeff Dutil',                 'jdutil', 'ci skip'
   map 'Jeff Lindsay',               "progrium\100gmail.com"
   map 'Jeffrey Hardy',              'packagethief'
   map 'Jeffrey Moss',               "jeff\100opendbms.com"
@@ -498,6 +503,7 @@ module NamesManager
   map 'John Barton',                'johnb'
   map 'John Mettraux',              'jmettraux'
   map 'John Nunemaker',             "nunemaker\100gmail.com"
+  map 'John Pignata',               'Developer', 'Jay Pignata' # see 179b451
   map 'Josh Owens',                 'queso'
   map 'John Sheets',                "dev\100metacasa.net", "jsheets"
   map 'John Wells',                 'jbwiv'
@@ -507,6 +513,8 @@ module NamesManager
   map 'Jon Moses',                  "jon\100burningbush.us"
   map 'Jon Olson',                  "jsolson\100damogran.org"
   map 'John Oxton',                 "rails\100electricvisions.com"
+  map 'John Warwick',               'jwarwick'
+  map 'Jon Seidel',                 'JESii'
   map 'Jon Wood',                   "jon\100instance-design.co.uk", "jon\100blankpad.net"
   map 'Jonathan Bartlett',          'johnnyb'
   map 'Jonathan Garvin',            "jsgarvin"
@@ -531,6 +539,7 @@ module NamesManager
   map 'Josh Susser',                'hasmanyjosh', "josh\100hasmanythrough.com"
   map 'Joshua Wehner',              'jaw6'
   map 'Joshua Sierles',             'jsierles'
+  map 'Juan De Bravo',              'juandebravo'
   map 'Juanjo Bazan',               'juanjo.bazan'
   map 'Julian Doherty',             'madlep'
   map 'Julian Tarkhanov',           "me\100julik.nl", 'julik'
@@ -557,6 +566,7 @@ module NamesManager
   map 'Kevin Watt',                 "kevin\100writesoon.com"
   map 'Kevin Williams',             "kevwil\100gmail.com"
   map 'Kim Shrier',                 "kim\100tinker.com"
+  map 'Kir Shatrov',                'kirs', 'Kir'
   map 'Kjetil Lerøen',              "leroen\100gmail.com"
   map 'Koichi Tsutsumi',            "hakuja\100hakuja.net"
   map 'Kornelius Kalnbach',         "murphy\100cYcnus.de", "murpyh\100rubychan.de", 'murphy'
@@ -565,6 +575,7 @@ module NamesManager
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
   map 'Krzysztof Knapik',           'knapo'
   map 'Kubo Takehiro',              'kubo'
+  map 'Kym McInerney',              'holodigm', 'Kym'
   map 'Kyosuke Morohashi',          'moro'
   map 'Lakshan Perera',             'laktek', 'lakshan'
   map 'Larry Williams',             "larrywilliams1\100gmail.com"
@@ -597,6 +608,7 @@ module NamesManager
   map 'Manuel Holtgrewe',           "purestorm\100ggnore.net"
   map 'Marc Love',                  'marclove'
   map 'Marc-André Cournoyer',       'macournoyer'
+  map 'Marc Huffnagle',             'mhuffnagle'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
   map 'Marcello Nuccio',            'marcenuc'
   map 'Marcin Szczepański',         "marcin\100junkheap.net"
@@ -698,6 +710,7 @@ module NamesManager
   map 'Olly Headey',                'lylo'
   map 'Orta Therox',                'orta'
   map 'Otto Hilska',                'mutru'
+  map 'Pablo Astigarraga',          'pote', 'PoTe'
   map 'Pascal Belloncle',           'psq'
   map 'Pascal Terjan',              "pterjan\100mandriva.com"
   map 'Pat Maddox',                 "pergesu\100gmail.com"
@@ -711,6 +724,7 @@ module NamesManager
   map 'Paul Smith',                 "paul\100cnt.org"
   map 'Pelle Braendgaard',          'pelle', 'Pelle'
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
+  map 'Perry Flinn',                'pbflinn'
   map 'Perry Smith',                'pedz'
   map 'Pete Yandell',               'notahat'
   map 'Peter Michaux',              "petermichaux\100gmail.com"
@@ -731,6 +745,7 @@ module NamesManager
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
   map 'Rahul P. Chaudhari',         'RAHUL CHAUDHARI', 'Rahul Chaudhari'
   map 'Rainer Blessing',            'RainerBlessing'
+  map 'Ramon Quezada',              'rayq', 'rpq'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
   map 'Ravil Bayramgalin',          'brainopia'
   map 'Rein Henrichs',              "ReinH"
@@ -797,6 +812,8 @@ module NamesManager
   map 'Serg Podtynnyi',             'shtirlic'
   map 'Serge Balyuk',               'bgipsy'
   map 'Sergey Kojin',               "sergeykojin\100gmail.com"
+  map 'Sergey Nartimov',            'lest'
+  map 'Sergio Gil',                 'Sergio Gil Pérez de la Manga'
   map 'Seth Ladd',                  'sethladd'
   map 'Seth Rasmussen',             'loincloth'
   map 'Shu-yu Guo',                 "arc\100uchicago.edu"
@@ -835,6 +852,7 @@ module NamesManager
   map 'Thomas Fuchs',               "thomas\100fesch.at", 'madrobby'
   map 'Thomas Sawyer',              'trans'
   map 'Thomas Watson Steen',        'watson'
+  map 'Thong Kuah',                 'kuahyeow'
   map 'Tiago Macedo',               'tmacedo'
   map 'Tieg Zaharia',               'tzaharia'
   map 'Tietew',                     "tietew\100tietew.net"
