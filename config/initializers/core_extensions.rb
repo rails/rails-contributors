@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class String
   def parameterize_with_special_cases
     gsub('ß', 'ss').gsub('ø', 'o').parameterize_without_special_cases
