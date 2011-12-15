@@ -19,11 +19,11 @@ class Commit < ActiveRecord::Base
   def self.new_from_grit_commit(commit, branch)
     new(
       :sha1                => commit.id,
-      :author              => commit.author.name,
+      :author              => commit.author.name.force_encoding('UTF-8'),
       :authored_timestamp  => commit.authored_date,
-      :committer           => commit.committer.name,
+      :committer           => commit.committer.name.force_encoding('UTF-8'),
       :committed_timestamp => commit.committed_date,
-      :message             => commit.message,
+      :message             => commit.message.force_encoding('UTF-8'),
       :imported_from_svn   => commit.message.include?('git-svn-id:'),
       :branch              => branch
     )
