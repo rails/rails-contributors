@@ -605,6 +605,7 @@ module NamesManager
   map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
   map 'Maik Schmidt',               "contact\100maik-schmidt.de"
   map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
+  map 'Manu J',                     "Manu"
   map 'Manuel Holtgrewe',           "purestorm\100ggnore.net"
   map 'Marc Love',                  'marclove'
   map 'Marc-André Cournoyer',       'macournoyer'
