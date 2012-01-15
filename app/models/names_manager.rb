@@ -474,7 +474,7 @@ module NamesManager
   map 'Jeff Berg',                  "jeff\100ministrycentered.com"
   map 'Jeff Cohen',                 "cohen.jeff\100gmail.com"
   map 'Jeff Cole',                  "rails\100jeffcole.net"
-  map 'Jeff Dutil',                 'jdutil', 'ci skip'
+  map 'Jeff Dutil',                 'jdutil'
   map 'Jeff Lindsay',               "progrium\100gmail.com"
   map 'Jeffrey Hardy',              'packagethief'
   map 'Jeffrey Moss',               "jeff\100opendbms.com"
@@ -1009,6 +1009,8 @@ module NamesManager
         nil
       when 'thanks Pratik!'
         # see https://github.com/rails/rails/commit/a6467802ff2be35c6665635f1cdfdcea07aeaa12
+        nil
+      when /ci skip/i
         nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
