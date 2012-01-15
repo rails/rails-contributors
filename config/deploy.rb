@@ -2,7 +2,7 @@ set :user, 'rails'
 role :production, "contributors.rubyonrails.org"
 
 def execute_in_rc(method, command)
-  send(method, "export PATH=/opt/ruby-enterprise/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/rails/rails-contributors; #{command}")
+  send(method, "export PATH=/home/rails/bin:/usr/local/bin:/usr/bin:/bin; export RAILS_ENV=production; cd /home/rails/rails-contributors; #{command}")
 end
 
 def run_in_rc(command)
