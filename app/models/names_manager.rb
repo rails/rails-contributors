@@ -360,6 +360,7 @@ module NamesManager
   map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
   map 'Edward Betts',               "edward\100debian.org"
   map 'Eelco Lempsink',             "rails\10033lc0.net"
+  map 'Egor Homakov',               'homa', 'homakov'
   map 'Elan Feingold',              "elan\100bluemandrill.com"
   map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
   map 'Elliot Smith',               "elliot\100townx.org"
@@ -540,7 +541,7 @@ module NamesManager
   map 'Joshua Wehner',              'jaw6'
   map 'Joshua Sierles',             'jsierles'
   map 'Juan De Bravo',              'juandebravo'
-  map 'Juanjo Bazan',               'juanjo.bazan'
+  map 'Juanjo Bazán',               'Juanjo Bazan', 'juanjo.bazan'
   map 'Julian Doherty',             'madlep'
   map 'Julian Tarkhanov',           "me\100julik.nl", 'julik'
   map 'Justin Ball',                'jbasdf'
@@ -709,6 +710,7 @@ module NamesManager
   map 'Oleg Frolov',                "oleg.frolov\100gmail.com"
   map 'Oleg Pudeyev',               "pudeyo\100rpi.com"
   map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
+  map 'Oliver Legg',                'Olly Legg'
   map 'Olly Headey',                'lylo'
   map 'Orta Therox',                'orta'
   map 'Otto Hilska',                'mutru'
@@ -1077,6 +1079,10 @@ module NamesManager
         ['Sam Elliott', 'Ryan Bigg']
       when 'Gonzalo Rodriguez and Leonardo Capillera'
         ['Gonzalo Rodriguez', 'Leonardo Capillera']
+      when 'Carlos Antonio da Silva and Santiago Pastorino'
+        ['Carlos Antonio da Silva', 'Santiago Pastorino']
+      when 'Jose and Yehuda'
+        ['José Valim', 'Yehuda Katz']
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
