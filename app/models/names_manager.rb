@@ -218,6 +218,7 @@ module NamesManager
   map 'Andrew Shcheglov',           'windock'
   map 'Andrew White',               'pixeltrix'
   map 'Andy Lien',                  "andylien\100gmail.com"
+  map 'Angelo Capilleri',           'angelo giovanni capilleri'
   map 'Ant Ramm',                   'antramm'
   map 'Anthony Eden',               'aeden'
   map 'Anup Narkhede',              'railsbob'
