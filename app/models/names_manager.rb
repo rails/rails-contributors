@@ -1013,6 +1013,9 @@ module NamesManager
       when 'thanks Pratik!'
         # see https://github.com/rails/rails/commit/a6467802ff2be35c6665635f1cdfdcea07aeaa12
         nil
+      when 'type="month"'
+        # see https://github.com/rails/rails/commit/b02d14aad515a039c284c93a68845503dc1658e2
+        nil
       when /ci skip/i
         nil
       when 'Carlhuda'
