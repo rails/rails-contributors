@@ -1016,6 +1016,9 @@ module NamesManager
       when 'type="month"'
         # see https://github.com/rails/rails/commit/b02d14aad515a039c284c93a68845503dc1658e2
         nil
+      when 'multiple=true'
+        # see https://github.com/rails/rails/commit/e591d14b9c4a1220dc55c93c01a81ad6219c1f2f
+        nil
       when /ci skip/i
         nil
       when 'Carlhuda'
