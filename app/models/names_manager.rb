@@ -1021,6 +1021,9 @@ module NamesManager
         nil
       when /ci skip/i
         nil
+      when 'key'
+        # see https://github.com/rails/rails/commit/98f4aee8dac22d9e9bb3c122b43e9e5ee8ba7d1c
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when 'tomhuda'
