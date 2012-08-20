@@ -140,6 +140,13 @@ protected
   # Creates a new commit from data in the given Grit commit object.
   def import_grit_commit(commit, branch)
     new_commit = Commit.new_from_grit_commit(commit, branch)
+    if new_commit.save
+      logger.info("imported commit #{new_commit.short_sha1}")
+    else
+      logger.error("couldn't import commit #{commit.id}")
+      logger.error(new_commit.errors.full_messages)
+    end
+  rescue
     # In very rare situations grit is not able to import some commits.
     # I have seen this just once, with messages like
     #
@@ -147,13 +154,9 @@ protected
     #   unknown header '' in commit 31735bd39127784019893e4860b2c9807293da25
     #   ...
     #
-    # That's why we check if new_commit is not nil.
-    if new_commit && new_commit.save
-      logger.info("imported commit #{new_commit.short_sha1}")
-    else
-      logger.error("couldn't import commit #{commit.id}")
-      logger.error(new_commit.errors.full_messages)
-    end
+    # That's why we have this catch-all.
+    logger.error("couldn't import commit #{commit.id}")
+    logger.error($!.message)
   end
 
   # Once the contributors are computed from the current commits, the ones in the
