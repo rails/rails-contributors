@@ -220,6 +220,7 @@ module NamesManager
   map 'Andy Lien',                  "andylien\100gmail.com"
   map 'Angelo Capilleri',           'angelo giovanni capilleri'
   map 'Ant Ramm',                   'antramm'
+  map 'Anthony Alberto',            'Anthony'
   map 'Anthony Eden',               'aeden'
   map 'Anup Narkhede',              'railsbob'
   map 'Ariejan de Vroom',           'ariejan'
