@@ -789,7 +789,8 @@ module NamesManager
   map 'Ryan Bates',                 'ryanb'
   map 'Ryan Bigg',                  'Radar'
   map 'Ryan Daigle',                'rwdaigle'
-  map 'Ryan Davis',                 'zenspider', 'ryepup', "ryand-ruby\100zenspider.com"
+  map 'Ryan (zenspider) Davis',     'zenspider', "ryand-ruby\100zenspider.com"
+  map 'Ryan (ryepup) Davis',        'ryepup'
   map 'Ryan Duryea',                'aguynamedryan'
   map 'Ryan Heath',                 'rpheath'
   map 'Ryan McGeary',               'rmm5t'
@@ -819,7 +820,7 @@ module NamesManager
   map 'Serge Balyuk',               'bgipsy'
   map 'Sergey Kojin',               "sergeykojin\100gmail.com"
   map 'Sergey Nartimov',            'lest'
-  map 'Sergio Gil',                 'Sergio Gil Pérez de la Manga'
+  map 'Sergio Gil',                 'Sergio Gil Pérez de la Manga'
   map 'Seth Ladd',                  'sethladd'
   map 'Seth Rasmussen',             'loincloth'
   map 'Shu-yu Guo',                 "arc\100uchicago.edu"
