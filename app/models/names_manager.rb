@@ -757,7 +757,7 @@ module NamesManager
   map 'Rein Henrichs',              "ReinH"
   map "Remco van 't Veer",          'remvee'
   map 'Rémy Coutable',              'rymai', 'remy', "rymai\100rymai.com", "remy.coutable\100gmail.com"
-  map 'Richard Schneeman',          'Schneems'
+  map 'Richard Schneeman',          'Schneems', 'schneems'
   map 'Rick Bradley',               "rick\100rickbradley.com"
   map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
   map 'Rick DeNatale',              'RubyRedRick'
