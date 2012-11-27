@@ -789,7 +789,7 @@ module NamesManager
   map 'Ryan Bates',                 'ryanb'
   map 'Ryan Bigg',                  'Radar'
   map 'Ryan Daigle',                'rwdaigle'
-  map 'Ryan Davis (zenspider)',     'zenspider', "ryand-ruby\100zenspider.com"
+  map 'Ryan Davis (zenspider)',     'Ryan Davis', 'zenspider', "ryand-ruby\100zenspider.com"
   map 'Ryan Davis (ryepup)',        'ryepup'
   map 'Ryan Duryea',                'aguynamedryan'
   map 'Ryan Heath',                 'rpheath'
