@@ -208,15 +208,8 @@ protected
     contributors = Hash.new {|h, name| h[name] = Contributor.find_or_create_by_name(name)}
 
     Commit.with_no_contributors.find_each do |commit|
-      # It turns out the constraints in the named scope are inherited
-      # in this block via find_each. We introduce an exclusive scope to be
-      # sure the exists? test down the shouldnt_count_as_a_contribution? call
-      # runs in isolation.
-      Commit.send(:with_exclusive_scope) do
-        next if commit.shouldnt_count_as_a_contribution?
-        contributor_names_per_commit[commit.sha1].each do |contributor_name|
-          contributors[contributor_name].commits << commit
-        end
+      contributor_names_per_commit[commit.sha1].each do |contributor_name|
+        contributors[contributor_name].commits << commit
       end
     end
   end
