@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.9'
 gem 'mysql2'
 gem 'grit'
 
@@ -13,6 +13,5 @@ group :assets do
 end
 
 group :production do
-  gem 'therubyracer'
   gem 'unicorn'
 end
