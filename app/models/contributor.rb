@@ -9,16 +9,15 @@ class Contributor < ActiveRecord::Base
   end
 
   def self.all_with_ncontributions_since(date)
-    conditions = date ? ['commits.committed_timestamp > ?', date] : nil
-    select('contributors.*, COUNT(contributions.commit_id) as ncontributions').
+    conditions = date ? ['commits.committer_date > ?', date] : nil
+    select('contributors.*, COUNT(contributions.commit_id) AS ncontributions').
       joins(<<-JOINS).
         INNER JOIN contributions ON contributors.id = contributions.contributor_id
         INNER JOIN commits       ON commits.id = contributions.commit_id
       JOINS
       where(conditions).
       group('contributions.contributor_id').
-      order('ncontributions DESC, url_id ASC').
-      all
+      order('ncontributions DESC, url_id ASC').to_a
   end
 
   # The contributors table may change if new name equivalences are added and IDs

@@ -1,74 +1,65 @@
-require 'set'
-require 'fileutils'
 require 'application_utils'
 
 class Repo
-  attr_reader :logger, :grit_repo
+  attr_reader :logger, :path, :refs, :repo
 
-  # This is the entry point to update the database from a recent pull.
-  def self.update(path, *branches)
-    new(path).update(branches)
+  # Clone with --mirror:
+  #
+  #   git clone --mirror git://github.com/rails/rails.git
+  #
+  PATH = "#{Rails.root}/rails.git"
+  REFS = %r{\Arefs/heads/(?:master|.*-stable)\z}
+
+  def self.update(path=PATH, refs=REFS)
+    new(path, refs).update
   end
 
-  def initialize(path)
-    @logger    = Rails.logger
-    @grit_repo = Grit::Repo.new(path)
+  def initialize(path, refs)
+    @logger = Rails.logger
+    @path   = path
+    @refs   = refs
+    @repo   = Rugged::Repository.new(path)
   end
 
-  def git_fetch
-    git_exec('fetch', 'origin', '--quiet')
+  def git(args)
+    cmd = "git #{args}"
+    logger.info(cmd)
+    system(cmd) or raise "git error: #{$?}"
   end
 
-  def git_show(sha1)
-    git_exec('show', sha1)
+  def fetch
+    Dir.chdir(path) do
+      git 'fetch --quiet --prune'
+    end
   end
 
-  # TODO: This method is getting long.
-  def update(branches)
+  def diff(sha1)
+    Dir.chdir(path) do
+      `git diff --no-color #{sha1}^!`
+    end
+  end
+
+  def update
     ApplicationUtils.acquiring_lock_file('updating') do
-      started_at = Time.now
+      fetch
+
+      started_at = Time.current
       ncommits   = 0
 
-      git_fetch
-      pulled_at = Time.now
-
-      if names_mapping_updated = names_mapping_updated?
-        logger.info("there's a new names mapping")
-      else
-        logger.info("same names mapping than in last repo update")
-      end
-
       Commit.transaction do
-        ncommits = import_new_commits(branches)
-        logger.info("#{ncommits} new commits imported into the database")
+        ncommits = import_new_commits
 
-        break if ncommits.zero? && !names_mapping_updated
+        break if ncommits == 0 && !names_mapping_updated?
 
-        only_for_new_commits = !names_mapping_updated
-        contributor_names_per_commit = compute_contributor_names_per_commit(only_for_new_commits)
-        manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated
-
-        logger.info("updating database")
+        contributor_names_per_commit = compute_contributor_names_per_commit(names_mapping_updated?)
+        manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated?
         assign_contributors(contributor_names_per_commit)
         update_ranks
       end
 
-      if cache_needs_expiration?(ncommits, names_mapping_updated)
-        logger.info("expiring cache")
-        expire_caches
-      else
-        logger.info("current cache is valid")
-      end
+      expire_caches if cache_needs_expiration?(ncommits, names_mapping_updated?)
 
-      ended_at = Time.now
-
-      logger.info("update completed in %.1f seconds" % [ended_at - started_at])
-      RepoUpdate.create(
-        :ncommits   => ncommits,
-        :started_at => started_at,
-        :pulled_at  => pulled_at,
-        :ended_at   => ended_at
-      )
+      RepoUpdate.create(ncommits: ncommits, started_at: started_at, ended_at: Time.current)
     end
   end
 
@@ -78,110 +69,37 @@ protected
   # if the names mapping is up to date we only need to assign contributors for
   # new commits.
   def names_mapping_updated?
-    lastru = RepoUpdate.last
-    # Use started_at in case a revised names manager is deployed while an update
-    # is running.
-    lastru ? NamesManager.mapping_updated_since?(lastru.started_at) : true
-  end
-
-  # Simple-minded git system caller, enough for what we need. Returns the output.
-  def git_exec(command, *args)
-    Dir.chdir(@grit_repo.working_dir) do
-      %x{git #{command} #{args.join(' ')}}
+    @nmu ||= begin
+      lastru = RepoUpdate.last
+      # Use started_at in case a revised names manager is deployed while an update
+      # is running.
+      lastru ? NamesManager.mapping_updated_since?(lastru.started_at) : true
     end
   end
 
   # Imports those commits in the Git repo that do not yet exist in the database.
-  # To do that this method goes from HEAD downwards. New commits are imported
-  # into the database, and as soon as a known commit comes up we are done.
   #
   # Note that commits are inserted in reverse order (most recent has lower ID)
   # and that order is not linear as new imports are performed, only relative to
   # commits within a given import.
-  def import_new_commits(branches)
+  def import_new_commits
     ncommits = 0
-    branches.each do |branch|
-      ncommits += import_new_commits_in_branch(branch)
-    end
-    ncommits
-  end
 
-  # FIXME: This import is done this way for historical reasons but is
-  # innefficient. We should figure out the last sha1 per branch, and
-  # just directly pick up what's new with rev-list.
-  def import_new_commits_in_branch(branch)
-    batch_size   = 50
-    ncommits     = 0
-    offset       = 0
-    three_months = 3.months.ago
+    ActiveRecord::Base.logger.silence do
+      repo.refs(refs).each do |ref|
+        to_visit = [repo.lookup(ref.target)]
 
-    logger.info("importing new commits from branch #{branch}")
-    loop do
-      commits = @grit_repo.commits(branch, batch_size, offset)
-      return ncommits if commits.empty?
-      commits.each do |commit|
-        if Commit.exists?(:sha1 => commit.id)
-          if commit.committed_date < three_months
-            # We need to stop at some point, so let's assume that no merge is
-            # older than 3 months.
-            return ncommits
-          else
-            # A merge can import commits older than existing ones, so just go on.
-            next
+        while commit = to_visit.shift
+          unless Commit.exists?(:sha1 => commit.oid)
+            ncommits += 1
+            Commit.import!(commit)
+            to_visit.concat(commit.parents)
           end
         end
-        import_grit_commit(commit, branch)
-        ncommits += 1
       end
-      offset += commits.size
     end
-  end
 
-  # Creates a new commit from data in the given Grit commit object.
-  def import_grit_commit(commit, branch)
-    new_commit = Commit.new_from_grit_commit(commit, branch)
-    if new_commit.save
-      logger.info("imported commit #{new_commit.short_sha1}")
-    else
-      logger.error("couldn't import commit #{commit.id}")
-      logger.error(new_commit.errors.full_messages)
-    end
-  rescue
-    # In very rare situations grit is not able to import some commits.
-    # I have seen this just once, with messages like
-    #
-    #   unknown header 'gpgsig' in commit 31735bd39127784019893e4860b2c9807293da25
-    #   unknown header '' in commit 31735bd39127784019893e4860b2c9807293da25
-    #   ...
-    #
-    # That's why we have this catch-all.
-    logger.error("couldn't import commit #{commit.id}")
-    logger.error($!.message)
-  end
-
-  # Once the contributors are computed from the current commits, the ones in the
-  # contributors table that are gone are destroyed. This happens when a new
-  # equivalence is known for some contributor, when a "name" is added to the
-  # black list in <tt>NamesManager.looks_like_an_author_name</tt>, etc.
-  #
-  # Contributions for the related commits will in general need to be updated,
-  # we just clear them to ease this part, since diffing them by hand has some
-  # cases to take into account and it is not worth the effort.
-  def manage_gone_contributors(current_contributor_names)
-    previous_contributor_names = NamesManager.all_names
-    gone_names = previous_contributor_names - current_contributor_names
-    unless gone_names.empty?
-      reassign_contributors_to = destroy_gone_contributors(gone_names)
-      reassign_contributors_to.each {|commit| commit.contributions.clear}
-    end
-  end
-
-  # Destroys all contributors in +gone_names+ and returns their commits.
-  def destroy_gone_contributors(gone_names)
-    gone_contributors = Contributor.all(:conditions => ["name IN (?)", gone_names])
-    commits_of_gone_contributors = gone_contributors.map(&:commits).flatten.uniq
-    gone_contributors.each(&:destroy)
-    commits_of_gone_contributors
+    ncommits
   end
 
   # Goes over all or new commits in the database and builds a hash that maps
@@ -189,15 +107,38 @@ protected
   #
   # This computation ignores the current contributions table altogether, it
   # only takes into account the current mapping rules for name resolution.
-  def compute_contributor_names_per_commit(only_for_new_commits)
+  def compute_contributor_names_per_commit(for_all_commits)
     contributor_names_per_commit = Hash.new {|h, sha1| h[sha1] = []}
-    target = only_for_new_commits ? Commit.with_no_contributors : Commit
+    target = for_all_commits ? Commit : Commit.with_no_contributors
     target.find_each do |commit|
       commit.extract_contributor_names(self).each do |contributor_name|
         contributor_names_per_commit[commit.sha1] << contributor_name
       end
     end
     contributor_names_per_commit
+  end
+
+  # Once the contributors are computed from the current commits, the ones in the
+  # contributors table that are gone are destroyed. This happens when a new
+  # equivalence is known for some contributor, when a "name" is added to the
+  # black list in <tt>NamesManager.looks_like_an_author_name</tt>, etc.
+  def manage_gone_contributors(current_contributor_names)
+    previous_contributor_names = NamesManager.all_names
+    gone_names = previous_contributor_names - current_contributor_names
+    destroy_gone_contributors(gone_names) unless gone_names.empty?
+  end
+
+  # Destroys all contributors in +gone_names+ and clears their commits.
+  # Since commits may have more contributors we are just going to
+  # remove them all to later reassign.
+  def destroy_gone_contributors(gone_names)
+    gone_contributors = Contributor.where(name: gone_names)
+    gone_contributors.each do |contributor|
+      contributor.commits.each do |commit|
+        commit.contributions.clear
+      end
+      contributor.destroy
+    end
   end
 
   # Iterates over all commits with no contributors and assigns to them the ones
@@ -219,13 +160,14 @@ protected
     i    = 0
     rank = 0
     ncon = nil
+
     Contributor.all_with_ncontributions.each do |contributor|
       i += 1
       if contributor.ncontributions != ncon
         rank = i
         ncon = contributor.ncontributions
       end
-      contributor.update_attribute(:rank, rank) if contributor.rank != rank
+      contributor.update_column(:rank, rank) if contributor.rank != rank
     end
   end
 
@@ -255,6 +197,6 @@ protected
   end
 
   def new_day?
-    RepoUpdate.last.ended_at < Time.now.beginning_of_day
+    RepoUpdate.last.ended_at < Time.current.beginning_of_day
   end
 end

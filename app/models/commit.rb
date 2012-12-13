@@ -3,7 +3,7 @@ class Commit < ActiveRecord::Base
   has_many :contributors, :through => :contributions
 
   scope :since, lambda { |date|
-    conditions = date ?  ['commits.committed_timestamp > ?', date] : nil
+    conditions = date ?  ['commits.committer_date > ?', date] : nil
     where(conditions)
   }
 
@@ -12,20 +12,19 @@ class Commit < ActiveRecord::Base
     joins('LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id').
     where('contributions.commit_id' => nil)
 
-  validates :sha1, :presence => true, :uniqueness => true
-  validates :imported_from_svn, :inclusion => {:in => [true, false]}
+  validates :sha1, presence: true, uniqueness: true
+  validates :imported_from_svn, inclusion: {in: [true, false]}
 
   # Constructor that initializes the object from a Grit commit.
-  def self.new_from_grit_commit(commit, branch)
-    new(
-      :sha1                => commit.id,
-      :author              => commit.author.name.force_encoding('UTF-8'),
-      :authored_timestamp  => commit.authored_date,
-      :committer           => commit.committer.name.force_encoding('UTF-8'),
-      :committed_timestamp => commit.committed_date,
-      :message             => commit.message.force_encoding('UTF-8'),
-      :imported_from_svn   => commit.message.include?('git-svn-id:'),
-      :branch              => branch
+  def self.import!(rugged_commit)
+    create!(
+      sha1:              rugged_commit.oid,
+      author_name:       rugged_commit.author[:name].force_encoding('UTF-8'),
+      author_date:       rugged_commit.author[:time],
+      committer_name:    rugged_commit.committer[:name].force_encoding('UTF-8'),
+      committer_date:    rugged_commit.committer[:time],
+      message:           rugged_commit.message.force_encoding('UTF-8'),
+      imported_from_svn: rugged_commit.message.include?('git-svn-id:')
     )
   end
 
@@ -62,7 +61,7 @@ protected
       if names.empty?
         names = extract_svn_contributor_names_diffing(repo) if imported_from_svn?
         if names.empty?
-          sanitized = sanitize([author])
+          sanitized = sanitize([author_name])
           names = handle_special_cases(sanitized)
           if names.empty?
             names = sanitized
@@ -109,18 +108,21 @@ protected
 
   # Looks for contributor names in changelogs.
   def extract_svn_contributor_names_diffing(repo)
-    cache_git_show!(repo) unless git_show
+    cache_diff(repo) unless diff
     return [] if only_modifies_changelogs?
     extract_changelog.split("\n").map do |line|
       extract_contributor_names_from_text(line)
     end.flatten
+  rescue
+    # There are 10 diffs that have invalid UTF-8 and we get an exception, just
+    # ignore them. See f0753992ab8cc9bbbf9b047fdc56f8899df5635e for example.
+    update_column(:diff, $!.message)
+    []
   end
 
-  def cache_git_show!(repo)
-    update_attribute(:git_show, repo.git_show(sha1))
+  def cache_diff(repo)
+    update_column(:diff, repo.diff(sha1).force_encoding('UTF-8'))
   end
-
-  LINE_ITERATOR = RUBY_VERSION < '1.9' ? 'each' : 'each_line'
 
   # Extracts any changelog entry for this commit. This is done by diffing with
   # git show, and is an expensive operation. So, we do this only for those
@@ -128,7 +130,7 @@ protected
   def extract_changelog
     changelog = ''
     in_changelog = false
-    git_show.send(LINE_ITERATOR) do |line|
+    diff.each_line do |line|
       if line =~ /^diff --git/
         in_changelog = false
       elsif line =~ /^\+\+\+.*changelog$/i
@@ -144,8 +146,10 @@ protected
   #
   #   https://github.com/rails/rails/commit/f18356edb728522fcd3b6a00f11b29fd3bff0577
   #
+  # Note we need this only for commits coming from Subversion, where
+  # CHANGELOGs had no extension.
   def only_modifies_changelogs?
-    git_show.scan(/^diff --git(.*)$/) do |fname|
+    diff.scan(/^diff --git(.*)$/) do |fname|
       return false unless fname.first.strip.ends_with?('CHANGELOG')
     end
     true
