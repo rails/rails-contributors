@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tag: MyString
+  major: 1
+  minor: 1
+  tiny: 1
+  patch: 1
+  released_at: 2012-12-16 18:33:38
+
+two:
+  tag: MyString
+  major: 1
+  minor: 1
+  tiny: 1
+  patch: 1
+  released_at: 2012-12-16 18:33:38

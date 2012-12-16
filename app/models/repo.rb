@@ -82,18 +82,10 @@ class Repo
     nreleases = 0
 
     repo.refs(RELEASES).each do |ref|
-      object = repo.lookup(ref.target)
-      case object
-        when Rugged::Tag
-          tag  = object.name
-          date = object.tagger[:time]
-        when Rugged::Commit
-          tag  = ref.name[%r{[^/]+\z}]
-          date = object.author[:time]
-      end
+      tag = ref.name[%r{[^/]+\z}]
 
       unless Release.exists?(tag: tag)
-        Release.create!(tag: tag, date: date)
+        Release.create_from_rugged_object!(tag, repo.lookup(ref.target))
         nreleases += 1
       end
     end

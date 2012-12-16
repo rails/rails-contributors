@@ -7,3 +7,4 @@ tmp/**/*
 config/newrelic.yml
 config/initializers/hoptoad.rb
 config/database.yml
+rails.git
