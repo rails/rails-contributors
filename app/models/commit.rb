@@ -69,6 +69,17 @@ protected
         end
       end
     end
+
+    # In modern times we are counting merge commits, because behind a merge
+    # commit there is work by the core team member in the pull request. To
+    # be fair, we are going to do what would be analogous for commits in
+    # Subversion, where each commit has to be considered a merge commit.
+    #
+    # Note we do a uniq later in case normalization yields a clash.
+    if imported_from_svn? && !names.include?(author_name)
+      names << author_name
+    end
+
     names
   end
 

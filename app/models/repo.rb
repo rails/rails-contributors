@@ -7,10 +7,11 @@ class Repo
   #
   #   git clone --mirror git://github.com/rails/rails.git
   #
-  PATH = "#{Rails.root}/rails.git"
-  REFS = %r{\Arefs/heads/(?:master|.*-stable)\z}
+  PATH     = "#{Rails.root}/rails.git"
+  BRANCHES = %r{\Arefs/heads/(?:master|.*-stable)\z}
+  RELEASES = %r{\Arefs/tags/v[\d.]+\z}
 
-  def self.update(path=PATH, refs=REFS)
+  def self.update(path=PATH, refs=BRANCHES)
     new(path, refs).update
   end
 
@@ -41,29 +42,64 @@ class Repo
 
   def update
     ApplicationUtils.acquiring_lock_file('updating') do
+      started_at = Time.current
+
       fetch
 
-      started_at = Time.current
-      ncommits   = 0
+      ActiveRecord::Base.transaction do
+        ncommits  = update_commits
+        nreleases = update_releases
 
-      Commit.transaction do
-        ncommits = import_new_commits
-
-        break if ncommits == 0 && !names_mapping_updated?
-
-        contributor_names_per_commit = compute_contributor_names_per_commit(names_mapping_updated?)
-        manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated?
-        assign_contributors(contributor_names_per_commit)
         update_ranks
+
+        RepoUpdate.create!(
+          ncommits:   ncommits,
+          nreleases:  nreleases,
+          started_at: started_at,
+          ended_at:   Time.current
+        )
+
+        expire_caches if cache_needs_expiration?(ncommits, names_mapping_updated?)
       end
-
-      expire_caches if cache_needs_expiration?(ncommits, names_mapping_updated?)
-
-      RepoUpdate.create(ncommits: ncommits, started_at: started_at, ended_at: Time.current)
     end
   end
 
-protected
+  protected
+
+  def update_commits
+    ncommits = import_new_commits
+
+    if ncommits > 0 || names_mapping_updated?
+      contributor_names_per_commit = compute_contributor_names_per_commit(names_mapping_updated?)
+      manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated?
+      assign_contributors(contributor_names_per_commit)
+    end
+
+    ncommits
+  end
+
+  def update_releases
+    nreleases = 0
+
+    repo.refs(RELEASES).each do |ref|
+      object = repo.lookup(ref.target)
+      case object
+        when Rugged::Tag
+          tag  = object.name
+          date = object.tagger[:time]
+        when Rugged::Commit
+          tag  = ref.name[%r{[^/]+\z}]
+          date = object.author[:time]
+      end
+
+      unless Release.exists?(tag: tag)
+        Release.create!(tag: tag, date: date)
+        nreleases += 1
+      end
+    end
+
+    nreleases
+  end
 
   # Determines whether the names mapping has been updated. This is useful because
   # if the names mapping is up to date we only need to assign contributors for
@@ -90,7 +126,7 @@ protected
         to_visit = [repo.lookup(ref.target)]
 
         while commit = to_visit.shift
-          unless Commit.exists?(:sha1 => commit.oid)
+          unless Commit.exists?(sha1: commit.oid)
             ncommits += 1
             Commit.import!(commit)
             to_visit.concat(commit.parents)
