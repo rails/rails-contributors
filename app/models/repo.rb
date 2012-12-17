@@ -11,8 +11,8 @@ class Repo
   BRANCHES = %r{\Arefs/heads/(?:master|.*-stable)\z}
   RELEASES = %r{\Arefs/tags/v[\d.]+\z}
 
-  def self.update(path=PATH, refs=BRANCHES)
-    new(path, refs).update
+  def self.sync(path=PATH, refs=BRANCHES)
+    new(path, refs).sync
   end
 
   def initialize(path, refs)
@@ -40,17 +40,17 @@ class Repo
     end
   end
 
-  def update
+  def sync
     ApplicationUtils.acquiring_lock_file('updating') do
       started_at = Time.current
 
       fetch
 
       ActiveRecord::Base.transaction do
-        ncommits  = update_commits
-        nreleases = update_releases
+        ncommits  = sync_commits
+        nreleases = sync_releases
 
-        update_ranks
+        sync_ranks
 
         RepoUpdate.create!(
           ncommits:   ncommits,
@@ -66,7 +66,7 @@ class Repo
 
   protected
 
-  def update_commits
+  def sync_commits
     ncommits = import_new_commits
 
     if ncommits > 0 || names_mapping_updated?
@@ -78,19 +78,46 @@ class Repo
     ncommits
   end
 
-  def update_releases
+  def sync_releases
     nreleases = 0
 
     repo.refs(RELEASES).each do |ref|
-      tag = ref.name[%r{[^/]+\z}]
+      object = repo.lookup(ref.target)
+
+      case object
+      when Rugged::Tag
+        tag  = object.name
+        date = object.tagger[:time]
+        sha1 = object.target_oid
+      when Rugged::Commit
+        tag  = ref.name[%r{[^/]+\z}]
+        date = object.author[:time]
+        sha1 = object.oid
+      end
 
       unless Release.exists?(tag: tag)
-        Release.create_from_rugged_object!(tag, repo.lookup(ref.target))
+        Release.create!(tag: tag, sha1: sha1, date: date)
         nreleases += 1
       end
     end
 
     nreleases
+  end
+
+  # Once all tables have been updated we compute the rank of each contributor.
+  def sync_ranks
+    i    = 0
+    rank = 0
+    ncon = nil
+
+    Contributor.all_with_ncontributions.each do |contributor|
+      i += 1
+      if contributor.ncontributions != ncon
+        rank = i
+        ncon = contributor.ncontributions
+      end
+      contributor.update_column(:rank, rank) if contributor.rank != rank
+    end
   end
 
   # Determines whether the names mapping has been updated. This is useful because
@@ -183,22 +210,6 @@ class Repo
     end
   end
 
-  # Once all tables have been updated we compute the rank of each contributor.
-  def update_ranks
-    i    = 0
-    rank = 0
-    ncon = nil
-
-    Contributor.all_with_ncontributions.each do |contributor|
-      i += 1
-      if contributor.ncontributions != ncon
-        rank = i
-        ncon = contributor.ncontributions
-      end
-      contributor.update_column(:rank, rank) if contributor.rank != rank
-    end
-  end
-
   # Expires the cache under tmp/cache.
   #
   # We do that in two steps: first we move tmp/cache into a new directory,
@@ -211,7 +222,7 @@ class Repo
   def expire_caches
     expired_cache = "expired_cache.#{Time.now.to_f}"
     Dir.chdir("#{Rails.root}/tmp") do
-      FileUtils.mv('cache', expired_cache, :force => true)
+      FileUtils.mv('cache', expired_cache, force: true)
       FileUtils.rm_rf(expired_cache)
     end
   end

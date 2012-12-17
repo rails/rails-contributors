@@ -2,6 +2,7 @@ class CreateReleases < ActiveRecord::Migration
   def change
     create_table :releases do |t|
       t.string    :tag,   null: false
+      t.string    :sha1,  null: false
       t.integer   :major, null: false
       t.integer   :minor, null: false
       t.integer   :tiny,  null: false
