@@ -1,6 +1,7 @@
 class Commit < ActiveRecord::Base
   has_many :contributions, :dependent => :destroy
   has_many :contributors, :through => :contributions
+  belongs_to :release
 
   scope :since, lambda { |date|
     conditions = date ?  ['commits.committer_date > ?', date] : nil

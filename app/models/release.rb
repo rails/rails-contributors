@@ -1,9 +1,29 @@
 class Release < ActiveRecord::Base
+  has_many :commits
+
   before_create :split_version
   before_create :fix_date
 
   def name
     tag[1..-1]
+  end
+
+  def associate_commits(repo)
+    sha1s = repo.rev_list(prev.try(:commit_sha1), commit_sha1)
+    sha1s.each_slice(1024) do |sha1s|
+      Commit.update_all({release_id: id}, sha1: sha1s)
+    end
+  end
+
+  def prev
+    Release.where(<<-SQL1).order(<<-SQL2).first
+      (major = #{major} && minor = #{minor} && tiny = #{tiny} && patch < #{patch}) ||
+      (major = #{major} && minor = #{minor} && tiny < #{tiny}) ||
+      (major = #{major} && minor < #{minor}) ||
+      (major < #{major})
+    SQL1
+      major DESC, minor DESC, tiny DESC, patch DESC
+    SQL2
   end
 
   private

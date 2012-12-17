@@ -15,7 +15,7 @@ class Repo
     new(path, refs).sync
   end
 
-  def initialize(path, refs)
+  def initialize(path=PATH, refs=BRANCHES)
     @logger = Rails.logger
     @path   = path
     @refs   = refs
@@ -25,18 +25,29 @@ class Repo
   def git(args)
     cmd = "git #{args}"
     logger.info(cmd)
-    system(cmd) or raise "git error: #{$?}"
-  end
-
-  def fetch
     Dir.chdir(path) do
-      git 'fetch --quiet --prune'
+      system(cmd) or raise "git error: #{$?}"
     end
   end
 
+  def fetch
+    git 'fetch --quiet --prune'
+  end
+
   def diff(sha1)
-    Dir.chdir(path) do
-      `git diff --no-color #{sha1}^!`
+    `git diff --no-color #{sha1}^!`
+  end
+
+  def rev_list(from_sha1, to_sha1)
+    walker = Rugged::Walker.new(repo)
+    walker.sorting(Rugged::SORT_TOPO)
+    walker.push(repo.lookup(to_sha1))
+    walker.hide(repo.lookup(from_sha1)) if from_sha1
+
+    [].tap do |sha1s|
+      walker.each do |commit|
+        sha1s << commit.oid
+      end
     end
   end
 
@@ -79,7 +90,7 @@ class Repo
   end
 
   def sync_releases
-    nreleases = 0
+    new_releases = []
 
     repo.refs(RELEASES).each do |ref|
       object = repo.lookup(ref.target)
@@ -96,12 +107,15 @@ class Repo
       end
 
       unless Release.exists?(tag: tag)
-        Release.create!(tag: tag, sha1: sha1, date: date)
-        nreleases += 1
+        new_releases << Release.create!(tag: tag, commit_sha1: sha1, date: date)
       end
     end
 
-    nreleases
+    new_releases.each do |release|
+      release.associate_commits(self)
+    end
+
+    new_releases.size
   end
 
   # Once all tables have been updated we compute the rank of each contributor.
