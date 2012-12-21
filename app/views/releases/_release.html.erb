@@ -1,0 +1,6 @@
+<tr class="<%= cycle 'even', 'odd' %>">
+  <td class="rank-data"><%= release.date.to_date %></td>
+  <td class="highlight"><%= release.name %></td>
+  <td class="highlight"><%= release.ncontributors %></td>
+  <td class="no-commits"><%= release.ncommits %></td>
+</tr>

@@ -4,26 +4,81 @@ class Release < ActiveRecord::Base
   before_create :split_version
   before_create :fix_date
 
-  def name
-    tag[1..-1]
-  end
+  scope :sorted, -> {
+    order('releases.major DESC, releases.minor DESC, releases.tiny DESC, releases.patch DESC')
+  }
 
-  def associate_commits(repo)
-    sha1s = repo.rev_list(prev.try(:commit_sha1), commit_sha1)
-    sha1s.each_slice(1024) do |sha1s|
-      Commit.update_all({release_id: id}, sha1: sha1s)
+  def self.process_commits(new_releases)
+    new_releases.sort.reverse.each do |release|
+      release.process_commits(self)
     end
   end
 
+  def self.import!(tag, rugged_object)
+    case rugged_object
+    when Rugged::Tag
+      # This is an annonated tag.
+      date = object.tagger[:time]
+      sha1 = object.target_oid
+    when Rugged::Commit
+      # This is a lightweight tag.
+      date = object.author[:time]
+      sha1 = object.oid
+    end
+
+    Release.create!(tag: tag, commit_sha1: sha1, date: date)
+  end
+
+  def <=>(other)
+    [major, minor, tiny, patch] <=> [other.major, other.minor, other.tiny, other.patch]
+  end
+
+  def name
+    tag[1..-1]
+  end
+  alias to_param name
+
+  def process_commits(repo)
+    released_sha1s = repo.rev_list(prev.try(:commit_sha1), commit_sha1)
+
+    released_sha1s.each_slice(1024) do |sha1s|
+      import_missing_commits(repo, sha1s)
+      associate_commits(sha1s)
+    end
+  end
+
+  def import_missing_commits(repo, released_sha1s)
+    existing_sha1s = Commit.where(sha1: released_sha1s).pluck(:sha1)
+    (released_sha1s - existing_sha1s).each do |sha1|
+      logger.debug("importing #{sha1} for #{tag}")
+      Commit.import!(repo.repo.lookup(sha1))
+    end
+  end
+
+  def associate_commits(sha1s)
+    Commit.update_all({release_id: id}, sha1: sha1s)
+  end
+
   def prev
-    Release.where(<<-SQL1).order(<<-SQL2).first
+    Release.where(<<-SQL).sorted.first
       (major = #{major} && minor = #{minor} && tiny = #{tiny} && patch < #{patch}) ||
       (major = #{major} && minor = #{minor} && tiny < #{tiny}) ||
       (major = #{major} && minor < #{minor}) ||
       (major < #{major})
-    SQL1
-      major DESC, minor DESC, tiny DESC, patch DESC
-    SQL2
+    SQL
+  end
+
+  def self.all_with_ncommits_and_ncontributors
+    # Outer joins, because 2.0.1 according to git rev-list v2.0.0..v2.0.1 was a
+    # release with no commits.
+    select(<<-SELECT).joins(<<-JOINS).group('releases.id').sorted.to_a
+      releases.*,
+      COUNT(DISTINCT(commits.id))                   AS ncommits,
+      COUNT(DISTINCT(contributions.contributor_id)) AS ncontributors
+    SELECT
+      LEFT OUTER JOIN commits       ON commits.release_id = releases.id
+      LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id
+    JOINS
   end
 
   private

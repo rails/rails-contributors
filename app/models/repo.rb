@@ -1,24 +1,25 @@
 require 'application_utils'
 
 class Repo
-  attr_reader :logger, :path, :refs, :repo
+  attr_reader :logger, :path, :heads, :tags, :repo
 
   # Clone with --mirror:
   #
   #   git clone --mirror git://github.com/rails/rails.git
   #
-  PATH     = "#{Rails.root}/rails.git"
-  BRANCHES = %r{\Arefs/heads/(?:master|.*-stable)\z}
-  RELEASES = %r{\Arefs/tags/v[\d.]+\z}
+  PATH  = "#{Rails.root}/rails.git"
+  HEADS = %r{\Arefs/heads/(?:master|.*-stable)\z}
+  TAGS  = %r{\Arefs/tags/v[\d.]+\z}
 
-  def self.sync(path=PATH, refs=BRANCHES)
-    new(path, refs).sync
+  def self.sync(path=PATH, heads=HEADS, tags=TAGS)
+    new(path, heads, tags).sync
   end
 
-  def initialize(path=PATH, refs=BRANCHES)
+  def initialize(path=PATH, heads=HEADS, tags=TAGS)
     @logger = Rails.logger
     @path   = path
-    @refs   = refs
+    @heads  = heads
+    @tags   = tags
     @repo   = Rugged::Repository.new(path)
   end
 
@@ -61,7 +62,10 @@ class Repo
         ncommits  = sync_commits
         nreleases = sync_releases
 
-        sync_ranks
+        if ncommits > 0 || nreleases > 0 || names_mapping_updated?
+          sync_names
+          sync_ranks
+        end
 
         RepoUpdate.create!(
           ncommits:   ncommits,
@@ -77,13 +81,24 @@ class Repo
 
   protected
 
+  # Imports those commits in the Git repo that do not yet exist in the database
+  # by walking the master and stable branches backwards starting at the tips
+  # and following parents.
   def sync_commits
-    ncommits = import_new_commits
+    ncommits = 0
 
-    if ncommits > 0 || names_mapping_updated?
-      contributor_names_per_commit = compute_contributor_names_per_commit(names_mapping_updated?)
-      manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated?
-      assign_contributors(contributor_names_per_commit)
+    ActiveRecord::Base.logger.silence do
+      repo.refs(heads).each do |ref|
+        to_visit = [repo.lookup(ref.target)]
+
+        while commit = to_visit.shift
+          unless Commit.exists?(sha1: commit.oid)
+            ncommits += 1
+            Commit.import!(commit)
+            to_visit.concat(commit.parents)
+          end
+        end
+      end
     end
 
     ncommits
@@ -92,30 +107,22 @@ class Repo
   def sync_releases
     new_releases = []
 
-    repo.refs(RELEASES).each do |ref|
-      object = repo.lookup(ref.target)
-
-      case object
-      when Rugged::Tag
-        tag  = object.name
-        date = object.tagger[:time]
-        sha1 = object.target_oid
-      when Rugged::Commit
-        tag  = ref.name[%r{[^/]+\z}]
-        date = object.author[:time]
-        sha1 = object.oid
-      end
-
+    repo.refs(tags).each do |ref|
+      tag  = ref.name[%r{[^/]+\z}]
       unless Release.exists?(tag: tag)
-        new_releases << Release.create!(tag: tag, commit_sha1: sha1, date: date)
+        new_releases << Release.import!(tag, repo.lookup(ref.target))
       end
     end
 
-    new_releases.each do |release|
-      release.associate_commits(self)
-    end
+    Release.process_commits(new_releases)
 
     new_releases.size
+  end
+
+  def sync_names
+    contributor_names_per_commit = compute_contributor_names_per_commit(names_mapping_updated?)
+    manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated?
+    assign_contributors(contributor_names_per_commit)
   end
 
   # Once all tables have been updated we compute the rank of each contributor.
@@ -144,31 +151,6 @@ class Repo
       # is running.
       lastru ? NamesManager.mapping_updated_since?(lastru.started_at) : true
     end
-  end
-
-  # Imports those commits in the Git repo that do not yet exist in the database.
-  #
-  # Note that commits are inserted in reverse order (most recent has lower ID)
-  # and that order is not linear as new imports are performed, only relative to
-  # commits within a given import.
-  def import_new_commits
-    ncommits = 0
-
-    ActiveRecord::Base.logger.silence do
-      repo.refs(refs).each do |ref|
-        to_visit = [repo.lookup(ref.target)]
-
-        while commit = to_visit.shift
-          unless Commit.exists?(sha1: commit.oid)
-            ncommits += 1
-            Commit.import!(commit)
-            to_visit.concat(commit.parents)
-          end
-        end
-      end
-    end
-
-    ncommits
   end
 
   # Goes over all or new commits in the database and builds a hash that maps
@@ -234,10 +216,12 @@ class Repo
   #
   # On the other hand, moving is atomic. Atomic is good.
   def expire_caches
-    expired_cache = "expired_cache.#{Time.now.to_f}"
     Dir.chdir("#{Rails.root}/tmp") do
-      FileUtils.mv('cache', expired_cache, force: true)
-      FileUtils.rm_rf(expired_cache)
+      if File.exists?('cache')
+        expired_cache = "expired_cache.#{Time.now.to_f}"
+        FileUtils.mv('cache', expired_cache, force: true)
+        FileUtils.rm_rf(expired_cache)
+      end
     end
   end
 

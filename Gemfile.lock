@@ -1,3 +1,8 @@
+PATH
+  remote: /home/fxn/rugged
+  specs:
+    rugged (0.17.0.b8)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -79,7 +84,6 @@ GEM
     rake (10.0.2)
     rdoc (3.12)
       json (~> 1.4)
-    rugged (0.17.0.b7)
     sass (3.2.3)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -111,7 +115,7 @@ DEPENDENCIES
   coffee-rails
   mysql2
   rails (= 3.2.9)
-  rugged (= 0.17.0.b7)
+  rugged!
   sass-rails
   uglifier
   unicorn

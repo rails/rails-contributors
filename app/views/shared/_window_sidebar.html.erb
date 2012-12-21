@@ -8,5 +8,6 @@
       <% query = key == 'all-time' ? {} : {:window => key} %>
       <%= sidebar_tab name, @window == key, contributors_path(query) %>
     <% end %>
+    <%= sidebar_tab 'Releases', nil, releases_path %>
   </ul>
 <% end %>

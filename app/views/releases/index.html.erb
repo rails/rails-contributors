@@ -1,0 +1,27 @@
+<%
+   @title       = 'Ruby on Rails Releases'
+   @description = 'Listing of Ruby on Rails releases'
+   @keywords    = 'releases'
+%>
+
+<!-- see http://google.com/support/webmasters/bin/answer.py?hl=en&answer=99170 -->
+<div class="vcard">
+  <h1 id="title">
+    <%= @title %><br/>
+    <span class="listing-total">Showing <%= pluralize @releases.size, 'releases' %></span>
+  </h1>
+
+  <div id="table-wrap">
+    <table>
+      <tr class="header">
+        <th>Date</th>
+        <th>Release</th>
+        <th>Contributors</th>
+        <th>Commits</th>
+      </tr>
+      <%= render @releases %>
+    </table>
+  </div>
+</div>
+
+<%= render 'shared/window_sidebar' %>
