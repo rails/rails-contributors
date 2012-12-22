@@ -334,55 +334,24 @@ td.commit-sha1, td.commit-date {
 
 /*
 ---------------------------------
-PAGINATION
+RELEASES LIST TABLE SPECIFICS
 ---------------------------------
 */
-#pagination {
-  background-color:#FFFAFA;
-  border-top:1px dashed #EEEEEE;
-  margin:10px 0;
-  padding:5px;
+
+#table-wrap table td.release-date {
+    width: 20%;
+    white-space: nowrap;
 }
 
-#pagination span.go {
-  color:#BBBBBB;
-  font-size:0.8em;
+#table-wrap table td.release-name {
+    width: 40%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
-#pagination span.disabled {
-  color:#999999;
-}
-
-#pagination a:hover, #pagination a:focus {
-  color: red;
-}
-
-#pagination a, #pagination span {
-  display:block;
-  float:left;
-  margin-right:2px;
-  padding:0 5px;
-  text-decoration: none;
-}
-
-#pagination span.current {
-  border-bottom:2px solid #C52F24;
-  color:#C52F24;
-  font-weight:bold;
-}
-
-#pagination:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-
-* html #pagination {
-  height: 1%;
-}
-
-*:first-child+html #pagination {
-  overflow: hidden;
+#table-wrap table td.release-counter {
+    width: 20%;
+    text-align: center;
+    white-space: nowrap;
 }

@@ -1,5 +1,5 @@
 class CommitsController < ApplicationController
-  before_filter :set_contributor
+  before_filter :set_target
   before_filter :set_time_constraints
 
   caches_action :index, :if => lambda { |c|
@@ -7,12 +7,17 @@ class CommitsController < ApplicationController
   }
 
   def index
-    @commits = @contributor.commits.since(@since).order('committer_date DESC')
+    @commits = @target.commits.since(@since).order('author_date DESC')
   end
 
 private
-  def set_contributor
-    @contributor = Contributor.find_by_url_id(params[:contributor_id])
-    head :not_found unless @contributor
+  def set_target
+    if params[:contributor_id]
+      @target = Contributor.find_by_url_id(params[:contributor_id])
+    elsif params[:release_id]
+      @target = Release.find_by_tag("v#{params[:release_id].tr('-', '.')}")
+    end
+
+    head :not_found unless @target
   end
 end

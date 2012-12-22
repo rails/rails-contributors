@@ -1,7 +1,10 @@
-<%
-   @title       = add_window_to(%(##{@contributor.rank} <span class="fn">#{h(@contributor.name)}</span>), @window)
-   @description = "Listing of patches contributed by #{@contributor.name} to Ruby on Rails"
-   @keywords    = @contributor.name
+<%=
+  case @target
+  when Contributor
+    render 'contributor_ivars', contributor: @target, window: @window
+  when Release
+    render 'release_ivars', release: @target
+  end
 %>
 
 <!-- see http://google.com/support/webmasters/bin/answer.py?hl=en&answer=99170 -->
@@ -10,7 +13,6 @@
     <%= @title %><br/>
     <span class="listing-total">Showing <%= pluralize @commits.size, 'commit' %></span>
   </h1>
-  <%= link_to "All contributors →", contributors_path, :class => 'name-mapping' %>
 
   <div id="table-wrap">
     <table>

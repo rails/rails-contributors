@@ -1,5 +1,8 @@
 class Release < ActiveRecord::Base
-  has_many :commits
+  include Comparable
+
+  has_many :commits, :dependent => :nullify
+  has_many :contributors, :through => :commits
 
   before_create :split_version
   before_create :fix_date
@@ -14,14 +17,16 @@ class Release < ActiveRecord::Base
     end
   end
 
+  # Imports a rugged object that was returned as a reference to a tag.
+  #
+  # Some tags are full objects (annotated tags), and other tags are kinda
+  # symlinks to commits (lighteweight tags). The method understands both.
   def self.import!(tag, rugged_object)
     case rugged_object
     when Rugged::Tag
-      # This is an annonated tag.
       date = object.tagger[:time]
       sha1 = object.target_oid
     when Rugged::Commit
-      # This is a lightweight tag.
       date = object.author[:time]
       sha1 = object.oid
     end
@@ -29,14 +34,21 @@ class Release < ActiveRecord::Base
     Release.create!(tag: tag, commit_sha1: sha1, date: date)
   end
 
+  # Releases are ordered by their version, numerically. Note this is not
+  # chronological, since it is customary that stable branches have maintenance
+  # releases in parallel.
   def <=>(other)
     [major, minor, tiny, patch] <=> [other.major, other.minor, other.tiny, other.patch]
   end
 
+  # The name of a release is the tag name except for the leading "v".
   def name
     tag[1..-1]
   end
-  alias to_param name
+
+  def to_param
+    name.tr('.', '-')
+  end
 
   def process_commits(repo)
     released_sha1s = repo.rev_list(prev.try(:commit_sha1), commit_sha1)
