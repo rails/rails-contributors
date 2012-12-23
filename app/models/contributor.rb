@@ -35,6 +35,10 @@ class Contributor < ActiveRecord::Base
     url_id
   end
 
+  def self.find_by_param(param)
+    find_by_url_id(param)
+  end
+
   def name=(name)
     write_attribute(:name, name)
     set_url_id

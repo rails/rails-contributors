@@ -1,18 +1,23 @@
 class ContributorsController < ApplicationController
-  before_filter :set_release
-  before_filter :set_time_constraints
-
-  caches_action :index, :if => lambda { |c|
-    c.params[:window].blank? || c.params[:window] == 'all-time'
-  }
+  before_filter :set_release, only: 'in_release'
+  before_filter :set_time_constraints, only: 'in_time_window'
 
   def index
-    if @release
-      @contributors = Contributor.all_with_ncontributions_by_release(@release)
-    elsif @since
-      @contributors = Contributor.all_with_ncontributions_by_date(@since)
+    @contributors = if params[:release_id].present?
+      set_release
+      Contributor.all_with_ncontributions_by_release(@release)
     else
-      @contributors = Contributor.all_with_ncontributions
+      Contributor.all_with_ncontributions
     end
+  end
+
+  def in_time_window
+    @contributors = Contributor.all_with_ncontributions_by_date(@since)
+    render 'index'
+  end
+
+  def in_release
+    @contributors =
+    render 'index'
   end
 end

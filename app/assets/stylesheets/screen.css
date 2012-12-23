@@ -338,12 +338,13 @@ RELEASES LIST TABLE SPECIFICS
 ---------------------------------
 */
 
-td.release-tag, td.release-target, td.release-date, td.release-name {
+td.release-tag, td.release-date, td.release-name {
     align: left;
     white-space: nowrap;
 }
 
 td.release-name {
+    width: 50%;
     font-weight: bold;
     font-size: 1.1em;
 }

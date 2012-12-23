@@ -1,9 +1,16 @@
-<%=
-  case @target
-  when Contributor
-    render 'contributor_ivars', contributor: @target, window: @window
-  when Release
-    render 'release_ivars', release: @target
+<%
+  if @contributor && @release
+    @title       = %(##{@contributor.rank} <span class="fn">#{h(@contributor.name)}</span> #{@release.name}).html_safe
+    @description = "Listing of commits contributed by #{@contributor.name} in the #{@release.name} release of Ruby on Rails"
+    @keywords    = @contributor.name
+  elsif @contributor
+    @title       = add_window_to(%(##{@contributor.rank} <span class="fn">#{h(@contributor.name)}</span>), @time_window)
+    @description = "Listing of commits contributed by #{@contributor.name} to Ruby on Rails"
+    @keywords    = @contributor.name
+  else
+    @title       = %(Release #{@release.name})
+    @description = "Listing of commits in the #{@release.name} release of Ruby on Rails"
+    @keywords    = @release.name
   end
 %>
 

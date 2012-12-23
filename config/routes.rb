@@ -1,13 +1,21 @@
 RailsContributors::Application.routes.draw do
-  resources :contributors do
-    resources :commits, :only => :index
+  match 'contributors/in-time-window/:time_window' => 'contributors#in_time_window', as: 'contributors_in_time_window'
+
+  resources :contributors, only: 'index' do
+    with_options(via: 'get') do |_|
+      _.match 'in-time-window/:time_window'         => 'contributors#in_time_window', as: 'in_time_window'
+      _.match 'in-release/:release_id'              => 'contributors#in_release',     as: 'in_release'
+      _.match 'commits/in-time-window/:time_window' => 'commits#in_time_window',      as: 'commits_in_time_window'
+      _.match 'commits/in-release/:release_id'      => 'commits#in_release',          as: 'commits_in_release'
+    end
+    resources :commits, only: 'index'
   end
 
-  resources :releases do
-    resources :commits, :only => :index
-    resources :contributors, :only => :index
+  resources :releases, only: 'index' do
+    resources :commits, only: 'index'
+    resources :contributors, only: 'index'
   end
 
-  resource :names_mapping
-  root :to => 'contributors#index'
+  resource :names_mapping, only: 'show'
+  root to: 'contributors#index'
 end

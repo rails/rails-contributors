@@ -1,13 +1,11 @@
 <% content_for :sidebar do %>
-  <h4>
-    Commits from
-  </h4>
   <ul id="navigation">
+    <% in_releases = @release || @releases %>
     <% for key, name in TimeConstraints.all %>
-      <%# I prefer home pages with no query string. %>
-      <% query = key == 'all-time' ? {} : {:window => key} %>
-      <%= sidebar_tab name, @window == key, contributors_path(query) %>
+      <% path = key == 'all-time' ? contributors_path : contributors_in_time_window_path(key) %>
+      <%# TODO: clean this %>
+      <%= sidebar_tab name, (!in_releases && @time_window.nil? && key == 'all-time') || @time_window == key, path %>
     <% end %>
-    <%= sidebar_tab 'Releases', nil, releases_path %>
+    <%= sidebar_tab 'Releases', @release || @releases, releases_path %>
   </ul>
 <% end %>

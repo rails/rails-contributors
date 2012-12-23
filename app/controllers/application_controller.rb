@@ -2,13 +2,23 @@ class ApplicationController < ActionController::Base
   before_filter :trace_user_agent
 
 private
+  def set_contributor
+    @contributor = Contributor.find_by_param(params[:contributor_id])
+    head :not_found unless @contributor
+  end
+
+  def set_release
+    @release = Release.find_by_param(params[:release_id])
+    head :not_found unless @release
+  end
+
   def set_time_constraints
-    @window = if params[:window].present? && TimeConstraints.known_key?(params[:window])
-      params[:window]
+    @time_window = params[:time_window].presence || 'all-time'
+    if TimeConstraints.known_key?(@time_window)
+      @since = TimeConstraints.since_for(@time_window)
     else
-      'all-time'
+      head :not_found
     end
-    @since = TimeConstraints.since_for(@window)
   end
 
   BOTS_REGEXP = %r{
@@ -58,13 +68,6 @@ private
       logger.info("(BOT) #{request.user_agent}")
     else
       logger.info("(BROWSER) #{request.user_agent}")
-    end
-  end
-
-  def set_release
-    if params[:release_id].present?
-      @release = Release.find_by_param(params[:release_id])
-      head :not_found unless @release
     end
   end
 end

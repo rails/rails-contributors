@@ -1,5 +1,15 @@
 <tr class="<%= cycle 'even', 'odd' %>">
   <td class="rank-data">#<%= contributor.rank %></td>
-  <td class="highlight"><%= link_to_contributor contributor, @window %></td>
-  <td class="no-commits"><%= contributor.ncontributions %></td>
+  <td class="highlight"><%= link_to_contributor contributor %></td>
+  <td class="no-commits">
+    <% path = if @time_window
+         contributor_commits_in_time_window_path(contributor, @time_window)
+       elsif @release
+         contributor_commits_in_release_path(contributor, @release)
+       else
+         contributor_commits_path(contributor)
+       end
+    %>
+    <%= link_to contributor.ncontributions, path %>
+  </td>
 </tr>
