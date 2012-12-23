@@ -4,6 +4,10 @@ module ApplicationHelper
     link_to content_tag(:span, commit.short_sha1, :class => 'sha1'), commit.github_url, :class => 'commit'
   end
 
+  def link_to_release(release)
+    link_to content_tag(:span, release.tag, :class => 'tag'), release.github_url, :class => 'tag'
+  end
+
   def link_to_contributor(contributor, window='all-time')
     query = window == 'all-time'? {} : {:window => window}
     link_to contributor.name, contributor_commits_path(contributor, query)

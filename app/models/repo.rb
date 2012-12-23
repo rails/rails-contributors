@@ -90,7 +90,6 @@ class Repo
     ActiveRecord::Base.logger.silence do
       repo.refs(heads).each do |ref|
         to_visit = [repo.lookup(ref.target)]
-
         while commit = to_visit.shift
           unless Commit.exists?(sha1: commit.oid)
             ncommits += 1
@@ -108,13 +107,13 @@ class Repo
     new_releases = []
 
     repo.refs(tags).each do |ref|
-      tag  = ref.name[%r{[^/]+\z}]
+      tag = ref.name[%r{[^/]+\z}]
       unless Release.exists?(tag: tag)
         new_releases << Release.import!(tag, repo.lookup(ref.target))
       end
     end
 
-    Release.process_commits(new_releases)
+    Release.process_commits(self, new_releases)
 
     new_releases.size
   end

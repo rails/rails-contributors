@@ -1,5 +1,5 @@
 <%
-   @title = add_window_to("Rails Contributors", @window)
+   @title = @release ? "Rails Contributors - #{@release.name}" : add_window_to("Rails Contributors", @window)
    @description = 'Index of people who have contributed patches to Ruby on Rails'
 %>
 

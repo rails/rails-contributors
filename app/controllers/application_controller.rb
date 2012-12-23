@@ -60,4 +60,11 @@ private
       logger.info("(BROWSER) #{request.user_agent}")
     end
   end
+
+  def set_release
+    if params[:release_id].present?
+      @release = Release.find_by_param(params[:release_id])
+      head :not_found unless @release
+    end
+  end
 end

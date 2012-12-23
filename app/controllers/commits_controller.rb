@@ -1,4 +1,5 @@
 class CommitsController < ApplicationController
+  before_filter :set_release
   before_filter :set_target
   before_filter :set_time_constraints
 
@@ -12,10 +13,10 @@ class CommitsController < ApplicationController
 
 private
   def set_target
-    if params[:contributor_id]
+    if params[:contributor_id].present?
       @target = Contributor.find_by_url_id(params[:contributor_id])
-    elsif params[:release_id]
-      @target = Release.find_by_tag("v#{params[:release_id].tr('-', '.')}")
+    elsif params[:release_id].present?
+      @target = @release
     end
 
     head :not_found unless @target

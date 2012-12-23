@@ -111,7 +111,7 @@ a.name-mapping {
   clear:both;
 }
 
-.sha1 {
+.sha1, .tag {
     font-family:Consolas,Monaco,monospace;
     color:#980905;
 }
@@ -338,20 +338,17 @@ RELEASES LIST TABLE SPECIFICS
 ---------------------------------
 */
 
-#table-wrap table td.release-date {
-    width: 20%;
+td.release-tag, td.release-target, td.release-date, td.release-name {
+    align: left;
     white-space: nowrap;
 }
 
-#table-wrap table td.release-name {
-    width: 40%;
-    text-align: center;
+td.release-name {
     font-weight: bold;
     font-size: 1.1em;
 }
 
 #table-wrap table td.release-counter {
-    width: 20%;
     text-align: center;
     white-space: nowrap;
 }

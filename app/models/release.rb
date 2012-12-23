@@ -3,6 +3,7 @@ class Release < ActiveRecord::Base
 
   has_many :commits, :dependent => :nullify
   has_many :contributors, :through => :commits
+  belongs_to :target, :class_name => 'Commit'
 
   before_create :split_version
   before_create :fix_date
@@ -11,9 +12,9 @@ class Release < ActiveRecord::Base
     order('releases.major DESC, releases.minor DESC, releases.tiny DESC, releases.patch DESC')
   }
 
-  def self.process_commits(new_releases)
-    new_releases.sort.reverse.each do |release|
-      release.process_commits(self)
+  def self.process_commits(repo, new_releases)
+    new_releases.sort.each do |release|
+      release.process_commits(repo)
     end
   end
 
@@ -24,14 +25,19 @@ class Release < ActiveRecord::Base
   def self.import!(tag, rugged_object)
     case rugged_object
     when Rugged::Tag
-      date = object.tagger[:time]
-      sha1 = object.target_oid
+      date   = rugged_object.tagger[:time]
+      target = rugged_object.target
     when Rugged::Commit
-      date = object.author[:time]
-      sha1 = object.oid
+      date   = rugged_object.author[:time]
+      target = rugged_object
     end
 
-    Release.create!(tag: tag, commit_sha1: sha1, date: date)
+    # Some tags, like v1.2.0 do not have their target imported, make sure the
+    # target of a tag is in the database.
+    unless commit = Commit.find_by_sha1(target.oid)
+      commit = Commit.import!(target)
+    end
+    Release.create!(tag: tag, date: date, target: commit)
   end
 
   # Releases are ordered by their version, numerically. Note this is not
@@ -50,8 +56,12 @@ class Release < ActiveRecord::Base
     name.tr('.', '-')
   end
 
+  def self.find_by_param(param)
+    find_by_tag('v' + param.tr('-', '.'))
+  end
+
   def process_commits(repo)
-    released_sha1s = repo.rev_list(prev.try(:commit_sha1), commit_sha1)
+    released_sha1s = repo.rev_list(prev.try(:target).try(:sha1), target.sha1)
 
     released_sha1s.each_slice(1024) do |sha1s|
       import_missing_commits(repo, sha1s)
@@ -68,7 +78,9 @@ class Release < ActiveRecord::Base
   end
 
   def associate_commits(sha1s)
-    Commit.update_all({release_id: id}, sha1: sha1s)
+    # We force release_id to be NULL because rev-list in svn yields some
+    # repeated commits in several releases.
+    Commit.update_all({release_id: id}, sha1: sha1s, release_id: nil)
   end
 
   def prev
@@ -91,6 +103,11 @@ class Release < ActiveRecord::Base
       LEFT OUTER JOIN commits       ON commits.release_id = releases.id
       LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id
     JOINS
+  end
+
+  # Returns the URL of this commit in GitHub.
+  def github_url
+    "https://github.com/rails/rails/tree/#{tag}"
   end
 
   private
