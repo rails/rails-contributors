@@ -4,8 +4,7 @@ class Commit < ActiveRecord::Base
   belongs_to :release
 
   scope :since, lambda { |date|
-    conditions = date ?  ['commits.committer_date > ?', date] : nil
-    where(conditions)
+    where(['commits.committer_date >= ?', date])
   }
 
   scope :with_no_contributors,

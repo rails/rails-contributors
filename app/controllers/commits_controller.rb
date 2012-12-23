@@ -3,13 +3,13 @@ class CommitsController < ApplicationController
   before_filter :set_time_constraints, only: 'in_time_window'
 
   def index
-    target = @contributor || @release
-    @commits = target.commits.order('commits.author_date DESC')
+    @commits = @target.commits.order('commits.author_date DESC')
   end
 
   def in_time_window
-    target = @contributor || @release
-    @commits = target.commits.since(@since).order('commits.author_date DESC')
+    commits = @target.commits
+    commits = commits.since(@since) if @since
+    @commits = commits.order('commits.author_date DESC')
     render 'index'
   end
 
@@ -28,5 +28,7 @@ class CommitsController < ApplicationController
     if params[:release_id].present?
       set_release
     end
+
+    @target = @contributor || @release
   end
 end
