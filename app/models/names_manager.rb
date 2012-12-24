@@ -276,6 +276,7 @@ module NamesManager
   map 'Chad Woolley',               'thewoolleyman'
   map 'Chaitanya Vellanki',         'chaitanyav'
   map 'Charles M. Gerungan',        "charles.gerungan\100gmail.com"
+  map 'Charles Nutter',             "headius\100headius.com"
   map 'Chas Grundy',                'chas'
   map 'Cheah Chu Yeow',             'Chu Yeow', 'chuyeow'
   map 'Choon Keat',                 "choonkeat\100gmail.com", 'choonkeat'
