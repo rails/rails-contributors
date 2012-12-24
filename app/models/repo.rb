@@ -174,7 +174,7 @@ class Repo
   def manage_gone_contributors(current_contributor_names)
     previous_contributor_names = NamesManager.all_names
     gone_names = previous_contributor_names - current_contributor_names
-    destroy_gone_contributors(gone_names) unless gone_names.empty?
+    destroy_gone_contributors(gone_names.to_a) unless gone_names.empty?
   end
 
   # Destroys all contributors in +gone_names+ and clears their commits.
