@@ -3,7 +3,6 @@ class Release < ActiveRecord::Base
 
   has_many :commits, :dependent => :nullify
   has_many :contributors, :through => :commits
-  belongs_to :target, :class_name => 'Commit'
 
   before_create :split_version
   before_create :fix_date
@@ -32,12 +31,12 @@ class Release < ActiveRecord::Base
       target = rugged_object
     end
 
-    # Some tags, like v1.2.0 do not have their target imported, make sure the
+    # Some tags, like v1.2.0, do not have their target imported. Ensure the
     # target of a tag is in the database.
     unless commit = Commit.find_by_sha1(target.oid)
       commit = Commit.import!(target)
     end
-    Release.create!(tag: tag, date: date, target: commit)
+    Release.create!(tag: tag, date: date)
   end
 
   # Releases are ordered by their version, numerically. Note this is not
@@ -61,7 +60,7 @@ class Release < ActiveRecord::Base
   end
 
   def process_commits(repo)
-    released_sha1s = repo.rev_list(prev.try(:target).try(:sha1), target.sha1)
+    released_sha1s = repo.rev_list(prev.try(:tag), tag)
 
     released_sha1s.each_slice(1024) do |sha1s|
       import_missing_commits(repo, sha1s)

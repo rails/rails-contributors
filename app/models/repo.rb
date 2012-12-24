@@ -23,11 +23,18 @@ class Repo
     @repo   = Rugged::Repository.new(path)
   end
 
-  def git(args)
+  def git(args, capture=false)
     cmd = "git #{args}"
+    puts cmd
     logger.info(cmd)
     Dir.chdir(path) do
-      system(cmd) or raise "git error: #{$?}"
+      if capture
+        out = `#{cmd}`
+        return out if $?.success?
+        raise "git error: #{$?}"
+      else
+        system(cmd) or raise "git error: #{$?}"
+      end
     end
   end
 
@@ -36,20 +43,13 @@ class Repo
   end
 
   def diff(sha1)
-    `git diff --no-color #{sha1}^!`
+    git "diff --no-color #{sha1}^!", true
   end
 
-  def rev_list(from_sha1, to_sha1)
-    walker = Rugged::Walker.new(repo)
-    walker.sorting(Rugged::SORT_TOPO)
-    walker.push(repo.lookup(to_sha1))
-    walker.hide(repo.lookup(from_sha1)) if from_sha1
-
-    [].tap do |sha1s|
-      walker.each do |commit|
-        sha1s << commit.oid
-      end
-    end
+  def rev_list(from, to)
+    arg = from ? "#{from}..#{to}" : to
+    lines = git "rev-list #{arg}", true
+    lines.split("\n")
   end
 
   def sync
