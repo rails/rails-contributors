@@ -25,7 +25,6 @@ class Repo
 
   def git(args, capture=false)
     cmd = "git #{args}"
-    puts cmd
     logger.info(cmd)
     Dir.chdir(path) do
       if capture
