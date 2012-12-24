@@ -11,6 +11,8 @@ class Release < ActiveRecord::Base
     order('releases.major DESC, releases.minor DESC, releases.tiny DESC, releases.patch DESC')
   }
 
+  validates :tag, presence: true, uniqueness: true
+
   def self.process_commits(repo, new_releases)
     new_releases.sort.each do |release|
       release.process_commits(repo)
