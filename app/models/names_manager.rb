@@ -944,7 +944,7 @@ module NamesManager
     name.sub(/<[^>]+>/, '').strip
   end
 
-  CONNECTORS_REGEXP = %r{[,/&+]}
+  CONNECTORS_REGEXP = %r{(?:[,/&+]|\band\b)}
 
   # Inspects raw candidates in search for rare cases.
   #
@@ -1064,36 +1064,6 @@ module NamesManager
       when "jon\100blankpad.net)"
         # see 35d3ede
         ["jon\100blankpad.net"]
-      when 'Nick Quaranto and Josh Nichols'
-        ['Nick Quaranto', 'Josh Nichols']
-      when 'Sam Elliott and Santiago Pastorino'
-        ['Sam Elliott', 'Santiago Pastorino']
-      when 'Santiago Pastorino and José Ignacio Costa'
-        ['Santiago Pastorino', 'José Ignacio Costa']
-      when 'Santiago Pastorino and Sebastian Martinez'
-        ['Santiago Pastorino', 'Sebastian Martinez']
-      when 'José Valim and Mikel Lindsaar'
-        ['José Valim', 'Mikel Lindsaar']
-      when 'Santiago Pastorino and Carl Lerche'
-        ['Santiago Pastorino', 'Carl Lerche']
-      when 'Santiago Pastorino and Emilio Tagua'
-        ['Santiago Pastorino', 'Emilio Tagua']
-      when 'Neeraj Singh and Santiago Pastorino'
-        ['Neeraj Singh', 'Santiago Pastorino']
-      when 'Jeroen van Dijk and Josh Kalderimis'
-        ['Jeroen van Dijk', 'Josh Kalderimis']
-      when 'Nathan Zook and Ryan Bigg'
-        ['Nathan Zook', 'Ryan Bigg']
-      when 'Ryan Bigg and Xavier Noria'
-        ['Ryan Bigg', 'Xavier Noria']
-      when 'Oriol Gual and Josep M. Bach'
-        ['Oriol Gual', 'Josep M. Bach']
-      when 'Sam Elliott and Ryan Bigg'
-        ['Sam Elliott', 'Ryan Bigg']
-      when 'Gonzalo Rodriguez and Leonardo Capillera'
-        ['Gonzalo Rodriguez', 'Leonardo Capillera']
-      when 'Carlos Antonio da Silva and Santiago Pastorino'
-        ['Carlos Antonio da Silva', 'Santiago Pastorino']
       when 'Jose and Yehuda'
         ['José Valim', 'Yehuda Katz']
       when /\b\w+\+\w+@/
@@ -1118,6 +1088,7 @@ module NamesManager
         # [Rick Olson/Nicholas Seckar]
         # [Kevin Clark & Jeremy Hopple]
         # Yehuda Katz + Carl Lerche
+        # Nick Quaranto and Josh Nichols
         name.split(CONNECTORS_REGEXP).map(&:strip).reject do |part|
           part == 'others' || # foamdino ~ at ~ gmail.com/others
           part == '?'         # Sam Stephenson/?
