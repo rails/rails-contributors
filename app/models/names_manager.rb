@@ -114,7 +114,7 @@ module NamesManager
   # canonical name => handlers, emails, typos, etc.
   SEEN_ALSO_AS = {}
   def self.map(canonical_name, *also_as)
-    SEEN_ALSO_AS[canonical_name] = also_as
+    SEEN_ALSO_AS[canonical_name.nfc] = also_as.map(&:nfc)
   end
 
   def self.authors_of_special_cased_commits(commit)
@@ -218,10 +218,11 @@ module NamesManager
   map 'Andrew Shcheglov',           'windock'
   map 'Andrew White',               'pixeltrix'
   map 'Andy Lien',                  "andylien\100gmail.com"
-  map 'Angelo Capilleri',           'angelo giovanni capilleri'
+  map 'Angelo Capilleri',           'angelo giovanni capilleri', 'Angelo capilleri'
   map 'Ant Ramm',                   'antramm'
   map 'Anthony Alberto',            'Anthony'
   map 'Anthony Eden',               'aeden'
+  map 'Anuj Dutta',                 'anuj  dutta'
   map 'Anup Narkhede',              'railsbob'
   map 'Ariejan de Vroom',           'ariejan'
   map 'Artem Kramarenko',           'artemk'
@@ -233,7 +234,7 @@ module NamesManager
   map 'August Zajonc',              "augustz\100augustz.com"
   map 'Ayose Cazorla',              'Ayose'
   map 'Bagwan Pankaj',              'bagwanpankaj'
-  map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl"
+  map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl", 'Bas Van Klinkenberg'
   map 'Ben Bangert',                "ben\100groovie.org"
   map 'Ben Sandofsky',              'sandofsky'
   map 'Ben Scofield',               'bscofield'
@@ -370,7 +371,7 @@ module NamesManager
   map 'Elliot Winkler',             'mcmire'
   map 'Elliot Yates',               'ejy'
   map 'Eloy Duran',                 'alloy'
-  map 'Emili Parreño',              'eparreno'
+  map 'Emili Parreño',              'eparreno', 'Emili Parreno'
   map 'Emilio Tagua',               'miloops'
   map 'Eric Daspet',                "eric.daspet\100survol.net"
   map 'Eric Hodel',                 "drbrain\100segment7.net"
@@ -392,6 +393,7 @@ module NamesManager
   map 'Felix Dominguez',            'dacat'
   map 'Ferdinand Svehla',           "f.svehla\100gmail.com", 'f.svehla'
   map 'Florian Munz',               'theflow'
+  map 'Francesco Rodríguez',        'Francesco Rodriguez'
   map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
   map 'Frank Müller',               'suchasurge'
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
@@ -533,7 +535,7 @@ module NamesManager
   map 'Jordi Bunster',              'jordi'
   map 'Jørgen Orehøj Erichsen',     'joerichsen'
   map 'Jose Angel Cortinas',        'jacortinas'
-  map 'José Valim',                 'josevalim'
+  map 'José Valim',                 'josevalim', "Jose' Valim"
   map 'Joseph A. Martin',           "jmartin\100desertflood.com"
   map 'Joseph Hosteny',             "jhosteny\100mac.com"
   map 'Josh Goebel',                'Dreamer3', "dreamer3\100gmail.com", 'yyyc514'
@@ -553,7 +555,7 @@ module NamesManager
   map 'Kamal Fariz Mahyuddin',      'kamal'
   map 'Kamil Kukura',               'kamk'
   map 'Karel Miarka',               "kajism\100yahoo.com"
-  map 'Karel Minařík',              'karmi'
+  map 'Karel Minařík',              'karmi', 'Karel Minarik'
   map 'Kaspar Schiess',             "eule\100space.ch"
   map 'Kazuhiro Yoshida',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
   map 'Keegan Quinn',               "keegan\100thebasement.org"
@@ -601,13 +603,15 @@ module NamesManager
   map 'Loren Johnson',              'lorenjohnson'
   map 'Lori Holden',                'lholden'
   map 'Louis St-Amour',             "LouisStAmour\100gmail.com"
+  map 'Lourens Naudé',              'Lourens Naude'
   map 'Luca Guidi',                 'l.guidi'
+  map 'Lucas Catón',                'Lucas Caton'
   map 'Lugovoi Nikolai',            "meadow.nnick\100gmail.com"
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
   map 'Luke Ludwig',                'lukeludwig'
   map 'Luke Redpath',               "contact\100lukeredpath.co.uk"
   map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
-  map 'Maik Schmidt',               "contact\100maik-schmidt.de"
+  map 'Maik Schmidt',               "contact\100maik-schmidt.de", 'maik schmidt'
   map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
   map 'Manu J',                     "Manu"
   map 'Manuel Holtgrewe',           "purestorm\100ggnore.net"
@@ -617,6 +621,7 @@ module NamesManager
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
   map 'Marcello Nuccio',            'marcenuc'
   map 'Marcin Szczepański',         "marcin\100junkheap.net"
+  map 'Marcos Tapajós',             'Marcos Tapajos'
   map 'Mariusz Pękala',             'Arsen7'
   map 'Marjan Hratson',             'gmarik'
   map 'Mark A. Richman',            'mrichman'
@@ -683,7 +688,7 @@ module NamesManager
   map 'Mike Subelsky',              'subelsky'
   map 'Mikel Lindsaar',             'mikel', 'raasdnil'
   map 'Miklós Fazekas',             'mfazekas'
-  map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr"
+  map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr", 'Mislav Marohnic'
   map 'Moses Hohman',               'moses'
   map 'Murray Steele',              'h-lame'
   map 'Nathan Weizenbaum',          'Nex3'
@@ -696,13 +701,14 @@ module NamesManager
   map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
   map 'Nicolas Blanco',             'slainer68'
   map 'Nicolas Cavigneaux',         'Bounga'
+  map 'Nicolás Hock Isaza',         'Nicolas Hock Isaza'
   map 'Nicolas Pouillard',          "nicolas.pouillard\100gmail.com"
-  map 'Nicolás Sanguinetti',        'foca'
+  map 'Nicolás Sanguinetti',        'foca', 'Nicolas Sanguinetti'
   map 'Nik Wakelin',                'nik.wakelin', 'nik.kakelin'
   map 'Nikolay Petrachkov',         'jastix'
   map 'Nils-Helge Garli Hegvik',    'nilsga'
   map 'Nils Jonsson',               "nils\100alumni.rice.edu"
-  map 'Nobuhiro Imai',              "nov\100yo.rim.or.jp"
+  map 'Nobuhiro Imai',              "nov\100yo.rim.or.jp", 'Nobuhiro IMAI'
   map 'Nobukazu Matake',            'nov'
   map 'Norbauer Inc',               'norbauer'
   map 'Norbert Crombach',           'norbert'
@@ -741,12 +747,13 @@ module NamesManager
   map 'Phil Orwig',                 'cluon'
   map 'Philip Hallstrom',           'phallstrom'
   map 'Philip Ross',                "phil.ross\100gmail.com"
+  map 'Philipp Weißensteiner',      'Philipp Weissensteiner'
   map 'Philippe April',             "ror\100philippeapril.com"
   map 'Phillip J. Birmingham',      "phillip\100pjbsoftware.com"
   map 'Piers Cawley',               "pdcawley\100bofh.org.uk"
   map 'Piotr Banasik',              "piotr\100t-p-l.com", 'piotr'
   map 'Pirogov Evgenij',            'gmile'
-  map 'Pivotal Labs',               'pivotal'
+  map 'Pivotal Labs',               'pivotal', 'Pivotal  Labs'
   map 'PJ Hyett',                   "pjhyett\100gmail.com"
   map 'Prakash Murthy',             'prakashmurthy'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
@@ -765,6 +772,7 @@ module NamesManager
   map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
   map 'Rizwan Reza',                'rizwanreza'
   map 'Robert Evans',               'revans'
+  map 'Roman Le Négrate',           'Roman Le Negrate'
   map 'Russell Norris',             'rsl', 'RSL'
   map 'Rob Anderton',               'Rob'
   map 'Rob Biedenharn',             'rabiedenharn', "Rob\100AgileConsultingLLC.com"
@@ -781,7 +789,7 @@ module NamesManager
   map 'Rodrigo Navarro',            'reu'
   map 'Rohit Arondekar',            'rohit'
   map 'Roman Dittert',              'RomD'
-  map 'Roman Le Négrate',           'Roman2K'
+  map 'Roman Le Négrate',           'Roman2K', 'Roman Le Negrate'
   map 'Ron DiFrango',               "rdifrango\100captechventures.com"
   map 'Ross Kaffenberger',          'Ross Kaffenburger'
   map 'Ruben Nine',                 "ruben.nine\100gmail.com"
@@ -850,6 +858,7 @@ module NamesManager
   map 'Sur Max',                    'sur'
   map 'Surendra Singhi',            "ssinghi\100kreeti.com"
   map 'Sven Klemm',                 "sven\100c3d2.de"
+  map 'Tadas Tamošauskas',          'Tadas Tamosauskas'
   map 'Tal Rotbart',                'redbeard'
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
   map 'Taryn East',                 'taryn', 'taryneast', "rubygirl\100taryneast.org"
@@ -887,6 +896,7 @@ module NamesManager
   map 'Troels Petersen',            'tnp'
   map 'Tyler Kiley',                "tyler\100kianta.com"
   map 'Tyler Kovacs',               "tyler.kovacs\100gmail.com"
+  map 'Uģis Ozols',                 'Ugis Ozols'
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
   map 'Vijay Dev',                  'vijay', 'vijaydev'
   map 'Vitaly Kushner',             'vitaly'
@@ -894,7 +904,7 @@ module NamesManager
   map 'Wang Chun',                  'wangchun'
   map 'Wes Gamble',                 'weyus'
   map 'Wesley Beary',               'geemus'
-  map 'Wesley Moxam',               'wmoxam'
+  map 'Wesley Moxam',               'wmoxam', 'wesley.moxam'
   map 'Will Bryant',                'will.bryant', 'Will'
   map 'Will Harris',                'wharris'
   map 'Wilson Bilkovich',           "wilsonb\100gmail.com", 'wilson'
@@ -1034,9 +1044,9 @@ module NamesManager
       when "schoenm\100earthlink.net sandra.metz\100duke.edu"
         name.split
       when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
-        'Adam Cigánek'
+        'Adam Cigánek'.nfc
       when '=?utf-8?q?Mislav=20Marohni=C4=87?='
-        'Mislav Marohnić'
+        'Mislav Marohnić'.nfc
       when 'Thanks to Austin Ziegler for Transaction::Simple'
         'Austin Ziegler'
       when 'nik.wakelin Koz'
@@ -1065,7 +1075,7 @@ module NamesManager
         # see 35d3ede
         ["jon\100blankpad.net"]
       when 'Jose and Yehuda'
-        ['José Valim', 'Yehuda Katz']
+        ['José Valim', 'Yehuda Katz'].map(&:nfc)
       when /\b\w+\+\w+@/
         # The plus sign is taken to be a connector below, this catches some known
         # addresses that use a plus sign in the username, see unit tests for examples.
