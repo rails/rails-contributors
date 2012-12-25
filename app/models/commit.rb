@@ -19,11 +19,11 @@ class Commit < ActiveRecord::Base
   def self.import!(rugged_commit)
     create!(
       sha1:              rugged_commit.oid,
-      author_name:       rugged_commit.author[:name].force_encoding('UTF-8'),
+      author_name:       rugged_commit.author[:name].force_encoding('UTF-8').nfc,
       author_date:       rugged_commit.author[:time],
-      committer_name:    rugged_commit.committer[:name].force_encoding('UTF-8'),
+      committer_name:    rugged_commit.committer[:name].force_encoding('UTF-8').nfc,
       committer_date:    rugged_commit.committer[:time],
-      message:           rugged_commit.message.force_encoding('UTF-8'),
+      message:           rugged_commit.message.force_encoding('UTF-8').nfc,
       imported_from_svn: rugged_commit.message.include?('git-svn-id:')
     )
   end
@@ -132,7 +132,7 @@ protected
   end
 
   def cache_diff(repo)
-    update_column(:diff, repo.diff(sha1).force_encoding('UTF-8'))
+    update_column(:diff, repo.diff(sha1).force_encoding('UTF-8').nfc)
   end
 
   # Extracts any changelog entry for this commit. This is done by diffing with

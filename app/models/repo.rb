@@ -161,7 +161,7 @@ class Repo
     target = for_all_commits ? Commit : Commit.with_no_contributors
     target.find_each do |commit|
       commit.extract_contributor_names(self).each do |contributor_name|
-        contributor_names_per_commit[commit.sha1] << contributor_name
+        contributor_names_per_commit[commit.sha1] << contributor_name.nfc
       end
     end
     contributor_names_per_commit
@@ -196,7 +196,6 @@ class Repo
     # Cache contributors to speed up processing wiped databases. They are about
     # 1400 so we can afford this hash.
     contributors = Hash.new {|h, name| h[name] = Contributor.find_or_create_by_name(name)}
-
     Commit.with_no_contributors.find_each do |commit|
       contributor_names_per_commit[commit.sha1].each do |contributor_name|
         contributors[contributor_name].commits << commit
