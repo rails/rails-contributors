@@ -1,0 +1,203 @@
+diff --git a/actionmailer/CHANGELOG b/actionmailer/CHANGELOG
+index 2d1019e..8ba3ccd 100644
+--- a/actionmailer/CHANGELOG
++++ b/actionmailer/CHANGELOG
+@@ -1,3 +1,8 @@
++*2.0.2* (December 16th, 2007)
++
++* Included in Rails 2.0.2
++
++
+ *2.0.1* (December 7th, 2007)
+
+ * Update ActionMailer so it treats ActionView the same way that ActionController does.  Closes #10244 [rick]
+diff --git a/actionmailer/Rakefile b/actionmailer/Rakefile
+index b87361b..4622871 100755
+--- a/actionmailer/Rakefile
++++ b/actionmailer/Rakefile
+@@ -55,7 +55,7 @@ spec = Gem::Specification.new do |s|
+   s.rubyforge_project = "actionmailer"
+   s.homepage = "http://www.rubyonrails.org"
+
+-  s.add_dependency('actionpack', '= 2.0.1' + PKG_BUILD)
++  s.add_dependency('actionpack', '= 2.0.2' + PKG_BUILD)
+
+   s.has_rdoc = true
+   s.requirements << 'none'
+diff --git a/actionmailer/lib/action_mailer/version.rb b/actionmailer/lib/action_mailer/version.rb
+index 82136b6..954a472 100644
+--- a/actionmailer/lib/action_mailer/version.rb
++++ b/actionmailer/lib/action_mailer/version.rb
+@@ -2,7 +2,7 @@ module ActionMailer
+   module VERSION #:nodoc:
+     MAJOR = 2
+     MINOR = 0
+-    TINY  = 1
++    TINY  = 2
+
+     STRING = [MAJOR, MINOR, TINY].join('.')
+   end
+diff --git a/actionpack/CHANGELOG b/actionpack/CHANGELOG
+index 8e77c59..bf8b538 100644
+--- a/actionpack/CHANGELOG
++++ b/actionpack/CHANGELOG
+@@ -1,4 +1,4 @@
+-*SVN*
++*2.0.2* (December 16th, 2007)
+
+ * Fixed that ActionView#file_exists? would be incorrect if @first_render is set #10569 [dbussink]
+
+diff --git a/actionpack/Rakefile b/actionpack/Rakefile
+index 7c3757e..1b1d9a1 100644
+--- a/actionpack/Rakefile
++++ b/actionpack/Rakefile
+@@ -76,7 +76,7 @@ spec = Gem::Specification.new do |s|
+   s.has_rdoc = true
+   s.requirements << 'none'
+
+-  s.add_dependency('activesupport', '= 2.0.1' + PKG_BUILD)
++  s.add_dependency('activesupport', '= 2.0.2' + PKG_BUILD)
+
+   s.require_path = 'lib'
+   s.autorequire = 'action_controller'
+diff --git a/actionpack/lib/action_pack/version.rb b/actionpack/lib/action_pack/version.rb
+index 1f978de..7aa6a5d 100644
+--- a/actionpack/lib/action_pack/version.rb
++++ b/actionpack/lib/action_pack/version.rb
+@@ -2,7 +2,7 @@ module ActionPack #:nodoc:
+   module VERSION #:nodoc:
+     MAJOR = 2
+     MINOR = 0
+-    TINY  = 1
++    TINY  = 2
+
+     STRING = [MAJOR, MINOR, TINY].join('.')
+   end
+diff --git a/activerecord/CHANGELOG b/activerecord/CHANGELOG
+index b168b07..fe44b1b 100644
+--- a/activerecord/CHANGELOG
++++ b/activerecord/CHANGELOG
+@@ -1,4 +1,4 @@
+-*SVN*
++*2.0.2* (December 16th, 2007)
+
+ * Ensure optimistic locking handles nil #lock_version values properly.  Closes #10510 [rick]
+
+diff --git a/activerecord/Rakefile b/activerecord/Rakefile
+index 54d03af..c22934e 100755
+--- a/activerecord/Rakefile
++++ b/activerecord/Rakefile
+@@ -172,7 +172,7 @@ spec = Gem::Specification.new do |s|
+     s.files = s.files + Dir.glob( "#{dir}/**/*" ).delete_if { |item| item.include?( "\.svn" ) }
+   end
+
+-  s.add_dependency('activesupport', '= 2.0.1' + PKG_BUILD)
++  s.add_dependency('activesupport', '= 2.0.2' + PKG_BUILD)
+
+   s.files.delete "test/fixtures/fixture_database.sqlite"
+   s.files.delete "test/fixtures/fixture_database_2.sqlite"
+diff --git a/activerecord/lib/active_record/version.rb b/activerecord/lib/active_record/version.rb
+index 41b234f..a8ee7db 100644
+--- a/activerecord/lib/active_record/version.rb
++++ b/activerecord/lib/active_record/version.rb
+@@ -2,7 +2,7 @@ module ActiveRecord
+   module VERSION #:nodoc:
+     MAJOR = 2
+     MINOR = 0
+-    TINY  = 1
++    TINY  = 2
+
+     STRING = [MAJOR, MINOR, TINY].join('.')
+   end
+diff --git a/activeresource/CHANGELOG b/activeresource/CHANGELOG
+index d3d20a6..243511c 100644
+--- a/activeresource/CHANGELOG
++++ b/activeresource/CHANGELOG
+@@ -1,4 +1,4 @@
+-*SVN*
++*2.0.2* (December 16th, 2007)
+
+ * Added more specific exceptions for 400, 401, and 403 (all descending from ClientError so existing rescues will work) #10326 [trek]
+
+diff --git a/activeresource/Rakefile b/activeresource/Rakefile
+index 7b0b8fd..3434864 100644
+--- a/activeresource/Rakefile
++++ b/activeresource/Rakefile
+@@ -62,7 +62,7 @@ spec = Gem::Specification.new do |s|
+     s.files = s.files + Dir.glob( "#{dir}/**/*" ).delete_if { |item| item.include?( "\.svn" ) }
+   end
+
+-  s.add_dependency('activesupport', '= 2.0.1' + PKG_BUILD)
++  s.add_dependency('activesupport', '= 2.0.2' + PKG_BUILD)
+
+   s.require_path = 'lib'
+   s.autorequire = 'active_resource'
+diff --git a/activeresource/lib/active_resource/version.rb b/activeresource/lib/active_resource/version.rb
+index a59c9d2..4f7de5e 100644
+--- a/activeresource/lib/active_resource/version.rb
++++ b/activeresource/lib/active_resource/version.rb
+@@ -2,7 +2,7 @@ module ActiveResource
+   module VERSION #:nodoc:
+     MAJOR = 2
+     MINOR = 0
+-    TINY  = 1
++    TINY  = 2
+     STRING = [MAJOR, MINOR, TINY].join('.')
+   end
+diff --git a/activesupport/lib/active_support/version.rb b/activesupport/lib/active_support/version.rb
+index 913198f..83fbaec 100644
+--- a/activesupport/lib/active_support/version.rb
++++ b/activesupport/lib/active_support/version.rb
+@@ -2,7 +2,7 @@ module ActiveSupport
+   module VERSION #:nodoc:
+     MAJOR = 2
+     MINOR = 0
+-    TINY  = 1
++    TINY  = 2
+
+     STRING = [MAJOR, MINOR, TINY].join('.')
+   end
+diff --git a/railties/CHANGELOG b/railties/CHANGELOG
+index 1a74229..9d6f822 100644
+--- a/railties/CHANGELOG
++++ b/railties/CHANGELOG
+@@ -1,4 +1,4 @@
+-*SVN*
++*2.0.2* (December 16th, 2007)
+
+ * Changed the default database from mysql to sqlite3, so now running "rails myapp" will have a config/database.yml that's setup for SQLite3 (which in OS X Leopard is installed by default, so is the gem, so everything Just Works with no database configuration at all). To get a Rails application preconfigured for MySQL, just run "rails -d mysql myapp" [DHH]
+
+diff --git a/railties/Rakefile b/railties/Rakefile
+index fc32f57..0504d6c 100644
+--- a/railties/Rakefile
++++ b/railties/Rakefile
+@@ -312,11 +312,11 @@ spec = Gem::Specification.new do |s|
+   EOF
+
+   s.add_dependency('rake', '>= 0.7.2')
+-  s.add_dependency('activesupport',    '= 2.0.1' + PKG_BUILD)
+-  s.add_dependency('activerecord',     '= 2.0.1' + PKG_BUILD)
+-  s.add_dependency('actionpack',       '= 2.0.1' + PKG_BUILD)
+-  s.add_dependency('actionmailer',     '= 2.0.1' + PKG_BUILD)
+-  s.add_dependency('activeresource',   '= 2.0.1' + PKG_BUILD)
++  s.add_dependency('activesupport',    '= 2.0.2' + PKG_BUILD)
++  s.add_dependency('activerecord',     '= 2.0.2' + PKG_BUILD)
++  s.add_dependency('actionpack',       '= 2.0.2' + PKG_BUILD)
++  s.add_dependency('actionmailer',     '= 2.0.2' + PKG_BUILD)
++  s.add_dependency('activeresource',   '= 2.0.2' + PKG_BUILD)
+
+   s.rdoc_options << '--exclude' << '.'
+   s.has_rdoc = false
+diff --git a/railties/lib/rails/version.rb b/railties/lib/rails/version.rb
+index 780a1d5..da90645 100644
+--- a/railties/lib/rails/version.rb
++++ b/railties/lib/rails/version.rb
+@@ -2,7 +2,7 @@ module Rails
+   module VERSION #:nodoc:
+     MAJOR = 2
+     MINOR = 0
+-    TINY  = 1
++    TINY  = 2
+
+     STRING = [MAJOR, MINOR, TINY].join('.')
+   end

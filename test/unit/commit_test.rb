@@ -1,37 +1,71 @@
 require 'test_helper'
-require 'commit'
-
-class Commit
-  public :extract_candidates, :extract_contributor_names_from_text
-end
 
 class CommitTest < ActiveSupport::TestCase
-  test "short sha1" do
-    commit = Commit.new(:sha1 => "c0f3dc9728d8810e710d52e05bc61395297be787")
-    assert_equal "c0f3dc9", commit.short_sha1
-    assert_equal "c0f3dc9728", commit.short_sha1(10)
+  def extract_contributor_names_from_text(commit, text)
+    commit.send(:extract_contributor_names_from_text, text)
   end
 
-  test "github url" do
-    commit = Commit.new(:sha1 => "c0f3dc9728d8810e710d52e05bc61395297be787")
-    assert_equal "https://github.com/rails/rails/commit/c0f3dc9728d8810e710d52e05bc61395297be787", commit.github_url
+  def extract_changelog(commit)
+    commit.send(:extract_changelog)
   end
 
-  test "basic name extraction" do
+  def only_modifies_changelogs?(commit)
+    commit.send(:only_modifies_changelogs?)
+  end
+
+  def test_short_sha1
+    commit = Commit.new(sha1: 'c0f3dc9728d8810e710d52e05bc61395297be787')
+    assert_equal 'c0f3dc9', commit.short_sha1
+    assert_equal 'c0f3dc9728', commit.short_sha1(10)
+  end
+
+  def test_github_url
+    commit = Commit.new(sha1: 'c0f3dc9728d8810e710d52e05bc61395297be787')
+    assert_equal 'https://github.com/rails/rails/commit/c0f3dc9728d8810e710d52e05bc61395297be787', commit.github_url
+  end
+
+  def test_short_message
+    assert_nil Commit.new.short_message
+    assert_equal 'foo', Commit.new(message: 'foo').short_message
+    assert_equal 'foo', Commit.new(message: "foo\n").short_message
+    assert_equal 'foo bar', Commit.new(message: "foo bar\nbar\nzoo\n").short_message
+  end
+
+  def test_extract_changelog
+    commit = Commit.new(diff: read_fixture('diff_more_than_changelogs_69edebf.log'))
+    assert_equal <<-CHANGELOG.strip_heredoc, extract_changelog(commit)
+      +*2.0.2* (December 16th, 2007)
+      +* Included in Rails 2.0.2
+      +*2.0.2* (December 16th, 2007)
+      +*2.0.2* (December 16th, 2007)
+      +*2.0.2* (December 16th, 2007)
+      +*2.0.2* (December 16th, 2007)
+    CHANGELOG
+  end
+
+  def test_only_modifies_changelogs
+    commit = Commit.new(diff: read_fixture('diff_only_changelogs_e3a39ca.log'))
+    assert only_modifies_changelogs?(commit)
+
+    commit = Commit.new(diff: read_fixture('diff_more_than_changelogs_69edebf.log'))
+    assert !only_modifies_changelogs?(commit)
+  end
+
+  def test_basic_name_extraction
     commit = Commit.new
 
-    assert_equal [], commit.extract_contributor_names_from_text("")
-    assert_equal [], commit.extract_contributor_names_from_text("nothing here to extract")
-    assert_equal ['miloops'], commit.extract_contributor_names_from_text("Fix case-sensitive validates_uniqueness_of. Closes #11366 [miloops]")
-    assert_equal ['Adam Milligan', 'Pratik'], commit.extract_contributor_names_from_text('Ensure methods called on association proxies respect access control. [#1083 state:resolved] [Adam Milligan, Pratik]')
-    assert_equal ['jbarnette'], commit.extract_contributor_names_from_text('Correct documentation for dom_id [jbarnette] Closes #10775')
-    assert_equal ['Sam'], commit.extract_contributor_names_from_text('Models with no attributes should just have empty hash fixtures [Sam] (Closes #3563)')
-    assert_equal ['Kevin Clark', 'Jeremy Hopple'], commit.extract_contributor_names_from_text(<<MESSAGE)
-    * Fix pagination problems when using include
-    * Introduce Unit Tests for pagination
-    * Allow count to work with :include by using count distinct.
+    assert_equal [], extract_contributor_names_from_text(commit, '')
+    assert_equal [], extract_contributor_names_from_text(commit, 'nothing here to extract')
+    assert_equal ['miloops'], extract_contributor_names_from_text(commit, 'Fix case-sensitive validates_uniqueness_of. Closes #11366 [miloops]')
+    assert_equal ['Adam Milligan', 'Pratik'], extract_contributor_names_from_text(commit, 'Ensure methods called on association proxies respect access control. [#1083 state:resolved] [Adam Milligan, Pratik]')
+    assert_equal ['jbarnette'], extract_contributor_names_from_text(commit, 'Correct documentation for dom_id [jbarnette] Closes #10775')
+    assert_equal ['Sam'], extract_contributor_names_from_text(commit, 'Models with no attributes should just have empty hash fixtures [Sam] (Closes #3563)')
+    assert_equal ['Kevin Clark', 'Jeremy Hopple'], extract_contributor_names_from_text(commit, <<-MESSAGE)
+      * Fix pagination problems when using include
+      * Introduce Unit Tests for pagination
+      * Allow count to work with :include by using count distinct.
 
-    [Kevin Clark & Jeremy Hopple]
-MESSAGE
+      [Kevin Clark & Jeremy Hopple]
+    MESSAGE
   end
 end

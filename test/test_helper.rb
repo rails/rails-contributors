@@ -10,4 +10,8 @@ class ActiveSupport::TestCase
   def time_travel(&block)
     Delorean.time_travel_to(TODAY, &block)
   end
+
+  def read_fixture(name)
+    File.read("#{Rails.root}/test/fixtures/#{name}")
+  end
 end
