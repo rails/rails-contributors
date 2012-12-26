@@ -4,9 +4,6 @@ class Release < ActiveRecord::Base
   has_many :commits, :dependent => :nullify
   has_many :contributors, :through => :commits
 
-  before_create :split_version
-  before_create :fix_date
-
   scope :sorted, -> {
     order('releases.major DESC, releases.minor DESC, releases.tiny DESC, releases.patch DESC')
   }
@@ -46,6 +43,16 @@ class Release < ActiveRecord::Base
   # releases in parallel.
   def <=>(other)
     [major, minor, tiny, patch] <=> [other.major, other.minor, other.tiny, other.patch]
+  end
+
+  def tag=(str)
+    write_attribute(:tag, str)
+    split_version
+  end
+
+  def date=(date)
+    date = actual_date_for_release(date)
+    write_attribute(:date, date)
   end
 
   # The name of a release is the tag name except for the leading "v".
@@ -122,17 +129,13 @@ class Release < ActiveRecord::Base
     self.patch = numbers[3].to_i
   end
 
-  def fix_date
-    self.date = actual_date_for_release
-  end
-
   # Releases coming from Subversion were tagged in 2008 when the repo was
   # imported into git. I have scrapped
   #
   #   http://rubyforge.org/frs/?group_id=307
   #
   # to generate this case statement.
-  def actual_date_for_release
+  def actual_date_for_release(date)
     case tag
     when 'v0.5.0'
       DateTime.new(2004, 7, 24)

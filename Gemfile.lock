@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
+    chronic (0.9.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -37,6 +38,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    delorean (2.1.0)
+      chronic
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -112,6 +115,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
+  delorean
   mysql2
   rails (= 3.2.9)
   rugged (= 0.17.0.b7)
