@@ -193,8 +193,7 @@ class Repo
   # Iterates over all commits with no contributors and assigns to them the ones
   # in the previously computed <tt>contributor_names_per_commit</tt>.
   def assign_contributors(contributor_names_per_commit)
-    # Cache contributors to speed up processing wiped databases. They are about
-    # 1400 so we can afford this hash.
+    # Cache contributors to speed up processing wiped databases.
     contributors = Hash.new {|h, name| h[name] = Contributor.find_or_create_by_name(name)}
     Commit.with_no_contributors.find_each do |commit|
       contributor_names_per_commit[commit.sha1].each do |contributor_name|
