@@ -617,6 +617,7 @@ module NamesManager
   map 'Manuel Holtgrewe',           "purestorm\100ggnore.net"
   map 'Marc Love',                  'marclove'
   map 'Marc-André Cournoyer',       'macournoyer'
+  map 'Marc-André Lafortune',       'Marc-Andre Lafortune'
   map 'Marc Huffnagle',             'mhuffnagle'
   map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
   map 'Marcello Nuccio',            'marcenuc'
@@ -628,6 +629,7 @@ module NamesManager
   map 'Mark H. Wilkinson',          'mhw'
   map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
   map 'Mark James',                 "mrj\100bigpond.net.au"
+  map 'Mark J. Titorenko',          'mtitorenko'
   map 'Mark Lane',                  'DrMark'
   map 'Mark R. James',              'mrj'
   map 'Mark Somerville',            'Spakman'
@@ -859,6 +861,7 @@ module NamesManager
   map 'Surendra Singhi',            "ssinghi\100kreeti.com"
   map 'Sven Klemm',                 "sven\100c3d2.de"
   map 'Tadas Tamošauskas',          'Tadas Tamosauskas'
+  map 'Takoyaki Kamen',             'タコ焼き仮面'
   map 'Tal Rotbart',                'redbeard'
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
   map 'Taryn East',                 'taryn', 'taryneast', "rubygirl\100taryneast.org"
@@ -890,6 +893,8 @@ module NamesManager
   map 'Tom Mornini',                "tmornini\100infomania.com"
   map 'Tom Preston-Werner',         'mojombo'
   map 'Tom Ward',                   'Tom ward', 'tomafro', "tom\100popdog.net"
+  map 'Tony Jian',                  '簡煒航'
+  map 'Toshinori Kajihara',         'kennyj'
   map 'Trek Glowacki',              'trek'
   map 'Trent Ogren',                'misfo'
   map 'Trevor Squire',              'protocool'
