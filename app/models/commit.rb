@@ -13,7 +13,6 @@ class Commit < ActiveRecord::Base
     where('contributions.commit_id' => nil)
 
   validates :sha1, presence: true, uniqueness: true
-  validates :imported_from_svn, inclusion: {in: [true, false]}
 
   nfc :author_name, :committer_name, :message, :diff
 
