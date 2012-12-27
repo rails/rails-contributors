@@ -662,6 +662,7 @@ module NamesManager
   map 'Matthew Rudy Jacobs',        'MatthewRudy'
   map 'Matthew Vincent',            'neshmi'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
+  map 'Mattt Thompson',             '@mattt'
   map 'Maxime Réty',                'Maxime RETY'
   map 'Melih Arda Yalçiner',        'Wizard'
   map 'Micah Alles',                "alles\100atomicobject.com"
@@ -767,7 +768,7 @@ module NamesManager
   map 'Rein Henrichs',              "ReinH"
   map "Remco van 't Veer",          'remvee'
   map 'Rémy Coutable',              'rymai', 'remy', "rymai\100rymai.com", "remy.coutable\100gmail.com"
-  map 'Richard Schneeman',          'Schneems', 'schneems'
+  map 'Richard Schneeman',          'Schneems', 'schneems', '@schneems'
   map 'Rick Bradley',               "rick\100rickbradley.com"
   map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
   map 'Rick DeNatale',              'RubyRedRick'
