@@ -161,7 +161,7 @@ class Repo
     target = for_all_commits ? Commit : Commit.with_no_contributors
     target.find_each do |commit|
       commit.extract_contributor_names(self).each do |contributor_name|
-        contributor_names_per_commit[commit.sha1] << contributor_name.nfc
+        contributor_names_per_commit[commit.sha1] << contributor_name
       end
     end
     contributor_names_per_commit

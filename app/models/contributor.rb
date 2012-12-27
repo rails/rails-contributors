@@ -5,6 +5,8 @@ class Contributor < ActiveRecord::Base
   validates :name,   :presence => true, :uniqueness => true
   validates :url_id, :presence => true, :uniqueness => true
 
+  nfc :name
+
   def self.all_with_ncontributions
     _all_with_ncontributors(nil, nil)
   end
@@ -41,7 +43,7 @@ class Contributor < ActiveRecord::Base
   end
 
   def name=(name)
-    write_attribute(:name, name)
+    super
     set_url_id
   end
 

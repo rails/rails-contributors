@@ -15,15 +15,17 @@ class Commit < ActiveRecord::Base
   validates :sha1, presence: true, uniqueness: true
   validates :imported_from_svn, inclusion: {in: [true, false]}
 
+  nfc :author_name, :committer_name, :message, :diff
+
   # Constructor that initializes the object from a Grit commit.
   def self.import!(rugged_commit)
     create!(
       sha1:              rugged_commit.oid,
-      author_name:       rugged_commit.author[:name].force_encoding('UTF-8').nfc,
+      author_name:       rugged_commit.author[:name].force_encoding('UTF-8'),
       author_date:       rugged_commit.author[:time],
-      committer_name:    rugged_commit.committer[:name].force_encoding('UTF-8').nfc,
+      committer_name:    rugged_commit.committer[:name].force_encoding('UTF-8'),
       committer_date:    rugged_commit.committer[:time],
-      message:           rugged_commit.message.force_encoding('UTF-8').nfc,
+      message:           rugged_commit.message.force_encoding('UTF-8'),
       imported_from_svn: rugged_commit.message.include?('git-svn-id:')
     )
   end
@@ -80,7 +82,7 @@ protected
       names << author_name
     end
 
-    names
+    names.map(&:nfc)
   end
 
   def authors_of_special_cased_commits
@@ -132,7 +134,7 @@ protected
   end
 
   def cache_diff(repo)
-    update_column(:diff, repo.diff(sha1).force_encoding('UTF-8').nfc)
+    update_attributes(diff: repo.diff(sha1).force_encoding('UTF-8'))
   end
 
   # Extracts any changelog entry for this commit. This is done by diffing with
