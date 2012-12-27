@@ -1,5 +1,5 @@
 # In the following comments we assumed today is 26 December 2012.
-
+#
 # This is a commit from today, but with an author date in the past,
 # which allows us to test that time windows consider the committer
 # date. (The real commit does not have these differences.)
