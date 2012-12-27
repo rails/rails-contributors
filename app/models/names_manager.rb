@@ -1052,6 +1052,12 @@ module NamesManager
       when 'key'
         # see https://github.com/rails/rails/commit/98f4aee8dac22d9e9bb3c122b43e9e5ee8ba7d1c
         nil
+      when /-> request/
+        # see https://github.com/rails/rails/commit/fb9c00116bb7277f61a9d3ef5c399457f26056a4
+        nil
+      when /Bar::Engine/
+        # see https://github.com/rails/rails/commit/0e69705b0fc7501bada74b3ca023ae7f7b2b8592
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when 'tomhuda'
