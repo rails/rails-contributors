@@ -1,5 +1,6 @@
 class CommitsController < ApplicationController
-  before_filter :set_target
+  before_filter :set_target, only: %w(index in_release)
+  before_filter :set_contributor, only: 'in_time_window'
   before_filter :set_time_constraints, only: 'in_time_window'
 
   def index
@@ -7,7 +8,7 @@ class CommitsController < ApplicationController
   end
 
   def in_time_window
-    commits = @target.commits
+    commits = @contributor.commits
     commits = commits.since(@since) if @since
     @commits = commits.order('commits.author_date DESC')
     render 'index'
