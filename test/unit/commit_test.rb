@@ -13,6 +13,10 @@ class CommitTest < ActiveSupport::TestCase
     commit.send(:only_modifies_changelogs?)
   end
 
+  def imported_from_svn?(commit)
+    commit.send(:imported_from_svn?)
+  end
+
   def test_short_sha1
     commit = Commit.new(sha1: 'c0f3dc9728d8810e710d52e05bc61395297be787')
     assert_equal 'c0f3dc9', commit.short_sha1
@@ -22,6 +26,18 @@ class CommitTest < ActiveSupport::TestCase
   def test_github_url
     commit = Commit.new(sha1: 'c0f3dc9728d8810e710d52e05bc61395297be787')
     assert_equal 'https://github.com/rails/rails/commit/c0f3dc9728d8810e710d52e05bc61395297be787', commit.github_url
+  end
+
+  def test_imported_from_svn
+    commit = Commit.new(message: <<-MSG.strip_heredoc)
+      Added stable branch to prepare for 1.0 release
+
+      git-svn-id: http://svn-commit.rubyonrails.org/rails/branches/stable@2980 5ecf4fe2-1ee6-0310-87b1-e25e094e27de
+    MSG
+    assert imported_from_svn?(commit)
+
+    commit = Commit.new(message: 'Consistent use of single and double quotes')
+    assert !imported_from_svn?(commit)
   end
 
   def test_short_message
