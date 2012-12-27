@@ -1,7 +1,29 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+<% n = 0 %>
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+contribution_<%= n += 1 %>:
+  commit: commit_b821094
+  contributor: jeremy
+
+contribution_<%= n += 1 %>:
+  commit: commit_26c024e
+  contributor: xavier
+
+contribution_<%= n += 1 %>:
+  commit: commit_339e4e8
+  contributor: david
+
+contribution_<%= n += 1 %>:
+  commit: commit_6c65676
+  contributor: vijay
+
+contribution_<%= n += 1 %>:
+  commit: commit_5b90635
+  contributor: jose
+
+contribution_<%= n += 1 %>:
+  commit: commit_5b90635
+  contributor: jeremy
+
+contribution_<%= n += 1 %>:
+  commit: commit_e0ef631
+  contributor: david

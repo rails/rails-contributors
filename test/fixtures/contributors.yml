@@ -1,44 +1,20 @@
 david:
-  name: David Heinemeier Hansson
-  url_id: david-heinemeier-hansson
+  name: 'David Heinemeier Hansson'
+  url_id: 'david-heinemeier-hansson'
 
 jeremy:
-  name: Jeremy Kemper
-  url_id: jeremy-kemper
+  name: 'Jeremy Kemper'
+  url_id: 'jeremy-kemper'
 
-josh:
-  name: Josh Peek
-  url_id: josh-peek
+jose:
+  name: 'José Valim'
+  url_id: 'jose-valim'
 
-rick:
-  name: Rick Olson
-  url_id: rick-olson
+xavier:
+  name: 'Xavier Noria'
+  url_id: 'xavier-noria'
 
-jamis:
-  name: Jamis Buck
-  url_id: jamis-buck
-
-michael:
-  name: Michael Koziarski
-  url_id: michael-koziarski
-
-pratik:
-  name: Pratik Naik
-  url_id: pratik-naik
-
-nicholas:
-  name: Nicholas Seckar
-  url_id: nicholas-seckar
-
-geoff:
-  name: Geoff Buesing
-  url_id: geoff-buesing
-
-marcel:
-  name: Marcel Molina Jr.
-  url_id: marcel-molina-jr
-
-yehuda:
-  name: Yehuda Katz
-  url_id: yehuda-katz
+vijay:
+  name: 'Vijay Dev'
+  url_id: 'vijay-dev'
 
