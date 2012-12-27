@@ -20,13 +20,12 @@ class Commit < ActiveRecord::Base
   # Constructor that initializes the object from a Grit commit.
   def self.import!(rugged_commit)
     create!(
-      sha1:              rugged_commit.oid,
-      author_name:       rugged_commit.author[:name].force_encoding('UTF-8'),
-      author_date:       rugged_commit.author[:time],
-      committer_name:    rugged_commit.committer[:name].force_encoding('UTF-8'),
-      committer_date:    rugged_commit.committer[:time],
-      message:           rugged_commit.message.force_encoding('UTF-8'),
-      imported_from_svn: rugged_commit.message.include?('git-svn-id:')
+      sha1:           rugged_commit.oid,
+      author_name:    rugged_commit.author[:name].force_encoding('UTF-8'),
+      author_date:    rugged_commit.author[:time],
+      committer_name: rugged_commit.committer[:name].force_encoding('UTF-8'),
+      committer_date: rugged_commit.committer[:time],
+      message:        rugged_commit.message.force_encoding('UTF-8')
     )
   end
 
@@ -52,6 +51,10 @@ class Commit < ActiveRecord::Base
   end
 
 protected
+
+  def imported_from_svn?
+    message.include?('git-svn-id: http://svn-commit.rubyonrails.org/rails')
+  end
 
   # Both svn and git may have the name of the author in the message using the [...]
   # convention. If none is found we check the changelog entry for svn commits.

@@ -1,7 +1,23 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+commit_b821094:
+  sha1: 'b82109495b2e910f05922b05a2df69d42f3635a9'
+  author_name: 'Jeremy Kemper'
+  author_date: 'Wed Dec 26 21:02:24 2012 -0700'
+  committer_name: 'Jeremy Kemper'
+  committer_date: 'Wed Dec 26 21:16:05 2012 -0700'
+  message: |
+    Make test logs easier to read.
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+    Tagging every message in tests makes the logs really wide. It's great
+    for grepping, but annoying to open in an editor or a narrow terminal.
+    Try out a different approach: spit out a heading before each test.
+
+commit_e0ef631:
+  sha1: 'e0ef63105538f8d97faa095234f069913dd5229c'
+  author_name: 'David Heinemeier Hansson'
+  author_date: 'Fri Nov 11 10:07:24 2005 +0000'
+  committer_name: 'David Heinemeier Hansson'
+  committer_date: 'Fri Nov 11 10:07:24 2005 +0000'
+  message: |
+    Added stable branch to prepare for 1.0 release
+
+    git-svn-id: http://svn-commit.rubyonrails.org/rails/branches/stable@2980 5ecf4fe2-1ee6-0310-87b1-e25e094e27de
