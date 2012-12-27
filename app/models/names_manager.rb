@@ -1039,6 +1039,16 @@ module NamesManager
         nil
       when /ci skip/i
         nil
+      when 'ci_skip'
+        # see https://github.com/rails/rails/commit/86c5cea9f414d34fd92adb064fde5ecc7b40c727
+        # see https://github.com/rails/rails/commit/3738ef292ac9000cf2e66e91fed61ed939daf59a
+        nil
+      when 'AR:postgres'
+        # see https://github.com/rails/rails/commit/d7b8f0c05945af83bb1ca446e23a26d8f99db2ca
+        nil
+      when 'for 3-2-stable'
+        # see https://github.com/rails/rails/commit/b003ddf2aea1cec218604b62843faefef4b62a22
+        nil
       when 'key'
         # see https://github.com/rails/rails/commit/98f4aee8dac22d9e9bb3c122b43e9e5ee8ba7d1c
         nil
