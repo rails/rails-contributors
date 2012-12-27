@@ -8,9 +8,9 @@
 commit_b821094:
   sha1: 'b82109495b2e910f05922b05a2df69d42f3635a9'
   author_name: 'Jeremy Kemper'
-  author_date: 'Wed Dec 19 21:02:24 2012'
+  author_date: '2012-12-19 21:02:24'
   committer_name: 'Jeremy Kemper'
-  committer_date: 'Wed Dec 26 21:16:05 2012'
+  committer_date: '2012-12-26 21:16:05'
   message: |
     Make test logs easier to read.
 
@@ -22,9 +22,9 @@ commit_b821094:
 commit_26c024e:
   sha1: '26c024e95999e545fbef85a25165234af77ea605'
   author_name: 'Xavier Noria'
-  author_date: 'Mon Dec 24 21:14:02 2012 +0100'
+  author_date: '2012-12-24 21:14:02'
   committer_name: 'Xavier Noria'
-  committer_date: 'Mon Dec 24 21:16:16 2012 +0100'
+  committer_date: '2012-12-24 21:16:16'
   message: |
     silences "possibly useless use of :: in void context" warnings
 
@@ -43,9 +43,9 @@ commit_26c024e:
 commit_339e4e8:
   sha1: '339e4e80d514bd94fcb0e15689db43e5de83642a'
   author_name: 'David Heinemeier Hansson'
-  author_date: 'Fri Dec 7 20:37:25 2012 +0100'
+  author_date: '2012-12-07 20:37:25'
   committer_name: 'David Heinemeier Hansson'
-  committer_date: 'Fri Dec 7 20:38:53 2012 +0100'
+  committer_date: '2012-12-07 20:38:53'
   message: |
     Let the scaffold example use the "set shared record" pattern to explain callbacks
 
@@ -53,9 +53,9 @@ commit_339e4e8:
 commit_6c65676:
   sha1: '6c656761ec951f74dcb844f46fe6839af3baa1d4'
   author_name: 'Vijay Dev'
-  author_date: 'Fri Jan 20 00:46:37 2012 +0530'
+  author_date: '2012-01-20 00:46:37'
   committer_name: 'Vijay Dev'
-  committer_date: 'Fri Jan 20 00:47:14 2012 +0530'
+  committer_date: '2012-01-20 00:47:14'
   message: |
     update release notes [ci skip]
   release: 'v3_2_0'
@@ -65,9 +65,9 @@ commit_6c65676:
 commit_5b90635:
   sha1: '5b906355f122e36f9fa071c639ae6f6b869d2981'
   author_name: 'José Valim'
-  author_date: 'Thu Jan 19 19:49:13 2012 +0100'
+  author_date: '2012-01-19 19:49:13'
   committer_name: 'José Valim'
-  committer_date: 'Thu Jan 19 19:49:13 2012 +0100'
+  committer_date: '2012-01-19 19:49:13'
   message: |
     Update CHANGELOG
   release: 'v3_2_0'
@@ -76,9 +76,9 @@ commit_5b90635:
 commit_e0ef631:
   sha1: 'e0ef63105538f8d97faa095234f069913dd5229c'
   author_name: 'David Heinemeier Hansson'
-  author_date: 'Fri Nov 11 10:07:24 2005 +0000'
+  author_date: '2005-11-11 10:07:24'
   committer_name: 'David Heinemeier Hansson'
-  committer_date: 'Fri Nov 11 10:07:24 2005 +0000'
+  committer_date: '2005-11-11 10:07:24'
   message: |
     Added stable branch to prepare for 1.0 release
 
