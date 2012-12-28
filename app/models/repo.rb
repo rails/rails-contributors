@@ -11,6 +11,16 @@ class Repo
   HEADS = %r{\Arefs/heads/(?:master|.*-stable)\z}
   TAGS  = %r{\Arefs/tags/v[\d.]+\z}
 
+  # This is the entry point to sync the database from cron jobs etc:
+  #
+  #   bundle exec rails runner Repo.sync
+  #
+  # is the intended usage. This fetches new stuff, imports new commits if any,
+  # imports new releases if any, assigns contributors and updates ranks.
+  #
+  # If the names manager has been updated since the previous execution special
+  # code detects names that are gone and recomputes the contributors for their
+  # commits.
   def self.sync(path=PATH, heads=HEADS, tags=TAGS)
     new(path, heads, tags).sync
   end
@@ -23,6 +33,9 @@ class Repo
     @repo   = Rugged::Repository.new(path)
   end
 
+  # Executes a git command, optionally capturing its output.
+  #
+  # If the execution is not successful +StandardError+ is raised.
   def git(args, capture=false)
     cmd = "git #{args}"
     logger.info(cmd)
@@ -37,20 +50,27 @@ class Repo
     end
   end
 
+  # Issues a git fetch.
   def fetch
     git 'fetch --quiet --prune'
   end
 
+  # Returns the patch of the given commit.
   def diff(sha1)
     git "diff --no-color #{sha1}^!", true
   end
 
+  # Returns the commits between +from+ and +to+. That is, that a reachable from
+  # +to+, but not from +from+.
+  #
+  # We use this method to determine which commits belong to a release.
   def rev_list(from, to)
     arg = from ? "#{from}..#{to}" : to
     lines = git "rev-list #{arg}", true
     lines.split("\n")
   end
 
+  # This method does the actual work behind Repo.sync.
   def sync
     ApplicationUtils.acquiring_lock_file('updating') do
       started_at = Time.current
@@ -102,6 +122,9 @@ class Repo
     ncommits
   end
 
+  # Imports new releases, if any, determines which commits belong to them, and
+  # associates them. By definition, a release corresponds to a stable tag, one
+  # that matches <tt>\Av[\d.]+\z</tt>.
   def sync_releases
     new_releases = []
 
@@ -117,6 +140,10 @@ class Repo
     new_releases.size
   end
 
+  # Computes the name of the contributors and adjusts associations and the
+  # names table. If some names are gone due to new mappings collapsing two
+  # names into one, for example, the credit for commits of gone names is
+  # revised, resulting in the canonical name being associated.
   def sync_names
     contributor_names_per_commit = compute_contributor_names_per_commit(names_mapping_updated?)
     manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated?
@@ -202,6 +229,7 @@ class Repo
     end
   end
 
+  # Do we need to expire the cached pages?
   def cache_needs_expiration?(ncommits, nreleases, names_mapping_updated)
     ncommits > 0 || nreleases > 0 || names_mapping_updated
   end
