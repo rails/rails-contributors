@@ -1073,14 +1073,6 @@ module NamesManager
         'Austin Ziegler'
       when 'nik.wakelin Koz'
         ['nik.wakelin', 'Koz']
-      when 'Jim Remsik and Tim Pope'
-        ['Jim Remsik', 'Tim Pope']
-      when 'Jeremy Hopple and Kevin Clark'
-        ['Jeremy Hopple', 'Kevin Clark']
-      when 'Yehuda Katz and Carl Lerche'
-        ['Yehuda Katz', 'Carl Lerche']
-      when 'Ross Kaffenburger and Bryan Helmkamp'
-        ['Ross Kaffenburger', 'Bryan Helmkamp']
       when "me\100jonnii.com rails\100jeffcole.net Marcel Molina Jr."
         ["me\100jonnii.com", "rails\100jeffcole.net", 'Marcel Molina Jr.']
       when "jeremy\100planetargon.com Marcel Molina Jr."
