@@ -111,7 +111,7 @@ a.name-mapping {
   clear:both;
 }
 
-.sha1, .tag {
+.sha1 {
     font-family:Consolas,Monaco,monospace;
     color:#980905;
 }
@@ -339,7 +339,7 @@ RELEASES LIST TABLE SPECIFICS
 */
 
 td.release-tag, td.release-date, td.release-name {
-    align: left;
+    text-align: left;
     white-space: nowrap;
 }
 
