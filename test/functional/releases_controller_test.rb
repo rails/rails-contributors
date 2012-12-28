@@ -7,7 +7,7 @@ class ReleasesControllerTest < ActionController::TestCase
 
     assert_select 'span.listing-total', 'Showing 5 releases'
 
-    fixtures = %w(
+    expected = %w(
       v3_2_0
       v2_3_2_1
       v2_3_2
@@ -15,10 +15,13 @@ class ReleasesControllerTest < ActionController::TestCase
       v0_14_4
     ).map {|_| releases(_)}
 
-    fixtures.zip(assigns(:releases)).each do |fixture, release|
-      assert_equal fixture.tag, release.tag
-      assert_equal fixture.commits.count, release.ncommits
-      assert_equal fixture.contributors.count, release.ncontributors
+    actual = assigns(:releases)
+    
+    assert_equal expected.size, actual.size
+    expected.zip(assigns(:releases)).each do |e, a|
+      assert_equal e.tag, a.tag
+      assert_equal e.commits.count, a.ncommits
+      assert_equal e.contributors.count, a.ncontributors
     end
 
     assert_select 'span.listing-total', 'Showing 5 releases'
