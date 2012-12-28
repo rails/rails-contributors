@@ -129,11 +129,11 @@ class Repo
     rank = 0
     ncon = nil
 
-    Contributor.all_with_ncontributions.each do |contributor|
+    Contributor.all_with_ncommits.each do |contributor|
       i += 1
-      if contributor.ncontributions != ncon
+      if contributor.ncommits != ncon
         rank = i
-        ncon = contributor.ncontributions
+        ncon = contributor.ncommits
       end
       contributor.update_column(:rank, rank) if contributor.rank != rank
     end

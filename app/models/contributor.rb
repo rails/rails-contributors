@@ -7,28 +7,28 @@ class Contributor < ActiveRecord::Base
 
   nfc :name
 
-  def self.all_with_ncontributions
-    _all_with_ncontributors(nil, nil)
+  def self.all_with_ncommits
+    _all_with_ncommits(nil, nil)
   end
 
-  def self.all_with_ncontributions_by_release(release)
-    _all_with_ncontributors(release, nil)
+  def self.all_with_ncommits_by_release(release)
+    _all_with_ncommits(release, nil)
   end
 
-  def self.all_with_ncontributions_by_date(date)
-    _all_with_ncontributors(nil, date)
+  def self.all_with_ncommits_by_date(date)
+    _all_with_ncommits(nil, date)
   end
 
-  def self._all_with_ncontributors(release, date)
+  def self._all_with_ncommits(release, date)
     joins = release || date ? :commits : :contributions
     where = release ? {'commits.release_id' => release.id} :
             date    ? ['commits.committer_date > ?', date] : nil
 
-    select('contributors.*, COUNT(contributions.commit_id) AS ncontributions').
+    select('contributors.*, COUNT(contributions.commit_id) AS ncommits').
       joins(joins).
       where(where).
       group('contributions.contributor_id').
-      order('ncontributions DESC, url_id ASC').all
+      order('ncommits DESC, url_id ASC').all
   end
 
   # The contributors table may change if new name equivalences are added and IDs
