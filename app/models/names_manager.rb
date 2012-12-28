@@ -964,13 +964,6 @@ module NamesManager
     CANONICAL_NAME_FOR[name] || name
   end
 
-  # Returns the source code of the +handle_special_cases+ method.
-  def self.special_cases
-    code = File.read(__FILE__)
-    code =~ /(^  #[^\n]+\n)+  def self\.handle_special_cases.*?^  end/m
-    $&
-  end
-
   # Removes email addresses (anything between <...>), and strips whitespace.
   def self.sanitize(name)
     name.sub(/<[^>]+>/, '').strip
