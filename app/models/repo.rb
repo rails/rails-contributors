@@ -73,7 +73,7 @@ class Repo
           ended_at:   Time.current
         )
 
-        expire_caches if cache_needs_expiration?(ncommits, names_mapping_updated?)
+        ApplicationUtils.expire_cached_pages if cache_needs_expiration?(ncommits, nreleases, names_mapping_updated?)
       end
     end
   end
@@ -202,34 +202,7 @@ class Repo
     end
   end
 
-  # Expires the cache under tmp/cache.
-  #
-  # We do that in two steps: first we move tmp/cache into a new directory,
-  # and then we remove that one. It is done that way because if we rm -rf
-  # tmp/cache directly and at the same time requests come and create new
-  # cache files a black hole can be created and handling that is beyond
-  # the legendary robustness of this website.
-  #
-  # On the other hand, moving is atomic. Atomic is good.
-  def expire_caches
-    Dir.chdir("#{Rails.root}/tmp") do
-      if File.exists?('cache')
-        expired_cache = "expired_cache.#{Time.now.to_f}"
-        FileUtils.mv('cache', expired_cache, force: true)
-        FileUtils.rm_rf(expired_cache)
-      end
-    end
-  end
-
-  def database_needs_update?(ncommits, gone_names)
-    ncommits > 0 || !gone_names.empty?
-  end
-
-  def cache_needs_expiration?(ncommits, names_mapping_updated)
-    ncommits > 0 || names_mapping_updated || new_day?
-  end
-
-  def new_day?
-    RepoUpdate.last.ended_at < Time.current.beginning_of_day
+  def cache_needs_expiration?(ncommits, nreleases, names_mapping_updated)
+    ncommits > 0 || nreleases > 0 || names_mapping_updated
   end
 end

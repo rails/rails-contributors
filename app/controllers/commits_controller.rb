@@ -1,4 +1,6 @@
 class CommitsController < ApplicationController
+  caches_page :index, :in_time_window, :in_release
+
   before_filter :set_target, only: %w(index in_release)
   before_filter :set_contributor, only: 'in_time_window'
   before_filter :set_time_constraints, only: 'in_time_window'

@@ -1,4 +1,6 @@
 class ContributorsController < ApplicationController
+  caches_page :index
+
   def index
     @contributors = if params[:release_id].present?
       set_release
