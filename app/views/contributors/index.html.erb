@@ -7,7 +7,7 @@
   <%= @title %><br/>
   <span class="listing-total">Showing <%= pluralize @contributors.size, 'person' %></span>
 </h1>
-<%= link_to "See names mapping →", names_mapping_path, :class => 'name-mapping' %>
+<%= link_to "See names mapping →", 'https://github.com/fxn/rails-contributors/blob/master/app/models/names_manager.rb', class: 'name-mapping' %>
 
 <div id="table-wrap">
   <table>
