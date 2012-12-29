@@ -388,6 +388,7 @@ module NamesManager
   map 'Erik Terpstra',              "erik\100ruby-lang.nl"
   map 'Erlend Halvorsen',           "ehalvorsen+rails\100runbox.com"
   map 'Ernesto Jimenez',            'ernesto.jimenez'
+  map 'Ershad Kunnakkadan',         'Ershad K', 'ershad'
   map 'Esad Hajdarevic',            "esad\100esse.at", 'esad'
   map 'Eugene Pimenov',             'libc'
   map 'Evan DiBiase',               'edibiase'
