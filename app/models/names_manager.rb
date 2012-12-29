@@ -300,7 +300,7 @@ module NamesManager
   map 'Chris Wanstrath',            "chris\100ozmm.org", 'defunkt'
   map 'Christopher Redinger',       'redinger'
   map 'Chriztian Steinmeier',       "chriztian.steinmeier\100gmail.com"
-  map 'Claudio Baccigalupo',        'claudiob'
+  map 'Claudio Baccigalupo',        'claudiob', 'Claudio B.'
   map 'Clifford Heath',             'cjheath'
   map 'Clifford T. Matthews',       'ctm'
   map 'Coda Hale',                  'codahale'
