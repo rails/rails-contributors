@@ -703,6 +703,7 @@ module NamesManager
   map 'Miklós Fazekas',             'mfazekas'
   map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr", 'Mislav Marohnic'
   map 'Moses Hohman',               'moses'
+  map 'Murahashi Sanemat Kenichi',  'sanemat'
   map 'Murray Steele',              'h-lame'
   map 'Nathan Weizenbaum',          'Nex3'
   map 'Nathaniel Talbott',          'ntalbott'
