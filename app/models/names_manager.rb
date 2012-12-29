@@ -425,6 +425,7 @@ module NamesManager
   map 'Greg Lappen',                "greg\100lapcominc.com"
   map 'Grzegorz Daniluk',           "daniluk\100yahoo.com"
   map 'Guillaume Carbonneau',       'guillaume'
+  map 'Gustavo Leon',               'HPNeo'
   map 'Guy Naor',                   "guy.naor\100famundo.com"
   map 'Hal Brodigan',               'postmodern'
   map 'Hampton Catlin',             "hcatlin\100gmail.com"
