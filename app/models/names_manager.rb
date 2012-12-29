@@ -119,12 +119,12 @@ module NamesManager
 
   def self.authors_of_special_cased_commits(commit)
     case commit.sha1
-    # This was a commit backported from 2.3 that missed Dana in the way.
     when '1382f4de1f9b0e443e7884bd4da53c20f0754568'
+      # This was a commit backported from 2.3 that missed Dana in the way.
       ['David Burger', 'Dana Jones']
-    # The following patch comes from this ticket https://rails.lighthouseapp.com/projects/8994/tickets/2856
-    # but Yehuda told me credit for that commit was screwed up.
     when '882dd4e6054470ee56c46ab1432861952c81b633'
+      # The following patch comes from this ticket https://rails.lighthouseapp.com/projects/8994/tickets/2856
+      # but Yehuda told me credit for that commit was screwed up.
       ['David Calavera']
     when 'f9a02b12d15bdbd3c2ed18b16b31b712a77027bc'
       # The attribution is done with parens in a way we do not extract.
