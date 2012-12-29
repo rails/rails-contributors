@@ -211,6 +211,8 @@ module NamesManager
   map 'Alexander Uvarov',           'wildchild'
   map 'Alexey Zatsepin',            'alexey', 'Alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
+  map 'Aliaxandr Rahalevich',       'saksmlz', 'saks'
+  map 'Alvaro Pereyra',             'Xenda'
   map 'Anand Muthukrishnan',        'Anand'
   map 'Andreas Isaksson',           'isak'
   map 'Andreas Wurm',               'Kanetontli', 'Kane', 'kane'
@@ -274,6 +276,7 @@ module NamesManager
   map 'Brian Pearce',               'brianp'
   map 'Bruce Williams',             "wbruce\100gmail.com"
   map 'Bruno Miranda',              'brupm'
+  map 'Buddhika Laknath',           'laknath', 'Laknath'
   map 'Caio Chassot',               'caio', "k\100v2studio.com"
   map 'Caleb Tennis',               "caleb\100aei-tech.com"
   map 'Calvin Yu',                  'cyu'
@@ -474,6 +477,7 @@ module NamesManager
   map 'Jamie Orchard-Hays',         "jamie\100dang.com"
   map 'Jamie van Dyke',             'fearoffish'
   map 'Jamis Buck',                 'Jamis'
+  map 'Jan Berdajs',                'MrBrdo', 'mrbrdo'
   map 'Jan De Poorter',             'DefV'
   map 'Jan Krutisch',               'halfbyte'
   map 'Jan Prill',                  "JanPrill\100blauton.de"
@@ -507,6 +511,7 @@ module NamesManager
   map 'Jeremy Lightsmith',          'stellsmi'
   map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
   map 'Jeremy Voorhis',             "jeremy\100planetargon.com", 'jvoorhis'
+  map 'Jeroen van Ingen',           'jeroeningen'
   map 'Jérôme Lipowicz',            'jerome'
   map 'Jerrett Taylor',             "jerrett\100bravenet.com"
   map 'Jesse Merriman',             "jessemerriman\100warpmail.net"
@@ -522,6 +527,7 @@ module NamesManager
   map 'Johannes Barre',             'iGEL'
   map 'John Barnette',              'jbarnette'
   map 'John Barton',                'johnb'
+  map 'John F. Douthat',            'johndouthat'
   map 'John Mettraux',              'jmettraux'
   map 'John Nunemaker',             "nunemaker\100gmail.com"
   map 'John Pignata',               'Developer', 'Jay Pignata' # see 179b451
@@ -548,6 +554,7 @@ module NamesManager
   map 'Jonathan Younger',           "jonathan\100daikini.com"
   map 'Joost Baaij',                'joost', "joost\100spacebabies.nl"
   map 'Jordan McKible',             "jmckible\100gmail.com"
+  map 'Jordan Staub',               'jordanstaub'
   map 'Jordi Bunster',              'jordi'
   map 'Jørgen Orehøj Erichsen',     'joerichsen'
   map 'Jose Angel Cortinas',        'jacortinas'
@@ -615,6 +622,7 @@ module NamesManager
   map 'Leon Breedt',                'Leon Bredt'
   map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
   map 'Lewis Jubb',                 "minimudboy\100gmail.com"
+  map 'Lihan Li',                   'lihanli', 'lihan'
   map 'Logy Laps',                  'logylaps'
   map 'Lon Baker',                  "lon\100speedymac.com"
   map 'Loren Johnson',              'lorenjohnson'
@@ -793,6 +801,7 @@ module NamesManager
   map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
   map 'Rick DeNatale',              'RubyRedRick'
   map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
+  map 'Riley Lynch',                'Riley', 'teleological'
   map 'Rizwan Reza',                'rizwanreza'
   map 'Robert Evans',               'revans'
   map 'Roman Le Négrate',           'Roman Le Negrate'
@@ -881,9 +890,11 @@ module NamesManager
   map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
   map 'Stian Grytøyr',              "stian\100grytoyr.net"
   map 'Sudara Williams',            'Sudara'
+  map 'Sung-hee Kang',              'paranoiase Kang', 'paranoiase'
   map 'Sur Max',                    'sur'
   map 'Surendra Singhi',            "ssinghi\100kreeti.com"
   map 'Sven Klemm',                 "sven\100c3d2.de"
+  map 'Sven Kräuter',               'Sven Kraeuter | 5v3n', 'Sven Kraeuter', '5v3n'
   map 'Tadas Tamošauskas',          'Tadas Tamosauskas'
   map 'Takoyaki Kamen',             'タコ焼き仮面'
   map 'Tal Rotbart',                'redbeard'
@@ -903,6 +914,7 @@ module NamesManager
   map 'Tietew',                     "tietew\100tietew.net"
   map 'Tim Carpenter',              'timc'
   map 'Tim Fletcher',               "twoggle\100gmail.com"
+  map 'Tim Forbes',                 'leprasmurf'
   map 'Tim Lucas',                  "t.lucas\100toolmantim.com", 'toolmantim'
   map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
   map 'Tim Trautmann',              "timct\100mac.com"
@@ -939,6 +951,7 @@ module NamesManager
   map 'Will Bryant',                'will.bryant', 'Will'
   map 'Will Harris',                'wharris'
   map 'Wilson Bilkovich',           "wilsonb\100gmail.com", 'wilson'
+  map 'Winston Teo Yong Wei',       'Winston'
   map 'Wolfgang Klinger',           "wolfgang\100stufenlos.net"
   map 'Xavier Defrang',             'xavier'
   map 'Xavier Noria',               'fxn'
@@ -1080,6 +1093,12 @@ module NamesManager
         nil
       when 'rounds #8213'
         # see https://github.com/rails/rails/commit/a8c3ea90f1490da4404aa1cea6fc6209f6b9b99b
+        nil
+      when 'Reopen', 'backport'
+        # See https://github.com/rails/rails/commit/66e87b714b406a25af60156a1fa15d1ebb99a0bd
+        nil
+      when '.lock'
+        # See https://github.com/rails/rails/commit/c71b9612c0dde4146bee86679e6319a913c24834
         nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
