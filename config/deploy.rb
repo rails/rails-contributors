@@ -41,7 +41,7 @@ namespace :rc do
   end
 
   task :expire_caches, :roles => :production do
-    run_in_rc 'ApplicationUtils.expire_cached_pages'
+    run_in_rc 'bundle exec rails runner ApplicationUtils.expire_cached_pages'
   end
 
   task :deploy, :roles => :production do
