@@ -42,7 +42,11 @@ class Release < ActiveRecord::Base
   # chronological, since it is customary that stable branches have maintenance
   # releases in parallel.
   def <=>(other)
-    [major, minor, tiny, patch] <=> [other.major, other.minor, other.tiny, other.patch]
+    (major <=> other.major).nonzero? ||
+    (minor <=> other.minor).nonzero? ||
+    (tiny  <=> other.tiny).nonzero?  ||
+    (patch <=> other.patch).nonzero? ||
+    0
   end
 
   def tag=(str)
