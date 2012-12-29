@@ -168,6 +168,9 @@ module NamesManager
     when '99dd117d6292b66a60567fd950c7ca2bda7e01f3'
       # same here
       ['Mohammad Typaldos']
+    when '3582bce6fdb30730b34b91a17b8bb33066eed7b8'
+      # The attribution was wrong, and amended later in 33736bc18a9733d95953f6eaec924db10badc908
+      ['Juanjo Bazán', 'Tarmo Tänav', 'BigTitus']
     else
       nil
     end
