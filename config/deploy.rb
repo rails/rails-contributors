@@ -44,6 +44,11 @@ namespace :rc do
     run_in_rc 'bundle exec rails runner ApplicationUtils.expire_cached_pages'
   end
 
+  task :deploy_mappings, :roles => :production do
+    pull
+    repo_sync
+  end
+
   task :deploy, :roles => :production do
     pull
     bundle
