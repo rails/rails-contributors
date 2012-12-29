@@ -10,6 +10,8 @@ class Release < ActiveRecord::Base
 
   validates :tag, presence: true, uniqueness: true
 
+  # Computes the commits of every release, imports any of them missing, and
+  # associates them.
   def self.process_commits(repo, new_releases)
     new_releases.sort.each do |release|
       release.process_commits(repo)
@@ -49,11 +51,13 @@ class Release < ActiveRecord::Base
     0
   end
 
+  # Writes the tag and sets major, minor, tiny, and patch from the new value.
   def tag=(str)
     write_attribute(:tag, str)
     split_version
   end
 
+  # Sets the date, correcting it for releases whose Git date we know is wrong.
   def date=(date)
     date = actual_date_for_release(date)
     write_attribute(:date, date)
@@ -64,14 +68,18 @@ class Release < ActiveRecord::Base
     tag[1..-1]
   end
 
+  # Returns the name with dots converted to hyphens.
   def to_param
     name.tr('.', '-')
   end
 
+  # Encapsulates what needs to be queried given a param.
   def self.find_by_param(param)
     find_by_tag('v' + param.tr('-', '.'))
   end
 
+  # Computes the commits in this release, imports any of them missing, and
+  # associates them.
   def process_commits(repo)
     released_sha1s = repo.rev_list(prev.try(:tag), tag)
 
@@ -81,6 +89,10 @@ class Release < ActiveRecord::Base
     end
   end
 
+  # About a thousand of commits from the Subversion times are not reachable
+  # from branch tips, which is what the main importer walks back. When a
+  # release is detected we make sure the commits reported by rev-list are
+  # present in the database.
   def import_missing_commits(repo, released_sha1s)
     existing_sha1s = Commit.where(sha1: released_sha1s).pluck(:sha1)
     (released_sha1s - existing_sha1s).each do |sha1|
@@ -89,12 +101,17 @@ class Release < ActiveRecord::Base
     end
   end
 
+  # Associate the given SHA1s to this release, assuming they exist in the
+  # commits table.
   def associate_commits(sha1s)
     # We force release_id to be NULL because rev-list in svn yields some
     # repeated commits in several releases.
     Commit.update_all({release_id: id}, sha1: sha1s, release_id: nil)
   end
 
+  # Computes the previous release as of today from the database. The previous
+  # release may change with time. For example, the previous release of 3.2.0
+  # may be 3.1.5 one day, and 3.1.6 if it gets later released.
   def prev
     Release.where(<<-SQL).sorted.first
       (major = #{major} && minor = #{minor} && tiny = #{tiny} && patch < #{patch}) ||
@@ -104,6 +121,8 @@ class Release < ActiveRecord::Base
     SQL
   end
 
+  # Returns all releases, ordered by version, with virtual attributes ncommits
+  # and ncontributors.
   def self.all_with_ncommits_and_ncontributors
     # Outer joins, because 2.0.1 according to git rev-list v2.0.0..v2.0.1 was a
     # release with no commits.
