@@ -1,22 +1,23 @@
 class Commit < ActiveRecord::Base
-  has_many :contributions, :dependent => :destroy
-  has_many :contributors, :through => :contributions
+  has_many :contributions, dependent: :destroy
+  has_many :contributors, through: :contributions
   belongs_to :release
 
-  scope :since, lambda { |date|
+  scope :since, ->(date) {
     where(['commits.committer_date >= ?', date])
   }
 
-  scope :with_no_contributors,
+  scope :with_no_contributors, -> {
     select('commits.*'). # otherwise we get read-only records
     joins('LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id').
     where('contributions.commit_id' => nil)
+  }
 
   validates :sha1, presence: true, uniqueness: true
 
   nfc :author_name, :committer_name, :message, :diff
 
-  # Constructor that initializes the object from a Grit commit.
+  # Constructor that initializes the object from a Rugged commit.
   def self.import!(rugged_commit)
     create!(
       sha1:           rugged_commit.oid,
