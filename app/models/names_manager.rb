@@ -194,6 +194,7 @@ module NamesManager
   map 'Adam Wiggins',               'adamwiggins'
   map 'Adam Williams',              'aiwilliams'
   map 'Adelle Hartley',             "adelle\100bullet.net.au"
+  map 'Akio Tajima',                'arton', 'artonx'
   map 'Akira Ikeda',                "ikeda\100dream.big.or.jp"
   map 'Akira Matsuda',              '松田 明'
   map 'Akira Tagoh',                'tagoh'
@@ -205,15 +206,18 @@ module NamesManager
   map 'Alex Pooley',                "alex\100msgpad.com"
   map 'Alex Wayne',                 "rubyonrails\100beautifulpixel.com", 'Squeegy'
   map 'Alex Wolfe',                 "alexkwolfe\100gmail.com"
+  map 'Alexander Baronec',          'abonec'
   map 'Alexander Borovsky',         "alex.borovsky\100gmail.com"
   map 'Alexander Dymo',             'adymo', "dymo\100mk.ukrtelecom.ua"
   map 'Alexander Staubo',           "alex\100purefiction.net", "alex\100byzantine.no"
   map 'Alexander Uvarov',           'wildchild'
+  map 'Alexey Trofimenko',          'codesnik'
   map 'Alexey Zatsepin',            'alexey', 'Alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
   map 'Aliaxandr Rahalevich',       'saksmlz', 'saks'
   map 'Alvaro Pereyra',             'Xenda'
   map 'Anand Muthukrishnan',        'Anand'
+  map 'Andrea Longhi',              'andrea longhi', 'spaghetticode'
   map 'Andreas Isaksson',           'isak'
   map 'Andreas Wurm',               'Kanetontli', 'Kane', 'kane'
   map 'Andrew A. Smith',            "andy\100tinnedfruit.org"
@@ -224,6 +228,7 @@ module NamesManager
   map 'Andrew Peters',              "andrew.john.peters\100gmail.com"
   map 'Andrew Shcheglov',           'windock'
   map 'Andrew White',               'pixeltrix'
+  map 'Andrey Morskov',             'accessd', 'Accessd'
   map 'Andy Lien',                  "andylien\100gmail.com"
   map 'Angelo Capilleri',           'angelo giovanni capilleri', 'Angelo capilleri'
   map 'Ant Ramm',                   'antramm'
@@ -233,6 +238,7 @@ module NamesManager
   map 'Anup Narkhede',              'railsbob'
   map 'Ara T Howard',               'ara.t.howard'
   map 'Ariejan de Vroom',           'ariejan'
+  map 'Arkadiy Zabazhanov',         'pyromaniac'
   map 'Artem Kramarenko',           'artemk'
   map 'Arthur Zapparoli',           'arthurgeek'
   map 'Ashley Moran',               "work\100ashleymoran.me.uk"
@@ -280,8 +286,10 @@ module NamesManager
   map 'Caio Chassot',               'caio', "k\100v2studio.com"
   map 'Caleb Tennis',               "caleb\100aei-tech.com"
   map 'Calvin Yu',                  'cyu'
+  map 'Carina C. Zona',             'cczona'
   map 'Carl Tashian',               'tashian'
   map 'Cássio Marques',             'CassioMarques'
+  map 'Cédric Fabianski',           'Cédric FABIANSKI', 'cfabianski'
   map 'Cesar Ho',                   'codafoo'
   map 'Chad Humphries',             'spicycode'
   map 'Chad Ingram',                'matrix9180'
@@ -311,6 +319,7 @@ module NamesManager
   map 'Clifford T. Matthews',       'ctm'
   map 'Coda Hale',                  'codahale'
   map 'Cody Fauser',                "codyfauser\100gmail.com"
+  map 'Corey Haines',               'coreyhaines'
   map 'Courtenay Gasking',          'court3nay', 'courtenay', "court3nay\100gmail.com"
   map 'Craig Davey',                'eigentone', "eigentone\100gmail.com"
   map 'Cristi Balan',               'Cristi BALAN'
@@ -342,6 +351,7 @@ module NamesManager
   map 'David E. Wheeler',           'Theory'
   map 'David Easley',               "easleydp\100gmail.com"
   map 'David Felstead',             "david.felstead\100gmail.com", "dfelstead\100site5.com"
+  map 'David François',             'David FRANCOIS', 'davout'
   map 'David Heinemeier Hansson',   'DHH'
   map 'David Morton',               "mortonda\100dgrmm.net"
   map 'David N. Welton',            'davidw'
@@ -362,6 +372,8 @@ module NamesManager
   map 'Dieter Komendera',           'kommen'
   map 'Dirkjan Bussink',            'dbussink'
   map 'Dmitrii Samoilov',           'german'
+  map 'Dmitrij Mjakotnyi',          'kucaahbe'
+  map 'Dmitry Dedov',               'dm1try'
   map 'Dmitry Lipovoi',             'pleax'
   map 'Dmitriy Timokhin',           'pager'
   map 'Dominic Sisneros',           "dom\100sisna.com"
@@ -372,6 +384,7 @@ module NamesManager
   map 'Duff OMelia',                "dj\100omelia.org"
   map 'Duncan Beevers',             'duncanbeevers'
   map 'Duncan Robertson',           "duncan\100whomwah.com"
+  map 'Dustin Curtis',              'dcurtis'
   map 'Eaden McKee',                'eadz', 'Eadz'
   map 'Eddie Cianci',               'defeated'
   map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
@@ -417,6 +430,7 @@ module NamesManager
   map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
   map 'Ganesh Kumar',               'ganesh'
   map 'Gaspard Bucher',             "g.bucher\100teti.ch"
+  map 'Gavin Morrice',              'Bodacious'
   map 'Genki Takiuchi',             "takiuchi\100drecom.co.jp"
   map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'
   map 'Geoff Coffey',               'gwcoffey'
@@ -568,6 +582,7 @@ module NamesManager
   map 'Josh Susser',                'hasmanyjosh', "josh\100hasmanythrough.com"
   map 'Joshua Wehner',              'jaw6'
   map 'Joshua Sierles',             'jsierles'
+  map 'Juan David Pastas',          'juanpastas', 'juan david pastas'
   map 'Juan De Bravo',              'juandebravo'
   map 'Juanjo Bazán',               'Juanjo Bazan', 'juanjo.bazan'
   map 'Julian Doherty',             'madlep'
@@ -689,13 +704,14 @@ module NamesManager
   map 'Matthew Vincent',            'neshmi'
   map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
   map 'Mattt Thompson',             '@mattt'
-  map 'Maxime Réty',                'Maxime RETY'
+  map 'Maxime Réty',                'Maxime RETY', 'maximerety'
   map 'Melih Arda Yalçiner',        'Wizard'
   map 'Micah Alles',                "alles\100atomicobject.com"
   map 'Michael Cetrulo',            'Samus_'
   map 'Michael Daines',             "me\100mdaines.com"
   map 'Michael Dewey',              "mike\100michaeldewey.org"
   map 'Michael Galero',             'mikong'
+  map 'Michael Grosser',            'grosser'
   map 'Michael Hutchinson',         'mhutchin'
   map 'Michael Klishin',            'antares', 'Michael S. Klishin'
   map 'Michael Koziarski',          'Koz', 'nzkoz'
@@ -765,6 +781,7 @@ module NamesManager
   map 'Paul Butcher',               "paul\100paulbutcher.com"
   map 'Paul Carey',                 'paulccarey'
   map 'Paul Smith',                 "paul\100cnt.org"
+  map 'Paweł Mikołajewski',         'dfens'
   map 'Pelle Braendgaard',          'pelle', 'Pelle'
   map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
   map 'Perry Flinn',                'pbflinn'
@@ -837,6 +854,7 @@ module NamesManager
   map 'Ryan McGeary',               'rmm5t'
   map 'Ryan Raaum',                 "ryan.raaum\100gmail.com"
   map 'Ryan Tomayko',               "rtomayko\100gmail.com"
+  map 'Sachin Singh',               'sachin87', 'Sachin87'
   map 'Sam Elliott',                'Samuel Elliott'
   map 'Sam Granieri',               'sjgman9'
   map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
@@ -858,6 +876,7 @@ module NamesManager
   map 'Sebastian Delmont',          "sd\100notso.net"
   map 'Sebastian Graessl',          'bastilian'
   map 'Sebastian Kanthak',          "sebastian.kanthak\100muehlheim.de", 'sebastian.kanthak', 'skanthak'
+  map 'Sebastian Spieszko',         'ciastek'
   map 'Serg Podtynnyi',             'shtirlic'
   map 'Serge Balyuk',               'bgipsy'
   map 'Sergey Kojin',               "sergeykojin\100gmail.com"
@@ -940,8 +959,10 @@ module NamesManager
   map 'Tyler Kiley',                "tyler\100kianta.com"
   map 'Tyler Kovacs',               "tyler.kovacs\100gmail.com"
   map 'Uģis Ozols',                 'Ugis Ozols'
+  map 'Vasili Kachalko',            'dreamfall'
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
   map 'Vijay Dev',                  'vijay', 'vijaydev'
+  map 'Vitalii Khustochka',         "xyctka\100gmail.com", 'khustochka'
   map 'Vitaly Kushner',             'vitaly'
   map 'Vlad Romascanu',             'vladr'
   map 'Wang Chun',                  'wangchun'
@@ -1073,6 +1094,9 @@ module NamesManager
         # see https://github.com/rails/rails/commit/86c5cea9f414d34fd92adb064fde5ecc7b40c727
         #     https://github.com/rails/rails/commit/86c5cea9f414d34fd92adb064fde5ecc7b40c727
         nil
+      when /skip[ _-]ci/i
+        # see https://github.com/rails/rails/commit/b1c28d710521c6931abc2b394de34ac8a174d844
+        nil
       when 'AR:postgres'
         # see https://github.com/rails/rails/commit/d7b8f0c05945af83bb1ca446e23a26d8f99db2ca
         nil
@@ -1094,11 +1118,14 @@ module NamesManager
       when 'rounds #8213'
         # see https://github.com/rails/rails/commit/a8c3ea90f1490da4404aa1cea6fc6209f6b9b99b
         nil
-      when 'Reopen', 'backport'
+      when 'Reopen/backport'
         # See https://github.com/rails/rails/commit/66e87b714b406a25af60156a1fa15d1ebb99a0bd
         nil
       when '.lock'
         # See https://github.com/rails/rails/commit/c71b9612c0dde4146bee86679e6319a913c24834
+        nil
+      when 'Constant3 Constant1'
+        # See https://github.com/rails/rails/commit/3335cb7f12f059c8db8cc5195ef214d3215edf44
         nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
