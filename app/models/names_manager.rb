@@ -240,8 +240,10 @@ module NamesManager
   map 'Ara T Howard',               'ara.t.howard'
   map 'Ariejan de Vroom',           'ariejan'
   map 'Arkadiy Zabazhanov',         'pyromaniac'
+  map 'Artem Avetisyan',            'artemave'
   map 'Artem Kramarenko',           'artemk'
   map 'Arthur Zapparoli',           'arthurgeek'
+  map 'Arvid Andersson',            'arvida'
   map 'Ashley Moran',               "work\100ashleymoran.me.uk"
   map 'Ask Bjørn Hansen',           "ask\100develooper.com"
   map 'Assaf Arkin',                "assaf.arkin\100gmail.com", 'Assaf'
