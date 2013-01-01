@@ -54,6 +54,7 @@ namespace :rc do
     bundle
     repo_sync
     precompile_assets
+    expire_cached_pages
     restart_unicorn
   end
 
