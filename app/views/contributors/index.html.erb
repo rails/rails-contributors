@@ -1,5 +1,5 @@
 <%
-   @title = @release ? "Rails Contributors - #{@release.name}" : add_window_to("Rails Contributors", @time_window)
+   @title = @release ? "Rails Contributors - #{@release.name}" : @edge ? 'Rails Contributors - Edge' : add_window_to("Rails Contributors", @time_window)
    @description = 'Ruby on Rails contributors'
 %>
 
