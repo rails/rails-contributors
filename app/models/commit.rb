@@ -3,14 +3,26 @@ class Commit < ActiveRecord::Base
   has_many :contributors, through: :contributions
   belongs_to :release
 
-  scope :since, ->(date) {
-    where(['commits.committer_date >= ?', date])
-  }
-
   scope :with_no_contributors, -> {
     select('commits.*'). # otherwise we get read-only records
     joins('LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id').
     where('contributions.commit_id' => nil)
+  }
+
+  scope :since, ->(date) {
+    where(['commits.committer_date >= ?', date])
+  }
+
+  scope :release, ->(release) {
+    where('commits.release_id' => release.id)
+  }
+
+  scope :edge, -> {
+    where('commits.release_id' => nil)
+  }
+
+  scope :sorted, -> {
+    order('commits.author_date DESC')
   }
 
   validates :sha1, presence: true, uniqueness: true

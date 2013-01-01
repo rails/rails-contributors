@@ -1,11 +1,15 @@
 <% content_for :sidebar do %>
   <ul id="navigation">
-    <% in_releases = @release || @releases %>
+    <% in_release     = @release || @releases %>
+    <% in_edge        = @edge %>
+    <% in_time_window = !in_release && !in_edge %>
+
     <% for key, name in TimeConstraints.all %>
       <% path = key == 'all-time' ? contributors_path : contributors_in_time_window_path(key) %>
       <%# TODO: clean this %>
-      <%= sidebar_tab name, (!in_releases && @time_window.nil? && key == 'all-time') || @time_window == key, path %>
+      <%= sidebar_tab name, in_time_window && ((@time_window.nil? && key == 'all-time') || @time_window == key), path %>
     <% end %>
-    <%= sidebar_tab 'Releases', @release || @releases, releases_path %>
+    <%= sidebar_tab 'Releases', in_release, releases_path %>
+    <%= sidebar_tab 'Edge', in_edge, contributors_in_edge_path %>
   </ul>
 <% end %>

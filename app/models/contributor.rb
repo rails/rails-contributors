@@ -8,22 +8,22 @@ class Contributor < ActiveRecord::Base
   nfc :name
 
   def self.all_with_ncommits
-    _all_with_ncommits(nil, nil)
-  end
-
-  def self.all_with_ncommits_by_release(release)
-    _all_with_ncommits(release, nil)
+    _all_with_ncommits(:contributions)
   end
 
   def self.all_with_ncommits_by_date(date)
-    _all_with_ncommits(nil, date)
+    _all_with_ncommits(:commits, ['commits.committer_date > ?', date])
   end
 
-  def self._all_with_ncommits(release, date)
-    joins = release || date ? :commits : :contributions
-    where = release ? {'commits.release_id' => release.id} :
-            date    ? ['commits.committer_date > ?', date] : nil
+  def self.all_with_ncommits_by_release(release)
+    _all_with_ncommits(:commits, 'commits.release_id' => release.id)
+  end
 
+  def self.all_with_ncommits_in_edge
+    _all_with_ncommits(:commits, 'commits.release_id' => nil)
+  end
+
+  def self._all_with_ncommits(joins, where=nil)
     select('contributors.*, COUNT(contributions.commit_id) AS ncommits').
       joins(joins).
       where(where).

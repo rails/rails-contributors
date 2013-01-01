@@ -24,7 +24,7 @@ class CommitsControllerTest < ActionController::TestCase
     cases = [
       [:david,  [:commit_339e4e8, :commit_e0ef631]],
       [:jeremy, [:commit_b821094, :commit_5b90635]],
-      [:jose,   [:commit_5b90635]]
+      [:jose,   [:commit_5b90635]],
     ].map {|a, b| [contributors(a), Array(commits(*b))]}
 
     cases.each do |contributor, commits|
@@ -99,6 +99,27 @@ class CommitsControllerTest < ActionController::TestCase
         label = commits.size == 1 ? 'commit' : 'commits'
         assert_select 'span.listing-total', "Showing #{commits.size} #{label}"
         assert_select 'li.current', 'Releases'
+      end
+    end
+  end
+
+  def test_in_edge
+    def test_index_for_contributors
+      cases = [
+        [:david,  [:commit_339e4e8]],
+        [:jeremy, [:commit_b821094]],
+        [:xavier, [:commit_26c024e]],
+      ].map {|a, b| [contributors(a), Array(commits(*b))]}
+
+      cases.each do |contributor, commits|
+        get :in_edge, contributor_id: contributor
+
+        assert_response :success
+        assert_equal commits, assigns(:commits)
+
+        label = commits.size == 1 ? 'commit' : 'commits'
+        assert_select 'span.listing-total', "Showing #{commits.size} #{label}"
+        assert_select 'li.current', 'Edge'
       end
     end
   end

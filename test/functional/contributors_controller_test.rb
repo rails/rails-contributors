@@ -49,7 +49,7 @@ class ContributorsControllerTest < ActionController::TestCase
       'today'      => [[:jeremy, 1]],
       'this-week'  => [[:jeremy, 1], [:xavier, 1]],
       'this-month' => [[:david, 1], [:jeremy, 1], [:xavier, 1]],
-      'this-year'  => [[:jeremy, 2], [:david, 1], [:jose, 1], [:vijay, 1], [:xavier, 1]]
+      'this-year'  => [[:jeremy, 2], [:david, 1], [:jose, 1], [:vijay, 1], [:xavier, 1]],
     }
 
     time_travel do
@@ -66,6 +66,23 @@ class ContributorsControllerTest < ActionController::TestCase
           assert_equal e.second, a.ncommits
         end
       end
+    end
+  end
+
+  def test_in_edge
+    # Order by ncommits DESC, url_id ASC.
+    expected = [[:david, 1], [:jeremy, 1], [:xavier, 1]]
+
+    get :in_edge
+
+    assert_response :success
+
+    actual = assigns(:contributors)
+    assert_equal expected.size, actual.size
+
+    expected.zip(actual).each do |e, a|
+      assert_equal contributors(e.first).name, a.name
+      assert_equal e.second, a.ncommits
     end
   end
 end
