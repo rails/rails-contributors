@@ -590,6 +590,7 @@ module NamesManager
   map 'Juanjo Bazán',               'Juanjo Bazan', 'juanjo.bazan'
   map 'Julian Doherty',             'madlep'
   map 'Julian Tarkhanov',           "me\100julik.nl", 'julik'
+  map 'Jun Jiang',                  'jasl'
   map 'Justin Ball',                'jbasdf'
   map 'Justin French',              'justinfrench'
   map 'Justin Mecham',              "justin\100aspect.net"
