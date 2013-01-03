@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.10'
 gem 'mysql2'
 gem 'rugged', '0.17.0.b7'
 gem 'unf'
