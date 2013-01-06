@@ -40,8 +40,8 @@ namespace :rc do
     run_in_rc 'config/unicorn.sh restart'
   end
 
-  task :expire_cached_pages, :roles => :production do
-    run_in_rc 'bundle exec rails runner ApplicationUtils.expire_cached_pages'
+  task :expire_cache, :roles => :production do
+    run_in_rc 'bundle exec rails runner ApplicationUtils.expire_cache'
   end
 
   task :deploy_mappings, :roles => :production do
@@ -54,7 +54,7 @@ namespace :rc do
     bundle
     repo_sync
     precompile_assets
-    expire_cached_pages
+    expire_cache
     restart_unicorn
   end
 

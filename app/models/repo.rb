@@ -93,7 +93,7 @@ class Repo
           ended_at:   Time.current
         )
 
-        ApplicationUtils.expire_cached_pages if cache_needs_expiration?(ncommits, nreleases, names_mapping_updated?)
+        ApplicationUtils.expire_cache if cache_needs_expiration?(ncommits, nreleases, names_mapping_updated?)
       end
     end
   end

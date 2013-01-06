@@ -34,7 +34,7 @@ module ApplicationUtils
   # website.
   #
   # On the other hand, moving is atomic. Atomic is good.
-  def self.expire_cached_pages
+  def self.expire_cache
     Dir.chdir("#{Rails.root}/public") do
       %w(index.html contributors.html contributors releases.html releases edge).each do |name|
         if File.exists?(name)
