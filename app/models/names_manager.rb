@@ -211,6 +211,7 @@ module NamesManager
   map 'Alexander Dymo',             'adymo', "dymo\100mk.ukrtelecom.ua"
   map 'Alexander Staubo',           "alex\100purefiction.net", "alex\100byzantine.no"
   map 'Alexander Uvarov',           'wildchild'
+  map 'Alexey Nikitin',             'tank-bohr'
   map 'Alexey Trofimenko',          'codesnik'
   map 'Alexey Zatsepin',            'alexey', 'Alexey'
   map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
@@ -728,6 +729,7 @@ module NamesManager
   map 'Michal Šafránek',            "wejn\100box.cz"
   map 'Michiaki Baba',              "babie7a0\100ybb.ne.jp"
   map 'Mica Eked',                  'mica eked'
+  map 'Miguel Fernández',           'Miguel', 'miguelff'
   map 'Mike Boone',                 'boone'
   map 'Mike Clark',                 "mike\100clarkware.com"
   map 'Mike Gunderloy',             'Michael Gunderloy'
