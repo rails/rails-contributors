@@ -36,7 +36,7 @@ class ReleaseTest < ActiveSupport::TestCase
     assert_equal '2-3-2-1', releases(:v2_3_2_1).to_param
   end
 
-  def test_to_param
+  def test_find_by_param
     r = releases(:v3_2_0)
     assert_equal r, Release.find_by_param(r.to_param)
   end

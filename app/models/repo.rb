@@ -152,17 +152,28 @@ class Repo
 
   # Once all tables have been updated we compute the rank of each contributor.
   def sync_ranks
-    i    = 0
-    rank = 0
-    ncon = nil
+    i               = 0
+    prev_ncommits   = nil
+    new_rank        = 0
+    ranks_to_update = Hash.new {|h, k| h[k] = []}
 
+    # Compute new ranks, and store those which need to be updated.
     Contributor.all_with_ncommits.each do |contributor|
       i += 1
-      if contributor.ncommits != ncon
-        rank = i
-        ncon = contributor.ncommits
+
+      if contributor.ncommits != prev_ncommits
+        new_rank = i
+        prev_ncommits = contributor.ncommits
       end
-      contributor.update_column(:rank, rank) if contributor.rank != rank
+
+      if contributor.rank != new_rank
+        ranks_to_update[new_rank] << contributor.id
+      end
+    end
+
+    # Update new ranks, if any.
+    ranks_to_update.each do |rank, contributor_ids|
+      Contributor.update_all("rank = #{rank}", id: contributor_ids)
     end
   end
 
