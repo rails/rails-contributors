@@ -525,6 +525,7 @@ module NamesManager
   map 'Jens-Christian Fischer',     "jcfischer\100gmail.com"
   map 'Jeremy Durham',              "jeremydurham\100gmail.com"
   map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans', "jeremye\100bsa.ca.gov", "code\100jeremyevans.net"
+  map 'Jeremy Jackson',             'jejacks0n'
   map 'Jeremy Kemper',              'bitsweat'
   map 'Jeremy Hopple',              "jeremy\100jthopple.com"
   map 'Jeremy Lightsmith',          'stellsmi'
