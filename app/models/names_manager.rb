@@ -430,6 +430,7 @@ module NamesManager
   map 'Frank Müller',               'suchasurge'
   map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
   map 'Frederico Macedo',           'frederico'
+  map 'G S Phani Kumar',            'gsphanikumar'
   map 'Gabe da Silveira',           'dasil003'
   map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
   map 'Ganesh Kumar',               'ganesh'
