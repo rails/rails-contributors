@@ -37,7 +37,8 @@ class Commit < ActiveRecord::Base
       author_date:    rugged_commit.author[:time],
       committer_name: rugged_commit.committer[:name].force_encoding('UTF-8'),
       committer_date: rugged_commit.committer[:time],
-      message:        rugged_commit.message.force_encoding('UTF-8')
+      message:        rugged_commit.message.force_encoding('UTF-8'),
+      merge:          rugged_commit.parents.size > 1
     )
   end
 

@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'ostruct'
 
 class CommitTest < ActiveSupport::TestCase
   def extract_contributor_names_from_text(commit, text)
@@ -15,6 +16,37 @@ class CommitTest < ActiveSupport::TestCase
 
   def imported_from_svn?(commit)
     commit.send(:imported_from_svn?)
+  end
+
+  def test_import
+    tcomm = Time.current
+    tauth = 1.day.ago
+
+    [[], [1], [1, 2]].each.with_index do |parents, i|
+      sha1 = "b5ed79468289c15a685a82694dcf1adf773c91d#{i}"
+      rugged_commit = OpenStruct.new
+      rugged_commit.oid       = sha1
+      rugged_commit.author    = {name: 'Juanjo', time: tauth}
+      rugged_commit.committer = {name: 'David', time: tcomm}
+      rugged_commit.message   = 'this is the message'
+      rugged_commit.parents   = parents
+
+      commit = Commit.import!(rugged_commit)
+
+      assert_equal sha1, commit.sha1
+      assert_equal 'Juanjo', commit.author_name
+      assert_equal tauth, commit.author_date
+      assert_equal 'David', commit.committer_name
+      assert_equal tcomm, commit.committer_date
+      assert_equal 'this is the message', commit.message
+      if parents.size > 1
+        assert commit.merge?
+      else
+        assert !commit.merge?
+      end
+    end
+
+
   end
 
   def test_short_sha1
