@@ -969,6 +969,7 @@ module NamesManager
   map 'Tyler Kovacs',               "tyler.kovacs\100gmail.com"
   map 'Uģis Ozols',                 'Ugis Ozols'
   map 'Vasili Kachalko',            'dreamfall'
+  map 'Victor Babenko',             'virusman'
   map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
   map 'Vijay Dev',                  'vijay', 'vijaydev'
   map 'Vitalii Khustochka',         "xyctka\100gmail.com", 'khustochka'
