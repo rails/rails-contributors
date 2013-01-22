@@ -813,6 +813,7 @@ module NamesManager
   map 'PJ Hyett',                   "pjhyett\100gmail.com"
   map 'Prakash Murthy',             'prakashmurthy'
   map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
+  map 'Rafael Mendonça França',     'Rafael França'
   map 'Rahul P. Chaudhari',         'RAHUL CHAUDHARI', 'Rahul Chaudhari'
   map 'Rainer Blessing',            'RainerBlessing'
   map 'Ramon Quezada',              'rayq', 'rpq'
@@ -889,7 +890,7 @@ module NamesManager
   map 'Serge Balyuk',               'bgipsy'
   map 'Sergey Kojin',               "sergeykojin\100gmail.com"
   map 'Sergey Nartimov',            'lest'
-  map 'Sergio Gil',                 'Sergio Gil Pérez de la Manga'
+  map 'Sergio Gil',                 'Sergio Gil Pérez de la Manga'
   map 'Seth Ladd',                  'sethladd'
   map 'Seth Rasmussen',             'loincloth'
   map 'Shu-yu Guo',                 "arc\100uchicago.edu"
