@@ -548,6 +548,7 @@ module NamesManager
   map 'John Barnette',              'jbarnette'
   map 'John Barton',                'johnb'
   map 'John F. Douthat',            'johndouthat'
+  map 'John J. Wang',               'wangjohn'
   map 'John Mettraux',              'jmettraux'
   map 'John Nunemaker',             "nunemaker\100gmail.com"
   map 'John Pignata',               'Developer', 'Jay Pignata' # see 179b451
