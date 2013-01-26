@@ -171,6 +171,9 @@ module NamesManager
     when '3582bce6fdb30730b34b91a17b8bb33066eed7b8'
       # The attribution was wrong, and amended later in 33736bc18a9733d95953f6eaec924db10badc908
       ['Juanjo Bazán', 'Tarmo Tänav', 'BigTitus']
+    when 'bc43763247e25058ca1ab50637a649f0b5b186eb'
+      # The author in Git is just "David", name clash with David.
+      ['David Wang']
     else
       nil
     end
@@ -356,7 +359,7 @@ module NamesManager
   map 'David Easley',               "easleydp\100gmail.com"
   map 'David Felstead',             "david.felstead\100gmail.com", "dfelstead\100site5.com"
   map 'David François',             'David FRANCOIS', 'davout'
-  map 'David Heinemeier Hansson',   'DHH'
+  map 'David Heinemeier Hansson',   'DHH', 'David' # for David see 5d5f0bad6e934d9d4fad7d0fa4643d04c13709a9
   map 'David Morton',               "mortonda\100dgrmm.net"
   map 'David N. Welton',            'davidw'
   map 'David Raynes',               'rayners'
@@ -364,6 +367,7 @@ module NamesManager
   map 'David Roetzel',              "rails\100roetzel.de"
   map 'David Rose',                 "doppler\100gmail.com"
   map 'David Rupp',                 "david\100ruppconsulting.com"
+  map 'David Wang',                 'dahakawang'
   map 'David Weitzman',             "dweitzman\100gmail.com"
   map 'Dee Zsombor',                'Dee.Zsombor', 'zsombor', "Dee.Zsombor\100gmail.com"
   map 'Deirdre Saoirse',            "deirdre\100deirdre.net"
