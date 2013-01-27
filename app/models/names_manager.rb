@@ -836,6 +836,7 @@ module NamesManager
   map 'Riley Lynch',                'Riley', 'teleological'
   map 'Rizwan Reza',                'rizwanreza'
   map 'Robert Evans',               'revans'
+  map 'Roberto Miranda',            'robertomiranda'
   map 'Roman Le Négrate',           'Roman Le Negrate'
   map 'Russell Norris',             'rsl', 'RSL'
   map 'Rob Anderton',               'Rob'
