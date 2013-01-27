@@ -238,6 +238,7 @@ module NamesManager
   map 'Ant Ramm',                   'antramm'
   map 'Anthony Alberto',            'Anthony'
   map 'Anthony Eden',               'aeden'
+  map 'Anton Cherepanov',           'davetoxa'
   map 'Antonio Tapiador del Dujo',  'Antonio Tapiador'
   map 'Anuj Dutta',                 'anuj  dutta'
   map 'Anup Narkhede',              'railsbob'
