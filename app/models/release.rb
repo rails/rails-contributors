@@ -114,9 +114,9 @@ class Release < ActiveRecord::Base
   # may be 3.1.5 one day, and 3.1.6 if it gets later released.
   def prev
     Release.where(<<-SQL).sorted.first
-      (major = #{major} && minor = #{minor} && tiny = #{tiny} && patch < #{patch}) ||
-      (major = #{major} && minor = #{minor} && tiny < #{tiny}) ||
-      (major = #{major} && minor < #{minor}) ||
+      (major = #{major} AND minor = #{minor} AND tiny = #{tiny} AND patch < #{patch}) OR
+      (major = #{major} AND minor = #{minor} AND tiny < #{tiny}) OR
+      (major = #{major} AND minor < #{minor}) OR
       (major < #{major})
     SQL
   end
