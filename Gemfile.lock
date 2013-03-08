@@ -1,5 +1,12 @@
+GIT
+  remote: git://github.com/miepleinc/capistrano-unicorn.git
+  revision: 4944cabb0c3872ed333ed1d8130c1bcce06d8203
+  specs:
+    capistrano-unicorn (0.1.6)
+      capistrano
+
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (3.2.11)
       actionpack (= 3.2.11)
@@ -30,6 +37,12 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.4)
+    capistrano (2.14.2)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
     chronic (0.9.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -43,6 +56,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    highline (1.6.15)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -55,7 +69,16 @@ GEM
     mime-types (1.19)
     multi_json (1.5.0)
     mysql2 (0.3.11)
+    net-scp (1.1.0)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.6)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     polyglot (0.3.3)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rack (1.4.3)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -83,6 +106,8 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     rugged (0.17.0.b7)
+    rvm-capistrano (1.2.7)
+      capistrano (>= 2.0.0)
     sass (3.2.5)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -114,11 +139,15 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capistrano
+  capistrano-unicorn!
   coffee-rails
   delorean
   mysql2
+  quiet_assets
   rails (= 3.2.11)
   rugged (= 0.17.0.b7)
+  rvm-capistrano
   sass-rails
   uglifier
   unf

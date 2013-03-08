@@ -1,9 +1,16 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'mysql2'
 gem 'rugged', '0.17.0.b7'
 gem 'unf'
+
+group :development do
+  gem "quiet_assets"
+  gem "capistrano"
+  gem "rvm-capistrano", require: false
+  gem 'capistrano-unicorn', github: 'miepleinc/capistrano-unicorn', require: false
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
