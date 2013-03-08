@@ -1149,6 +1149,9 @@ module NamesManager
       when /\AFix for/
         # See https://github.com/rails/rails/commit/5d0d82957ae2658a576f5785506a52cfe03d0758
         nil
+      when 'GET'
+        # see https://github.com/rails/rails/commit/6871bd9818a9a7d9d8c7e21e253d64c0410fde1d
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when 'tomhuda'
