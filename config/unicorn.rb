@@ -1,11 +1,31 @@
-require 'pathname'
-
-app_root = Pathname.new(__FILE__).dirname.parent.expand_path.to_s
-
 worker_processes 4
-working_directory app_root
-listen "/tmp/rails-contributors.sock"
-timeout 30
-pid "#{app_root}/tmp/pids/unicorn.pid"
-stderr_path "#{app_root}/log/unicorn.stderr.log"
-stdout_path "#{app_root}/log/unicorn.stdout.log"
+
+listen '/tmp/rails-contributors.sock'
+
+root_dir = '/home/rails/rails-contributors/current'
+
+working_directory root_dir
+pid "#{root_dir}/tmp/pids/unicorn.pid"
+stderr_path "#{root_dir}/log/unicorn.log"
+stdout_path "#{root_dir}/log/unicorn.log"
+
+preload_app true
+
+# This is run by the master process when is about to fork a worker.
+before_fork do |server, _worker|
+  ActiveRecord::Base.connection.disconnect!
+
+  old_pid = "#{server.config[:pid]}.oldbin"
+  if File.exists?(old_pid) && server.pid != old_pid
+    begin
+      Process.kill('QUIT', File.read(old_pid).to_i)
+    rescue Errno::ENOENT, Errno::ESRCH
+      # Someone else did our job for us.
+    end
+  end
+end
+
+# This is run by the worker right after it has been forked.
+after_fork do |_server, _worker|
+  ActiveRecord::Base.establish_connection
+end
