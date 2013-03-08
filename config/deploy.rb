@@ -37,6 +37,7 @@ namespace :deploy do
 end
 
 after 'bundle:install', 'deploy:symlink_database_yml'
+after 'bundle:install', 'deploy:symlink_rails'
 after 'bundle:install', 'deploy:migrate'
 
 after 'deploy:restart', 'unicorn:restart'

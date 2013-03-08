@@ -123,6 +123,8 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    turbolinks (1.0.0)
+      coffee-rails
     tzinfo (0.3.35)
     uglifier (1.3.0)
       execjs (>= 0.3.0)
@@ -149,6 +151,7 @@ DEPENDENCIES
   rugged (= 0.17.0.b7)
   rvm-capistrano
   sass-rails
+  turbolinks
   uglifier
   unf
   unicorn

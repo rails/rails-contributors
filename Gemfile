@@ -4,6 +4,7 @@ gem 'rails', '3.2.11'
 gem 'mysql2'
 gem 'rugged', '0.17.0.b7'
 gem 'unf'
+gem 'turbolinks'
 
 group :development do
   gem "quiet_assets"
