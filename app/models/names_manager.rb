@@ -643,6 +643,7 @@ module NamesManager
   map 'Lars Pind',                  "lars\100pinds.com", "lars\100pind.com", 'Lars pind', 'lars pind'
   map 'Laurel Fan',                 "laurel\100gorgorg.org", 'laurelfan'
   map 'Lawrence Pit',               'lawrence'
+  map 'Lebin Sebastian F',          'libin'
   map 'Lee Jensen',                 'outerim'
   map 'Lee Marlow',                 'lmarlow', "lmarlow\100yahoo.com"
   map "Lee O'Mara",                 "lee\100omara.ca"
