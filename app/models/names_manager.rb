@@ -197,6 +197,7 @@ module NamesManager
   map 'Adam Wiggins',               'adamwiggins'
   map 'Adam Williams',              'aiwilliams'
   map 'Adelle Hartley',             "adelle\100bullet.net.au"
+  map 'Adrien Siami',               'Intrepidd'
   map 'Akio Tajima',                'arton', 'artonx'
   map 'Akira Ikeda',                "ikeda\100dream.big.or.jp"
   map 'Akira Matsuda',              '松田 明'
