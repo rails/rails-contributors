@@ -43,6 +43,7 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_nil NamesManager.handle_special_cases('status:committed #1008')
     assert_nil NamesManager.handle_special_cases('#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed')
     assert_nil NamesManager.handle_special_cases('type="month"')
+    assert_nil NamesManager.handle_special_cases('CVE-2013-2212')
     assert_equal ['Yehuda Katz', 'Carl Lerche'], NamesManager.handle_special_cases('Carlhuda')
     assert_equal 'Mislav Marohnić', NamesManager.handle_special_cases('=?utf-8?q?Mislav=20Marohni=C4=87?=')
     assert_equal 'Adam Cigánek', NamesManager.handle_special_cases('=?utf-8?q?Adam=20Cig=C3=A1nek?=')

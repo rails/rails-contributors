@@ -1084,6 +1084,9 @@ module NamesManager
       when /\AFixes #\d+\z/i
         # see https://github.com/rails/rails/commit/7db2ef47a1966113dd5d52c2f620b8496acabf56
         nil
+      when /\ACVE-[\d-]+\z/i
+        # fix protocol checking in sanitization [CVE-2013-1857]
+        nil
       when 'and'
         # see https://github.com/rails/rails/commit/d891ad4e92c4f4d854ba321c42000026b5c75187
         nil
