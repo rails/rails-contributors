@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+bundle install
+
+cp config/database.yml.example config/database.yml
+
+bundle exec rake db:test:load
