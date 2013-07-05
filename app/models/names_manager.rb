@@ -237,6 +237,7 @@ module NamesManager
   map 'Andrey Morskov',             'accessd', 'Accessd'
   map 'Andy Lien',                  "andylien\100gmail.com"
   map 'Angelo Capilleri',           'angelo giovanni capilleri', 'Angelo capilleri'
+  map 'Ankit Gupta',                'ankit8898', 'Ankit Gupta-FIR'
   map 'Ant Ramm',                   'antramm'
   map 'Anthony Alberto',            'Anthony'
   map 'Anthony Eden',               'aeden'
