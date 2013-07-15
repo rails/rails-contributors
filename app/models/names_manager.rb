@@ -698,6 +698,7 @@ module NamesManager
   map 'Markus Roberts',             "MarkusQ\100reality.com"
   map 'Marten Veldthuis',           'Marten'
   map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
+  map 'Martin Schuerrer',           "@MSch", "MSch", "Martin Schürrer"
   map 'Masashi Shimbo',             "shimbo\100is.naist.jp"
   map 'Mark Daggett',               'heavysixer'
   map 'Marshall Roch',              'mroch'
