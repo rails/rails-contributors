@@ -4,6 +4,10 @@ set -e
 
 bundle install
 
-cp config/database.yml.example config/database.yml
+database_config=config/database.yml
+if [ ! -f $database_config ]
+then
+    cp config/database.yml.example $database_config
+fi
 
 bundle exec rake db:test:load
