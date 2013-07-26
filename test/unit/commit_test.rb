@@ -45,8 +45,6 @@ class CommitTest < ActiveSupport::TestCase
         assert !commit.merge?
       end
     end
-
-
   end
 
   def test_short_sha1
