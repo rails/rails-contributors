@@ -16,7 +16,7 @@ class ReleasesControllerTest < ActionController::TestCase
     ).map {|_| releases(_)}
 
     actual = assigns(:releases)
-    
+
     assert_equal expected.size, actual.size
     expected.zip(assigns(:releases)).each do |e, a|
       assert_equal e.tag, a.tag

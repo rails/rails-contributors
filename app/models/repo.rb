@@ -173,7 +173,7 @@ class Repo
 
     # Update new ranks, if any.
     ranks_to_update.each do |rank, contributor_ids|
-      Contributor.update_all("rank = #{rank}", id: contributor_ids)
+      Contributor.where(id: contributor_ids).update_all("rank = #{rank}")
     end
   end
 

@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :trace_user_agent
+  before_action :trace_user_agent
 
 private
   def set_contributor

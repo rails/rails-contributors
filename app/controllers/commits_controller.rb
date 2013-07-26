@@ -1,9 +1,9 @@
 class CommitsController < ApplicationController
   caches_page :index, :in_time_window, :in_release, :in_edge
 
-  before_filter :set_target, only: %w(index in_release)
-  before_filter :set_contributor, only: %w(in_edge in_time_window)
-  before_filter :set_time_constraints, only: 'in_time_window'
+  before_action :set_target, only: %w(index in_release)
+  before_action :set_contributor, only: %w(in_edge in_time_window)
+  before_action :set_time_constraints, only: 'in_time_window'
 
   def index
     @commits = @target.commits.sorted

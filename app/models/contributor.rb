@@ -28,7 +28,7 @@ class Contributor < ActiveRecord::Base
       joins(joins).
       where(where).
       group('contributions.contributor_id').
-      order('ncommits DESC, url_id ASC').all
+      order('ncommits DESC, url_id ASC')
   end
 
   # The contributors table may change if new name equivalences are added and IDs
