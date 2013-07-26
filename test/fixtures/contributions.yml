@@ -27,3 +27,7 @@ contribution_<%= n += 1 %>:
 contribution_<%= n += 1 %>:
   commit: commit_e0ef631
   contributor: david
+
+contribution_<%= n += 1 %>:
+  commit: commit_7cdfd91
+  contributor: jeremy
