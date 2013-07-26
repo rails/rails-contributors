@@ -3,7 +3,7 @@ require 'test_helper'
 class ContributorsControllerTest < ActionController::TestCase
   def test_index_main_listing
     # Order by ncommits DESC, url_id ASC.
-    expected = [[:david, 2], [:jeremy, 2], [:jose, 1], [:vijay, 1], [:xavier, 1]]
+    expected = [[:jeremy, 3], [:david, 2], [:jose, 1], [:vijay, 1], [:xavier, 1]]
 
     get :index
 
@@ -45,11 +45,11 @@ class ContributorsControllerTest < ActionController::TestCase
 
   def test_in_time_window
     time_windows = {
-      'all-time'   => [[:david, 2], [:jeremy, 2], [:jose, 1], [:vijay, 1], [:xavier, 1]],
+      'all-time'   => [[:jeremy, 3], [:david, 2], [:jose, 1], [:vijay, 1], [:xavier, 1]],
       'today'      => [[:jeremy, 1]],
       'this-week'  => [[:jeremy, 1], [:xavier, 1]],
       'this-month' => [[:david, 1], [:jeremy, 1], [:xavier, 1]],
-      'this-year'  => [[:jeremy, 2], [:david, 1], [:jose, 1], [:vijay, 1], [:xavier, 1]],
+      'this-year'  => [[:jeremy, 3], [:david, 1], [:jose, 1], [:vijay, 1], [:xavier, 1]],
     }
 
     time_travel do
@@ -71,7 +71,7 @@ class ContributorsControllerTest < ActionController::TestCase
 
   def test_in_edge
     # Order by ncommits DESC, url_id ASC.
-    expected = [[:david, 1], [:jeremy, 1], [:xavier, 1]]
+    expected = [[:jeremy, 2], [:david, 1], [:xavier, 1]]
 
     get :in_edge
 
