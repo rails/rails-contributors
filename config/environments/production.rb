@@ -77,4 +77,7 @@ RailsContributors::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Directory where cached pages are stored.
+  config.action_controller.page_cache_directory = "#{Rails.root}/public"
 end
