@@ -23,7 +23,7 @@ class CommitsControllerTest < ActionController::TestCase
   def test_index_for_contributors
     cases = [
       [:david,  [:commit_339e4e8, :commit_e0ef631]],
-      [:jeremy, [:commit_b821094, :commit_5b90635]],
+      [:jeremy, [:commit_b821094, :commit_7cdfd91, :commit_5b90635]],
       [:jose,   [:commit_5b90635]],
     ].map {|a, b| [contributors(a), Array(commits(*b))]}
 
@@ -49,10 +49,10 @@ class CommitsControllerTest < ActionController::TestCase
       ].map {|a, b| [a, Array(commits(*b))]},
 
       contributors(:jeremy) => [
-        ['all-time',  [:commit_b821094, :commit_5b90635]],
+        ['all-time',  [:commit_b821094, :commit_7cdfd91, :commit_5b90635]],
         ['today',     :commit_b821094],
         ['this-week', :commit_b821094],
-        ['this-year', [:commit_b821094, :commit_5b90635]],
+        ['this-year', [:commit_b821094, :commit_7cdfd91, :commit_5b90635]],
       ].map {|a, b| [a, Array(commits(*b))]},
 
       contributors(:vijay) => [
@@ -106,7 +106,7 @@ class CommitsControllerTest < ActionController::TestCase
   def test_in_edge
     cases = [
       [:david,  [:commit_339e4e8]],
-      [:jeremy, [:commit_b821094]],
+      [:jeremy, [:commit_b821094, :commit_7cdfd91]],
       [:xavier, [:commit_26c024e]],
     ].map {|a, b| [contributors(a), Array(commits(*b))]}
 

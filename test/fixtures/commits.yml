@@ -84,3 +84,24 @@ commit_e0ef631:
 
     git-svn-id: http://svn-commit.rubyonrails.org/rails/branches/stable@2980 5ecf4fe2-1ee6-0310-87b1-e25e094e27de
   release: 'v0_14_4'
+
+# This commit has a committer_date that is more recent the author_date and
+# should appear in the contributions list before 5b90635.
+commit_7cdfd91:
+  sha1: '7cdfd910b7cdd398f8b54542c5a6a17966a5c8f3'
+  author_name: 'Jeremy Kemper'
+  author_date: '2011-12-11 22:30:05'
+  committer_name: 'kennyj'
+  committer_date: '2012-03-07 04:01:00'
+  message: |
+    Use 1.9 native XML escaping to speed up html_escape and shush regexp warnings
+
+            length      user     system      total        real
+    before  6      0.010000   0.000000   0.010000 (  0.012378)
+    after   6      0.010000   0.000000   0.010000 (  0.012866)
+    before  60     0.040000   0.000000   0.040000 (  0.046273)
+    after   60     0.040000   0.000000   0.040000 (  0.036421)
+    before  600    0.390000   0.000000   0.390000 (  0.390670)
+    after   600    0.210000   0.000000   0.210000 (  0.209094)
+    before  6000   3.750000   0.000000   3.750000 (  3.751008)
+    after   6000   1.860000   0.000000   1.860000 (  1.857901)
