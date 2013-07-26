@@ -22,7 +22,7 @@ class Commit < ActiveRecord::Base
   }
 
   scope :sorted, -> {
-    order('commits.author_date DESC')
+    order('commits.committer_date DESC')
   }
 
   validates :sha1, presence: true, uniqueness: true
