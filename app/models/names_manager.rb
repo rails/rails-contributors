@@ -223,6 +223,7 @@ module NamesManager
   map 'Aliaxandr Rahalevich',       'saksmlz', 'saks'
   map 'Alvaro Pereyra',             'Xenda'
   map 'Anand Muthukrishnan',        'Anand'
+  map 'Anatoli Makarevich',         'Anatoly Makarevich'
   map 'Andrea Longhi',              'andrea longhi', 'spaghetticode'
   map 'Andreas Isaksson',           'isak'
   map 'Andreas Wurm',               'Kanetontli', 'Kane', 'kane'
