@@ -384,6 +384,7 @@ module NamesManager
   map 'Diego Giorgini',             'ogeidix'
   map 'Dieter Komendera',           'kommen'
   map 'Dirkjan Bussink',            'dbussink'
+  map 'Dmitry Vorotilin',           'Dmitriy Vorotilin'
   map 'Dmitrii Samoilov',           'german'
   map 'Dmitrij Mjakotnyi',          'kucaahbe'
   map 'Dmitry Dedov',               'dm1try'
