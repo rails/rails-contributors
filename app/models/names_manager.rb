@@ -836,6 +836,7 @@ module NamesManager
   map 'Rafael Mendonça França',     'Rafael França'
   map 'Rahul P. Chaudhari',         'RAHUL CHAUDHARI', 'Rahul Chaudhari'
   map 'Rainer Blessing',            'RainerBlessing'
+  map 'Rajarshi Das',               'rajarshi', 'rajars2576', 'rajcybage','Rajarshi', 'RAJARSHI', 'RAJARSHI DAS'
   map 'Ramon Quezada',              'rayq', 'rpq'
   map 'Raphael Bauduin',            "raphinou\100yahoo.com"
   map 'Ravil Bayramgalin',          'brainopia'
