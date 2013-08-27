@@ -1129,9 +1129,10 @@ module NamesManager
       when 'multiple=true'
         # see https://github.com/rails/rails/commit/e591d14b9c4a1220dc55c93c01a81ad6219c1f2f
         nil
-      when /ci[ _-]skip/i
+      when /ci[ _-]s?kip/i
         # see https://github.com/rails/rails/commit/86c5cea9f414d34fd92adb064fde5ecc7b40c727
         #     https://github.com/rails/rails/commit/86c5cea9f414d34fd92adb064fde5ecc7b40c727
+        #     https://github.com/rails/rails/commit/d9e8ec61a4988f3836d8c6aa830b6ffd6a3a940a
         nil
       when /skip[ _-]ci/i
         # see https://github.com/rails/rails/commit/b1c28d710521c6931abc2b394de34ac8a174d844
@@ -1177,6 +1178,14 @@ module NamesManager
         nil
       when 'test/unit/bar_test.rb ...'
         # see https://github.com/rails/rails/commit/b4df25366a3c8f133f8329bc35f1d53926704b5a
+        nil
+      when 'association=(associate)'
+        # see https://github.com/rails/rails/commit/ebd7cc6f459e43aa03a6b8095266888909e0ee4d
+        #     https://github.com/rails/rails/commit/d881f61f84b6bbdc8ec8aeaee114d03be7630f72
+        nil
+      when 'master'
+        # see https://github.com/rails/rails/commit/06198ed7ad822145e24d9aa964aba97bdb0f8b39
+        #     https://github.com/rails/rails/commit/9b6a434defe7aed00f01643abdbc79751dc9d5f1
         nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
