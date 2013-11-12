@@ -640,6 +640,7 @@ module NamesManager
   map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
   map 'Krzysztof Knapik',           'knapo'
   map 'Kubo Takehiro',              'kubo'
+  map 'Kuldeep Aggarwal',           'KD'
   map 'Kym McInerney',              'holodigm', 'Kym'
   map 'Kyosuke Morohashi',          'moro'
   map 'Lakshan Perera',             'laktek', 'lakshan'
