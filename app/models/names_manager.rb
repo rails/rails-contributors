@@ -203,6 +203,7 @@ module NamesManager
   map 'Akira Ikeda',                "ikeda\100dream.big.or.jp"
   map 'Akira Matsuda',              '松田 明'
   map 'Akira Tagoh',                'tagoh'
+  map 'Akshay Vishnoi',             'Mr A'
   map 'alancfrancis',               "alancfrancis\100gmail.com"
   map 'Alan Francis',               'alancfrancis', 'acf'
   map 'Albert Lash',                'docunext'
