@@ -650,6 +650,7 @@ module NamesManager
   map 'Lars Kanis',                 "kanis\100comcard.de"
   map 'Lars Pind',                  "lars\100pinds.com", "lars\100pind.com", 'Lars pind', 'lars pind'
   map 'Laurel Fan',                 "laurel\100gorgorg.org", 'laurelfan'
+  map 'Lauro Caetano',              'laurocaetano'
   map 'Lawrence Pit',               'lawrence'
   map 'Lebin Sebastian F',          'libin'
   map 'Lee Jensen',                 'outerim'
