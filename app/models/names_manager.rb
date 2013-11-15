@@ -625,6 +625,7 @@ module NamesManager
   map 'Ken Kunz',                   "kennethkunz\100gmail.com"
   map 'Ken Gerrard',                'backspace'
   map 'Ken Miller',                 "kenneth.miller\100bitfield.net"
+  map 'Kenta Okamoto',              "chocoby"
   map 'Kevin Barnes',               "vinbarnes\100gmail.com"
   map 'Kevin Clark',                "Kevin Clark kevin.clark\100gmail.com", "kevin.clark\100gmail.com", "kevin.clark\100gmal.com"
   map 'Kevin Jackson',              "foamdino\100gmail.com"
