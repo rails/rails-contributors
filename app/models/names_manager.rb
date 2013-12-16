@@ -454,6 +454,7 @@ module NamesManager
   map 'Geoff Jacobsen',             'jacott'
   map 'Geoffrey Grosenbach',        'topfunky'
   map 'Georg Friedrich',            'gfriedrich'
+  map 'Gonzalo Rodríguez-Baltanás Díaz', 'Nerian'
   map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
   map 'Glen Gibb',                  'grg'
   map 'Glenn Vanderburg',           'glv'
