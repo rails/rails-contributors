@@ -474,6 +474,7 @@ module NamesManager
   map 'Herryanto Siatono',          'jugend'
   map 'Hiroshi Saito',              'hiroshi'
   map 'Hongli Lai (Phusion)',       'FooBarWidget', 'Hongli Lai', 'Hongli Lai (Phusion'
+  map 'Huiming Teo',                'Teo Hui Ming'
   map 'Ian White',                  "ian.w.white\100gmail.com"
   map 'Ibrahim Abdullah',           'simply-phi'
   map 'Igor Fedoronchuk',           'Igor', 'Fivell'
