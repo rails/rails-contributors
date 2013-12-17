@@ -7,7 +7,7 @@ This is the application behind http://contributors.rubyonrails.org.
 Use the setup script to configure your application to be able to run the tests:
 
 ```
-script/setup
+bin/setup
 ```
 
 After this you can use the Rails rake tasks:
