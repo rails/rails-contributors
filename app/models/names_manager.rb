@@ -955,6 +955,7 @@ module NamesManager
   map 'Sven Klemm',                 "sven\100c3d2.de"
   map 'Sven Kräuter',               'Sven Kraeuter | 5v3n', 'Sven Kraeuter', '5v3n'
   map 'Tadas Tamošauskas',          'Tadas Tamosauskas'
+  map 'Takayuki Matsubara',         'ma2gedev'
   map 'Takoyaki Kamen',             'タコ焼き仮面'
   map 'Tal Rotbart',                'redbeard'
   map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
