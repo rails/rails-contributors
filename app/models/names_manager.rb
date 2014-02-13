@@ -680,6 +680,7 @@ module NamesManager
   map 'Łukasz Strzałkowski',        'Lukasz Strzalkowski'
   map 'Luke Ludwig',                'lukeludwig'
   map 'Luke Redpath',               "contact\100lukeredpath.co.uk"
+  map 'Łukasz Strzałkowski'         'lukaszstrzalkowski\100squareup.com'
   map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
   map 'Maik Schmidt',               "contact\100maik-schmidt.de", 'maik schmidt'
   map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
