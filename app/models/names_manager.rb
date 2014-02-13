@@ -677,6 +677,7 @@ module NamesManager
   map 'Lucas Catón',                'Lucas Caton'
   map 'Lugovoi Nikolai',            "meadow.nnick\100gmail.com"
   map 'Luismi Cavallé',             'cavalle', 'cavelle'
+  map 'Łukasz Strzałkowski',        'Lukasz Strzalkowski'
   map 'Luke Ludwig',                'lukeludwig'
   map 'Luke Redpath',               "contact\100lukeredpath.co.uk"
   map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
