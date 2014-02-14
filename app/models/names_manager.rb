@@ -174,6 +174,13 @@ module NamesManager
     when 'bc43763247e25058ca1ab50637a649f0b5b186eb'
       # The author in Git is just "David", name clash with David.
       ['David Wang']
+    when '7e8e91c439c1a877f867cd7ba634f7297ccef04b'
+      ['Godfrey Chan', 'Philippe Creux']
+    when '798881ecd4510b9e1e5e10529fc2d81b9deb961e', '134c1156dd5713da41c62ff798fe3979723e64cc'
+      ['Godfrey Chan', 'Sergio Campamá']
+    when 'b23ffd0dac895aa3fd3afd8d9be36794941731b2'
+      # https://github.com/rails/rails/pull/13692#issuecomment-33617156
+      ['Łukasz Sarnacki', 'Matt Aimonetti']
     else
       nil
     end
