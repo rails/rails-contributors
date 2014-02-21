@@ -2,6 +2,11 @@
 
 set -e
 
+if [ ! -e rails.git ]
+then
+    git clone --mirror git://github.com/rails/rails.git
+fi
+
 bundle install
 
 database_config=config/database.yml
