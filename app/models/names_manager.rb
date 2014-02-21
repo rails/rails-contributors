@@ -181,6 +181,8 @@ module NamesManager
     when 'b23ffd0dac895aa3fd3afd8d9be36794941731b2'
       # https://github.com/rails/rails/pull/13692#issuecomment-33617156
       ['Łukasz Sarnacki', 'Matt Aimonetti']
+    when '1240338a02e5decab2a94b651fff78889d725e31'
+      ['Blake Mesdag', 'Arthur Neves']
     else
       nil
     end
@@ -259,6 +261,7 @@ module NamesManager
   map 'Arkadiy Zabazhanov',         'pyromaniac'
   map 'Artem Avetisyan',            'artemave'
   map 'Artem Kramarenko',           'artemk'
+  map 'Arthur Neves',               'arthurnn', 'Arthur Nogueira Neves'
   map 'Arthur Zapparoli',           'arthurgeek'
   map 'Arvid Andersson',            'arvida'
   map 'Ashley Moran',               "work\100ashleymoran.me.uk"
