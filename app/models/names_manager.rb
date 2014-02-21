@@ -182,6 +182,7 @@ module NamesManager
       # https://github.com/rails/rails/pull/13692#issuecomment-33617156
       ['Łukasz Sarnacki', 'Matt Aimonetti']
     when '1240338a02e5decab2a94b651fff78889d725e31'
+      # Blake and Arthur paired on this YAML compatibility backport.
       ['Blake Mesdag', 'Arthur Neves']
     else
       nil
@@ -261,7 +262,7 @@ module NamesManager
   map 'Arkadiy Zabazhanov',         'pyromaniac'
   map 'Artem Avetisyan',            'artemave'
   map 'Artem Kramarenko',           'artemk'
-  map 'Arthur Neves',               'arthurnn', 'Arthur Nogueira Neves'
+  map 'Arthur Neves',               'Arthur Nogueira Neves'
   map 'Arthur Zapparoli',           'arthurgeek'
   map 'Arvid Andersson',            'arvida'
   map 'Ashley Moran',               "work\100ashleymoran.me.uk"
