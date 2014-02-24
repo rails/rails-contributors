@@ -100,6 +100,12 @@ class Repo
 
   protected
 
+  def refs(regexp)
+    repo.refs.select do |ref|
+      ref.name =~ regexp
+    end
+  end
+
   # Imports those commits in the Git repo that do not yet exist in the database
   # by walking the master and stable branches backwards starting at the tips
   # and following parents.
@@ -107,7 +113,7 @@ class Repo
     ncommits = 0
 
     ActiveRecord::Base.logger.silence do
-      repo.refs(heads).each do |ref|
+      refs(heads).each do |ref|
         to_visit = [repo.lookup(ref.target)]
         while commit = to_visit.shift
           unless Commit.exists?(sha1: commit.oid)
@@ -128,7 +134,7 @@ class Repo
   def sync_releases
     new_releases = []
 
-    repo.refs(tags).each do |ref|
+    refs(tags).each do |ref|
       tag = ref.name[%r{[^/]+\z}]
       unless Release.exists?(tag: tag)
         new_releases << Release.import!(tag, repo.lookup(ref.target))
