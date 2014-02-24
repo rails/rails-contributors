@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.3'
 gem 'mysql2'
-gem 'rugged', '0.17.0.b7'
+gem 'rugged', '~> 0.19.0'
 gem 'unf'
 gem 'turbolinks'
 gem 'actionpack-page_caching'
