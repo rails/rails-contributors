@@ -963,6 +963,7 @@ module NamesManager
   map 'Stian Grytøyr',              "stian\100grytoyr.net"
   map 'Sudara Williams',            'Sudara'
   map 'Sung-hee Kang',              'paranoiase Kang', 'paranoiase'
+  map 'Sunny Ripert',               'Sunny'
   map 'Sur Max',                    'sur'
   map 'Surendra Singhi',            "ssinghi\100kreeti.com"
   map 'Sven Klemm',                 "sven\100c3d2.de"
