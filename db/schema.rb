@@ -9,12 +9,12 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116212140) do
+ActiveRecord::Schema.define(version: 20130116212140) do
 
-  create_table "commits", :force => true do |t|
-    t.string   "sha1",           :null => false
+  create_table "commits", force: true do |t|
+    t.string   "sha1",           null: false
     t.string   "author_name"
     t.datetime "author_date"
     t.string   "committer_name"
@@ -25,38 +25,38 @@ ActiveRecord::Schema.define(:version => 20130116212140) do
     t.boolean  "merge"
   end
 
-  add_index "commits", ["release_id"], :name => "index_commits_on_release_id"
-  add_index "commits", ["sha1"], :name => "index_commits_on_sha1", :unique => true
+  add_index "commits", ["release_id"], name: "index_commits_on_release_id", using: :btree
+  add_index "commits", ["sha1"], name: "index_commits_on_sha1", unique: true, using: :btree
 
-  create_table "contributions", :force => true do |t|
-    t.integer "contributor_id", :null => false
-    t.integer "commit_id",      :null => false
+  create_table "contributions", force: true do |t|
+    t.integer "contributor_id", null: false
+    t.integer "commit_id",      null: false
   end
 
-  add_index "contributions", ["commit_id"], :name => "index_contributions_on_commit_id"
-  add_index "contributions", ["contributor_id"], :name => "index_contributions_on_contributor_id"
+  add_index "contributions", ["commit_id"], name: "index_contributions_on_commit_id", using: :btree
+  add_index "contributions", ["contributor_id"], name: "index_contributions_on_contributor_id", using: :btree
 
-  create_table "contributors", :force => true do |t|
+  create_table "contributors", force: true do |t|
     t.string  "name"
-    t.string  "url_id", :null => false
+    t.string  "url_id", null: false
     t.integer "rank"
   end
 
-  add_index "contributors", ["name"], :name => "index_contributors_on_name"
-  add_index "contributors", ["url_id"], :name => "index_contributors_on_url_id", :unique => true
+  add_index "contributors", ["name"], name: "index_contributors_on_name", using: :btree
+  add_index "contributors", ["url_id"], name: "index_contributors_on_url_id", unique: true, using: :btree
 
-  create_table "releases", :force => true do |t|
-    t.string   "tag",   :null => false
-    t.datetime "date",  :null => false
-    t.integer  "major", :null => false
-    t.integer  "minor", :null => false
-    t.integer  "tiny",  :null => false
-    t.integer  "patch", :null => false
+  create_table "releases", force: true do |t|
+    t.string   "tag",   null: false
+    t.datetime "date",  null: false
+    t.integer  "major", null: false
+    t.integer  "minor", null: false
+    t.integer  "tiny",  null: false
+    t.integer  "patch", null: false
   end
 
-  add_index "releases", ["tag"], :name => "index_releases_on_tag", :unique => true
+  add_index "releases", ["tag"], name: "index_releases_on_tag", unique: true, using: :btree
 
-  create_table "repo_updates", :force => true do |t|
+  create_table "repo_updates", force: true do |t|
     t.integer  "ncommits"
     t.datetime "started_at"
     t.datetime "pulled_at"
