@@ -1083,9 +1083,11 @@ module NamesManager
   # in the original string. Canonicalization is done elsewhere.
   def self.handle_special_cases(name)
     case name
-      when /\A#?\d+/
+      when /\A\d+/
         # Remove side effects of [5684]
-        # Ensure WhiteListSanitizer allows dl tag [#2393 state:resolved]
+        nil
+      when /#\d+/
+        # Closes #123, Fixes #123, #123 state:resolved, etc.
         nil
       when /\A\s*\z/
         nil
@@ -1115,12 +1117,6 @@ module NamesManager
         nil
       when '\\x00-\\x1f'
         #  Fix ActiveSupport::JSON encoding of control characters [\x00-\x1f]
-        nil
-      when /\ACloses #\d+\z/i
-        # Add shallow routes to the new router [Closes #3765]
-        nil
-      when /\AFixes #\d+\z/i
-        # see https://github.com/rails/rails/commit/7db2ef47a1966113dd5d52c2f620b8496acabf56
         nil
       when /\ACVE-[\d-]+\z/i
         # fix protocol checking in sanitization [CVE-2013-1857]

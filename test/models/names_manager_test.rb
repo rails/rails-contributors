@@ -30,6 +30,7 @@ class NamesManagerTest < ActiveSupport::TestCase
   test "special case handling" do
     assert_nil NamesManager.handle_special_cases('1234')
     assert_nil NamesManager.handle_special_cases('#2393 state:resolved')
+    assert_nil NamesManager.handle_special_cases('related #13166')
     assert_nil NamesManager.handle_special_cases(" \t \n \f")
     assert_nil NamesManager.handle_special_cases('See rails ML, subject "Text::Format Licence Exception" on Oct 15, 2005')
     assert_nil NamesManager.handle_special_cases("RubyConf '05")
