@@ -31,6 +31,10 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 
+  task :symlink_pids do
+    run "ln -nfs #{shared_path}/pids #{release_path}/tmp/pids"
+  end
+
   task :symlink_rails_git do
     run "ln -nfs #{shared_path}/rails.git #{release_path}/rails.git"
   end
@@ -38,6 +42,7 @@ end
 
 after 'bundle:install', 'deploy:symlink_database_yml'
 after 'bundle:install', 'deploy:symlink_rails_git'
+after 'bundle:install', 'deploy:symlink_pids'
 after 'bundle:install', 'deploy:migrate'
 
 after 'deploy:restart', 'unicorn:restart'
