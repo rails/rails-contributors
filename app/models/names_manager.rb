@@ -184,6 +184,10 @@ module NamesManager
     when '1240338a02e5decab2a94b651fff78889d725e31'
       # Blake and Arthur paired on this YAML compatibility backport.
       ['Blake Mesdag', 'Arthur Neves']
+    when '67d4dc2bdb27648a61e153996d629b44834a9de4'
+      # The commit message contains [/Users/senny/.rbenv/versions/2.0.0-p353/bi...] what become a
+      # multi author commit.
+      ['Yves Senn']
     else
       nil
     end
