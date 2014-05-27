@@ -211,6 +211,7 @@ module NamesManager
   map 'Adam Wiggins',               'adamwiggins'
   map 'Adam Williams',              'aiwilliams', 'awilliams'
   map 'Adelle Hartley',             "adelle\100bullet.net.au"
+  map 'Aditya Kapoor',              'aditya-kapoor'
   map 'Adrien Coquio',              'bobbus'
   map 'Adrien Siami',               'Intrepidd'
   map 'Akio Tajima',                'arton', 'artonx'
