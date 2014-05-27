@@ -21,6 +21,10 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_equal "David Heinemeier Hansson", NamesManager.canonical_name_for(" David Heinemeier Hansson <dhh@example.com>   ")
   end
 
+  test 'it is tolerant to surrounding Markdown *s' do
+    assert_equal 'Godfrey Chan', NamesManager.canonical_name_for('*Godfrey Chan*')
+  end
+
   test "it resolves handlers" do
     assert_equal "Xavier Noria", NamesManager.canonical_name_for("fxn")
     assert_equal "Pratik Naik", NamesManager.canonical_name_for("lifo")

@@ -1063,12 +1063,19 @@ module NamesManager
 
   # Returns the canonical name for +name+.
   #
-  # Email addresses are removed, leading/trailing whitespace is ignored. If no
-  # equivalence is known the canonical name is the resulting sanitized string
-  # by definition.
+  # Email addresses are removed, leading/trailing whitespace and
+  # surrounding Markdown *s are deleted. If no equivalence is known
+  # the canonical name is the resulting sanitized string by definition.
   def self.canonical_name_for(name)
     name = name.sub(/<[^>]+>/, '') # remove any email address in angles
     name.strip!
+
+    # Commit 28d52c59f2cb32180ca24770bf95597ea3ad8198 for example uses
+    # Markdown in the commit message: [*Godfrey Chan*, *Aaron Patterson*].
+    # This is really exceptional so we special-case this instead of doing
+    # anything more generic.
+    name.sub!(/\A\*/, '')
+    name.sub!(/\*\z/, '')
     CANONICAL_NAME_FOR[name] || name
   end
 
