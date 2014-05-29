@@ -211,6 +211,7 @@ module NamesManager
   map 'Adam Wiggins',               'adamwiggins'
   map 'Adam Williams',              'aiwilliams', 'awilliams'
   map 'Adelle Hartley',             "adelle\100bullet.net.au"
+  map 'Aditya Chadha',              'Aditya'
   map 'Aditya Kapoor',              'aditya-kapoor'
   map 'Adrien Coquio',              'bobbus'
   map 'Adrien Siami',               'Intrepidd'
@@ -295,6 +296,7 @@ module NamesManager
   map 'Bob Aman',                   "bob\100sporkmonger.com"
   map 'Brad Ediger',                "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
   map 'Brad Ellis',                 "bellis\100deepthought.org"
+  map 'Brad Robertson',             'bradrobertson'
   map 'Brandt Kurowski',            "brandt\100kurowski.net"
   map 'Brendan Baldwin',            'brendan'
   map 'Brian Egge',                 "brianegge\100yahoo.com"
@@ -367,6 +369,7 @@ module NamesManager
   map 'Daniel Sheppard',            "daniels\100pronto.com.au"
   map 'Daniel Wanja',               "daniel\100nouvelles-solutions.com"
   map 'Dave Dribin',                "dave-ml\100dribin.org"
+  map 'Dave Goodchild',             'buddhamagnet'
   map 'Dave Lee',                   "dave\100cherryville.org"
   map 'Dave Murphy',                'Wintermute'
   map 'Dave Naffis',                'naffis'
@@ -419,11 +422,13 @@ module NamesManager
   map 'Eaden McKee',                'eadz', 'Eadz'
   map 'Eddie Cianci',               'defeated'
   map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
+  map 'Edho Arief',                 'edogawaconan'
   map 'Eduardo Cavazos',            'dharmatech'
   map 'Edward Betts',               "edward\100debian.org"
   map 'Eelco Lempsink',             "rails\10033lc0.net"
   map 'Egor Homakov',               'homa', 'homakov'
   map 'Elan Feingold',              "elan\100bluemandrill.com"
+  map 'Eileen M. Uchitelle',        'eileencodes'
   map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
   map 'Elliot Smith',               "elliot\100townx.org"
   map 'Elliot Winkler',             'mcmire'
@@ -507,6 +512,7 @@ module NamesManager
   map 'Jacob Atzen',                'jacobat'
   map 'Jacob Fugal',                'lukfugl'
   map 'Jacob Straszynski',          'jacobstr'
+  map 'Thillai Arasu',              'Jude Arasu', 'JudeArasu'
   map 'Jake Janovetz',              'janovetz'
   map 'Jakob Skjerning',            'Jakob S', "jakob\100mentalized.net"
   map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
@@ -634,6 +640,7 @@ module NamesManager
   map 'Kamil Kukura',               'kamk'
   map 'Karel Miarka',               "kajism\100yahoo.com"
   map 'Karel Minařík',              'karmi', 'Karel Minarik'
+  map 'Karol Bucek',                'kares'
   map 'Kaspar Schiess',             "eule\100space.ch"
   map 'Kazuhiro Yoshida',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
   map 'Keegan Quinn',               "keegan\100thebasement.org"
@@ -845,6 +852,7 @@ module NamesManager
   map 'Peter Williams',             'pezra'
   map 'Phil Bogle',                 "philbogle\100gmail.com"
   map 'Phil Hagelberg',             "technomancy\100gmail.com", 'technomancy'
+  map 'Phil Lee',                   'asmega'
   map 'Phil Orwig',                 'cluon'
   map 'Philip Hallstrom',           'phallstrom'
   map 'Philip Ross',                "phil.ross\100gmail.com"
