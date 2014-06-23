@@ -51,6 +51,7 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_nil NamesManager.handle_special_cases('CVE-2013-2212')
     assert_nil NamesManager.handle_special_cases('association=(associate)')
     assert_nil NamesManager.handle_special_cases('master')
+    assert_nil NamesManager.handle_special_cases('extras no-cache max-age public must-revalidate')
     assert_nil NamesManager.handle_special_cases('ci kip')
     assert_equal ['Yehuda Katz', 'Carl Lerche'], NamesManager.handle_special_cases('Carlhuda')
     assert_equal 'Mislav Marohnić', NamesManager.handle_special_cases('=?utf-8?q?Mislav=20Marohni=C4=87?=')

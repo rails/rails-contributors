@@ -1169,6 +1169,9 @@ module NamesManager
       when 'multiple=true'
         # see https://github.com/rails/rails/commit/e591d14b9c4a1220dc55c93c01a81ad6219c1f2f
         nil
+      when 'extras no-cache max-age public must-revalidate'
+        # see https://github.com/rails/rails/commit/e3123815898145888fe84f053b14f5cfc33c1684
+        nil
       when /ci[ _-]s?kip/i
         # see https://github.com/rails/rails/commit/86c5cea9f414d34fd92adb064fde5ecc7b40c727
         #     https://github.com/rails/rails/commit/86c5cea9f414d34fd92adb064fde5ecc7b40c727
