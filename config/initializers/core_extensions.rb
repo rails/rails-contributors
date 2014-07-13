@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 UNF_NORMALIZER = UNF::Normalizer.new
 
 class String
