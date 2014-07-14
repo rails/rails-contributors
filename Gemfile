@@ -13,11 +13,11 @@ gem 'coffee-rails', '~> 4.0.0'
 
 group :development do
   gem 'spring'
-  gem 'capistrano', '3.2.1',           require: false
-  gem 'capistrano-bundler', '1.1.2',   require: false
-  gem 'capistrano-rails', '1.1.1',     require: false
-  gem 'capistrano-rvm', '0.1.1',       require: false
-  gem 'capistrano3-unicorn', '0.1.1',  require: false
+  gem 'capistrano', '3.2.1',         require: false
+  gem 'capistrano-bundler', '1.1.2', require: false
+  gem 'capistrano-rails', '1.1.1',   require: false
+  gem 'capistrano-rvm', '0.1.1',     require: false
+  gem 'capistrano3-puma', '0.6.1',   require: false
 end
 
 group :test do
@@ -25,5 +25,5 @@ group :test do
 end
 
 group :production do
-  gem 'unicorn'
+  gem 'puma'
 end

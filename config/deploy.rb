@@ -14,12 +14,3 @@ set :linked_files, %w{config/database.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/system public/assets rails.git}
 
 set :keep_releases, 5
-
-namespace :deploy do
-  task :restart do
-    # Assumes preload_app true, otherwise it would be unicorn:reload.
-    invoke 'unicorn:restart'
-  end
-
-  after :publishing, :restart
-end
