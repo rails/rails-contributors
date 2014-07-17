@@ -119,6 +119,8 @@ module NamesManager
 
   def self.authors_of_special_cased_commits(commit)
     case commit.sha1
+    when 'a9d3b77e494608cedcdad86d7e0c8a07694ffea5'
+      ['Mohamed Osama']
     when '1382f4de1f9b0e443e7884bd4da53c20f0754568'
       # This was a commit backported from 2.3 that missed Dana in the way.
       ['David Burger', 'Dana Jones']
