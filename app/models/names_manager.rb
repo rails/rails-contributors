@@ -644,6 +644,7 @@ module NamesManager
   map 'Karel Minařík',              'karmi', 'Karel Minarik'
   map 'Karol Bucek',                'kares'
   map 'Kaspar Schiess',             "eule\100space.ch"
+  map 'Kasper Timm Hansen',         'Timm'
   map 'Kazuhiro Yoshida',           "moriq\100moriq.com", 'moriq', "kazuhiko\100fdiary.net"
   map 'Keegan Quinn',               "keegan\100thebasement.org"
   map 'Kei Shiratsuchi',            'kei'
