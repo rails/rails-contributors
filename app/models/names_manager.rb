@@ -421,6 +421,7 @@ module NamesManager
   map 'Duncan Beevers',             'duncanbeevers'
   map 'Duncan Robertson',           "duncan\100whomwah.com"
   map 'Dustin Curtis',              'dcurtis'
+  map 'Dylan Thacker-Smith',        'Dylan Smith'
   map 'Eaden McKee',                'eadz', 'Eadz'
   map 'Eddie Cianci',               'defeated'
   map 'Eddie Stanley',              "eddiewould\100paradise.net.nz"
