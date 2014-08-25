@@ -853,6 +853,7 @@ module NamesManager
   map 'Pete Brown',                 'beerlington'
   map 'Pete Yandell',               'notahat'
   map 'Peter Michaux',              "petermichaux\100gmail.com"
+  map 'Peter Schröder',             "phoet"
   map 'Peter Williams',             'pezra'
   map 'Phil Bogle',                 "philbogle\100gmail.com"
   map 'Phil Hagelberg',             "technomancy\100gmail.com", 'technomancy'
