@@ -106,7 +106,7 @@ class Release < ActiveRecord::Base
   def associate_commits(sha1s)
     # We force release_id to be NULL because rev-list in svn yields some
     # repeated commits in several releases.
-    Commit.where(release_id: id).update_all(sha1: sha1s, release_id: nil)
+    Commit.where(sha1: sha1s, release_id: nil).update_all(release_id: id)
   end
 
   # Computes the previous release as of today from the database. The previous

@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'set'
 
 class ReleaseTest < ActiveSupport::TestCase
   def check_version_split(tag, major=0, minor=0, tiny=0, patch=0)
@@ -65,5 +66,17 @@ class ReleaseTest < ActiveSupport::TestCase
     ordered_releases.each_cons(2) do |r, t|
       assert_equal t, r.prev
     end
+  end
+
+  def test_associate_commits
+    Commit.update_all(release_id: nil)
+
+    release = releases('v3_2_0')
+    commits = [commits('commit_b821094'), commits('commit_339e4e8'), commits('commit_6c65676')]
+    sha1s   = commits.map(&:sha1)
+
+    release.associate_commits(sha1s)
+
+    assert_equal sha1s.to_set, release.commits.pluck(:sha1).to_set
   end
 end
