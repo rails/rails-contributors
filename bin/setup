@@ -15,4 +15,4 @@ then
     cp config/database.yml.example $database_config
 fi
 
-bundle exec rake db:create:all db:schema:load db:test:load
+bundle exec rake db:create:all db:schema:load
