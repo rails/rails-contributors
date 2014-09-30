@@ -206,6 +206,7 @@ module NamesManager
   map 'Aaron Pfeifer',              'obrie'
   map 'Aaron Todd',                 'ozzyaaron'
   map 'Abhay Kumar',                'abhay'
+  map 'Abhishek Yadav',             'abhishek'
   map 'Adam Hawkins',               'twinturbo', 'adman65'
   map 'Adam Johnson',               'adamj'
   map 'Adam Kramer',                "adam\100the-kramers.net"
