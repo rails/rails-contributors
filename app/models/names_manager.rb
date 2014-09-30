@@ -503,6 +503,7 @@ module NamesManager
   map 'Ian White',                  "ian.w.white\100gmail.com"
   map 'Ibrahim Abdullah',           'simply-phi'
   map 'Igor Fedoronchuk',           'Igor', 'Fivell'
+  map 'Igor Guzak',                 'igor04'
   map 'Indrek Juhkam',              'innu'
   map 'Innokenty Mikhailov',        'gregolsen'
   map 'Irfan Adilovic',             'Irfy'
