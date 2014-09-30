@@ -217,6 +217,7 @@ module NamesManager
   map 'Aditya Kapoor',              'aditya-kapoor'
   map 'Adrien Coquio',              'bobbus'
   map 'Adrien Siami',               'Intrepidd'
+  map 'Agis Anastasopoulos',        'Agis-'
   map 'Akio Tajima',                'arton', 'artonx'
   map 'Akira Ikeda',                "ikeda\100dream.big.or.jp"
   map 'Akira Matsuda',              '松田 明'
