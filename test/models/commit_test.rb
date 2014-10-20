@@ -26,8 +26,8 @@ class CommitTest < ActiveSupport::TestCase
       sha1 = "b5ed79468289c15a685a82694dcf1adf773c91d#{i}"
       rugged_commit = OpenStruct.new
       rugged_commit.oid       = sha1
-      rugged_commit.author    = {name: 'Juanjo', time: tauth}
-      rugged_commit.committer = {name: 'David', time: tcomm}
+      rugged_commit.author    = {name: 'Juanjo', email: 'juanjo@example.com', time: tauth}
+      rugged_commit.committer = {name: 'David', email: 'david@example.com', time: tcomm}
       rugged_commit.message   = 'this is the message'
       rugged_commit.parents   = parents
 
@@ -35,8 +35,10 @@ class CommitTest < ActiveSupport::TestCase
 
       assert_equal sha1, commit.sha1
       assert_equal 'Juanjo', commit.author_name
+      assert_equal 'juanjo@example.com', commit.author_email
       assert_equal tauth, commit.author_date
       assert_equal 'David', commit.committer_name
+      assert_equal 'david@example.com', commit.committer_email
       assert_equal tcomm, commit.committer_date
       assert_equal 'this is the message', commit.message
       if parents.size > 1

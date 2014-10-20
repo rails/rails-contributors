@@ -32,13 +32,15 @@ class Commit < ActiveRecord::Base
   # Constructor that initializes the object from a Rugged commit.
   def self.import!(rugged_commit)
     create!(
-      sha1:           rugged_commit.oid,
-      author_name:    rugged_commit.author[:name].force_encoding('UTF-8'),
-      author_date:    rugged_commit.author[:time],
-      committer_name: rugged_commit.committer[:name].force_encoding('UTF-8'),
-      committer_date: rugged_commit.committer[:time],
-      message:        rugged_commit.message.force_encoding('UTF-8'),
-      merge:          rugged_commit.parents.size > 1
+      sha1:            rugged_commit.oid,
+      author_name:     rugged_commit.author[:name].force_encoding('UTF-8'),
+      author_email:    rugged_commit.author[:email].force_encoding('UTF-8'),
+      author_date:     rugged_commit.author[:time],
+      committer_name:  rugged_commit.committer[:name].force_encoding('UTF-8'),
+      committer_email: rugged_commit.committer[:email].force_encoding('UTF-8'),
+      committer_date:  rugged_commit.committer[:time],
+      message:         rugged_commit.message.force_encoding('UTF-8'),
+      merge:           rugged_commit.parents.size > 1
     )
   end
 
