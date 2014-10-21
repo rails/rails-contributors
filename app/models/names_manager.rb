@@ -930,7 +930,6 @@ module NamesManager
   map 'Sam Elliott',                'Samuel Elliott'
   map 'Sam Granieri',               'sjgman9'
   map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
-  map 'Sam Stephenson',             'Sam', 'sam'
   map 'Sandra Metz',                "sandra.metz\100duke.edu"
   map 'Sasha Gerrand',              'sgerrand'
   map 'Scott Bronson',              'bronson'
@@ -1096,11 +1095,15 @@ module NamesManager
   end
 
   def self.disambiguate(name, email)
-    if name == 'abhishek'
-      if email == 'abhishek.jain@vinsol.com'
-        'Abhishek Jain'
-      elsif email == 'bigbeliever@gmail.com'
-        'Abhishek Yadav'
+    case name
+    when 'abhishek'
+      case email
+      when 'abhishek.jain@vinsol.com' then 'Abhishek Jain'
+      when 'bigbeliever@gmail.com'    then 'Abhishek Yadav'
+      end
+    when 'Sam'
+      case email
+      when 'sam.saffron@gmail.com' then 'Sam Saffron'
       end
     end
   end

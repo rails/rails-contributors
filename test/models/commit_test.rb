@@ -125,6 +125,17 @@ class CommitTest < ActiveSupport::TestCase
     assert_contributor_names 'Abhishek Yadav', commit
   end
 
+  def test_name_extraction_disambiguates_sam
+    commit = lookup('b37399ab987c3f54e94178da7d41bfc5f48308de')
+    assert_contributor_names 'Sam Saffron', commit
+
+    commit = lookup('0a57f3460119e8fe77250835c0d0fab808ea2ca6')
+    assert_contributor_names 'Sam Saffron', commit
+
+    commit = lookup('44fb54fecdab684425bbc3bb15aac9d5c6e34fc8')
+    assert_contributor_names 'Sam', commit
+  end
+
   def lookup(sha1)
     Commit.new_from_rugged_commit(Repo.new.repo.lookup(sha1))
   end
