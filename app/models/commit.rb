@@ -31,7 +31,13 @@ class Commit < ActiveRecord::Base
 
   # Constructor that initializes the object from a Rugged commit.
   def self.import!(rugged_commit)
-    create!(
+    commit = new_from_rugged_commit(rugged_commit)
+    commit.save!
+    commit
+  end
+
+  def self.new_from_rugged_commit(rugged_commit)
+    new(
       sha1:            rugged_commit.oid,
       author_name:     rugged_commit.author[:name].force_encoding('UTF-8'),
       author_email:    rugged_commit.author[:email].force_encoding('UTF-8'),
@@ -116,7 +122,7 @@ protected
   end
 
   def canonicalize(names)
-    names.map {|name| NamesManager.canonical_name_for(name)}
+    names.map {|name| NamesManager.canonical_name_for(name, author_email)}
   end
 
   # When Rails had a svn repo there was a convention for authors: the committer

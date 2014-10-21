@@ -5,30 +5,30 @@ require 'test_helper'
 class NamesManagerTest < ActiveSupport::TestCase
   test "returns name for canonical name" do
     ["Xavier Noria", "Pratik Naik", "David Heinemeier Hansson"].each do |name|
-      assert_equal name, NamesManager.canonical_name_for(name)
+      assert_equal name, NamesManager.canonical_name_for(name, nil)
     end
   end
 
   test "it is tolerant to leading/trainling whitespace" do
     ["  Xavier Noria", "Pratik Naik  ", " David Heinemeier Hansson "].each do |name|
-      assert_equal name.strip, NamesManager.canonical_name_for(name)
+      assert_equal name.strip, NamesManager.canonical_name_for(name, nil)
     end
   end
 
   test "it is tolerant to email addresses" do
-    assert_equal "Xavier Noria", NamesManager.canonical_name_for("  Xavier Noria <fxn@example.com>  ")
-    assert_equal "Pratik Naik", NamesManager.canonical_name_for("Pratik Naik  <lifo@example.com>")
-    assert_equal "David Heinemeier Hansson", NamesManager.canonical_name_for(" David Heinemeier Hansson <dhh@example.com>   ")
+    assert_equal "Xavier Noria", NamesManager.canonical_name_for("  Xavier Noria <fxn@example.com>  ", nil)
+    assert_equal "Pratik Naik", NamesManager.canonical_name_for("Pratik Naik  <lifo@example.com>", nil)
+    assert_equal "David Heinemeier Hansson", NamesManager.canonical_name_for(" David Heinemeier Hansson <dhh@example.com>   ", nil)
   end
 
   test 'it is tolerant to surrounding Markdown *s' do
-    assert_equal 'Godfrey Chan', NamesManager.canonical_name_for('*Godfrey Chan*')
+    assert_equal 'Godfrey Chan', NamesManager.canonical_name_for('*Godfrey Chan*', nil)
   end
 
   test "it resolves handlers" do
-    assert_equal "Xavier Noria", NamesManager.canonical_name_for("fxn")
-    assert_equal "Pratik Naik", NamesManager.canonical_name_for("lifo")
-    assert_equal "David Heinemeier Hansson", NamesManager.canonical_name_for("DHH")
+    assert_equal "Xavier Noria", NamesManager.canonical_name_for("fxn", nil)
+    assert_equal "Pratik Naik", NamesManager.canonical_name_for("lifo", nil)
+    assert_equal "David Heinemeier Hansson", NamesManager.canonical_name_for("DHH", nil)
   end
 
   test "special case handling" do

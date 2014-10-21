@@ -1082,7 +1082,7 @@ module NamesManager
   # Email addresses are removed, leading/trailing whitespace and
   # surrounding Markdown *s are deleted. If no equivalence is known
   # the canonical name is the resulting sanitized string by definition.
-  def self.canonical_name_for(name)
+  def self.canonical_name_for(name, email)
     name = name.sub(/<[^>]+>/, '') # remove any email address in angles
     name.strip!
 
@@ -1092,7 +1092,17 @@ module NamesManager
     # anything more generic.
     name.sub!(/\A\*/, '')
     name.sub!(/\*\z/, '')
-    CANONICAL_NAME_FOR[name] || name
+    disambiguate(name, email) || CANONICAL_NAME_FOR[name] || name
+  end
+
+  def self.disambiguate(name, email)
+    if name == 'abhishek'
+      if email == 'abhishek.jain@vinsol.com'
+        'Abhishek Jain'
+      elsif email == 'bigbeliever@gmail.com'
+        'Abhishek Yadav'
+      end
+    end
   end
 
   # Removes email addresses (anything between <...>), and strips whitespace.

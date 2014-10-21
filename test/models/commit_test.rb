@@ -116,4 +116,20 @@ class CommitTest < ActiveSupport::TestCase
       [Kevin Clark & Jeremy Hopple]
     MESSAGE
   end
+
+  def test_name_extraction_disambiguates_abhishek
+    commit = lookup('21f0c580f3fddc56e0e7313780ee5dd95f3edb11')
+    assert_contributor_names 'Abhishek Jain', commit
+
+    commit = lookup('00e30b8f1cd364bdd07b1d87a716d571c75cc4da')
+    assert_contributor_names 'Abhishek Yadav', commit
+  end
+
+  def lookup(sha1)
+    Commit.new_from_rugged_commit(Repo.new.repo.lookup(sha1))
+  end
+
+  def assert_contributor_names(contributor_names, commit)
+    assert_equal Array(contributor_names), commit.extract_contributor_names(Repo.new)
+  end
 end
