@@ -405,6 +405,7 @@ module NamesManager
   map 'Derek DeVries',              'devrieda'
   map 'Derrick Spell',              "derrickspell\100cdmplus.com"
   map 'Dick Davies',                'rasputnik'
+  map 'Diego Algorta'               'Diego Algorta Casamayou'
   map 'Diego Giorgini',             'ogeidix'
   map 'Dieter Komendera',           'kommen'
   map 'Dirkjan Bussink',            'dbussink'
