@@ -22,13 +22,19 @@ class CommitTest < ActiveSupport::TestCase
     tcomm = Time.current
     tauth = 1.day.ago
 
+    message = <<-MSG.strip_heredoc
+      \u{1f4a3}
+
+      We are relyingon hash inequality in tests
+    MSG
+
     [[], [1], [1, 2]].each.with_index do |parents, i|
       sha1 = "b5ed79468289c15a685a82694dcf1adf773c91d#{i}"
       rugged_commit = OpenStruct.new
       rugged_commit.oid       = sha1
       rugged_commit.author    = {name: 'Juanjo', email: 'juanjo@example.com', time: tauth}
       rugged_commit.committer = {name: 'David', email: 'david@example.com', time: tcomm}
-      rugged_commit.message   = 'this is the message'
+      rugged_commit.message   = message
       rugged_commit.parents   = parents
 
       commit = Commit.import!(rugged_commit)
@@ -40,7 +46,7 @@ class CommitTest < ActiveSupport::TestCase
       assert_equal 'David', commit.committer_name
       assert_equal 'david@example.com', commit.committer_email
       assert_equal tcomm, commit.committer_date
-      assert_equal 'this is the message', commit.message
+      assert_equal message, commit.message
       if parents.size > 1
         assert commit.merge?
       else

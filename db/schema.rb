@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20141020204646) do
 
   create_table "commits", force: true do |t|
-    t.string   "sha1",            null: false
+    t.string   "sha1",            limit: 191
     t.string   "author_name"
     t.datetime "author_date"
     t.string   "committer_name"
@@ -40,11 +40,11 @@ ActiveRecord::Schema.define(version: 20141020204646) do
 
   create_table "contributors", force: true do |t|
     t.string  "name"
-    t.string  "url_id", null: false
+    t.string  "url_id", limit: 191
     t.integer "rank"
   end
 
-  add_index "contributors", ["name"], name: "index_contributors_on_name", using: :btree
+  add_index "contributors", ["name"], name: "index_contributors_on_name", length: {"name"=>191}, using: :btree
   add_index "contributors", ["url_id"], name: "index_contributors_on_url_id", unique: true, using: :btree
 
   create_table "releases", force: true do |t|
