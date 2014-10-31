@@ -190,6 +190,9 @@ module NamesManager
       # The commit message contains [/Users/senny/.rbenv/versions/2.0.0-p353/bi...] what become a
       # multi author commit.
       ['Yves Senn']
+    when '3fa4e1671fcf903069df88071c473f3a186ee896'
+      # The commit message contains a lot of [] what become a multi author commit.
+      ['Richard Schneeman']
     else
       nil
     end
