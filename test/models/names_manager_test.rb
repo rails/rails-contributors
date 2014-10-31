@@ -34,6 +34,7 @@ class NamesManagerTest < ActiveSupport::TestCase
   test "special case handling" do
     assert_nil NamesManager.handle_special_cases('1234')
     assert_nil NamesManager.handle_special_cases('#2393 state:resolved')
+    assert_nil NamesManager.handle_special_cases('Fixes GH-15891')
     assert_nil NamesManager.handle_special_cases('related #13166')
     assert_nil NamesManager.handle_special_cases(" \t \n \f")
     assert_nil NamesManager.handle_special_cases('See rails ML, subject "Text::Format Licence Exception" on Oct 15, 2005')
@@ -53,6 +54,7 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_nil NamesManager.handle_special_cases('master')
     assert_nil NamesManager.handle_special_cases('extras no-cache max-age public must-revalidate')
     assert_nil NamesManager.handle_special_cases('ci kip')
+    assert_nil NamesManager.handle_special_cases('#{arel.where_sql}')
     assert_equal ['Yehuda Katz', 'Carl Lerche'], NamesManager.handle_special_cases('Carlhuda')
     assert_equal 'Mislav Marohnić', NamesManager.handle_special_cases('=?utf-8?q?Mislav=20Marohni=C4=87?=')
     assert_equal 'Adam Cigánek', NamesManager.handle_special_cases('=?utf-8?q?Adam=20Cig=C3=A1nek?=')
