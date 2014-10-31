@@ -48,12 +48,12 @@ ActiveRecord::Schema.define(version: 20141020204646) do
   add_index "contributors", ["url_id"], name: "index_contributors_on_url_id", unique: true, using: :btree
 
   create_table "releases", force: true do |t|
-    t.string   "tag",   null: false
-    t.datetime "date",  null: false
-    t.integer  "major", null: false
-    t.integer  "minor", null: false
-    t.integer  "tiny",  null: false
-    t.integer  "patch", null: false
+    t.string   "tag",   limit: 191
+    t.datetime "date",              null: false
+    t.integer  "major",             null: false
+    t.integer  "minor",             null: false
+    t.integer  "tiny",              null: false
+    t.integer  "patch",             null: false
   end
 
   add_index "releases", ["tag"], name: "index_releases_on_tag", unique: true, using: :btree
