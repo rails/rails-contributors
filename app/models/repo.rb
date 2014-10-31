@@ -114,7 +114,7 @@ class Repo
 
     ActiveRecord::Base.logger.silence do
       refs(heads).each do |ref|
-        to_visit = [repo.lookup(ref.target)]
+        to_visit = [repo.lookup(ref.target.oid)]
         while commit = to_visit.shift
           unless Commit.exists?(sha1: commit.oid)
             ncommits += 1
@@ -137,7 +137,9 @@ class Repo
     refs(tags).each do |ref|
       tag = ref.name[%r{[^/]+\z}]
       unless Release.exists?(tag: tag)
-        new_releases << Release.import!(tag, repo.lookup(ref.target))
+        target = ref.target
+        commit = target.is_a?(Rugged::Commit) ? target : target.target
+        new_releases << Release.import!(tag, commit)
       end
     end
 
