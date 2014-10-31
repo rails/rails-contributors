@@ -193,6 +193,12 @@ module NamesManager
     when '3fa4e1671fcf903069df88071c473f3a186ee896'
       # The commit message contains a lot of [] what become a multi author commit.
       ['Richard Schneeman']
+    when '8062a307942cb3f7a83bfc1a8cd81e3a1f8edc5b'
+      # The commit message contains a lot of [] what become a multi author commit.
+      ['Martin Emde']
+    when 'b9600001794eb1d4601f5774b592a068b73fd7b5'
+      # The commit message contains a lot of [] what become a multi author commit.
+      ['Val Kotlarov Hoffman']
     else
       nil
     end
