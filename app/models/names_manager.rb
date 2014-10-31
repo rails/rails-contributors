@@ -190,6 +190,15 @@ module NamesManager
       # The commit message contains [/Users/senny/.rbenv/versions/2.0.0-p353/bi...] what become a
       # multi author commit.
       ['Yves Senn']
+    when '3fa4e1671fcf903069df88071c473f3a186ee896'
+      # The commit message contains a lot of [] what become a multi author commit.
+      ['Richard Schneeman']
+    when '8062a307942cb3f7a83bfc1a8cd81e3a1f8edc5b'
+      # The commit message contains a lot of [] what become a multi author commit.
+      ['Martin Emde']
+    when 'b9600001794eb1d4601f5774b592a068b73fd7b5'
+      # The commit message contains a lot of [] what become a multi author commit.
+      ['Val Kotlarov Hoffman']
     else
       nil
     end
@@ -944,7 +953,7 @@ module NamesManager
   map 'Scott Willson',              'scottwillson', 'scott_willson'
   map 'Sean Dent',                  'doabit'
   map 'Sean Geoghegan',             'seangeo'
-  map 'Sean Griffin',               'sgrif'
+  map 'Sean Griffin',               'sgrif', '@sgrif'
   map 'Sean Hussey',                'seanhussey'
   map 'Sean T Allen',               "sean\100ardismg.com"
   map 'Sebastian Delmont',          "sd\100notso.net"
@@ -1132,6 +1141,9 @@ module NamesManager
       when /#\d+/
         # Closes #123, Fixes #123, #123 state:resolved, etc.
         nil
+      when /GH-\d+/
+        # Closes GH-123
+        nil
       when /\A\s*\z/
         nil
       when /^See rails ML/, /RAILS_ENV/
@@ -1251,6 +1263,9 @@ module NamesManager
       when 'master'
         # see https://github.com/rails/rails/commit/06198ed7ad822145e24d9aa964aba97bdb0f8b39
         #     https://github.com/rails/rails/commit/9b6a434defe7aed00f01643abdbc79751dc9d5f1
+        nil
+      when '#{arel.where_sql}'
+        # see https://github.com/rails/rails/commit/90a0471af15808c12e32b9927cf7e37ccfaa0558
         nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
