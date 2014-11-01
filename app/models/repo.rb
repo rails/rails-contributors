@@ -155,9 +155,9 @@ class Repo
   # names into one, for example, the credit for commits of gone names is
   # revised, resulting in the canonical name being associated.
   def sync_names(nmupdated)
-    contributor_names_per_commit = compute_contributor_names_per_commit(nmupdated)
-    manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if nmupdated
-    assign_contributors(contributor_names_per_commit)
+    Contribution.delete_all if nmupdated
+    assign_contributors
+    Contributor.with_no_commits.delete_all if nmupdated
   end
 
   # Once all tables have been updated we compute the rank of each contributor.
@@ -204,44 +204,20 @@ class Repo
   #
   # This computation ignores the current contributions table altogether, it
   # only takes into account the current mapping rules for name resolution.
-  def compute_contributor_names_per_commit(for_all_commits)
-    contributor_names_per_commit = Hash.new {|h, sha1| h[sha1] = []}
-    target = for_all_commits ? Commit : Commit.with_no_contributors
-    target.find_each do |commit|
-      commit.extract_contributor_names(self).each do |contributor_name|
-        contributor_names_per_commit[commit.sha1] << contributor_name
+  def compute_contributor_names_per_commit
+    Hash.new {|h, sha1| h[sha1] = []}.tap do |contributor_names_per_commit|
+      Commit.with_no_contributors.find_each do |commit|
+        commit.extract_contributor_names(self).each do |contributor_name|
+          contributor_names_per_commit[commit.sha1] << contributor_name
+        end
       end
-    end
-    contributor_names_per_commit
-  end
-
-  # Once the contributors are computed from the current commits, the ones in the
-  # contributors table that are gone are destroyed. This happens when a new
-  # equivalence is known for some contributor, when a "name" is added to the
-  # black list in <tt>NamesManager.looks_like_an_author_name</tt>, etc.
-  def manage_gone_contributors(current_contributor_names)
-    previous_contributor_names = NamesManager.all_names
-    gone_names = previous_contributor_names - current_contributor_names
-    destroy_gone_contributors(gone_names.to_a) unless gone_names.empty?
-  end
-
-  # Destroys all contributors in +gone_names+ and clears their commits.
-  # Since commits may have more contributors we are just going to
-  # remove them all to later reassign.
-  def destroy_gone_contributors(gone_names)
-    gone_contributors = Contributor.where(name: gone_names)
-    gone_contributors.each do |contributor|
-      contributor.commits.each do |commit|
-        commit.contributions.clear
-      end
-      contributor.destroy
     end
   end
 
   # Iterates over all commits with no contributors and assigns to them the ones
   # in the previously computed <tt>contributor_names_per_commit</tt>.
-  def assign_contributors(contributor_names_per_commit)
-    # Cache contributors to speed up processing wiped databases.
+  def assign_contributors
+    contributor_names_per_commit = compute_contributor_names_per_commit
     contributors = Hash.new {|h, name| h[name] = Contributor.find_or_create_by(name: name)}
     Commit.with_no_contributors.find_each do |commit|
       contributor_names_per_commit[commit.sha1].each do |contributor_name|

@@ -7,6 +7,11 @@ class Contributor < ActiveRecord::Base
 
   nfc :name
 
+  scope :with_no_commits, -> {
+    joins('LEFT OUTER JOIN contributions ON contributors.id = contributions.contributor_id').
+    where('contributions.commit_id' => nil)
+  }
+
   def self.all_with_ncommits
     _all_with_ncommits(:contributions)
   end
