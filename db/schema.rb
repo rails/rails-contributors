@@ -11,20 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020204646) do
+ActiveRecord::Schema.define(version: 20141101094005) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "commits", force: true do |t|
-    t.string   "sha1",            limit: 191
-    t.string   "author_name"
-    t.datetime "author_date"
-    t.string   "committer_name"
-    t.datetime "committer_date"
-    t.text     "message"
+    t.string   "sha1",            null: false
+    t.string   "author_email",    null: false
+    t.string   "author_name",     null: false
+    t.datetime "author_date",     null: false
+    t.string   "committer_email", null: false
+    t.string   "committer_name",  null: false
+    t.datetime "committer_date",  null: false
+    t.text     "message",         null: false
     t.text     "diff"
     t.integer  "release_id"
-    t.boolean  "merge"
-    t.string   "author_email"
-    t.string   "committer_email"
+    t.boolean  "merge",           null: false
   end
 
   add_index "commits", ["release_id"], name: "index_commits_on_release_id", using: :btree
@@ -39,31 +42,31 @@ ActiveRecord::Schema.define(version: 20141020204646) do
   add_index "contributions", ["contributor_id"], name: "index_contributions_on_contributor_id", using: :btree
 
   create_table "contributors", force: true do |t|
-    t.string  "name"
-    t.string  "url_id", limit: 191
+    t.string  "name",   null: false
+    t.string  "url_id", null: false
     t.integer "rank"
   end
 
-  add_index "contributors", ["name"], name: "index_contributors_on_name", length: {"name"=>191}, using: :btree
+  add_index "contributors", ["name"], name: "index_contributors_on_name", unique: true, using: :btree
   add_index "contributors", ["url_id"], name: "index_contributors_on_url_id", unique: true, using: :btree
 
   create_table "releases", force: true do |t|
-    t.string   "tag",   limit: 191
-    t.datetime "date",              null: false
-    t.integer  "major",             null: false
-    t.integer  "minor",             null: false
-    t.integer  "tiny",              null: false
-    t.integer  "patch",             null: false
+    t.string   "tag",   null: false
+    t.datetime "date",  null: false
+    t.integer  "major", null: false
+    t.integer  "minor", null: false
+    t.integer  "tiny",  null: false
+    t.integer  "patch", null: false
   end
 
   add_index "releases", ["tag"], name: "index_releases_on_tag", unique: true, using: :btree
 
   create_table "repo_updates", force: true do |t|
-    t.integer  "ncommits"
-    t.datetime "started_at"
-    t.datetime "pulled_at"
-    t.datetime "ended_at"
-    t.integer  "nreleases"
+    t.integer  "ncommits",   null: false
+    t.datetime "started_at", null: false
+    t.datetime "ended_at",   null: false
+    t.integer  "nreleases",  null: false
+    t.boolean  "nmupdated",  null: false
   end
 
 end

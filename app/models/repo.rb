@@ -81,8 +81,9 @@ class Repo
         ncommits  = sync_commits
         nreleases = sync_releases
 
-        if ncommits > 0 || nreleases > 0 || names_mapping_updated?
-          sync_names
+        nmupdated = names_mapping_updated?
+        if ncommits > 0 || nreleases > 0 || nmupdated
+          sync_names(nmupdated)
           sync_ranks
         end
 
@@ -90,10 +91,11 @@ class Repo
           ncommits:   ncommits,
           nreleases:  nreleases,
           started_at: started_at,
-          ended_at:   Time.current
+          ended_at:   Time.current,
+          nmupdated:  nmupdated
         )
 
-        ApplicationUtils.expire_cache if cache_needs_expiration?(ncommits, nreleases, names_mapping_updated?)
+        ApplicationUtils.expire_cache if cache_needs_expiration?(ncommits, nreleases, nmupdated)
       end
     end
   end
@@ -152,9 +154,9 @@ class Repo
   # names table. If some names are gone due to new mappings collapsing two
   # names into one, for example, the credit for commits of gone names is
   # revised, resulting in the canonical name being associated.
-  def sync_names
-    contributor_names_per_commit = compute_contributor_names_per_commit(names_mapping_updated?)
-    manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if names_mapping_updated?
+  def sync_names(nmupdated)
+    contributor_names_per_commit = compute_contributor_names_per_commit(nmupdated)
+    manage_gone_contributors(contributor_names_per_commit.values.flatten.uniq) if nmupdated
     assign_contributors(contributor_names_per_commit)
   end
 
@@ -249,7 +251,7 @@ class Repo
   end
 
   # Do we need to expire the cached pages?
-  def cache_needs_expiration?(ncommits, nreleases, names_mapping_updated)
-    ncommits > 0 || nreleases > 0 || names_mapping_updated
+  def cache_needs_expiration?(ncommits, nreleases, nmupdated)
+    ncommits > 0 || nreleases > 0 || nmupdated
   end
 end

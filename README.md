@@ -4,7 +4,17 @@ This is the application behind http://contributors.rubyonrails.org.
 
 ## System dependencies
 
-MySQL, cmake (o compile rugged).
+PostgreSQL, and rugged dependencies.
+
+In Ubuntu:
+
+```
+# PostgreSQL
+sudo apt-get install postgresql postgresql-contrib libpq-dev
+
+# rugged dependencies
+sudo apt-get install cmake libgit2-0 libgit2-dev
+```
 
 ## How to run the tests
 

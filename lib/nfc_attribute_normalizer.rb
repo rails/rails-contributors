@@ -5,7 +5,7 @@ module NFCAttributeNormalizer
       attribute_names.each do |name|
         module_eval <<-EOS
           def #{name}=(value)
-            value = value.to_s.nfc unless value.nil?
+            value = value.to_s.scrub.nfc unless value.nil?
             write_attribute(#{name.inspect}, value)
           end
         EOS

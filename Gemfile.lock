@@ -68,10 +68,10 @@ GEM
     mime-types (2.4.3)
     minitest (5.4.2)
     multi_json (1.10.1)
-    mysql2 (0.3.16)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
+    pg (0.17.1)
     puma (2.9.0)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
@@ -140,7 +140,7 @@ DEPENDENCIES
   capistrano3-puma (= 0.6.1)
   coffee-rails (~> 4.0.0)
   delorean
-  mysql2
+  pg
   puma
   rails (~> 4.1.7)
   rugged (~> 0.21.0)

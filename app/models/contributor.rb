@@ -24,11 +24,11 @@ class Contributor < ActiveRecord::Base
   end
 
   def self._all_with_ncommits(joins, where=nil)
-    select('contributors.*, COUNT(contributions.commit_id) AS ncommits').
+    select('contributors.*, COUNT(*) AS ncommits').
       joins(joins).
       where(where).
-      group('contributions.contributor_id').
-      order('ncommits DESC, url_id ASC')
+      group('contributors.id').
+      order('ncommits DESC, contributors.url_id ASC')
   end
 
   # The contributors table may change if new name equivalences are added and IDs

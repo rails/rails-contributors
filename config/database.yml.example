@@ -1,18 +1,14 @@
-development:
-  adapter: mysql2
-  encoding: utf8mb4
-  database: rails-contributors_development
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  socket: "/var/run/postgresql/.s.PGSQL.5432"
   pool: 5
-  username: root
-  password:
-  host: localhost
+  min_messages: error
+
+development:
+  <<: *defaults
+  database: rails_contributors_development
 
 test:
-  adapter: mysql2
-  encoding: utf8mb4
-  database: rails-contributors_test
-  pool: 5
-  username: root
-  password:
-  host: localhost
-
+  <<: *defaults
+  database: rails_contributors_test
