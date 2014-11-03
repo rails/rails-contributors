@@ -196,9 +196,6 @@ module NamesManager
     when '8062a307942cb3f7a83bfc1a8cd81e3a1f8edc5b'
       # The commit message contains a lot of [] what become a multi author commit.
       ['Martin Emde']
-    when 'b9600001794eb1d4601f5774b592a068b73fd7b5'
-      # The commit message contains a lot of [] what become a multi author commit.
-      ['Val Kotlarov Hoffman']
     else
       nil
     end
@@ -1169,6 +1166,9 @@ module NamesManager
         nil
       when /\A#https/
         # Signed-off-by: Michael Koziarski <michael\100koziarski.com> [#https://rails.lighthouseapp.com/attachments/106066/0001-Ensure-SqlBypass-use-ActiveRecord-Base-connection.patch state:committed]
+        nil
+      when /\Ahttps:\/\/github\.com\/rails\/rails\/issues\/\d+/
+        # [https://github.com/rails/rails/issues/11834]
         nil
       when '\\x00-\\x1f'
         #  Fix ActiveSupport::JSON encoding of control characters [\x00-\x1f]

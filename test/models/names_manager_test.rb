@@ -55,6 +55,7 @@ class NamesManagerTest < ActiveSupport::TestCase
     assert_nil NamesManager.handle_special_cases('extras no-cache max-age public must-revalidate')
     assert_nil NamesManager.handle_special_cases('ci kip')
     assert_nil NamesManager.handle_special_cases('#{arel.where_sql}')
+    assert_nil NamesManager.handle_special_cases('https://github.com/rails/rails/issues/11834')
     assert_equal ['Yehuda Katz', 'Carl Lerche'], NamesManager.handle_special_cases('Carlhuda')
     assert_equal 'Mislav Marohnić', NamesManager.handle_special_cases('=?utf-8?q?Mislav=20Marohni=C4=87?=')
     assert_equal 'Adam Cigánek', NamesManager.handle_special_cases('=?utf-8?q?Adam=20Cig=C3=A1nek?=')
