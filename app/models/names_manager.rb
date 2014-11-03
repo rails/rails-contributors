@@ -438,7 +438,7 @@ module NamesManager
   map 'Eduardo Cavazos',            'dharmatech'
   map 'Edward Betts',               "edward\100debian.org"
   map 'Eelco Lempsink',             "rails\10033lc0.net"
-  map 'Egor Homakov',               'homa', 'homakov'
+  map 'Egor Homakov',               'homa', 'homakov', '@homakov'
   map 'Elan Feingold',              "elan\100bluemandrill.com"
   map 'Eileen M. Uchitelle',        'eileencodes'
   map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
