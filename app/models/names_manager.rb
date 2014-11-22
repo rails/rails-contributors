@@ -1267,6 +1267,10 @@ module NamesManager
       when '#{arel.where_sql}'
         # see https://github.com/rails/rails/commit/90a0471af15808c12e32b9927cf7e37ccfaa0558
         nil
+      when 'WHERE ()'
+        # see https://github.com/rails/rails/commit/63b80b5b58097e2d280b8c71acefecf0f5d3f47b
+        #     https://github.com/rails/rails/commit/055ebcc2cce7bcc034eb657c3e60f4c27bb13204
+        #     https://github.com/rails/rails/commit/f766abd4cf3eb75469d3646cfb6d85e668c619f3
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when 'tomhuda'

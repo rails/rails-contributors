@@ -123,6 +123,11 @@ class CommitTest < ActiveSupport::TestCase
     MESSAGE
   end
 
+
+  #
+  # --- Disambiguation --------------------------------------------------------
+  #
+
   def test_name_extraction_disambiguates_abhishek
     commit = lookup('21f0c580f3fddc56e0e7313780ee5dd95f3edb11')
     assert_contributor_names 'Abhishek Jain', commit
@@ -140,6 +145,21 @@ class CommitTest < ActiveSupport::TestCase
 
     commit = lookup('44fb54fecdab684425bbc3bb15aac9d5c6e34fc8')
     assert_contributor_names 'Sam', commit
+  end
+
+
+  #
+  # --- False Positives -------------------------------------------------------
+  #
+
+  def test_false_positive_where_parens
+    %w(
+      63b80b5b58097e2d280b8c71acefecf0f5d3f47b
+      055ebcc2cce7bcc034eb657c3e60f4c27bb13204
+      f766abd4cf3eb75469d3646cfb6d85e668c619f3
+    ).each do |sha1|
+      assert_contributor_names 'Yves Senn', lookup(sha1)
+    end
   end
 
   def lookup(sha1)
