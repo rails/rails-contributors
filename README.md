@@ -2,6 +2,10 @@
 
 This is the application behind http://contributors.rubyonrails.org.
 
+## Ruby
+
+Needs Ruby 2.1.
+
 ## System dependencies
 
 PostgreSQL, and rugged dependencies.
