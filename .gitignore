@@ -1,9 +1,4 @@
-.bundle
-log
-db/*.sqlite3
-.idea
-tmp/**/*
-config/newrelic.yml
-config/initializers/hoptoad.rb
-config/database.yml
-rails.git
+/config/database.yml
+/log
+/tmp
+/rails.git

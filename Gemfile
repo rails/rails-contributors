@@ -1,17 +1,19 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.1.8'
+gem 'rails', '~> 4.2.0.rc1'
 gem 'pg'
-gem 'rugged', '~> 0.21.0'
+gem 'rugged', '0.21.0'
 gem 'unf'
 gem 'turbolinks'
 gem 'actionpack-page_caching'
 
-gem 'sass-rails', '~> 4.0.4'
+gem 'sass-rails', '~> 4.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
 
 group :development do
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'capistrano', '3.2.1',         require: false
   gem 'capistrano-bundler', '1.1.2', require: false
