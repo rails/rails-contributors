@@ -32,4 +32,8 @@ module ApplicationHelper
     title = title.starts_with?('Rails Contributors') ? title : "Rails Contributors - #{title}"
     strip_tags(title)
   end
+
+  def pluralize_with_delimiter(count, singular, plural = nil)
+    pluralize number_with_delimiter(count), singular, plural
+  end
 end

@@ -5,7 +5,7 @@
 
 <h1 id="title">
   <%= @title %><br/>
-  <span class="listing-total">Showing <%= pluralize @contributors.length, 'person' %></span>
+  <span class="listing-total">Showing <%= pluralize_with_delimiter @contributors.length, 'person' %></span>
 </h1>
 <%= link_to "See names mapping →", 'https://github.com/fxn/rails-contributors/blob/master/app/models/names_manager.rb', class: 'name-mapping' %>
 

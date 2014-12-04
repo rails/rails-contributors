@@ -12,6 +12,6 @@
          contributor_commits_path(contributor)
        end
     %>
-    <%= link_to contributor.ncommits, path %>
+    <%= link_to number_with_delimiter(contributor.ncommits), path %>
   </td>
 </tr>
