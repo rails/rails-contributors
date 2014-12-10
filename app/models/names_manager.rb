@@ -263,7 +263,7 @@ module NamesManager
   map 'Andrew Shcheglov',           'windock'
   map 'Andrew White',               'pixeltrix'
   map 'Andrey Morskov',             'accessd', 'Accessd'
-  map 'Andrey Nering',              'andrey.nering\100gmail.com'
+  map 'Andrey Nering',              "andrey.nering\100gmail.com"
   map 'Andy Lien',                  "andylien\100gmail.com"
   map 'Angelo Capilleri',           'angelo giovanni capilleri', 'Angelo capilleri'
   map 'Ankit Gupta',                'ankit8898', 'Ankit Gupta-FIR'
