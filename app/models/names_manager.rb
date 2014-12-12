@@ -1272,6 +1272,10 @@ module NamesManager
         # see https://github.com/rails/rails/commit/63b80b5b58097e2d280b8c71acefecf0f5d3f47b
         #     https://github.com/rails/rails/commit/055ebcc2cce7bcc034eb657c3e60f4c27bb13204
         #     https://github.com/rails/rails/commit/f766abd4cf3eb75469d3646cfb6d85e668c619f3
+        nil
+      when 'nothing'
+        # see https://github.com/rails/rails/commit/ee65f48c2666a660cc48496c8bc9f63113a41e44
+        nil
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when 'tomhuda'

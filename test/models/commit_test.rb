@@ -162,6 +162,10 @@ class CommitTest < ActiveSupport::TestCase
     end
   end
 
+  def test_false_positive_nothing
+    assert_contributor_names 'T.J. Schuck', lookup('ee65f48c2666a660cc48496c8bc9f63113a41e44')
+  end
+
   def lookup(sha1)
     Commit.new_from_rugged_commit(Repo.new.repo.lookup(sha1))
   end
