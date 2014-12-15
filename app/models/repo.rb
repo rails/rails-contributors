@@ -8,7 +8,7 @@ class Repo
   #   git clone --mirror git://github.com/rails/rails.git
   #
   PATH  = "#{Rails.root}/rails.git"
-  HEADS = %r{\Arefs/heads/(?:master|.*-stable)\z}
+  HEADS = %r{\Arefs/heads/(master|[\d\-]+(-stable)?)\z}
   TAGS  = %r{\Arefs/tags/v[\d.]+\z}
 
   # This is the entry point to sync the database from cron jobs etc:
