@@ -196,6 +196,9 @@ module NamesManager
     when '8062a307942cb3f7a83bfc1a8cd81e3a1f8edc5b'
       # The commit message contains a lot of [] what become a multi author commit.
       ['Martin Emde']
+    when 'e428ddececf43923dec4299c40b29451e5bea80d'
+      # The commit message contains a lot of [] what become a multi author commit.
+      ['Claudio Baccigalupo']
     else
       nil
     end
@@ -1214,6 +1217,9 @@ module NamesManager
         nil
       when /skip[ _-]ci/i
         # see https://github.com/rails/rails/commit/b1c28d710521c6931abc2b394de34ac8a174d844
+        nil
+      when 'ci skp'
+        # see https://github.com/rails/rails/commit/94e8fc06199d385174ff4d66a0be4d23e2d45f2f
         nil
       when 'ci ski'
         # see https://github.com/rails/rails/commit/1c2717d3f5a3ce0ea97f832d1d008e053ad47acd
