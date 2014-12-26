@@ -199,6 +199,10 @@ module NamesManager
     when 'e428ddececf43923dec4299c40b29451e5bea80d'
       # The commit message contains a lot of [] what become a multi author commit.
       ['Claudio Baccigalupo']
+    when 'd318badc269358c53d9dfb4000e8c4c21a94b578'
+      # The author opened a similar pull request a while before but it
+      # never got merged.
+      ['Grey Baker', 'Adrien Siami']
     else
       nil
     end
