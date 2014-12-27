@@ -1079,6 +1079,7 @@ module NamesManager
   map 'Yoji Shidara',               "darashi\100gmail.com"
   map 'Yonatan Feldman',            "yon\100milliped.com", 'yon'
   map 'Yossef Mendelssohn',         'ymendel'
+  map 'Yuki Minamiya',              'yuki3738'
   map 'Yury Korolev',               'yury'
   map 'Yuri Leikind',               'leikind'
   map 'Yurii Rashkovskii',          "yrashk\100gmail.com", "yrashk\100fp.org.ua"

@@ -15,5 +15,9 @@ module Credits
     test '_tiii' do
       assert_contributor_names 'a4b02be', 'Titus Ramczykowski'
     end
+
+    test 'yuki3738' do
+      assert_contributor_names '17bb531', 'Yuki Minamiya'
+    end
   end
 end
