@@ -5,7 +5,7 @@ module Credits
   class DisambiguationTest < ActiveSupport::TestCase
     include AssertContributorNames
 
-    test 'disambiguates Abhishek' do
+    test 'disambiguates abhishek' do
       assert_contributor_names '21f0c58', 'Abhishek Jain'
       assert_contributor_names '00e30b8', 'Abhishek Yadav'
     end
@@ -18,6 +18,16 @@ module Credits
 
     test 'disambiguates root' do
       assert_contributor_names 'a9d3b77', 'Mohamed Osama'
+    end
+
+    test 'disambiguates unknown' do
+      assert_contributor_names 'e813ad2a', 'Andrew Grimm'
+      assert_contributor_names '2414fdb2', 'Jens Kolind'
+    end
+
+    test 'disambiguates David' do
+      assert_contributor_names '5d5f0bad', 'David Heinemeier Hansson', 'Sam Stephenson'
+      assert_contributor_names 'bc437632', 'David Wang'
     end
   end
 end

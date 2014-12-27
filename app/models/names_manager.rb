@@ -120,6 +120,12 @@ module NamesManager
   # Sometimes the information to give credit for some commits it is just not
   # present in the repository. Tipycally external/social knowledge is needed.
   # This method has a hard-coded list of contributor names for those commits.
+  #
+  # In some cases, credit can be found in the commit message in a way we do
+  # not process, for example exceptionally some commits uses parens instead
+  # of square brackets.
+  #
+  # See the comment in each case for their justification.
   def self.authors_of_special_cased_commits(commit)
     case commit.sha1
     when '1382f4de1f9b0e443e7884bd4da53c20f0754568'
@@ -145,61 +151,36 @@ module NamesManager
       # Author is "pivotal", but Adam Milligan told me he himself is the author (via github).
       ['Adam Milligan']
     when 'ddf2b4add33d5e54c5f5e7adacadbb50d3fa7b52'
+      # These were Xavier's edits that for some reason were committed by Mikel.
       ['Xavier Noria']
     when '3b1c69d2dd2b24a29e4443d7dc481589320a3f3e'
+      # Waiting for its justification (see https://github.com/rails/rails/commit/3b1c69d2dd2b24a29e4443d7dc481589320a3f3e#commitcomment-9099352).
       ['Kieran Pilkington']
-    when 'e813ad2a42549e308a69fd9473f1b9ed531a0d7e'
-      ['Andrew Grimm'] # see #3999
-    when '2414fdb244cc0ba97620dd3f50e269d2e26c7392'
-      ['Jens Kolind'] # see #1859
-    when '1851af84c1c7244dc416be9c93a4700b70e801e3'
-      # The commit message has a line ending with "user[password]", and the current heuristics
-      # interpret "password" is the contributor. Changing the heuristic is brittle so by now
-      # it is handled by hand so that at least the credit goes to Santiago.
-      ['Santiago Pastorino']
-    when '83ecd03e7d3472c16decbf1b9939da53347b36a3'
-      # Similar issue, some lines in the commit message end with "[x86_64-darwin10.4.0]"
-      # or similar.
-      ['Stevie Graham']
     when 'a4041c5392457448cfdfef2e1b24007cfa46948b'
       # Vishnu forked using a different email address, and credit goes in the git commit
       # to Vishnu K. Sharma because of that, but the commit is his.
       ['Vishnu Atrai']
     when 'ec44763f03b49e8c6e3bff71772ba32863a01306'
-      # @The_Empty asked for this fix on Twitter.
+      # Mohammad El-Abid asked for this fix on Twitter (see https://twitter.com/The_Empty/status/73864303123496960).
       ['Mohammad Typaldos']
     when '99dd117d6292b66a60567fd950c7ca2bda7e01f3'
-      # same here
+      # Same here.
       ['Mohammad Typaldos']
     when '3582bce6fdb30730b34b91a17b8bb33066eed7b8'
-      # The attribution was wrong, and amended later in 33736bc18a9733d95953f6eaec924db10badc908
+      # The attribution was wrong, and amended later in 33736bc18a9733d95953f6eaec924db10badc908.
       ['Juanjo Bazán', 'Tarmo Tänav', 'BigTitus']
-    when 'bc43763247e25058ca1ab50637a649f0b5b186eb'
-      # The author in Git is just "David", name clash with David.
-      ['David Wang']
     when '7e8e91c439c1a877f867cd7ba634f7297ccef04b'
+      # Credit was given in a non-conventional manner.
       ['Godfrey Chan', 'Philippe Creux']
     when '798881ecd4510b9e1e5e10529fc2d81b9deb961e', '134c1156dd5713da41c62ff798fe3979723e64cc'
+      # Idem.
       ['Godfrey Chan', 'Sergio Campamá']
     when 'b23ffd0dac895aa3fd3afd8d9be36794941731b2'
-      # https://github.com/rails/rails/pull/13692#issuecomment-33617156
+      # See https://github.com/rails/rails/pull/13692#issuecomment-33617156.
       ['Łukasz Sarnacki', 'Matt Aimonetti']
     when '1240338a02e5decab2a94b651fff78889d725e31'
       # Blake and Arthur paired on this YAML compatibility backport.
       ['Blake Mesdag', 'Arthur Neves']
-    when '67d4dc2bdb27648a61e153996d629b44834a9de4'
-      # The commit message contains [/Users/senny/.rbenv/versions/2.0.0-p353/bi...] what become a
-      # multi author commit.
-      ['Yves Senn']
-    when '3fa4e1671fcf903069df88071c473f3a186ee896'
-      # The commit message contains a lot of [] what become a multi author commit.
-      ['Richard Schneeman']
-    when '8062a307942cb3f7a83bfc1a8cd81e3a1f8edc5b'
-      # The commit message contains a lot of [] what become a multi author commit.
-      ['Martin Emde']
-    when 'e428ddececf43923dec4299c40b29451e5bea80d'
-      # The commit message contains a lot of [] what become a multi author commit.
-      ['Claudio Baccigalupo']
     when 'd318badc269358c53d9dfb4000e8c4c21a94b578'
       # Adrien worked on the fix, Grey on a regression spec, but only Grey's PR
       # was merged. See https://github.com/fxn/rails-contributors/pull/59.
@@ -1130,6 +1111,16 @@ module NamesManager
       case email
       when "mohamed.o.alnagdy\100gmail.com" then 'Mohamed Osama'
       end
+    when 'unknown'
+      case email
+      when "agrimm\100.(none)" then 'Andrew Grimm'
+      when "jeko1\100.npfit.nhs.uk" then 'Jens Kolind'
+      end
+    when 'David'
+      case email
+      when "david\100loudthinking.com" then 'David Heinemeier Hansson'
+      when "DevilDavidWang\100gmail.com" then 'David Wang'
+      end
     end
   end
 
@@ -1296,6 +1287,23 @@ module NamesManager
       when 'nothing'
         # see https://github.com/rails/rails/commit/ee65f48c2666a660cc48496c8bc9f63113a41e44
         nil
+      when 'password'
+        # see https://github.com/rails/rails/commit/1851af84c1c7244dc416be9c93a4700b70e801e3
+        nil
+      when 'x86_64-darwin10.4.0'
+        # see https://github.com/rails/rails/commit/83ecd03e7d3472c16decbf1b9939da53347b36a3
+        nil
+      when '/Users/senny/.rbenv/versions/2.0.0-p353/bi...'
+        # see https://github.com/rails/rails/commit/67d4dc2bdb27648a61e153996d629b44834a9de4
+        nil
+      when '| <dir> | @<archive> | -C <dir>'
+        # see https://github.com/rails/rails/commit/3fa4e1671fcf903069df88071c473f3a186ee896
+        nil
+      when 'darwin-x86_64'
+        # see https://github.com/rails/rails/commit/e428ddececf43923dec4299c40b29451e5bea80d
+        nil
+      when /Author.find\([12]\)/
+        # see https://github.com/rails/rails/commit/8062a307942cb3f7a83bfc1a8cd81e3a1f8edc5b
       when 'Carlhuda'
         ['Yehuda Katz', 'Carl Lerche']
       when 'tomhuda'
