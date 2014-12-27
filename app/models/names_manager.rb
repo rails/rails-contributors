@@ -836,6 +836,7 @@ module NamesManager
   map 'Nikolay Petrachkov',         'jastix'
   map 'Nils-Helge Garli Hegvik',    'nilsga'
   map 'Nils Jonsson',               "nils\100alumni.rice.edu"
+  map 'Noam Gagliardi Rabinovich',  'noam'
   map 'Nobuhiro Imai',              "nov\100yo.rim.or.jp", 'Nobuhiro IMAI'
   map 'Nobukazu Matake',            'nov'
   map 'Norbauer Inc',               'norbauer'
