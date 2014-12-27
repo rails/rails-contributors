@@ -117,10 +117,11 @@ module NamesManager
     SEEN_ALSO_AS[canonical_name.nfc] = also_as.map(&:nfc)
   end
 
+  # Sometimes the information to give credit for some commits it is just not
+  # present in the repository. Tipycally external/social knowledge is needed.
+  # This method has a hard-coded list of contributor names for those commits.
   def self.authors_of_special_cased_commits(commit)
     case commit.sha1
-    when 'a9d3b77e494608cedcdad86d7e0c8a07694ffea5'
-      ['Mohamed Osama']
     when '1382f4de1f9b0e443e7884bd4da53c20f0754568'
       # This was a commit backported from 2.3 that missed Dana in the way.
       ['David Burger', 'Dana Jones']
@@ -1124,6 +1125,10 @@ module NamesManager
     when 'Sam'
       case email
       when 'sam.saffron@gmail.com' then 'Sam Saffron'
+      end
+    when 'root'
+      case email
+      when "mohamed.o.alnagdy\100gmail.com" then 'Mohamed Osama'
       end
     end
   end
