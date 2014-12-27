@@ -1,8 +1,9 @@
 require 'test_helper'
 
-# Heuristics sometimes yield contributor names we know are wrong. For example,
-# "[DHH]" at the end of a commit message means that commit should be credited
-# to David, but "[ci skip]" is not a contributor's name.
+# Heuristics sometimes yield contributor names we know are false positives.
+#
+# For example, "[DHH]" in a commit message means David should be credited,
+# but "[Sean Griffin & ysbaddaden]" or "[ci skip]" need special handling.
 module Credits
   class FalsePositivesTest < ActiveSupport::TestCase
     include AssertContributorNames
@@ -15,6 +16,10 @@ module Credits
 
     test 'nothing' do
       assert_contributor_names 'ee65f48', 'T.J. Schuck'
+    end
+
+    test 'connector &' do
+      assert_contributor_names 'b0f2b94', 'Sean Griffin', 'Julien Portalier'
     end
   end
 end
