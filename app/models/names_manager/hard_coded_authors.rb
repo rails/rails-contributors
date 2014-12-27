@@ -1,14 +1,16 @@
 module NamesManager
-  # Sometimes the information to give credit for some commits it is just not
-  # present in the repository. Tipycally external/social knowledge is needed.
-  # This method has a hard-coded list of contributor names for those commits.
-  #
-  # In some cases, credit can be found in the commit message in a way we do
-  # not process, for example exceptionally some commits uses parens instead
-  # of square brackets.
-  #
-  # See the comment in each case for their justification.
   module HardCodedAuthors
+    # Sometimes the information to give credit for some commits is just not
+    # present in the repository, or is present in a way the application does
+    # not understand. This method has a hard-coded list of contributor names
+    # for those commits.
+    #
+    # See the comment in each case for their justification.
+    #
+    # Please add commits here very exceptionally, only when there's no way
+    # we can extract the candidates from the commit. False positives are
+    # handled by NamesManager::FalsePositives, and regular aliases are managed
+    # by NamesManager::CanonicalNames.
     def hard_coded_authors(commit)
       case commit.sha1
       when '1382f4de1f9b0e443e7884bd4da53c20f0754568'
