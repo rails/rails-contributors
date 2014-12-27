@@ -1031,6 +1031,7 @@ module NamesManager
   map 'Tim Lucas',                  "t.lucas\100toolmantim.com", 'toolmantim'
   map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
   map 'Tim Trautmann',              "timct\100mac.com"
+  map 'Titus Ramczykowski',         '_tiii'
   map 'Tobias Lütke',               'Tobias Luetke', 'TobiasLuetke', 'Tobias Luekte', 'xal'
   map 'Toby Cabot',                 'toby cabot'
   map 'Todd Gehman',                "todd\100robotcoop.com", 'todd'

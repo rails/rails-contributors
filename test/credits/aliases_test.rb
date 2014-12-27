@@ -11,5 +11,9 @@ module Credits
     test 'noam' do
       assert_contributor_names 'b64fb30', 'Noam Gagliardi Rabinovich'
     end
+
+    test '_tiii' do
+      assert_contributor_names 'a4b02be', 'Titus Ramczykowski'
+    end
   end
 end
