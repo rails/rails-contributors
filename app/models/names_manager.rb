@@ -1043,6 +1043,7 @@ module NamesManager
   map 'Tom Preston-Werner',         'mojombo'
   map 'Tom Stone',                  'iaddict'
   map 'Tom Ward',                   'Tom ward', 'tomafro', "tom\100popdog.net"
+  map 'Tomohiro Hashidate',         'joker1007'
   map 'Tony Jian',                  '簡煒航'
   map 'Toshinori Kajihara',         'kennyj'
   map 'Trek Glowacki',              'trek'
