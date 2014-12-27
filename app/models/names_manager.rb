@@ -200,8 +200,8 @@ module NamesManager
       # The commit message contains a lot of [] what become a multi author commit.
       ['Claudio Baccigalupo']
     when 'd318badc269358c53d9dfb4000e8c4c21a94b578'
-      # The author opened a similar pull request a while before but it
-      # never got merged.
+      # Adrien worked on the fix, Grey on a regression spec, but only Grey's PR
+      # was merged. See https://github.com/fxn/rails-contributors/pull/59.
       ['Grey Baker', 'Adrien Siami']
     else
       nil
