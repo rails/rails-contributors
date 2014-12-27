@@ -195,7 +195,7 @@ class Repo
       lastru = RepoUpdate.last
       # Use started_at in case a revised names manager is deployed while an update
       # is running.
-      lastru ? NamesManager.mapping_updated_since?(lastru.started_at) : true
+      lastru ? NamesManager.updated_since?(lastru.started_at) : true
     end
   end
 

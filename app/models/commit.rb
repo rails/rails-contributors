@@ -81,14 +81,14 @@ protected
   # convention. If none is found we check the changelog entry for svn commits.
   # If that fails as well the contributor is the git author by definition.
   def extract_candidates(repo)
-    names = authors_of_special_cased_commits
+    names = hard_coded_authors
     if names.nil?
       names = extract_contributor_names_from_text(message)
       if names.empty?
         names = extract_svn_contributor_names_diffing(repo) if imported_from_svn?
         if names.empty?
           sanitized = sanitize([author_name])
-          names = handle_special_cases(sanitized)
+          names = handle_false_positives(sanitized)
           if names.empty?
             names = sanitized
           end
@@ -109,16 +109,16 @@ protected
     names.map(&:nfc)
   end
 
-  def authors_of_special_cased_commits
-    NamesManager.authors_of_special_cased_commits(self)
+  def hard_coded_authors
+    NamesManager.hard_coded_authors(self)
   end
 
   def sanitize(names)
     names.map {|name| NamesManager.sanitize(name)}
   end
 
-  def handle_special_cases(names)
-    names.map {|name| NamesManager.handle_special_cases(name)}.flatten.compact
+  def handle_false_positives(names)
+    names.map {|name| NamesManager.handle_false_positives(name)}.flatten.compact
   end
 
   def canonicalize(names)
@@ -140,7 +140,7 @@ protected
   def extract_contributor_names_from_text(text)
     names = text =~ /\[([^\]]+)\](?:\s+\(?Closes\s+#\d+\)?)?\s*$/ ? [$1] : []
     names = sanitize(names)
-    handle_special_cases(names)
+    handle_false_positives(names)
   end
 
   # Looks for contributor names in changelogs.

@@ -4,7 +4,7 @@ module Credits
   class SpecialCasedCommitsTest < ActiveSupport::TestCase
     include AssertContributorNames
 
-    test 'hard-coded authors' do
+    test 'special-cased commits' do
       assert_contributor_names '1382f4d', 'David Burger', 'Dana Jones'
       assert_contributor_names '882dd4e', 'David Calavera'
       assert_contributor_names 'f9a02b1', 'Juan Lupión'
