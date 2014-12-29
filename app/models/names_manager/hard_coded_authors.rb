@@ -39,7 +39,8 @@ module NamesManager
         # These were Xavier's edits that for some reason were committed by Mikel.
         ['Xavier Noria']
       when '3b1c69d2dd2b24a29e4443d7dc481589320a3f3e'
-        # Waiting for its justification (see https://github.com/rails/rails/commit/3b1c69d2dd2b24a29e4443d7dc481589320a3f3e#commitcomment-9099352).
+        # This was a patch from a bugmash that was applied by Xavier directly.
+        # See https://rails.lighthouseapp.com/projects/8994/tickets/4284.
         ['Kieran Pilkington']
       when 'a4041c5392457448cfdfef2e1b24007cfa46948b'
         # Vishnu forked using a different email address, and credit goes in the git commit
