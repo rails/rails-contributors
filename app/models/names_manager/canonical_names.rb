@@ -670,6 +670,7 @@ module NamesManager
     map 'Perry Smith',                'pedz'
     map 'Pete Brown',                 'beerlington'
     map 'Pete Yandell',               'notahat'
+    map 'Peter Haight',               'Dawnthorn'
     map 'Peter Michaux',              "petermichaux\100gmail.com"
     map 'Peter Schröder',             "phoet"
     map 'Peter Williams',             'pezra'
