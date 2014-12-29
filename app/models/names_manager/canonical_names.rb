@@ -154,6 +154,7 @@ module NamesManager
     map 'Chris Finne',                'chrisfinne', 'chris finne'
     map 'Chris Hapgood',              'cch1'
     map 'Chris Kampmeier',            'kampers'
+    map 'Chris Kohlbrenner',          'chriskohlbrenner'
     map 'Chris McGrath',              "c.r.mcgrath\100gmail.com", 'c.r.mcgrath', "chris\100octopod.info", 'octopod'
     map 'Chris Mear',                 "chris\100feedmechocolate.com", 'chrismear'
     map "Chris O'Sullivan",           'thechrisoshow'
