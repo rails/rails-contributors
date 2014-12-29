@@ -166,6 +166,7 @@ module NamesManager
     map 'Clifford T. Matthews',       'ctm'
     map 'Coda Hale',                  'codahale'
     map 'Cody Fauser',                "codyfauser\100gmail.com"
+    map 'Colman Nady',                "colman\100rominato.com"
     map 'Corey Haines',               'coreyhaines'
     map 'Courtenay Gasking',          'court3nay', 'courtenay', "court3nay\100gmail.com"
     map 'Craig Davey',                'eigentone', "eigentone\100gmail.com"
