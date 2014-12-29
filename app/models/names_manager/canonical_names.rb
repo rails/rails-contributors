@@ -768,6 +768,7 @@ module NamesManager
     map 'Serg Podtynnyi',             'shtirlic'
     map 'Serge Balyuk',               'bgipsy'
     map 'Sergey Kojin',               "sergeykojin\100gmail.com"
+    map 'Sergey Karpesh',             'kasper'
     map 'Sergey Nartimov',            'lest'
     map 'Sergio Gil',                 'Sergio Gil Pérez de la Manga'
     map 'Seth Ladd',                  'sethladd'
