@@ -513,6 +513,7 @@ module NamesManager
     map 'Leslie A. Hensley',          "hensleyl\100papermountain.org"
     map 'Lewis Jubb',                 "minimudboy\100gmail.com"
     map 'Lihan Li',                   'lihanli', 'lihan'
+    map 'Lim Chee Hau',               'ch33hau'
     map 'Logy Laps',                  'logylaps'
     map 'Lon Baker',                  "lon\100speedymac.com"
     map 'Loren Johnson',              'lorenjohnson'
