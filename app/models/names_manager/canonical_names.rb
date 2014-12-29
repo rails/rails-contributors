@@ -716,7 +716,7 @@ module NamesManager
     map 'Rob Halff',                  "info\100rhalff.com"
     map 'Rob Rasmussen',              "rob.rasmussen\100gmail.com"
     map 'Rob Sanheim',                'rsanheim', "rsanheim\100gmail.com", "rob\100thinkrelevance.com"
-    map 'Robby Russell',              'robbyrussell'
+    map 'Robby Russell',              'robbyrussell', "robby\100planetargon.com"
     map 'Robert Pankowecki',          'Robert Pankowecki (Gavdi)'
     map 'Robert Speicher',            'rspeicher'
     map 'Robin Fisher',               'robinjfisher'
