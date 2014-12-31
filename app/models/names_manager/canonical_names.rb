@@ -948,7 +948,13 @@ module NamesManager
     # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
     CANONICAL_NAME_FOR = {}
     SEEN_ALSO_AS.each do |canonical_name, also_as|
-      also_as.each { |alt| CANONICAL_NAME_FOR[alt] = canonical_name }
+      also_as.each do |alt|
+        if CANONICAL_NAME_FOR.key?(alt)
+          raise "duplicate alias #{alt}"
+        else
+          CANONICAL_NAME_FOR[alt] = canonical_name
+        end
+      end
     end
 
     # Returns the canonical name for +name+.
