@@ -18,7 +18,7 @@ module Credits
       assert_contributor_names 'a4041c5', 'Vishnu Atrai'
       assert_contributor_names 'ec44763', 'Mohammad Typaldos'
       assert_contributor_names '99dd117', 'Mohammad Typaldos'
-      assert_contributor_names '3582bce', 'Juanjo Bazán', 'Tarmo Tänav', 'BigTitus', 'Jeremy Kemper'
+      assert_contributor_names '3582bce', 'Juanjo Bazán', 'Tarmo Tänav', 'BigTitus'
       assert_contributor_names '7e8e91c', 'Godfrey Chan', 'Philippe Creux'
       assert_contributor_names '798881e', 'Godfrey Chan', 'Sergio Campamá'
       assert_contributor_names '134c115', 'Godfrey Chan', 'Sergio Campamá'
