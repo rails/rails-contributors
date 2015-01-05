@@ -29,5 +29,9 @@ module Credits
       assert_contributor_names '5d5f0bad', 'David Heinemeier Hansson', 'Sam Stephenson'
       assert_contributor_names 'bc437632', 'David Wang'
     end
+
+    test 'empty author' do
+      assert_contributor_names '4e873ff', 'Jarek Radosz'
+    end
   end
 end

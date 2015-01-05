@@ -342,6 +342,7 @@ module NamesManager
     map 'Igor Guzak',                 'igor04'
     map 'Indrek Juhkam',              'innu'
     map 'Innokenty Mikhailov',        'gregolsen'
+    map 'Iñigo Solano Pàez',          '1334'
     map 'Ionatan Wiznia',             'iwiznia'
     map 'Irfan Adilovic',             'Irfy'
     map 'Isaac Feliu',                'isaacfeliu'
@@ -589,7 +590,7 @@ module NamesManager
     map 'Markus Roberts',             "MarkusQ\100reality.com"
     map 'Marten Veldthuis',           'Marten'
     map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
-    map 'Martin Schuerrer',           "@MSch", "MSch", "Martin Schürrer"
+    map 'Martin Schuerrer',           'Martin Schürrer'
     map 'Masashi Shimbo',             "shimbo\100is.naist.jp"
     map 'Mark Daggett',               'heavysixer'
     map 'Marshall Roch',              'mroch'
@@ -999,6 +1000,10 @@ module NamesManager
         case email
         when "david\100loudthinking.com" then 'David Heinemeier Hansson'
         when "DevilDavidWang\100gmail.com" then 'David Wang'
+        end
+      when ''
+        case email
+        when "JRadosz\100gmail.com" then 'Jarek Radosz'
         end
       end
     end

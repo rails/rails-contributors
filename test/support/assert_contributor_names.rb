@@ -14,7 +14,7 @@ module AssertContributorNames
     actual   = commit.extract_contributor_names(REPO).to_set
 
     diff = expected - actual
-    error_message = "expected #{diff.to_a.to_sentence} to be credited for #{sha1}"
+    error_message = "credit for #{sha1} is #{actual.to_a.to_sentence}, expected #{diff.to_a.to_sentence} to be credited"
 
     if options[:equal]
       assert_equal expected, actual, error_message

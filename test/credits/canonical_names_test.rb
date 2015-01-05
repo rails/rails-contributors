@@ -16,6 +16,10 @@ module Credits
       assert_contributor_names 'c32978d', 'Tony Jian'
     end
 
+    test '1334' do
+      assert_contributor_names '47d95c8', 'Iñigo Solano Pàez'
+    end
+
     test '90yukke' do
       assert_contributor_names 'b289519', 'Alexander Karmes'
     end
@@ -1628,10 +1632,6 @@ module Credits
       assert_contributor_names '3b9bcf1', 'Andreas Isaksson'
     end
 
-    test 'ivanvr' do
-      assert_contributor_names '063c393', 'Iván Vega'
-    end
-
     test 'iwiznia' do
       assert_contributor_names '7b6f2a0', 'Ionatan Wiznia'
     end
@@ -2870,10 +2870,6 @@ module Credits
 
     test 'mroch' do
       assert_contributor_names '81286f8', 'Marshall Roch'
-    end
-
-    test "\100MSch" do
-      assert_contributor_names '0c6b21e', 'Martin Schuerrer'
     end
 
     test 'mtitorenko' do

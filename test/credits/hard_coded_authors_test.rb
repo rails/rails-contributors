@@ -25,6 +25,9 @@ module Credits
       assert_contributor_names 'b23ffd0', 'Łukasz Sarnacki', 'Matt Aimonetti'
       assert_contributor_names '1240338', 'Blake Mesdag', 'Arthur Neves'
       assert_contributor_names 'd318bad', 'Grey Baker', 'Adrien Siami'
+      assert_contributor_names '41adf87', 'Mislav Marohnić', 'Geoff Buesing'
+      assert_contributor_names '6ddde02', 'Arthur Zapparoli', 'Michael Koziarski'
+      assert_contributor_names '063c393', 'Iván Vega'
     end
   end
 end

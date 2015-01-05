@@ -83,13 +83,14 @@ protected
   def extract_candidates(repo)
     names = hard_coded_authors
     if names.nil?
-      names = extract_contributor_names_from_text(message)
+      names = extract_contributor_names_from_message
       if names.empty?
         names = extract_svn_contributor_names_diffing(repo) if imported_from_svn?
         if names.empty?
           sanitized = sanitize([author_name])
           names = handle_false_positives(sanitized)
           if names.empty?
+            # This is an edge case, some rare commits have an empty author name.
             names = sanitized
           end
         end
@@ -125,6 +126,28 @@ protected
     names.map {|name| NamesManager.canonical_name_for(name, author_email)}
   end
 
+  def extract_contributor_names_from_message
+    subject, body = message.split("\n\n", 2)
+
+    # Check the end of subject first.
+    contributor_names = extract_contributor_names_from_text(subject)
+
+    if contributor_names.empty? && body
+      # Some modern commits have an isolated body line with the credit.
+      body.scan(/^\[[^\]]+\]$/) do |match|
+        contributor_names = extract_contributor_names_from_text(match)
+        break if contributor_names.any?
+      end
+
+      if contributor_names.empty? && imported_from_svn?
+        # Check the end of the body as last option.
+        contributor_names = extract_contributor_names_from_text(body.sub(/git-svn-id:.*/m, ''))
+      end
+    end
+
+    contributor_names
+  end
+
   # When Rails had a svn repo there was a convention for authors: the committer
   # put their name between brackets at the end of the commit or changelog message.
   # For example:
@@ -138,12 +161,12 @@ protected
   #
   # Of course this is not robust, but it is the best we can get.
   def extract_contributor_names_from_text(text)
-    names = text =~ /\[([^\]]+)\](?:\s+\(?Closes\s+#\d+\)?)?\s*$/ ? [$1] : []
+    names = text =~ /\[([^\]]+)\](?:\s+\(?Closes\s+#\d+\)?)?\s*\z/ ? [$1] : []
     names = sanitize(names)
     handle_false_positives(names)
   end
 
-  # Looks for contributor names in changelogs.
+  # Looks for contributor names in changelogs. There are +1600 commits with credit here.
   def extract_svn_contributor_names_diffing(repo)
     cache_diff(repo) unless diff
     return [] if only_modifies_changelogs?

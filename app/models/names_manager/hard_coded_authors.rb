@@ -71,6 +71,14 @@ module NamesManager
         # Adrien worked on the fix, Grey on a regression spec, but only Grey's PR
         # was merged. See https://github.com/fxn/rails-contributors/pull/59.
         ['Grey Baker', 'Adrien Siami']
+      when '41adf8710e695f01a8100a87c496231d29e57cf2'
+        # This commit uses non-conventional notation for multiple credits.
+        ['Mislav Marohnić', 'Geoff Buesing']
+      when '6ddde027c4e51262e58f67438672d66a2b278f43'
+        # Idem.
+        ['Arthur Zapparoli', 'Michael Koziarski']
+      when '063c393bf0a2eb762770c97f925b7c2867361ad4'
+        ['ivanvr']
       else
         nil
       end
