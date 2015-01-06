@@ -3641,7 +3641,7 @@ module Credits
     end
 
     test "sandra.metz\100duke.edu" do
-      assert_contributor_names '242cd06', 'Sandra Metz'
+      assert_contributor_names '242cd06', 'Sandi Metz'
     end
 
     test 'sanemat' do

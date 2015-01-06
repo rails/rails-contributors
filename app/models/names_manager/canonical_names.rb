@@ -794,7 +794,7 @@ module NamesManager
     map 'Sam Elliott',                'Samuel Elliott'
     map 'Sam Granieri',               'sjgman9'
     map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
-    map 'Sandra Metz',                "sandra.metz\100duke.edu"
+    map 'Sandi Metz',                 "sandra.metz\100duke.edu"
     map 'Sasha Gerrand',              'sgerrand'
     map 'Scott Bronson',              'bronson'
     map 'Scott Fleckenstein',         'nullstyle'
