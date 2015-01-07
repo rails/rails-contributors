@@ -207,8 +207,55 @@ module Credits
       assert_contributor_names 'c92ecb8', "alec+rails\100veryclever.net"
     end
 
+    test 'Spotted by' do
+      assert_contributor_names 'b059ceb', 'Robby Russel'
+    end
+
+    test 'Aggregated by' do
+      assert_contributor_names '7a2ce50', 'Michael Schoen'
+    end
+
+    test 'via' do
+      assert_contributor_names '7cc67eb', 'Tim Bray'
+      assert_contributor_names 'f74ba37', 'Jay Fields'
+    end
+
+    test 'connector ,' do
+      assert_contributor_names '9159489', 'Pratik Naik', 'Jeremy Kemper'
+    end
+
+    test 'connector /' do
+      assert_contributor_names '8f2221d', 'Rick Olson', 'David Heinemeier Hansson'
+    end
+
     test 'connector &' do
       assert_contributor_names 'b0f2b94', 'Sean Griffin', 'Julien Portalier'
+    end
+
+    test 'connector +' do
+      assert_contributor_names '3c15cba', 'Yehuda Katz', 'Carl Lerche'
+    end
+
+    test 'connector and' do
+      assert_contributor_names 'd39c456', 'Nick Quaranto', 'Josh Nichols'
+    end
+
+    test 'ignores and if it is not a word' do
+      assert_contributor_names '13823a4', 'James Sanders', 'Jason Noble'
+    end
+
+    test 'multiple connectors at the same time' do
+      assert_contributor_names '3534791', 'Sam Umbach', 'Zachary Porter', 'Michael Pell'
+      assert_contributor_names '175ba04', 'Daniel Fox', 'Grant Hutchins', 'Trace Wax'
+    end
+
+    test 'ignores unkown contributors symbolized by a ?' do
+      assert_contributor_names 'eb5ca2e', 'caleb', exact: true
+      assert_contributor_names '8ff6d76', 'Sam Stephenson', exact: true
+    end
+
+    test 'ignores unkown contributors referred as "others"' do
+      assert_contributor_names 'da4b15f', 'Kevin Jackson', 'David Heinemeier Hansson', exact: true
     end
   end
 end
