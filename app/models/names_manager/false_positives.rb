@@ -46,8 +46,6 @@ module NamesManager
           'Adam Cigánek'.nfc
         when '=?utf-8?q?Mislav=20Marohni=C4=87?='
           'Mislav Marohnić'.nfc
-        when 'Thanks to Austin Ziegler for Transaction::Simple'
-          'Austin Ziegler'
         when 'nik.wakelin Koz'
           ['nik.wakelin', 'Koz']
         when "me\100jonnii.com rails\100jeffcole.net Marcel Molina Jr."
@@ -60,13 +58,10 @@ module NamesManager
           ["doppler\100gmail.com", "phil.ross\100gmail.com"]
         when 'After much pestering from Dave Thomas'
           'Dave Thomas'
-        when 'Aredridel/earlier work by Michael Neumann'
-          ['Aredridel', 'Michael Neumann']
         when "jon\100blankpad.net)"
-          # see 35d3ede
           ["jon\100blankpad.net"]
         when 'Jose and Yehuda'
-          ['José Valim', 'Yehuda Katz'].map(&:nfc)
+          ['José Valim'.nfc, 'Yehuda Katz']
         when /\b\w+\+\w+@/
           # The plus sign is taken to be a connector below, this catches some known
           # addresses that use a plus sign in the username, see unit tests for examples.

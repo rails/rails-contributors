@@ -2920,6 +2920,10 @@ module Credits
       assert_contributor_names '37b0b36', 'Nick Sieger'
     end
 
+    test "nick+rails\100ag.arizona.edu" do
+      assert_contributor_names '06afb8c', 'Nick Murphy'
+    end
+
     test 'nicksieger' do
       assert_contributor_names '2029b8a', 'Nick Sieger'
     end

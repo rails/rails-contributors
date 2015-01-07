@@ -122,7 +122,7 @@ module Credits
     end
 
     test 'ci kip' do
-      assert_contributor_names 'd9e8ec6', 'Rafael Mendonça França'
+      assert_contributor_names 'd9e8ec6', 'Rafael Mendonça França'.nfc
     end
 
     test 'ci skp' do
@@ -147,6 +147,64 @@ module Credits
 
     test '.lock' do
       assert_contributor_names 'c71b961', 'Ryan Bigg'
+    end
+
+    test 'Carlhuda' do
+      assert_contributor_names 'c102db9', 'Yehuda Katz', 'Carl Lerche'
+    end
+
+    test 'tomhuda' do
+      assert_contributor_names '00be5bd', 'Yehuda Katz', 'Tom Dale'
+    end
+
+    test "schoenm\100earthlink.net sandra.metz\100duke.edu" do
+      assert_contributor_names '242cd06', 'Michael Schoen', 'Sandi Metz'
+    end
+
+    test '=?utf-8?q?Adam=20Cig=C3=A1nek?=' do
+      assert_contributor_names 'fcd58dc', 'Adam Cigánek'.nfc
+    end
+
+    test '=?utf-8?q?Mislav=20Marohni=C4=87?=' do
+      assert_contributor_names '21cd4c0', 'Mislav Marohnić'.nfc
+    end
+
+    test 'nik.wakelin Koz' do
+      assert_contributor_names '5bf40f7', 'Nik Wakelin', 'Michael Koziarski'
+    end
+
+    test "me\100jonnii.com rails\100jeffcole.net Marcel Molina Jr." do
+      assert_contributor_names '4793a2f', "me\100jonnii.com", 'Jeff Cole', 'Marcel Molina Jr.'
+    end
+
+    test "jeremy\100planetargon.com Marcel Molina Jr." do
+      assert_contributor_names '30c6bd9', 'Jeremy Voorhis', 'Marcel Molina Jr.'
+    end
+
+    test "matt\100mattmargolis.net Marcel Molina Jr." do
+      assert_contributor_names '883c54a', 'Matt Margolis', 'Marcel Molina Jr.'
+    end
+
+    test "doppler\100gmail.com phil.ross\100gmail.com" do
+      assert_contributor_names 'f4f7e75', 'David Rose', 'Philip Ross'
+    end
+
+    test 'After much pestering from Dave Thomas' do
+      assert_contributor_names '7d01005', 'Dave Thomas'
+    end
+
+    test "jon\100blankpad.net)" do
+      assert_contributor_names '35d3ede', 'Jon Wood'
+    end
+
+    test 'Jose and Yehuda' do
+      assert_contributor_names 'afd7140', 'José Valim'.nfc, 'Yehuda Katz'
+    end
+
+    test 'email addresses with a plus sign' do
+      assert_contributor_names '2890b96', 'Nick Murphy'
+      assert_contributor_names '49efa02', 'Erlend Halvorsen'
+      assert_contributor_names 'c92ecb8', "alec+rails\100veryclever.net"
     end
 
     test 'connector &' do
