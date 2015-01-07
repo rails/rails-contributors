@@ -2668,6 +2668,10 @@ module Credits
       assert_contributor_names 'e59978a', 'Matthew Deiters'
     end
 
+    test "me\100jonnii.com" do
+      assert_contributor_names '4793a2f', 'Jonathan Goldman'
+    end
+
     test "me\100julik.nl" do
       assert_contributor_names '2ffc84d', 'Julian Tarkhanov'
     end

@@ -453,7 +453,7 @@ module NamesManager
     map 'Jon Wood',                   "jon\100instance-design.co.uk", "jon\100blankpad.net"
     map 'Jonathan Bartlett',          'johnnyb'
     map 'Jonathan Garvin',            "jsgarvin"
-    map 'Jonathan Goldman',           'jonnii'
+    map 'Jonathan Goldman',           'jonnii', "me\100jonnii.com"
     map 'Jonathan Leighton',          "turnip\100turnipspatch.com"
     map 'Jonathan del Strother',      'Catfish', 'catfish'
     map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"

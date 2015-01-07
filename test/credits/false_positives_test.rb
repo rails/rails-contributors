@@ -174,7 +174,7 @@ module Credits
     end
 
     test "me\100jonnii.com rails\100jeffcole.net Marcel Molina Jr." do
-      assert_contributor_names '4793a2f', "me\100jonnii.com", 'Jeff Cole', 'Marcel Molina Jr.'
+      assert_contributor_names '4793a2f', 'Jonathan Goldman', 'Jeff Cole', 'Marcel Molina Jr.'
     end
 
     test "jeremy\100planetargon.com Marcel Molina Jr." do
