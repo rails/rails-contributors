@@ -556,6 +556,10 @@ module Credits
       assert_contributor_names '50ee332', 'Dane Jensen'
     end
 
+    test 'Carlhuda' do
+      assert_contributor_names 'c102db9', 'Yehuda Katz', 'Carl Lerche'
+    end
+
     test 'CassioMarques' do
       assert_contributor_names '053afbe', 'Cássio Marques'
     end
@@ -4166,6 +4170,10 @@ module Credits
 
     test 'tomafro' do
       assert_contributor_names 'ccb87e2', 'Tom Ward'
+    end
+
+    test 'tomhuda' do
+      assert_contributor_names '00be5bd', 'Yehuda Katz', 'Tom Dale'
     end
 
     test 'TomK32' do

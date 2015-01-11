@@ -149,14 +149,6 @@ module Credits
       assert_contributor_names 'c71b961', 'Ryan Bigg'
     end
 
-    test 'Carlhuda' do
-      assert_contributor_names 'c102db9', 'Yehuda Katz', 'Carl Lerche'
-    end
-
-    test 'tomhuda' do
-      assert_contributor_names '00be5bd', 'Yehuda Katz', 'Tom Dale'
-    end
-
     test "schoenm\100earthlink.net sandra.metz\100duke.edu" do
       assert_contributor_names '242cd06', 'Michael Schoen', 'Sandi Metz'
     end

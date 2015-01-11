@@ -36,10 +36,6 @@ module NamesManager
         when /skip[ -]ci/i
         when 'key'
         when '.lock'
-        when 'Carlhuda'
-          ['Yehuda Katz', 'Carl Lerche']
-        when 'tomhuda'
-          ['Yehuda Katz', 'Tom Dale']
         when "schoenm\100earthlink.net sandra.metz\100duke.edu"
           name.split
         when '=?utf-8?q?Adam=20Cig=C3=A1nek?='

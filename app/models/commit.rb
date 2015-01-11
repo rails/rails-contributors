@@ -123,7 +123,7 @@ protected
   end
 
   def canonicalize(names)
-    names.map {|name| NamesManager.canonical_name_for(name, author_email)}
+    names.map {|name| NamesManager.canonical_name_for(name, author_email)}.flatten
   end
 
   def extract_contributor_names_from_message

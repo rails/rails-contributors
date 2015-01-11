@@ -1,5 +1,66 @@
 module NamesManager
   module CanonicalNames
+    # Returns the canonical name for +name+.
+    #
+    # Email addresses are removed, leading/trailing whitespace and
+    # surrounding Markdown *s are deleted. If no equivalence is known
+    # the canonical name is the resulting sanitized string by definition.
+    def canonical_name_for(name, email)
+      name = name.sub(/<[^>]+>/, '') # remove any email address in angles
+      name.strip!
+
+      # Commit 28d52c59f2cb32180ca24770bf95597ea3ad8198 for example uses
+      # Markdown in the commit message: [*Godfrey Chan*, *Aaron Patterson*].
+      # This is really exceptional so we special-case this instead of doing
+      # anything more generic.
+      name.sub!(/\A\*/, '')
+      name.sub!(/\*\z/, '')
+      disambiguate(name, email) || multialias(name) || CANONICAL_NAME_FOR[name] || name
+    end
+
+    private
+
+    def disambiguate(name, email)
+      case name
+      when 'abhishek'
+        case email
+        when 'abhishek.jain@vinsol.com' then 'Abhishek Jain'
+        when 'bigbeliever@gmail.com'    then 'Abhishek Yadav'
+        end
+      when 'Sam'
+        case email
+        when 'sam.saffron@gmail.com' then 'Sam Saffron'
+        end
+      when 'root'
+        case email
+        when "mohamed.o.alnagdy\100gmail.com" then 'Mohamed Osama'
+        end
+      when 'unknown'
+        case email
+        when "agrimm\100.(none)" then 'Andrew Grimm'
+        when "jeko1\100.npfit.nhs.uk" then 'Jens Kolind'
+        end
+      when 'David'
+        case email
+        when "david\100loudthinking.com" then 'David Heinemeier Hansson'
+        when "DevilDavidWang\100gmail.com" then 'David Wang'
+        end
+      when ''
+        case email
+        when "JRadosz\100gmail.com" then 'Jarek Radosz'
+        end
+      end
+    end
+
+    def multialias(name)
+      case name
+      when 'Carlhuda'
+        ['Yehuda Katz', 'Carl Lerche']
+      when 'tomhuda'
+        ['Yehuda Katz', 'Tom Dale']
+      end
+    end
+
     # canonical name => handlers, emails, typos, etc.
     SEEN_ALSO_AS = {}
     def self.map(canonical_name, *also_as)
@@ -955,56 +1016,6 @@ module NamesManager
           raise "duplicate alias #{alt}"
         else
           CANONICAL_NAME_FOR[alt] = canonical_name
-        end
-      end
-    end
-
-    # Returns the canonical name for +name+.
-    #
-    # Email addresses are removed, leading/trailing whitespace and
-    # surrounding Markdown *s are deleted. If no equivalence is known
-    # the canonical name is the resulting sanitized string by definition.
-    def canonical_name_for(name, email)
-      name = name.sub(/<[^>]+>/, '') # remove any email address in angles
-      name.strip!
-
-      # Commit 28d52c59f2cb32180ca24770bf95597ea3ad8198 for example uses
-      # Markdown in the commit message: [*Godfrey Chan*, *Aaron Patterson*].
-      # This is really exceptional so we special-case this instead of doing
-      # anything more generic.
-      name.sub!(/\A\*/, '')
-      name.sub!(/\*\z/, '')
-      disambiguate(name, email) || CANONICAL_NAME_FOR[name] || name
-    end
-
-    def disambiguate(name, email)
-      case name
-      when 'abhishek'
-        case email
-        when 'abhishek.jain@vinsol.com' then 'Abhishek Jain'
-        when 'bigbeliever@gmail.com'    then 'Abhishek Yadav'
-        end
-      when 'Sam'
-        case email
-        when 'sam.saffron@gmail.com' then 'Sam Saffron'
-        end
-      when 'root'
-        case email
-        when "mohamed.o.alnagdy\100gmail.com" then 'Mohamed Osama'
-        end
-      when 'unknown'
-        case email
-        when "agrimm\100.(none)" then 'Andrew Grimm'
-        when "jeko1\100.npfit.nhs.uk" then 'Jens Kolind'
-        end
-      when 'David'
-        case email
-        when "david\100loudthinking.com" then 'David Heinemeier Hansson'
-        when "DevilDavidWang\100gmail.com" then 'David Wang'
-        end
-      when ''
-        case email
-        when "JRadosz\100gmail.com" then 'Jarek Radosz'
         end
       end
     end
