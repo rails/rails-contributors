@@ -79,6 +79,10 @@ module NamesManager
         ['Arthur Zapparoli', 'Michael Koziarski']
       when '063c393bf0a2eb762770c97f925b7c2867361ad4'
         ['ivanvr']
+      when '872e22c60391dc45b7551cc0698d5530bb310611'
+        # Daniel proposed a change to web-console when error pages used to have
+        # duplicated code with upstream Rails.
+        ['Daniel Rikowski']
       else
         nil
       end

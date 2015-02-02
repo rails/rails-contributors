@@ -28,6 +28,7 @@ module Credits
       assert_contributor_names '41adf87', 'Mislav Marohnić', 'Geoff Buesing'
       assert_contributor_names '6ddde02', 'Arthur Zapparoli', 'Michael Koziarski'
       assert_contributor_names '063c393', 'Iván Vega'
+      assert_contributor_names '872e22c', 'Daniel Rikowski'
     end
   end
 end
