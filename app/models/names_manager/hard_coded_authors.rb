@@ -79,6 +79,10 @@ module NamesManager
         ['Arthur Zapparoli', 'Michael Koziarski']
       when '063c393bf0a2eb762770c97f925b7c2867361ad4'
         ['ivanvr']
+      when '872e22c60391dc45b7551cc0698d5530bb310611'
+        # This patch comes from https://github.com/rails/web-console/pull/91,
+        # originally authored by Daniel, but ported to upstream Rails by Genadi.
+        ['Daniel Rikowski', 'Genadi Samokovarov']
       else
         nil
       end
