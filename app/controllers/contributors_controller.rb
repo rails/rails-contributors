@@ -1,5 +1,5 @@
 class ContributorsController < ApplicationController
-  caches_page :index, :in_time_window, :in_edge
+  caches_page :index, :in_time_window, :in_week, :in_edge
 
   def index
     @contributors = if params[:release_id].present?
@@ -18,6 +18,13 @@ class ContributorsController < ApplicationController
     else
       Contributor.all_with_ncommits
     end
+
+    render 'index'
+  end
+
+  def in_week
+    @week_start = Date.iso8601(params[:date]).beginning_of_week
+    @contributors = Contributor.all_with_ncommits_in_week_of(@week_start)
 
     render 'index'
   end
