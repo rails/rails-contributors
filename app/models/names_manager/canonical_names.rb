@@ -713,7 +713,7 @@ module NamesManager
     map 'Mike Naberezny',             'mnaberez'
     map 'Mike Subelsky',              'subelsky'
     map 'Mikel Lindsaar',             'mikel', 'raasdnil'
-    map 'Miklós Fazekas',             'mfazekas'
+    map 'Miklós Fazekas',             'mfazekas', 'Miklos Fazkeas'
     map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr", 'Mislav Marohnic'
     map 'Moses Hohman',               'moses'
     map 'Murahashi Sanemat Kenichi',  'sanemat'
