@@ -4,6 +4,8 @@
   <td class="no-commits">
     <% path = if @time_window
          contributor_commits_in_time_window_path(contributor, @time_window)
+       elsif @week_start
+         contributor_commits_in_week_path(contributor, @week_start.iso8601)
        elsif @release
          contributor_commits_in_release_path(contributor, @release)
        elsif @edge
