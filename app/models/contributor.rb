@@ -20,10 +20,6 @@ class Contributor < ActiveRecord::Base
     _all_with_ncommits(:commits, ['commits.committer_date > ?', date])
   end
 
-  def self.all_with_ncommits_in_week_of(date)
-    _all_with_ncommits(:commits, 'commits.committer_date' => date.all_week)
-  end
-
   def self.all_with_ncommits_by_release(release)
     _all_with_ncommits(:commits, 'commits.release_id' => release.id)
   end

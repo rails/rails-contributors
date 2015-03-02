@@ -79,16 +79,6 @@ class CommitsControllerTest < ActionController::TestCase
     end
   end
 
-  def test_in_week
-    get :in_week, contributor_id: contributors(:jose), date: '2012-01-19'
-
-    assert_response :success
-    assert_equal [commits(:commit_5b90635)], assigns(:commits)
-
-    assert_select 'span.listing-total', 'Showing 1 commit'
-    assert_select '.vcard #title', /3rd week 2012/
-  end
-
   def test_in_release
     cases = {
       contributors(:jeremy) => {releases('v3_2_0') => [commits(:commit_5b90635)],

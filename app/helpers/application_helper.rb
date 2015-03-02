@@ -21,10 +21,6 @@ module ApplicationHelper
     "#{title} - #{TimeConstraints.label_for(time_window)}".html_safe
   end
 
-  def add_week_to(title, week_start)
-    "#{title} - #{week_start.cweek.ordinalize} week #{week_start.cwyear}".html_safe
-  end
-
   def sidebar_tab(name, current, options={}, html_options={})
     li_options = current ? {class: 'current'} : {}
     content_tag :li, li_options do

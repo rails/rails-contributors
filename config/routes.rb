@@ -1,10 +1,8 @@
 RailsContributors::Application.routes.draw do
   get 'contributors/in-time-window/:time_window' => 'contributors#in_time_window', as: 'contributors_in_time_window'
-  get 'contributors/in-week-of/:date' => 'contributors#in_week', as: 'contributors_in_week', date: /\d{4}-\d{2}-\d{2}/
 
   resources :contributors, only: 'index' do
     get 'commits/in-time-window/:time_window' => 'commits#in_time_window', as: 'commits_in_time_window'
-    get 'commits/in-week-of/:date'            => 'commits#in_week',        as: 'commits_in_week', date: /\d{4}-\d{2}-\d{2}/
     get 'commits/in-release/:release_id'      => 'commits#in_release',     as: 'commits_in_release'
     get 'commits/in-edge'                     => 'commits#in_edge',        as: 'commits_in_edge'
 

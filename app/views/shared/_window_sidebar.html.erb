@@ -7,7 +7,7 @@
     <% for key, name in TimeConstraints.all %>
       <% path = key == 'all-time' ? contributors_path : contributors_in_time_window_path(key) %>
       <%# TODO: clean this %>
-      <%= sidebar_tab name, !@week_start && in_time_window && ((@time_window.nil? && key == 'all-time') || @time_window == key), path %>
+      <%= sidebar_tab name, in_time_window && ((@time_window.nil? && key == 'all-time') || @time_window == key), path %>
     <% end %>
     <%= sidebar_tab 'Releases', in_release, releases_path %>
     <%= sidebar_tab 'Edge', in_edge, contributors_in_edge_path %>

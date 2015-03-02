@@ -7,10 +7,6 @@
     @title       = %(##{@contributor.rank} <span class="fn">#{h(@contributor.name)}</span> - Edge).html_safe
     @description = "Unreleased commits contributed by #{@contributor.name} to Ruby on Rails"
     @keywords    = @contributor.name
-  elsif @contributor && @week_start
-    @title       = add_week_to(%(##{@contributor.rank} <span class="fn">#{h(@contributor.name)}</span>), @week_start)
-    @description = "Commits contributed by #{@contributor.name} in week starting #{@week_start.to_s(:rfc822)}"
-    @keywords    = @contributor.name
   elsif @contributor
     @title       = add_window_to(%(##{@contributor.rank} <span class="fn">#{h(@contributor.name)}</span>), @time_window)
     @description = "Commits contributed by #{@contributor.name} to Ruby on Rails"

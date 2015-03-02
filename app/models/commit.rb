@@ -13,10 +13,6 @@ class Commit < ActiveRecord::Base
     where(['commits.committer_date >= ?', date])
   }
 
-  scope :in_week_of, ->(date) {
-    where('commits.committer_date' => date.all_week)
-  }
-
   scope :release, ->(release) {
     where('commits.release_id' => release.id)
   }

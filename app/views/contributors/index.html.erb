@@ -1,13 +1,5 @@
 <%
-   @title = if @release
-      "Rails Contributors - #{@release.name}"
-    elsif @edge
-      'Rails Contributors - Edge'
-    elsif @week_start
-      add_week_to("Contributors", @week_start)
-    else
-      add_window_to("Rails Contributors", @time_window)
-    end
+   @title = @release ? "Rails Contributors - #{@release.name}" : @edge ? 'Rails Contributors - Edge' : add_window_to("Rails Contributors", @time_window)
    @description = 'Ruby on Rails contributors'
 %>
 

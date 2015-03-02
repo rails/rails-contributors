@@ -69,22 +69,6 @@ class ContributorsControllerTest < ActionController::TestCase
     end
   end
 
-  def test_in_week
-    expected = [[:jeremy, 1], [:jose, 1], [:vijay, 1]]
-
-    get :in_week, date: '2012-01-19'
-
-    assert_response :success
-
-    actual = assigns(:contributors)
-    assert_equal expected.size, actual.size
-
-    expected.zip(actual).each do |e, a|
-      assert_equal contributors(e.first).name, a.name
-      assert_equal e.second, a.ncommits
-    end
-  end
-
   def test_in_edge
     # Order by ncommits DESC, url_id ASC.
     expected = [[:jeremy, 2], [:david, 1], [:xavier, 1]]
