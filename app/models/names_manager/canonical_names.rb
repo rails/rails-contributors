@@ -363,6 +363,7 @@ module NamesManager
     map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
     map 'Ganesh Kumar',               'ganesh'
     map 'Gaspard Bucher',             "g.bucher\100teti.ch"
+    map 'Gaurav Sharma',              'Gaurav Sharam'
     map 'Gavin Morrice',              'Bodacious'
     map 'Genki Takiuchi',             "takiuchi\100drecom.co.jp"
     map 'Geoff Buesing',              'gbuesing', 'Geoffrey Buesing'

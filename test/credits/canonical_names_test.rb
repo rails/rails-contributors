@@ -1380,6 +1380,10 @@ module Credits
       assert_contributor_names 'b3ade0c', 'Ganesh Kumar'
     end
 
+    test 'Gaurav Sharam' do
+      assert_contributor_names '434c768', 'Gaurav Sharma'
+    end
+
     test 'gbuesing' do
       assert_contributor_names '41adf87', 'Geoff Buesing'
     end
