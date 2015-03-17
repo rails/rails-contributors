@@ -9,8 +9,12 @@ class Commit < ActiveRecord::Base
     where('contributions.commit_id' => nil)
   }
 
-  scope :since, ->(date) {
-    where(['commits.committer_date >= ?', date])
+  scope :in_time_window, ->(since, upto) {
+    if upto
+      where(['commits.committer_date BETWEEN ? AND ?', since, upto])
+    else
+      where(['commits.committer_date >= ?', since])
+    end
   }
 
   scope :release, ->(release) {

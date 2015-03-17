@@ -40,12 +40,17 @@ class CommitsControllerTest < ActionController::TestCase
   end
 
   def test_commits_in_time_window
+    since      = '20121219'
+    date_range = '20121201-20121231'
+
     cases = {
       contributors(:david) => [
         ['all-time',  [:commit_339e4e8, :commit_e0ef631]],
         ['today',     []],
         ['this-week', []],
         ['this-year', :commit_339e4e8],
+        [since,       []],
+        [date_range,  :commit_339e4e8],
       ].map {|a, b| [a, Array(commits(*b))]},
 
       contributors(:jeremy) => [
@@ -53,6 +58,8 @@ class CommitsControllerTest < ActionController::TestCase
         ['today',     :commit_b821094],
         ['this-week', :commit_b821094],
         ['this-year', [:commit_b821094, :commit_7cdfd91, :commit_5b90635]],
+        [since,       :commit_b821094],
+        [date_range,  :commit_b821094],
       ].map {|a, b| [a, Array(commits(*b))]},
 
       contributors(:vijay) => [
@@ -60,6 +67,8 @@ class CommitsControllerTest < ActionController::TestCase
         ['today',     []],
         ['this-week', []],
         ['this-year', :commit_6c65676],
+        [since,       []],
+        [date_range,  []],
       ].map {|a, b| [a, Array(commits(*b))]},
     }
 
@@ -73,7 +82,11 @@ class CommitsControllerTest < ActionController::TestCase
 
           label = commits.size == 1 ? 'commit' : 'commits'
           assert_select 'span.listing-total', "Showing #{commits.size} #{label}"
-          assert_select 'li.current', TimeConstraints.label_for(time_window)
+          if time_window == since || time_window == date_range
+            assert_select 'li.current', false
+          else
+            assert_select 'li.current', TimeConstraints.label_for(time_window)
+          end
         end
       end
     end

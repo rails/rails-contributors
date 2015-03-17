@@ -14,8 +14,9 @@ private
 
   def set_time_constraints
     @time_window = params[:time_window].presence || 'all-time'
-    if TimeConstraints.known_key?(@time_window)
-      @since = TimeConstraints.since_for(@time_window)
+
+    if TimeConstraints.valid_time_window?(@time_window)
+      @since, @upto = TimeConstraints.time_window_for(@time_window).values_at(:since, :upto)
     else
       head :not_found
     end

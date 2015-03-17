@@ -11,7 +11,7 @@ class CommitsController < ApplicationController
 
   def in_time_window
     commits = @contributor.commits
-    commits = commits.since(@since) if @since
+    commits = commits.in_time_window(@since, @upto) if @since
     @commits = commits.sorted
     render 'index'
   end

@@ -44,12 +44,17 @@ class ContributorsControllerTest < ActionController::TestCase
   end
 
   def test_in_time_window
+    since      = '20121219'
+    date_range = '20121201-20121231'
+
     time_windows = {
       'all-time'   => [[:jeremy, 3], [:david, 2], [:jose, 1], [:vijay, 1], [:xavier, 1]],
       'today'      => [[:jeremy, 1]],
       'this-week'  => [[:jeremy, 1], [:xavier, 1]],
       'this-month' => [[:david, 1], [:jeremy, 1], [:xavier, 1]],
       'this-year'  => [[:jeremy, 3], [:david, 1], [:jose, 1], [:vijay, 1], [:xavier, 1]],
+      since        => [[:jeremy, 1], [:xavier, 1]],
+      date_range   => [[:david, 1], [:jeremy, 1], [:xavier, 1]],
     }
 
     time_travel do

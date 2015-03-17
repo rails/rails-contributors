@@ -7,7 +7,7 @@ require_relative 'support/assert_contributor_names'
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
 
-  TODAY = DateTime.new(2012, 12, 26)
+  TODAY = Time.zone.parse('2012-12-26')
 
   fixtures :all
 

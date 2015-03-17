@@ -14,7 +14,7 @@ class ContributorsController < ApplicationController
     set_time_constraints
 
     @contributors = if @since
-      Contributor.all_with_ncommits_by_date(@since)
+      Contributor.all_with_ncommits_by_time_window(@since, @upto)
     else
       Contributor.all_with_ncommits
     end
