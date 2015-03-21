@@ -17,12 +17,10 @@ class Contributor < ActiveRecord::Base
   end
 
   def self.all_with_ncommits_by_time_window(since, upto)
-    if since && upto
+    if upto
       _all_with_ncommits(:commits, ['commits.committer_date BETWEEN ? AND ?', since, upto])
-    elsif since
-      _all_with_ncommits(:commits, ['commits.committer_date >= ?', since])
     else
-      all_with_ncommits
+      _all_with_ncommits(:commits, ['commits.committer_date >= ?', since])
     end
   end
 
