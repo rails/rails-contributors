@@ -36,7 +36,7 @@ module ApplicationUtils
   # On the other hand, moving is atomic. Atomic is good.
   def self.expire_cache
     Dir.chdir("#{Rails.root}/public") do
-      %w(index.html contributors.html contributors releases.html releases edge).each do |name|
+      %w(index.html contributors.html contributors releases.html releases edge faq.html).each do |name|
         if File.exists?(name)
           expired_cache = "expired_#{name}.#{Time.now.to_f}"
           FileUtils.mv(name, expired_cache, force: true)
