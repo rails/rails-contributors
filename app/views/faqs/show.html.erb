@@ -1,0 +1,48 @@
+<% @title = 'Frequently Asked Questions' %>
+
+<%# TODO: Move style to CSS. %>
+<h1 style="margin-bottom: 1em;"><%= @title %></h1>
+
+<h2>What is Rails Contributors?</h2>
+<p>Rails Contributors gives credit to all people who have contributed to the Rails code base.</p>
+
+<h2>Why, isn't this information already provided by Git?</h2>
+<p>Not really.</p>
+<p>Rails Contributors is tailor-made for Ruby on Rails and, albeit not perfect, tries really hard to be as accurate as possible. You need to go far beyond Git metadata to accomplish what this application does.</p>
+
+<h3>Subversion</h3>
+<p>Ruby on Rails used Subversion in about its first four years. Since Subversion does not have the concept of commit <em>author</em>, their name is just <i>not</i> there.</p>
+
+<p>Some conventions emerged though, like putting the author name in square brackets <%= link_to 'in the commit message', github_url_for_sha1('03d37a2d68c1940f65d5a65a51ae747955a5b075') %>, or <%= link_to 'in CHANGELOG entries', github_url_for_sha1('c95365a00eb086f61cb5e73e9e6d5dae54325b60') %>. There's plenty of work attributed that way.</p>
+
+<h3>Canonical names</h3>
+<p>Over the years people get mentioned by their name, or nickname, there are abbreviations, typos, emails.... For example, Marcel Molina Jr. has commits credited to "Marcel Molina" (no "Jr."), "Marcel", "Marcel Molina Jr" (lacks a dot), "marcel", "noradio" (nickname), and "Marcel Mollina Jr." (typo, double "l"). The application knows all of them refer to the same person, and it is able to consolidate all of Marcel's commits into one single canonical name.</p>
+<p>As of this writing Rails Contributors consolidates about <b>+1100</b> known name variations patiently collected by hand.</p>
+
+<h3>Multiple authors</h3>
+<p>Git has no support for multiple authors, and again the project has figured out conventions to give credit to several people for a piece of work. Maybe they did pair programming, or worked together in a patch somehow. There are many, but in general they involve square brackets with a list of names inside. See for example <%= link_to 'this commit with two authors', github_url_for_sha1('9e9793b440c044b765f2d1f702feeb92aef2b139') %>, or the CHANGELOG entry of <%= link_to 'this other one', github_url_for_sha1('ec20838381dc26b68142c84c0e03f523765b4aae') %>. The application understands those conventions and gives credit to all authors.</p>
+
+<h3>Plural nicknames</h3>
+<p>A couple of nicknames refer to several people at once. For example, a commit by "Carlhuda" (like <%= link_to 'this one', github_url_for_sha1('c102db9367690af992786d2a62bbf8caeec88742') %>) has to be credited to Yehuda Katz and Carl Lerche.</p>
+
+<h3>Manual credit</h3>
+<p>Finally, occasionally the information to give credit is just missing. For example, Dana Jones should have given credit for <%= link_to 'this commit', github_url_for_sha1('1382f4de1f9b0e443e7884bd4da53c20f0754568') %>, but due to us being humans the attribution is just not there. The application has support also for these exceptional hard-coded fixes, and in this particular case Dana has <%= link_to 'her due credit', 'http://contributors.rubyonrails.org/contributors/dana-jones/commits' %>.</p> 
+
+<h2>My contributions are split, can they be merged?</h2>
+<p>Yes, please have a look at the maps in <%= link_to '<i>canonical_names.rb</i>'.html_safe, 'https://github.com/fxn/rails-contributors/blob/master/app/models/names_manager/canonical_names.rb' %> and feel free to submit a pull request. Please take into account only maps for nicknames that exist in the repository, typos, etc., are accepted. That is not a generic database of aliases.</p>
+
+<h2>The home page has a huge table, no pagination?</h2>
+<p>That's by design.</p>
+<p>If you contributed anything to Rails, even just a comma in a comment, your name goes straight to the home. We want to say thanks to every single Rails contributor and the home page is the right place. No pagination.</p>
+
+<h2>Why do you count commits?</h2>
+<p>Generally speaking, commits, LOCs, etc. are not a meaningful metric of the amount or quality of people's contributions.
+We all know that, and that's why this website <b>is not a ranking</b>.</p>
+<p>But commits are the natural unit of data we have as input, and working with source control they are what can naturally be grouped and listed. That's about it.</p>
+
+<h2>Is this gammification?</h2>
+<p>No.</p>
+<p>While Rails Contributors may encourage some people to partake in the project, there is no gammification in the <em>motivation</em> behind this application. That would go against the most basic hacker ethic.</p>
+<p>The motivation for Rails Contributors (I can tell, because I am the author), is to gladly give well-deserved public recognition to thousands of people who have contributed to the code base over the history of the project, and to say a big "Thank You!"</p>
+
+<%= render 'shared/window_sidebar' %>

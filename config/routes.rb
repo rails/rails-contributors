@@ -16,5 +16,7 @@ RailsContributors::Application.routes.draw do
 
   get 'edge/contributors' => 'contributors#in_edge', as: 'contributors_in_edge'
 
+  resource :faq, only: :show
+
   root to: 'contributors#index'
 end

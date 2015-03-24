@@ -1,11 +1,19 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  def github_url_for_sha1(sha1)
+    "https://github.com/rails/rails/commit/#{sha1}"
+  end
+
+  def github_url_for_tag(tag)
+    "https://github.com/rails/rails/tree/#{tag}"
+  end
+
   def link_to_commit_in_github(commit)
-    link_to content_tag(:span, commit.short_sha1, class: 'sha1'), commit.github_url, class: 'commit'
+    link_to content_tag(:span, commit.short_sha1, class: 'sha1'), github_url_for_sha1(commit.sha1), class: 'commit'
   end
 
   def link_to_release_in_github(release)
-    link_to content_tag(:span, release.tag, class: 'tag'), release.github_url, class: 'tag'
+    link_to content_tag(:span, release.tag, class: 'tag'), github_url_for_tag(release.tag), class: 'tag'
   end
 
   def link_to_contributor(contributor)

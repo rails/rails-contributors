@@ -1,8 +1,9 @@
 <% content_for :sidebar do %>
   <ul id="navigation">
+    <% in_faq         = controller_name == 'faqs' %>
     <% in_release     = @release || @releases %>
     <% in_edge        = @edge %>
-    <% in_time_window = !in_release && !in_edge %>
+    <% in_time_window = !in_release && !in_edge && !in_faq %>
 
     <% for key, name in TimeConstraints.all %>
       <% path = key == 'all-time' ? contributors_path : contributors_in_time_window_path(key) %>
@@ -11,5 +12,6 @@
     <% end %>
     <%= sidebar_tab 'Releases', in_release, releases_path %>
     <%= sidebar_tab 'Edge', in_edge, contributors_in_edge_path %>
+    <%= sidebar_tab 'FAQ', in_faq, faq_path %>
   </ul>
 <% end %>
