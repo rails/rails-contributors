@@ -184,6 +184,10 @@ module Credits
       assert_contributor_names 'e32149a', 'Alex Mishyn'
     end
 
+    test 'amitkumarsuroliya' do
+      assert_contributor_names '44e94a3', 'Amit Kumar Suroliya'
+    end
+
     test 'anamba' do
       assert_contributor_names '6ccbef5', 'Aaron Namba'
     end
@@ -258,6 +262,14 @@ module Credits
 
     test 'Anthony' do
       assert_contributor_names '78f5874', 'Anthony Alberto'
+    end
+
+    test 'anthonynavarre' do
+      assert_contributor_names 'bdc5141', 'Anthony Navarre'
+    end
+
+    test 'Anton' do
+      assert_contributor_names 'f0ae503', 'Tõnis Simo'
     end
 
     test 'Antonio Tapiador' do
@@ -760,6 +772,10 @@ module Credits
       assert_contributor_names '891a962', 'Courtenay Gasking'
     end
 
+    test 'Court3nay' do
+      assert_contributor_names 'ee87dbe', 'Courtenay Gasking'
+    end
+
     test "court3nay\100gmail.com" do
       assert_contributor_names 'df97ed5', 'Courtenay Gasking'
     end
@@ -1166,6 +1182,10 @@ module Credits
 
     test "edward\100debian.org" do
       assert_contributor_names '7d09b8d', 'Edward Betts'
+    end
+
+    test 'egilburg' do
+      assert_contributor_names '7c34548', 'Eugene Gilburg'
     end
 
     test "ehalvorsen+rails\100runbox.com" do
@@ -1662,6 +1682,10 @@ module Credits
 
     test 'jacott' do
       assert_contributor_names 'db05478', 'Geoff Jacobsen'
+    end
+
+    test 'jafrog' do
+      assert_contributor_names 'dd0cae3', 'Irina Bednova'
     end
 
     test "jakob\100mentalized.net" do
@@ -2214,6 +2238,10 @@ module Credits
 
     test "keegan\100thebasement.org" do
       assert_contributor_names '491b4a3', 'Keegan Quinn'
+    end
+
+    test 'keepcosmos' do
+      assert_contributor_names 'ca86c9e', 'Jaehyun Shin'
     end
 
     test 'kei' do
@@ -2916,6 +2944,10 @@ module Credits
       assert_contributor_names '9f26164', 'Neil Wilson'
     end
 
+    test 'nerdinand' do
+      assert_contributor_names '38c833c', 'Ferdinand Niedermann'
+    end
+
     test 'Nerian' do
       assert_contributor_names '2ebf47a', 'Gonzalo Rodríguez-Baltanás Díaz'
     end
@@ -3106,6 +3138,10 @@ module Credits
 
     test 'pager' do
       assert_contributor_names '6a611e1', 'Dmitriy Timokhin'
+    end
+
+    test 'palkan' do
+      assert_contributor_names '7785871', 'Vladimir Dementyev'
     end
 
     test 'paranoiase Kang' do
@@ -3506,6 +3542,10 @@ module Credits
 
     test 'Robert Pankowecki (Gavdi)' do
       assert_contributor_names 'e95b5b3', 'Robert Pankowecki'
+    end
+
+    test 'RobertZK' do
+      assert_contributor_names 'a723519', 'Robert Krzyzanowski'
     end
 
     test 'robertomiranda' do
@@ -4288,6 +4328,14 @@ module Credits
       assert_contributor_names '8091ed5', 'Vlad Romascanu'
     end
 
+    test 'WAKASUGI 5T111111' do
+      assert_contributor_names '0176aef', 'Hirofumi Wakasugi'
+    end
+
+    test 'wallerjake' do
+      assert_contributor_names '9bc4eb7e', 'Jake Waller'
+    end
+
     test 'wangchun' do
       assert_contributor_names 'c6a3a39', 'Wang Chun'
     end
@@ -4398,6 +4446,10 @@ module Credits
 
     test 'YanhaoYang' do
       assert_contributor_names '2f35f61', 'Yanhao Yang'
+    end
+
+    test 'Yasuhiko Katoh (y@su)' do
+      assert_contributor_names '539d929', 'Yasuhiko Katoh'
     end
 
     test 'ymendel' do
