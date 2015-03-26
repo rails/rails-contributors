@@ -1,3 +1,6 @@
+# WARNING: contributors.yml has first contribution timestamps that depend on
+# these fixtures. Keep them in sync as needed.
+#
 # In the following comments we assumed today is 26 December 2012.
 #
 # This is a commit from today, but with an author date in the past,

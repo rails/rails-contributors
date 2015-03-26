@@ -305,19 +305,18 @@ TABLES GENERALS
   padding:5px;
 }
 
-#table-wrap table td.highlight {
+#table-wrap table td.contributor-rank {
+  text-align: center;
+}
+
+#table-wrap table td.contributor-name {
+  width: 70%;
   font-weight: bold;
   font-size: 1.1em;
 }
 
-/*
----------------------------------
-COMMITS LIST TABLE SPECIFICS
----------------------------------
-*/
-
-#table-wrap table td.rank-data {
-  text-align: center;
+#table-wrap table td.contributor-seniority {
+  text-align: left;
 }
 
 #table-wrap table td.no-commits {

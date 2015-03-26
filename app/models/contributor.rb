@@ -40,6 +40,21 @@ class Contributor < ActiveRecord::Base
       order('ncommits DESC, contributors.url_id ASC')
   end
 
+  def self.fill_missing_first_contribution_timestamps
+    connection.execute(<<-SQL)
+      UPDATE contributors
+      SET first_contribution_at = first_contributions.committer_date
+      FROM (
+        SELECT contributor_id, MIN(commits.committer_date) AS committer_date
+          FROM contributions
+          INNER JOIN commits ON commits.id = commit_id
+          GROUP BY contributor_id
+      ) AS first_contributions
+      WHERE id = first_contributions.contributor_id
+      AND first_contribution_at IS NULL
+    SQL
+  end
+
   # The contributors table may change if new name equivalences are added and IDs
   # in particular are expected to move. So, we just put the parameterized name
   # in URLs, which is unique anyway.

@@ -85,6 +85,7 @@ class Repo
         if ncommits > 0 || nreleases > 0 || nmupdated
           sync_names(nmupdated)
           sync_ranks
+          sync_first_contribution_timestamps
         end
 
         RepoUpdate.create!(
@@ -185,6 +186,10 @@ class Repo
     ranks_to_update.each do |rank, contributor_ids|
       Contributor.where(id: contributor_ids).update_all("rank = #{rank}")
     end
+  end
+
+  def sync_first_contribution_timestamps
+    Contributor.fill_missing_first_contribution_timestamps
   end
 
   # Determines whether the names mapping has been updated. This is useful because
