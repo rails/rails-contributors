@@ -310,12 +310,13 @@ TABLES GENERALS
 }
 
 #table-wrap table td.contributor-name {
-  width: 80%;
+  width: 75%;
   font-weight: bold;
   font-size: 1.1em;
 }
 
-#table-wrap table td.contributor-seniority {
+#table-wrap table td.contributor-since {
+  white-space: nowrap;
   text-align: left;
 }
 

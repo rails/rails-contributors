@@ -1,6 +1,6 @@
 <tr class="<%= cycle 'even', 'odd' %> release">
   <td class="release-tag"><%= link_to_release_in_github release %></td>
-  <td class="release-date"><%= release.date.to_date %></td>
+  <td class="release-date"><%= date release.date %></td>
   <td class="release-name"><%= link_to_release release %></td>
   <td class="release-counter"><%= link_to release.ncontributors, release_contributors_path(release) %></td>
   <td class="release-counter"><%= link_to release.ncommits, release_commits_path(release) %></td>

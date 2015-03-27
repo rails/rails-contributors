@@ -12,4 +12,8 @@ class ApplicationHelperTest < ActionView::TestCase
     tag = 'v4.2.1'
     assert_equal "https://github.com/rails/rails/tree/#{tag}", github_url_for_tag(tag)
   end
+
+  def test_date
+    assert_equal '07 Mar 2015', date(Time.new(2015, 3, 7))
+  end
 end

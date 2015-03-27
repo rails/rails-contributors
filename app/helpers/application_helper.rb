@@ -40,4 +40,8 @@ module ApplicationHelper
     title = title.starts_with?('Rails Contributors') ? title : "Rails Contributors - #{title}"
     strip_tags(title)
   end
+
+  def date(timestamp)
+    timestamp.strftime('%d %b %Y')
+  end
 end
