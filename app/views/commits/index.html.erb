@@ -22,7 +22,7 @@
 <div class="vcard">
   <h1 id="title">
     <%= @title %><br/>
-    <span class="listing-total">Showing <%= pluralize @commits.size, 'commit' %></span>
+    <span class="listing-total">Showing <%= pluralize_with_delimiter @commits.size, 'commit' %></span>
   </h1>
 
   <div id="table-wrap">
