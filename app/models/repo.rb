@@ -224,9 +224,23 @@ class Repo
   def assign_contributors
     contributor_names_per_commit = compute_contributor_names_per_commit
     contributors = Hash.new {|h, name| h[name] = Contributor.find_or_create_by(name: name)}
+
+    data = []
     Commit.with_no_contributors.find_each do |commit|
       contributor_names_per_commit[commit.sha1].each do |contributor_name|
-        contributors[contributor_name].commits << commit
+        # FIXME: This check is needed because creation in a few exceptional
+        # cases fails due to url_id collisions (Geoffrey ROGUELON, Adam), or
+        # due blank url_ids (प्रथमेश).
+        if contributors[contributor_name].id
+          data << "#{contributors[contributor_name].id},#{commit.id}\n"
+        end
+      end
+    end
+
+    conn = ActiveRecord::Base.connection.raw_connection
+    conn.copy_data('COPY contributions (contributor_id, commit_id) FROM STDIN CSV') do
+      data.each do |row|
+        conn.put_copy_data(row)
       end
     end
   end
