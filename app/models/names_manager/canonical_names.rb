@@ -590,7 +590,7 @@ module NamesManager
     map 'Kristopher Chambers',        "kristopher.chambers\100gmail.com", 'kris_chambers'
     map 'Krzysztof Knapik',           'knapo'
     map 'Kubo Takehiro',              'kubo'
-    map 'Kuldeep Aggarwal',           'KD'
+    map 'Kuldeep Aggarwal',           'KD', 'kuldeepaggarwal'
     map 'Kym McInerney',              'holodigm', 'Kym'
     map 'Kyosuke Morohashi',          'moro'
     map 'Lakshan Perera',             'laktek', 'lakshan'
