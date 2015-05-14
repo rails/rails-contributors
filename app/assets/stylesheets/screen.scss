@@ -149,14 +149,14 @@ LAYOUT GENERALS
 */
 
 #header {
-  background:$lead_color url(header_tile.gif) repeat-x scroll 0 0;
+  background:$lead_color image-url("header_tile.gif") repeat-x scroll 0 0;
   color:#FFFFFF;
   overflow:hidden;
   padding:1em 0;
 }
 
 #header-shadow {
-  background:transparent url(header-shadow.png) repeat-x scroll top center;
+  background:transparent image-url("header-shadow.png") repeat-x scroll top center;
 }
 
 #header-shadow .wrapper {
@@ -164,7 +164,7 @@ LAYOUT GENERALS
 }
 
 #container {
-  background:transparent url(content-shadow.png) repeat-y scroll left center;
+  background:transparent image-url("content-shadow.png") repeat-y scroll left center;
   overflow:hidden;
   position:relative;
   width:850px;
@@ -184,7 +184,7 @@ LAYOUT GENERALS
 }
 
 #bottom {
-  background: #eaeaea url(bottom-bg.png) no-repeat top left;
+  background: #eaeaea image-url("bottom-bg.png") no-repeat top left;
   clear:both;
   height:20px;
 }
@@ -205,7 +205,7 @@ SIDEBAR NAVIGATION
   -moz-border-radius-topright:10px;
   -webkit-border-top-right-radius:10px;
   -webkit-border-bottom-right-radius:10px;
-  background:$lead_color url(nav-shadow-left.png) repeat-y scroll left center;
+  background:$lead_color image-url("nav-shadow-left.png") repeat-y scroll left center;
   color:#FFFFFF;
   float:left;
   margin-top:20px;
@@ -228,7 +228,7 @@ SIDEBAR NAVIGATION
 }
 
 #sidebar li {
-  background:#E6E6E6 url(nav-shadow-left.png) repeat-y scroll left;
+  background:#E6E6E6 image-url("nav-shadow-left.png") repeat-y scroll left;
   border-bottom:3px solid $dark_lead_color;
   display:block;
   font-size: 16px;
