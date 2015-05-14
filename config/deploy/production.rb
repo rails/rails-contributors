@@ -21,3 +21,5 @@ after 'deploy:finished', :trigger_webhook do
     execute 'curl -X POST http://contributors.rubyonrails.org:8080/rails-master-hook'
   end
 end
+
+after 'deploy:finished', 'deploy:cleanup_assets'
