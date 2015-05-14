@@ -2804,6 +2804,10 @@ module Credits
       assert_contributor_names '6df2db3', 'Michael Coyne'
     end
 
+    test 'Miklos Fazkeas' do
+      assert_contributor_names 'fb71fa6', 'Miklós Fazekas'
+    end
+
     test 'mikong' do
       assert_contributor_names '632ab24', 'Michael Galero'
     end
