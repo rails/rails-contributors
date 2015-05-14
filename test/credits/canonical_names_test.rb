@@ -2441,7 +2441,7 @@ module Credits
     end
 
     test 'lholden' do
-      assert_contributor_names '19f8bb2', 'Lori Holden'
+      assert_contributor_names '19f8bb28', 'Lori Holden'
     end
 
     test 'libc' do
