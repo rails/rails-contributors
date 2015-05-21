@@ -141,6 +141,10 @@ module Credits
       assert_contributor_names 'd273741', 'Amit Thawait'
     end
 
+    test 'ci <new line> skip' do
+      assert_contributor_names '319baed', 'Sadman Khan'
+    end
+
     test 'key' do
       assert_contributor_names '98f4aee', 'Xavier Noria'
     end

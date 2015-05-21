@@ -863,6 +863,7 @@ module NamesManager
     map 'Ryan Raaum',                 "ryan.raaum\100gmail.com"
     map 'Ryan Tomayko',               "rtomayko\100gmail.com"
     map 'Sachin Singh',               'sachin87', 'Sachin87'
+    map 'Sadman Khan',                'sh6khan'
     map 'Sam Elliott',                'Samuel Elliott'
     map 'Sam Granieri',               'sjgman9'
     map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
