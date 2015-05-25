@@ -2184,10 +2184,6 @@ module Credits
       assert_contributor_names '426fa08', 'Caio Chassot'
     end
 
-    test "karanarora" do
-      assert_contributor_names '5415230', 'Karan Arora'
-    end
-
     test "kajism\100yahoo.com" do
       assert_contributor_names '40762a4', 'Karel Miarka'
     end
@@ -2214,6 +2210,10 @@ module Credits
 
     test "kanis\100comcard.de" do
       assert_contributor_names '6650da4', 'Lars Kanis'
+    end
+
+    test "karanarora" do
+      assert_contributor_names '5415230', 'Karan Arora'
     end
 
     test 'Karel Minarik' do
