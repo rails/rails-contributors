@@ -557,6 +557,7 @@ module NamesManager
     map 'Justin Mecham',              "justin\100aspect.net"
     map 'Kamal Fariz Mahyuddin',      'kamal'
     map 'Kamil Kukura',               'kamk'
+    map 'Karan Arora',                'karanarora'
     map 'Karel Miarka',               "kajism\100yahoo.com"
     map 'Karel Minařík',              'karmi', 'Karel Minarik'
     map 'Karol Bucek',                'kares'
