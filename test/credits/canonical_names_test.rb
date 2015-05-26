@@ -3816,6 +3816,10 @@ module Credits
       assert_contributor_names '92a6033', 'Sean Griffin'
     end
 
+    test 'sh6khan' do
+      assert_contributor_names '319baed', 'Sadman Khan'
+    end
+
     test "shimbo\100is.naist.jp" do
       assert_contributor_names '6aaa08d', 'Masashi Shimbo'
     end

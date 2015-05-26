@@ -30,7 +30,7 @@ module NamesManager
         when 'props to Zarathu in #rubyonrails'
         when 'thanks Pratik!'
         when 'multiple=true'
-        when /ci[ _-]s?kip/i
+        when /ci[\s_-]s?kip/i
         when 'ci skp'
         when 'ci ski'
         when /skip[ -]ci/i
