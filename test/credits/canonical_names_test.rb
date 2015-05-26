@@ -2212,6 +2212,10 @@ module Credits
       assert_contributor_names '6650da4', 'Lars Kanis'
     end
 
+    test "karanarora" do
+      assert_contributor_names '5415230', 'Karan Arora'
+    end
+
     test 'Karel Minarik' do
       assert_contributor_names 'ee7487e', 'Karel Minařík'
     end

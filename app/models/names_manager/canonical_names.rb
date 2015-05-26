@@ -73,6 +73,7 @@ module NamesManager
     #
     # This mapping does not use regexps on purpose, it is more robust to put the
     # exact string equivalences. The manager has to be very strict about this.
+
     map 'Aaron Eisenberger',          'Aaron'
     map 'Aaron Namba',                'anamba'
     map 'Aaron Pfeifer',              'obrie'
@@ -98,7 +99,6 @@ module NamesManager
     map 'Akshay Gupta',               'kitallis'
     map 'Akshay Vishnoi',             'Mr A'
     map 'Alan Francis',               'alancfrancis', 'acf',"alancfrancis\100gmail.com"
-    map 'Andrew Evans',               'agius'
     map 'Albert Lash',                'docunext'
     map 'Alex Chaffee',               'alexch'
     map 'Alex Mishyn',                'amishyn'
@@ -128,6 +128,7 @@ module NamesManager
     map 'Andrew A. Smith',            "andy\100tinnedfruit.org"
     map 'Andrew Bennett',             'PotatoSalad'
     map 'Andrew Chase',               'acechase', 'Andrew'
+    map 'Andrew Evans',               'agius'
     map 'Andrew Grim',                'stopdropandrew'
     map 'Andrew Kaspick',             "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
     map 'Andrew Peters',              "andrew.john.peters\100gmail.com"
@@ -180,25 +181,25 @@ module NamesManager
     map 'Blake Watters',              "blake\100near-time.com"
     map 'Blane Dabney',               "mdabney\100cavoksolutions.com"
     map 'Bob Aman',                   "bob\100sporkmonger.com"
+    map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
     map 'Brad Ediger',                "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
     map 'Brad Ellis',                 "bellis\100deepthought.org"
+    map 'Brad Greenlee',              'bgreenlee'
     map 'Brad Robertson',             'bradrobertson'
+    map 'Brandon Keepers',            'brandon', "brandon\100opensoul.org"
     map 'Brandt Kurowski',            "brandt\100kurowski.net"
     map 'Brendan Baldwin',            'brendan'
+    map 'Brent Miller',               'Foliosus'
+    map 'Brian Donovan',              'eventualbuddha', "devslashnull\100gmail.com"
     map 'Brian Egge',                 "brianegge\100yahoo.com"
     map 'Brian Gernhardt',            "benji\100silverinsanity.com"
     map 'Brian Mattern',              "rephorm\100rephorm.com"
-    map 'Bryan Helmkamp',             'brynary'
-    map 'Bryan Kang',                 'deepblue'
-    map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
-    map 'Brad Greenlee',              'bgreenlee'
-    map 'Brandon Keepers',            'brandon', "brandon\100opensoul.org"
-    map 'Brent Miller',               'Foliosus'
-    map 'Brian Donovan',              'eventualbuddha', "devslashnull\100gmail.com"
     map 'Brian Morearty',             'BMorearty'
     map 'Brian Pearce',               'brianp'
     map 'Bruce Williams',             "wbruce\100gmail.com"
     map 'Bruno Miranda',              'brupm'
+    map 'Bryan Helmkamp',             'brynary'
+    map 'Bryan Kang',                 'deepblue'
     map 'Buddhika Laknath',           'laknath', 'Laknath'
     map 'Caio Chassot',               'caio', "k\100v2studio.com"
     map 'Caleb Tennis',               "caleb\100aei-tech.com"
@@ -301,12 +302,12 @@ module NamesManager
     map 'Diego Giorgini',             'ogeidix'
     map 'Dieter Komendera',           'kommen'
     map 'Dirkjan Bussink',            'dbussink'
-    map 'Dmitry Vorotilin',           'Dmitriy Vorotilin'
     map 'Dmitrii Samoilov',           'german'
     map 'Dmitrij Mjakotnyi',          'kucaahbe'
+    map 'Dmitriy Timokhin',           'pager'
     map 'Dmitry Dedov',               'dm1try'
     map 'Dmitry Lipovoi',             'pleax'
-    map 'Dmitriy Timokhin',           'pager'
+    map 'Dmitry Vorotilin',           'Dmitriy Vorotilin'
     map 'Dominic Sisneros',           "dom\100sisna.com"
     map 'Don Park',                   "don.park\100gmail.com"
     map 'Donald Piret',               "donald.piret\100synergetek.be"
@@ -325,8 +326,8 @@ module NamesManager
     map 'Edward Betts',               "edward\100debian.org"
     map 'Eelco Lempsink',             "rails\10033lc0.net"
     map 'Egor Homakov',               'homa', 'homakov', '@homakov'
-    map 'Elan Feingold',              "elan\100bluemandrill.com"
     map 'Eileen M. Uchitelle',        'eileencodes'
+    map 'Elan Feingold',              "elan\100bluemandrill.com"
     map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
     map 'Elliot Smith',               "elliot\100townx.org"
     map 'Elliot Winkler',             'mcmire'
@@ -377,11 +378,11 @@ module NamesManager
     map 'Geoffrey Grosenbach',        'topfunky'
     map 'Geoffroy Lorieux',           'glorieux'
     map 'Georg Friedrich',            'gfriedrich'
-    map 'Gonzalo Rodríguez-Baltanás Díaz', 'Nerian'
     map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
     map 'Glen Gibb',                  'grg'
     map 'Glenn Vanderburg',           'glv'
     map 'Go Sueyoshi',                'sue445'
+    map 'Gonzalo Rodríguez-Baltanás Díaz', 'Nerian'
     map 'Graeme Mathieson',           'mathie'
     map 'Grant Hollingworth',         "grant\100antiflux.org"
     map 'Greg Lappen',                "greg\100lapcominc.com"
@@ -391,8 +392,8 @@ module NamesManager
     map 'Guillaume Carbonneau',       'guillaume'
     map 'Gustavo Leon',               'HPNeo'
     map 'Guy Naor',                   "guy.naor\100famundo.com"
-    map 'Hal Brodigan',               'postmodern'
     map 'Hakan Ensari',               'hakanensari'
+    map 'Hal Brodigan',               'postmodern'
     map 'Hampton Catlin',             "hcatlin\100gmail.com"
     map 'Hendrik Mans',               "hendrik\100mans.de"
     map 'Hendy Irawan',               'ceefour'
@@ -408,8 +409,8 @@ module NamesManager
     map 'Igor Fedoronchuk',           'Igor', 'Fivell'
     map 'Igor Guzak',                 'igor04'
     map 'Indrek Juhkam',              'innu'
-    map 'Innokenty Mikhailov',        'gregolsen'
     map 'Iñigo Solano Pàez',          '1334'
+    map 'Innokenty Mikhailov',        'gregolsen'
     map 'Ionatan Wiznia',             'iwiznia'
     map 'Irfan Adilovic',             'Irfy'
     map 'Irina Bednova',              'jafrog'
@@ -423,11 +424,9 @@ module NamesManager
     map 'Jacob Fugal',                'lukfugl'
     map 'Jacob Straszynski',          'jacobstr'
     map 'Jaehyun Shin',               'keepcosmos'
-    map 'Jason Kaye',                 'JayK31'
     map 'Jake Janovetz',              'janovetz'
     map 'Jake Waller',                'wallerjake'
     map 'Jakob Skjerning',            'Jakob S', "jakob\100mentalized.net"
-    map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
     map 'James Adam',                 'lazyatom', "james.adam\100gmail.com"
     map 'James Coglan',               'jcoglan'
     map 'James Conroy-Finn',          'jcf'
@@ -453,8 +452,10 @@ module NamesManager
     map 'Jan Schwenzien',             'jeanmartin'
     map 'Jan Xie',                    'Jan'
     map 'Jared Haworth',              'jardeon'
-    map 'Jason Garber',               'jgarber'
+    map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
     map 'Jason Frey',                 'Jason Frey (Fryguy)'
+    map 'Jason Garber',               'jgarber'
+    map 'Jason Kaye',                 'JayK31'
     map 'Jason Ketterman',            'anshkakashi'
     map 'Jason L Perry',              'ambethia'
     map 'Jason Roth',                 'Jason'
@@ -477,9 +478,9 @@ module NamesManager
     map 'Jeong Changhoon',            'seapy'
     map 'Jeremy Durham',              "jeremydurham\100gmail.com"
     map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans', "jeremye\100bsa.ca.gov", "code\100jeremyevans.net"
+    map 'Jeremy Hopple',              "jeremy\100jthopple.com"
     map 'Jeremy Jackson',             'jejacks0n'
     map 'Jeremy Kemper',              'bitsweat'
-    map 'Jeremy Hopple',              "jeremy\100jthopple.com"
     map 'Jeremy Lightsmith',          'stellsmi'
     map 'Jeremy McAnally',            'jeremymcnally', 'jeremymcanally'
     map 'Jeremy Voorhis',             "jeremy\100planetargon.com", 'jvoorhis'
@@ -507,9 +508,10 @@ module NamesManager
     map 'John J. Wang',               'wangjohn'
     map 'John Mettraux',              'jmettraux'
     map 'John Nunemaker',             "nunemaker\100gmail.com"
+    map 'John Oxton',                 "rails\100electricvisions.com"
     map 'John Pignata',               'Developer', 'Jay Pignata' # see 179b451
-    map 'Josh Owens',                 'queso'
     map 'John Sheets',                "dev\100metacasa.net", "jsheets"
+    map 'John Warwick',               'jwarwick'
     map 'John Wells',                 'jbwiv'
     map 'John Wilger',                'jwilger'
     map 'Johnson Wang',               'spyhole'
@@ -517,15 +519,13 @@ module NamesManager
     map 'Jon Evans',                  "jon.evans\100pobox.com", 'evansj'
     map 'Jon Moses',                  "jon\100burningbush.us"
     map 'Jon Olson',                  "jsolson\100damogran.org"
-    map 'John Oxton',                 "rails\100electricvisions.com"
-    map 'John Warwick',               'jwarwick'
     map 'Jon Seidel',                 'JESii'
     map 'Jon Wood',                   "jon\100instance-design.co.uk", "jon\100blankpad.net"
     map 'Jonathan Bartlett',          'johnnyb'
+    map 'Jonathan del Strother',      'Catfish', 'catfish'
     map 'Jonathan Garvin',            "jsgarvin"
     map 'Jonathan Goldman',           'jonnii', "me\100jonnii.com"
     map 'Jonathan Leighton',          "turnip\100turnipspatch.com"
-    map 'Jonathan del Strother',      'Catfish', 'catfish'
     map 'Jonathan Viney',             "jonathan\100bluewire.net.nz"
     map 'Jonathan Weiss',             'jweiss'
     map 'Jonathan Younger',           "jonathan\100daikini.com"
@@ -540,11 +540,12 @@ module NamesManager
     map 'Joseph Hosteny',             "jhosteny\100mac.com"
     map 'Josh Goebel',                'Dreamer3', "dreamer3\100gmail.com", 'yyyc514'
     map 'Josh Knowles',               "joshknowles\100gmail.com"
+    map 'Josh Owens',                 'queso'
     map 'Josh Peek',                  'josh', 'Josh', 'Joshua Peek', 'joshpeek', "josh\100joshpeek.com"
     map 'Josh Starcher',              "josh.starcher\100gmail.com"
     map 'Josh Susser',                'hasmanyjosh', "josh\100hasmanythrough.com"
-    map 'Joshua Wehner',              'jaw6'
     map 'Joshua Sierles',             'jsierles'
+    map 'Joshua Wehner',              'jaw6'
     map 'Juan David Pastas',          'juanpastas', 'juan david pastas'
     map 'Juan De Bravo',              'juandebravo'
     map 'Juanjo Bazán',               'Juanjo Bazan', 'juanjo.bazan'
@@ -557,6 +558,7 @@ module NamesManager
     map 'Justin Mecham',              "justin\100aspect.net"
     map 'Kamal Fariz Mahyuddin',      'kamal'
     map 'Kamil Kukura',               'kamk'
+    map 'Karan Arora',                'karanarora'
     map 'Karel Miarka',               "kajism\100yahoo.com"
     map 'Karel Minařík',              'karmi', 'Karel Minarik'
     map 'Karol Bucek',                'kares'
@@ -568,8 +570,8 @@ module NamesManager
     map 'Keith Gautreaux',            'kaygee', 'kgautreaux'
     map 'Keith Morrison',             "keithm\100infused.org"
     map 'Ken Barker',                 "ken.barker\100gmail.com"
-    map 'Ken Kunz',                   "kennethkunz\100gmail.com"
     map 'Ken Gerrard',                'backspace'
+    map 'Ken Kunz',                   "kennethkunz\100gmail.com"
     map 'Ken Miller',                 "kenneth.miller\100bitfield.net"
     map 'Kenta Okamoto',              "chocoby"
     map 'Kenta Tanoue',               'regonn'
@@ -636,10 +638,10 @@ module NamesManager
     map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
     map 'Manu J',                     "Manu"
     map 'Manuel Holtgrewe',           "purestorm\100ggnore.net"
+    map 'Marc Huffnagle',             'mhuffnagle'
     map 'Marc Love',                  'marclove'
     map 'Marc-André Cournoyer',       'macournoyer'
     map 'Marc-André Lafortune',       'Marc-Andre Lafortune'
-    map 'Marc Huffnagle',             'mhuffnagle'
     map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
     map 'Marcello Nuccio',            'marcenuc'
     map 'Marcin Szczepański',         "marcin\100junkheap.net"
@@ -648,31 +650,31 @@ module NamesManager
     map 'Mariusz Pękala',             'Arsen7'
     map 'Marjan Hratson',             'gmarik'
     map 'Mark A. Richman',            'mrichman'
+    map 'Mark Daggett',               'heavysixer'
     map 'Mark H. Wilkinson',          'mhw'
     map 'Mark Imbriaco',              "mark.imbriaco\100pobox.com"
-    map 'Mark James',                 "mrj\100bigpond.net.au"
     map 'Mark J. Titorenko',          'mtitorenko'
+    map 'Mark James',                 "mrj\100bigpond.net.au"
     map 'Mark Lane',                  'DrMark'
     map 'Mark R. James',              'mrj'
     map 'Mark Somerville',            'Spakman'
     map 'Mark Van Holstyn',           'lotswholetime'
     map 'Mark W. Foster',             'mfoster'
     map 'Markus Roberts',             "MarkusQ\100reality.com"
+    map 'Marshall Roch',              'mroch'
     map 'Marten Veldthuis',           'Marten'
     map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
+    map 'Martin Gamsjaeger',          'snusnu'
     map 'Martin Schuerrer',           'Martin Schürrer'
     map 'Masashi Shimbo',             "shimbo\100is.naist.jp"
-    map 'Mark Daggett',               'heavysixer'
-    map 'Marshall Roch',              'mroch'
-    map 'Martin Gamsjaeger',          'snusnu'
     map 'Mason Hale',                 'flowdelic'
     map 'Mathieu Arnold',             "mat\100absolight.fr"
     map 'Mathieu Jobin',              "somekool\100gmail.com"
     map 'Mathieu Ravaux',             'mathieuravaux'
     map 'Mats Persson',               "mats\100imediatec.co.uk"
-    map 'Matt Boehlig',               'Matt B.'
     map 'Matt Aimonetti',             'matt'
     map 'Matt Bauer',                 'mattbauer'
+    map 'Matt Boehlig',               'Matt B.'
     map 'Matt Freels',                'freels'
     map 'Matt Lyon',                  'mattly'
     map 'Matt Margolis',              "matt\100mattmargolis.net"
@@ -696,9 +698,9 @@ module NamesManager
     map 'Michael Coyne',              'mikeycgto'
     map 'Michael Daines',             "me\100mdaines.com"
     map 'Michael Dewey',              "mike\100michaeldewey.org"
-    map 'Michael Hoffman',            'hoffm'
     map 'Michael Galero',             'mikong'
     map 'Michael Grosser',            'grosser'
+    map 'Michael Hoffman',            'hoffm'
     map 'Michael Hutchinson',         'mhutchin'
     map 'Michael Kintzer',            'rockrep'
     map 'Michael Klishin',            'antares', 'Michael S. Klishin'
@@ -761,8 +763,8 @@ module NamesManager
     map 'Oleg Andreev',               'oleganza'
     map 'Oleg Frolov',                "oleg.frolov\100gmail.com"
     map 'Oleg Pudeyev',               "pudeyo\100rpi.com"
-    map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
     map 'Oliver Legg',                'Olly Legg'
+    map 'Olivier Ansaldi',            "olivier_ansaldi\100yahoo.com"
     map 'Olli Rissanen',              'Noemj'
     map 'Olly Headey',                'lylo'
     map 'Orta Therox',                'orta'
@@ -819,26 +821,24 @@ module NamesManager
     map 'Rein Henrichs',              "ReinH"
     map "Remco van 't Veer",          'remvee'
     map 'Rémy Coutable',              'rymai', 'remy', "rymai\100rymai.com", "remy.coutable\100gmail.com"
+    map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
     map 'Richard Schneeman',          'Schneems', 'schneems', '@schneems'
     map 'Rick Bradley',               "rick\100rickbradley.com"
-    map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
     map 'Rick DeNatale',              'RubyRedRick'
     map 'Rick Olson',                 'rick', 'Rick', 'Rick Olsen', "technoweenie\100gmail.com", 'Rich Olson'
     map 'Riley Lynch',                'Riley', 'teleological'
     map 'Rizwan Reza',                'rizwanreza'
-    map 'Robert Evans',               'revans'
-    map 'Roberto Miranda',            'robertomiranda'
-    map 'Roman Le Négrate',           'Roman Le Negrate'
-    map 'Russell Norris',             'rsl', 'RSL'
     map 'Rob Anderton',               'Rob'
     map 'Rob Biedenharn',             'rabiedenharn', "Rob\100AgileConsultingLLC.com"
     map 'Rob Halff',                  "info\100rhalff.com"
     map 'Rob Rasmussen',              "rob.rasmussen\100gmail.com"
     map 'Rob Sanheim',                'rsanheim', "rsanheim\100gmail.com", "rob\100thinkrelevance.com"
     map 'Robby Russell',              'robbyrussell', "robby\100planetargon.com"
+    map 'Robert Evans',               'revans'
     map 'Robert Krzyzanowski',        'RobertZK'
     map 'Robert Pankowecki',          'Robert Pankowecki (Gavdi)'
     map 'Robert Speicher',            'rspeicher'
+    map 'Roberto Miranda',            'robertomiranda'
     map 'Robin Fisher',               'robinjfisher'
     map 'Robin H. Johnson',           "robbat2\100gentoo.org"
     map 'Roderick van Domburg',       'roderickvd'
@@ -846,17 +846,19 @@ module NamesManager
     map 'Rodrigo Navarro',            'reu'
     map 'Rohit Arondekar',            'rohit'
     map 'Roman Dittert',              'RomD'
+    map 'Roman Le Négrate',           'Roman Le Negrate'
     map 'Roman Le Négrate',           'Roman2K', 'Roman Le Negrate'
     map 'Ron DiFrango',               "rdifrango\100captechventures.com"
     map 'Ross Kaffenberger',          'Ross Kaffenburger'
     map 'Ruben Nine',                 "ruben.nine\100gmail.com"
     map 'Russell Norris',             'RSL', 'rsl'
+    map 'Russell Norris',             'rsl', 'RSL'
     map 'Ruy Asan',                   'rubyruy'
     map 'Ryan Bates',                 'ryanb'
     map 'Ryan Bigg',                  'Radar'
     map 'Ryan Daigle',                'rwdaigle'
-    map 'Ryan Davis (zenspider)',     'Ryan Davis', 'zenspider', "ryand-ruby\100zenspider.com"
     map 'Ryan Davis (ryepup)',        'ryepup'
+    map 'Ryan Davis (zenspider)',     'Ryan Davis', 'zenspider', "ryand-ruby\100zenspider.com"
     map 'Ryan Duryea',                'aguynamedryan'
     map 'Ryan Heath',                 'rpheath'
     map 'Ryan McGeary',               'rmm5t'
@@ -888,8 +890,8 @@ module NamesManager
     map 'Sebastian Spieszko',         'ciastek'
     map 'Serg Podtynnyi',             'shtirlic'
     map 'Serge Balyuk',               'bgipsy'
-    map 'Sergey Kojin',               "sergeykojin\100gmail.com"
     map 'Sergey Karpesh',             'kasper'
+    map 'Sergey Kojin',               "sergeykojin\100gmail.com"
     map 'Sergey Nartimov',            'lest'
     map 'Sergio Gil',                 'Sergio Gil Pérez de la Manga'
     map 'Seth Ladd',                  'sethladd'
@@ -906,11 +908,11 @@ module NamesManager
     map 'Soichiro Ogawa',             'ogawaso'
     map 'Solomon White',              "solo\100gatelys.com"
     map 'Sonny Michaud',              'sonnym'
+    map 'St. Louis Ruby Users Group', "stlruby\100googlegroups.com"
     map 'Stanislav Sobolev',          'Stanislav'
     map 'Starr Horne',                "starr\100starrnhorne.com"
     map 'Stefan Hollmann',            'sthollmann'
     map 'Stefan Kaes',                "skaes\100web.de", 'skaes', 'Stephan Kaes', 'Skaes', 'skaes.web.de', 'stefan', 'Stefan', 'skae', 'skaen'
-    map 'St. Louis Ruby Users Group', "stlruby\100googlegroups.com"
     map 'Stephen Blackstone',         'sblackstone'
     map 'Stephen Haberman',           "stephenh\100chase3000.com"
     map 'Stephen St. Martin',         'Steve St. Martin'
@@ -971,8 +973,8 @@ module NamesManager
     map 'Tom Stone',                  'iaddict'
     map 'Tom Ward',                   'Tom ward', 'tomafro', "tom\100popdog.net"
     map 'Tomohiro Hashidate',         'joker1007'
-    map 'Tony Jian',                  '簡煒航'
     map 'Tõnis Simo',                 'Anton'
+    map 'Tony Jian',                  '簡煒航'
     map 'Toshinori Kajihara',         'kennyj'
     map 'Travis Vander Hoop',         'vanderhoop'
     map 'Trek Glowacki',              'trek'
@@ -1011,16 +1013,15 @@ module NamesManager
     map 'Yonatan Feldman',            "yon\100milliped.com", 'yon'
     map 'Yossef Mendelssohn',         'ymendel'
     map 'Yuki Minamiya',              'yuki3738'
-    map 'Yury Korolev',               'yury'
     map 'Yuri Leikind',               'leikind'
     map 'Yurii Rashkovskii',          "yrashk\100gmail.com", "yrashk\100fp.org.ua"
+    map 'Yury Korolev',               'yury'
     map 'Yves Senn',                  'senny'
     map 'Zac Williams',               'jzw'
     map 'Zach Dennis',                'zdennis'
     map 'Zachary Holt',               "z\100wzph.com"
     map 'Zack Chandler',              'zackchandler'
     map 'Zheng Jia',                  'zhengjia'
-
     # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
     CANONICAL_NAME_FOR = {}
     SEEN_ALSO_AS.each do |canonical_name, also_as|
