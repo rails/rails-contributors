@@ -2564,6 +2564,14 @@ module Credits
       assert_contributor_names 'd4c24b6', 'Manfred Stienstra'
     end
 
+    test 'Manish shrivastava' do
+      assert_contributor_names '6252d0a', 'Manish Shrivastava'
+    end
+
+    test 'manish-shrivastava' do
+      assert_contributor_names '8145880', 'Manish Shrivastava'
+    end
+
     test 'Manu' do
       assert_contributor_names 'e7e4dee', 'Manu J'
     end
