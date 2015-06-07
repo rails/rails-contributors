@@ -3968,6 +3968,10 @@ module Credits
       assert_contributor_names '2b6954a', 'Alex Wayne'
     end
 
+    test 'sshaw' do
+      assert_contributor_names 'f9369c0', 'Skye Shaw'
+    end
+
     test "ssinghi\100kreeti.com" do
       assert_contributor_names 'f3aa7c1', 'Surendra Singhi'
     end

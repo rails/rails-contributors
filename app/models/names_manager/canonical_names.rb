@@ -916,6 +916,7 @@ module NamesManager
     map 'Simon Jefford',              'simonjefford'
     map 'Simon Moore',                'saimonmoore'
     map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
+    map 'Skye Shaw',                  'sshaw'
     map 'Slava Markevich',            'markevich'
     map 'Soichiro Ogawa',             'ogawaso'
     map 'Solomon White',              "solo\100gatelys.com"
