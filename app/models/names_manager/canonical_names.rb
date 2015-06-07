@@ -31,6 +31,10 @@ module NamesManager
         case email
         when 'sam.saffron@gmail.com' then 'Sam Saffron'
         end
+      when 'James'
+        case email
+        when 'james.bowles@abletech.co.nz' then 'James Bowles'
+        end
       when 'root'
         case email
         when "mohamed.o.alnagdy\100gmail.com" then 'Mohamed Osama'

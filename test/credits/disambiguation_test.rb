@@ -16,6 +16,10 @@ module Credits
       assert_contributor_names '44fb54f', 'Sam'
     end
 
+    test 'disambiguates James' do
+      assert_contributor_names '63d7fd6', 'James Bowles'
+    end
+
     test 'disambiguates root' do
       assert_contributor_names 'a9d3b77', 'Mohamed Osama'
     end
