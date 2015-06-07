@@ -636,6 +636,7 @@ module NamesManager
     map 'Luca Guidi',                 'l.guidi'
     map 'Lucas Catón',                'Lucas Caton'
     map 'Lugovoi Nikolai',            "meadow.nnick\100gmail.com"
+    map 'Luís Ferreira',              'Zamith'
     map 'Luismi Cavallé',             'cavalle', 'cavelle'
     map 'Lukas Rieder',               'Overbryd'
     map 'Łukasz Sarnacki',            'Lukasz Sarnacki'

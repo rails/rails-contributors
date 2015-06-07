@@ -4568,6 +4568,10 @@ module Credits
       assert_contributor_names '08fd13d', 'August Zaitzow Flatby'
     end
 
+    test 'Zamith' do
+      assert_contributor_names '6f418a0', 'Luís Ferreira'
+    end
+
     test 'zapnap' do
       assert_contributor_names '096f3f6', 'Nick Plante'
     end
