@@ -2888,6 +2888,10 @@ module Credits
       assert_contributor_names 'cb97312', 'Corey Leveen'
     end
 
+    test 'mo khan' do
+      assert_contributor_names '140557e', 'Mo Khan'
+    end
+
     test 'mojombo' do
       assert_contributor_names '928c84b', 'Tom Preston-Werner'
     end

@@ -735,6 +735,7 @@ module NamesManager
     map 'Mikel Lindsaar',             'mikel', 'raasdnil'
     map 'Miklós Fazekas',             'mfazekas', 'Miklos Fazkeas'
     map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr", 'Mislav Marohnic'
+    map 'Mo Khan',                    'mo khan'
     map 'Moses Hohman',               'moses'
     map 'Murahashi Sanemat Kenichi',  'sanemat'
     map 'Murray Steele',              'h-lame'
