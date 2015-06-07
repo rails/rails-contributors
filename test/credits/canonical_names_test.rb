@@ -4508,6 +4508,10 @@ module Credits
       assert_contributor_names '17bb531', 'Yuki Minamiya'
     end
 
+    test 'yuuji.yaginuma' do
+      assert_contributor_names '4fded7c', 'Yuuji Yaginuma'
+    end
+
     test 'yury' do
       assert_contributor_names '3df90de', 'Yury Korolev'
     end
