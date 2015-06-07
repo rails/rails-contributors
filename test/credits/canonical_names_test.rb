@@ -888,6 +888,10 @@ module Credits
       assert_contributor_names '18aa1ae', 'David François'
     end
 
+    test 'DAVID MOORE' do
+      assert_contributor_names '4c945cc', 'Dave Moore'
+    end
+
     test "david\100ruppconsulting.com" do
       assert_contributor_names 'c4a3634', 'David Rupp'
     end

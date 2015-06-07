@@ -267,6 +267,7 @@ module NamesManager
     map 'Dave Dribin',                "dave-ml\100dribin.org"
     map 'Dave Goodchild',             'buddhamagnet'
     map 'Dave Lee',                   "dave\100cherryville.org"
+    map 'Dave Moore',                 'DAVID MOORE'
     map 'Dave Murphy',                'Wintermute'
     map 'Dave Naffis',                'naffis'
     map 'Dave Thomas',                "dave\100pragprog.com", 'pragdave'
