@@ -2308,6 +2308,10 @@ module Credits
       assert_contributor_names '080e169', 'Kevin Williams'
     end
 
+    test 'kgorin' do
+      assert_contributor_names '10e708c', 'Kirill Gorin'
+    end
+
     test "kim\100tinker.com" do
       assert_contributor_names '060b9b1', 'Kim Shrier'
     end
