@@ -3684,6 +3684,10 @@ module Credits
       assert_contributor_names 'da5d8fa', 'Ruy Asan'
     end
 
+    test 'rusikf' do
+      assert_contributor_names '47896b3', 'Ruslan Korolev'
+    end
+
     test 'rwdaigle' do
       assert_contributor_names '9b8399f', 'Ryan Daigle'
     end

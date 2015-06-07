@@ -861,6 +861,7 @@ module NamesManager
     map 'Ron DiFrango',               "rdifrango\100captechventures.com"
     map 'Ross Kaffenberger',          'Ross Kaffenburger'
     map 'Ruben Nine',                 "ruben.nine\100gmail.com"
+    map 'Ruslan Korolev',             'rusikf'
     map 'Russell Norris',             'RSL', 'rsl'
     map 'Russell Norris',             'rsl', 'RSL'
     map 'Ruy Asan',                   'rubyruy'
