@@ -4452,6 +4452,10 @@ module Credits
       assert_contributor_names '6feffe5', 'Andrew Shcheglov'
     end
 
+    test 'wingfire' do
+      assert_contributor_names 'a9f2c12', 'Christof Spies'
+    end
+
     test 'Winston' do
       assert_contributor_names 'b52c66f', 'Winston Teo Yong Wei'
     end

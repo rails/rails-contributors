@@ -238,6 +238,7 @@ module NamesManager
     map "Chris O'Sullivan",           'thechrisoshow'
     map 'Chris Roos',                 'chrisroos', "chris\100seagul.co.uk"
     map 'Chris Wanstrath',            "chris\100ozmm.org", 'defunkt'
+    map 'Christof Spies',             'wingfire'
     map 'Christopher Redinger',       'redinger'
     map 'Chriztian Steinmeier',       "chriztian.steinmeier\100gmail.com"
     map 'Claudio Baccigalupo',        'claudiob', 'Claudio B.', 'claudiofullscreen'
