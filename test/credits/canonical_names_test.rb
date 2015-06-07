@@ -380,6 +380,10 @@ module Credits
       assert_contributor_names 'c424fb2', 'Bagwan Pankaj'
     end
 
+    test 'Bart' do
+      assert_contributor_names 'c2f59f3', 'Bart de Water'
+    end
+
     test 'Bas Van Klinkenberg' do
       assert_contributor_names 'b99914c', 'Bas van Klinkenberg'
     end

@@ -168,6 +168,7 @@ module NamesManager
     map 'Ayose Cazorla',              'Ayose'
     map 'Bagwan Pankaj',              'bagwanpankaj'
     map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl", 'Bas Van Klinkenberg'
+    map 'Bart de Water',              'Bart'
     map 'Ben Bangert',                "ben\100groovie.org"
     map 'Ben Sandofsky',              'sandofsky'
     map 'Ben Scofield',               'bscofield'
