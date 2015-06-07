@@ -27,6 +27,7 @@ module Credits
     test 'disambiguates unknown' do
       assert_contributor_names 'e813ad2a', 'Andrew Grimm'
       assert_contributor_names '2414fdb2', 'Jens Kolind'
+      assert_contributor_names '3833d45', 'Manish Puri'
     end
 
     test 'disambiguates David' do

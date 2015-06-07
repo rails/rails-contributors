@@ -43,6 +43,7 @@ module NamesManager
         case email
         when "agrimm\100.(none)" then 'Andrew Grimm'
         when "jeko1\100.npfit.nhs.uk" then 'Jens Kolind'
+        when "Manish Puri\100NYO000011657014.ads.mckinsey.com" then 'Manish Puri'
         end
       when 'David'
         case email
