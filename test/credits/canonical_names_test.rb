@@ -4160,6 +4160,10 @@ module Credits
       assert_contributor_names '2bfd677', 'Chad Woolley'
     end
 
+    test 'thiagoaugusto' do
+      assert_contributor_names '361f1bc', 'Thiago Augusto'
+    end
+
     test "thijs\100fngtps.com" do
       assert_contributor_names '7864d0e', 'Thijs van der Vossen'
     end
