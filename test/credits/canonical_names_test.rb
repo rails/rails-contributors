@@ -1376,6 +1376,10 @@ module Credits
       assert_contributor_names '127ee8c', 'François Beausoleil'
     end
 
+    test 'Franky W' do
+      assert_contributor_names 'b1d2635', 'Franky Wahl'
+    end
+
     test 'Fred Cheung' do
       assert_contributor_names '220a64e', 'Frederick Cheung'
     end

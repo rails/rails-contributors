@@ -363,6 +363,7 @@ module NamesManager
     map 'Francesco Rodríguez',        'Francesco Rodriguez'
     map 'François Beausoleil',        'FranÃ§ois Beausolei', 'Francois Beausoleil', "fbeausoleil\100ftml.net", "francois.beausoleil\100gmail.com"
     map 'Frank Müller',               'suchasurge'
+    map 'Franky Wahl',                'Franky W'
     map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
     map 'Frederico Macedo',           'frederico'
     map 'G S Phani Kumar',            'gsphanikumar'
