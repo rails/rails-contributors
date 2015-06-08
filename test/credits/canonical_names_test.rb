@@ -433,7 +433,7 @@ module Credits
     end
 
     test 'bitsweat' do
-      assert_contributor_names '253a2bb', 'Jeremy Kemper'
+      assert_contributor_names '253a2bb', 'Jeremy Daer'
     end
 
     test 'Blaine' do
@@ -1870,6 +1870,10 @@ module Credits
 
     test 'jejacks0n' do
       assert_contributor_names 'f55ef82', 'Jeremy Jackson'
+    end
+
+    test 'Jeremy Kemper' do
+      assert_contributor_names 'bd51bbc', 'Jeremy Daer'
     end
 
     test "jeremy\100jthopple.com" do
