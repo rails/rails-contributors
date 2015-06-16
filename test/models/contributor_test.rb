@@ -3,8 +3,8 @@ require 'set'
 
 class ContributorTest < ActiveSupport::TestCase
   def test_the_name_writer_sets_url_id
-    c = Contributor.new(name: 'Jeremy Kemper')
-    assert_equal 'jeremy-kemper', c.url_id
+    c = Contributor.new(name: 'Jeremy Daer')
+    assert_equal 'jeremy-daer', c.url_id
   end
 
   def test_to_param_returns_the_url_id

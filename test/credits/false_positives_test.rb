@@ -45,7 +45,7 @@ module Credits
     end
 
     test 'update from Trac' do
-      assert_contributor_names '70117b0', 'Jeremy Kemper'
+      assert_contributor_names '70117b0', 'Jeremy Daer'
     end
 
     test 'leading single quote' do
@@ -217,7 +217,7 @@ module Credits
     end
 
     test 'connector ,' do
-      assert_contributor_names '9159489', 'Pratik Naik', 'Jeremy Kemper'
+      assert_contributor_names '9159489', 'Pratik Naik', 'Jeremy Daer'
     end
 
     test 'connector /' do

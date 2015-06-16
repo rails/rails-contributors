@@ -101,7 +101,7 @@ module Credits
     end
 
     test 'fallback to the author name' do
-      assert_contributor_names 'f756bfb', 'Jeremy Kemper'
+      assert_contributor_names 'f756bfb', 'Jeremy Daer'
       assert_contributor_names 'cf6b13b', 'Carlos Antonio da Silva'
       assert_contributor_names '6033d2c', 'Iñigo Solano Pàez'
     end

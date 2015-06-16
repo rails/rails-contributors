@@ -11,10 +11,10 @@
 commit_b821094:
   sha1: 'b82109495b2e910f05922b05a2df69d42f3635a9'
   author_email: 'jeremy@bitsweat.net'
-  author_name: 'Jeremy Kemper'
+  author_name: 'Jeremy Daer'
   author_date: '2012-12-19 21:02:24'
   committer_email: 'jeremy@bitsweat.net'
-  committer_name: 'Jeremy Kemper'
+  committer_name: 'Jeremy Daer'
   committer_date: '2012-12-26 21:16:05'
   message: |
     Make test logs easier to read.
@@ -111,7 +111,7 @@ commit_e0ef631:
 commit_7cdfd91:
   sha1: '7cdfd910b7cdd398f8b54542c5a6a17966a5c8f3'
   author_email: 'jeremy@bitsweat.net'
-  author_name: 'Jeremy Kemper'
+  author_name: 'Jeremy Daer'
   author_date: '2011-12-11 22:30:05'
   committer_email: 'kennyj@gmail.com'
   committer_name: 'kennyj'
