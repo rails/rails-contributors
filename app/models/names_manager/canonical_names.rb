@@ -527,6 +527,7 @@ module NamesManager
     map 'Jon Bright',                 "jon\100siliconcircus.com"
     map 'Jon Evans',                  "jon.evans\100pobox.com", 'evansj'
     map 'Jon Moses',                  "jon\100burningbush.us"
+    map 'Jon Moss',                   'maclover7'
     map 'Jon Olson',                  "jsolson\100damogran.org"
     map 'Jon Seidel',                 'JESii'
     map 'Jon Wood',                   "jon\100instance-design.co.uk", "jon\100blankpad.net"
