@@ -2560,6 +2560,10 @@ module Credits
       assert_contributor_names 'cb4bd89', 'Jamie Macey'
     end
 
+    test 'maclover7' do
+      assert_contributor_names 'bbcbe6e', 'Jon Moss'
+    end
+
     test 'macournoyer' do
       assert_contributor_names '002e73a', 'Marc-André Cournoyer'
     end
