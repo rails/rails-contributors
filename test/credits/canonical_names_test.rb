@@ -3352,6 +3352,10 @@ module Credits
       assert_contributor_names '76e4c1a', 'Dave Thomas'
     end
 
+    test 'prakash' do
+      assert_contributor_names '8207267', 'Prakash Laxkar'
+    end
+
     test 'prakashmurthy' do
       assert_contributor_names '6b31fd8', 'Prakash Murthy'
     end

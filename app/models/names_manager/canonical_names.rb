@@ -821,6 +821,7 @@ module NamesManager
     map 'Pirogov Evgenij',            'gmile'
     map 'Pivotal Labs',               'pivotal', 'Pivotal  Labs'
     map 'PJ Hyett',                   "pjhyett\100gmail.com"
+    map 'Prakash Laxkar',             'prakash'
     map 'Prakash Murthy',             'prakashmurthy'
     map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
     map 'Pravin Mishra',              'diatmpravin'
