@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.2.2'
+gem 'rails', '~> 4.2.4'
 gem 'pg'
 gem 'rugged', '0.21.0'
 gem 'unf'
