@@ -2364,6 +2364,10 @@ module Credits
       assert_contributor_names 'b4ae94f', 'Dmitrij Mjakotnyi'
     end
 
+    test 'kishore-mohan' do
+      assert_contributor_names 'cf82b2e', 'Kishore Mohan'
+    end
+
     test 'Kym' do
       assert_contributor_names '6a14b01', 'Kym McInerney'
     end
