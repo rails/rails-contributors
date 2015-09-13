@@ -332,6 +332,10 @@ module Credits
       assert_contributor_names '2a7230a', 'Arvid Andersson'
     end
 
+    test 'arvind' do
+      assert_contributor_names 'dad0c26', 'Arvind Mehra'
+    end
+
     test "ask\100develooper.com" do
       assert_contributor_names '17ef706', 'Ask Bjørn Hansen'
     end
