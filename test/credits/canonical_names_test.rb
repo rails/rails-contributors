@@ -3488,6 +3488,10 @@ module Credits
       assert_contributor_names 'f22b000', 'Dick Davies'
     end
 
+    test 'ravindra kumar kumawat' do
+      assert_contributor_names '8bd064e', 'Ravindra Kumar Kumawat'
+    end
+
     test 'rayners' do
       assert_contributor_names '37a4615', 'David Raynes'
     end
