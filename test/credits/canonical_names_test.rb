@@ -4124,6 +4124,10 @@ module Credits
       assert_contributor_names 'f3101fd', 'Alexey Nikitin'
     end
 
+    test 'tanmay3011' do
+      assert_contributor_names '2e51d6f', 'Tanmay Sinha'
+    end
+
     test 'tarmo' do
       assert_contributor_names 'fd3f048', 'Tarmo Tänav'
     end
