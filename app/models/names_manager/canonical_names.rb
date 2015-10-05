@@ -956,6 +956,7 @@ module NamesManager
     map 'Takayuki Matsubara',         'ma2gedev'
     map 'Takoyaki Kamen',             'タコ焼き仮面'
     map 'Tal Rotbart',                'redbeard'
+    map 'Tanmay Sinha',               'tanmay3011'
     map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
     map 'Taryn East',                 'taryn', 'taryneast', "rubygirl\100taryneast.org"
     map 'Tekin Suleyman',             'Tekin'
