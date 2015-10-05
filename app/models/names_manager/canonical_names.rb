@@ -835,6 +835,7 @@ module NamesManager
     map 'Raphael Bauduin',            "raphinou\100yahoo.com"
     map 'Raphael Lee',                'Raphomet'
     map 'Ravil Bayramgalin',          'brainopia'
+    map 'Ravindra Kumar Kumawat',     'ravindra kumar kumawat'
     map 'Rein Henrichs',              "ReinH"
     map "Remco van 't Veer",          'remvee'
     map 'Rémy Coutable',              'rymai', 'remy', "rymai\100rymai.com", "remy.coutable\100gmail.com"
