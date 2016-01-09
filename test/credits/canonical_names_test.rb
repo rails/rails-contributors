@@ -3376,6 +3376,10 @@ module Credits
       assert_contributor_names '281edce', 'Pratik Naik'
     end
 
+    test 'prathamesh' do
+      assert_contributor_names 'a7a2bc0f66', 'Prathamesh Sonpatki'
+    end
+
     test "progrium\100gmail.com" do
       assert_contributor_names 'aa7859c', 'Jeff Lindsay'
     end
