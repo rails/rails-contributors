@@ -712,6 +712,10 @@ module Credits
       assert_contributor_names '12d8d48', 'Clifford Heath'
     end
 
+    test 'Claudio B' do
+      assert_contributor_names '0b0042c', 'Claudio Baccigalupo'
+    end
+
     test 'Claudio B.' do
       assert_contributor_names '2651810', 'Claudio Baccigalupo'
     end
