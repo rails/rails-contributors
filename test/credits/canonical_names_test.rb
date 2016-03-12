@@ -3984,6 +3984,10 @@ module Credits
       assert_contributor_names '0950d40', 'Sonny Michaud'
     end
 
+    test 'sonpatki' do
+      assert_contributor_names '25c7c4a', 'Prathamesh Sonpatki'
+    end
+
     test 'Spakman' do
       assert_contributor_names 'eede82c', 'Mark Somerville'
     end

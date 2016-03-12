@@ -826,7 +826,7 @@ module NamesManager
     map 'Prakash Laxkar',             'prakash'
     map 'Prakash Murthy',             'prakashmurthy'
     map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
-    map 'Prathamesh Sonpatki',        "प्रथमेश Sonpatki"
+    map 'Prathamesh Sonpatki',        "प्रथमेश Sonpatki", 'sonpatki'
     map 'Pravin Mishra',              'diatmpravin'
     map 'Rafael Mendonça França',     'Rafael França'
     map 'Rahul P. Chaudhari',         'RAHUL CHAUDHARI', 'Rahul Chaudhari'
