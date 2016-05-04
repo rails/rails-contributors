@@ -81,6 +81,10 @@ protected
     message.include?('git-svn-id: http://svn-commit.rubyonrails.org/rails')
   end
 
+  def committed_by_author?
+    author_name == committer_name
+  end
+
   # Both svn and git may have the name of the author in the message using the [...]
   # convention. If none is found we check the changelog entry for svn commits.
   # If that fails as well the contributor is the git author by definition.
@@ -100,6 +104,8 @@ protected
         end
       end
     end
+
+    names << committer_name unless committed_by_author?
 
     # In modern times we are counting merge commits, because behind a merge
     # commit there is work by the core team member in the pull request. To

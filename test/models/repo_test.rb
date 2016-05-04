@@ -1,6 +1,14 @@
 require 'test_helper'
 
 class RepoTest < ActiveSupport::TestCase
+  def test_gives_contribution_to_committer_not_matching_author
+    Contribution.destroy_all
+    contributor_names = Repo.new.send(:compute_contributor_names_per_commit)
+
+    assert_equal [ 'Jeremy Daer', 'Toshinori Kajihara' ],
+      contributor_names[commits(:commit_7cdfd91).sha1]
+  end
+
   def test_sync_ranks
     Repo.new.send(:sync_ranks)
 
