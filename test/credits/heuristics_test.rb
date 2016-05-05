@@ -109,5 +109,9 @@ module Credits
     test 'committers get credit for commits imported from Subversion' do
       assert_contributor_names 'cf656ec', 'Christopher Cotton', 'Marcel Molina Jr.', equal: true
     end
+
+    test 'committers get credit if they are not among the authors' do
+      assert_contributor_names 'cacded5', 'Derek Prior', 'Kasper Timm Hansen', equal: true
+    end
   end
 end

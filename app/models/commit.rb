@@ -102,14 +102,17 @@ protected
     end
 
     # In modern times we are counting merge commits, because behind a merge
-    # commit there is work by the core team member in the pull request. To
-    # be fair, we are going to do what would be analogous for commits in
+    # commit there is work by the core team member in the pull request.
+    #
+    # To be fair, we are going to do what would be analogous for commits in
     # Subversion, where each commit has to be considered a merge commit.
     #
+    # Similarly, squashes in GitHub generate no merge commit and whoever
+    # pushed the squash + merge button ends up being the committer and we
+    # are going to give credit to them.
+    #
     # Note we do a uniq later in case normalization yields a clash.
-    if imported_from_svn? && !names.include?(author_name)
-      names << author_name
-    end
+    names << committer_name unless names.include?(committer_name)
 
     names.map(&:nfc)
   end
