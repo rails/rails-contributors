@@ -486,7 +486,7 @@ module NamesManager
     map 'Jeffrey Moss',               "jeff\100opendbms.com"
     map 'Jens-Christian Fischer',     "jcfischer\100gmail.com"
     map 'Jeong Changhoon',            'seapy'
-    map 'Jeremy Daer',                'Jeremy Kemper', 'bitsweat'
+    map 'Jeremy Daer',                'Jeremy Daer (Kemper)', 'Jeremy Kemper', 'bitsweat'
     map 'Jeremy Durham',              "jeremydurham\100gmail.com"
     map 'Jeremy Evans',               "jeremyevans0\100gmail.com", 'jeremyevans', "jeremye\100bsa.ca.gov", "code\100jeremyevans.net"
     map 'Jeremy Hopple',              "jeremy\100jthopple.com"

@@ -1880,6 +1880,10 @@ module Credits
       assert_contributor_names 'f55ef82', 'Jeremy Jackson'
     end
 
+    test 'Jeremy Daer (Kemper)' do
+      assert_contributor_names '1524c01', 'Jeremy Daer'
+    end
+
     test 'Jeremy Kemper' do
       assert_contributor_names 'bd51bbc', 'Jeremy Daer'
     end
