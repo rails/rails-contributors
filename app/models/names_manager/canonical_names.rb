@@ -182,6 +182,7 @@ module NamesManager
     map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl", 'Bas Van Klinkenberg'
     map 'Bart de Water',              'Bart'
     map 'Ben Bangert',                "ben\100groovie.org"
+    map 'Ben Holley',                 'benolee'
     map 'Ben Sandofsky',              'sandofsky'
     map 'Ben Scofield',               'bscofield'
     map 'Ben Sinclair',               "ben\100bensinclair.com"

@@ -432,6 +432,10 @@ module Credits
       assert_contributor_names 'd08f838', 'Brian Gernhardt'
     end
 
+    test 'benolee' do
+      assert_contributor_names '008023c', 'Ben Holley'
+    end
+
     test 'bermi' do
       assert_contributor_names '6ca789b', 'Bermi Ferrer'
     end
