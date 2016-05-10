@@ -260,6 +260,10 @@ module Credits
       assert_contributor_names 'e72ff35', 'maiha'
     end
 
+    test 'AnnaErshova' do
+      assert_contributor_names '0166adc', 'Anna Ershova'
+    end
+
     test 'anshkakashi' do
       assert_contributor_names 'ab09984', 'Jason Ketterman'
     end

@@ -145,6 +145,7 @@ module NamesManager
     map 'Angelo Capilleri',           'angelo giovanni capilleri', 'Angelo capilleri'
     map 'Anil Kumar Maurya',          'anilmaurya'
     map 'Ankit Gupta',                'ankit8898', 'Ankit Gupta-FIR', 'Ankit gupta'
+    map 'Anna Ershova',               'AnnaErshova'
     map 'Ant Ramm',                   'antramm'
     map 'Anthony Alberto',            'Anthony'
     map 'Anthony Eden',               'aeden'
