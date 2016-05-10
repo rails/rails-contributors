@@ -4152,6 +4152,10 @@ module Credits
       assert_contributor_names '06411f4', 'Genki Takiuchi'
     end
 
+    test 'takkanm' do
+      assert_contributor_names 'fa1ea34' ,'Mitsutaka Mimura'
+    end
+
     test 'tank-bohr' do
       assert_contributor_names 'f3101fd', 'Alexey Nikitin'
     end
