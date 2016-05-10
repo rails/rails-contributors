@@ -484,6 +484,10 @@ module Credits
       assert_contributor_names '39b9c94', 'Gavin Morrice'
     end
 
+    test 'bogdanvlviv' do
+      assert_contributor_names '2686130', 'Bogdan'
+    end
+
     test 'boone' do
       assert_contributor_names '3486d54', 'Mike Boone'
     end
