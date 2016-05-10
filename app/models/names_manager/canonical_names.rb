@@ -811,6 +811,7 @@ module NamesManager
     map 'Pau',                        'nosolopau'
     map 'Paul Butcher',               "paul\100paulbutcher.com"
     map 'Paul Carey',                 'paulccarey'
+    map 'Paul Hieromnimon',           'pavlos'
     map 'Paul Hinze',                 'phinze'
     map 'Paul Smith',                 "paul\100cnt.org"
     map 'Pawel Janiak',               'pawel2105'
