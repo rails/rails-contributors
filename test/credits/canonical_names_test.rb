@@ -2568,6 +2568,10 @@ module Credits
       assert_contributor_names 'b08c968', 'Lourens Naudé'
     end
 
+    test 'lsylvester' do
+      assert_contributor_names '6c57c78', 'Lachlan Sylvester'
+    end
+
     test 'Lucas Caton' do
       assert_contributor_names '2b7a621', 'Lucas Catón'
     end

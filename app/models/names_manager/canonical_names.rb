@@ -617,6 +617,7 @@ module NamesManager
     map 'Kuldeep Aggarwal',           'KD', 'kuldeepaggarwal'
     map 'Kym McInerney',              'holodigm', 'Kym'
     map 'Kyosuke Morohashi',          'moro'
+    map 'Lachlan Sylvester',          'lsylvester'
     map 'Lakshan Perera',             'laktek', 'lakshan'
     map 'Larry Lv',                   'larrylv'
     map 'Larry Williams',             "larrywilliams1\100gmail.com"
