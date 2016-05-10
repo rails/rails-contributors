@@ -713,6 +713,7 @@ module NamesManager
     map 'Matthew Vincent',            'neshmi'
     map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
     map 'Mattt Thompson',             '@mattt'
+    map 'Max Melentiev',              'printercu'
     map 'Max Mitchell',               'mazuhl'
     map 'Maxime Réty',                'Maxime RETY', 'maximerety'
     map 'Melih Arda Yalçiner',        'Wizard'
