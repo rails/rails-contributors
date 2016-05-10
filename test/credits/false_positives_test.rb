@@ -253,5 +253,9 @@ module Credits
     test 'ignores unkown contributors referred as "others"' do
       assert_contributor_names 'da4b15f', 'Kevin Jackson', 'David Heinemeier Hansson', exact: true
     end
+
+    test "{ :ca => :'es-ES' }" do
+      assert_contributor_names '0c2ccc0', 'Vipul A M', exact: true
+    end
   end
 end

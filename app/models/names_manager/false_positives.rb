@@ -36,6 +36,7 @@ module NamesManager
         when /skip[ -]ci/i
         when 'key'
         when '.lock'
+        when "{ :ca => :'es-ES' }"
         when "schoenm\100earthlink.net sandra.metz\100duke.edu"
           name.split
         when '=?utf-8?q?Adam=20Cig=C3=A1nek?='
