@@ -4508,6 +4508,10 @@ module Credits
       assert_contributor_names 'c1abe44', 'Will Bryant'
     end
 
+    test 'willnet' do
+      assert_contributor_names '11d41c6', 'Shinichi Maeshima'
+    end
+
     test 'wilson' do
       assert_contributor_names '11d2a30', 'Wilson Bilkovich'
     end
