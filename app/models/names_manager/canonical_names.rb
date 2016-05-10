@@ -959,6 +959,7 @@ module NamesManager
     map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
     map 'Stian Grytøyr',              "stian\100grytoyr.net"
     map 'Sudara Williams',            'Sudara'
+    map 'Sugino Yasuhiro',            'SUGINO Yasuhiro', 'suginoy'
     map 'Sung-hee Kang',              'paranoiase Kang', 'paranoiase'
     map 'Sunny Ripert',               'Sunny'
     map 'Sur Max',                    'sur'

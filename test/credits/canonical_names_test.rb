@@ -4116,6 +4116,14 @@ module Credits
       assert_contributor_names 'a913af9', 'Go Sueyoshi'
     end
 
+    test 'SUGINO Yasuhiro' do
+      assert_contributor_names '4a36eb6', 'Sugino Yasuhiro'
+    end
+
+    test 'suginoy' do
+      assert_contributor_names '4f6f433', 'Sugino Yasuhiro'
+    end
+
     test 'Sunny' do
       assert_contributor_names 'ce40df2', 'Sunny Ripert'
     end
