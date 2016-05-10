@@ -1044,6 +1044,7 @@ module NamesManager
     map 'Yury Korolev',               'yury'
     map 'Yuuji Yaginuma',             'yuuji.yaginuma'
     map 'Yves Senn',                  'senny'
+    map 'Yves Siegrist',              'Elektron1c97'
     map 'Zac Williams',               'jzw'
     map 'Zach Dennis',                'zdennis'
     map 'Zachary Holt',               "z\100wzph.com"

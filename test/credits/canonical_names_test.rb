@@ -1232,6 +1232,10 @@ module Credits
       assert_contributor_names '740e531', 'Elliot Yates'
     end
 
+    test 'Elektron1c97' do
+      assert_contributor_names '6bd417d', 'Yves Siegrist'
+    end
+
     test "elan\100bluemandrill.com" do
       assert_contributor_names 'a46214c', 'Elan Feingold'
     end
