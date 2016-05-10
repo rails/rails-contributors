@@ -120,6 +120,10 @@ module Credits
       assert_contributor_names 'e30699f', 'Andrew Kaspick'
     end
 
+    test 'Akshat Sharma' do
+      assert_contributor_names '2438a1c', 'Pramod Sharma'
+    end
+
     test 'alancfrancis' do
       assert_contributor_names '0b45b89', 'Alan Francis'
     end

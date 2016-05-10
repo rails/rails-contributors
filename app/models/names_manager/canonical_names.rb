@@ -842,6 +842,7 @@ module NamesManager
     map 'PJ Hyett',                   "pjhyett\100gmail.com"
     map 'Prakash Laxkar',             'prakash'
     map 'Prakash Murthy',             'prakashmurthy'
+    map 'Pramod Sharma',              'Akshat Sharma'
     map 'Pratik Naik',                'Pratik', 'pratik', 'lifofifo', 'lifo'
     map 'Prathamesh Sonpatki',        "प्रथमेश Sonpatki"
     map 'Pravin Mishra',              'diatmpravin'
