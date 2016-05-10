@@ -567,6 +567,7 @@ module NamesManager
     map 'Joshua Wehner',              'jaw6'
     map 'Juan David Pastas',          'juanpastas', 'juan david pastas'
     map 'Juan De Bravo',              'juandebravo'
+    map 'Juanito Fatas',              'JuanitoFatas'
     map 'Juanjo Bazán',               'Juanjo Bazan', 'juanjo.bazan'
     map 'Julian Doherty',             'madlep'
     map 'Julian Tarkhanov',           "me\100julik.nl", 'julik'

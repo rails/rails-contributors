@@ -2176,6 +2176,10 @@ module Credits
       assert_contributor_names 'ed4bde5', 'Juan De Bravo'
     end
 
+    test 'JuanitoFatas' do
+      assert_contributor_names 'cd0d649', 'Juanito Fatas'
+    end
+
     test 'juanjo.bazan' do
       assert_contributor_names '3280a6e', 'Juanjo Bazán'
     end
