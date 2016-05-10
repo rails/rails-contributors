@@ -153,6 +153,14 @@ module Credits
       assert_contributor_names 'c71b961', 'Ryan Bigg'
     end
 
+    test "{ :ca => :'es-ES' }" do
+      assert_contributor_names '0c2ccc0', 'Vipul A M', exact: true
+    end
+
+    test 'fixes 5f5e6d924973003c105feb711cefdb726f312768' do
+      assert_contributor_names 'e7c48db', 'Arthur Neves'
+    end
+
     test "schoenm\100earthlink.net sandra.metz\100duke.edu" do
       assert_contributor_names '242cd06', 'Michael Schoen', 'Sandi Metz'
     end
@@ -252,10 +260,6 @@ module Credits
 
     test 'ignores unkown contributors referred as "others"' do
       assert_contributor_names 'da4b15f', 'Kevin Jackson', 'David Heinemeier Hansson', exact: true
-    end
-
-    test "{ :ca => :'es-ES' }" do
-      assert_contributor_names '0c2ccc0', 'Vipul A M', exact: true
     end
   end
 end
