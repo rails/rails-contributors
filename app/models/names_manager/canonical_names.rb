@@ -681,6 +681,7 @@ module NamesManager
     map 'Mark James',                 "mrj\100bigpond.net.au"
     map 'Mark Lane',                  'DrMark'
     map 'Mark R. James',              'mrj'
+    map 'Mark Rushakoff',             'Mark Rushakof'
     map 'Mark Somerville',            'Spakman'
     map 'Mark Van Holstyn',           'lotswholetime'
     map 'Mark W. Foster',             'mfoster'
