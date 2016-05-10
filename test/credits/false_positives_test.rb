@@ -161,6 +161,10 @@ module Credits
       assert_contributor_names 'e7c48db', 'Arthur Neves'
     end
 
+    test '79990505e5080804b53d81fec059136afa2237d7' do
+      assert_contributor_names 'eade591', 'Prem Sichanugrist'
+    end
+
     test "schoenm\100earthlink.net sandra.metz\100duke.edu" do
       assert_contributor_names '242cd06', 'Michael Schoen', 'Sandi Metz'
     end
