@@ -182,6 +182,7 @@ module NamesManager
     map 'Ben Sinclair',               "ben\100bensinclair.com"
     map 'Benedikt Deicke',            'benedikt'
     map 'Benjamin Curtis',            "rails\100bencurtis.com"
+    map 'Benny Klotz',                'Benjamin Klotz'
     map 'Bermi Ferrer',               'bermi'
     map 'Bert Goethals',              'BertG'
     map 'Blaine Cook',                'Blaine', 'blaine', "blaine\100odeo.com"

@@ -420,6 +420,10 @@ module Credits
       assert_contributor_names 'b17fd25', 'Benedikt Deicke'
     end
 
+    test 'Benjamin Klotz' do
+      assert_contributor_names 'd5847f4', 'Benny Klotz'
+    end
+
     test "benji\100silverinsanity.com" do
       assert_contributor_names 'd08f838', 'Brian Gernhardt'
     end
