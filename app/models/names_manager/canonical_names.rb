@@ -147,7 +147,7 @@ module NamesManager
     map 'Andrey Morskov',             'accessd', 'Accessd'
     map 'Andrey Nering',              "andrey.nering\100gmail.com"
     map 'Andy Lien',                  "andylien\100gmail.com"
-    map 'Angelo Capilleri',           'angelo giovanni capilleri', 'Angelo capilleri'
+    map 'Angelo Capilleri',           'angelo giovanni capilleri', 'Angelo capilleri', 'acapilleri'
     map 'Anil Kumar Maurya',          'anilmaurya'
     map 'Ankit Gupta',                'ankit8898', 'Ankit Gupta-FIR', 'Ankit gupta'
     map 'Anna Ershova',               'AnnaErshova'

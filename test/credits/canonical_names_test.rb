@@ -40,6 +40,10 @@ module Credits
       assert_contributor_names '20519ef', 'Alexander Baronec'
     end
 
+    test 'acapilleri' do
+      assert_contributor_names 'c08c468', 'Angelo Capilleri'
+    end
+
     test 'Accessd' do
       assert_contributor_names 'db25ca7', 'Andrey Morskov'
     end
