@@ -798,6 +798,7 @@ module NamesManager
     map 'Paul Carey',                 'paulccarey'
     map 'Paul Hinze',                 'phinze'
     map 'Paul Smith',                 "paul\100cnt.org"
+    map 'Pawel Janiak',               'pawel2105'
     map 'Paweł Mikołajewski',         'dfens'
     map 'Pelle Braendgaard',          'pelle', 'Pelle'
     map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'

@@ -3232,6 +3232,10 @@ module Credits
       assert_contributor_names '2b2ee22', 'Paul Carey'
     end
 
+    test 'pawel2015' do
+      assert_contributor_names 'b2bfb07', 'Pawel Janiak'
+    end
+
     test 'pbflinn' do
       assert_contributor_names '690eae7', 'Perry Flinn'
     end
