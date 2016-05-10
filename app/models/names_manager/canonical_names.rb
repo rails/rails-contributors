@@ -678,6 +678,7 @@ module NamesManager
     map 'Mark Somerville',            'Spakman'
     map 'Mark Van Holstyn',           'lotswholetime'
     map 'Mark W. Foster',             'mfoster'
+    map 'Markov Alexey',              'Alexey Markov'
     map 'Markus Roberts',             "MarkusQ\100reality.com"
     map 'Marshall Roch',              'mroch'
     map 'Marten Veldthuis',           'Marten'

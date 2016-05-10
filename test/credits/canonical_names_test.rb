@@ -160,6 +160,10 @@ module Credits
       assert_contributor_names '52fe604', 'Alexey Zatsepin'
     end
 
+    test 'Alexey Markov' do
+      assert_contributor_names '0c85705', 'Markov Alexey'
+    end
+
     test "alexkwolfe\100gmail.com" do
       assert_contributor_names 'b5c2366', 'Alex Wolfe'
     end
