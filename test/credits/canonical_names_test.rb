@@ -2704,6 +2704,10 @@ module Credits
       assert_contributor_names '6bc24d4', 'Martin Schuerrer'
     end
 
+    test 'masarakki' do
+      assert_contributor_names '83b7bf4', 'Masaki Yamada'
+    end
+
     test 'mathie' do
       assert_contributor_names '55b6697', 'Graeme Mathieson'
     end
@@ -4590,6 +4594,10 @@ module Credits
 
     test "xyctka\100gmail.com" do
       assert_contributor_names '5890ced', 'Vitalii Khustochka'
+    end
+
+    test 'Yamada Masaki' do
+      assert_contributor_names 'f498000', 'Masaki Yamada'
     end
 
     test 'YanhaoYang' do

@@ -690,6 +690,7 @@ module NamesManager
     map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
     map 'Martin Gamsjaeger',          'snusnu'
     map 'Martin Schuerrer',           'Martin Schürrer'
+    map 'Masaki Yamada',              'Yamada Masaki', 'masarakki'
     map 'Masashi Shimbo',             "shimbo\100is.naist.jp"
     map 'Mason Hale',                 'flowdelic'
     map 'Mathieu Arnold',             "mat\100absolight.fr"
