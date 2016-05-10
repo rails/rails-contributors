@@ -35,6 +35,11 @@ module Credits
       assert_contributor_names 'bc437632', 'David Wang'
     end
 
+    test 'disambiguates Jan' do
+      assert_contributor_names '4942b41', 'Jan Habermann'
+      assert_contributor_names 'f294540', 'Jan Xie'
+    end
+
     test 'empty author' do
       assert_contributor_names '4e873ff', 'Jarek Radosz'
     end

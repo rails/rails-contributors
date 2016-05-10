@@ -50,6 +50,11 @@ module NamesManager
         when "david\100loudthinking.com" then 'David Heinemeier Hansson'
         when "DevilDavidWang\100gmail.com" then 'David Wang'
         end
+      when 'Jan'
+        case email
+        when "jan\100habermann24.com" then 'Jan Habermann'
+        when "jan.h.xie\100gmail.com" then 'Jan Xie'
+        end
       when ''
         case email
         when "JRadosz\100gmail.com" then 'Jarek Radosz'
@@ -463,7 +468,6 @@ module NamesManager
     map 'Jan Krutisch',               'halfbyte'
     map 'Jan Prill',                  "JanPrill\100blauton.de"
     map 'Jan Schwenzien',             'jeanmartin'
-    map 'Jan Xie',                    'Jan'
     map 'Jared Haworth',              'jardeon'
     map 'Jarkko Laine',               "jarkko\100jlaine.net", 'Jarkko', 'jarkko'
     map 'Jason Frey',                 'Jason Frey (Fryguy)'

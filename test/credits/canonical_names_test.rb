@@ -1772,10 +1772,6 @@ module Credits
       assert_contributor_names '9d00b0c', 'Jamis Buck'
     end
 
-    test 'Jan' do
-      assert_contributor_names 'f294540', 'Jan Xie'
-    end
-
     test 'janovetz' do
       assert_contributor_names '31b901a', 'Jake Janovetz'
     end
