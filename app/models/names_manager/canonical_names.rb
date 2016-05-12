@@ -198,7 +198,7 @@ module NamesManager
     map 'Blane Dabney',               "mdabney\100cavoksolutions.com"
     map 'Bob Aman',                   "bob\100sporkmonger.com"
     map 'Bob Silva',                  'BobSilva', "ruby\100bobsilva.com"
-    map 'Bogdan',                     'bogdanvlviv'
+    map 'bogdanvlviv',                'Bogdan'
     map 'Brad Ediger',                "brad.ediger\100madriska.com", "brad\100madriska.com", 'bradediger'
     map 'Brad Ellis',                 "bellis\100deepthought.org"
     map 'Brad Greenlee',              'bgreenlee'
