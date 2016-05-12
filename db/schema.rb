@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326181907) do
+ActiveRecord::Schema.define(version: 20160512095609) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,11 +63,11 @@ ActiveRecord::Schema.define(version: 20150326181907) do
   add_index "releases", ["tag"], name: "index_releases_on_tag", unique: true, using: :btree
 
   create_table "repo_updates", force: :cascade do |t|
-    t.integer  "ncommits",   null: false
-    t.datetime "started_at", null: false
-    t.datetime "ended_at",   null: false
-    t.integer  "nreleases",  null: false
-    t.boolean  "nmupdated",  null: false
+    t.integer  "ncommits",    null: false
+    t.datetime "started_at",  null: false
+    t.datetime "ended_at",    null: false
+    t.integer  "nreleases",   null: false
+    t.boolean  "rebuild_all", null: false
   end
 
 end

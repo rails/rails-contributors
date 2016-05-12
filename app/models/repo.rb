@@ -1,7 +1,7 @@
 require 'application_utils'
 
 class Repo
-  attr_reader :logger, :path, :heads, :tags, :repo
+  attr_reader :logger, :path, :heads, :tags, :repo, :rebuild_all
 
   # Clone with --mirror:
   #
@@ -20,17 +20,18 @@ class Repo
   #
   # If the names manager has been updated since the previous execution special
   # code detects names that are gone and recomputes the contributors for their
-  # commits.
-  def self.sync(path=PATH, heads=HEADS, tags=TAGS)
-    new(path, heads, tags).sync
+  # commits. This can be forced by passing rebuild_all: true.
+  def self.sync(path: PATH, heads: HEADS, tags: TAGS, rebuild_all: false)
+    new(path: path, heads: heads, tags: tags, rebuild_all: rebuild_all).sync
   end
 
-  def initialize(path=PATH, heads=HEADS, tags=TAGS)
-    @logger = Rails.logger
-    @path   = path
-    @heads  = heads
-    @tags   = tags
-    @repo   = Rugged::Repository.new(path)
+  def initialize(path: PATH, heads: HEADS, tags: TAGS, rebuild_all: false)
+    @logger      = Rails.logger
+    @path        = path
+    @heads       = heads
+    @tags        = tags
+    @rebuild_all = rebuild_all || names_mapping_updated?
+    @repo        = Rugged::Repository.new(path)
   end
 
   # Executes a git command, optionally capturing its output.
@@ -81,22 +82,21 @@ class Repo
         ncommits  = sync_commits
         nreleases = sync_releases
 
-        nmupdated = names_mapping_updated?
-        if ncommits > 0 || nreleases > 0 || nmupdated
-          sync_names(nmupdated)
+        if ncommits > 0 || nreleases > 0 || rebuild_all
+          sync_names
           sync_ranks
           sync_first_contribution_timestamps
         end
 
         RepoUpdate.create!(
-          ncommits:   ncommits,
-          nreleases:  nreleases,
-          started_at: started_at,
-          ended_at:   Time.current,
-          nmupdated:  nmupdated
+          ncommits:    ncommits,
+          nreleases:   nreleases,
+          started_at:  started_at,
+          ended_at:    Time.current,
+          rebuild_all: rebuild_all
         )
 
-        ApplicationUtils.expire_cache if cache_needs_expiration?(ncommits, nreleases, nmupdated)
+        ApplicationUtils.expire_cache if cache_needs_expiration?(ncommits, nreleases)
       end
     end
   end
@@ -155,10 +155,10 @@ class Repo
   # names table. If some names are gone due to new mappings collapsing two
   # names into one, for example, the credit for commits of gone names is
   # revised, resulting in the canonical name being associated.
-  def sync_names(nmupdated)
-    Contribution.delete_all if nmupdated
+  def sync_names
+    Contribution.delete_all if rebuild_all
     assign_contributors
-    Contributor.with_no_commits.delete_all if nmupdated
+    Contributor.with_no_commits.delete_all if rebuild_all
   end
 
   # Once all tables have been updated we compute the rank of each contributor.
@@ -189,6 +189,7 @@ class Repo
   end
 
   def sync_first_contribution_timestamps
+    Contributor.update_all(first_contribution_at: nil) if rebuild_all
     Contributor.fill_missing_first_contribution_timestamps
   end
 
@@ -246,7 +247,7 @@ class Repo
   end
 
   # Do we need to expire the cached pages?
-  def cache_needs_expiration?(ncommits, nreleases, nmupdated)
-    ncommits > 0 || nreleases > 0 || nmupdated
+  def cache_needs_expiration?(ncommits, nreleases)
+    ncommits > 0 || nreleases > 0 || rebuild_all
   end
 end
