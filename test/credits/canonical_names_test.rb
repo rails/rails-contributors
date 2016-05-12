@@ -513,7 +513,7 @@ module Credits
     end
 
     test 'bogdan' do
-      assert_contributor_names 'b644964', 'Bogdan'
+      assert_contributor_names 'b644964', 'Bogdan Gusiev'
     end
 
     test 'bogdanvlviv' do
