@@ -40,7 +40,9 @@ class Contributor < ActiveRecord::Base
       order('ncommits DESC, contributors.url_id ASC')
   end
 
-  def self.fill_missing_first_contribution_timestamps
+  def self.set_first_contribution_timestamps(only_new)
+    scope = only_new ? 'first_contribution_at IS NULL' : '1 = 1'
+
     connection.execute(<<-SQL)
       UPDATE contributors
       SET first_contribution_at = first_contributions.committer_date
@@ -51,7 +53,7 @@ class Contributor < ActiveRecord::Base
           GROUP BY contributor_id
       ) AS first_contributions
       WHERE id = first_contributions.contributor_id
-      AND first_contribution_at IS NULL
+      AND #{scope}
     SQL
   end
 

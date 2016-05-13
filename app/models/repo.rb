@@ -189,8 +189,7 @@ class Repo
   end
 
   def sync_first_contribution_timestamps
-    Contributor.update_all(first_contribution_at: nil) if rebuild_all
-    Contributor.fill_missing_first_contribution_timestamps
+    Contributor.set_first_contribution_timestamps(!rebuild_all)
   end
 
   # Determines whether the names mapping has been updated. This is useful because
