@@ -3060,6 +3060,10 @@ module Credits
       assert_contributor_names '1117d73', 'Dave Naffis'
     end
 
+    test 'nate' do
+      assert_contributor_names '056ddbd', 'Nathan Kontny'
+    end
+
     test 'NeilW' do
       assert_contributor_names '9f26164', 'Neil Wilson'
     end

@@ -763,6 +763,7 @@ module NamesManager
     map 'Murahashi Sanemat Kenichi',  'sanemat'
     map 'Murray Steele',              'h-lame'
     map 'Nacho Caballero',            'nachocab'
+    map 'Nathan Kontny',              'nate'
     map 'Nathan Weizenbaum',          'Nex3'
     map 'Nathaniel Talbott',          'ntalbott'
     map 'Neil Wilson',                'NeilW'
