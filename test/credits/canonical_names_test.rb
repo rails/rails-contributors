@@ -3476,10 +3476,6 @@ module Credits
       assert_contributor_names '281edce', 'Pratik Naik'
     end
 
-    test 'prathamesh' do
-      assert_contributor_names 'a7a2bc0f66', 'Prathamesh Sonpatki'
-    end
-
     test 'printercu' do
       assert_contributor_names '0b7a37a', 'Max Melentiev'
     end
@@ -4754,6 +4750,14 @@ module Credits
 
     test 'zsombor' do
       assert_contributor_names '2227a17', 'Dee Zsombor'
+    end
+
+    test 'प्रथमेश' do
+      assert_contributor_names '41739a2', 'Prathamesh Sonpatki'
+    end
+
+    test 'प्रथमेश Sonpatki' do
+      assert_contributor_names 'a7a2bc0f66', 'Prathamesh Sonpatki'
     end
   end
 end
