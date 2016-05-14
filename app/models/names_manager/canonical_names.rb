@@ -437,6 +437,7 @@ module NamesManager
     map 'Irina Bednova',              'jafrog'
     map 'Isaac Feliu',                'isaacfeliu'
     map 'Isaac Reuben',               "isaac\100reuben.com"
+    map 'Ivan Korunkov',              'Ivan'
     map 'Iván Vega',                  'ivanvr'
     map 'J Kittiyachavalit',          'jkit'
     map 'Jack Christensen',           "jackc\100hylesanderson.com"

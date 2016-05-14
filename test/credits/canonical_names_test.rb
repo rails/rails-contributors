@@ -1728,6 +1728,10 @@ module Credits
       assert_contributor_names '3b9bcf1', 'Andreas Isaksson'
     end
 
+    test 'Ivan' do
+      assert_contributor_names 'e838fa0', 'Ivan Korunkov'
+    end
+
     test 'iwiznia' do
       assert_contributor_names '7b6f2a0', 'Ionatan Wiznia'
     end
