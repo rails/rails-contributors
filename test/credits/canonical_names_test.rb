@@ -1492,6 +1492,10 @@ module Credits
       assert_contributor_names 'cfd5688', 'Geoff Buesing'
     end
 
+    test 'Geoffrey ROGUELON' do
+      assert_contributor_names '96e483a', 'Geoffrey Roguelon'
+    end
+
     test 'german' do
       assert_contributor_names 'adbae9a', 'Dmitrii Samoilov'
     end

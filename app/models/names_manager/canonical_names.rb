@@ -397,6 +397,7 @@ module NamesManager
     map 'Geoff Garside',              'ggarside'
     map 'Geoff Jacobsen',             'jacott'
     map 'Geoffrey Grosenbach',        'topfunky'
+    map 'Geoffrey Roguelon',          'Geoffrey ROGUELON'
     map 'Geoffroy Lorieux',           'glorieux'
     map 'Georg Friedrich',            'gfriedrich'
     map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
