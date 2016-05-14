@@ -694,6 +694,7 @@ module NamesManager
     map 'Marten Veldthuis',           'Marten'
     map 'Martin Emde',                "zraii\100comcast.net", "martin.emde\100gmail.com"
     map 'Martin Gamsjaeger',          'snusnu'
+    map 'Martin Linkhorst',           'Martin'
     map 'Martin Schuerrer',           'Martin Schürrer'
     map 'Masaki Yamada',              'Yamada Masaki', 'masarakki'
     map 'Masashi Shimbo',             "shimbo\100is.naist.jp"

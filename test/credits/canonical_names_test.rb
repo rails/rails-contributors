@@ -2724,6 +2724,10 @@ module Credits
       assert_contributor_names '91eaeb2', 'Marten Veldthuis'
     end
 
+    test 'Martin' do
+      assert_contributor_names 'e807476', 'Martin Linkhorst'
+    end
+
     test "martin.emde\100gmail.com" do
       assert_contributor_names 'b1257d9', 'Martin Emde'
     end
