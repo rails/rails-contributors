@@ -4000,6 +4000,14 @@ module Credits
       assert_contributor_names '21cf3c6', 'Shugo Maeda'
     end
 
+    test 'ShunsukeAida' do
+      assert_contributor_names '9982138', 'Shunsuke Aida'
+    end
+
+    test 'shunsukeaida' do
+      assert_contributor_names '884d123', 'Shunsuke Aida'
+    end
+
     test 'Si' do
       assert_contributor_names '9b24e11', 'Si Jobling'
     end

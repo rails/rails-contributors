@@ -944,6 +944,7 @@ module NamesManager
     map 'Seth Rasmussen',             'loincloth'
     map 'Shu-yu Guo',                 "arc\100uchicago.edu"
     map 'Shugo Maeda',                'shugo', "shugo\100ruby-lang.org"
+    map 'Shunsuke Aida',              'shunsukeaida', 'ShunsukeAida'
     map 'Si Jobling',                 'Si'
     map 'Simon Arnaud',               "maznawak\100nerim.net"
     map 'Simon Harris',               "simon\100redhillconsulting.com.au", 'haruki_zaemon'
