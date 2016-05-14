@@ -370,6 +370,7 @@ module NamesManager
     map 'Evan Henshaw-Plath',         "evan\100protest.net"
     map 'Evan Weaver',                'evan'
     map 'Evgeny Zislis',              "evgeny.zislis\100gmail.com"
+    map 'Fabián Rodríguez',           'Fabian Rodriguez'
     map 'Fabien Mannessier',          "fabien\100odilat.com"
     map 'Farley Knight',              'farleyknight'
     map 'Farzad Farid',               'farzy'

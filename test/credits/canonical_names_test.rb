@@ -1352,6 +1352,10 @@ module Credits
       assert_contributor_names 'a53372c', 'Ferdinand Svehla'
     end
 
+    test 'Fabian Rodriguez' do
+      assert_contributor_names 'f374720', 'Fabián Rodríguez'
+    end
+
     test "fabien\100odilat.com" do
       assert_contributor_names 'f9103e1', 'Fabien Mannessier'
     end
