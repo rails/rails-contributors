@@ -52,6 +52,10 @@ module Credits
       assert_contributor_names '331d9c0', 'Andrew Chase'
     end
 
+    test 'Adam' do
+      assert_contributor_names '5dc1f09', 'Magan Adam'
+    end
+
     test "adam\100the-kramers.net" do
       assert_contributor_names '01cfd2b', 'Adam Kramer'
     end
