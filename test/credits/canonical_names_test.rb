@@ -529,7 +529,7 @@ module Credits
     end
 
     test "brad\100madriska.com" do
-      assert_contributor_names '785e1fa', 'Brad Ediger'
+      assert_contributor_names '785e1fa5', 'Brad Ediger'
     end
 
     test 'bradediger' do
