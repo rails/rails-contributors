@@ -525,7 +525,7 @@ module NamesManager
     map 'John Barton',                'johnb'
     map 'John Dewey',                 'retr0h'
     map 'John F. Douthat',            'johndouthat'
-    map 'John J. Wang',               'wangjohn'
+    map 'John J. Wang',               'wangjohn', 'John J Wang'
     map 'John Mettraux',              'jmettraux'
     map 'John Nunemaker',             "nunemaker\100gmail.com"
     map 'John Oxton',                 "rails\100electricvisions.com"

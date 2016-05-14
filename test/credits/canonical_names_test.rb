@@ -2048,6 +2048,10 @@ module Credits
       assert_contributor_names '3fec943', 'Johan Sørensen'
     end
 
+    test 'John J Wang' do
+      assert_contributor_names '4033c50', 'John J. Wang'
+    end
+
     test 'johnb' do
       assert_contributor_names '5e94f05', 'John Barton'
     end
