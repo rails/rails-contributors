@@ -5,8 +5,7 @@ module NamesManager
   extend FalsePositives
   extend CanonicalNames
 
-  # Determines whether names mapping or special cases handling have been updated
-  # since +ts+.
+  # Determines whether any heuristic has been updated since +ts+.
   def self.updated_since?(ts)
     [__FILE__, *Dir.glob("#{__dir__}/names_manager/*.rb")].any? do |filename|
       File.mtime(filename) > ts
