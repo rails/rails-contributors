@@ -766,6 +766,7 @@ module NamesManager
     map 'Mike Mangino',               "mmangino\100elevatedrails.com"
     map 'Mike Naberezny',             'mnaberez'
     map 'Mike Subelsky',              'subelsky'
+    map 'Mike Taylor',                'sealocal'
     map 'Mikel Lindsaar',             'mikel', 'raasdnil'
     map 'Miklós Fazekas',             'mfazekas', 'Miklos Fazkeas', 'Miklos Fazekas'
     map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr", 'Mislav Marohnic'
