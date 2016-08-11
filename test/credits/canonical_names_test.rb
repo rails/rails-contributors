@@ -2808,6 +2808,10 @@ module Credits
       assert_contributor_names 'ef91cdd', 'Mattt Thompson'
     end
 
+    test 'Matt Stopa' do
+      assert_contributor_names '3c90f7a', 'Matthew Stopa'
+    end
+
     test 'Maxime RETY' do
       assert_contributor_names 'c7e875a', 'Maxime Réty'
     end

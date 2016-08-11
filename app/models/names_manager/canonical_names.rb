@@ -720,6 +720,7 @@ module NamesManager
     map 'Matthew Deiters',            'mdeiters'
     map 'Matthew Painter',            "mail\100matthewpainter.co.uk"
     map 'Matthew Rudy Jacobs',        'MatthewRudy'
+    map 'Matthew Stopa',              'Matt Stopa'
     map 'Matthew Vincent',            'neshmi'
     map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
     map 'Mattt Thompson',             '@mattt'
