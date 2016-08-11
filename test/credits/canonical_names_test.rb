@@ -164,6 +164,13 @@ module Credits
       assert_contributor_names 'd016d9a', 'Alexander Staubo'
     end
 
+    test 'Alexander' do
+      assert_contributor_names 'bdcc271', 'Alexander Baronec'
+      assert_contributor_names '9e39dc4', 'Alexander Baronec'
+      assert_contributor_names '7c643d9', 'Alexander Quine'
+      assert_contributor_names 'ca6a12d', 'Dembskiy Alexander'
+    end
+
     test 'alexbel' do
       assert_contributor_names '6aaf4bf', 'Alexander Belaev'
     end

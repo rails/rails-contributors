@@ -27,17 +27,23 @@ module NamesManager
         when 'abhishek.jain@vinsol.com' then 'Abhishek Jain'
         when 'bigbeliever@gmail.com'    then 'Abhishek Yadav'
         end
+      when 'Alexander'
+        case email
+        when "avabonec\100gmail.com", "abonec\100gmail.com" then 'Alexander Baronec'
+        when "alxndr+github\100gmail.com" then 'Alexander Quine'
+        when "dembskoi\100gmail.com" then 'Dembskiy Alexander'
+        end
       when 'Akshay'
         case email
-        when 'akshaymohite31@yahoo.com' then 'Akshay Mohite'
+        when "akshaymohite31\100yahoo.com" then 'Akshay Mohite'
         end
       when 'Sam'
         case email
-        when 'sam.saffron@gmail.com' then 'Sam Saffron'
+        when "sam.saffron\100gmail.com" then 'Sam Saffron'
         end
       when 'James'
         case email
-        when 'james.bowles@abletech.co.nz' then 'James Bowles'
+        when "james.bowles\100abletech.co.nz" then 'James Bowles'
         end
       when 'root'
         case email
