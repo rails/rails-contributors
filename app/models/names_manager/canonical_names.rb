@@ -258,6 +258,7 @@ module NamesManager
     map 'Christopher Redinger',       'redinger'
     map 'Chriztian Steinmeier',       "chriztian.steinmeier\100gmail.com"
     map 'Claudio Baccigalupo',        'claudiob', 'Claudio B.', 'claudiofullscreen', 'Claudio B'
+    map 'Clayton Liggitt',            'arktisklada'
     map 'Clifford Heath',             'cjheath'
     map 'Clifford T. Matthews',       'ctm'
     map 'Coda Hale',                  'codahale'

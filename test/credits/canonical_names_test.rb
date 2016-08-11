@@ -328,6 +328,10 @@ module Credits
       assert_contributor_names '388e5d3', 'Ariejan de Vroom'
     end
 
+    test 'arktisklada' do
+      assert_contributor_names 'd8bd9cf', 'Clayton Liggitt'
+    end
+
     test 'Arsen7' do
       assert_contributor_names 'f756bfb', 'Mariusz Pękala'
     end
