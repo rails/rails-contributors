@@ -404,6 +404,10 @@ module Credits
       assert_contributor_names '6ad8f6e', 'Ayose Cazorla'
     end
 
+    test 'Azzurrio' do
+      assert_contributor_names '80e8259', 'Karim El-Husseiny'
+    end
+
     test "babie7a0\100ybb.ne.jp" do
       assert_contributor_names '9ded584', 'Michiaki Baba'
     end

@@ -592,6 +592,7 @@ module NamesManager
     map 'Karan Arora',                'karanarora'
     map 'Karel Miarka',               "kajism\100yahoo.com"
     map 'Karel Minařík',              'karmi', 'Karel Minarik'
+    map 'Karim El-Husseiny',          'Azzurrio'
     map 'Karol Bucek',                'kares'
     map 'Kaspar Schiess',             "eule\100space.ch"
     map 'Kasper Timm Hansen',         'Timm'
