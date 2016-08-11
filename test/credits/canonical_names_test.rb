@@ -264,6 +264,10 @@ module Credits
       assert_contributor_names '6a71d09', 'Ankit Gupta'
     end
 
+    test 'ankit1910' do
+      assert_contributor_names '3900671', 'Ankit Bansal'
+    end
+
     test 'ankit8898' do
       assert_contributor_names '46a0eac', 'Ankit Gupta'
     end

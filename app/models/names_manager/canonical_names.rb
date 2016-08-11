@@ -153,6 +153,7 @@ module NamesManager
     map 'Andy Lien',                  "andylien\100gmail.com"
     map 'Angelo Capilleri',           'angelo giovanni capilleri', 'Angelo capilleri', 'acapilleri'
     map 'Anil Kumar Maurya',          'anilmaurya'
+    map 'Ankit Bansal',               'ankit1910'
     map 'Ankit Gupta',                'ankit8898', 'Ankit Gupta-FIR', 'Ankit gupta'
     map 'Anna Ershova',               'AnnaErshova'
     map 'Ant Ramm',                   'antramm'
