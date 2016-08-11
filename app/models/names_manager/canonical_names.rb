@@ -89,6 +89,7 @@ module NamesManager
     # exact string equivalences. The manager has to be very strict about this.
 
     map 'Aaron Eisenberger',          'Aaron'
+    map 'Aaron Gray',                 'aarongray'
     map 'Aaron Namba',                'anamba'
     map 'Aaron Pfeifer',              'obrie'
     map 'Aaron Todd',                 'ozzyaaron'

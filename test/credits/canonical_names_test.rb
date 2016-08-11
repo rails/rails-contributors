@@ -32,6 +32,10 @@ module Credits
       assert_contributor_names '1477a61', 'Aaron Eisenberger'
     end
 
+    test 'aarongray' do
+      assert_contributor_names 'b30805b', 'Aaron Gray'
+    end
+
     test 'abhay' do
       assert_contributor_names '3353b85', 'Abhay Kumar'
     end
