@@ -124,6 +124,10 @@ module Credits
       assert_contributor_names 'e30699f', 'Andrew Kaspick'
     end
 
+    test 'Akshay' do
+      assert_contributor_names '4d62704', 'Akshay Mohite'
+    end
+
     test 'Akshat Sharma' do
       assert_contributor_names '2438a1c', 'Pramod Sharma'
     end
