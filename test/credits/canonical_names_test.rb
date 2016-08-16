@@ -3299,6 +3299,10 @@ module Credits
       assert_contributor_names '4c323bc', 'Orta Therox'
     end
 
+    test 'oss92' do
+      assert_contributor_names 'b937c24', 'Mohamed Osama'
+    end
+
     test 'outerim' do
       assert_contributor_names '3b6555a', 'Lee Jensen'
     end

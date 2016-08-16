@@ -779,6 +779,7 @@ module NamesManager
     map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr", 'Mislav Marohnic'
     map 'Mitsutaka Mimura',           'takkanm'
     map 'Mo Khan',                    'mo khan'
+    map 'Mohamed Osama',              'oss92'
     map 'Moses Hohman',               'moses'
     map 'Murahashi Sanemat Kenichi',  'sanemat'
     map 'Murray Steele',              'h-lame'
