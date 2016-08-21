@@ -27,6 +27,10 @@ module NamesManager
         when 'abhishek.jain@vinsol.com' then 'Abhishek Jain'
         when 'bigbeliever@gmail.com'    then 'Abhishek Yadav'
         end
+      when 'Adam'
+        case email
+        when 'Adam89@users.noreply.github.com' then 'Adam Magan'
+        end
       when 'Alexander'
         case email
         when "avabonec\100gmail.com", "abonec\100gmail.com" then 'Alexander Baronec'

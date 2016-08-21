@@ -57,7 +57,7 @@ module Credits
     end
 
     test 'Adam' do
-      assert_contributor_names '5dc1f09', 'Magan Adam'
+      assert_contributor_names '5dc1f09', 'Adam Magan'
     end
 
     test "adam\100the-kramers.net" do
