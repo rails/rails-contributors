@@ -65,7 +65,7 @@ module Credits
     end
 
     test 'Adam89' do
-      assert_contributor_names '52720b4', 'Magan Adam'
+      assert_contributor_names '52720b4', 'Adam Magan'
     end
 
     test 'adamj' do
@@ -3065,6 +3065,10 @@ module Credits
 
     test 'Mr A' do
       assert_contributor_names '3134605', 'Akshay Vishnoi'
+    end
+
+    test 'mrageh' do
+      assert_contributor_names '9494855', 'Adam Magan'
     end
 
     test 'MrBrdo' do
