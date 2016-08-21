@@ -104,6 +104,7 @@ module NamesManager
     map 'Adam Hawkins',               'twinturbo', 'adman65'
     map 'Adam Johnson',               'adamj'
     map 'Adam Kramer',                "adam\100the-kramers.net"
+    map 'Adam Magan',                 'Adam89', 'mrageh'
     map 'Adam Majer',                 "adamm\100galacticasoftware.com"
     map 'Adam Wiggins',               'adamwiggins'
     map 'Adam Williams',              'aiwilliams', 'awilliams'
@@ -675,7 +676,7 @@ module NamesManager
     map 'Łukasz Strzałkowski',        'Lukasz Strzalkowski'
     map 'Luke Ludwig',                'lukeludwig'
     map 'Luke Redpath',               "contact\100lukeredpath.co.uk"
-    map 'Magan Adam',                 'Adam', 'Adam89'
+    map 'Magan Adam',                 'Adam'
     map 'maiha',                      'anna', "anna\100wota.jp", "maiha\100wota.jp"
     map 'Maik Schmidt',               "contact\100maik-schmidt.de", 'maik schmidt'
     map 'Manfred Stienstra',          "m.stienstra\100fngtps.com", 'manfred'
