@@ -420,6 +420,7 @@ module NamesManager
     map 'Geoffroy Lorieux',           'glorieux'
     map 'Georg Friedrich',            'gfriedrich'
     map 'Giovanni Intini',            "medlar\100medlar.it", 'intinig'
+    map 'Girish Sonawane',            'Girish S'
     map 'Glen Gibb',                  'grg'
     map 'Glenn Vanderburg',           'glv'
     map 'Go Sueyoshi',                'sue445'

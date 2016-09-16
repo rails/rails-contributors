@@ -1507,6 +1507,10 @@ module Credits
       assert_contributor_names '41adf87', 'Geoff Buesing'
     end
 
+    test 'Girish S' do
+      assert_contributor_names 'bbf6df7', 'Girish Sonawane'
+    end
+
     test 'geemus' do
       assert_contributor_names 'ed2eb6f', 'Wesley Beary'
     end
