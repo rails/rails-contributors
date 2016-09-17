@@ -160,6 +160,7 @@ module NamesManager
     map 'Andrew Peters',              "andrew.john.peters\100gmail.com"
     map 'Andrew Shcheglov',           'windock'
     map 'Andrew White',               'pixeltrix'
+    map 'Andrey Molchanov',           'Neodelf', 'Molchanov Andrey'
     map 'Andrey Morskov',             'accessd', 'Accessd'
     map 'Andrey Nering',              "andrey.nering\100gmail.com"
     map 'Andy Lien',                  "andylien\100gmail.com"

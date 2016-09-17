@@ -3035,6 +3035,10 @@ module Credits
       assert_contributor_names '928c84b', 'Tom Preston-Werner'
     end
 
+    test 'Molchanov Andrey' do
+      assert_contributor_names '37f2674', 'Andrey Molchanov'
+    end
+
     test 'moriq' do
       assert_contributor_names '2876efb', 'Kazuhiro Yoshida'
     end
@@ -3129,6 +3133,10 @@ module Credits
 
     test 'NeilW' do
       assert_contributor_names '9f26164', 'Neil Wilson'
+    end
+
+    test 'Neodelf' do
+      assert_contributor_names 'e0e7047', 'Andrey Molchanov'
     end
 
     test 'nerdinand' do
