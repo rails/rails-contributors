@@ -31,7 +31,7 @@ bin/setup
 After this you can use the Rails rake tasks:
 
 ```
-bin/rake test
+bin/rails test
 ```
 
 ## License
