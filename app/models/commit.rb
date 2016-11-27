@@ -1,4 +1,4 @@
-class Commit < ActiveRecord::Base
+class Commit < ApplicationRecord
   has_many :contributions, dependent: :destroy
   has_many :contributors, through: :contributions
   belongs_to :release
