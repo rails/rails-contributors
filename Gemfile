@@ -1,15 +1,17 @@
+ruby '2.3.1'
 source 'https://rubygems.org'
 
-gem 'rails', '~> 4.2.4'
+gem 'rails', '~> 5.0.0'
 gem 'pg'
 gem 'rugged', '0.21.0'
 gem 'unf'
 gem 'turbolinks'
-gem 'actionpack-page_caching'
+gem 'actionpack-page_caching', git: 'https://github.com/rails/actionpack-page_caching.git', branch: 'master'
+
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.1'
 
 group :development do
   gem 'byebug'
