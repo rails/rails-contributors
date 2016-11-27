@@ -25,6 +25,7 @@ end
 
 group :test do
   gem 'delorean'
+  gem 'rails-controller-testing'
 end
 
 group :production do
