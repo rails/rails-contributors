@@ -1,4 +1,4 @@
-class Contributor < ActiveRecord::Base
+class Contributor < ApplicationRecord
   has_many :contributions, :dependent => :destroy
   has_many :commits, :through => :contributions
 

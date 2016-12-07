@@ -25,7 +25,7 @@ class ContributorsControllerTest < ActionController::TestCase
     }
 
     Release.all.each do |release|
-      get :index, release_id: release
+      get :index, params: { release_id: release }
 
       assert_response :success
 
@@ -59,7 +59,7 @@ class ContributorsControllerTest < ActionController::TestCase
 
     time_travel do
       time_windows.each do |time_window, expected|
-        get :in_time_window, time_window: time_window
+        get :in_time_window, params: { time_window: time_window }
 
         assert_response :success
 

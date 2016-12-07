@@ -9,7 +9,7 @@ class CommitsControllerTest < ActionController::TestCase
     ].map {|a, b| [releases(a), Array(commits(*b))]}
 
     cases.each do |release, commits|
-      get :index, release_id: release
+      get :index, params: { release_id: release }
 
       assert_response :success
       assert_equal commits, assigns(:commits)
@@ -28,7 +28,7 @@ class CommitsControllerTest < ActionController::TestCase
     ].map {|a, b| [contributors(a), Array(commits(*b))]}
 
     cases.each do |contributor, commits|
-      get :index, contributor_id: contributor
+      get :index, params: { contributor_id: contributor }
 
       assert_response :success
       assert_equal commits, assigns(:commits)
@@ -75,7 +75,7 @@ class CommitsControllerTest < ActionController::TestCase
     time_travel do
       cases.each do |contributor, commits_per_time_window|
         commits_per_time_window.each do |time_window, commits|
-          get :in_time_window, contributor_id: contributor, time_window: time_window
+          get :in_time_window, params: { contributor_id: contributor, time_window: time_window }
 
           assert_response :success
           assert_equal commits, assigns(:commits)
@@ -104,7 +104,7 @@ class CommitsControllerTest < ActionController::TestCase
       all_releases.each do |release|
         commits = releases[release] || []
 
-        get :in_release, contributor_id: contributor, release_id: release
+        get :in_release, params: { contributor_id: contributor, release_id: release }
 
         assert_response :success
         assert_equal commits, assigns(:commits)
@@ -124,7 +124,7 @@ class CommitsControllerTest < ActionController::TestCase
     ].map {|a, b| [contributors(a), Array(commits(*b))]}
 
     cases.each do |contributor, commits|
-      get :in_edge, contributor_id: contributor
+      get :in_edge, params: { contributor_id: contributor }
 
       assert_response :success
       assert_equal commits, assigns(:commits)

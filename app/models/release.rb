@@ -1,4 +1,4 @@
-class Release < ActiveRecord::Base
+class Release < ApplicationRecord
   include Comparable
 
   has_many :commits, :dependent => :nullify

@@ -1,2 +1,2 @@
-class RepoUpdate < ActiveRecord::Base
+class RepoUpdate < ApplicationRecord
 end
