@@ -8,7 +8,6 @@ gem 'unf'
 gem 'turbolinks'
 gem 'actionpack-page_caching', git: 'https://github.com/rails/actionpack-page_caching.git', branch: 'master'
 
-
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2.1'
