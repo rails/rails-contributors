@@ -2,8 +2,14 @@ require 'test_helper'
 
 class TimeConstraintsTest < ActiveSupport::TestCase
   def assert_time_window(actual, since = nil, upto = nil)
-    assert_equal since, actual[:since]
-    assert_equal upto, actual[:upto]
+    [[since, :since], [upto, :upto]].each do |expected, key|
+      # Written this way because assert_equal(nil, nil) fails in MT6.
+      if expected.nil?
+        assert_nil actual[key]
+      else
+        assert_equal expected, actual[key]
+      end
+    end
   end
 
   def test_label_for_returns_a_label_for_a_valid_time_window
