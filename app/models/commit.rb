@@ -1,7 +1,7 @@
 class Commit < ApplicationRecord
   has_many :contributions, dependent: :destroy
   has_many :contributors, through: :contributions
-  belongs_to :release
+  belongs_to :release, optional: true
 
   scope :with_no_contributors, -> {
     select('commits.*'). # otherwise we get read-only records

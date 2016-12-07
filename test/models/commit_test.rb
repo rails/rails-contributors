@@ -25,7 +25,7 @@ class CommitTest < ActiveSupport::TestCase
     message = <<-MSG.strip_heredoc
       \u{1f4a3}
 
-      We are relyingon hash inequality in tests
+      We are relying on hash inequality in tests
     MSG
 
     [[], [1], [1, 2]].each.with_index do |parents, i|
