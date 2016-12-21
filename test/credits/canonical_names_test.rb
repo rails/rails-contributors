@@ -2267,6 +2267,10 @@ module Credits
       assert_contributor_names '50253ed', 'Herryanto Siatono'
     end
 
+    test 'Julia Lopez' do
+      assert_contributor_names '5e46f4ccb4', 'Julia López'
+    end
+
     test 'julik' do
       assert_contributor_names 'f756bfb', 'Julian Tarkhanov'
     end
