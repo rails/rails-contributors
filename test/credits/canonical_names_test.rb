@@ -2763,6 +2763,10 @@ module Credits
       assert_contributor_names '8cc4159', 'Mark Rushakoff'
     end
 
+    test 'MarkMT' do
+      assert_contributor_names '27da612', 'MarkMT'
+    end
+
     test "mark.imbriaco\100pobox.com" do
       assert_contributor_names '229c0f4', 'Mark Imbriaco'
     end

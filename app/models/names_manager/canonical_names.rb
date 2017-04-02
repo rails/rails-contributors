@@ -69,6 +69,10 @@ module NamesManager
         when "jan\100habermann24.com" then 'Jan Habermann'
         when "jan.h.xie\100gmail.com" then 'Jan Xie'
         end
+      when 'Mark'
+        case email
+        when "mark\100rakino.(none)" then 'MarkMT'
+        end
       when ''
         case email
         when "JRadosz\100gmail.com" then 'Jarek Radosz'
