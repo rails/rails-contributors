@@ -3103,6 +3103,10 @@ module Credits
       assert_contributor_names '95e8740', 'Mark James'
     end
 
+    test 'mrkjlchvz' do
+      assert_contributor_names 'e19ce8b', 'mrkjlchvz'
+    end
+
     test 'mroch' do
       assert_contributor_names '81286f8', 'Marshall Roch'
     end
