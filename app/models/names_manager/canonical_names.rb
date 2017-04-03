@@ -914,6 +914,7 @@ module NamesManager
     map 'Robert Speicher',            'rspeicher'
     map 'Roberto Miranda',            'robertomiranda'
     map 'Robin Fisher',               'robinjfisher'
+    map 'Ryunosuke Sato',             'Ryunosuke SATO'
     map 'Robin H. Johnson',           "robbat2\100gentoo.org"
     map 'Roderick van Domburg',       'roderickvd'
     map 'Rodney Ramdas',              "rramdas\100gmail.com"

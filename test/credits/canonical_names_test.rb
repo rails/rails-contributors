@@ -3891,6 +3891,10 @@ module Credits
       assert_contributor_names '2890b96', 'Ryan Davis (zenspider)'
     end
 
+    test 'Ryunosuke Sato' do
+      assert_contributor_names 'd022fce', 'Ryunosuke Sato'
+    end
+
     test "ryan.raaum\100gmail.com" do
       assert_contributor_names '0f0d926', 'Ryan Raaum'
     end
