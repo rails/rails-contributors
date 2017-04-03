@@ -846,6 +846,7 @@ module NamesManager
     map 'Orta Therox',                'orta'
     map 'Otto Hilska',                'mutru'
     map 'Pablo Astigarraga',          'pote', 'PoTe'
+    map 'Pablo Ifrán',                'Pablo Ifran'
     map 'Pascal Belloncle',           'psq'
     map 'Pascal Terjan',              "pterjan\100mandriva.com"
     map 'Pat Maddox',                 "pergesu\100gmail.com"

@@ -3363,6 +3363,10 @@ module Credits
       assert_contributor_names '9fb5ee8', 'Lukas Rieder'
     end
 
+    test 'Pablo Ifrán' do
+      assert_contributor_names 'c945da5', 'Pablo Ifrán'
+    end
+
     test 'ozzyaaron' do
       assert_contributor_names '837f0ab', 'Aaron Todd'
     end
