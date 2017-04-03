@@ -64,6 +64,10 @@ module NamesManager
         when "david\100loudthinking.com" then 'David Heinemeier Hansson'
         when "DevilDavidWang\100gmail.com" then 'David Wang'
         end
+      when 'Dan'
+        case email
+        when "dan.burnette\100watershed5.com" then 'Daniel Burnette'
+        end
       when 'Jan'
         case email
         when "jan\100habermann24.com" then 'Jan Habermann'

@@ -907,6 +907,10 @@ module Credits
       assert_contributor_names '2c6e616', 'Jack Danger Canty'
     end
 
+    test 'Daniel Burnette' do
+      assert_contributor_names 'b93ae0c', 'Daniel Burnette'
+    end
+
     test "daniel\100nightrunner.com" do
       assert_contributor_names 'ba309a3', 'Daniel Hobe'
     end
