@@ -30,6 +30,7 @@ module NamesManager
       when 'Adam'
         case email
         when 'Adam89@users.noreply.github.com' then 'Adam Magan'
+        when 'kohnkecomm@Adam-iMac.local' then 'kohnkecomm'
         end
       when 'Alexander'
         case email

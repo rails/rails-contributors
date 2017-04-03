@@ -2467,6 +2467,10 @@ module Credits
       assert_contributor_names 'e2d90bf', 'Krzysztof Knapik'
     end
 
+    test 'kohnkecomm' do
+      assert_contributor_names 'cf6299d', 'kohnkecomm'
+    end
+
     test 'kommen' do
       assert_contributor_names '3cfb894', 'Dieter Komendera'
     end
