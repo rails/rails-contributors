@@ -538,6 +538,7 @@ module NamesManager
     map 'Jérôme Lipowicz',            'jerome'
     map 'Jerrett Taylor',             "jerrett\100bravenet.com"
     map 'Jesse Merriman',             "jessemerriman\100warpmail.net"
+    map '簡煒航 (Jian Weihang)',      'Jian Weihang'
     map 'Jim Helm',                   "perlguy\100gmail.com"
     map 'Jim Hughes',                 'jeem'
     map 'Jim Meyer',                  'purp'

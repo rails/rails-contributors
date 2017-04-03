@@ -16,6 +16,10 @@ module Credits
       assert_contributor_names 'c32978d', 'Tony Jian'
     end
 
+    test '簡煒航 (Jian Weihang)' do
+      assert_contributor_names '4459576', '簡煒航 (Jian Weihang)'
+    end
+
     test '1334' do
       assert_contributor_names '47d95c8', 'Iñigo Solano Pàez'
     end
