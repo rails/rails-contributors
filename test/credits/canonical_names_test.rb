@@ -2875,6 +2875,10 @@ module Credits
       assert_contributor_names 'c7e875a', 'Maxime Réty'
     end
 
+    test 'Mehmet Emin İNAÇ' do
+      assert_contributor_names 'ca77998', 'Mehmet Emin İNAÇ'
+    end
+
     test 'maximerety' do
       assert_contributor_names 'd0f22a9', 'Maxime Réty'
     end

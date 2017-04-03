@@ -761,6 +761,7 @@ module NamesManager
     map 'Max Melentiev',              'printercu'
     map 'Max Mitchell',               'mazuhl'
     map 'Maxime Réty',                'Maxime RETY', 'maximerety'
+    map 'Mehmet Emin İNAÇ',           'Mehmet Emin INAC'
     map 'Melih Arda Yalçiner',        'Wizard'
     map 'Mica Eked',                  'mica eked'
     map 'Micah Alles',                "alles\100atomicobject.com"
