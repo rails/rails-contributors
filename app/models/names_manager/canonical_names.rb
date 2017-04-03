@@ -348,6 +348,7 @@ module NamesManager
     map 'Dirkjan Bussink',            'dbussink'
     map 'Dmitrii Samoilov',           'german'
     map 'Dmitrij Mjakotnyi',          'kucaahbe'
+    map 'Dmitriy Budnik',             "Дмитро Будник"
     map 'Dmitriy Timokhin',           'pager'
     map 'Dmitry Dedov',               'dm1try'
     map 'Dmitry Lipovoi',             'pleax'

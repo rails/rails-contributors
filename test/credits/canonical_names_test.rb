@@ -1091,6 +1091,10 @@ module Credits
       assert_contributor_names '179b451', 'John Pignata'
     end
 
+    test 'Dmitriy Budnik' do
+      assert_contributor_names 'a209652', 'Dmitriy Budnik'
+    end
+
     test 'devrieda' do
       assert_contributor_names '45d679b', 'Derek DeVries'
     end
