@@ -1587,6 +1587,10 @@ module Credits
       assert_contributor_names '63a9516', 'Grant Hollingworth'
     end
 
+    test 'greenbigfrog' do
+      assert_contributor_names '9233f52', 'greenbigfrog'
+    end
+
     test 'Greenie0506' do
       assert_contributor_names 'a1ae17e', 'Nicholas Greenfield'
     end

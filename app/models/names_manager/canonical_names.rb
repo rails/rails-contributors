@@ -78,6 +78,10 @@ module NamesManager
         when "mark\100rakino.(none)" then 'MarkMT'
         when "markchav3z\100gmail.com" then 'mrkjlchvz'
         end
+      when 'Jonathan'
+        case email
+        when "greenbigfrog\100gmail.com" then 'greenbigfrog'
+        end
       when ''
         case email
         when "JRadosz\100gmail.com" then 'Jarek Radosz'
