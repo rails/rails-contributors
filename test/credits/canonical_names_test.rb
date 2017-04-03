@@ -16,6 +16,10 @@ module Credits
       assert_contributor_names 'c32978d', 'Tony Jian'
     end
 
+    test '簡煒航 (Jian Weihang)' do
+      assert_contributor_names '4459576', '簡煒航 (Jian Weihang)'
+    end
+
     test '1334' do
       assert_contributor_names '47d95c8', 'Iñigo Solano Pàez'
     end
@@ -327,6 +331,10 @@ module Credits
       assert_contributor_names 'd572bf9', 'Anuj Dutta'
     end
 
+    test 'aquajach' do
+      assert_contributor_names 'c0eb542', 'aquajach'
+    end
+
     test 'ara.t.howard' do
       assert_contributor_names '99c08c7', 'Ara T Howard'
     end
@@ -437,6 +445,10 @@ module Credits
 
     test 'Bas Van Klinkenberg' do
       assert_contributor_names 'b99914c', 'Bas van Klinkenberg'
+    end
+
+    test 'Ben A. Morgan' do
+      assert_contributor_names 'bee4c8f', 'Ben A. Morgan'
     end
 
     test 'bastilian' do
@@ -899,6 +911,10 @@ module Credits
       assert_contributor_names '2c6e616', 'Jack Danger Canty'
     end
 
+    test 'Daniel Burnette' do
+      assert_contributor_names 'b93ae0c', 'Daniel Burnette'
+    end
+
     test "daniel\100nightrunner.com" do
       assert_contributor_names 'ba309a3', 'Daniel Hobe'
     end
@@ -1089,6 +1105,10 @@ module Credits
 
     test 'Developer' do
       assert_contributor_names '179b451', 'John Pignata'
+    end
+
+    test 'Dmitriy Budnik' do
+      assert_contributor_names 'a209652', 'Dmitriy Budnik'
     end
 
     test 'devrieda' do
@@ -1569,6 +1589,10 @@ module Credits
 
     test "grant\100antiflux.org" do
       assert_contributor_names '63a9516', 'Grant Hollingworth'
+    end
+
+    test 'greenbigfrog' do
+      assert_contributor_names '9233f52', 'greenbigfrog'
     end
 
     test 'Greenie0506' do
@@ -2399,6 +2423,10 @@ module Credits
       assert_contributor_names 'bb80a87', 'Toshinori Kajihara'
     end
 
+    test 'kenta-s' do
+      assert_contributor_names '85119f5', 'kenta-s'
+    end
+
     test 'kevcha' do
       assert_contributor_names 'b523b5a', 'Kevin Chavanne'
     end
@@ -2437,6 +2465,10 @@ module Credits
 
     test 'knapo' do
       assert_contributor_names 'e2d90bf', 'Krzysztof Knapik'
+    end
+
+    test 'kohnkecomm' do
+      assert_contributor_names 'cf6299d', 'kohnkecomm'
     end
 
     test 'kommen' do
@@ -2763,6 +2795,10 @@ module Credits
       assert_contributor_names '8cc4159', 'Mark Rushakoff'
     end
 
+    test 'MarkMT' do
+      assert_contributor_names '27da612', 'MarkMT'
+    end
+
     test "mark.imbriaco\100pobox.com" do
       assert_contributor_names '229c0f4', 'Mark Imbriaco'
     end
@@ -2849,6 +2885,10 @@ module Credits
 
     test 'Maxime RETY' do
       assert_contributor_names 'c7e875a', 'Maxime Réty'
+    end
+
+    test 'Mehmet Emin İNAÇ' do
+      assert_contributor_names 'ca77998', 'Mehmet Emin İNAÇ'
     end
 
     test 'maximerety' do
@@ -3099,6 +3139,10 @@ module Credits
       assert_contributor_names '95e8740', 'Mark James'
     end
 
+    test 'mrkjlchvz' do
+      assert_contributor_names 'e19ce8b', 'mrkjlchvz'
+    end
+
     test 'mroch' do
       assert_contributor_names '81286f8', 'Marshall Roch'
     end
@@ -3329,6 +3373,10 @@ module Credits
 
     test 'Overbryd' do
       assert_contributor_names '9fb5ee8', 'Lukas Rieder'
+    end
+
+    test 'Pablo Ifrán' do
+      assert_contributor_names 'c945da5', 'Pablo Ifrán'
     end
 
     test 'ozzyaaron' do
@@ -3879,6 +3927,10 @@ module Credits
       assert_contributor_names '2890b96', 'Ryan Davis (zenspider)'
     end
 
+    test 'Ryunosuke Sato' do
+      assert_contributor_names 'd022fce', 'Ryunosuke Sato'
+    end
+
     test "ryan.raaum\100gmail.com" do
       assert_contributor_names '0f0d926', 'Ryan Raaum'
     end
@@ -3967,6 +4019,10 @@ module Credits
       assert_contributor_names 'a0c925c', 'Scott Schram'
     end
 
+    test 'Sen Zhang' do
+      assert_contributor_names 'd57356b', 'Sen Zhang'
+    end
+
     test 'scottwillson' do
       assert_contributor_names 'c75cfa0', 'Scott Willson'
     end
@@ -4041,6 +4097,10 @@ module Credits
 
     test "shimbo\100is.naist.jp" do
       assert_contributor_names '6aaa08d', 'Masashi Shimbo'
+    end
+
+    test 'shingo-nakanishi' do
+      assert_contributor_names 'd089fe2', 'shingo-nakanishi'
     end
 
     test 'shock_one' do
@@ -4489,6 +4549,10 @@ module Credits
 
     test 'TomK32' do
       assert_contributor_names '235cd21', 'Thomas R. Koll'
+    end
+
+    test 'Toshimaru' do
+      assert_contributor_names 'd9ff835', 'Toshimaru'
     end
 
     test 'tomtoday' do
