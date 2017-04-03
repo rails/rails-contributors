@@ -331,6 +331,10 @@ module Credits
       assert_contributor_names 'd572bf9', 'Anuj Dutta'
     end
 
+    test 'aquajach' do
+      assert_contributor_names 'c0eb542', 'aquajach'
+    end
+
     test 'ara.t.howard' do
       assert_contributor_names '99c08c7', 'Ara T Howard'
     end

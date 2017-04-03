@@ -82,6 +82,10 @@ module NamesManager
         case email
         when "greenbigfrog\100gmail.com" then 'greenbigfrog'
         end
+      when 'Jack'
+        case email
+        when "aquajach\100gmail.com" then 'aquajach'
+        end
       when ''
         case email
         when "JRadosz\100gmail.com" then 'Jarek Radosz'
