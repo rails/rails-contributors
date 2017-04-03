@@ -204,6 +204,7 @@ module NamesManager
     map 'Bagwan Pankaj',              'bagwanpankaj'
     map 'Bas van Klinkenberg',        "flash\100vanklinkenbergsoftware.nl", 'Bas Van Klinkenberg'
     map 'Bart de Water',              'Bart'
+    map 'Ben A. Morgan',              'Ben A Morgan'
     map 'Ben Bangert',                "ben\100groovie.org"
     map 'Ben Holley',                 'benolee'
     map 'Ben Murphy',                 'benmmurphy'

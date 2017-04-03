@@ -439,6 +439,10 @@ module Credits
       assert_contributor_names 'b99914c', 'Bas van Klinkenberg'
     end
 
+    test 'Ben A. Morgan' do
+      assert_contributor_names 'bee4c8f', 'Ben A. Morgan'
+    end
+
     test 'bastilian' do
       assert_contributor_names '071f48b', 'Sebastian Graessl'
     end
