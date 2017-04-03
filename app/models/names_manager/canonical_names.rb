@@ -972,6 +972,7 @@ module NamesManager
     map 'Sebastian Graessl',          'bastilian'
     map 'Sebastian Kanthak',          "sebastian.kanthak\100muehlheim.de", 'sebastian.kanthak', 'skanthak'
     map 'Sebastian Spieszko',         'ciastek'
+    map 'Sen Zhang',                  'Sen-Zhang'
     map 'Serg Podtynnyi',             'shtirlic'
     map 'Serge Balyuk',               'bgipsy'
     map 'Sergey Karpesh',             'kasper'

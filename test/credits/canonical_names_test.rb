@@ -3999,6 +3999,10 @@ module Credits
       assert_contributor_names 'a0c925c', 'Scott Schram'
     end
 
+    test 'Sen Zhang' do
+      assert_contributor_names 'd57356b', 'Sen Zhang'
+    end
+
     test 'scottwillson' do
       assert_contributor_names 'c75cfa0', 'Scott Willson'
     end
