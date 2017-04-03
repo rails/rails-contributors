@@ -4087,6 +4087,10 @@ module Credits
       assert_contributor_names '6aaa08d', 'Masashi Shimbo'
     end
 
+    test 'shingo-nakanishi' do
+      assert_contributor_names 'd089fe2', 'shingo-nakanishi'
+    end
+
     test 'shock_one' do
       assert_contributor_names 'ec1b715', 'Volodymyr Shatsky'
     end

@@ -992,6 +992,7 @@ module NamesManager
     map 'Simon Jefford',              'simonjefford'
     map 'Simon Moore',                'saimonmoore'
     map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
+    map 'shingo-nakanishi',           'shingo.nakanishi'
     map 'Shinichi Maeshima',          'willnet'
     map 'Skye Shaw',                  'sshaw'
     map 'Slava Markevich',            'markevich'
