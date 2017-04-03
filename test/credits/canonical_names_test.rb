@@ -4539,6 +4539,10 @@ module Credits
       assert_contributor_names '235cd21', 'Thomas R. Koll'
     end
 
+    test 'Toshimaru' do
+      assert_contributor_names 'd9ff835', 'Toshimaru'
+    end
+
     test 'tomtoday' do
       assert_contributor_names 'b1aa674', 'Tom Brice'
     end

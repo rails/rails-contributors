@@ -1069,6 +1069,7 @@ module NamesManager
     map 'Tomohiro Hashidate',         'joker1007'
     map 'Tõnis Simo',                 'Anton'
     map 'Tony Jian',                  '簡煒航'
+    map 'Toshimaru',                  'toshimaru'
     map 'Toshinori Kajihara',         'kennyj'
     map 'Travis Vander Hoop',         'vanderhoop'
     map 'Trek Glowacki',              'trek'
