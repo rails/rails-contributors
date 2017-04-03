@@ -2415,6 +2415,10 @@ module Credits
       assert_contributor_names 'bb80a87', 'Toshinori Kajihara'
     end
 
+    test 'kenta-s' do
+      assert_contributor_names '85119f5', 'kenta-s'
+    end
+
     test 'kevcha' do
       assert_contributor_names 'b523b5a', 'Kevin Chavanne'
     end
