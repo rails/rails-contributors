@@ -34,6 +34,20 @@ After this you can use the Rails rake tasks:
 bin/rails test
 ```
 
+## Developing locally
+
+To populate an empty database:
+
+```
+bundle exec rails runner Repo.sync
+```
+
+To repopulate the database based on code changes:
+
+```
+bundle exec rails runner "Repo.sync(rebuild_all: true)"
+```
+
 ## License
 
 Released under the MIT License, Copyright (c) 2012–<i>ω</i> Xavier Noria.
