@@ -4323,6 +4323,10 @@ module Credits
       assert_contributor_names 'ce40df2', 'Sunny Ripert'
     end
 
+    test 'stve' do
+      assert_contributor_names 'e80d9f4', 'Steve Agalloco'
+    end
+
     test 'sur' do
       assert_contributor_names '8b2a601', 'Sur Max'
     end
