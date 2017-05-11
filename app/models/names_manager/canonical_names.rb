@@ -1020,6 +1020,7 @@ module NamesManager
     map 'Stephen Touset',             "stephen\100touset.org"
     map 'Stephen Veiss',              'sveiss'
     map 'Stephen Veit',               "sveit\100tradeharbor.com"
+    map 'Steve Agalloco',             'stve'
     map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
     map 'Steve Richert',              'laserlemon'
     map 'Steven Bristol',             'stevenbristol', 'steve'

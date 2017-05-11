@@ -2908,7 +2908,7 @@ module Credits
     end
 
     test "mdabney\100cavoksolutions.com" do
-      assert_contributor_names '43b6a74', 'Blane Dabney'
+      assert_contributor_names '43b6a74fb1', 'Blane Dabney'
     end
 
     test 'mdeiters' do
@@ -4321,6 +4321,10 @@ module Credits
 
     test 'Sunny' do
       assert_contributor_names 'ce40df2', 'Sunny Ripert'
+    end
+
+    test 'stve' do
+      assert_contributor_names 'e80d9f4', 'Steve Agalloco'
     end
 
     test 'sur' do
