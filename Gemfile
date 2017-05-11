@@ -14,6 +14,7 @@ gem 'coffee-rails', '~> 4.2.1'
 
 group :development do
   gem 'byebug'
+  gem 'listen'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'capistrano', '~> 3.4',         require: false

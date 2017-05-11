@@ -86,9 +86,14 @@ GEM
       chronic
     erubis (2.7.0)
     execjs (2.7.0)
+    ffi (1.9.18)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -138,6 +143,10 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.0.0)
+    rb-fsevent (0.9.8)
+    rb-inotify (0.9.8)
+      ffi (>= 0.5.0)
+    ruby_dep (1.5.0)
     rugged (0.21.0)
     sass (3.4.22)
     sass-rails (5.0.6)
@@ -192,6 +201,7 @@ DEPENDENCIES
   capistrano3-puma (~> 1.0)
   coffee-rails (~> 4.2.1)
   delorean
+  listen
   pg
   puma
   rails (~> 5.0.0)
@@ -208,4 +218,4 @@ RUBY VERSION
    ruby 2.2.5p319
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
