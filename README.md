@@ -4,7 +4,7 @@ This is the application behind http://contributors.rubyonrails.org.
 
 ## Ruby
 
-Needs Ruby 2.2.5.
+Needs Ruby 2.2.7.
 
 ## System dependencies
 
