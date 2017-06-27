@@ -3387,6 +3387,11 @@ module Credits
       assert_contributor_names 'f005587', 'Jeffrey Hardy'
     end
 
+    test 'padi' do
+      assert_contributor_names '927e986', 'Marc Rendl Ignacio'
+      assert_contributor_names 'f55ecc6', 'Marc Rendl Ignacio'
+    end
+
     test 'pager' do
       assert_contributor_names '6a611e1', 'Dmitriy Timokhin'
     end
