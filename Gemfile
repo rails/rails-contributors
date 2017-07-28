@@ -1,7 +1,7 @@
-ruby '2.2.5'
+ruby '2.4.1'
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.0.4'
 gem 'pg'
 gem 'rugged', '0.21.0'
 gem 'unf'
