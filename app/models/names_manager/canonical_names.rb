@@ -713,6 +713,7 @@ module NamesManager
     map 'Manuel Holtgrewe',           "purestorm\100ggnore.net"
     map 'Marc Huffnagle',             'mhuffnagle'
     map 'Marc Love',                  'marclove'
+    map 'Marc Rendl Ignacio',         'Marc Ignacio'
     map 'Marc-André Cournoyer',       'macournoyer'
     map 'Marc-André Lafortune',       'Marc-Andre Lafortune'
     map 'Marcel Molina Jr.',          'Marcel Molina', 'Marcel', 'Marcel Molina Jr', 'marcel', 'noradio', 'Marcel Mollina Jr.'
