@@ -3388,7 +3388,6 @@ module Credits
     end
 
     test 'padi' do
-      assert_contributor_names '927e986', 'Marc Rendl Ignacio'
       assert_contributor_names 'f55ecc6', 'Marc Rendl Ignacio'
     end
 
