@@ -2384,7 +2384,7 @@ module Credits
     end
 
     test "kazuhiko\100fdiary.net" do
-      assert_contributor_names '3c8dbcb', 'Kazuhiro Yoshida'
+      assert_contributor_names '8e78e93', 'Kazuhiko Shiozaki'
     end
 
     test 'KD' do
