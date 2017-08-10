@@ -1123,7 +1123,7 @@ module NamesManager
     map 'Yuri Leikind',               'leikind'
     map 'Yurii Rashkovskii',          "yrashk\100gmail.com", "yrashk\100fp.org.ua"
     map 'Yury Korolev',               'yury'
-    map 'Yuuji Yaginuma',             'yuuji.yaginuma'
+    map 'Yuuji Yaginuma',             'yuuji.yaginuma', 'Yuji Yaginuma'
     map 'Yves Senn',                  'senny'
     map 'Yves Siegrist',              'Elektron1c97'
     map 'Zac Williams',               'jzw'
