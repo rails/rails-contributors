@@ -88,6 +88,10 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.6)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.6)
@@ -140,6 +144,7 @@ GEM
     rb-fsevent (0.10.2)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    ruby_dep (1.5.0)
     rugged (0.21.0)
     sass (3.5.1)
       sass-listen (~> 4.0.0)
@@ -198,6 +203,7 @@ DEPENDENCIES
   capistrano3-puma (~> 1.0)
   coffee-rails (~> 4.2.1)
   delorean
+  listen
   pg
   puma
   rails (~> 5.0.4)
