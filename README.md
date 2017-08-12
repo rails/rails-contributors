@@ -17,7 +17,7 @@ In Ubuntu:
 sudo apt-get install postgresql postgresql-contrib libpq-dev
 
 # rugged dependencies
-sudo apt-get install cmake libgit2-0 libgit2-dev
+sudo apt-get install cmake
 ```
 
 ## How to run the tests
