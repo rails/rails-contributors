@@ -8,36 +8,44 @@ Needs Ruby 2.4.1.
 
 ## System dependencies
 
-PostgreSQL, and rugged dependencies.
-
-In Ubuntu:
-
 ```
+# ExecJS runtime
+$ sudo apt-get install nodejs
+
 # PostgreSQL
-sudo apt-get install postgresql postgresql-contrib libpq-dev
+$ sudo apt-get install postgresql postgresql-contrib libpq-dev
 
-# rugged dependencies
-sudo apt-get install cmake
+# rugged
+$ sudo apt-get install cmake
 ```
 
-## How to run the tests
+## Application setup
 
 Assuming your user is able to create databases, for example by running
 
 ```
-sudo -u postgres createuser --superuser $USER
+$ sudo -u postgres createuser --superuser $USER
 ```
 
 just execute
 
 ```
-bin/setup
+$ bin/setup
 ```
 
-After this you can use the Rails rake tasks:
+## Test suite
+
+To run the test suite run
 
 ```
-bin/rails test
+$ bin/rails test
+```
+
+Recent tests may need an up to date checkout if Rails. To do so
+
+```
+$ cd rails.git
+$ git fetch
 ```
 
 ## License
