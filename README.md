@@ -22,7 +22,13 @@ sudo apt-get install cmake
 
 ## How to run the tests
 
-Use the setup script to configure your application to be able to run the tests:
+Assuming your user is able to create databases, for example by running
+
+```
+sudo -u postgres createuser --superuser $USER
+```
+
+just execute
 
 ```
 bin/setup
