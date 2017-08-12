@@ -33,34 +33,39 @@ just execute
 $ bin/setup
 ```
 
+## Developing locally
+
+To populate an empty database:
+
+```
+bin/rails runner Repo.sync
+```
+
+If you modify the name mappings, hard-coded authors, etc., that task also
+updates the credits and it does so changing as little as possible.
+
+Sometimes you may need to rebuild the assignments, for example if the actual
+heuristics change. To do that please execute
+
+```
+bin/rails runner "Repo.sync(rebuild_all: true)"
+```
+
 ## Test suite
 
-To run the test suite run
+To run the test suite execute
 
 ```
 $ bin/rails test
 ```
 
-Recent tests may need an up to date checkout if Rails. To do so
+Recent tests may need an up to date checkout of Rails. To do so:
 
 ```
 $ cd rails.git
 $ git fetch
 ```
 
-## Developing locally
-
-To populate an empty database:
-
-```
-bundle exec rails runner Repo.sync
-```
-
-To repopulate the database based on code changes:
-
-```
-bundle exec rails runner "Repo.sync(rebuild_all: true)"
-```
 
 ## License
 
