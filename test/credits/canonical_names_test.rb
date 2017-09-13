@@ -4803,6 +4803,10 @@ module Credits
       assert_contributor_names '539d929', 'Yasuhiko Katoh'
     end
 
+    test 'yhirano55' do
+      assert_contributor_names '5af7d47', 'Yoshiyuki Hirano'
+    end
+
     test 'ymendel' do
       assert_contributor_names '173e2d2', 'Yossef Mendelssohn'
     end
