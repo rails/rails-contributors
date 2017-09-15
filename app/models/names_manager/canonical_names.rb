@@ -1118,6 +1118,7 @@ module NamesManager
     map 'Yehuda Katz',                'wycats'
     map 'Yoji Shidara',               "darashi\100gmail.com"
     map 'Yonatan Feldman',            "yon\100milliped.com", 'yon'
+    map 'Yoshiyuki Hirano',           'yhirano55'
     map 'Yossef Mendelssohn',         'ymendel'
     map 'Yuki Minamiya',              'yuki3738'
     map 'Yuri Leikind',               'leikind'
