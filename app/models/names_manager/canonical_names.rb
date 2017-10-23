@@ -367,6 +367,7 @@ module NamesManager
     map 'Dmitry Dedov',               'dm1try'
     map 'Dmitry Lipovoi',             'pleax'
     map 'Dmitry Vorotilin',           'Dmitriy Vorotilin'
+    map 'Dmytro Vasin',               'Vasin Dmitriy'
     map 'Dominic Sisneros',           "dom\100sisna.com"
     map 'Don Park',                   "don.park\100gmail.com"
     map 'Donald Piret',               "donald.piret\100synergetek.be"

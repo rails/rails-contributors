@@ -1171,6 +1171,10 @@ module Credits
       assert_contributor_names '705a1d5', 'Dmitry Vorotilin'
     end
 
+    test 'Vasin Dmitriy' do
+      assert_contributor_names 'dc8ddea', 'Dmytro Vasin'
+    end
+
     test 'doabit' do
       assert_contributor_names '8094156', 'Sean Dent'
     end
