@@ -15,6 +15,9 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 
 # rugged
 $ sudo apt-get install cmake pkg-config
+
+# deploys trigger a webhook
+$ sudo apt-get install curl
 ```
 
 ## Application setup
