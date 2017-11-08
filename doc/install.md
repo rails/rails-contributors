@@ -14,7 +14,7 @@ $ sudo apt-get install nodejs
 $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 
 # rugged
-$ sudo apt-get install cmake
+$ sudo apt-get install cmake pkg-config
 ```
 
 ## Application setup
