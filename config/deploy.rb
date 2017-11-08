@@ -1,4 +1,4 @@
-lock '3.9.0'
+lock '3.10.0'
 
 set :application, 'rails-contributors'
 set :repo_url, 'git://github.com/fxn/rails-contributors.git'
