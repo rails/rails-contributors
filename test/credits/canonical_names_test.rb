@@ -3195,6 +3195,10 @@ module Credits
       assert_contributor_names '38c833c', 'Ferdinand Niedermann'
     end
 
+    test 'neumayr' do
+      assert_contributor_names 'd7b6054', 'Matthias Neumayr'
+    end
+
     test 'Nerian' do
       assert_contributor_names '2ebf47a', 'Gonzalo Rodríguez-Baltanás Díaz'
     end
