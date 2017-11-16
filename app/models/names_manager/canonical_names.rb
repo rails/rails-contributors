@@ -769,6 +769,7 @@ module NamesManager
     map 'Matthew Stopa',              'Matt Stopa'
     map 'Matthew Vincent',            'neshmi'
     map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
+    map 'Matthias Neumayr',           'neumayr'
     map 'Mattt Thompson',             '@mattt'
     map 'Max Melentiev',              'printercu'
     map 'Max Mitchell',               'mazuhl'
