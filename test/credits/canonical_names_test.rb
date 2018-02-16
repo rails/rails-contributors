@@ -4643,6 +4643,10 @@ module Credits
       assert_contributor_names 'c6ea1d3', 'Nicholas Seckar'
     end
 
+    test 'utilum' do
+      assert_contributor_names '4d4db4c', 'utilum'
+    end
+
     test 'vanderhoop' do
       assert_contributor_names 'b345fc2', 'Travis Vander Hoop'
     end
