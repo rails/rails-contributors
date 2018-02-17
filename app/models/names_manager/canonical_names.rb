@@ -1094,6 +1094,7 @@ module NamesManager
     map 'Tyler Kiley',                "tyler\100kianta.com"
     map 'Tyler Kovacs',               "tyler.kovacs\100gmail.com"
     map 'Uģis Ozols',                 'Ugis Ozols'
+    map 'utilum',                     'oz'
     map 'Vasili Kachalko',            'dreamfall'
     map 'Victor Babenko',             'virusman'
     map 'Victor Jalencas',            "victor-ronr-trac\100carotena.net"
