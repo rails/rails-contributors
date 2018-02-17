@@ -3383,6 +3383,10 @@ module Credits
       assert_contributor_names '9fb5ee8', 'Lukas Rieder'
     end
 
+    test 'oz' do
+      assert_contributor_names '4d4db4c', 'utilum'
+    end
+
     test 'Pablo Ifrán' do
       assert_contributor_names 'c945da5', 'Pablo Ifrán'
     end
@@ -4641,10 +4645,6 @@ module Credits
 
     test 'Ulysses' do
       assert_contributor_names 'c6ea1d3', 'Nicholas Seckar'
-    end
-
-    test 'utilum' do
-      assert_contributor_names '4d4db4c', 'utilum'
     end
 
     test 'vanderhoop' do
