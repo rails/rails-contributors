@@ -1064,7 +1064,7 @@ module NamesManager
     map 'Tim Fletcher',               "twoggle\100gmail.com"
     map 'Tim Forbes',                 'leprasmurf'
     map 'Tim Lucas',                  "t.lucas\100toolmantim.com", 'toolmantim'
-    map 'Tim Masliuchenko',           "Tima Maslyuchenko"
+    map 'Tim Masliuchenko',           'Tima Maslyuchenko'
     map 'Tim Pope',                   'tpope', 'Time Pope', "rails\100tpope.info", 'pope'
     map 'Tim Trautmann',              "timct\100mac.com"
     map 'Titus Ramczykowski',         '_tiii'

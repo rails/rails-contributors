@@ -4499,7 +4499,7 @@ module Credits
       assert_contributor_names 'ff1b7e7', 'Kasper Timm Hansen'
     end
 
-    test 'Tim Masliuchenko' do
+    test 'Tima Maslyuchenko' do
       assert_contributor_names '633ea6a', 'Tim Masliuchenko'
     end
 
