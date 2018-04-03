@@ -4499,6 +4499,10 @@ module Credits
       assert_contributor_names 'ff1b7e7', 'Kasper Timm Hansen'
     end
 
+    test 'Tim Masliuchenko' do
+      assert_contributor_names '633ea6a', 'Tim Masliuchenko'
+    end
+
     test 'tinogomes' do
       assert_contributor_names '5121593', 'Celestino Gomes'
     end
