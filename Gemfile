@@ -16,7 +16,7 @@ group :development do
   gem 'byebug'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'capistrano', '~> 3.4',       require: false
+  gem 'capistrano', '~> 3.10',      require: false
   gem 'capistrano-rails', '~> 1.1', require: false
   gem 'capistrano-rvm', '0.1.1',    require: false
   gem 'capistrano3-puma', '~> 1.0', require: false

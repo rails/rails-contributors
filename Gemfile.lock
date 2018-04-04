@@ -194,7 +194,7 @@ PLATFORMS
 DEPENDENCIES
   actionpack-page_caching!
   byebug
-  capistrano (~> 3.4)
+  capistrano (~> 3.10)
   capistrano-rails (~> 1.1)
   capistrano-rvm (= 0.1.1)
   capistrano3-puma (~> 1.0)
