@@ -9,7 +9,7 @@ class ActiveSupport::TestCase
   fixtures :all
 
   def time_travel(&block)
-    Delorean.time_travel_to(TODAY, &block)
+    travel_to(TODAY, &block)
   end
 
   def read_fixture(name)
