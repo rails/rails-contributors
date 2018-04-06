@@ -1,12 +1,13 @@
 ruby '2.4.4'
 source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '~> 5.1.4'
 gem 'pg'
 gem 'rugged', '0.21.0'
 gem 'unf'
 gem 'turbolinks', '~> 5'
-gem 'actionpack-page_caching', git: 'https://github.com/rails/actionpack-page_caching.git', branch: 'master'
+gem 'actionpack-page_caching', github: 'rails/actionpack-page_caching', branch: 'master'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
