@@ -26,7 +26,6 @@ group :development do
 end
 
 group :test do
-  gem 'delorean'
   gem 'rails-controller-testing'
 end
 
