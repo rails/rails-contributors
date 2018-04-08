@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '~> 5.1.4'
 gem 'pg'
-gem 'rugged', '0.21.0'
+gem 'rugged', '0.27.0'
 gem 'unf'
 gem 'turbolinks', '~> 5'
 gem 'actionpack-page_caching', github: 'rails/actionpack-page_caching', branch: 'master'
