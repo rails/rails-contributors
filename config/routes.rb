@@ -1,4 +1,4 @@
-RailsContributors::Application.routes.draw do
+Rails.application.routes.draw do
   get 'contributors/in-time-window/:time_window' => 'contributors#in_time_window', as: 'contributors_in_time_window'
 
   resources :contributors, only: 'index' do
