@@ -12,3 +12,4 @@ development:
 test:
   <<: *defaults
   database: rails_contributors_test
+  url: <%= ENV["DATABASE_URL"] %>
