@@ -13,4 +13,3 @@ RUN apt-get update -qq && \
 WORKDIR /rails-contributors
 COPY Gemfile* ./
 RUN bundle install -j3
-COPY . /rails-contributors
