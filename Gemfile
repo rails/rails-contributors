@@ -17,6 +17,13 @@ group :development do
   gem 'byebug'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+end
+
+group :test do
+  gem 'rails-controller-testing'
+end
+
+group :deployment do
   gem 'capistrano', '~> 3.10',      require: false
   gem 'capistrano-rails', '~> 1.1', require: false
   gem 'capistrano-rvm', '0.1.1',    require: false
@@ -24,10 +31,6 @@ group :development do
   gem 'rbnacl', '>= 3.2', '< 5.0'
   gem 'rbnacl-libsodium'
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
-end
-
-group :test do
-  gem 'rails-controller-testing'
 end
 
 group :production do
