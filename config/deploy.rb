@@ -13,5 +13,3 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/system public/ass
 set :keep_releases, 5
 
 set :bundle_without, %w{development test deployment}.join(' ')
-
-set :puma_workers, 1
