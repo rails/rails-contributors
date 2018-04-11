@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '~> 5.1.4'
 gem 'pg'
+gem 'puma', '~> 3.7'
 gem 'rugged', '0.27.0'
 gem 'unf'
 gem 'turbolinks', '~> 5'
@@ -31,8 +32,4 @@ group :deployment do
   gem 'rbnacl', '>= 3.2', '< 5.0'
   gem 'rbnacl-libsodium'
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
-end
-
-group :production do
-  gem 'puma', '~> 3.7'
 end
