@@ -63,6 +63,8 @@ private
     ichiro        |
     discobot      |
     bingbot       |
+    FAST          |
+    MauiBot       |
     yrspider
   }xi
   def trace_user_agent
