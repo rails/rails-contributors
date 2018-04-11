@@ -67,8 +67,8 @@ GEM
     capistrano-rvm (0.1.1)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano3-puma (2.0.0)
-      capistrano (~> 3.5)
+    capistrano3-puma (3.1.1)
+      capistrano (~> 3.7)
       capistrano-bundler
       puma (~> 3.4)
     coffee-rails (4.2.2)
@@ -201,7 +201,7 @@ DEPENDENCIES
   capistrano (~> 3.10)
   capistrano-rails (~> 1.1)
   capistrano-rvm (= 0.1.1)
-  capistrano3-puma (~> 2.0)
+  capistrano3-puma (~> 3.1)
   coffee-rails (~> 4.2.1)
   listen (>= 3.0.5, < 3.2)
   pg
