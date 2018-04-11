@@ -31,8 +31,12 @@ group :deployment do
   gem 'capistrano', '~> 3.10',      require: false
   gem 'capistrano-rails', '~> 1.1', require: false
   gem 'capistrano-rvm', '0.1.1',    require: false
-  gem 'capistrano3-puma', '~> 3.1', require: false
+  gem 'capistrano3-puma', '~> 1.0', require: false
   gem 'rbnacl', '>= 3.2', '< 5.0'
   gem 'rbnacl-libsodium'
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
+end
+
+group :production do
+  gem 'puma', '~> 3.7'
 end
