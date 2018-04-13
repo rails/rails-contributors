@@ -65,7 +65,8 @@ private
     bingbot       |
     FAST          |
     MauiBot       |
-    yrspider
+    yrspider      |
+    SemrushBot
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP
