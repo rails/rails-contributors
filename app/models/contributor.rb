@@ -1,15 +1,14 @@
 class Contributor < ApplicationRecord
-  has_many :contributions, :dependent => :destroy
-  has_many :commits, :through => :contributions
+  has_many :contributions, dependent: :destroy
+  has_many :commits, through: :contributions
 
-  validates :name,   :presence => true, :uniqueness => true
-  validates :url_id, :presence => true, :uniqueness => true
+  validates :name,   presence: true, uniqueness: true
+  validates :url_id, presence: true, uniqueness: true
 
   nfc :name
 
   scope :with_no_commits, -> {
-    joins('LEFT OUTER JOIN contributions ON contributors.id = contributions.contributor_id').
-    where('contributions.commit_id' => nil)
+    left_joins(:contributions).where(contributions: { commit_id: nil })
   }
 
   def self.all_with_ncommits

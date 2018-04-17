@@ -18,6 +18,9 @@ $ sudo apt-get install cmake pkg-config
 
 # deploys trigger a webhook
 $ sudo apt-get install curl
+
+# Cryptgraphy library (for deployment only)
+$ sudo apt-get install libsodium-dev
 ```
 
 ## Application setup

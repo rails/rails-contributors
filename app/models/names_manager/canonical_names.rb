@@ -162,7 +162,7 @@ module NamesManager
     map 'Alexey Zatsepin',            'alexey', 'Alexey'
     map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
     map 'Aliaxandr Rahalevich',       'saksmlz', 'saks'
-    map 'Alvaro Pereyra',             'Xenda'
+    map 'Alessandra Pereyra',         'Xenda'
     map 'Amit Kumar Suroliya',        'amitkumarsuroliya'
     map 'Anand Muthukrishnan',        'Anand'
     map 'Anatoli Makarevich',         'Anatoly Makarevich'

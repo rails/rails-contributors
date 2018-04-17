@@ -4800,7 +4800,7 @@ module Credits
     end
 
     test 'Xenda' do
-      assert_contributor_names 'fabd2ce', 'Alvaro Pereyra'
+      assert_contributor_names 'fabd2ce', 'Alessandra Pereyra'
     end
 
     test "xyctka\100gmail.com" do

@@ -62,7 +62,10 @@ private
     ichiro        |
     discobot      |
     bingbot       |
-    yrspider
+    FAST          |
+    MauiBot       |
+    yrspider      |
+    SemrushBot
   }xi
   def trace_user_agent
     if request.user_agent =~ BOTS_REGEXP

@@ -1,0 +1,54 @@
+version: 2
+
+jobs:
+  build:
+    parallelism: 3
+    working_directory: ~/rails_contributors
+    docker:
+      - image: circleci/ruby:2.4-node
+        environment:
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          PGHOST: 127.0.0.1
+          PGUSER: postgres
+          RAILS_ENV: test
+      - image: circleci/postgres:9.5-alpine
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_DB: rails_contributors_test
+          POSTGRES_PASSWORD: ""
+    steps:
+      - run:
+          name: Install dependencies
+          command: sudo apt-get install -y git cmake pkg-config curl
+      - checkout
+      - run:
+          name: Cloning rails.git
+          command: git clone --mirror https://github.com/rails/rails.git
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - restore_cache:
+          keys:
+            - v1-bundle-{{ checksum "Gemfile.lock" }}
+            - v1-bundle-
+      - run:
+          name: Bundle install
+          command: bundle check || bundle install
+      - save_cache:
+          key: v1-bundle-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - run:
+          name: Coping database.yml
+          command: cp config/database.yml.example config/database.yml
+      - run:
+          name: Wait for DB
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
+          name: Database setup
+          command: bin/rails db:schema:load --trace
+      - run:
+          name: Run test
+          command: bin/rails test
