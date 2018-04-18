@@ -3,10 +3,10 @@ require 'test_helper'
 class CommitsControllerTest < ActionController::TestCase
   def test_index_for_releases
     cases = [
-      [:v3_2_0,  [:commit_6c65676, :commit_5b90635]],
-      [:v2_3_2,  []],
-      [:v0_14_4, [:commit_e0ef631]],
-    ].map {|a, b| [releases(a), Array(commits(*b))]}
+      [releases(:v3_2_0),  Array(commits(:commit_6c65676, :commit_5b90635))],
+      [releases(:v2_3_2),  []],
+      [releases(:v0_14_4), Array(commits(:commit_e0ef631))],
+    ]
 
     cases.each do |release, commits|
       get :index, params: { release_id: release }
@@ -45,31 +45,31 @@ class CommitsControllerTest < ActionController::TestCase
 
     cases = {
       contributors(:david) => [
-        ['all-time',  [:commit_339e4e8, :commit_e0ef631]],
+        ['all-time',  Array(commits(:commit_339e4e8, :commit_e0ef631))],
         ['today',     []],
         ['this-week', []],
-        ['this-year', :commit_339e4e8],
+        ['this-year', Array(commits(:commit_339e4e8))],
         [since,       []],
-        [date_range,  :commit_339e4e8],
-      ].map {|a, b| [a, Array(commits(*b))]},
+        [date_range,  Array(commits(:commit_339e4e8))],
+      ],
 
       contributors(:jeremy) => [
-        ['all-time',  [:commit_b821094, :commit_7cdfd91, :commit_5b90635]],
-        ['today',     :commit_b821094],
-        ['this-week', :commit_b821094],
-        ['this-year', [:commit_b821094, :commit_7cdfd91, :commit_5b90635]],
-        [since,       :commit_b821094],
-        [date_range,  :commit_b821094],
-      ].map {|a, b| [a, Array(commits(*b))]},
+        ['all-time',  Array(commits(:commit_b821094, :commit_7cdfd91, :commit_5b90635))],
+        ['today',     Array(commits(:commit_b821094))],
+        ['this-week', Array(commits(:commit_b821094))],
+        ['this-year', Array(commits(:commit_b821094, :commit_7cdfd91, :commit_5b90635))],
+        [since,       Array(commits(:commit_b821094))],
+        [date_range,  Array(commits(:commit_b821094))],
+      ],
 
       contributors(:vijay) => [
-        ['all-time',  :commit_6c65676],
+        ['all-time',  Array(commits(:commit_6c65676))],
         ['today',     []],
         ['this-week', []],
-        ['this-year', :commit_6c65676],
+        ['this-year', Array(commits(:commit_6c65676))],
         [since,       []],
         [date_range,  []],
-      ].map {|a, b| [a, Array(commits(*b))]},
+      ],
     }
 
     time_travel do
