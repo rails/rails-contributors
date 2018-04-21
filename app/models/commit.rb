@@ -4,29 +4,30 @@ class Commit < ApplicationRecord
   belongs_to :release, optional: true
 
   scope :with_no_contributors, -> {
-    select('commits.*'). # otherwise we get read-only records
-    joins('LEFT OUTER JOIN contributions ON commits.id = contributions.commit_id').
-    where('contributions.commit_id' => nil)
+    # otherwise we get read-only records
+    select('commits.*').
+    left_joins(:contributions).
+    where(contributions: { commit_id: nil })
   }
 
   scope :in_time_window, ->(since, upto) {
     if upto
-      where(['commits.committer_date BETWEEN ? AND ?', since, upto])
+      where(committer_date: since..upto)
     else
-      where(['commits.committer_date >= ?', since])
+      where('commits.committer_date >= ?', since)
     end
   }
 
   scope :release, ->(release) {
-    where('commits.release_id' => release.id)
+    where(release_id: release.id)
   }
 
   scope :edge, -> {
-    where('commits.release_id' => nil)
+    where(release_id: nil)
   }
 
   scope :sorted, -> {
-    order('commits.committer_date DESC')
+    order(committer_date: :desc)
   }
 
   validates :sha1, presence: true, uniqueness: true
