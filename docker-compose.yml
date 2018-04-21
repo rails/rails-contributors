@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    image: rails-contributors
+    build: .
+    command: rails s -p 3000 -b 0.0.0.0
+    environment:
+      DATABASE_URL: postgres://postgres:@db:5432
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/rails-contributors
+  db:
+    image: postgres
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+
+volumes:
+  postgres:
