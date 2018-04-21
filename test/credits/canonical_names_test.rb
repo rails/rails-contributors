@@ -2956,7 +2956,7 @@ module Credits
     end
 
     test 'mhw' do
-      assert_contributor_names 'c7df5bd', 'Mark H. Wilkinson'
+      assert_contributor_names 'c7df5bd6', 'Mark H. Wilkinson'
     end
 
     test 'mica eked' do
