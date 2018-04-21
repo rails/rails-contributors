@@ -1,15 +1,23 @@
 FROM ruby:2.4
-ENV LANG=C.UTF-8
-RUN apt-get update -qq && \
-    apt-get install -y --no-install-recommends \
-      postgresql-client \
-      nodejs \
-      cmake \
-      pkg-config \
-      curl \
-      libsodium-dev && \
-    gem update --system && \
-    gem install bundler
+
+# LANG as recommended in the Encoding section of https://hub.docker.com/_/ruby/.
+ENV LANG C.UTF-8
+ENV PS1 '\w\$ '
+ENV BUNDLE_JOBS 4
+
+# git is used by the application itself.
+# cmake is needed to compile rugged.
+# tzdata is needed by the TZinfo gem.
+RUN apk --no-cache add --update \
+  build-base \
+  bash \
+  git \
+  postgresql-client \
+  postgresql-dev \
+  cmake \
+  tzdata \
+  nodejs
+
+RUN gem update --system && gem install bundler -N
+
 WORKDIR /rails-contributors
-COPY Gemfile* ./
-RUN bundle install -j3

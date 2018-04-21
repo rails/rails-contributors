@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ ! -d rails.git ]]; then
+  echo Mirroring the Rails repository, takes a while, please wait...
+  git clone --mirror https://github.com/rails/rails.git
+fi
+
+if [[ $1 = 'all' ]]; then
+  exec docker/rails runner "Repo.sync(rebuild_all: true)"
+else
+  exec docker/rails runner Repo.sync
+fi

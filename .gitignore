@@ -1,5 +1,4 @@
 .byebug_history
-/config/database.yml
 /log
 /tmp
 /rails.git

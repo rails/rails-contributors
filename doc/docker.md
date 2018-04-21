@@ -1,45 +1,77 @@
 # Development with Docker
 
-## Boot containers
+## Bootstrap project
+
+If you just cloned the project:
 
 ```
-$ docker-compose up -d --build
+$ docker-compose up -d
+$ docker/exec bundle install
+$ docker/rails db:setup
+$ docker/sync
 ```
 
-## Application setup
+The last command is going to clone the Rails repository and populate the database, it takes several minutes.
+
+
+## Development
+
+To develop you need to start the services:
 
 ```
-$ docker-compose exec app bin/setup
+docker-compose start
 ```
 
-## Developing locally
-
-To populate an empty database:
+When done, stop them:
 
 ```
-$ docker-compose exec app rails runner Repo.sync
+docker-compose stop
 ```
 
-If you modify the name mappings, hard-coded authors, etc., that task also
-updates the credits and it does so changing as little as possible.
+A number of convenience scripts are located in the `docker` directory, all of them operate in the main `app` container:
 
-Sometimes you may need to rebuild the assignments, for example if the actual
-heuristics change. To do that please execute
+| Command       | Description                |
+| ------------- | -------------------------- |
+| docker/bash   | Gets a Bash shell          |
+| docker/psql   | Gets a `psql` shell        |
+| docker/rails  | Runs `bin/rails`           |
+| docker/server | Launches Puma in port 3000 |
+| docker/sync   | Syncs the database         |
 
-```
-$ docker-compose exec app rails runner "Repo.sync(rebuild_all: true)"
-```
-
-## Test suite
-
-To run the test suite execute
+The commands `docker/server` and `docker/psql` are convenience wrappers around `docker/rails`. In general `docker/rails` is the main command:
 
 ```
-$ docker-compose exec app rails test
+$ docker/rails test
+$ docker/rails console
+$ docker/rails db:migrate
+$ docker/rails runner 'p Commit.count'
+$ ...
 ```
 
-## Resume containers
+If you modify the name mappings, hard-coded authors, etc., `docker/sync`
+updates the credits and it does so changing as little as possible. The command also accepts an optional argument `all`, which forces the recomputation of all assignments. This is handy when you've changed the heuristics, and it takes less than a full database rebuild, since it does not reimport the commits themselves (which is costly).
+
+## Rails repository mirror
+
+The application assumes `rails.git` is present in the root directory with a mirror of the repository:
 
 ```
-$ docker-compose down
+git clone --mirror https://github.com/rails/rails.git
 ```
+
+That clone is performed by `docker/sync` automatically, but it does not update itself. To do so, please run
+
+```
+$ cd rails.git
+$ git fetch
+```
+
+whenever you need to get the most recent commits.
+
+## Database persistence
+
+The database is stored in a volume and persists even if you take the containers down with `docker-compose down`. If you want to remove the volume and start from scratch please pass `-v` to the command.
+
+## Production is not affected
+
+The production server does not run Docker, you can safely tweak the Docker setup without fear of breaking production.

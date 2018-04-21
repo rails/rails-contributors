@@ -1,7 +1,6 @@
 defaults: &defaults
   adapter: postgresql
-  encoding: unicode
-  socket: "/var/run/postgresql/.s.PGSQL.5432"
+  url: <%= ENV['DATABASE_URL'] %>
   pool: 5
   min_messages: error
 
@@ -12,4 +11,3 @@ development:
 test:
   <<: *defaults
   database: rails_contributors_test
-  url: <%= ENV["DATABASE_URL"] %>
