@@ -4,8 +4,7 @@ class Commit < ApplicationRecord
   belongs_to :release, optional: true
 
   scope :with_no_contributors, -> {
-    # otherwise we get read-only records
-    select('commits.*').
+    select('commits.*'). # otherwise we get read-only records
     left_joins(:contributions).
     where(contributions: { commit_id: nil })
   }
