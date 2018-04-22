@@ -13,7 +13,6 @@ $ docker/sync
 
 The last command is going to clone the Rails repository and populate the database, it takes several minutes.
 
-
 ## Development
 
 To develop you need to start the services:
