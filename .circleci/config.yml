@@ -10,14 +10,13 @@ jobs:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
-          PGHOST: 127.0.0.1
-          PGUSER: postgres
+          DATABASE_URL: postgres://postgres:postgres@localhost
           RAILS_ENV: test
       - image: circleci/postgres:9.5-alpine
         environment:
           POSTGRES_USER: postgres
           POSTGRES_DB: rails_contributors_test
-          POSTGRES_PASSWORD: ""
+          POSTGRES_PASSWORD: postgres
     steps:
       - run:
           name: Install dependencies
@@ -40,9 +39,6 @@ jobs:
           key: v1-bundle-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-      - run:
-          name: Coping database.yml
-          command: cp config/database.yml.example config/database.yml
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
