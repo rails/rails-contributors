@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    command: /bin/bash -c 'while true; do sleep 60; done'
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+    volumes:
+      - .:/rails-contributors
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db
+  db:
+    image: postgres:9.3-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      # A subdirectory, as recommended in https://hub.docker.com/_/postgres/.
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - pgdata:/var/lib/postgresql/data/pgdata
+
+volumes:
+  pgdata:
