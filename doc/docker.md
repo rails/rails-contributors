@@ -31,7 +31,7 @@ A number of convenience scripts are located in the `docker` directory, all of th
 
 | Command         | Description                |
 | --------------- | -------------------------- |
-| `docker/bash    | Gets a Bash shell          |
+| `docker/bash`   | Gets a Bash shell          |
 | `docker/psql`   | Gets a `psql` shell        |
 | `docker/rails`  | Runs `bin/rails`           |
 | `docker/server` | Launches Puma in port 3000 |
