@@ -10,6 +10,7 @@ services:
       - db
     volumes:
       - .:/rails-contributors
+      - ~/.ssh:/root/.ssh
     environment:
       DATABASE_URL: postgres://postgres:postgres@db
   db:

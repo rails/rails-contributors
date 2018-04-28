@@ -36,6 +36,7 @@ A number of convenience scripts are located in the `docker` directory, all of th
 | `docker/rails`  | Runs `bin/rails`           |
 | `docker/server` | Launches Puma in port 3000 |
 | `docker/sync`   | Syncs the database         |
+| `docker/deploy` | Deploys the application    |
 
 The commands `docker/server` and `docker/psql` are convenience wrappers around `docker/rails`. In general `docker/rails` is the main command:
 
