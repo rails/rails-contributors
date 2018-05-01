@@ -1,4 +1,4 @@
-FROM ruby:2.4-alpine
+FROM ruby:2.5-alpine
 
 # LANG as recommended in the Encoding section of https://hub.docker.com/_/ruby/.
 ENV LANG C.UTF-8
