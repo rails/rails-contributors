@@ -1,5 +1,7 @@
+DOCS_SERVER_IP = '138.197.6.175'
+
 set :ssh_options, port: 987
-server '138.197.6.175', user: 'rails', roles: %w(web app db)
+server DOCS_SERVER_IP, user: 'rails', roles: %w(web app db)
 
 set :puma_bind, 'unix:/tmp/rails-contributors.sock'
 set :puma_preload_app, false
@@ -18,7 +20,7 @@ end
 
 after 'deploy:finished', :trigger_webhook do
   run_locally do
-    execute 'curl -X POST http://contributors.rubyonrails.org:8080/rails-master-hook'
+    execute "curl -X POST http://#{DOCS_SERVER_IP}:9292/rails-master-hook"
   end
 end
 
