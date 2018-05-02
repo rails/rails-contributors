@@ -1,4 +1,4 @@
-# ln -s /home/rails/rails-contributors/config/logrotate /etc/logrotate.d/rails-contributors
+# sudo ln -s /home/rails/rails-contributors/config/logrotate /etc/logrotate.d/rails-contributors
 #
 # logrotate is not a daemon, but a cron job, there is nothing to restart.
 
