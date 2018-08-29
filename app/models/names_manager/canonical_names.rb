@@ -1048,6 +1048,7 @@ module NamesManager
     map 'Tekin Suleyman',             'Tekin'
     map 'Teng Siong Ong',             'siong1987'
     map 'Thiago Augusto',             'thiagoaugusto'
+    map 'Thibaut Leneveu',            'tleneveu'
     map 'Thierry Zires',              'zires'
     map 'Thijs van der Vossen',       'thijsv', "thijs\100vandervossen.net", "thijs\100fngtps.com"
     map 'Thillai Arasu',              'Jude Arasu', 'JudeArasu', 'genlinux'
