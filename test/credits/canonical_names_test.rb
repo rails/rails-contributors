@@ -4507,6 +4507,10 @@ module Credits
       assert_contributor_names '5121593', 'Celestino Gomes'
     end
 
+    test 'tleneveu' do
+      assert_contributor_names '3d22686', 'Thibaut Leneveu'
+    end
+
     test 'tmacedo' do
       assert_contributor_names '1370d15', 'Tiago Macedo'
     end
