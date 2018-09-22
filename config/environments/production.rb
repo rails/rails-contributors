@@ -80,7 +80,4 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-
-  # Directory where cached pages are stored.
-  config.action_controller.page_cache_directory = "#{Rails.root}/public"
 end
