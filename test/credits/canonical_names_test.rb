@@ -4167,6 +4167,10 @@ module Credits
       assert_contributor_names '5df9d00', 'Teng Siong Ong'
     end
 
+    test 'sjain1107' do
+      assert_contributor_names 'c351a82', 'Sakshi Jain'
+    end
+
     test 'sjgman9' do
       assert_contributor_names 'fade31a', 'Sam Granieri'
     end
