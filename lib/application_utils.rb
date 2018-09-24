@@ -27,22 +27,20 @@ module ApplicationUtils
 
   # Expires the page caches in the public directory.
   #
-  # We do that in two steps: first we move root dirs into a new directory, and
-  # then we remove those ones. It is done that way because if we rm -rf directly
-  # and at the same time requests come and create new cache files a black hole
-  # can be created and handling that is beyond the legendary robustness of this
-  # website.
+  # We move the cache directory first out to a temporary place, and then
+  # recursively delete that one. It is done that way because if we rm -rf
+  # directly and at the same time requests come and create new cache files a
+  # black hole can be created and handling that is beyond the legendary
+  # robustness of this website.
   #
   # On the other hand, moving is atomic. Atomic is good.
   def self.expire_cache
-    Dir.chdir("#{Rails.root}/public") do
-      %w(index.html contributors.html contributors releases.html releases edge faq.html).each do |name|
-        if File.exists?(name)
-          expired_cache = "expired_#{name}.#{Time.now.to_f}"
-          FileUtils.mv(name, expired_cache, force: true)
-          FileUtils.rm_rf(expired_cache)
-        end
-      end
+    cache_dir = Rails.application.config.action_controller.page_cache_directory
+
+    if Dir.exists?(cache_dir)
+      expired_cache = "#{tmpdir}/expired_cache.#{Time.now.to_f}"
+      FileUtils.mv(cache_dir, expired_cache, force: true)
+      FileUtils.rm_rf(expired_cache)
     end
   end
 end
