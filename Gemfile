@@ -9,7 +9,7 @@ gem 'puma', '~> 3.7'
 gem 'rugged', '0.27.0'
 gem 'unf'
 gem 'turbolinks', '~> 5'
-gem 'actionpack-page_caching', github: 'rails/actionpack-page_caching', branch: 'master'
+gem 'actionpack-page_caching', '~> 1.1'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
