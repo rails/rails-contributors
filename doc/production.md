@@ -17,7 +17,7 @@ $ sudo apt-get install postgresql postgresql-contrib libpq-dev
 $ sudo apt-get install cmake pkg-config
 ```
 
-## Rails respository mirror
+## Rails repository mirror
 
 ```
 git clone --mirror https://github.com/rails/rails.git
