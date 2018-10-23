@@ -148,6 +148,10 @@ module Credits
       assert_contributor_names 'dfd0bdf', 'Alan Francis'
     end
 
+    test 'Alberto Almagro Sotelo' do
+      assert_contributor_names '5c62bd5', 'Gannon McGibbon', 'Alberto Almagro'
+    end
+
     test 'Aleksey Kondratenko' do
       assert_contributor_names 'a9113b8', 'Aliaksey Kandratsenka'
     end
