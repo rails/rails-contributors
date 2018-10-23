@@ -144,6 +144,7 @@ module NamesManager
     map 'Akshay Vishnoi',             'Mr A'
     map 'Alan Francis',               'alancfrancis', 'acf',"alancfrancis\100gmail.com"
     map 'Albert Lash',                'docunext'
+    map 'Alberto Almagro',            'Alberto Almagro Sotelo'
     map 'Alex Chaffee',               'alexch'
     map 'Alex Mishyn',                'amishyn'
     map 'Alex Pooley',                "alex\100msgpad.com"
