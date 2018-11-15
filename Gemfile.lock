@@ -78,6 +78,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    ed25519 (1.2.4)
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -205,6 +206,7 @@ DEPENDENCIES
   capistrano-rvm (= 0.1.1)
   capistrano3-puma (~> 3.1)
   coffee-rails (~> 4.2.1)
+  ed25519
   listen (>= 3.0.5, < 3.2)
   pg
   puma (~> 3.7)
