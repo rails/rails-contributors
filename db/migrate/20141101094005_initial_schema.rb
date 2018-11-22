@@ -1,4 +1,4 @@
-class InitialSchema < ActiveRecord::Migration
+class InitialSchema < ActiveRecord::Migration[4.2]
   def up
     create_table :commits do |t|
       t.string   :sha1,            null: false

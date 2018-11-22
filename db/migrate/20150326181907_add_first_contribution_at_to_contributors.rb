@@ -1,7 +1,7 @@
-class AddFirstContributionAtToContributors < ActiveRecord::Migration
+class AddFirstContributionAtToContributors < ActiveRecord::Migration[4.2]
   def up
     add_column :contributors, :first_contribution_at, :datetime
-    Contributor.fill_missing_first_contribution_timestamps
+    Contributor.try(:fill_missing_first_contribution_timestamps)
   end
 
   def down
