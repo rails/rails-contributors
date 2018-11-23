@@ -23,7 +23,7 @@ module Credits
     #
     test 'captures credit in an isolated line' do
       # First line in body.
-      assert_contributor_names '9e9793b440c', 'Rafael Mendonça França', 'Yves Senn'
+      assert_contributor_names '9e9793b', 'Rafael Mendonça França', 'Yves Senn'
 
       # Line in the middle.
       assert_contributor_names '2a67e12', 'Matthew Draper', 'Yves Senn'

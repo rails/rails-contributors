@@ -1,7 +1,6 @@
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
-require_relative 'support/repo_creator'
 require_relative 'support/assert_contributor_names'
 
 class ActiveSupport::TestCase

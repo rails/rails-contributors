@@ -13,6 +13,23 @@ $ docker/sync
 
 The last command is going to clone the Rails repository and populate the database, it takes several minutes.
 
+## Rails repository mirror
+
+The application assumes `rails.git` is present in the root directory with a mirror of the repository:
+
+```
+git clone --mirror https://github.com/rails/rails.git
+```
+
+That clone is performed by `docker/sync` automatically, but it does not update itself. To do so, please run
+
+```
+$ cd rails.git
+$ git fetch
+```
+
+whenever you need to get the most recent commits.
+
 ## Development
 
 To develop you need to start the services:
@@ -50,23 +67,6 @@ $ ...
 
 If you modify the name mappings, hard-coded authors, etc., `docker/sync`
 updates the credits and it does so changing as little as possible. The command also accepts an optional argument `all`, which forces the recomputation of all assignments. This is handy when you've changed the heuristics, and it takes less than a full database rebuild, since it does not reimport the commits themselves (which is costly).
-
-## Rails repository mirror
-
-The application assumes `rails.git` is present in the root directory with a mirror of the repository:
-
-```
-git clone --mirror https://github.com/rails/rails.git
-```
-
-That clone is performed by `docker/sync` automatically, but it does not update itself. To do so, please run
-
-```
-$ cd rails.git
-$ git fetch
-```
-
-whenever you need to get the most recent commits.
 
 ## Database persistence
 
