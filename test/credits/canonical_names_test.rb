@@ -1128,7 +1128,7 @@ module Credits
     end
 
     test 'dfens' do
-      assert_contributor_names 'ab9140f', 'Paweł Mikołajewski'
+      assert_contributor_names 'ab9140ff027', 'Paweł Mikołajewski'
     end
 
     test 'dharmatech' do
@@ -1201,10 +1201,6 @@ module Credits
 
     test "doppler\100gmail.com" do
       assert_contributor_names 'f4f7e75', 'David Rose'
-    end
-
-    test "dpiddy\100gmail.com" do
-      assert_contributor_names 'd9c0a37', 'Dan Peterson'
     end
 
     test 'dpmehta02' do
@@ -2215,10 +2211,6 @@ module Credits
       assert_contributor_names 'edb4208', 'Josh Starcher'
     end
 
-    test "joshknowles\100gmail.com" do
-      assert_contributor_names '7d01005', 'Josh Knowles'
-    end
-
     test 'joshpeek' do
       assert_contributor_names 'c57c721', 'Josh Peek'
     end
@@ -2688,7 +2680,7 @@ module Credits
     end
 
     test 'Lukasz Strzalkowski' do
-      assert_contributor_names 'f9b6b86', 'Łukasz Strzałkowski'
+      assert_contributor_names 'f9b6b865e60', 'Łukasz Strzałkowski'
     end
 
     test 'lukeludwig' do
@@ -3252,7 +3244,7 @@ module Credits
     end
 
     test "nils\100alumni.rice.edu" do
-      assert_contributor_names '64b7c5f', 'Nils Jonsson'
+      assert_contributor_names '64b7c5fbd19', 'Nils Jonsson'
     end
 
     test 'nilsga' do
@@ -3960,7 +3952,7 @@ module Credits
     end
 
     test "ryand-ruby\100zenspider.com" do
-      assert_contributor_names 'a2f0ae7', 'Ryan Davis (zenspider)'
+      assert_contributor_names '479c7cacd', 'Ryan Davis (zenspider)'
     end
 
     test 'ryepup' do
