@@ -1319,6 +1319,10 @@ module Credits
       assert_contributor_names '7caceee', 'Eileen M. Uchitelle'
     end
 
+    test 'Eileen Uchitelle' do
+      assert_contributor_names 'aec635d', 'Eileen M. Uchitelle'
+    end
+
     test 'ejy' do
       assert_contributor_names '740e531', 'Elliot Yates'
     end
