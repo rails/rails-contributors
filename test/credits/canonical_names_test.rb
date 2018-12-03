@@ -3811,6 +3811,10 @@ module Credits
       assert_contributor_names 'd1202cf', 'Rizwan Reza'
     end
 
+    test 'rmacklin' do
+      assert_contributor_names 'aa1ba9c', 'Richard Macklin'
+    end
+
     test 'rmm5t' do
       assert_contributor_names 'd761ac4', 'Ryan McGeary'
     end

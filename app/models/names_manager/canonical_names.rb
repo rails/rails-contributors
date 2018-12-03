@@ -919,6 +919,7 @@ module NamesManager
     map "Remco van 't Veer",          'remvee'
     map 'Rémy Coutable',              'rymai', 'remy', "rymai\100rymai.com", "remy.coutable\100gmail.com"
     map 'Rich Collins',               'richcollins', "richcollins\100gmail.com"
+    map 'Richard Macklin',            'rmacklin'
     map 'Richard Schneeman',          'Schneems', 'schneems', '@schneems'
     map 'Rick Bradley',               "rick\100rickbradley.com"
     map 'Rick DeNatale',              'RubyRedRick'
