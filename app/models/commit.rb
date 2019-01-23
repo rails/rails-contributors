@@ -185,7 +185,7 @@ protected
   end
 
   def cache_diff(repo)
-    update_attributes(diff: repo.diff(sha1).force_encoding('UTF-8'))
+    update(diff: repo.diff(sha1).force_encoding('UTF-8'))
   end
 
   # Extracts any changelog entry for this commit. This is done by diffing with

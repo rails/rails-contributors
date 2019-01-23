@@ -1,4 +1,4 @@
-FROM ruby:2.5-alpine
+FROM ruby:2.5.3-alpine3.7
 
 # LANG as recommended in the Encoding section of https://hub.docker.com/_/ruby/.
 ENV LANG C.UTF-8
@@ -17,11 +17,13 @@ RUN apk --no-cache add --update \
   cmake \
   curl \
   git \
+  vim \
   postgresql-client \
   postgresql-dev \
   tzdata \
-  nodejs
+  nodejs \
+  yarn
 
-RUN gem update --system && gem install bundler -N
+RUN gem update --system
 
 WORKDIR /rails-contributors
