@@ -1,3 +1,9 @@
 #!/bin/bash
 
-exec docker/rails server -b 0.0.0.0
+if [[ $1 = 'production' ]]; then
+  docker/rails assets:precompile
+  docker-compose exec -e RAILS_SERVE_STATIC_FILES=1 app \
+    bin/rails server -b 0.0.0.0 -e production
+else
+  docker/rails server -b 0.0.0.0
+fi
