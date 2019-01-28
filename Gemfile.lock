@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/fxn/zeitwerk.git
-  revision: 85968ca1ee8a2baf391d6a14b4cf907ba9a6f533
+  revision: 95b3f389f4a9f35b38e9fed4c00b9c24b4032dfd
   branch: master
   specs:
     zeitwerk (1.0.0.beta2)
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 3c59ec0643d85ec6d646e1ed01492147be7bbb60
+  revision: 921e574ae6e1dc25c2db6e0f6d326a2950241762
   branch: fxn/zeitwerk
   specs:
     actioncable (6.0.0.beta1)
