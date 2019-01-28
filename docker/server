@@ -1,9 +1,10 @@
 #!/bin/bash
 
-if [[ $1 = 'production' ]]; then
-  docker/rails assets:precompile
+if [[ $1 = 'staging' ]]; then
+  docker-compose exec -e RAILS_ENV=staging app \
+    bin/rails assets:precompile
   docker-compose exec -e RAILS_SERVE_STATIC_FILES=1 app \
-    bin/rails server -b 0.0.0.0 -e production
+    bin/rails server -b 0.0.0.0 -e staging
 else
   docker/rails server -b 0.0.0.0
 fi

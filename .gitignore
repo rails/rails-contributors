@@ -3,3 +3,5 @@
 /tmp
 /rails.git
 config/master.key
+public/assets
+public/cache

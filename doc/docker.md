@@ -65,6 +65,8 @@ $ docker/rails runner 'p Commit.count'
 $ ...
 ```
 
+The command `docker/server staging` runs the application in `staging` mode. That is a production-like environment (`config/environments/staging.rb` is a symlink to `config/environments/production.rb`), but it uses the development database and serves static files. If there are changes that act differently in `development` and `production`, this execution mode may be useful for checking things up before deployment.
+
 If you modify the name mappings, hard-coded authors, etc., `docker/sync`
 updates the credits and it does so changing as little as possible. The command also accepts an optional argument `all`, which forces the recomputation of all assignments. This is handy when you've changed the heuristics, and it takes less than a full database rebuild, since it does not reimport the commits themselves (which is costly).
 

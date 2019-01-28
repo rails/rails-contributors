@@ -11,3 +11,7 @@ development:
 test:
   <<: *defaults
   database: rails_contributors_test
+
+staging:
+  <<: *defaults
+  database: rails_contributors_development
