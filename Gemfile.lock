@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 18676a824a99a4306064d98288ca6faa07bcd39b
+  revision: c07f0282e25e8487ff51be83d61e24b9e6ad75d3
   branch: fxn/zeitwerk
   specs:
     actioncable (6.0.0.beta1)
