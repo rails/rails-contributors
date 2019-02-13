@@ -1,6 +1,8 @@
 #!/bin/bash
 
 if [[ $1 = 'staging' ]]; then
+  docker-compose exec app \
+    rm -rf tmp/cache
   docker-compose exec -e RAILS_ENV=staging app \
     bin/rails assets:precompile
   docker-compose exec -e RAILS_SERVE_STATIC_FILES=1 app \
