@@ -1,14 +1,6 @@
 GIT
-  remote: https://github.com/fxn/zeitwerk.git
-  revision: 95b3f389f4a9f35b38e9fed4c00b9c24b4032dfd
-  branch: master
-  specs:
-    zeitwerk (1.0.0.beta2)
-
-GIT
   remote: https://github.com/rails/rails.git
-  revision: c07f0282e25e8487ff51be83d61e24b9e6ad75d3
-  branch: fxn/zeitwerk
+  revision: 2488901da8a4d896003254869a378f0c1b4ed3f2
   specs:
     actioncable (6.0.0.beta1)
       actionpack (= 6.0.0.beta1)
@@ -218,6 +210,7 @@ GEM
     websocket-driver (0.7.0)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.3)
+    zeitwerk (1.0.0)
 
 PLATFORMS
   ruby
@@ -245,7 +238,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unf
   web-console (>= 3.3.0)
-  zeitwerk!
+  zeitwerk (>= 1.0.0)
 
 RUBY VERSION
    ruby 2.5.3p105
