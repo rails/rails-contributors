@@ -3,8 +3,7 @@ ruby '2.5.3'
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', git: 'https://github.com/rails/rails.git'
-gem 'zeitwerk', ">= 1.0.0"
+gem 'rails', '6.0.0.beta2'
 gem 'pg'
 gem 'puma', '~> 3.11'
 gem 'rugged', '0.27.0'
