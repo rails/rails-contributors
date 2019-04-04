@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/rails/rails-contributors.svg?style=svg)](https://circleci.com/gh/rails/rails-contributors)
 
-This is the application behind http://contributors.rubyonrails.org.
+This is the application behind https://contributors.rubyonrails.org.
 
 ## Documentation
 
