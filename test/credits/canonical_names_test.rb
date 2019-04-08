@@ -4267,6 +4267,10 @@ module Credits
       assert_contributor_names '519c5c7', 'Steven Soroka'
     end
 
+    test 'st0012' do
+      assert_contributor_names 'e8688dd', 'Stan Lo'
+    end
+
     test 'Stanislav' do
       assert_contributor_names '40f1642', 'Stanislav Sobolev'
     end

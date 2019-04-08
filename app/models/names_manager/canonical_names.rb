@@ -1016,6 +1016,7 @@ module NamesManager
     map 'Solomon White',              "solo\100gatelys.com"
     map 'Sonny Michaud',              'sonnym'
     map 'St. Louis Ruby Users Group', "stlruby\100googlegroups.com"
+    map 'Stan Lo',                    "st0012"
     map 'Stanislav Sobolev',          'Stanislav'
     map 'Starr Horne',                "starr\100starrnhorne.com"
     map 'Stefan Hollmann',            'sthollmann'
