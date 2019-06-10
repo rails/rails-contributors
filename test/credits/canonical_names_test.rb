@@ -652,7 +652,7 @@ module Credits
     end
 
     test "caleb\100aei-tech.com" do
-      assert_contributor_names 'd5b67ed', 'Caleb Tennis'
+      assert_contributor_names 'd5b67ed8', 'Caleb Tennis'
     end
 
     test 'canadaduane' do
