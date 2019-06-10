@@ -811,6 +811,7 @@ module NamesManager
     map 'Mike Taylor',                'sealocal'
     map 'Mikel Lindsaar',             'mikel', 'raasdnil'
     map 'Miklós Fazekas',             'mfazekas', 'Miklos Fazkeas', 'Miklos Fazekas'
+    map 'Misaki Shioi',               'shioimm'
     map 'Mislav Marohnić',            'mislav', 'mislaw', "mislav\100nippur.irb.hr", 'Mislav Marohnic'
     map 'Mitsutaka Mimura',           'takkanm'
     map 'Mo Khan',                    'mo khan'
