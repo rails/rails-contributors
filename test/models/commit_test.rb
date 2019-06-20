@@ -122,4 +122,25 @@ class CommitTest < ActiveSupport::TestCase
       [Kevin Clark & Jeremy Hopple]
     MESSAGE
   end
+
+  def test_extracts_co_authored_by_names
+    message = <<~MESSAGE
+    Fixed a bad thing that did a broken thing
+
+      * Stop it doing a bad thing
+      * Make it do a good thing
+
+    Co-authored-by: Edward Vincent <edward.vincent@example.com>
+    Co-authored-by: William Fox <william.fox@example.com>
+    MESSAGE
+    rugged_commit = OpenStruct.new
+    rugged_commit.oid       = "123456789"
+    rugged_commit.author    = {name: 'Carla-Maria', email: 'carla@example.com', time: Time.now}
+    rugged_commit.committer = {name: 'Edward', email: 'Edward@example.com', time: Time.now}
+    rugged_commit.message   = message
+    rugged_commit.parents   = []
+    commit = Commit.import!(rugged_commit)
+
+    assert_equal ["Edward Vincent", "William Fox", "Carla-Maria"], commit.extract_contributor_names(Repo)
+  end
 end
