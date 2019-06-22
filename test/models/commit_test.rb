@@ -123,24 +123,38 @@ class CommitTest < ActiveSupport::TestCase
     MESSAGE
   end
 
+  # Message from c221b5b448569771678279216360460e066095a7.
   def test_extracts_co_authored_by_names
-    message = <<~MESSAGE
-    Fixed a bad thing that did a broken thing
+    commit = Commit.new(
+      author_name: 'Joel Hawksley',
+      message: <<~MESSAGE
+        `RenderingHelper` supports rendering objects that `respond_to?` `:render_in`
 
-      * Stop it doing a bad thing
-      * Make it do a good thing
+        Co-authored-by: Natasha Umer <natashau@github.com>
+        Co-authored-by: Aaron Patterson <tenderlove@github.com>
+        Co-authored-by: Shawn Allen <shawnbot@github.com>
+        Co-authored-by: Emily Plummer <emplums@github.com>
+        Co-authored-by: Diana Mounter <broccolini@github.com>
+        Co-authored-by: John Hawthorn <jhawthorn@github.com>
+        Co-authored-by: Nathan Herald <myobie@github.com>
+        Co-authored-by: Zaid Zawaideh <zawaideh@github.com>
+        Co-authored-by: Zach Ahn <engineering@zachahn.com>
+      MESSAGE
+    )
 
-    Co-authored-by: Edward Vincent <edward.vincent@example.com>
-    Co-authored-by: William Fox <william.fox@example.com>
-    MESSAGE
-    rugged_commit = OpenStruct.new
-    rugged_commit.oid       = "123456789"
-    rugged_commit.author    = {name: 'Carla-Maria', email: 'carla@example.com', time: Time.now}
-    rugged_commit.committer = {name: 'Edward', email: 'Edward@example.com', time: Time.now}
-    rugged_commit.message   = message
-    rugged_commit.parents   = []
-    commit = Commit.import!(rugged_commit)
+    expected_contributor_names = [
+      'Joel Hawksley',
+      'Natasha Umer',
+      'Aaron Patterson',
+      'Shawn Allen',
+      'Emily Plummer',
+      'Diana Mounter',
+      'John Hawthorn',
+      'Nathan Herald',
+      'Zaid Zawaideh',
+      'Zach Ahn',
+    ]
 
-    assert_equal ["Edward Vincent", "William Fox", "Carla-Maria"], commit.extract_contributor_names(Repo)
+    assert_equal expected_contributor_names, commit.extract_contributor_names(Repo.new)
   end
 end

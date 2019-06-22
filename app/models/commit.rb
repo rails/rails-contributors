@@ -135,28 +135,25 @@ protected
 
     # Check the end of subject first.
     contributor_names = extract_contributor_names_from_text(subject)
+    return contributor_names if contributor_names.any?
+    return [] if body.nil?
 
-    if contributor_names.empty? && body
-      # Some modern commits have an isolated body line with the credit.
-      body.scan(/^\[[^\]]+\]$/) do |match|
-        contributor_names = extract_contributor_names_from_text(match)
-        break if contributor_names.any?
-      end
-
-      # check for co-authored commits i.e: Co-authored-by: Helpful Person <helpful@example.com>
-      matches = body.scan(/^Co-authored-by:\s*(.*)\s*<.*>$/)
-      if matches.any?
-        co_author_names = matches.flatten
-        contributor_names = sanitize(co_author_names << author_name)
-      end
-
-      if contributor_names.empty? && imported_from_svn?
-        # Check the end of the body as last option.
-        contributor_names = extract_contributor_names_from_text(body.sub(/git-svn-id:.*/m, ''))
-      end
+    # Some modern commits have an isolated body line with the credit.
+    body.scan(/^\[[^\]]+\]$/) do |match|
+      contributor_names = extract_contributor_names_from_text(match)
+      return contributor_names if contributor_names.any?
     end
 
-    contributor_names
+    # See https://help.github.com/en/articles/creating-a-commit-with-multiple-authors.
+    co_authors = body.scan(/^Co-authored-by:(.*)$/)
+    return sanitize([author_name] + co_authors.flatten) if co_authors.any?
+
+    # Check the end of the body as last option.
+    if imported_from_svn?
+      return extract_contributor_names_from_text(body.sub(/git-svn-id:.*/m, ''))
+    end
+
+    []
   end
 
   # When Rails had a svn repo there was a convention for authors: the committer
