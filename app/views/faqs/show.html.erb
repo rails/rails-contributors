@@ -34,6 +34,10 @@
 <p>Git has no support for multiple authors, and again the project has figured out conventions to give credit for one commit to several people.</p>
 <p>See for example <%= link_to 'this commit with two authors', github_url_for_sha1('9e9793b440c044b765f2d1f702feeb92aef2b139') %>, or the CHANGELOG entry of <%= link_to 'this other one', github_url_for_sha1('ec20838381dc26b68142c84c0e03f523765b4aae') %>. The application understands those conventions and gives credit to all authors.</p>
 
+<h3>Multiple authors through Co-authored-by</h3>
+<p>GitHub has added support for multiple authors by using Co-authored-by annotations, see <%= link_to "here", "https://help.github.com/en/articles/creating-a-commit-with-multiple-authors" %> for more information.</p>
+<p>The project understands this form as well and will correctly attribute commits to multiple authors. See for example <%= link_to 'this commit with a co-author.', github_url_for_sha1("99e52ae7b1c621069f2971d2f352822f263efb49") %></p>
+
 <h3>Plural nicknames</h3>
 <p>A couple of nicknames refer to several people. For example, a commit by "Carlhuda" (like <%= link_to 'this one', github_url_for_sha1('c102db9367690af992786d2a62bbf8caeec88742') %>) has to be credited to Yehuda Katz and Carl Lerche.</p>
 
@@ -58,6 +62,16 @@
     [Author 1, Author 2, Author 3]
 </pre>
 <p>A few list separators are supported, but you can just stick with "&amp;" or "," for example.</p>
+<p> or you can use Co-authored-by with their name and email in individual lines:</p>
+<pre>
+    first line of commit message
+
+    message body line 1
+    message body line 2
+
+    Co-authored-by: Author 1 &lt;author1@example.com&gt;
+    Co-authored-by: Author 2 &lt;author2@example.com&gt;
+</pre>
 
 <h2 id="why-no-pagination">The home page has a huge table, no pagination?</h2>
 <p>That's by design.</p>

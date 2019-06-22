@@ -143,6 +143,13 @@ protected
         break if contributor_names.any?
       end
 
+      # check for co-authored commits i.e: Co-authored-by: Helpful Person <helpful@example.com>
+      matches = body.scan(/^Co-authored-by:\s*(.*)\s*<.*>$/)
+      if matches.any?
+        co_author_names = matches.flatten
+        contributor_names = sanitize(co_author_names << author_name)
+      end
+
       if contributor_names.empty? && imported_from_svn?
         # Check the end of the body as last option.
         contributor_names = extract_contributor_names_from_text(body.sub(/git-svn-id:.*/m, ''))
