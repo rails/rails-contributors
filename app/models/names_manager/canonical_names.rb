@@ -161,6 +161,7 @@ module NamesManager
     map 'Alexey Nikitin',             'tank-bohr'
     map 'Alexey Trofimenko',          'codesnik'
     map 'Alexey Zatsepin',            'alexey', 'Alexey'
+    map 'Ali Ibrahim',                'alimi'
     map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
     map 'Aliaxandr Rahalevich',       'saksmlz', 'saks'
     map 'Alessandra Pereyra',         'Xenda'
