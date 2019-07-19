@@ -207,6 +207,10 @@ module Credits
       assert_contributor_names '9bd4386', 'Atsushi Nakamura'
     end
 
+    test 'alimi' do
+      assert_contributor_names '6b5df90', 'Ali Ibrahim'
+    end
+
     test "alles\100atomicobject.com" do
       assert_contributor_names '68dfe3e', 'Micah Alles'
     end
