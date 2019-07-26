@@ -157,4 +157,22 @@ class CommitTest < ActiveSupport::TestCase
 
     assert_equal expected_contributor_names, commit.extract_contributor_names(Repo.new)
   end
+
+  def test_extracts_co_authored_by_names_when_titlecase
+    commit = Commit.new(
+      author_name: 'Joel Hawksley',
+      message: <<~MESSAGE
+        `RenderingHelper` supports rendering objects that `respond_to?` `:render_in`
+
+        Co-Authored-By: Natasha Umer <natashau@github.com>
+      MESSAGE
+    )
+
+    expected_contributor_names = [
+      'Joel Hawksley',
+      'Natasha Umer'
+    ]
+
+    assert_equal expected_contributor_names, commit.extract_contributor_names(Repo.new)
+  end
 end
