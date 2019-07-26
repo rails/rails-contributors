@@ -145,7 +145,7 @@ protected
     end
 
     # See https://help.github.com/en/articles/creating-a-commit-with-multiple-authors.
-    co_authors = body.scan(/^Co-authored-by:(.*)$/)
+    co_authors = body.scan(/^Co-authored-by:(.*)$/i)
     return sanitize([author_name] + co_authors.flatten) if co_authors.any?
 
     # Check the end of the body as last option.
