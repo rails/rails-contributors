@@ -2511,6 +2511,10 @@ module Credits
       assert_contributor_names '63e9687', 'Michael Koziarski'
     end
 
+    test 'kp' do
+      assert_contributor_names '8641de9', 'Keith Payne'
+    end
+
     test 'kris_chambers' do
       assert_contributor_names '274ef21', 'Kristopher Chambers'
     end

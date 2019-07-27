@@ -650,6 +650,7 @@ module NamesManager
     map 'Kenta Okamoto',              "chocoby"
     map 'Kenta Tanoue',               'regonn'
     map 'kenta-s',                    "白井 健太"
+    map 'Keith Payne',                "kp"
     map 'Kevin Barnes',               "vinbarnes\100gmail.com"
     map 'Kevin Chavanne',             'kevcha'
     map 'Kevin Clark',                "Kevin Clark kevin.clark\100gmail.com", "kevin.clark\100gmail.com", "kevin.clark\100gmal.com"
