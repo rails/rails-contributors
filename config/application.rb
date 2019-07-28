@@ -17,6 +17,7 @@ require_relative '../lib/bot_killer'
 module RailsContributors
   class Application < Rails::Application
     config.load_defaults 6.0
+    config.add_autoload_paths_to_load_path = false
     config.middleware.insert 0, BotKiller
   end
 end
