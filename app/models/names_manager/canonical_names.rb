@@ -852,6 +852,7 @@ module NamesManager
     map 'Norman Elton',               "normelton\100gmail.com"
     map 'Obie Fernandez',             'ObieFernandez'
     map 'okkez',                      "okkez000\100gmail.com"
+    map 'OKURA Masafumi',             "okuramasafumi"
     map 'Oleg Andreev',               'oleganza'
     map 'Oleg Frolov',                "oleg.frolov\100gmail.com"
     map 'Oleg Pudeyev',               "pudeyo\100rpi.com"

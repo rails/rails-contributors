@@ -3359,6 +3359,10 @@ module Credits
       assert_contributor_names 'a9ed24c', 'okkez'
     end
 
+    test "okuramasafumi" do
+      assert_contributor_names "fd205ed", "OKURA Masafumi"
+    end
+
     test "oleg.frolov\100gmail.com" do
       assert_contributor_names 'a288179', 'Oleg Frolov'
     end
