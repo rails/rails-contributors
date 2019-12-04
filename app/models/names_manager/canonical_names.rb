@@ -301,6 +301,7 @@ module NamesManager
     map 'Colman Nady',                "colman\100rominato.com"
     map 'Corey Haines',               'coreyhaines'
     map 'Corey Leveen',               'mntj'
+    map 'Cory Gwin',                  "Cory Gwin \100gwincr11"
     map 'Courtenay Gasking',          'court3nay', 'courtenay', "court3nay\100gmail.com", 'Court3nay'
     map 'Craig Davey',                'eigentone', "eigentone\100gmail.com"
     map 'Cristi Balan',               'Cristi BALAN'
