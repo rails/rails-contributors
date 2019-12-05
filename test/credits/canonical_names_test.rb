@@ -871,6 +871,10 @@ module Credits
       assert_contributor_names 'df755d4', 'Corey Haines'
     end
 
+    test 'Cory Gwin' do
+      assert_contributor_names '31021c7', 'Cory Gwin'
+    end
+
     test 'court3nay' do
       assert_contributor_names '891a962', 'Courtenay Gasking'
     end
