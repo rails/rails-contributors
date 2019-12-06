@@ -148,6 +148,10 @@ module Credits
       assert_contributor_names 'dfd0bdf', 'Alan Francis'
     end
 
+    test 'Alan Tan' do
+      assert_contributor_names 'c9430db', 'Guo Xiang Tan'
+    end
+
     test 'Alberto Almagro Sotelo' do
       assert_contributor_names '5c62bd5', 'Gannon McGibbon', 'Alberto Almagro'
     end
@@ -1645,6 +1649,10 @@ module Credits
 
     test 'guillaume' do
       assert_contributor_names 'cfe42ba', 'Guillaume Carbonneau'
+    end
+
+    test 'Guo Xiang' do
+      assert_contributor_names '1f89330', 'Guo Xiang Tan'
     end
 
     test "guy.naor\100famundo.com" do
