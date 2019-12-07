@@ -13,7 +13,7 @@ gem 'actionpack-page_caching', '~> 1.1'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2.1'
+gem 'coffee-rails', '~> 5.0.0'
 
 group :development, :test do
   gem 'byebug'
