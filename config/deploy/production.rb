@@ -7,6 +7,8 @@ set :puma_bind, 'unix:/tmp/rails-contributors.sock'
 set :puma_preload_app, false
 set :puma_workers, 1
 
+set :rvm_ruby_version, '2.6.5'
+
 namespace :deploy do
   after :normalize_assets, :gzip_assets do
     on release_roles(fetch(:assets_roles)) do
