@@ -31,6 +31,7 @@ module Credits
       assert_contributor_names '872e22c', 'Daniel Rikowski', 'Genadi Samokovarov'
       assert_contributor_names '9220935', 'Eileen M. Uchitelle', 'Aaron Patterson', 'Tsukuru Tanimichi'
       assert_contributor_names '9668cc3', 'Eileen M. Uchitelle', 'Aaron Patterson', 'Tsukuru Tanimichi'
+      assert_contributor_names '1d133e8', 'Nick Weiland'
     end
   end
 end
