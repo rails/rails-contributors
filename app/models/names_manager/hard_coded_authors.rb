@@ -90,6 +90,10 @@ module NamesManager
       when '9668cc3bb03740b13477df0832332eec71563bc5'
         # Backport of the above commit.
         ['Eileen M. Uchitelle', 'Aaron Patterson', 'Tsukuru Tanimichi']
+      when '1d133e8a4725439e4a61d53ce913eba9dcab42d3'
+        # This attribution was incorrectly given to "direct_upload_xls_in_chrome",
+        # (the branch name) which was included in the commit messages in brackets.
+        ['Nick Weiland']
       else
         nil
       end
