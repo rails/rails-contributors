@@ -39,6 +39,7 @@ module NamesManager
         when "{ :ca => :'es-ES' }"
         when 'fixes 5f5e6d924973003c105feb711cefdb726f312768'
         when '79990505e5080804b53d81fec059136afa2237d7'
+        when 'direct_upload_xls_in_chrome'
         when "schoenm\100earthlink.net sandra.metz\100duke.edu"
           name.split
         when '=?utf-8?q?Adam=20Cig=C3=A1nek?='

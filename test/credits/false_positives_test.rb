@@ -165,6 +165,10 @@ module Credits
       assert_contributor_names 'eade591', 'Prem Sichanugrist'
     end
 
+    test 'direct_upload_xls_in_chrome' do
+      assert_contributor_names '1d133e8', 'Nick Weiland'
+    end
+
     test "schoenm\100earthlink.net sandra.metz\100duke.edu" do
       assert_contributor_names '242cd06', 'Michael Schoen', 'Sandi Metz'
     end
