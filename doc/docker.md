@@ -6,9 +6,9 @@ If you just cloned the project:
 
 ```
 $ docker-compose up -d
-$ docker/exec bundle install
-$ docker/rails db:setup
-$ docker/sync
+$ dc/exec bundle install
+$ dc/rails db:setup
+$ dc/sync
 ```
 
 The last command is going to clone the Rails repository and populate the database, it takes several minutes.
@@ -21,7 +21,7 @@ The application assumes `rails.git` is present in the root directory with a mirr
 git clone --mirror https://github.com/rails/rails.git
 ```
 
-That clone is performed by `docker/sync` automatically, but it does not update itself. To do so, please run
+That clone is performed by `dc/sync` automatically, but it does not update itself. To do so, please run
 
 ```
 $ cd rails.git
@@ -48,27 +48,26 @@ A number of convenience scripts are located in the `docker` directory, all of th
 
 | Command         | Description                |
 | --------------- | -------------------------- |
-| `docker/bash`   | Gets a Bash shell          |
-| `docker/psql`   | Gets a `psql` shell        |
-| `docker/rails`  | Runs `bin/rails`           |
-| `docker/server` | Launches Puma in port 3000 |
-| `docker/sync`   | Syncs the database         |
-| `docker/deploy` | Deploys the application    |
+| `dc/bash`   | Gets a Bash shell          |
+| `dc/psql`   | Gets a `psql` shell        |
+| `dc/rails`  | Runs `bin/rails`           |
+| `dc/server` | Launches Puma in port 3000 |
+| `dc/sync`   | Syncs the database         |
+| `dc/deploy` | Deploys the application    |
 
-The commands `docker/server` and `docker/psql` are convenience wrappers around `docker/rails`. In general `docker/rails` is the main command:
+The commands `dc/server` and `dc/psql` are convenience wrappers around `dc/rails`. In general `dc/rails` is the main command:
 
 ```
-$ docker/rails test
-$ docker/rails console
-$ docker/rails db:migrate
-$ docker/rails runner 'p Commit.count'
+$ dc/rails test
+$ dc/rails console
+$ dc/rails db:migrate
+$ dc/rails runner 'p Commit.count'
 $ ...
 ```
 
-The command `docker/server staging` runs the application in `staging` mode. That is a production-like environment (`config/environments/staging.rb` is a symlink to `config/environments/production.rb`), but it uses the development database and serves static files. If there are changes that act differently in `development` and `production`, this execution mode may be useful for checking things up before deployment.
+The command `dc/server staging` runs the application in `staging` mode. That is a production-like environment (`config/environments/staging.rb` is a symlink to `config/environments/production.rb`), but it uses the development database and serves static files. If there are changes that act differently in `development` and `production`, this execution mode may be useful for checking things up before deployment.
 
-If you modify the name mappings, hard-coded authors, etc., `docker/sync`
-updates the credits and it does so changing as little as possible. The command also accepts an optional argument `all`, which forces the recomputation of all assignments. This is handy when you've changed the heuristics, and it takes less than a full database rebuild, since it does not reimport the commits themselves (which is costly).
+To update the local Rails checkout and update the credits run `dc/sync`. The command also accepts an optional argument `all`, which forces the recomputation of all assignments. This is handy when you've changed the heuristics, and it takes less than a full database rebuild, since it does not reimport the commits themselves (which is costly).
 
 ## Database persistence
 

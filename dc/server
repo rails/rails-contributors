@@ -8,5 +8,5 @@ if [[ $1 = 'staging' ]]; then
   docker-compose exec -e RAILS_SERVE_STATIC_FILES=1 app \
     bin/rails server -b 0.0.0.0 -e staging
 else
-  docker/rails server -b 0.0.0.0
+  dc/rails server -b 0.0.0.0
 fi

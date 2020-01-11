@@ -6,7 +6,7 @@ if [[ ! -d rails.git ]]; then
 fi
 
 if [[ $1 = 'all' ]]; then
-  exec docker/rails runner "Repo.sync(rebuild_all: true)"
+  exec dc/rails runner "Repo.sync(rebuild_all: true)"
 else
-  exec docker/rails runner Repo.sync
+  exec dc/rails runner Repo.sync
 fi

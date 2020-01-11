@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec docker/exec cap production deploy
