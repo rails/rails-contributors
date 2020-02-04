@@ -821,6 +821,7 @@ module NamesManager
     map 'Mo Khan',                    'mo khan'
     map 'Mohamed Osama',              'oss92'
     map 'Moses Hohman',               'moses'
+    map 'Muhammad Muhammad Ibrahim',  'Muhammad'
     map 'Murahashi Sanemat Kenichi',  'sanemat'
     map 'Murray Steele',              'h-lame'
     map 'Nacho Caballero',            'nachocab'
