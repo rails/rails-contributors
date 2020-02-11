@@ -3183,6 +3183,10 @@ module Credits
       assert_contributor_names '74191ed', 'Mark J. Titorenko'
     end
 
+    test 'Muhammad' do
+      assert_contributor_names '73fdd4c', 'Muhammad Muhammad Ibrahim'
+    end
+
     test 'murphy' do
       assert_contributor_names 'dcc1549', 'Kornelius Kalnbach'
     end
