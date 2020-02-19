@@ -894,6 +894,7 @@ module NamesManager
     map 'Peter Michaux',              "petermichaux\100gmail.com"
     map 'Peter Schröder',             "phoet"
     map 'Peter Williams',             'pezra'
+    map 'Petra Jaros',                'Peter Jaros'
     map 'Phil Bogle',                 "philbogle\100gmail.com"
     map 'Phil Hagelberg',             "technomancy\100gmail.com", 'technomancy'
     map 'Phil Lee',                   'asmega'

@@ -3527,6 +3527,10 @@ module Credits
       assert_contributor_names '8734da9', 'Peter Michaux'
     end
 
+    test 'Peter Jaros' do
+      assert_contributor_names 'b947b6eca5', 'Petra Jaros'
+    end
+
     test 'Petrik' do
       assert_contributor_names '9a57cd3', 'Petrik de Heus'
     end
