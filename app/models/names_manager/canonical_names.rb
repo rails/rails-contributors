@@ -1016,6 +1016,7 @@ module NamesManager
     map 'Simon Harris',               "simon\100redhillconsulting.com.au", 'haruki_zaemon'
     map 'Simon Jefford',              'simonjefford'
     map 'Simon Moore',                'saimonmoore'
+    map 'Simon Perepelitsa',          'Semyon Perepelitsa'
     map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
     map 'shingo-nakanishi',           'shingo.nakanishi'
     map 'Shinichi Maeshima',          'willnet'

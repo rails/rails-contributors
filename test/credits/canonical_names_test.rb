@@ -4131,6 +4131,10 @@ module Credits
       assert_contributor_names '9bafd35', 'Matt Mower'
     end
 
+    test 'Semyon Perepelitsa' do
+      assert_contributor_names '540ebe3', 'Simon Perepelitsa'
+    end
+
     test "sergeykojin\100gmail.com" do
       assert_contributor_names 'ba5591f', 'Sergey Kojin'
     end
