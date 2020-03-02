@@ -44,7 +44,7 @@ When done, stop them:
 docker-compose stop
 ```
 
-A number of convenience scripts are located in the `docker` directory, all of them operate in the main `app` container:
+A number of convenience scripts are located in the `dc` directory, all of them operate in the main `app` container:
 
 | Command         | Description                |
 | --------------- | -------------------------- |
