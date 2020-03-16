@@ -332,6 +332,7 @@ module NamesManager
     map 'Dave Thomas',                "dave\100pragprog.com", 'pragdave'
     map 'David A. Black',             'dblack', "dblack\100wobblini.net"
     map 'David Altenburg',            "gensym\100mac.com"
+    map 'David Auza',                 'davidauza-engineer'
     map 'David Calavera',             'calavera', 'david.calavera'
     map 'David Chelimsky',            'dchelimsky'
     map 'David Demaree',              'ddemaree'
