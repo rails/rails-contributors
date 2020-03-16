@@ -1003,6 +1003,10 @@ module Credits
       assert_contributor_names 'c4a3634', 'David Rupp'
     end
 
+    test 'davidauza-engineer' do
+      assert_contributor_names 'e3d496a', 'David Auza'
+    end
+
     test 'davidjrice' do
       assert_contributor_names '82a85e8', 'David Rice'
     end
