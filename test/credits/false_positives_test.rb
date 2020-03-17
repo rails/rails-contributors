@@ -93,6 +93,10 @@ module Credits
       assert_contributor_names '9726ed8', 'Rohit Arondekar'
     end
 
+    test 'ImgBotApp' do
+      assert_contributor_names '4f1472d', 'John Bampton'
+    end
+
     test 'hat-tip to anathematic' do
       assert_contributor_names 'b67dc00', 'Ryan Bigg'
     end

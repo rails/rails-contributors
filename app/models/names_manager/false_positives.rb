@@ -26,6 +26,7 @@ module NamesManager
         when 'and'
         when 'options'
         when 'API DOCS'
+        when 'ImgBotApp'
         when 'hat-tip to anathematic'
         when 'props to Zarathu in #rubyonrails'
         when 'thanks Pratik!'

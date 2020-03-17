@@ -90,6 +90,8 @@ module NamesManager
       when '9668cc3bb03740b13477df0832332eec71563bc5'
         # Backport of the above commit.
         ['Eileen M. Uchitelle', 'Aaron Patterson', 'Tsukuru Tanimichi']
+      when '4f1472d4de37f1f77195c36390ce8bb65bb61e71'
+        ['John Bampton']
       else
         nil
       end
