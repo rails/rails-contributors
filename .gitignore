@@ -5,3 +5,4 @@
 config/master.key
 public/assets
 public/cache
+.bundle/
