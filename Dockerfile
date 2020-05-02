@@ -25,5 +25,6 @@ RUN apk --no-cache add --update \
   yarn
 
 RUN gem update --system
+RUN gem install bundler -v '1.17.3'
 
 WORKDIR /rails-contributors
