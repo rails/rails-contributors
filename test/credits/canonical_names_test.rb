@@ -4203,6 +4203,10 @@ module Credits
       assert_contributor_names '884d123', 'Shunsuke Aida'
     end
 
+    test "shup_d\100cube.(none)" do
+      assert_contributor_names '7260852', 'Josh Peek'
+    end
+
     test 'Si' do
       assert_contributor_names '9b24e11', 'Si Jobling'
     end
