@@ -1987,6 +1987,10 @@ module Credits
       assert_contributor_names 'a7764d8', 'James Coglan'
     end
 
+    test 'Josh <jdeseno@gmail.com>' do
+      assert_contributor_names '40e6f437e8', 'Josh Deseno'
+    end
+
     test 'jean.helou' do
       assert_contributor_names 'f756bfb', 'Jean Helou'
     end
