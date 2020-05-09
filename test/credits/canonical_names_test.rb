@@ -2224,7 +2224,7 @@ module Credits
     end
 
     test 'Josh' do
-      assert_contributor_names '903dcef', 'Josh Peek'
+      assert_contributor_names '903dcef', 'Josh Peek', 'David Heinemeier Hansson'
     end
 
     test "josh\100hasmanythrough.com" do
