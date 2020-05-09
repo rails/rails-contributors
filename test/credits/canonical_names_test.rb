@@ -2231,6 +2231,10 @@ module Credits
       assert_contributor_names '903dcef', 'Josh Peek', 'David Heinemeier Hansson'
     end
 
+    test "Josh <josh\100josh.mn>" do
+      assert_contributor_names 'ba3ef762fc', 'Josh Brody'
+    end
+
     test "josh\100hasmanythrough.com" do
       assert_contributor_names '70577d0', 'Josh Susser'
     end

@@ -91,6 +91,7 @@ module NamesManager
         case email
         when "shup_d\100cube.(none)" then 'Josh Peek'
         when "jdeseno\100gmail.com" then 'Josh Deseno'
+        when "josh\100josh.mn" then 'Josh Brody'
         end
       when ''
         case email
