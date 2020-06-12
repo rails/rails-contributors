@@ -9,15 +9,11 @@ gem 'puma', '~> 3.12'
 gem 'rugged', '0.27.0'
 gem 'unf'
 gem 'turbolinks', '~> 5'
-gem 'actionpack-page_caching', '~> 1.1'
+gem 'actionpack-page_caching', '1.2.3'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 5.0.0'
-
-group :development, :test do
-  gem 'byebug'
-end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
