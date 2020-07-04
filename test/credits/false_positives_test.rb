@@ -261,12 +261,12 @@ module Credits
       assert_contributor_names '175ba04', 'Daniel Fox', 'Grant Hutchins', 'Trace Wax'
     end
 
-    test 'ignores unkown contributors symbolized by a ?' do
+    test 'ignores unknown contributors symbolized by a ?' do
       assert_contributor_names 'eb5ca2e', 'caleb', exact: true
       assert_contributor_names '8ff6d76', 'Sam Stephenson', exact: true
     end
 
-    test 'ignores unkown contributors referred as "others"' do
+    test 'ignores unknown contributors referred as "others"' do
       assert_contributor_names 'da4b15f', 'Kevin Jackson', 'David Heinemeier Hansson', exact: true
     end
   end
