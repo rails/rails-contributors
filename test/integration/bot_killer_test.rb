@@ -11,7 +11,7 @@ class BotKillerTest < ActionDispatch::IntegrationTest
     assert_response :not_found
   end
 
-  test 'other user agests are not blacklisted' do
+  test 'other user agents are not blacklisted' do
     get '/', headers: { 'User-Agent' => 'Foo' }
     assert_response :ok
   end
