@@ -87,6 +87,12 @@ module NamesManager
         case email
         when "aquajach\100gmail.com" then 'aquajach'
         end
+      when 'Josh'
+        case email
+        when "shup_d\100cube.(none)" then 'Josh Peek'
+        when "jdeseno\100gmail.com" then 'Josh Deseno'
+        when "josh\100josh.mn" then 'Josh Brody'
+        end
       when ''
         case email
         when "JRadosz\100gmail.com" then 'Jarek Radosz'
@@ -612,7 +618,7 @@ module NamesManager
     map 'Josh Goebel',                'Dreamer3', "dreamer3\100gmail.com", 'yyyc514'
     map 'Josh Knowles',               "joshknowles\100gmail.com"
     map 'Josh Owens',                 'queso'
-    map 'Josh Peek',                  'josh', 'Josh', 'Joshua Peek', 'joshpeek', "josh\100joshpeek.com"
+    map 'Josh Peek',                  'josh', 'Joshua Peek', 'joshpeek', "josh\100joshpeek.com"
     map 'Josh Starcher',              "josh.starcher\100gmail.com"
     map 'Josh Susser',                'hasmanyjosh', "josh\100hasmanythrough.com"
     map 'Joshua Sierles',             'jsierles'

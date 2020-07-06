@@ -94,6 +94,8 @@ module NamesManager
         # The metadata for this commit completely lacks the name of the original
         # author. You'll see there only stuff related to ImgBot.
         ['John Bampton']
+      when '903dcefbaff8cf3a0e9db61048aebd9e753835ea'
+        ['Josh Peek', 'David Heinemeier Hansson']
       else
         nil
       end
