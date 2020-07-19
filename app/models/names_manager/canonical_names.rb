@@ -170,7 +170,7 @@ module NamesManager
     map 'Ali Ibrahim',                'alimi'
     map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
     map 'Aliaxandr Rahalevich',       'saksmlz', 'saks'
-    map 'Alessandra Pereyra',         'Xenda'
+    map 'Alessandra Pereyra',         'Xenda', 'alessapereyra'
     map 'Amit Kumar Suroliya',        'amitkumarsuroliya'
     map 'Anand Muthukrishnan',        'Anand'
     map 'Anatoli Makarevich',         'Anatoly Makarevich'
