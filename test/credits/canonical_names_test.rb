@@ -3583,6 +3583,10 @@ module Credits
       assert_contributor_names '09751e5', 'Patrick Hurley'
     end
 
+    test "piecehealth" do
+      assert_contributor_names '1f2d012', 'Zhang Kang'
+    end
+
     test 'PikachuEXE' do
       assert_contributor_names '7fc3390', 'Leung Ho Kuen'
     end
