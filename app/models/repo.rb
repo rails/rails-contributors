@@ -8,7 +8,7 @@ class Repo
   #   git clone --mirror git://github.com/rails/rails.git
   #
   PATH  = "#{Rails.root}/rails.git"
-  HEADS = %r{\Arefs/heads/(master|[\d\-]+(-stable)?)\z}
+  HEADS = %r{\Arefs/heads/(main|[\d\-]+(-stable)?)\z}
   TAGS  = %r{\Arefs/tags/v[\d.]+\z}
 
   # This is the entry point to sync the database from cron jobs etc:
@@ -110,7 +110,7 @@ class Repo
   end
 
   # Imports those commits in the Git repo that do not yet exist in the database
-  # by walking the master and stable branches backwards starting at the tips
+  # by walking the main and stable branches backwards starting at the tips
   # and following parents.
   def sync_commits
     ncommits = 0
