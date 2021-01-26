@@ -32,6 +32,8 @@ module Credits
       assert_contributor_names '9220935', 'Eileen M. Uchitelle', 'Aaron Patterson', 'Tsukuru Tanimichi'
       assert_contributor_names '9668cc3', 'Eileen M. Uchitelle', 'Aaron Patterson', 'Tsukuru Tanimichi'
       assert_contributor_names '4f1472d', 'John Bampton'
+      assert_contributor_names 'fdbc55b', 'Yasuo Honda'
+      assert_contributor_names '6c6c3fa', 'Yasuo Honda'
     end
   end
 end
