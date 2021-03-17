@@ -171,6 +171,7 @@ module NamesManager
     map 'Aliaksey Kandratsenka',      'Aleksey Kondratenko'
     map 'Aliaxandr Rahalevich',       'saksmlz', 'saks'
     map 'Alessandra Pereyra',         'Xenda'
+    map 'Alkesh Ghorpade',            'alkesh26', 'alkeshghorpade'
     map 'Amit Kumar Suroliya',        'amitkumarsuroliya'
     map 'Anand Muthukrishnan',        'Anand'
     map 'Anatoli Makarevich',         'Anatoly Makarevich'
