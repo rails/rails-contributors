@@ -1,4 +1,5 @@
 .byebug_history
+.tool-versions
 /log
 /tmp
 /rails.git
