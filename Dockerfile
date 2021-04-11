@@ -1,3 +1,9 @@
+# If we change the Ruby version, we need to keep in sync:
+#
+#   * The constraint in the Gemfile.
+#   * .ruby-version (used by CircleCI).
+#   * Install the version by hand in the server (uses RVM).
+#
 FROM ruby:2.6.5-alpine3.10
 
 # LANG as recommended in the Encoding section of https://hub.docker.com/_/ruby/.
