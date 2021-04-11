@@ -1847,6 +1847,10 @@ module Credits
       assert_contributor_names '4f59aac', 'Jacob Atzen'
     end
 
+    test 'jacobherrington' do
+      assert_contributor_names 'dc27efc', 'Jacob Herrington'
+    end
+
     test 'jacobstr' do
       assert_contributor_names 'cc99580', 'Jacob Straszynski'
     end

@@ -499,6 +499,7 @@ module NamesManager
     map 'Jack Danger Canty',          'danger', 'Danger'
     map 'Jacob Atzen',                'jacobat'
     map 'Jacob Fugal',                'lukfugl'
+    map 'Jacob Herrington',           'jacobherrington'
     map 'Jacob Straszynski',          'jacobstr'
     map 'Jaehyun Shin',               'keepcosmos'
     map 'Jake Janovetz',              'janovetz'
