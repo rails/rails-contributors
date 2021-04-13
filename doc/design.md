@@ -12,7 +12,7 @@
 
 * Auto-healing: Fixing credits and adding new mappings is very common, the application should handle this gracefully, detecting and merging accounts as needed automatically on deploy.
 
-* The application updates the database on every Rails push via a webhook in GitHub. Should detect which commits are new since the last run and import them in an efficient way.
+* The application updates the database on every Rails push via a webhook in GitHub. Should detect which commits are new since the last run and import them efficiently.
 
 * Contributors are identified preferably by their real name.
 
