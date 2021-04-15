@@ -21,7 +21,7 @@ class Release < ApplicationRecord
   # Imports a rugged object that was returned as a reference to a tag.
   #
   # Some tags are full objects (annotated tags), and other tags are kinda
-  # symlinks to commits (lighteweight tags). The method understands both.
+  # symlinks to commits (lightweight tags). The method understands both.
   def self.import!(tag, rugged_object)
     case rugged_object
     when Rugged::Tag
