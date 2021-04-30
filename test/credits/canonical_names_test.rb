@@ -4180,11 +4180,11 @@ module Credits
     end
 
     test "\100sgrif" do
-      assert_contributor_names '2bbcca0', 'Sean Griffin'
+      assert_contributor_names '2bbcca0', 'Siân Griffin'
     end
 
     test 'sgrif' do
-      assert_contributor_names '92a6033', 'Sean Griffin'
+      assert_contributor_names '92a6033', 'Siân Griffin'
     end
 
     test 'sh6khan' do
