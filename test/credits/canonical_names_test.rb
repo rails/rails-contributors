@@ -4131,6 +4131,10 @@ module Credits
       assert_contributor_names '27a4e93', 'Mike Taylor'
     end
 
+    test 'Sean Griffin' do
+      assert_contributor_names '332c336', 'Siân Griffin'
+    end
+
     test "sean\100ardismg.com" do
       assert_contributor_names '2876efb', 'Sean T Allen'
     end

@@ -1001,7 +1001,7 @@ module NamesManager
     map 'Scott Willson',              'scottwillson', 'scott_willson'
     map 'Sean Dent',                  'doabit'
     map 'Sean Geoghegan',             'seangeo'
-    map 'Siân Griffin',               'sgrif', '@sgrif'
+    map 'Siân Griffin',               'Sean Griffin', 'sgrif', '@sgrif'
     map 'Sean Hussey',                'seanhussey'
     map 'Sean T Allen',               "sean\100ardismg.com"
     map 'Sebastian Delmont',          "sd\100notso.net"
