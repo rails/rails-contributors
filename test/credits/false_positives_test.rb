@@ -241,7 +241,7 @@ module Credits
     end
 
     test 'connector &' do
-      assert_contributor_names 'b0f2b94', 'Sean Griffin', 'Julien Portalier'
+      assert_contributor_names 'b0f2b94', 'Siân Griffin', 'Julien Portalier'
     end
 
     test 'connector +' do
