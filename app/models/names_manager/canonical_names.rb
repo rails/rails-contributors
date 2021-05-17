@@ -214,6 +214,7 @@ module NamesManager
     map 'Arthur Zapparoli',           'arthurgeek'
     map 'Arvid Andersson',            'arvida'
     map 'Arvind Mehra',               'arvind'
+    map 'Asherah Connor',             'Ashe Connor'
     map 'Ashley Moran',               "work\100ashleymoran.me.uk"
     map 'Ask Bjørn Hansen',           "ask\100develooper.com"
     map 'Assaf Arkin',                "assaf.arkin\100gmail.com", 'Assaf'
