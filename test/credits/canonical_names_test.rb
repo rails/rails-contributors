@@ -407,6 +407,10 @@ module Credits
       assert_contributor_names 'dad0c26', 'Arvind Mehra'
     end
 
+    test 'Ashe Connor' do
+      assert_contributor_names '8f5f2bf', 'Asherah Connor'
+    end
+
     test "ask\100develooper.com" do
       assert_contributor_names '17ef706', 'Ask Bjørn Hansen'
     end
