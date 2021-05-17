@@ -4055,6 +4055,10 @@ module Credits
       assert_contributor_names '35b4bdc', 'Sam Kirchmeier'
     end
 
+    test 'Sam Phippen' do
+      assert_contributor_names 'eba3618', 'Penelope Phippen'
+    end
+
     test 'Samuel Elliott' do
       assert_contributor_names '31ea83e', 'Sam Elliott'
     end
