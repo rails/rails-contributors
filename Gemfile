@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails', '~> 6.0.3'
 gem 'pg'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 5.3'
 gem 'rugged', '0.27.0'
 gem 'unf'
 gem 'turbolinks', '~> 5'
@@ -28,7 +28,7 @@ group :deployment do
   gem 'capistrano', '~> 3.10',      require: false
   gem 'capistrano-rails', '~> 1.1', require: false
   gem 'capistrano-rvm', '0.1.1',    require: false
-  gem 'capistrano3-puma', '~> 3.1', require: false
+  gem 'capistrano3-puma', '~> 5.0', require: false
   gem 'rbnacl', '>= 3.2', '< 5.0'
   gem 'rbnacl-libsodium'
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
