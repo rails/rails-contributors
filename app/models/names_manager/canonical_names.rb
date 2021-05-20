@@ -894,6 +894,7 @@ module NamesManager
     map 'Pawel Janiak',               'pawel2105'
     map 'Paweł Mikołajewski',         'dfens'
     map 'Pelle Braendgaard',          'pelle', 'Pelle'
+    map 'Penelope Phippen',           'Sam Phippen'
     map 'Petrik de Heus',             'Petrik'
     map 'Per Wigren',                 "tuxie\100dekadance.se", 'Tuxie'
     map 'Perry Flinn',                'pbflinn'
