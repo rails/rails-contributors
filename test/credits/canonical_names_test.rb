@@ -2499,6 +2499,10 @@ module Credits
       assert_contributor_names '7252666', 'Kevin Clark'
     end
 
+    test 'Kevin Deisz' do
+      assert_contributor_names '812e904', 'Kevin Newton'
+    end
+
     test "kevwil\100gmail.com" do
       assert_contributor_names '080e169', 'Kevin Williams'
     end
