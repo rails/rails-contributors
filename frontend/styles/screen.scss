@@ -1,0 +1,349 @@
+$lead_color: #C52F24;
+$dark_lead_color: #AF2A20;
+$light_lead_color: #FFF0F5;
+
+body {
+	background-color: #eaeaea;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 87.5%;
+	line-height: 1.5em;
+	color: #333333;
+}
+
+/*
+---------------------------------
+HTML TAGS
+---------------------------------
+*/
+
+a {
+  color: $lead_color;
+}
+
+h1 {
+  font-size:2em;
+  color:#000000;
+  margin:10px 0;
+}
+
+h2 {
+  font-size:1.5em;
+  color:#000000;
+  margin:10px 0;
+}
+
+p {
+  margin-bottom:1.5em;
+}
+
+strong {
+  font-weight:bold;
+}
+
+tt {
+  font-family:monaco,"Bitstream Vera Sans Mono","Courier New",courier,monospace;
+}
+
+/*
+---------------------------------
+SYNTAX FORMAT
+---------------------------------
+*/
+
+pre,code {
+  margin: 1.5em 0;
+  overflow: auto;
+  white-space: pre;
+}
+
+pre,code,tt {
+  font: 1em 'andale mono', 'lucida console', monospace;
+  line-height: 1.5;
+}
+
+code {
+  background-color:#FFFAFA;
+  border: none;
+  display: block;
+	font-family: monaco, "Bitstream Vera Sans Mono", "Courier New", courier, monospace;
+	margin: 0.25em 0 1.5em 0;
+}
+
+.ruby .keywords {
+  color : #EE3F3F;
+}
+
+.ruby .ivar {
+  color : blue;
+}
+
+.ruby .comment {
+  color: #708090;
+}
+
+.ruby .symbol {
+ color: green;
+}
+
+
+/*
+---------------------------------
+SPECIFIC TAGS
+---------------------------------
+*/
+
+h1#title {
+  float:left;
+}
+
+h1#title span.listing-total {
+    color:$lead_color;
+    font-size:0.5em;
+    font-style:italic;
+    font-weight:normal;
+}
+
+.clearfix {
+  clear:both;
+}
+
+.sha1 {
+    font-family:Consolas,Monaco,monospace;
+    color:#980905;
+}
+
+/*
+---------------------------------
+TOP HEADER LINKS
+---------------------------------
+*/
+
+#topBar {
+	background-color:#000000;
+  color:#565656;
+  padding:1em 0;
+}
+
+#topBar .wrapper {
+  padding-left:1em;
+  width:68em;
+}
+
+#topBar a.home {
+    color:white;
+}
+
+#topBar a {
+  color:#EE3F3F;
+}
+
+#topBar strong {
+  color:#999999;
+  margin-right:0.5em;
+}
+
+/*
+---------------------------------
+LAYOUT GENERALS
+---------------------------------
+*/
+
+#header {
+  background:$lead_color url("../../src/images/header_tile.gif") repeat-x scroll 0 0;
+  color:#FFFFFF;
+  overflow:hidden;
+  padding:1em 0;
+}
+
+#header-shadow {
+  background:transparent url("../../src/images/header-shadow.png") repeat-x scroll top center;
+}
+
+#header-shadow .wrapper {
+  margin-left:7.5em;
+}
+
+#container {
+  background:transparent url("../../src/images/content-shadow.png") repeat-y scroll left center;
+  overflow:hidden;
+  position:relative;
+  width:850px;
+}
+
+#content {
+  background-color:#FFFFFF;
+  float:left;
+  margin-left:10px;
+  min-height:500px;
+  width:630px;
+}
+
+#content-in {
+  border-top:2px solid #EBEBEB;
+  padding:20px;
+}
+
+#bottom {
+  background: #eaeaea url("../../src/images/bottom-bg.png") no-repeat top left;
+  clear:both;
+  height:20px;
+}
+
+.wrapper {
+  margin:0 8em;
+  text-align:left;
+  width:69em;
+}
+
+/*
+---------------------------------
+SIDEBAR NAVIGATION
+---------------------------------
+*/
+#sidebar {
+  border-top-right-radius:10px;
+  border-bottom-right-radius:10px;
+  background:$lead_color url("../../src/images/nav-shadow-left.png") repeat-y scroll left center;
+  color:#FFFFFF;
+  float:left;
+  margin-top:20px;
+  min-height:400px;
+  padding-top:2em;
+  width:160px;
+}
+
+#sidebar h4 {
+  color:#F1938C;
+  display:block;
+  padding:0 0 0.5em 1em;
+}
+
+#sidebar hr {
+  color:$dark_lead_color;
+  background-color: $dark_lead_color;
+  border:1px;
+  height:1px;
+}
+
+#sidebar li {
+  background:#E6E6E6 url("../../src/images/nav-shadow-left.png") repeat-y scroll left;
+  border-bottom:3px solid $dark_lead_color;
+  display:block;
+  font-size: 16px;
+  height:30px;
+  margin-bottom:10px;
+  text-align: center;
+  width:140px;
+}
+
+#sidebar li a {
+  color:#999999;
+  display:block;
+  text-decoration: none;
+  padding:5px 10px 5px 15px;
+}
+
+#sidebar li a:hover {
+  color:#666666;
+}
+
+#sidebar li.current a {
+  background:#FFF ;
+  color:#333;
+  font-weight:bold;
+}
+
+
+#sidebar ul#common-links {
+}
+
+#sidebar ul#common-links li {
+  font-weight: normal;
+  font-size:14px;
+  margin:0;
+}
+
+/*
+---------------------------------
+TABLES GENERALS
+---------------------------------
+*/
+
+#table-wrap {
+  clear:both;
+  color:#555555;
+  font-size: 1em;
+}
+
+#table-wrap table {
+  margin-top:20px;
+  width:100%;
+}
+
+#table-wrap table tr.header {
+  background-color:#333333;
+  color:#EEEEEE;
+  font-size: 1.2em;
+}
+
+#table-wrap table tr.header th {
+  padding:5px;
+  text-align: left;
+}
+
+#table-wrap table tr.even {
+  background-color:#ffffff;
+}
+
+#table-wrap table tr.odd {
+  background-color: $light_lead_color;
+}
+
+#table-wrap table td {
+  padding:5px;
+}
+
+#table-wrap table td.contributor-rank {
+  text-align: center;
+}
+
+#table-wrap table td.contributor-name {
+  width: 75%;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#table-wrap table td.contributor-since {
+  white-space: nowrap;
+  text-align: left;
+}
+
+#table-wrap table td.no-commits {
+  text-align: center;
+}
+
+td.commit-sha1, td.commit-date {
+    white-space: nowrap;
+}
+
+/*
+---------------------------------
+RELEASES LIST TABLE SPECIFICS
+---------------------------------
+*/
+
+td.release-tag, td.release-date, td.release-name {
+    text-align: left;
+    white-space: nowrap;
+}
+
+td.release-name {
+    width: 50%;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#table-wrap table td.release-counter {
+    text-align: center;
+    white-space: nowrap;
+}

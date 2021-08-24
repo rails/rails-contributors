@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% render "head", metadata: site.metadata, title: page.title %}
+  </head>
+  <body>
+    {% render "navbar", metadata: site.metadata %}
+
+    <div id="header-shadow">
+      <div class="wrapper">
+        <div id="container">
+          <div id="content">
+            <main id="content-in">
+              {{ content }}
+            </main>
+          </div>
+          <div id="sidebar">
+            {% render "sidebar" %}
+          </div>
+          <div id="bottom"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

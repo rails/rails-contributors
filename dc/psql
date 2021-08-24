@@ -1,3 +1,0 @@
-#!/bin/bash
-
-exec dc/rails db -p
