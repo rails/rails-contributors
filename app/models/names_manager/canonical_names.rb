@@ -371,6 +371,7 @@ module NamesManager
     map 'Diego Algorta'               'Diego Algorta Casamayou'
     map 'Diego Giorgini',             'ogeidix'
     map 'Dieter Komendera',           'kommen'
+    map 'Dino Maric',                 'dixpac'
     map 'Dirkjan Bussink',            'dbussink'
     map 'Dmitrii Samoilov',           'german'
     map 'Dmitrij Mjakotnyi',          'kucaahbe'
