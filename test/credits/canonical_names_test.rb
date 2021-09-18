@@ -1247,6 +1247,10 @@ module Credits
       assert_contributor_names '868e6b0', 'Dr Nic Williams'
     end
 
+    test 'Drew' do
+      assert_contributor_names '28a9b65', 'Drew Bragg'
+    end
+
     test "drbrain\100segment7.net" do
       assert_contributor_names 'ce0653b', 'Eric Hodel'
     end
