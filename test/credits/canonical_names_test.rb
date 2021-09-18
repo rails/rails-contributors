@@ -1263,6 +1263,10 @@ module Credits
       assert_contributor_names '7c3a5ec', 'Vasili Kachalko'
     end
 
+    test 'Drew' do
+      assert_contributor_names '28a9b65', 'Drew Bragg'
+    end
+
     test 'DrMark' do
       assert_contributor_names '56fec2f', 'Mark Lane'
     end

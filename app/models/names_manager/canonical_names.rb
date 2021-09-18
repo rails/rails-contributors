@@ -69,6 +69,10 @@ module NamesManager
         case email
         when "dan.burnette\100watershed5.com" then 'Daniel Burnette'
         end
+      when 'Drew'
+        case email
+        when 'dbragg@within3.com' then 'Drew Bragg'
+        end
       when 'Jan'
         case email
         when "jan\100habermann24.com" then 'Jan Habermann'
