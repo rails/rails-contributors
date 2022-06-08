@@ -4911,6 +4911,10 @@ module Credits
       assert_contributor_names 'fd15359', 'Yehuda Katz'
     end
 
+    test 'wynksaiddestroy' do
+      assert_contributor_names 'c4861cc', 'Fabian Winkler'
+    end
+
     test 'xal' do
       assert_contributor_names '0ceab81', 'Tobias Lütke'
     end
