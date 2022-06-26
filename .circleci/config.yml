@@ -2,7 +2,6 @@ version: 2
 
 jobs:
   build:
-    parallelism: 3
     working_directory: ~/rails_contributors
     docker:
       - image: cimg/ruby:2.6.5-node
