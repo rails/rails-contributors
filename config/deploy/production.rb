@@ -9,6 +9,7 @@ set :puma_workers, 1
 set :puma_phased_restart, true
 
 set :rvm_ruby_version, '2.6.5'
+set :rvm_custom_path, '/home/rails/.rvm'
 
 namespace :deploy do
   after :normalize_assets, :gzip_assets do
