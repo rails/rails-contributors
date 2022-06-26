@@ -5,14 +5,14 @@ jobs:
     parallelism: 3
     working_directory: ~/rails_contributors
     docker:
-      - image: circleci/ruby:2.6.5-node
+      - image: cimg/ruby:2.6.5-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           DATABASE_URL: postgres://postgres:postgres@localhost
           RAILS_ENV: test
-      - image: circleci/postgres:10-alpine
+      - image: cimg/postgres:12.10
         environment:
           POSTGRES_DB: rails_contributors_test
           POSTGRES_PASSWORD: postgres
