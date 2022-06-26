@@ -6,8 +6,10 @@ server DOCS_SERVER_IP, user: 'rails', roles: %w(web app db)
 set :puma_bind, 'unix:/tmp/rails-contributors.sock'
 set :puma_preload_app, false
 set :puma_workers, 1
+set :puma_phased_restart, true
 
 set :rvm_ruby_version, '2.6.5'
+set :rvm_custom_path, '/home/rails/.rvm'
 
 namespace :deploy do
   after :normalize_assets, :gzip_assets do
