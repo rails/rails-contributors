@@ -1163,6 +1163,10 @@ module Credits
       assert_contributor_names 'f74a4d8', 'Eduardo Cavazos'
     end
 
+    test 'Dima Fatko' do
+      assert_contributor_names '238432d', 'Jorge Manrubia', 'fatkodima'
+    end
+
     test 'dixpac' do
       assert_contributor_names 'c520417', 'Dino Maric'
     end
