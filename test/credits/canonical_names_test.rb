@@ -2959,6 +2959,10 @@ module Credits
       assert_contributor_names '3c90f7a', 'Matthew Stopa'
     end
 
+    test 'Maxim Chernyak' do
+      assert_contributor_names '20685d0', 'Max Chernyak'
+    end
+
     test 'Maxime RETY' do
       assert_contributor_names 'c7e875a', 'Maxime Réty'
     end

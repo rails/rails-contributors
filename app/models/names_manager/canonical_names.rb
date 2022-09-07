@@ -794,6 +794,7 @@ module NamesManager
     map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
     map 'Matthias Neumayr',           'neumayr'
     map 'Mattt Thompson',             '@mattt'
+    map 'Max Chernyak',               'Maxim Chernyak'
     map 'Max Melentiev',              'printercu'
     map 'Max Mitchell',               'mazuhl'
     map 'Maxime Réty',                'Maxime RETY', 'maximerety'
