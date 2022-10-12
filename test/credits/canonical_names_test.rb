@@ -152,6 +152,10 @@ module Credits
       assert_contributor_names 'c9430db', 'Guo Xiang Tan'
     end
 
+    test 'Alan Guo Xiang Tan' do
+      assert_contributor_names 'e6da3eb', 'Guo Xiang Tan'
+    end
+
     test 'Alberto Almagro Sotelo' do
       assert_contributor_names '5c62bd5', 'Gannon McGibbon', 'Alberto Almagro'
     end

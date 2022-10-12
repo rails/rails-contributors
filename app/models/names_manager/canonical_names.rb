@@ -473,7 +473,7 @@ module NamesManager
     map 'Greg Spiers',                'gspiers'
     map 'Grzegorz Daniluk',           "daniluk\100yahoo.com"
     map 'Guillaume Carbonneau',       'guillaume'
-    map 'Guo Xiang Tan',              'Guo Xiang', 'Alan Tan'
+    map 'Guo Xiang Tan',              'Guo Xiang', 'Alan Tan', 'Alan Guo Xiang Tan'
     map 'Gustavo Leon',               'HPNeo'
     map 'Guy Naor',                   "guy.naor\100famundo.com"
     map 'Hakan Ensari',               'hakanensari'
