@@ -549,6 +549,7 @@ module NamesManager
     map 'Javier Ramírez',             'jramirez'
     map 'Jay Levitt',                 "jay\100jay.fm"
     map 'Jean Baptiste Barth',        'jbbarth'
+    map 'Jean Boussier',              'Jean byroot Boussier'
     map 'Jean Helou',                 "jean.helou\100gmail.com", 'jean.helou'
     map 'Jean-Philippe Bougie',       "jp.bougie\100gmail.com"
     map 'Jeff Berg',                  "jeff\100ministrycentered.com"
