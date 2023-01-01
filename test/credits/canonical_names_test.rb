@@ -5051,10 +5051,6 @@ module Credits
       assert_contributor_names '9d8e348', 'Martin Emde'
     end
 
-    test "zzak" do
-      assert_contributor_names '9de0d59', 'zzak'
-    end
-
     test "Zachary Scott" do
       assert_contributor_names '3cfbee6', 'zzak'
     end
