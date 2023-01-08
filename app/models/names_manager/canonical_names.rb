@@ -1173,6 +1173,7 @@ module NamesManager
     map 'Zack Chandler',              'zackchandler'
     map 'Zhang Kang',                 'piecehealth'
     map 'Zheng Jia',                  'zhengjia'
+    map 'zzak',                       'Zachary Scott'
     # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
     CANONICAL_NAME_FOR = {}
     SEEN_ALSO_AS.each do |canonical_name, also_as|
