@@ -506,6 +506,7 @@ module NamesManager
     map 'Jack Christensen',           "jackc\100hylesanderson.com"
     map 'Jack Danger Canty',          'danger', 'Danger'
     map 'Jacob Atzen',                'jacobat'
+    map 'Jacob Duffy'                 'jpd800'
     map 'Jacob Fugal',                'lukfugl'
     map 'Jacob Herrington',           'jacobherrington'
     map 'Jacob Straszynski',          'jacobstr'
