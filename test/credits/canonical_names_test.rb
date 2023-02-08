@@ -2295,6 +2295,10 @@ module Credits
       assert_contributor_names '7581193', 'Jean-Philippe Bougie'
     end
 
+    test "jpd800" do
+      assert_contributor_names 'cb66f19', 'Jacob Duffy'
+    end
+
     test 'jqr' do
       assert_contributor_names '3028ca5', 'Elijah Miller'
     end
