@@ -6,12 +6,18 @@ defaults: &defaults
 
 development:
   <<: *defaults
+  host: localhost
+  user: postgres
   database: rails_contributors_development
 
 test:
   <<: *defaults
+  host: localhost
+  user: postgres
   database: rails_contributors_test
 
 staging:
   <<: *defaults
+  host: localhost
+  user: postgres
   database: rails_contributors_development
