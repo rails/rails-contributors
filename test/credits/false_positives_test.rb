@@ -25,7 +25,7 @@ module Credits
     end
 
     test 'GH-\d+' do
-      assert_contributor_names '777c39c', 'Zachary Scott'
+      assert_contributor_names '777c39c', 'zzak'
     end
 
     test 'whitespace' do

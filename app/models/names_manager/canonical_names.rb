@@ -427,10 +427,12 @@ module NamesManager
     map 'Evan Henshaw-Plath',         "evan\100protest.net"
     map 'Evan Weaver',                'evan'
     map 'Evgeny Zislis',              "evgeny.zislis\100gmail.com"
+    map 'Fabian Winkler',             'wynksaiddestroy'
     map 'Fabián Rodríguez',           'Fabian Rodriguez'
     map 'Fabien Mannessier',          "fabien\100odilat.com"
     map 'Farley Knight',              'farleyknight'
     map 'Farzad Farid',               'farzy'
+    map 'fatkodima',                  'Dima Fatko', 'Fatko Dima', 'fatkodima123'
     map 'Fedot Praslov',              'fedot'
     map 'Felix Dominguez',            'dacat'
     map 'Ferdinand Niedermann',       'nerdinand'
@@ -471,7 +473,7 @@ module NamesManager
     map 'Greg Spiers',                'gspiers'
     map 'Grzegorz Daniluk',           "daniluk\100yahoo.com"
     map 'Guillaume Carbonneau',       'guillaume'
-    map 'Guo Xiang Tan',              'Guo Xiang', 'Alan Tan'
+    map 'Guo Xiang Tan',              'Guo Xiang', 'Alan Tan', 'Alan Guo Xiang Tan'
     map 'Gustavo Leon',               'HPNeo'
     map 'Guy Naor',                   "guy.naor\100famundo.com"
     map 'Hakan Ensari',               'hakanensari'
@@ -504,6 +506,7 @@ module NamesManager
     map 'Jack Christensen',           "jackc\100hylesanderson.com"
     map 'Jack Danger Canty',          'danger', 'Danger'
     map 'Jacob Atzen',                'jacobat'
+    map 'Jacob Duffy',                'jpd800'
     map 'Jacob Fugal',                'lukfugl'
     map 'Jacob Herrington',           'jacobherrington'
     map 'Jacob Straszynski',          'jacobstr'
@@ -547,6 +550,7 @@ module NamesManager
     map 'Javier Ramírez',             'jramirez'
     map 'Jay Levitt',                 "jay\100jay.fm"
     map 'Jean Baptiste Barth',        'jbbarth'
+    map 'Jean Boussier',              'Jean byroot Boussier'
     map 'Jean Helou',                 "jean.helou\100gmail.com", 'jean.helou'
     map 'Jean-Philippe Bougie',       "jp.bougie\100gmail.com"
     map 'Jeff Berg',                  "jeff\100ministrycentered.com"
@@ -792,6 +796,7 @@ module NamesManager
     map 'Matthew Walker',             "matthew\100walker.wattle.id.au"
     map 'Matthias Neumayr',           'neumayr'
     map 'Mattt Thompson',             '@mattt'
+    map 'Max Chernyak',               'Maxim Chernyak'
     map 'Max Melentiev',              'printercu'
     map 'Max Mitchell',               'mazuhl'
     map 'Maxime Réty',                'Maxime RETY', 'maximerety'
@@ -1169,6 +1174,7 @@ module NamesManager
     map 'Zack Chandler',              'zackchandler'
     map 'Zhang Kang',                 'piecehealth'
     map 'Zheng Jia',                  'zhengjia'
+    map 'zzak',                       'Zachary Scott'
     # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
     CANONICAL_NAME_FOR = {}
     SEEN_ALSO_AS.each do |canonical_name, also_as|
