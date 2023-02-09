@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 5.0.0'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'listen', '>= 3.0.5', '< 3.9'
 end
 
 group :test do
