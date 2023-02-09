@@ -1244,7 +1244,7 @@ module Credits
     end
 
     test "dpiddy\100gmail.com" do
-      assert_contributor_names 'd9c0a37', 'Dan Peterson'
+      assert_contributor_names '58f2bd0c', 'Dan Peterson'
     end
 
     test 'dpmehta02' do
@@ -2280,7 +2280,7 @@ module Credits
     end
 
     test "joshknowles\100gmail.com" do
-      assert_contributor_names '7d01005', 'Josh Knowles'
+      assert_contributor_names 'e9681eb', 'Josh Knowles'
     end
 
     test 'joshpeek' do
@@ -3925,10 +3925,6 @@ module Credits
 
     test "robbat2\100gentoo.org" do
       assert_contributor_names '2a12b56', 'Robin H. Johnson'
-    end
-
-    test "robby\100planetargon.com" do
-      assert_contributor_names '2f40936', 'Robby Russell'
     end
 
     test 'robbyrussell' do
