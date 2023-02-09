@@ -2,7 +2,7 @@
 
 ## Ruby
 
-Needs Ruby 2.7.6.
+Needs Ruby 2.7.7.
 
 ## System dependencies
 
