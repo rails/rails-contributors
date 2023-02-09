@@ -152,6 +152,10 @@ module Credits
       assert_contributor_names 'c9430db', 'Guo Xiang Tan'
     end
 
+    test 'Alan Guo Xiang Tan' do
+      assert_contributor_names 'e6da3eb', 'Guo Xiang Tan'
+    end
+
     test 'Alberto Almagro Sotelo' do
       assert_contributor_names '5c62bd5', 'Gannon McGibbon', 'Alberto Almagro'
     end
@@ -1161,6 +1165,10 @@ module Credits
 
     test 'dharmatech' do
       assert_contributor_names 'f74a4d8', 'Eduardo Cavazos'
+    end
+
+    test 'Dima Fatko' do
+      assert_contributor_names '238432d', 'Jorge Manrubia', 'fatkodima'
     end
 
     test 'dixpac' do
@@ -2287,6 +2295,10 @@ module Credits
       assert_contributor_names '7581193', 'Jean-Philippe Bougie'
     end
 
+    test "jpd800" do
+      assert_contributor_names 'cb66f19', 'Jacob Duffy'
+    end
+
     test 'jqr' do
       assert_contributor_names '3028ca5', 'Elijah Miller'
     end
@@ -2953,6 +2965,10 @@ module Credits
 
     test 'Matt Stopa' do
       assert_contributor_names '3c90f7a', 'Matthew Stopa'
+    end
+
+    test 'Maxim Chernyak' do
+      assert_contributor_names '20685d0', 'Max Chernyak'
     end
 
     test 'Maxime RETY' do
@@ -4907,6 +4923,10 @@ module Credits
       assert_contributor_names 'fd15359', 'Yehuda Katz'
     end
 
+    test 'wynksaiddestroy' do
+      assert_contributor_names 'c4861cc', 'Fabian Winkler'
+    end
+
     test 'xal' do
       assert_contributor_names '0ceab81', 'Tobias Lütke'
     end
@@ -5029,6 +5049,10 @@ module Credits
 
     test "zraii\100comcast.net" do
       assert_contributor_names '9d8e348', 'Martin Emde'
+    end
+
+    test 'Zachary Scott' do
+      assert_contributor_names '3cfbee6', 'zzak'
     end
 
     test 'zsombor' do
