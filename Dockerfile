@@ -4,7 +4,7 @@
 #   * .ruby-version (used by CircleCI).
 #   * Install the version by hand in the server (uses RVM).
 #
-FROM ruby:2.6.5-alpine3.10
+FROM ruby:2.7.7-alpine3.16
 
 # LANG as recommended in the Encoding section of https://hub.docker.com/_/ruby/.
 ENV LANG C.UTF-8
@@ -31,6 +31,6 @@ RUN apk --no-cache add --update \
   yarn
 
 RUN gem update --system
-RUN gem install bundler -v '1.17.3'
+RUN gem install bundler -v '2.3.17'
 
 WORKDIR /rails-contributors
