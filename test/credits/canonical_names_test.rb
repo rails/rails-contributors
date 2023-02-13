@@ -4339,6 +4339,10 @@ module Credits
       assert_contributor_names 'ce50c96', 'Martin Gamsjaeger'
     end
 
+    test 'soartec-lab' do
+      assert_contributor_names '0fecd26', 'Shodai Suzuki'
+    end
+
     test "solo\100gatelys.com" do
       assert_contributor_names '796a43d', 'Solomon White'
     end
