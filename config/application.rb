@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 require "active_model/railtie"
@@ -12,7 +12,7 @@ require "rails/test_unit/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-require_relative '../lib/bot_killer'
+require_relative "../lib/bot_killer"
 
 module RailsContributors
   class Application < Rails::Application
