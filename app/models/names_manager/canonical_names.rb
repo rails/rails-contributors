@@ -1042,6 +1042,7 @@ module NamesManager
     map 'Simon Stapleton',            "simon.stapleton\100gmail.com"
     map 'shingo-nakanishi',           'shingo.nakanishi'
     map 'Shinichi Maeshima',          'willnet'
+    map 'Shodai Suzuki',              'soartec-lab'
     map 'Skye Shaw',                  'sshaw'
     map 'Slava Markevich',            'markevich'
     map 'Soichiro Ogawa',             'ogawaso'
