@@ -67,7 +67,7 @@ GEM
     bcrypt_pbkdf (1.0.1)
     bindex (0.8.1)
     builder (3.2.4)
-    capistrano (3.14.1)
+    capistrano (3.17.1)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -230,7 +230,7 @@ PLATFORMS
 DEPENDENCIES
   actionpack-page_caching (= 1.2.4)
   bcrypt_pbkdf (>= 1.0, < 2.0)
-  capistrano (~> 3.10)
+  capistrano (~> 3.17)
   capistrano-rails (~> 1.6)
   capistrano-rvm (= 0.1.1)
   capistrano3-puma (~> 5.2)
