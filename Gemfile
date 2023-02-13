@@ -11,7 +11,7 @@ gem 'unf'
 gem 'turbolinks', '~> 5'
 gem 'actionpack-page_caching', '1.2.4'
 
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 5.0.0'
 
