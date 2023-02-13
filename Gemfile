@@ -3,7 +3,7 @@ ruby '2.7.7'
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.0'
 gem 'pg'
 gem 'puma', '~> 5.6'
 gem 'rugged', '0.27.0'
