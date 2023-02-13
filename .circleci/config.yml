@@ -4,7 +4,7 @@ jobs:
   build:
     working_directory: ~/rails_contributors
     docker:
-      - image: cimg/ruby:2.7.7-node
+      - image: cimg/ruby:3.0.5-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
