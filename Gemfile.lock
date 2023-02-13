@@ -108,9 +108,6 @@ GEM
       activesupport (>= 5.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    listen (3.8.0)
-      rb-fsevent (~> 0.10, >= 0.10.3)
-      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -242,7 +239,6 @@ DEPENDENCIES
   capistrano3-puma (~> 5.2)
   coffee-rails (~> 5.0.0)
   ed25519
-  listen (>= 3.0.5, < 3.9)
   pg
   puma (~> 5.6)
   rails (~> 7.0)
