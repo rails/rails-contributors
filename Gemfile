@@ -1,4 +1,4 @@
-ruby '2.7.7'
+ruby '3.0.5'
 
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -11,7 +11,7 @@ gem 'unf'
 gem 'turbolinks', '~> 5'
 gem 'actionpack-page_caching', '1.2.4'
 
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 6.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 5.0.0'
 
@@ -24,8 +24,8 @@ group :test do
 end
 
 group :deployment do
-  gem 'capistrano', '~> 3.10',      require: false
-  gem 'capistrano-rails', '~> 1.1', require: false
+  gem 'capistrano', '~> 3.17',      require: false
+  gem 'capistrano-rails', '~> 1.6', require: false
   gem 'capistrano-rvm', '0.1.1',    require: false
   gem 'capistrano3-puma', '~> 5.2', require: false
   gem 'rbnacl', '>= 3.2', '< 5.0'
