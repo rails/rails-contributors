@@ -21,7 +21,7 @@ module ApplicationUtils
   # it if needed.
   def self.tmpdir
     tmpdir = File.join(Rails.root, 'tmp')
-    Dir.mkdir(tmpdir) unless File.exists?(tmpdir)
+    Dir.mkdir(tmpdir) unless File.exist?(tmpdir)
     tmpdir
   end
 
@@ -37,7 +37,7 @@ module ApplicationUtils
   def self.expire_cache
     cache_dir = Rails.application.config.action_controller.page_cache_directory
 
-    if Dir.exists?(cache_dir)
+    if Dir.exist?(cache_dir)
       expired_cache = "#{tmpdir}/expired_cache.#{Time.now.to_f}"
       FileUtils.mv(cache_dir, expired_cache, force: true)
       FileUtils.rm_rf(expired_cache)
