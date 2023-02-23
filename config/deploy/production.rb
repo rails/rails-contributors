@@ -8,7 +8,7 @@ set :puma_preload_app, false
 set :puma_workers, 1
 set :puma_phased_restart, true
 
-set :rvm_ruby_version, '3.1.3'
+set :rvm_ruby_version, '3.2.1'
 set :rvm_custom_path, '/home/rails/.rvm'
 
 namespace :deploy do
