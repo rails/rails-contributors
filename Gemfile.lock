@@ -175,7 +175,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rbnacl (4.0.2)
+    rbnacl (7.1.1)
       ffi
     rbnacl-libsodium (1.0.16)
       rbnacl (>= 3.0.1)
@@ -240,7 +240,7 @@ DEPENDENCIES
   puma (~> 5.6)
   rails (~> 6.1)
   rails-controller-testing
-  rbnacl (>= 3.2, < 5.0)
+  rbnacl (>= 3.2, < 8.0)
   rbnacl-libsodium
   rugged (= 0.27.0)
   sass-rails (~> 6.0)
