@@ -19,5 +19,6 @@ module RailsContributors
     config.load_defaults 6.1
     config.add_autoload_paths_to_load_path = false
     config.middleware.insert 0, BotKiller
+    config.active_support.cache_format_version = 7.0
   end
 end
