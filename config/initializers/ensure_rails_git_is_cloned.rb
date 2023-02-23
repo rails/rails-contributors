@@ -1,6 +1,6 @@
 RAILS_GIT = "#{Rails.root}/rails.git"
 
-unless Dir.exists?(RAILS_GIT)
+unless Dir.exist?(RAILS_GIT)
   puts <<~EOS
     Please, mirror the Rails repository using the command
 
