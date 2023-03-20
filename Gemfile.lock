@@ -179,7 +179,7 @@ GEM
       ffi
     rbnacl-libsodium (1.0.16)
       rbnacl (>= 3.0.1)
-    rugged (1.5.1)
+    rugged (1.6.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -241,7 +241,7 @@ DEPENDENCIES
   rails-controller-testing
   rbnacl (>= 3.2, < 8.0)
   rbnacl-libsodium
-  rugged (= 1.5.1)
+  rugged (= 1.6.2)
   sass-rails (~> 6.0)
   turbolinks (~> 5)
   uglifier (>= 1.3.0)
