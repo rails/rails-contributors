@@ -4491,6 +4491,10 @@ module Credits
       assert_contributor_names '3398f74', 'Stephen Veit'
     end
 
+    test "sabrams86" do
+      assert_contributor_names '95f4d75', 'Steven Abrams'
+    end
+
     test "sven\100c3d2.de" do
       assert_contributor_names '4b3e964', 'Sven Klemm'
     end
