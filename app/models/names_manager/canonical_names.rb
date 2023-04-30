@@ -1063,10 +1063,10 @@ module NamesManager
     map 'Stephen Touset',             "stephen\100touset.org"
     map 'Stephen Veiss',              'sveiss'
     map 'Stephen Veit',               "sveit\100tradeharbor.com"
-    map 'Steven Abrams',              'sabrams86'
     map 'Steve Agalloco',             'stve'
     map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
     map 'Steve Richert',              'laserlemon'
+    map 'Steven Abrams',              'sabrams86'
     map 'Steven Bristol',             'stevenbristol', 'steve'
     map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
     map 'Stian Grytøyr',              "stian\100grytoyr.net"
