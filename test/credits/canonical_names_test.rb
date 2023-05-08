@@ -2155,6 +2155,10 @@ module Credits
       assert_contributor_names 'c4f1979', 'Joe Goldwasser'
     end
 
+    test 'Joe Dupuis' do
+      assert_contributor_names 'fc839e980b', 'Joé Dupuis'
+    end
+
     test 'joeellis' do
       assert_contributor_names '8e0f49e', 'Joe Ellis'
     end
