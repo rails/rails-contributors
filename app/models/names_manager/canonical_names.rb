@@ -580,6 +580,7 @@ module NamesManager
     map 'Jim Hughes',                 'jeem'
     map 'Jim Meyer',                  'purp'
     map 'Jim Winstead',               "jimw\100mysql.com"
+    map 'Joé Dupuis',                 'Joe Dupuis'
     map 'Joe Ellis',                  'joeellis'
     map 'Joe Ferris',                 'jferris'
     map 'Joe Goldwasser',             "joe\100mjg2.com"
