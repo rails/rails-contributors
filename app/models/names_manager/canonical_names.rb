@@ -1175,7 +1175,7 @@ module NamesManager
     map 'Zach Dennis',                'zdennis'
     map 'Zachary Holt',               "z\100wzph.com"
     map 'Zack Chandler',              'zackchandler'
-    map 'Zhang Kang',                 'piecehealth'
+    map 'Zhang Kang',                 'piecehealth', 'Kang Zhang'
     map 'Zheng Jia',                  'zhengjia'
     map 'zzak',                       'Zachary Scott'
     # Reverse SEEN_ALSO_AS to be able to go from handler to canonical name.
