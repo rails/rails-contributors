@@ -73,7 +73,7 @@ GEM
     bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     builder (3.2.4)
-    capistrano (3.17.2)
+    capistrano (3.17.3)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -106,7 +106,7 @@ GEM
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
-    i18n (1.12.0)
+    i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
@@ -132,7 +132,7 @@ GEM
       net-ssh (>= 2.6.5, < 8.0.0)
     net-smtp (0.3.3)
       net-protocol
-    net-ssh (7.0.1)
+    net-ssh (7.1.0)
     nio4r (2.5.8)
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
