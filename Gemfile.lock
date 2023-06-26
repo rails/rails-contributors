@@ -138,7 +138,7 @@ GEM
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pg (1.5.3)
-    puma (5.6.5)
+    puma (5.6.6)
       nio4r (~> 2.0)
     racc (1.6.2)
     rack (2.2.7)
