@@ -146,6 +146,7 @@ module NamesManager
     map 'Adrien Coquio',              'bobbus'
     map 'Adrien Siami',               'Intrepidd'
     map 'Agis Anastasopoulos',        'Agis-'
+    map 'Akhil G Krishnan',           'akhilgkrishnan'
     map 'Akio Tajima',                'arton', 'artonx'
     map 'Akira Ikeda',                "ikeda\100dream.big.or.jp"
     map 'Akira Matsuda',              '松田 明'
