@@ -1005,6 +1005,7 @@ module NamesManager
     map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
     map 'Sandi Metz',                 "sandra.metz\100duke.edu"
     map 'Sasha Gerrand',              'sgerrand'
+    map 'Sasha Koss',                 'Aleksandr Koss'
     map 'Scott Bronson',              'bronson'
     map 'Scott Fleckenstein',         'nullstyle'
     map 'Scott Laird',                "scott\100sigkill.org"

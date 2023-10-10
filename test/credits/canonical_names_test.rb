@@ -164,6 +164,10 @@ module Credits
       assert_contributor_names '5c62bd5', 'Gannon McGibbon', 'Alberto Almagro'
     end
 
+    test 'Aleksandr Koss' do
+      assert_contributor_names 'b7bdacf', 'Sasha Koss'
+    end
+
     test 'Aleksey Kondratenko' do
       assert_contributor_names 'a9113b8', 'Aliaksey Kandratsenka'
     end
