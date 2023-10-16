@@ -1006,6 +1006,7 @@ module NamesManager
     map 'Sam Kirchmeier',             "sam.kirchmeier\100gmail.com"
     map 'Sandi Metz',                 "sandra.metz\100duke.edu"
     map 'Sasha Gerrand',              'sgerrand'
+    map 'Sasha Koss',                 'Aleksandr Koss'
     map 'Scott Bronson',              'bronson'
     map 'Scott Fleckenstein',         'nullstyle'
     map 'Scott Laird',                "scott\100sigkill.org"
@@ -1064,10 +1065,10 @@ module NamesManager
     map 'Stephen Touset',             "stephen\100touset.org"
     map 'Stephen Veiss',              'sveiss'
     map 'Stephen Veit',               "sveit\100tradeharbor.com"
-    map 'Steven Abrams',              'sabrams86'
     map 'Steve Agalloco',             'stve'
     map 'Steve Purcell',              "stephen_purcell\100yahoo.com"
     map 'Steve Richert',              'laserlemon'
+    map 'Steven Abrams',              'sabrams86'
     map 'Steven Bristol',             'stevenbristol', 'steve'
     map 'Steven Soroka',              "ssoroka78\100gmail.com", 'ssoroka'
     map 'Stian Grytøyr',              "stian\100grytoyr.net"
