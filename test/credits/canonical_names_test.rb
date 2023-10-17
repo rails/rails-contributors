@@ -2038,7 +2038,15 @@ module Credits
     test "jean.helou\100gmail.com" do
       assert_contributor_names 'a3659d5', 'Jean Helou'
     end
-
+    
+    test "Jean-Francois Labbé" do
+      assert_contributor_names '90d5a5c2ab', 'Jean-François Labbé'
+    end
+    
+    test "jean-francois labbe" do
+      assert_contributor_names '34916855ca', 'Jean-François Labbé'
+    end
+    
     test 'jeanmartin' do
       assert_contributor_names 'c48f744', 'Jan Schwenzien'
     end

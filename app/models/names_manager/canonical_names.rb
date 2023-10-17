@@ -553,6 +553,7 @@ module NamesManager
     map 'Jean Baptiste Barth',        'jbbarth'
     map 'Jean Boussier',              'Jean byroot Boussier'
     map 'Jean Helou',                 "jean.helou\100gmail.com", 'jean.helou'
+    map 'Jean-François Labbé',        "Jean-Francois Labbé", "jean-francois labbe"
     map 'Jean-Philippe Bougie',       "jp.bougie\100gmail.com"
     map 'Jeff Berg',                  "jeff\100ministrycentered.com"
     map 'Jeff Cohen',                 "cohen.jeff\100gmail.com"
