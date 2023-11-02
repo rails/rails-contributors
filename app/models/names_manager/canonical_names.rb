@@ -868,6 +868,7 @@ module NamesManager
     map 'Nicolás Sanguinetti',        'foca', 'Nicolas Sanguinetti'
     map 'Nik Wakelin',                'nik.wakelin', 'nik.kakelin'
     map 'Nikita Loskutov',            'cnaize'
+    map 'Niklas Häusele',             'Niklas Haeusele'
     map 'Nikolay Petrachkov',         'jastix'
     map 'Nils-Helge Garli Hegvik',    'nilsga'
     map 'Nils Jonsson',               "nils\100alumni.rice.edu"
