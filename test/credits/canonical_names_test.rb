@@ -2799,6 +2799,10 @@ module Credits
       assert_contributor_names '3c0fd44', 'Olly Headey'
     end
 
+    test 'Niklas Haeusele' do
+      assert_contributor_names 'b086a96', 'Niklas Häusele'
+    end
+
     test "m.stienstra\100fngtps.com" do
       assert_contributor_names 'b85c535', 'Manfred Stienstra'
     end
