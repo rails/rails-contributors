@@ -2042,15 +2042,15 @@ module Credits
     test "jean.helou\100gmail.com" do
       assert_contributor_names 'a3659d5', 'Jean Helou'
     end
-    
+
     test "Jean-Francois Labbé" do
       assert_contributor_names '90d5a5c2ab', 'Jean-François Labbé'
     end
-    
+
     test "jean-francois labbe" do
       assert_contributor_names '34916855ca', 'Jean-François Labbé'
     end
-    
+
     test 'jeanmartin' do
       assert_contributor_names 'c48f744', 'Jan Schwenzien'
     end
@@ -2803,10 +2803,6 @@ module Credits
       assert_contributor_names '3c0fd44', 'Olly Headey'
     end
 
-    test 'Niklas Haeusele' do
-      assert_contributor_names 'b086a96', 'Niklas Häusele'
-    end
-
     test "m.stienstra\100fngtps.com" do
       assert_contributor_names 'b85c535', 'Manfred Stienstra'
     end
@@ -3361,6 +3357,10 @@ module Credits
 
     test 'nik.wakelin' do
       assert_contributor_names '5bf40f7', 'Nik Wakelin'
+    end
+
+    test 'Niklas Haeusele' do
+      assert_contributor_names 'b086a96', 'Niklas Häusele'
     end
 
     test "nils\100alumni.rice.edu" do
