@@ -671,6 +671,10 @@ module Credits
       assert_contributor_names '838ae35', 'Chris McGrath'
     end
 
+    test 'chaadow' do
+      assert_contributor_names 'a5e1fc97d2', 'Chedli Bourguiba'
+    end
+
     test "c.r.mcgrath\100gmail.com" do
       assert_contributor_names '6a51940', 'Chris McGrath'
     end
