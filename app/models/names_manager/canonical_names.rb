@@ -289,6 +289,7 @@ module NamesManager
     map 'Charles Nutter',             "headius\100headius.com"
     map 'Chas Grundy',                'chas'
     map 'Cheah Chu Yeow',             'Chu Yeow', 'chuyeow'
+    map 'Chedli Bourguiba',           'chaadow'
     map 'Choon Keat',                 "choonkeat\100gmail.com", 'choonkeat'
     map 'Chris Anderson',             'jchris'
     map 'Chris Brinker',              "chris\100chrisbrinker.com"
