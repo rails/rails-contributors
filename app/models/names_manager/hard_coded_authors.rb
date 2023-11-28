@@ -98,6 +98,8 @@ module NamesManager
         ['Josh Peek', 'David Heinemeier Hansson']
       when 'fdbc55b9d55ae9d2b5b39be3ef4af5f60f6954a3', '6c6c3fa166975e5aebbe444605d736909e9eb75b'
         ['Yasuo Honda']
+      when '83c6ba18899a9f797d79726ca0078bdf618ec3d4'
+        ['S. Brent Faulkner']
       else
         nil
       end
