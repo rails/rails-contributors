@@ -24,7 +24,7 @@ group :test do
 end
 
 group :deployment do
-  gem 'capistrano', '~> 3.17',      require: false
+  gem 'capistrano', '~> 3.18',      require: false
   gem 'capistrano-rails', '~> 1.6', require: false
   gem 'capistrano-rvm', '0.1.2',    require: false
   gem 'capistrano3-puma', '~> 5.2', require: false
