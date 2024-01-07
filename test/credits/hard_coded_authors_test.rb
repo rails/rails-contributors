@@ -34,6 +34,7 @@ module Credits
       assert_contributor_names '4f1472d', 'John Bampton'
       assert_contributor_names 'fdbc55b', 'Yasuo Honda'
       assert_contributor_names '6c6c3fa', 'Yasuo Honda'
+      assert_contributor_names '83c6ba1', 'S. Brent Faulkner'
     end
   end
 end
