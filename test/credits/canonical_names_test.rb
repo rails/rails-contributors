@@ -100,6 +100,10 @@ module Credits
       assert_contributor_names '7dfa8c0', 'Adam Hawkins'
     end
 
+    test 'Adrian' do
+      assert_contributor_names '475bb4b', 'Adrian Marin'
+    end
+
     test 'adymo' do
       assert_contributor_names '9d03813', 'Alexander Dymo'
     end

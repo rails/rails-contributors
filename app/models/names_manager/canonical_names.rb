@@ -143,6 +143,7 @@ module NamesManager
     map 'Adelle Hartley',             "adelle\100bullet.net.au"
     map 'Aditya Chadha',              'Aditya'
     map 'Aditya Kapoor',              'aditya-kapoor'
+    map 'Adrian Marin',               'Adrian'
     map 'Adrien Coquio',              'bobbus'
     map 'Adrien Siami',               'Intrepidd'
     map 'Agis Anastasopoulos',        'Agis-'
