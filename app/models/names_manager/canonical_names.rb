@@ -1086,6 +1086,7 @@ module NamesManager
     map 'Tadas Tamošauskas',          'Tadas Tamosauskas'
     map 'Takayuki Matsubara',         'ma2gedev'
     map 'Takoyaki Kamen',             'タコ焼き仮面'
+    map 'Takuma Yoshida',             'takmar', 'Takuma'
     map 'Tal Rotbart',                'redbeard'
     map 'Tanmay Sinha',               'tanmay3011'
     map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
