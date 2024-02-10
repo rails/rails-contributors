@@ -4563,6 +4563,14 @@ module Credits
       assert_contributor_names 'fa1ea34' ,'Mitsutaka Mimura'
     end
 
+    test 'takmar' do
+      assert_contributor_names 'ea49d27' ,'Takuma Yoshida'
+    end
+
+    test 'Takuma' do
+      assert_contributor_names 'de39164' ,'Takuma Yoshida'
+    end
+
     test 'tank-bohr' do
       assert_contributor_names 'f3101fd', 'Alexey Nikitin'
     end
