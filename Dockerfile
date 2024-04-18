@@ -14,6 +14,7 @@ ENV BUNDLE_JOBS 4
 # openssh-client is handy to check SSH access from within the container.
 # curl is used in deployments.
 # cmake is needed to compile rugged.
+# gcompat is needed by nokogiri.
 # git is used by the application itself.
 # tzdata is needed by the TZinfo gem.
 RUN apk --no-cache add --update \
@@ -22,6 +23,7 @@ RUN apk --no-cache add --update \
   openssh-client \
   cmake \
   curl \
+  gcompat \
   git \
   vim \
   postgresql-client \
