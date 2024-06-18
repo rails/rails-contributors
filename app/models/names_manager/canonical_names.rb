@@ -861,6 +861,7 @@ module NamesManager
     map 'Nick Cox',                   'thenickcox'
     map 'Nick Kallen',                'nkallen'
     map 'Nick Murphy',                "nick+rails\100ag.arizona.edu"
+    map 'Nick Pezza',                 "npezza93"
     map 'Nick Plante',                'zapnap'
     map 'Nick Sieger',                'nicksieger', "nicksieger\100gmail.com", 'Nick'
     map 'Nicolas Blanco',             'slainer68'
