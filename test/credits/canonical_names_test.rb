@@ -3339,10 +3339,6 @@ module Credits
       assert_contributor_names '260d6f1', 'Nick Pezza'
     end
 
-    test "Nick Pezza" do
-      assert_contributor_names '7f4b396', 'Nick Pezza'
-    end
-
     test 'nicksieger' do
       assert_contributor_names '2029b8a', 'Nick Sieger'
     end
