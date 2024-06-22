@@ -6,8 +6,8 @@ module Credits
     include AssertContributorNames
 
     test 'disambiguates abhishek' do
-      assert_contributor_names '21f0c58', 'Abhishek Jain'
-      assert_contributor_names '00e30b8', 'Abhishek Yadav'
+      assert_contributor_names '21f0c580', 'Abhishek Jain'
+      assert_contributor_names '00e30b8f', 'Abhishek Yadav'
     end
 
     test 'disambiguates Sam' do
