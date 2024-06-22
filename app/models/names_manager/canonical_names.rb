@@ -784,6 +784,7 @@ module NamesManager
     map 'Mats Persson',               "mats\100imediatec.co.uk"
     map 'Matt Aimonetti',             'matt'
     map 'Matt Bauer',                 'mattbauer'
+    map 'Matt Almeida',               'northeastprince'
     map 'Matt Boehlig',               'Matt B.'
     map 'Matt Freels',                'freels'
     map 'Matt Lyon',                  'mattly'
@@ -1087,6 +1088,7 @@ module NamesManager
     map 'Tadas Tamošauskas',          'Tadas Tamosauskas'
     map 'Takayuki Matsubara',         'ma2gedev'
     map 'Takoyaki Kamen',             'タコ焼き仮面'
+    map 'Takuma Yoshida',             'takmar', 'Takuma'
     map 'Tal Rotbart',                'redbeard'
     map 'Tanmay Sinha',               'tanmay3011'
     map 'Tarmo Tänav',                'tarmo', 'tarmo_t', 'Tarmo Täna'
