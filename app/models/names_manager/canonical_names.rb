@@ -784,6 +784,7 @@ module NamesManager
     map 'Mats Persson',               "mats\100imediatec.co.uk"
     map 'Matt Aimonetti',             'matt'
     map 'Matt Bauer',                 'mattbauer'
+    map 'Matt Almeida',               'northeastprince'
     map 'Matt Boehlig',               'Matt B.'
     map 'Matt Freels',                'freels'
     map 'Matt Lyon',                  'mattly'
