@@ -3411,6 +3411,10 @@ module Credits
       assert_contributor_names 'd4c24b6', 'Norman Elton'
     end
 
+    test 'northeastprince' do
+      assert_contributor_names '8e98b61', 'Matt Almeida'
+    end
+
     test 'nosolopau' do
       assert_contributor_names '1e1711c', 'Pau'
     end
