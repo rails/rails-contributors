@@ -121,12 +121,23 @@ TOP HEADER LINKS
 #topBar {
 	background-color:#000000;
   color:#565656;
-  padding:1em 0;
+  padding:1em;
 }
 
-#topBar .wrapper {
-  padding-left:1em;
-  width:68em;
+@media (min-width: 768px) {
+  #topBar {
+    padding: 1em 0;
+  }
+
+  #topBar ul {
+    display: flex;
+  }
+
+  #topBar li:not(:last-child, :first-child) {
+    margin-right:6px;
+    padding-right:6px;
+    border-right: 1px solid #565656;
+  }
 }
 
 #topBar a.home {
@@ -149,33 +160,37 @@ LAYOUT GENERALS
 */
 
 #header {
-  background:$lead_color image-url("header_tile.gif") repeat-x scroll 0 0;
+  background-color:$lead_color;
   color:#FFFFFF;
   overflow:hidden;
   padding:1em 0;
 }
 
-#header-shadow {
-  background:transparent image-url("header-shadow.png") repeat-x scroll top center;
-}
-
-#header-shadow .wrapper {
-  margin-left:7.5em;
+#logo {
+  img {
+    width: 100%;
+    max-width: 492px;
+  }
 }
 
 #container {
-  background:transparent image-url("content-shadow.png") repeat-y scroll left center;
   overflow:hidden;
   position:relative;
-  width:850px;
+  max-width:850px;
+
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: flex-end;
+  overflow: visible;
 }
 
 #content {
   background-color:#FFFFFF;
-  float:left;
-  margin-left:10px;
   min-height:500px;
-  width:630px;
+  max-width:630px;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
 }
 
 #content-in {
@@ -183,16 +198,13 @@ LAYOUT GENERALS
   padding:20px;
 }
 
-#bottom {
-  background: #eaeaea image-url("bottom-bg.png") no-repeat top left;
-  clear:both;
-  height:20px;
-}
-
-.wrapper {
-  margin:0 8em;
-  text-align:left;
-  width:69em;
+@media (min-width: 768px) {
+  .wrapper {
+    margin:0 8em;
+    text-align:left;
+    max-width:69em;
+    width: 100%;
+  }
 }
 
 /*
@@ -201,17 +213,24 @@ SIDEBAR NAVIGATION
 ---------------------------------
 */
 #sidebar {
-  -moz-border-radius-bottomright:10px;
-  -moz-border-radius-topright:10px;
-  -webkit-border-top-right-radius:10px;
-  -webkit-border-bottom-right-radius:10px;
-  background:$lead_color image-url("nav-shadow-left.png") repeat-y scroll left center;
+  background-color:$lead_color;
   color:#FFFFFF;
-  float:left;
-  margin-top:20px;
-  min-height:400px;
-  padding-top:2em;
-  width:160px;
+  margin:20px 0;
+  width: 100%;
+  padding: 0 20px;
+
+  summary {
+    cursor: pointer;
+    margin: 5px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  #sidebar {
+    width:160px;
+    border-bottom-right-radius:10px;
+    border-top-right-radius:10px;
+  }
 }
 
 #sidebar h4 {
@@ -228,14 +247,13 @@ SIDEBAR NAVIGATION
 }
 
 #sidebar li {
-  background:#E6E6E6 image-url("nav-shadow-left.png") repeat-y scroll left;
+  background-color: #E6E6E6;
   border-bottom:3px solid $dark_lead_color;
   display:block;
   font-size: 16px;
   height:30px;
   margin-bottom:10px;
   text-align: center;
-  width:140px;
 }
 
 #sidebar li a {
@@ -255,9 +273,6 @@ SIDEBAR NAVIGATION
   font-weight:bold;
 }
 
-
-#sidebar ul#common-links {
-}
 
 #sidebar ul#common-links li {
   font-weight: normal;

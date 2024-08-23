@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="description" content="<%= @description %>">
     <meta name="keywords" content="<%= Array.wrap(@keywords).concat(['Ruby on Rails', 'core', 'contributors']).join(',') %>">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="author" content="Xavier Noria">
     <meta name="designer" content="José Espinal">
 
@@ -14,11 +15,11 @@
     <%= favicon_link_tag %>
   </head>
   <body>
-    <div id="topBar">
+    <nav id="topBar" aria-label="Secondary">
       <div class="wrapper">
         <%= render 'layouts/top_bar_content' %>
       </div>
-    </div>
+    </nav>
     <div id="header">
       <div class="wrapper">
         <div id="logo">
@@ -34,10 +35,12 @@
               <%= yield %>
             </div>
           </div>
-          <div id="sidebar">
-            <%= yield :sidebar %>
-          </div>
-          <div id="bottom"></div>
+          <nav id="sidebar" aria-label="Main">
+            <details>
+              <summary><span>Navigation</span></summary>
+              <%= yield :sidebar %>
+            </details>
+          </nav>
         </div>
       </div>
     </div>
