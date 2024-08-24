@@ -41,5 +41,6 @@ module RailsContributors
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.add_autoload_paths_to_load_path = false
+    config.active_support.cache_format_version = 7.1
   end
 end
