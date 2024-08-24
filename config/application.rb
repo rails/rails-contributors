@@ -22,7 +22,7 @@ require_relative "../lib/bot_killer"
 module RailsContributors
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    config.load_defaults 7.1
 
     config.add_autoload_paths_to_load_path = false
     config.middleware.insert 0, BotKiller
@@ -39,8 +39,5 @@ module RailsContributors
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
-    config.add_autoload_paths_to_load_path = false
-    config.active_support.cache_format_version = 7.1
   end
 end
