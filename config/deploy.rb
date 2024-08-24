@@ -1,6 +1,7 @@
 lock '~> 3.10'
 
 set :application, 'rails-contributors'
+set :branch, 'main'
 set :repo_url, 'https://github.com/rails/rails-contributors.git'
 
 set :deploy_to, '/home/rails/rails-contributors'
