@@ -212,7 +212,7 @@ GEM
       psych (>= 4.0.0)
     reline (0.5.9)
       io-console (~> 0.5)
-    rugged (1.7.1)
+    rugged (1.7.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -279,7 +279,7 @@ DEPENDENCIES
   rails-controller-testing
   rbnacl (>= 3.2, < 8.0)
   rbnacl-libsodium
-  rugged (= 1.7.1)
+  rugged (= 1.7.2)
   sass-rails (~> 6.0)
   sprockets-rails
   turbolinks (~> 5)
