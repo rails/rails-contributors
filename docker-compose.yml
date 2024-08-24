@@ -12,7 +12,7 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:postgres@db
   db:
-    image: postgres:12.13-alpine
+    image: postgres:14.13-alpine
     environment:
       POSTGRES_PASSWORD: postgres
       # A subdirectory, as recommended in https://hub.docker.com/_/postgres/.
