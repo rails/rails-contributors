@@ -4,14 +4,14 @@ jobs:
   build:
     working_directory: ~/rails_contributors
     docker:
-      - image: cimg/ruby:3.2.1-node
+      - image: cimg/ruby:3.3.4-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           DATABASE_URL: postgres://postgres:postgres@localhost
           RAILS_ENV: test
-      - image: cimg/postgres:12.12
+      - image: cimg/postgres:14.13
         environment:
           POSTGRES_DB: rails_contributors_test
           POSTGRES_PASSWORD: postgres
