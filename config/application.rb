@@ -13,6 +13,7 @@ require "action_controller/railtie"
 require "action_view/railtie"
 # require "action_cable/engine"
 require "rails/test_unit/railtie"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -24,13 +25,12 @@ module RailsContributors
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
-    config.add_autoload_paths_to_load_path = false
     config.middleware.insert 0, BotKiller
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
-    # config.autoload_lib(ignore: %w(assets tasks))
+    # config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
     #
