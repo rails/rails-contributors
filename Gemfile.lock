@@ -80,7 +80,7 @@ GEM
     airbrussh (1.5.2)
       sshkit (>= 1.6.1, != 1.7.0)
     base64 (0.2.0)
-    bcrypt_pbkdf (1.1.0)
+    bcrypt_pbkdf (1.1.1)
     bigdecimal (3.1.8)
     bindex (0.8.1)
     builder (3.3.0)
