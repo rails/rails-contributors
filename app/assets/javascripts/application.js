@@ -15,6 +15,6 @@
 
 window.addEventListener("turbolinks:load", () => {
   if (window.matchMedia("(min-width: 768px)").matches) {
-    document.querySelector("#sidebar summary").click();
+    document.querySelector("#sidebar details:not(open) summary")?.click();
   }
 });
