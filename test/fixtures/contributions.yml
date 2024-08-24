@@ -21,6 +21,10 @@ contribution_<%= n += 1 %>:
   contributor: jose
 
 contribution_<%= n += 1 %>:
+  commit: commit_e243a8a
+  contributor: jose
+
+contribution_<%= n += 1 %>:
   commit: commit_5b90635
   contributor: jeremy
 

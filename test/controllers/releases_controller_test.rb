@@ -5,9 +5,8 @@ class ReleasesControllerTest < ActionController::TestCase
     get :index
     assert_response :success
 
-    assert_select 'span.listing-total', 'Showing 5 releases'
-
     expected = %w(
+      v4_0_0
       v3_2_0
       v2_3_2_1
       v2_3_2
@@ -24,7 +23,7 @@ class ReleasesControllerTest < ActionController::TestCase
       assert_equal e.contributors.count, a.ncontributors
     end
 
-    assert_select 'span.listing-total', 'Showing 5 releases'
+    assert_select 'span.listing-total', "Showing #{expected.size} releases"
     assert_select 'li.current', 'Releases'
   end
 end
