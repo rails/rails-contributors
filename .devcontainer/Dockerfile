@@ -8,7 +8,7 @@ ENV RAILS_DEVELOPMENT_HOSTS=".githubpreview.dev"
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends cmake
+    && apt-get -y install --no-install-recommends cmake pkg-config
 
 # [Optional] Uncomment this line to install additional gems.
 # RUN gem install <your-gem-names-here>
