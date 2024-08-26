@@ -7,7 +7,7 @@ gem 'rails', '~> 7.2.1'
 
 gem 'sprockets-rails'
 
-gem 'rack', '< 3.0'
+gem 'rack', '< 4.0'
 gem 'pg'
 gem 'puma', '~> 5.6'
 gem 'rugged', '1.7.2'
