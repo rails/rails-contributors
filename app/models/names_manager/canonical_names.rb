@@ -238,6 +238,7 @@ module NamesManager
     map 'Ben Holley',                 'benolee'
     map 'Ben Murphy',                 'benmmurphy'
     map 'Ben Sandofsky',              'sandofsky'
+    map 'Ben Sheldon',                'Ben Sheldon [he'
     map 'Ben Scofield',               'bscofield'
     map 'Ben Sinclair',               "ben\100bensinclair.com"
     map 'Benedikt Deicke',            'benedikt'
