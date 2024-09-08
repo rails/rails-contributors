@@ -66,6 +66,10 @@ module NamesManager
           $1
         when /\A(?:DHH\s*)?via\s+(.*)/i
           $1
+        # These are present in some of Ben Sheldon commits. This pattern needs
+        # ad-hoc handling because "/" is considered to be a name connector.
+        when %r{\[he/him\]}
+          $`.strip
         when /\b\w+\+\w+@/
           # The plus sign is taken to be a connector below, this catches some known
           # addresses that use a plus sign in the username, see unit tests for examples.

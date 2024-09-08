@@ -269,5 +269,9 @@ module Credits
     test 'ignores unknown contributors referred as "others"' do
       assert_contributor_names 'da4b15f', 'Kevin Jackson', 'David Heinemeier Hansson', exact: true
     end
+
+    test '[he/him] ad-hoc handling' do
+      assert_contributor_names 'fe03a19', 'Ben Sheldon'
+    end
   end
 end
