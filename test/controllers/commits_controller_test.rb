@@ -24,7 +24,7 @@ class CommitsControllerTest < ActionController::TestCase
     cases = [
       [:david,  [:commit_339e4e8, :commit_e0ef631]],
       [:jeremy, [:commit_b821094, :commit_7cdfd91, :commit_5b90635]],
-      [:jose,   [:commit_5b90635]],
+      [:jose,   [:commit_e243a8a, :commit_5b90635]],
     ].map {|a, b| [contributors(a), Array(commits(*b))]}
 
     cases.each do |contributor, commits|

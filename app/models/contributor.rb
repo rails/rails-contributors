@@ -39,8 +39,8 @@ class Contributor < ApplicationRecord
       order('ncommits DESC, contributors.url_id ASC')
   end
 
-  def self.set_first_contribution_timestamps(only_new)
-    scope = only_new ? 'first_contribution_at IS NULL' : '1 = 1'
+  def self.set_first_contribution_timestamps(only_missing)
+    scope = only_missing ? 'first_contribution_at IS NULL' : '1 = 1'
 
     connection.execute(<<-SQL)
       UPDATE contributors
@@ -52,6 +52,23 @@ class Contributor < ApplicationRecord
           GROUP BY contributor_id
       ) AS first_contributions
       WHERE id = first_contributions.contributor_id
+      AND #{scope}
+    SQL
+  end
+
+  def self.set_last_contribution_timestamps(only_missing)
+    scope = only_missing ? 'last_contribution_at IS NULL' : '1 = 1'
+
+    connection.execute(<<-SQL)
+      UPDATE contributors
+      SET last_contribution_at = last_contributions.committer_date
+      FROM (
+        SELECT contributor_id, MAX(commits.committer_date) AS committer_date
+          FROM contributions
+          INNER JOIN commits ON commits.id = commit_id
+          GROUP BY contributor_id
+      ) AS last_contributions
+      WHERE id = last_contributions.contributor_id
       AND #{scope}
     SQL
   end
