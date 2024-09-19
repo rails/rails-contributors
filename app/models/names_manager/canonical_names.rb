@@ -273,6 +273,7 @@ module NamesManager
     map 'Bryan Kang',                 'deepblue'
     map 'Buddhika Laknath',           'laknath', 'Laknath'
     map 'Caio Chassot',               'caio', "k\100v2studio.com"
+    map 'Caleb Buxton',               "Caleb"
     map 'Caleb Tennis',               "caleb\100aei-tech.com"
     map 'Calvin Yu',                  'cyu'
     map 'Carina C. Zona',             'cczona'
