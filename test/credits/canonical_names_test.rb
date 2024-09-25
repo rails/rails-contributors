@@ -2064,7 +2064,7 @@ module Credits
     end
 
     test "jeff\100ministrycentered.com" do
-      assert_contributor_names 'a5991d8', 'Jeff Berg'
+      assert_contributor_names 'a5991d849175c2ae9b803486f61b610fad9fd87e', 'Jeff Berg'
     end
 
     test "jeff\100opendbms.com" do
