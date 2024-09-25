@@ -6,7 +6,11 @@ module AssertContributorNames
   def assert_contributor_names(sha1, *contributor_names, **options)
     begin
       commit = Commit.new_from_rugged_commit(REPO.repo.lookup(sha1))
-    rescue Rugged::OdbError
+    rescue Rugged::OdbError => e
+      if e.message == "ambiguous OID prefix - found multiple pack entries"
+        raise "#{sha1} is ambiguous, please use the full commit SHA"
+      end
+
       raise "#{sha1} was not found, please make sure the local Rails checkout is up to date"
     end
 
