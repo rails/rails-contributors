@@ -1460,7 +1460,7 @@ module Credits
     end
 
     test "evgeny.zislis\100gmail.com" do
-      assert_contributor_names '842ce34', 'Evgeny Zislis'
+      assert_contributor_names '842ce34bbcfb2d65b04a6e80bf8c168d7c17277d', 'Evgeny Zislis'
     end
 
     test 'f.svehla' do
