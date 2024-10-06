@@ -1,0 +1,96 @@
+#!/usr/bin/env ruby
+
+ENV["RAILS_ENV"] ||= "test"
+require_relative "../config/environment"
+
+module TrackSha1Assertions
+  mattr_accessor :target_length, default: 8
+  mattr_accessor :sha1_lengthenings, default: []
+
+  def assert_contributor_names(sha1, *contributor_names, **options)
+    super
+  rescue RuntimeError => e
+    expected = contributor_names.to_set
+
+    ambiguous = ambiguous_sha1s(sha1)
+    if ambiguous.size > 1
+      passing = ambiguous.find do |full_sha1|
+        if options[:equal]
+          contributor_names(full_sha1) == expected
+        else
+          expected.subset?(contributor_names(full_sha1))
+        end
+      rescue
+        false
+      end
+
+      raise e if passing.nil?
+
+      extra = 0
+      while ambiguous.map { _1.slice(...target_length + extra) }.uniq.length < ambiguous.length
+        extra += 1
+      end
+
+      lengthened = passing.slice(0..sha1.length + extra)
+
+      super(lengthened, *contributor_names, **options)
+      relative_test_file, calling_test_line = relative_test_file_and_line(e.backtrace)
+
+      warn "Ambiguous sha1 #{sha1} was lengthened to #{passing.slice(0..sha1.length + extra)} to pass rails test #{relative_test_file}:#{calling_test_line}"
+      sha1_lengthenings.push([relative_test_file, sha1, lengthened])
+    else
+      raise e
+    end
+  else
+    lengthened = lengthen_sha1(sha1)
+
+    relative_test_file, calling_test_line = relative_test_file_and_line(caller)
+
+    begin
+      super(lengthened, *contributor_names, **options)
+
+      sha1_lengthenings.push([relative_test_file, sha1, lengthened]) unless sha1 == lengthened
+    rescue => e
+      warn "Unable to lengthen sha1 #{sha1} to #{lengthened} and pass rails test #{relative_test_file}:#{calling_test_line}."
+      raise e
+    end
+  end
+
+  private
+
+  def lengthen_sha1(sha1)
+    AssertContributorNames::REPO.repo.lookup(sha1).oid.slice(...target_length)
+  end
+
+  def ambiguous_sha1s(sha1)
+    AssertContributorNames::REPO.repo.each_id.select { _1.start_with?(sha1) }
+  end
+
+  def contributor_names(sha1)
+    Commit.new_from_rugged_commit(AssertContributorNames::REPO.repo.lookup(sha1)).extract_contributor_names(AssertContributorNames::REPO).to_set
+  end
+
+  def relative_test_file_and_line(stack)
+    calling_test_file, calling_test_line = stack.find { _1.start_with?(Rails.root.join("test").to_s) && !_1.include?("test/support") }.split(":").values_at(0, 1)
+    [calling_test_file.remove(Rails.root.to_s + "/"), calling_test_line]
+  end
+end
+
+begin
+  $LOAD_PATH << Rails.root.join("test").to_s
+  Rails::TestUnit::Runner.parse_options(ARGV)
+
+  Rails::TestUnit::Runner.load_tests(ARGV)
+
+  ActiveSupport::TestCase.descendants.select { _1.include? AssertContributorNames }.each { _1.prepend TrackSha1Assertions }
+
+  Minitest.after_run do
+    TrackSha1Assertions.sha1_lengthenings.each do |relative_test_file, sha1, lengthened|
+      content = File.binread(relative_test_file)
+      content.gsub!(/(['"])#{sha1}\1/, "'#{lengthened}'")
+      File.binwrite(relative_test_file, content)
+    end
+  end
+rescue Rails::TestUnit::InvalidTestError => error
+  raise ArgumentError, error.message
+end
