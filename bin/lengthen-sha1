@@ -31,12 +31,12 @@ module TrackSha1Assertions
         extra += 1
       end
 
-      lengthened = passing.slice(0..sha1.length + extra)
+      lengthened = passing.slice(0..target_length + extra)
 
       super(lengthened, *contributor_names, **options)
       relative_test_file, calling_test_line = relative_test_file_and_line(e.backtrace)
 
-      warn "Ambiguous sha1 #{sha1} was lengthened to #{passing.slice(0..sha1.length + extra)} to pass rails test #{relative_test_file}:#{calling_test_line}"
+      warn "Ambiguous sha1 #{sha1} was lengthened to #{passing.slice(0..target_length + extra)} to pass rails test #{relative_test_file}:#{calling_test_line}"
       sha1_lengthenings.push([relative_test_file, sha1, lengthened])
     else
       raise e
