@@ -9,7 +9,7 @@ module Credits
     #   Added Object#presence that returns the object if it's #present? otherwise returns nil [DHH/Colin Kelley]
     #
     test 'captures credit at the end of the subject' do
-      assert_contributor_names '1c47d04', 'David Heinemeier Hansson', 'Colin Kelley'
+      assert_contributor_names '1c47d04e', 'David Heinemeier Hansson', 'Colin Kelley'
     end
 
     # Example from 9e9793b:
@@ -23,13 +23,13 @@ module Credits
     #
     test 'captures credit in an isolated line' do
       # First line in body.
-      assert_contributor_names '9e9793b', 'Rafael Mendonça França', 'Yves Senn'
+      assert_contributor_names '9e9793b4', 'Rafael Mendonça França', 'Yves Senn'
 
       # Line in the middle.
-      assert_contributor_names '2a67e12', 'Matthew Draper', 'Yves Senn'
+      assert_contributor_names '2a67e12f', 'Matthew Draper', 'Yves Senn'
 
       # There are multiple lines with [...], only one of them has credits.
-      assert_contributor_names '84c0f73', 'Godfrey Chan', 'Xavier Noria'
+      assert_contributor_names '84c0f73c', 'Godfrey Chan', 'Xavier Noria'
     end
 
     # Example from ec20838:
@@ -46,11 +46,11 @@ module Credits
     #   ...
     #
     test 'captures credit from CHANGELOGs in commits imported from Subversion' do
-      assert_contributor_names 'ec20838', 'Simon Stapleton', 'Tom Ward'
-      assert_contributor_names 'cf656ec', 'Christopher Cotton'
-      assert_contributor_names '532d4e8', 'Michael Schoen'
-      assert_contributor_names 'c95365a', 'Geoff Buesing'
-      assert_contributor_names '8dea60b', 'Vitaly Kushner'
+      assert_contributor_names 'ec208383', 'Simon Stapleton', 'Tom Ward'
+      assert_contributor_names 'cf656ec1', 'Christopher Cotton'
+      assert_contributor_names '532d4e87', 'Michael Schoen'
+      assert_contributor_names 'c95365a0', 'Geoff Buesing'
+      assert_contributor_names '8dea60b0', 'Vitaly Kushner'
     end
 
     # Example from 71528b1:
@@ -63,7 +63,7 @@ module Credits
     #   [#268 state:resolved]
     #
     test 'subject is defined by two consecutive newlines' do
-      assert_contributor_names '71528b1', 'Wincent Colaiuta'
+      assert_contributor_names '71528b18', 'Wincent Colaiuta'
     end
 
     # Example from bf0f145:
@@ -72,7 +72,7 @@ module Credits
     #
     # These were common in the SVN days.
     test 'eventual trailing "(Closes #nnn)" are ignored' do
-      assert_contributor_names 'bf0f145', 'Xavier Noria'
+      assert_contributor_names 'bf0f1457', 'Xavier Noria'
     end
 
     # Example from 41bfede:
@@ -85,8 +85,8 @@ module Credits
     #   git-svn-id: http://svn-commit.rubyonrails.org/rails/trunk@7738 5ecf4fe2-1ee6-0310-87b1-e25e094e27de
     #
     test 'captures credit at the end of the body message of commits imported from Subversion' do
-      assert_contributor_names '03d37a2', 'Tobias Lütke'
-      assert_contributor_names '41bfede', 'Mislav Marohnić'
+      assert_contributor_names '03d37a2d', 'Tobias Lütke'
+      assert_contributor_names '41bfedea', 'Mislav Marohnić'
     end
 
     # Example from 4e873ff:
@@ -97,17 +97,17 @@ module Credits
     #   ...
     #
     test 'captures credit from email if author name is empty' do
-      assert_contributor_names '4e873ff', 'Jarek Radosz'
+      assert_contributor_names '4e873ffc', 'Jarek Radosz'
     end
 
     test 'fallback to the author name' do
-      assert_contributor_names 'f756bfb', 'Jeremy Daer'
-      assert_contributor_names 'cf6b13b', 'Carlos Antonio da Silva'
-      assert_contributor_names '6033d2c', 'Iñigo Solano Pàez'
+      assert_contributor_names 'f756bfbe', 'Jeremy Daer'
+      assert_contributor_names 'cf6b13b2', 'Carlos Antonio da Silva'
+      assert_contributor_names '6033d2c8', 'Iñigo Solano Pàez'
     end
 
     test 'committers get credit for commits imported from Subversion' do
-      assert_contributor_names 'cf656ec', 'Christopher Cotton', 'Marcel Molina Jr.', equal: true
+      assert_contributor_names 'cf656ec1', 'Christopher Cotton', 'Marcel Molina Jr.', equal: true
     end
   end
 end

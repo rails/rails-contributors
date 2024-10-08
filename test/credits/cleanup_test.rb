@@ -6,12 +6,12 @@ module Credits
 
     # CHANGELOG has "[François Beausoleil <...>, Blair Zajac <...>]".
     test 'names get email addresses stripped' do
-      assert_contributor_names 'dfda57a', 'François Beausoleil', 'Blair Zajac'
+      assert_contributor_names 'dfda57af', 'François Beausoleil', 'Blair Zajac'
     end
 
     # Commit message has "[*Godfrey Chan*, *Aaron Patterson*]".
     test 'removes Markdown emphasis' do
-      assert_contributor_names '28d52c5', 'Godfrey Chan', 'Aaron Patterson'
+      assert_contributor_names '28d52c59', 'Godfrey Chan', 'Aaron Patterson'
     end
   end
 end

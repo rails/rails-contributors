@@ -8,7 +8,7 @@ module Credits
     include AssertContributorNames
 
     test 'bogdanvlviv' do
-      assert_contributor_names 'f2489f4', 'bogdanvlviv'
+      assert_contributor_names 'f2489f49', 'bogdanvlviv'
     end
   end
 end
