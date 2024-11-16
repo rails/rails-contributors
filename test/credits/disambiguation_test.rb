@@ -11,23 +11,23 @@ module Credits
     end
 
     test 'disambiguates Sam' do
-      assert_contributor_names 'b37399a', 'Sam Saffron'
-      assert_contributor_names '0a57f34', 'Sam Saffron'
-      assert_contributor_names '44fb54f', 'Sam'
+      assert_contributor_names 'b37399ab', 'Sam Saffron'
+      assert_contributor_names '0a57f346', 'Sam Saffron'
+      assert_contributor_names '44fb54fe', 'Sam'
     end
 
     test 'disambiguates James' do
-      assert_contributor_names '63d7fd6', 'James Bowles'
+      assert_contributor_names '63d7fd6e', 'James Bowles'
     end
 
     test 'disambiguates root' do
-      assert_contributor_names 'a9d3b77', 'Mohamed Osama'
+      assert_contributor_names 'a9d3b77e', 'Mohamed Osama'
     end
 
     test 'disambiguates unknown' do
       assert_contributor_names 'e813ad2a', 'Andrew Grimm'
       assert_contributor_names '2414fdb2', 'Jens Kolind'
-      assert_contributor_names '3833d45', 'Manish Puri'
+      assert_contributor_names '3833d452', 'Manish Puri'
     end
 
     test 'disambiguates David' do
@@ -36,12 +36,12 @@ module Credits
     end
 
     test 'disambiguates Jan' do
-      assert_contributor_names '4942b41', 'Jan Habermann'
-      assert_contributor_names 'f294540', 'Jan Xie'
+      assert_contributor_names '4942b412', 'Jan Habermann'
+      assert_contributor_names 'f2945401', 'Jan Xie'
     end
 
     test 'empty author' do
-      assert_contributor_names '4e873ff', 'Jarek Radosz'
+      assert_contributor_names '4e873ffc', 'Jarek Radosz'
     end
   end
 end
