@@ -695,6 +695,14 @@ module Credits
       assert_contributor_names 'd5b67ed8', 'Caleb Tennis'
     end
 
+    test 'Caleb Thompson' do
+      assert_contributor_names '17136c20', 'Caleb Hearth'
+      assert_contributor_names '382a70c8', 'Caleb Hearth'
+      assert_contributor_names '75f3584d', 'Caleb Hearth'
+      assert_contributor_names 'd5867a01', 'Caleb Hearth'
+      assert_contributor_names '3d3fd39c', 'Caleb Hearth'
+    end
+
     test 'canadaduane' do
       assert_contributor_names 'cab2494', 'Duane Johnson'
     end

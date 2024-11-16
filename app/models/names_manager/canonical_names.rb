@@ -274,6 +274,7 @@ module NamesManager
     map 'Buddhika Laknath',           'laknath', 'Laknath'
     map 'Caio Chassot',               'caio', "k\100v2studio.com"
     map 'Caleb Tennis',               "caleb\100aei-tech.com"
+    map 'Caleb Hearth',               'Caleb Thompson'
     map 'Calvin Yu',                  'cyu'
     map 'Carina C. Zona',             'cczona'
     map 'Carl Tashian',               'tashian'
