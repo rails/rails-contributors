@@ -1468,7 +1468,7 @@ module Credits
     end
 
     test "evgeny.zislis\100gmail.com" do
-      assert_contributor_names '842ce34', 'Evgeny Zislis'
+      assert_contributor_names '842ce34b', 'Evgeny Zislis'
     end
 
     test 'f.svehla' do
@@ -2072,7 +2072,7 @@ module Credits
     end
 
     test "jeff\100ministrycentered.com" do
-      assert_contributor_names 'a5991d8', 'Jeff Berg'
+      assert_contributor_names 'a5991d84', 'Jeff Berg'
     end
 
     test "jeff\100opendbms.com" do
