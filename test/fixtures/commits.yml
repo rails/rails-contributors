@@ -1,4 +1,4 @@
-# WARNING: contributors.yml has first contribution timestamps that depend on
+# WARNING: contributors.yml has contribution timestamps that depend on
 # these fixtures. Keep them in sync as needed.
 #
 # In the following comments we assumed today is 26 December 2012.
@@ -40,7 +40,7 @@ commit_26c024e:
     one, because it is issued at parse-time. It seemed to in
     some places because the constant was the only expression in
     the block and therefore it was its return value, that could
-    potentially be used by silence_warnings are return value of
+    potentially be used by silence_warnings as a return value of
     the yield call.
 
     To bypass the warning we assign to a variable. The chosen
@@ -90,6 +90,20 @@ commit_5b90635:
   release: 'v3_2_0'
   merge: false
 
+# This commit belongs to this year, release 4.0.0
+commit_e243a8a:
+  sha1: 'e243a8a32eb4c8777f07ca4b974bd7e38d9477d3'
+  author_email: 'jose.valim@gmail.com'
+  author_name: 'José Valim'
+  author_date: '2012-07-18 07:21:57'
+  committer_email: 'jose.valim@gmail.com'
+  committer_name: 'José Valim'
+  committer_date: '2012-07-18 07:47:52'
+  message: |
+    Update changelog for migration generator change
+  release: v4_0_0
+  merge: false
+
 # This commit is seven years old, release v0.14.4.
 commit_e0ef631:
   sha1: 'e0ef63105538f8d97faa095234f069913dd5229c'
@@ -106,7 +120,7 @@ commit_e0ef631:
   release: 'v0_14_4'
   merge: false
 
-# This commit has a committer_date that is more recent the author_date and
+# This commit has a committer_date that is more recent than the author_date and
 # should appear in the contributions list before 5b90635.
 commit_7cdfd91:
   sha1: '7cdfd910b7cdd398f8b54542c5a6a17966a5c8f3'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2016_05_12_095609) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_24_030051) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,7 @@ ActiveRecord::Schema[7.0].define(version: 2016_05_12_095609) do
     t.string "url_id", null: false
     t.integer "rank"
     t.datetime "first_contribution_at", precision: nil
+    t.datetime "last_contribution_at"
     t.index ["name"], name: "index_contributors_on_name", unique: true
     t.index ["url_id"], name: "index_contributors_on_url_id", unique: true
   end
