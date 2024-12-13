@@ -1743,6 +1743,10 @@ module Credits
       assert_contributor_names '4c21026', 'Mike Breen'
     end
 
+    test 'Hartley McGuire @skipkayhil' do
+      assert_contributor_names '773d640', 'Hartley McGuire'
+    end
+
     test 'haruki_zaemon' do
       assert_contributor_names 'fcfcc70', 'Simon Harris'
     end
