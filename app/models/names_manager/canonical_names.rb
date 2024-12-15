@@ -483,6 +483,7 @@ module NamesManager
     map 'Hakan Ensari',               'hakanensari'
     map 'Hal Brodigan',               'postmodern'
     map 'Hampton Catlin',             "hcatlin\100gmail.com"
+    map 'Hartley McGuire',            'Hartley McGuire @skipkayhil'
     map 'Hendrik Mans',               "hendrik\100mans.de"
     map 'Hendy Irawan',               'ceefour'
     map 'Henrik Nyh',                 'Henrik N', "henrik\100nyh.se", 'henrik'
