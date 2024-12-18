@@ -2,23 +2,28 @@ david:
   name: 'David Heinemeier Hansson'
   url_id: 'david-heinemeier-hansson'
   first_contribution_at: '2005-11-11 10:07:24'
+  last_contribution_at: '2012-12-07 20:38:53'
 
 jeremy:
   name: 'Jeremy Daer'
   url_id: 'jeremy-kemper'
   first_contribution_at: '2012-01-19 19:49:13'
+  last_contribution_at: '2012-12-26 21:16:05'
 
 jose:
   name: 'José Valim'
   url_id: 'jose-valim'
   first_contribution_at: '2012-01-19 19:49:13'
+  last_contribution_at: '2012-07-18 07:47:52'
 
 xavier:
   name: 'Xavier Noria'
   url_id: 'xavier-noria'
   first_contribution_at: '2012-12-24 21:16:16'
+  last_contribution_at: '2012-12-24 21:16:16'
 
 vijay:
   name: 'Vijay Dev'
   url_id: 'vijay-dev'
   first_contribution_at: '2012-01-20 00:47:14'
+  last_contribution_at: '2012-01-20 00:47:14'
