@@ -1574,6 +1574,11 @@ module Credits
     test 'frederico' do
       assert_contributor_names '11a75f9', 'Frederico Macedo'
     end
+    
+    test 'frederikspang' do
+      assert_contributor_names 'b602ffd', 'Frederik Spang'
+      assert_contributor_names '2acfed9' 'Frederik Spang'
+    end
 
     test 'freels' do
       assert_contributor_names '36b8073', 'Matt Freels'
