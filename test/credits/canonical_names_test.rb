@@ -1577,7 +1577,7 @@ module Credits
     
     test 'frederikspang' do
       assert_contributor_names 'b602ffd', 'Frederik Spang'
-      assert_contributor_names '2acfed9' 'Frederik Spang'
+      assert_contributor_names '2acfed9', 'Frederik Spang'
     end
 
     test 'freels' do
