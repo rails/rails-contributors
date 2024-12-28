@@ -448,6 +448,7 @@ module NamesManager
     map 'Franky Wahl',                'Franky W'
     map 'Frederick Cheung',           'fcheung', 'Fred Cheung', 'frederick.cheung', "frederick.cheung\100gmail.com"
     map 'Frederico Macedo',           'frederico'
+    map 'Frederik Spang',             'frederikspang', 'Frederik Erbs Spang Thomsen'
     map 'G S Phani Kumar',            'gsphanikumar'
     map 'Gabe da Silveira',           'dasil003'
     map 'Gabriel Gironda',            "gabriel.gironda\100gmail.com", "gabriel\100gironda.org"
