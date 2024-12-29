@@ -1,14 +1,18 @@
 # See https://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
 
-User-Agent: Google
+# Disallow everything by default
+User-Agent: *
+Disallow: /
+
+# Allow Google crawler
+User-Agent: Googlebot
 Allow: /
 
+# Allow DuckDuck crawler
 User-Agent: DuckDuckBot
 Allow: /
 
-User-Agent: bingbot
-Crawl-delay: 5
+# Allow Bing crawler
+User-Agent: Bingbot
 Allow: /
-
-User-Agent: *
-Disallow: /
+Crawl-delay: 5
