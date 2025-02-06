@@ -554,6 +554,7 @@ module NamesManager
     map 'Jason Stirk',                "jstirk\100oobleyboo.com"
     map 'Javier Ramírez',             'jramirez'
     map 'Jay Levitt',                 "jay\100jay.fm"
+    map 'JC (Jonathan Chen)'          'Jonathan Chen'
     map 'Jean Baptiste Barth',        'jbbarth'
     map 'Jean Boussier',              'Jean byroot Boussier'
     map 'Jean Helou',                 "jean.helou\100gmail.com", 'jean.helou'
