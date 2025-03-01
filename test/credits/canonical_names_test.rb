@@ -287,6 +287,10 @@ module Credits
       assert_contributor_names 'd3cf2a6', 'Andrew Kaspick'
     end
 
+    test "andrew.novoselac\100shopify.com" do
+      assert_contributor_names '0b8e083', "Andrew Novoselac"
+    end
+
     test "andrey.nering\100gmail.com" do
       assert_contributor_names '6d59473', 'Andrey Nering'
     end

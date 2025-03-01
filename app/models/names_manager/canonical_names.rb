@@ -190,6 +190,7 @@ module NamesManager
     map 'Andrew Evans',               'agius'
     map 'Andrew Grim',                'stopdropandrew'
     map 'Andrew Kaspick',             "akaspick\100gmail.com", 'akaspick', "andrew\100redlinesoftware.com"
+    map 'Andrew Novoselac',           "andrew.novoselac\100shopify.com"
     map 'Andrew Peters',              "andrew.john.peters\100gmail.com"
     map 'Andrew Shcheglov',           'windock'
     map 'Andrew White',               'pixeltrix'
