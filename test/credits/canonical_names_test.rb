@@ -699,10 +699,6 @@ module Credits
       assert_contributor_names '5fa8793', 'Caleb Buxton', 'Tobias Lütke'
     end
 
-    test 'Caleb Buxton' do
-      assert_contributor_names 'e68ff5f', 'Caleb Buxton'
-    end
-
     test "caleb\100aei-tech.com" do
       assert_contributor_names 'd5b67ed8', 'Caleb Tennis'
     end
