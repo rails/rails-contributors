@@ -2271,6 +2271,10 @@ module Credits
       assert_contributor_names '4d9ca4d', 'Jon Bright'
     end
 
+    test "Jonathan Chen" do
+      assert_contributor_names '58b4448', 'JC (Jonathan Chen)'
+    end
+
     test "jonathan\100bluewire.net.nz" do
       assert_contributor_names '1aff68d', 'Jonathan Viney'
     end
