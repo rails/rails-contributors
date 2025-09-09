@@ -154,7 +154,7 @@ GEM
     nokogiri (1.18.9)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    pg (1.5.7)
+    pg (1.6.2)
     psych (5.1.2)
       stringio
     puma (6.6.1)
