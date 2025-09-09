@@ -12,8 +12,6 @@ threads 0,16
 
 bind 'unix:/tmp/rails-contributors.sock'
 
-workers 1
-
 restart_command 'bundle exec puma'
 
 prune_bundler
