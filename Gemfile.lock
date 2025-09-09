@@ -132,7 +132,7 @@ GEM
       net-smtp
     marcel (1.0.4)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.7)
+    mini_portile2 (2.8.9)
     minitest (5.25.1)
     net-imap (0.4.14)
       date
@@ -149,7 +149,7 @@ GEM
       net-protocol
     net-ssh (7.2.3)
     nio4r (2.7.4)
-    nokogiri (1.16.7)
+    nokogiri (1.18.9)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pg (1.5.7)
