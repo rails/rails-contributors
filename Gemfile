@@ -3,11 +3,10 @@ ruby '3.3.4'
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 7.2.1'
+gem 'rails', '~> 8.0.0'
 
 gem 'sprockets-rails'
 
-gem 'rack', '< 4.0'
 gem 'pg'
 gem 'puma', '~> 6.0'
 gem 'rugged', '1.7.2'
