@@ -11,8 +11,6 @@ stdout_redirect '/home/rails/rails-contributors/shared/log/puma_access.log', '/h
 workers 2
 threads 3,3
 
-bind 'unix:/tmp/rails-contributors.sock'
-
 restart_command 'bundle exec puma'
 
 prune_bundler

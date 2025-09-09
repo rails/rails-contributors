@@ -16,5 +16,5 @@ set :keep_releases, 5
 set :bundle_without, %w{development test deployment}.join(' ')
 set :bundle_gemfile, -> { release_path.join('Gemfile') }
 
-set :puma_bind, "unix:/tmp/rails-contributors.sock"
+set :puma_bind, "unix://#{shared_path}/tmp/sockets/puma.sock"
 set :puma_systemctl_user, :system
