@@ -15,7 +15,7 @@ bind 'unix:/tmp/rails-contributors.sock'
 
 restart_command 'bundle exec puma'
 
-prune_bundler
+preload_app!
 
 on_restart do
   puts 'Refreshing Gemfile'
