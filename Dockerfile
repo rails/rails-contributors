@@ -4,7 +4,7 @@
 #   * .ruby-version (used by CircleCI).
 #   * Install the version by hand in the server (uses RVM).
 #
-FROM ruby:3.3.4-alpine3.20
+FROM ruby:3.4.5-alpine3.22
 
 # LANG as recommended in the Encoding section of https://hub.docker.com/_/ruby/.
 ENV LANG C.UTF-8
