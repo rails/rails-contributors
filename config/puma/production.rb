@@ -8,7 +8,8 @@ pidfile "/home/rails/rails-contributors/shared/tmp/pids/puma.pid"
 state_path "/home/rails/rails-contributors/shared/tmp/pids/puma.state"
 stdout_redirect '/home/rails/rails-contributors/shared/log/puma_access.log', '/home/rails/rails-contributors/shared/log/puma_error.log', true
 
-threads 0,16
+workers 2
+threads 3,3
 
 bind 'unix:/tmp/rails-contributors.sock'
 
