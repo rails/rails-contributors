@@ -93,10 +93,10 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano3-puma (5.2.0)
+    capistrano3-puma (6.2.0)
       capistrano (~> 3.7)
       capistrano-bundler
-      puma (>= 4.0, < 6.0)
+      puma (>= 5.1, < 7.0)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 5.2.0)
@@ -155,7 +155,7 @@ GEM
     pg (1.5.7)
     psych (5.1.2)
       stringio
-    puma (5.6.9)
+    puma (6.6.1)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (2.2.17)
@@ -265,11 +265,11 @@ DEPENDENCIES
   capistrano (~> 3.19)
   capistrano-rails (~> 1.6)
   capistrano-rvm (= 0.1.2)
-  capistrano3-puma (~> 5.2)
+  capistrano3-puma (~> 6.2.0)
   coffee-rails (~> 5.0.0)
   ed25519
   pg
-  puma (~> 5.6)
+  puma (~> 6.0)
   rack (< 3.0)
   rails (~> 7.2.1)
   rails-controller-testing
