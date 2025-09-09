@@ -9,7 +9,7 @@ gem 'sprockets-rails'
 
 gem 'rack', '< 3.0'
 gem 'pg'
-gem 'puma', '~> 5.6'
+gem 'puma', '~> 6.0'
 gem 'rugged', '1.7.2'
 gem 'unf'
 gem 'turbolinks', '~> 5'
@@ -28,10 +28,10 @@ group :test do
 end
 
 group :deployment do
-  gem 'capistrano', '~> 3.19',      require: false
-  gem 'capistrano-rails', '~> 1.6', require: false
-  gem 'capistrano-rvm', '0.1.2',    require: false
-  gem 'capistrano3-puma', '~> 5.2', require: false
+  gem 'capistrano', '~> 3.19',        require: false
+  gem 'capistrano-rails', '~> 1.6',   require: false
+  gem 'capistrano-rvm', '0.1.2',      require: false
+  gem 'capistrano3-puma', '~> 6.2.0', require: false
   gem 'rbnacl', '>= 3.2', '< 8.0'
   gem 'rbnacl-libsodium'
   gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
