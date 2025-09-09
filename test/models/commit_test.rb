@@ -1,3 +1,5 @@
+# frozen-string-literal: true
+
 require 'test_helper'
 require 'ostruct'
 
@@ -22,7 +24,7 @@ class CommitTest < ActiveSupport::TestCase
     tcomm = Time.current
     tauth = 1.day.ago
 
-    message = <<-MSG.strip_heredoc
+    message = +<<-MSG.strip_heredoc
       \u{1f4a3}
 
       We are relying on hash inequality in tests
@@ -32,8 +34,8 @@ class CommitTest < ActiveSupport::TestCase
       sha1 = "b5ed79468289c15a685a82694dcf1adf773c91d#{i}"
       rugged_commit = OpenStruct.new
       rugged_commit.oid       = sha1
-      rugged_commit.author    = {name: 'Juanjo', email: 'juanjo@example.com', time: tauth}
-      rugged_commit.committer = {name: 'David', email: 'david@example.com', time: tcomm}
+      rugged_commit.author    = {name: +'Juanjo', email: +'juanjo@example.com', time: tauth}
+      rugged_commit.committer = {name: +'David', email: +'david@example.com', time: tcomm}
       rugged_commit.message   = message
       rugged_commit.parents   = parents
 

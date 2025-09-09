@@ -1,3 +1,5 @@
+# frozen-string-literal: true
+
 class Commit < ApplicationRecord
   has_many :contributions, dependent: :destroy
   has_many :contributors, through: :contributions
@@ -196,7 +198,7 @@ protected
   # git show, and is an expensive operation. So, we do this only for those
   # commits where this is needed, and cache the result in the database.
   def extract_changelog
-    changelog = ''
+    changelog = +''
     in_changelog = false
     diff.each_line do |line|
       if line =~ /^diff --git/
