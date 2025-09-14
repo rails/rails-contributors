@@ -1391,6 +1391,10 @@ module Credits
       assert_contributor_names '5130fc8', 'Craig Davey'
     end
 
+    test 'Eileen' do
+      assert_contributor_names '2cf763e', 'Eileen M. Uchitelle'
+    end
+
     test 'eileencodes' do
       assert_contributor_names '7caceee', 'Eileen M. Uchitelle'
     end
@@ -1582,7 +1586,7 @@ module Credits
     test 'frederico' do
       assert_contributor_names '11a75f9', 'Frederico Macedo'
     end
-    
+
     test 'frederikspang' do
       assert_contributor_names 'b602ffd', 'Frederik Spang'
       assert_contributor_names '2acfed9', 'Frederik Spang'
