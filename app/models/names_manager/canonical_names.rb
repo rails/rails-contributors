@@ -409,7 +409,7 @@ module NamesManager
     map 'Edward Betts',               "edward\100debian.org"
     map 'Eelco Lempsink',             "rails\10033lc0.net"
     map 'Egor Homakov',               'homa', 'homakov', '@homakov'
-    map 'Eileen M. Uchitelle',        'eileencodes', 'Eileen Uchitelle'
+    map 'Eileen M. Uchitelle',        'eileencodes', 'Eileen Uchitelle', 'Eileen'
     map 'Elan Feingold',              "elan\100bluemandrill.com"
     map 'Elijah Miller',              "elijah.miller\100gmail.com", 'jqr'
     map 'Elliot Smith',               "elliot\100townx.org"
