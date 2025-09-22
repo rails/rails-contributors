@@ -28,7 +28,7 @@ end
 
 group :deployment do
   gem 'capistrano', '~> 3.19',        require: false
-  gem 'capistrano-rails', '~> 1.6',   require: false
+  gem 'capistrano-rails', '~> 1.7',   require: false
   gem 'capistrano-rvm', '0.1.2',      require: false
   gem 'capistrano3-puma', '~> 6.2.0', require: false
   gem 'rbnacl', '>= 3.2', '< 8.0'
