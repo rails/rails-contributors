@@ -9,7 +9,7 @@ gem 'sprockets-rails'
 
 gem 'pg'
 gem 'puma', '~> 6.0'
-gem 'rugged', '1.7.2'
+gem 'rugged', '1.9.0'
 gem 'unf'
 gem 'turbolinks', '~> 5'
 gem 'actionpack-page_caching', '1.2.4'
