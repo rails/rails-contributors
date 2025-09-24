@@ -85,7 +85,7 @@ class Repo
         if ncommits > 0 || nreleases > 0 || rebuild_all
           sync_names
           sync_ranks
-          sync_first_contribution_timestamps
+          sync_contribution_timestamps
         end
 
         RepoUpdate.create!(
@@ -188,8 +188,9 @@ class Repo
     end
   end
 
-  def sync_first_contribution_timestamps
+  def sync_contribution_timestamps
     Contributor.set_first_contribution_timestamps(!rebuild_all)
+    Contributor.set_last_contribution_timestamps(!rebuild_all)
   end
 
   # Determines whether the names mapping has been updated. This is useful because
