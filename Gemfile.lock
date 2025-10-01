@@ -95,10 +95,10 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano3-puma (6.2.0)
+    capistrano3-puma (7.0.0)
       capistrano (~> 3.7)
       capistrano-bundler
-      puma (>= 5.1, < 7.0)
+      puma (>= 6.1, < 8.0)
     coffee-rails (5.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 5.2.0)
@@ -278,7 +278,7 @@ DEPENDENCIES
   capistrano (~> 3.19)
   capistrano-rails (~> 1.7)
   capistrano-rvm (= 0.1.2)
-  capistrano3-puma (~> 6.2.0)
+  capistrano3-puma (~> 7.0.0)
   coffee-rails (~> 5.0.0)
   ed25519
   pg
