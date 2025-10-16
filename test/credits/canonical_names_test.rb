@@ -5163,5 +5163,9 @@ module Credits
     test 'Harsh' do
       assert_contributor_names '5ff38f4', 'Harsh Deep'
     end
+
+    test 'dhh' do
+      assert_contributor_names 'dd6f3e1', 'David Heinemeier Hansson'
+    end
   end
 end

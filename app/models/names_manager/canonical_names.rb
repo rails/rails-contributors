@@ -359,7 +359,7 @@ module NamesManager
     map 'David Easley',               "easleydp\100gmail.com"
     map 'David Felstead',             "david.felstead\100gmail.com", "dfelstead\100site5.com"
     map 'David François',             'David FRANCOIS', 'davout'
-    map 'David Heinemeier Hansson',   'DHH', 'David' # for David see 5d5f0bad6e934d9d4fad7d0fa4643d04c13709a9
+    map 'David Heinemeier Hansson',   'DHH', 'dhh', 'David' # for David see 5d5f0bad6e934d9d4fad7d0fa4643d04c13709a9
     map 'David Morton',               "mortonda\100dgrmm.net"
     map 'David N. Welton',            'davidw'
     map 'David Raynes',               'rayners'
