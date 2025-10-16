@@ -5159,5 +5159,9 @@ module Credits
     test 'प्रथमेश Sonpatki' do
       assert_contributor_names 'a7a2bc0f66', 'Prathamesh Sonpatki'
     end
+
+    test 'Harsh' do
+      assert_contributor_names '5ff38f4', 'Harsh Deep'
+    end
   end
 end
