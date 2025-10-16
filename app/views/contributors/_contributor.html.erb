@@ -1,7 +1,8 @@
-<tr class="<%= cycle 'even', 'odd' %>">
+<tr id="<%= contributor.name.downcase.tr(' ', '-') %>" class="<%= cycle 'even', 'odd' %>">
   <td class="contributor-rank">#<%= contributor.rank %></td>
   <td class="contributor-name"><%= link_to_contributor contributor %></td>
-  <td class="contributor-since"><%= date contributor.first_contribution_at %></td>
+  <td class="contributor-timestamp"><%= date contributor.first_contribution_at %></td>
+  <td class="contributor-timestamp"><%= date contributor.last_contribution_at %></td>
   <td class="no-commits">
     <% path = if @time_window
          contributor_commits_in_time_window_path(contributor, @time_window)
