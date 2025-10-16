@@ -5159,5 +5159,9 @@ module Credits
     test 'प्रथमेश Sonpatki' do
       assert_contributor_names 'a7a2bc0f66', 'Prathamesh Sonpatki'
     end
+
+    test 'dhh' do
+      assert_contributor_names 'dd6f3e1', 'David Heinemeier Hansson'
+    end
   end
 end
