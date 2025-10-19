@@ -164,7 +164,7 @@ GEM
     psych (5.2.6)
       date
       stringio
-    puma (6.6.1)
+    puma (7.1.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.3)
@@ -285,7 +285,7 @@ DEPENDENCIES
   coffee-rails (~> 5.0.0)
   ed25519
   pg
-  puma (~> 6.0)
+  puma (~> 7.1)
   rails (~> 8.0.3)
   rails-controller-testing
   rbnacl (>= 3.2, < 8.0)
