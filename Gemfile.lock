@@ -95,7 +95,7 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano3-puma (7.0.0)
+    capistrano3-puma (7.1.0)
       capistrano (~> 3.7)
       capistrano-bundler
       puma (>= 6.1, < 8.0)
@@ -281,7 +281,7 @@ DEPENDENCIES
   capistrano (~> 3.19)
   capistrano-rails (~> 1.7)
   capistrano-rvm (= 0.1.2)
-  capistrano3-puma (~> 7.0.0)
+  capistrano3-puma (~> 7.1.0)
   coffee-rails (~> 5.0.0)
   ed25519
   pg
@@ -322,7 +322,7 @@ CHECKSUMS
   capistrano-bundler (2.1.1) sha256=c234a72c1698265885522ba7da77b522c683e2ca350f90ac94d7e84d6f8f4f94
   capistrano-rails (1.7.0) sha256=aca57455e8c5435785e0f938e16aa5b79c263694a755e1dca1c5d1743b40aae7
   capistrano-rvm (0.1.2) sha256=4adb7ffd98d2c1335b597b063e1e6cafd9dd2d6ecc9d358bf78100aad8475e97
-  capistrano3-puma (7.0.0) sha256=c0e6ab7df215a382f709184bcbf63fe02f2808c435d8711425d825aa774f3554
+  capistrano3-puma (7.1.0) sha256=802ac32c70ea97604171973b487980e6ad04ea904c78360bcec29e7d78ee54bd
   coffee-rails (5.0.0) sha256=5daaa1ba51fd4907c98a333b6a9e7c1a99b1fff57fcef999b6c62d813cb91a9c
   coffee-script (2.4.1) sha256=82fe281e11b93c8117b98c5ea8063e71741870f1c4fbb27177d7d6333dd38765
   coffee-script-source (1.12.2) sha256=e12b16fd8927fbbf8b87cb2e9a85a6cf457c6881cc7ff8b1af15b31f70da07a4
