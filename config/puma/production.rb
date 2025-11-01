@@ -8,7 +8,6 @@ environment 'production'
 
 pidfile "#{shared_path}/tmp/pids/puma.pid"
 state_path "#{shared_path}/tmp/pids/puma.state"
-stdout_redirect "#{shared_path}/log/puma_access.log", "#{shared_path}/log/puma_error.log", true
 
 workers 2
 threads 3,3

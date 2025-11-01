@@ -6,6 +6,9 @@ server DOCS_SERVER_IP, user: 'rails', roles: %w(web app db)
 set :rvm_ruby_version, '3.4.5'
 set :rvm_custom_path, '/home/rails/.rvm'
 
+set :puma_access_log, "journal"
+set :puma_error_log, "journal"
+
 namespace :deploy do
   after :normalize_assets, :gzip_assets do
     on release_roles(fetch(:assets_roles)) do
