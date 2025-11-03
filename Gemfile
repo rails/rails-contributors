@@ -3,7 +3,7 @@ ruby '3.4.5'
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'rails', '~> 8.1.0'
+gem 'rails', '~> 8.1.1'
 
 gem 'sprockets-rails'
 
