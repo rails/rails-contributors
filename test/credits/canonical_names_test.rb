@@ -1211,6 +1211,10 @@ module Credits
       assert_contributor_names 'bd261ff', 'David Heinemeier Hansson'
     end
 
+    test 'dhh' do
+      assert_contributor_names 'dd6f3e1', 'David Heinemeier Hansson'
+    end
+
     test 'diatmpravin' do
       assert_contributor_names 'a302597', 'Pravin Mishra'
     end
@@ -1758,6 +1762,10 @@ module Credits
 
     test 'hardbap' do
       assert_contributor_names '4c21026', 'Mike Breen'
+    end
+
+    test 'Harsh' do
+      assert_contributor_names '5ff38f4', 'Harsh Deep'
     end
 
     test 'Hartley McGuire @skipkayhil' do
@@ -5158,14 +5166,6 @@ module Credits
 
     test 'प्रथमेश Sonpatki' do
       assert_contributor_names 'a7a2bc0f66', 'Prathamesh Sonpatki'
-    end
-
-    test 'Harsh' do
-      assert_contributor_names '5ff38f4', 'Harsh Deep'
-    end
-
-    test 'dhh' do
-      assert_contributor_names 'dd6f3e1', 'David Heinemeier Hansson'
     end
   end
 end
