@@ -80,7 +80,7 @@ GEM
     airbrussh (1.5.3)
       sshkit (>= 1.6.1, != 1.7.0)
     base64 (0.3.0)
-    bcrypt_pbkdf (1.1.1)
+    bcrypt_pbkdf (1.1.2)
     bigdecimal (3.3.1)
     bindex (0.8.1)
     builder (3.3.0)
@@ -318,7 +318,7 @@ CHECKSUMS
   activesupport (8.1.1) sha256=5e92534e8d0c8b8b5e6b16789c69dbea65c1d7b752269f71a39422e9546cea67
   airbrussh (1.5.3) sha256=7b06eb03be15f50120bc03d95967c95144fbbb7a6ad58d4105cd1550c3aa989c
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
-  bcrypt_pbkdf (1.1.1) sha256=2f9077dde837d1f0dd2eb0f9e5327c6871c68ebc8eba88870fb6b7956e1e2b13
+  bcrypt_pbkdf (1.1.2) sha256=c2414c23ce66869b3eb9f643d6a3374d8322dfb5078125c82792304c10b94cf6
   bigdecimal (3.3.1) sha256=eaa01e228be54c4f9f53bf3cc34fe3d5e845c31963e7fcc5bedb05a4e7d52218
   bindex (0.8.1) sha256=7b1ecc9dc539ed8bccfc8cb4d2732046227b09d6f37582ff12e50a5047ceb17e
   builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
