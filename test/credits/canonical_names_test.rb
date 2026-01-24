@@ -1043,6 +1043,10 @@ module Credits
       assert_contributor_names '18aa1ae', 'David François'
     end
 
+    test 'David Löwenfels' do
+      assert_contributor_names '4a135f1', 'David Lowenfels'
+    end
+
     test 'DAVID MOORE' do
       assert_contributor_names '4c945cc', 'Dave Moore'
     end
