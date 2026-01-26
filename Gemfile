@@ -8,7 +8,7 @@ gem 'rails', '~> 8.1.1'
 gem 'sprockets-rails'
 
 gem 'pg'
-gem 'puma', '~> 7.1'
+gem 'puma', '~> 7.2'
 gem 'rugged', '1.9.0'
 gem 'unf'
 gem 'turbolinks', '~> 5'
