@@ -23,6 +23,7 @@ module NamesManager
         when %r{https://}
         when '\\x00-\\x1f'
         when /\ACVE-[\d-]+\z/i
+        when /\AGHSA-[\w-]+\z/i
         when 'and'
         when 'options'
         when 'API DOCS'

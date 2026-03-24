@@ -81,6 +81,10 @@ module Credits
       assert_contributor_names '0075f36', 'Charlie Somerville'
     end
 
+    test 'GHSA-\w+' do
+      assert_contributor_names '4df8089', 'John Hawthorn'
+    end
+
     test 'and' do
       assert_contributor_names 'd891ad4', 'Santiago Pastorino'
     end
