@@ -1400,15 +1400,19 @@ module Credits
     end
 
     test 'Eileen' do
-      assert_contributor_names '2cf763e', 'Eileen M. Uchitelle'
+      assert_contributor_names '2cf763e', 'Eileen M. Alayce'
     end
 
     test 'eileencodes' do
-      assert_contributor_names '7caceee', 'Eileen M. Uchitelle'
+      assert_contributor_names '7caceee', 'Eileen M. Alayce'
     end
 
     test 'Eileen Uchitelle' do
-      assert_contributor_names 'aec635d', 'Eileen M. Uchitelle'
+      assert_contributor_names 'aec635d', 'Eileen M. Alayce'
+    end
+
+    test 'Eileen M. Uchitelle' do
+      assert_contributor_names 'b80bc2f', 'Eileen M. Alayce'
     end
 
     test 'ejy' do
