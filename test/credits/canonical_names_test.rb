@@ -1327,6 +1327,10 @@ module Credits
       assert_contributor_names '046a87a', 'Daniel Rodríguez Troitiño'
     end
 
+    test 'dskecse' do
+      assert_contributor_names 'e42365e', 'Dennis Dashkevich'
+    end
+
     test 'dtaniwaki' do
       assert_contributor_names 'c91e1cc', 'Daisuke Taniwaki'
     end
@@ -1353,10 +1357,6 @@ module Credits
 
     test "dymo\100mk.ukrtelecom.ua" do
       assert_contributor_names '6ce3bf7', 'Alexander Dymo'
-    end
-
-    test 'dskecse' do
-      assert_contributor_names 'e42365e', 'Dennis Dashkevich'
     end
 
     test 'Eadz' do
