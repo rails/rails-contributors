@@ -375,6 +375,7 @@ module NamesManager
     map 'Deirdre Saoirse',            "deirdre\100deirdre.net"
     map 'DeLynn Berry',               'Delynn', 'DeLynn', 'delynnb', 'DeLynn Barry', 'DeLynnB', 'DelynnB', 'DeLynn B', "delynn\100gmail.com"
     map 'Demetrius Nunes',            'demetrius', 'Demetrius'
+    map 'Dennis Dashkevich',          'Dzianis Dashkevich'
     map 'Derek DeVries',              'devrieda'
     map 'Derrick Spell',              "derrickspell\100cdmplus.com"
     map 'Dev Mehta',                  'dpmehta02'

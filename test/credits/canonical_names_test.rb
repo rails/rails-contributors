@@ -1355,6 +1355,10 @@ module Credits
       assert_contributor_names '6ce3bf7', 'Alexander Dymo'
     end
 
+    test 'dskecse' do
+      assert_contributor_names 'e42365e', 'Dennis Dashkevich'
+    end
+
     test 'Eadz' do
       assert_contributor_names '6a17151', 'Eaden McKee'
     end
