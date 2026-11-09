@@ -441,6 +441,7 @@ module NamesManager
     map 'Farley Knight',              'farleyknight'
     map 'Farzad Farid',               'farzy'
     map 'fatkodima',                  'Dima Fatko', 'Fatko Dima', 'fatkodima123'
+    map 'Federico Carrocera',         'federico-carrocera'
     map 'Fedot Praslov',              'fedot'
     map 'Felix Dominguez',            'dacat'
     map 'Ferdinand Niedermann',       'nerdinand'

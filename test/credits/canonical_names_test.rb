@@ -1539,6 +1539,10 @@ module Credits
       assert_contributor_names 'df27fb8', 'Jamie van Dyke'
     end
 
+    test 'federico-carrocera' do
+      assert_contributor_names 'ce478aa', 'Federico Carrocera'
+    end
+
     test 'fedot' do
       assert_contributor_names '70d7b37', 'Fedot Praslov'
     end
